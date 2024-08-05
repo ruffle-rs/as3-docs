@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="適用於 Adobe&reg; Flash&reg; Platform 的 ActionScript&reg; 3.0 參考"><meta name="lang" content="zh-tw"><meta name="runtime" content="air"><meta name="runtimever" content="air:1.0"><meta name="product" content="air"><meta name="productver" content="air:1.0"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../asfilter.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="NativeDragManager,flash.desktop.NativeDragManager,dragInitiator,dropAction,isDragging,isSupported,acceptDragDrop,doDrag"><title>NativeDragManager - Adobe ActionScript&reg; 3 (AS3  ) API 參考</title>
+		<link rel="stylesheet" href="../../filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="../../filter_new.css" type="text/css">
+			
+		<script src="../../jquery.js" type="text/javascript"></script>
+		<script src="../../s_chl_code.js" type="text/javascript"></script>
+		<script src="../../jquery.zclip.js" type="text/javascript"></script>
+		<script src="../../jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="../../cookies.js" type="text/javascript"></script>
+		<script src="../../asdoc.js" type="text/javascript"></script>
+		<script src="../../iscroll.js" type="text/javascript"></script>
+		<script src="../../AC_OETags.js" type="text/javascript"></script>
+		<script src="../../omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "執行階段";
+			var productsLabel = "產品";
+			var noneLabel = "無";
+			var qsearchBoxLabel = "快速搜尋";
+			var qsearchText = "找不到字詞";
+			var ajaxErrorMsg="載入頁面時發生錯誤";
+			var ajaxErrorTryMsg="再試一次";
+			var ajaxLoadingMsg="仍在載入";
+			var cancelMsg = "取消";
+			var classesText = "類別";
+			var strJiveReply = "張貼此問題是為回應下列文章： "
+			var showFilters = "顯示篩選";
+			var hideFilters = "隱藏篩選";
+			
+		
+			var baseRef = "../../";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											適用於 Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup> Platform 的 ActionScript<sup>&reg;</sup> 3.0 參考<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="../../index.html"> 首頁 </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="NativeDragManager.html#top" style="display:">顯示套件和類別清單</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="NativeDragManager.html#top" style="display:none">隱藏套件和類別清單</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="../../package-summary.html"> 套件 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../class-summary.html"> 類別 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../whatsnew.html"> 新增內容 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../all-index-Symbols.html"> 索引 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../appendixes.html"> 附錄 </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">為什麼顯示英文？</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/zh_TW/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('../../')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('../../')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="../../help.js"></script>
+						<script language="javascript" type="text/javascript" src="../../asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="../../filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>篩選：</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">從伺服器擷取資料...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">從伺服器擷取資料...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="NativeDragManager.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">flash.desktop&nbsp;</a><br>
+								<h1 id="classProductName">NativeDragManager&nbsp; - AS3 </h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="NativeDragManager.html#propertySummary" style="display:none"> 屬性 </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="NativeDragManager.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> 屬性 </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="NativeDragManager.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> 建構函式 </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="NativeDragManager.html#methodSummary" style="display:none"> 方法 </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="NativeDragManager.html#constantSummary" style="display:none"> 全域常數 </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="NativeDragManager.html#eventSummary" style="display:none"> 事件 </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="NativeDragManager.html#styleSummary" style="display:none"> 樣式 </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="NativeDragManager.html#SkinPartSummary" style="display:none"> 外觀部件 </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="NativeDragManager.html#SkinStateSummary" style="display:none"> 外觀狀態 </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="NativeDragManager.html#effectSummary" style="display:none"> 特效 </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="NativeDragManager.html#constantSummary" style="display:none"> 常數 </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="NativeDragManager.html#methodSummary" style="display:none"> 全域函數 </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="NativeDragManager.html#methodSummary" style="display:none">函數</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="NativeDragManager.html#interfaceSummary" style="display:none"> 介面 </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="NativeDragManager.html#classSummary" style="display:none"> 類別 </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="NativeDragManager.html#includeExamplesSummary" style="display:none"> 範例 </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="NativeDragManager.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								類別
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">套件</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">flash.desktop</a></td></tr><tr><td class="classHeaderTableLabel">類別</td><td class="classSignature">public  class  NativeDragManager</td></tr><tr><td class="classHeaderTableLabel">繼承</td><td class="inheritanceList">NativeDragManager  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../Object.html">Object</a></td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p></p>
+ NativeDragManager 類別會協調拖放作業。使用原生拖放 API，您便可以允許使用者在 AIR 應用程式與原生作業系統之間、兩個應用程式之間或是單一應用程式內的組件之間拖曳資料。
+ 
+ <p>可以傳輸的資料類型如下：</p>
+               <ul>
+                  <li>點陣圖</li>
+                  <li>檔案</li>
+                  <li>文字</li>
+                  <li>URL 字串</li>
+                  <li>經過序列化的物件</li>
+                  <li>物件參考 (只有在來源應用程式內才有效)</li>
+               </ul>
+ 
+               <p>
+                  <b>注意：</b>所有 NativeDragManager 成員都必須是靜態成員。您不需要建立此類別的實體。</p>
+ 
+               <p>拖放作業是一種使用者介面手勢，它開始於使用者按一下可見的項目，並將它拖曳到其他地方。在拖曳手勢期間，顯示清單上的互動式物件會將原生拖曳事件當做移動手勢在 AIR 應用程式視窗之間傳送。這些事件的處理常式可以呼叫 NativeDragManager 類別的方法，指出是否可以將拖曳的項目放到物件上。接著，NativeDragManager 便會變更滑鼠指標來回應使用者。</p>
+ 
+               <p>AIR 描述檔支援：AIR for TV 裝置不支援此功能。<i></i>此外，所有的行動裝置也都不支援。您可以使用 <code>NativeDragManager.isSupported</code> 屬性測試執行階段的支援狀況。如需有關跨多個描述檔之 API 支援的詳細資訊，請參閱 <a href="http://help.adobe.com/en_US/air/build/WS144092a96ffef7cc16ddeea2126bb46b82f-8000.html" >AIR 描述檔支援</a>。
+ </p> 
+ 
+               <p>
+                  <b>拖曳動作</b>
+               </p>
+               <p>拖放手勢通常用於三種類型的作業，稱為「動作」。<i></i>由於這些動作的意義取決於應用程式內容，因此執行階段不會對這些動作強制執行任何行為指令。不過，適當地實作動作可以改善使用者的應用程式體驗。
+ </p> 
+ 
+               <p>可能的動作包括：</p>
+               <ul>
+                  <li>複製 &mdash; 產生資料的副本，讓原始資料維持不變 (在應用程式內拖曳物件時，請務必小心複製原始物件本身，而不是該物件的參考)。</li>
+                  <li>移動 &mdash; 資料會從它的原始內容移到放置目標所定義的內容，例如將某個項目從一個清單移到另一個清單時。</li>
+                  <li>連結 &mdash; 建立原始資料的參考或捷徑，將此項目留在它的原始內容中。</li>
+               </ul>
+ 
+               <p>只要在開始拖曳作業的 <code>NativeDragManager.doDrag()</code> 呼叫中提供 <code>allowedActions</code> 參數，便可以針對拖曳手勢設定這些允許的動作。如果沒有提供 <code>allowedActions</code> 參數，表示允許所有的動作。可能的拖曳目標可以使用 NativeDragEvent 物件的 <code>allowedActions</code> 屬性來檢查所允許的動作，而且不應該接受只允許不相容動作的置放 (但是執行階段並不會強制這項處理)。</p>
+ 
+               <p>如果置放目標只會實作單一動作，此物件可以在 <code>nativeDragEnter</code> 和 <code>nativeDragOver</code> 事件的處理常式內設定 NativeDragManager 的 <code>dropAction</code> 屬性。在置放之前設定此屬性，不僅可允許拖曳管理員更新滑鼠指標以指出支援的動作，也可避免使用者使用輔助按鍵選擇不相容的動作。如果指定的動作不是屬於允許的動作，則不允許置放，即使目標會呼叫 <code>acceptDrop()</code> 方法亦然。</p>
+ 
+               <p>接受置放時，可能的置放目標應該指定透過設定 <code>NativeDragManager.dropAction</code> 屬性所選擇的動作，以回應 <code>nativeDragDrop</code> 事件。這個動作會回報給 <code>nativeDragComplete</code> 事件內的起始顯示物件。如果放下目標沒有設定任何動作，則會依照所允許動作的出現順序 (複製、移動、連結) 選取預設動作在事件中回報。初始物件會負責更新其內部狀態，以回應所選擇的動作。</p> 
+ 
+               <p>這些動作名稱的字串常數是在 NativeDragActions 類別中定義。</p>
+  
+               <p>
+                  <b>事件序列</b>
+               </p>
+               <p>拖曳手勢一開始是在 <code>mouseDown</code> 或 <code>mouseMove</code> 事件處理常式內呼叫 <code>NativeDragManager.doDrag()</code> 方法，接著會進行下列事件序列以回應使用者的動作：</p>
+               <ul>
+                  <li>
+                     <code>nativeDragStart</code> 事件 &mdash; 當呼叫 <code>NativeDragManager.doDrag()</code> 時，當做參數傳給此方法的互動式物件就會變成初始程式物件，並傳送 <code>nativeDragStart</code> 事件。</li>
+                  <li>
+                     <code>nativeDragUpdate</code> 事件 &mdash; 當拖曳作業進行時，初始程式物件會繼續傳送 <code>nativeDragUpdate</code> 事件。</li>
+                  <li>
+                     <code>nativeDragEnter</code>、<code>nativeDragOver</code> 事件 &mdash; 當拖曳手勢在互動式物件上方傳遞時，該物件會傳送 <code>nativeDragEnter</code> 事件。當拖曳手勢仍然在互動式物件上方時，它會繼續傳送 <code>nativeDragOver</code> 事件。為了回應這些事件的其中一個，當做可能置放目標的物件應該檢查事件物件的屬性，以決定它是否可以接受置放。如果資料格式和允許的動作都正確，則這些事件的事件處理常式必須呼叫 <code>NativeDragManager.acceptDrop()</code>，傳入當做置放目標之顯示物件的參考 (通常是傳送 <code>nativeDragEnter</code> 或 <code>nativeDragOver</code> 事件的物件)。然後，使用者可以將拖曳的項目放到目標上。</li>
+                  <li>
+                     <code>nativeDragExit</code> 事件 &mdash; 當拖曳手勢從互動式物件傳遞時，此物件會傳送 <code>nativeDragExit</code> 事件。如果已先呼叫 <code>NativeDragManager.acceptDrop()</code> 方法將該物件指定為拖曳目標，則該呼叫將不再有效，而且如果此手勢重新進入互動式物件，就必須再次呼叫 <code>acceptDrop()</code>。</li>
+                  <li>
+                     <code>nativeDragDrop</code> 事件 -- 當使用者在該物件上方放開滑鼠按鈕時，目標顯示物件會傳送 <code>nativeDragDrop</code> 事件。此事件的處理常式可以存取該事件物件之 <code>transferable</code> 屬性中的資料，而且應該設定 <code>NativeDragManager.dropAction</code> 屬性，告知初始程式物件應該採取哪個動作。</li>
+                  <li>
+                     <code>nativeDragComplete</code> -- 當使用者在結束拖曳手勢後放開滑鼠，初始程式物件都會傳送 <code>nativeDragComplete</code> 事件 (不管是否已接受該放置動作本身)。此事件的處理常式可以檢查該事件物件的 <code>dropAction</code> 屬性，以判斷其內部資料狀態應該進行何種修改 (如果要的話)，例如從清單中移除已拖曳出的項目。如果 <code>dropAction</code> 為 <code>NativeDragActions.NONE</code>，則不會將拖曳的項目放在可用的目標上。</li>
+               </ul>
+ 
+               <p>
+                  <b>應用程式之間的手勢</b>
+               </p>
+               <p>當拖曳手勢從非 AIR 應用程式視窗進入 AIR 應用程式視窗時，將沒有初始程式物件傳送 <code>nativeDragStart</code> 或 <code>nativeDragComplete</code> 事件。手勢期間傳送的這些事件，在其他方面都將遵循的模式，與在相同 AIR 應用程式中開始和結束之手勢的事件相同。</p>
+ 
+               <p>當拖曳手勢離開 AIR 應用程式視窗時，就沒有目標物件可傳送 <code>nativeDragEnter</code>、<code>nativeDragOver</code> 或 <code>nativeDragDrop</code> 事件。初始程式物件仍然會傳送 <code>nativeDragComplete</code> 事件，此事件會報告原生作業系統設定的拖曳動作 (如果該放下動作不被接受，則為 <code>none</code>)。</p>
+ 
+               <p>當拖曳手勢從某個 AIR 應用程式移至其他應用程式時，一如往常，初始程式和目標物件都會在其個別的應用程式中傳送事件。</p>
+ 
+               <p>
+                  <b>傳輸資訊</b>
+               </p>
+               <p>在拖放手勢期間，所傳輸的資料都包含在 Clipboard 物件中。資料物件會透過開始拖曳手勢的 <code>NativeDragManager.doDrag()</code> 方法加入拖曳作業。可能的放下目標可以透過原生拖曳事件物件的 <code>clipboard</code> 屬性存取 Clipboard 物件。一旦拖曳作業開始，就只能在 NativeDragEvent 的事件處理常式中存取 Clipboard 物件。任何其他嘗試存取此物件的動作都會產生執行階段錯誤。</p>
+ 
+               <p>
+                  <b>安全性考量</b>
+               </p>
+               <p>初始程式和可能之目標物件的安全執行程序可判斷如何存取正在拖曳的資料。如果這兩個物件都在相同的安全執行程序中，便可以從任何 NativeDragEvent 物件存取此資料。不過，如果初始程式和目標物件不在相同的安全執行程序中，則只能在 <code>nativeDragDrop</code> 事件之事件處理常式的目標安全執行程序中存取此資料。其他原生拖曳事件處理常式仍可以存取事件 <code>clipboard</code> 屬性中所參考的 Clipboard 物件，以判斷可使用何種資料格式；但是，呼叫 <code>clipboard.getData()</code> 方法會產生安全性錯誤。</p>
+ 
+            <p></p><p><span class="classHeaderTableLabel">相關 API 元素</span></p><div class="seeAlso"><a href="../events/NativeDragEvent.html" target="">flash.events.NativeDragEvent</a><br/><a href="NativeDragActions.html" target="">flash.desktop.NativeDragActions</a><br/><a href="NativeDragOptions.html" target="">flash.desktop.NativeDragOptions</a><br/><a href="Clipboard.html" target="">flash.desktop.Clipboard</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary" id="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">公用屬性</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="NativeDragManager.html#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隱藏繼承公用屬性</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="NativeDragManager.html#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 顯示繼承公用屬性</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">屬性</th><th>定義自</th></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="../../Object.html#constructor" class="signatureLink">constructor</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">
+	 類別物件的參照或是特定物件實體的建構函數。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="NativeDragManager.html#dragInitiator" class="signatureLink">dragInitiator</a> : <a href="../display/InteractiveObject.html">InteractiveObject</a><div class="summaryTableDescription">[靜態] [唯讀] 
+	傳遞至用來起始拖曳作業之 NativeDragManager.doDrag() 呼叫的互動式物件。</div></td><td class="summaryTableOwnerCol">NativeDragManager</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="NativeDragManager.html#dropAction" class="signatureLink">dropAction</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">[靜態] 
+	放下目標所指定的拖曳動作。</div></td><td class="summaryTableOwnerCol">NativeDragManager</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="NativeDragManager.html#isDragging" class="signatureLink">isDragging</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">[靜態] [唯讀] 
+	報告拖曳作業目前是否正在進行。</div></td><td class="summaryTableOwnerCol">NativeDragManager</td></tr><tr class="" runtime="AIR::2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="NativeDragManager.html#isSupported" class="signatureLink">isSupported</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">[靜態] [唯讀] 
+     如果目前的平台支援 NativeDragManager 類別，則 isSupported 屬性會設為 true，否則會設為 false。</div></td><td class="summaryTableOwnerCol">NativeDragManager</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary" id="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">公用方法 </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="NativeDragManager.html#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隱藏繼承公用方法</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="NativeDragManager.html#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 顯示繼承公用方法</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">方法</th><th>定義自</th></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="NativeDragManager.html#acceptDragDrop()" class="signatureLink">acceptDragDrop</a>(target:<a href="../display/InteractiveObject.html">InteractiveObject</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">[靜態] 
+	 通知 NativeDragManager 有關指定的目標互動式物件可以接受對應至目前拖曳事件的放下動作。</div></td><td class="summaryTableOwnerCol">NativeDragManager</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="NativeDragManager.html#doDrag()" class="signatureLink">doDrag</a>(dragInitiator:<a href="../display/InteractiveObject.html">InteractiveObject</a>, clipboard:<a href="Clipboard.html">Clipboard</a>, dragImage:<a href="../display/BitmapData.html">BitmapData</a> = null, offset:<a href="../geom/Point.html">Point</a> = null, allowedActions:<a href="NativeDragOptions.html">NativeDragOptions</a> = null):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">[靜態] 
+	 開始拖放作業。</div></td><td class="summaryTableOwnerCol">NativeDragManager</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#hasOwnProperty()" class="signatureLink">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 指出物件是否有已定義的指定屬性。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#isPrototypeOf()" class="signatureLink">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 指出 Object 類別的實體是否位於指定為參數的物件原型鏈中。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#propertyIsEnumerable()" class="signatureLink">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 指出指定的屬性是否存在，以及是否可列舉。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#setPropertyIsEnumerable()" class="signatureLink">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     為迴圈作業設定動態屬性的可用性。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toLocaleString()" class="signatureLink">toLocaleString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 傳回代表此物件的字串，根據地區特定慣例進行格式化。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toString()" class="signatureLink">toString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 會傳回指定之物件的字串形式。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#valueOf()" class="signatureLink">valueOf</a>():<a href="../../Object.html">Object</a></div><div class="summaryTableDescription">
+	 會傳回指定之物件的基本值。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">屬性詳細資訊</div><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="dragInitiator" id="dragInitiator"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>dragInitiator</h3></td><td class="detailHeaderType">屬性</td></tr></table><div class="detailBody"><code>dragInitiator:<a href="../display/InteractiveObject.html">InteractiveObject</a></code>&nbsp;&nbsp;[唯讀] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	傳遞至用來起始拖曳作業之 <code>NativeDragManager.doDrag()</code> 呼叫的互動式物件。
+	
+	</p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get dragInitiator():<a href="../display/InteractiveObject.html">InteractiveObject</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="dropAction" id="dropAction"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>dropAction</h3></td><td class="detailHeaderType">屬性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>dropAction:<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	放下目標所指定的拖曳動作。
+	 
+     <p><code>dropAction</code> 屬性應該在處理常式中針對 <code>nativeDragDrop</code> 事件設定。如果沒有在 <code>nativeDragComplete</code> 之前設定 <code>dropAction</code>，則 NativeDragManager 會設定此值，而第一個允許的動作則來自此清單：複製、移動或連結 (依照順序)。</p>
+     
+     </p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get dropAction():<a href="../../String.html">String</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function set dropAction(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><br/><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="NativeDragActions.html" target="">flash.desktop.NativeDragActions</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="isDragging" id="isDragging"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>isDragging</h3></td><td class="detailHeaderType">屬性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isDragging:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[唯讀] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	報告拖曳作業目前是否正在進行。
+	 
+     </p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get isDragging():<a href="../../Boolean.html">Boolean</a></code><br/></div></span><span id="pageFilter" runtime="AIR::2##"><a name="propertyDetail" id="propertyDetail"></a><a name="isSupported" id="isSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>isSupported</h3></td><td class="detailHeaderType">屬性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isSupported:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[唯讀] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 2</td></tr></table><p></p><p></p><p>
+     如果目前的平台支援 NativeDragManager 類別，則 <code>isSupported</code> 屬性會設為 <code>true</code>，否則會設為 <code>false</code>。 
+     
+     </p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get isSupported():<a href="../../Boolean.html">Boolean</a></code><br/></div></span><a name="methodDetail" id="methodDetail"></a><div class="detailSectionHeader">方法詳細資訊</div><span id="pageFilter" runtime="AIR::1.0##"><a name="acceptDragDrop()" id="acceptDragDrop()"></a><a name="acceptDragDrop(flash.display.InteractiveObject)" id="acceptDragDrop(flash.display.InteractiveObject)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;acceptDragDrop</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td></tr></table><div class="detailBody"><code> public static function acceptDragDrop(target:<a href="../display/InteractiveObject.html">InteractiveObject</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 通知 NativeDragManager 有關指定的目標互動式物件可以接受對應至目前拖曳事件的放下動作。
+	 
+     <p>只有當指定的目標物件有 <code>nativeDragDrop</code> 處理常式 (可以在拖曳的項目中處理至少一種資料格式，以及至少一種允許的動作) 時，才應該呼叫此方法。</p>
+     
+	 <p>只有在 <code>nativeDragEnter</code> 或 <code>nativeDragOver</code> 事件處理常式中，才能呼叫此函數。</p>
+	 
+     </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">target</span>:<a href="../display/InteractiveObject.html">InteractiveObject</a></code></td></tr></table></p></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="doDrag()" id="doDrag()"></a><a name="doDrag(flash.display.InteractiveObject,flash.desktop.Clipboard,flash.display.BitmapData,flash.geom.Point,flash.desktop.NativeDragOptions)" id="doDrag(flash.display.InteractiveObject,flash.desktop.Clipboard,flash.display.BitmapData,flash.geom.Point,flash.desktop.NativeDragOptions)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;doDrag</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function doDrag(dragInitiator:<a href="../display/InteractiveObject.html">InteractiveObject</a>, clipboard:<a href="Clipboard.html">Clipboard</a>, dragImage:<a href="../display/BitmapData.html">BitmapData</a> = null, offset:<a href="../geom/Point.html">Point</a> = null, allowedActions:<a href="NativeDragOptions.html">NativeDragOptions</a> = null):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 開始拖放作業。
+	 
+	 <p>若要開始拖曳作業：</p>
+	 <ol><li>建立新的 Clipboard 物件。</li><li>加入要以一種或多種格式傳輸的資料。</li><li>建立 BitmapData 物件，在拖曳期間當做 Proxy 影像使用 (選擇性)。</li><li>建立 NativeDragOptions 物件，限制此作業中允許的動作 (如果 <code>allowedActions</code> 參數保留為 <code>null</code>，則允許所有動作)。</li><li>呼叫 <code>NativeDragManager.doDrag()</code>。</li></ol>
+	 
+     <p>呼叫此方法之後，初始程式物件將接收 <code>nativeDragStart</code> 事件；拖曳進行期間則會接收 <code>nativeDragStart</code> 事件；當使用者放開滑鼠以結束拖曳手勢時，則會接收 <code>nativeDragComplete</code> 事件。<code>nativeDragComplete</code> 事件的處理常式可以檢查該事件的 <code>dropAction</code> 屬性，以判斷拖放作業是否成功完成。如果 <code>dropAction</code> 為 <code>NativeDragActions.NONE</code>，則不會將拖曳的項目放在可用的目標上。</p>
+	 
+     <p>此方法只能從 <code>mouseDown</code> 或 <code>mouseMove</code> 事件處理常式中呼叫 (如果因為回應 <code>mouseMove</code> 事件而呼叫此方法，則滑鼠按鈕也必須是按下狀態)。</p>
+	 
+	 </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">dragInitiator</span>:<a href="../display/InteractiveObject.html">InteractiveObject</a></code> &mdash; 通常是拖曳手勢開始的物件。接收 <code>nativeDragStart</code> 和 <code>nativeDragComplete</code> 事件。
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">clipboard</span>:<a href="Clipboard.html">Clipboard</a></code> &mdash; 拖曳之資料的容器物件。
+	 
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">dragImage</span>:<a href="../display/BitmapData.html">BitmapData</a></code> (default = <code>null</code>)<code></code> &mdash; 在拖曳手勢期間，滑鼠指標下方顯示的選擇性 Proxy 影像。如果為 <code>null</code>，則不顯示任何影像。
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">offset</span>:<a href="../geom/Point.html">Point</a></code> (default = <code>null</code>)<code></code> &mdash; 介於滑鼠感應區和拖曳影像左上角之間的位移。負值座標會將相對於感應區的影像位置向左上方移動。如果為 <code>null</code>，則會將拖曳影像左上角置於滑鼠感應區。 
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">allowedActions</span>:<a href="NativeDragOptions.html">NativeDragOptions</a></code> (default = <code>null</code>)<code></code> &mdash; 限制此作業所允許的拖放動作。如果為 <code>null</code>，則允許所有動作。
+	 
+	 </td></tr></table></p><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="NativeDragActions.html" target="">flash.desktop.NativeDragActions</a></div></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,true,false,false,false,false,false,false,true,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script></div><p xmlns:xd="http://www.pnp-software.com/XSLTdoc"></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 03:47 PM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/zh_TW/legalnotices/index.html">法律聲明</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">線上隱私權政策</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">為什麼顯示英文？</span>
+				</div>
+				<div class="white_content_body">
+					<b>「ActionScript 3.0 參考」的內容是以英文顯示</b><br><br>
+					並非所有「ActionScript 3.0 參考」的內容都翻譯為所有語言。當語言元素未翻譯時，就會以英文顯示。例如，ga.controls.HelpBox 類別並沒有翻譯為任何語言。因此在參考的繁體中文版本中，ga.controls.HelpBox 類別就會以英文顯示。
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 03:47 PM Z  -->

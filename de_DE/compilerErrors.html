@@ -1,0 +1,799 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="ActionScript&reg; 3.0 Referenzhandbuch für die Adobe&reg; Flash&reg;-Plattform"><meta name="lang" content="de-de"><link rel="stylesheet" href="style.css" type="text/css" media="screen"><link rel="stylesheet" href="print.css" type="text/css" media="print"><link rel="stylesheet" href="override.css" type="text/css"><link rel="stylesheet" href="asfilter.css" type="text/css"><link rel="stylesheet" href="ion.css" type="text/css"><title>Compiler-Fehler - Adobe ActionScript&reg; 3 (AS3) API-Referenz</title>
+		<link rel="stylesheet" href="filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="filter_new.css" type="text/css">
+			
+		<script src="jquery.js" type="text/javascript"></script>
+		<script src="s_chl_code.js" type="text/javascript"></script>
+		<script src="jquery.zclip.js" type="text/javascript"></script>
+		<script src="jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="cookies.js" type="text/javascript"></script>
+		<script src="asdoc.js" type="text/javascript"></script>
+		<script src="iscroll.js" type="text/javascript"></script>
+		<script src="AC_OETags.js" type="text/javascript"></script>
+		<script src="omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "Laufzeitumgebungen";
+			var productsLabel = "Produkte";
+			var noneLabel = "Keine";
+			var qsearchBoxLabel = "Schnellsuche";
+			var qsearchText = "Begriff nicht gefunden";
+			var ajaxErrorMsg="Fehler beim Laden der Seite";
+			var ajaxErrorTryMsg="Wiederholen";
+			var ajaxLoadingMsg="Ladevorgang läuft noch";
+			var cancelMsg = "Abbrechen";
+			var classesText = "Klassen";
+			var strJiveReply = "Diese Frage wurde zu folgendem Artikel gestellt: "
+			var showFilters = "Filter anzeigen";
+			var hideFilters = "Filter ausblenden";
+			
+		
+			var baseRef = "./";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											ActionScript<sup>&reg;</sup> 3.0 Referenzhandbuch für die Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup>-Plattform<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="index.html"> Home </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="compilerErrors.html#top" style="display:">Liste der Pakete und Klassen einblenden</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="compilerErrors.html#top" style="display:none">Liste der Pakete und Klassen ausblenden</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="package-summary.html"> Pakete </a>&nbsp;|&nbsp;
+												<a target="_self" href="class-summary.html"> Klassen </a>&nbsp;|&nbsp;
+												<a target="_self" href="whatsnew.html"> Neue Funktionen </a>&nbsp;|&nbsp;
+												<a target="_self" href="all-index-Symbols.html"> Stichwortverzeichnis </a>&nbsp;|&nbsp;
+												<a target="_self" href="appendixes.html"> Anhänge </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Warum auf Englisch?</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/de_DE/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('./')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('./')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="help.js"></script>
+						<script language="javascript" type="text/javascript" src="asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>Filter:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">Daten werden vom Server abgerufen...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">Daten werden vom Server abgerufen...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="compilerErrors.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">&nbsp;</a><br>
+								<h1 id="classProductName">Compiler-Fehler&nbsp;</h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="compilerErrors.html#propertySummary" style="display:none"> Eigenschaften </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="compilerErrors.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Eigenschaften </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="compilerErrors.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Konstruktor </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="compilerErrors.html#methodSummary" style="display:none"> Methoden </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="compilerErrors.html#constantSummary" style="display:none"> Globale Konstanten </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="compilerErrors.html#eventSummary" style="display:none"> Ereignisse </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="compilerErrors.html#styleSummary" style="display:none"> Stile </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="compilerErrors.html#SkinPartSummary" style="display:none"> Skinteile </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="compilerErrors.html#SkinStateSummary" style="display:none"> Skinstatus </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="compilerErrors.html#effectSummary" style="display:none"> Effekte </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="compilerErrors.html#constantSummary" style="display:none"> Konstanten </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="compilerErrors.html#methodSummary" style="display:none"> Globale Funktionen </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="compilerErrors.html#methodSummary" style="display:none">Funktionen</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="compilerErrors.html#interfaceSummary" style="display:none"> Schnittstellen </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="compilerErrors.html#classSummary" style="display:none"> Klassen </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="compilerErrors.html#includeExamplesSummary" style="display:none"> Beispiele </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="compilerErrors.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								Klassen
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><p>
+        <div id="badgeAnchorSupport" class="ionBadgeWrapper"></div>
+        <div id="badgeContainerSupport"></div>
+        <br/>
+        Das Folgende ist eine Liste der Kompilierungsfehler, die der Compiler erzeugt, wenn er auf einen ungültigen Code trifft. Einige dieser Fehler werden nur im strikten Kompilierungsmodus erfasst.
+        Im strikten Modus werden drei Einschränkungen eingesetzt, die in der Standardsprache nicht vorhanden sind:
+        <p>
+        <ul>
+        <li>Ausdrücke haben statische Datentypen und Datentypenfehler sind Überprüfungsfehler.</li>
+        <li>Zusätzliche Überprüfungsregeln erfassen häufig auftretende Programmierungsfehler.</li>
+        <li>Überprüfungsfehler werden vorab gemeldet. Die folgenden Überprüfungsfehler treten nur im strikten Modus auf:</li>
+        <ul>
+        <li>Signaturübereinstimmung bei Funktionsaufrufen; hierbei wird die Anzahl der angegebenen Parameter und deren Datentyp überprüft.</li>
+        <li>Konflikte aufgrund doppelt vorhandener Definitionen.</li>
+        <li>Nicht gebundene Verweise, die beim Zugriff auf Methoden oder Eigenschaften auftreten, die während der Kompilierung nicht definiert sind.</li>
+        <li>Versiegelte („sealed“) Objekte, denen Eigenschaften dynamisch hinzugefügt werden.</li>
+        <li>Schreiben in konstante Variablen.</li>
+        <li>Löschen von festen Eigenschaften.</li>
+        <li>Vergleiche von Ausdrücken, die inkompatible Datentypen verwenden.</li>
+        <li>Nicht gefundene Pakete.</li>
+        </ul></ul>
+        </p></p><br><a name="compilerErrorSummary"></a><table cellpadding="3" cellspacing="0" class="summaryTable"><tr><th>&nbsp;</th><th>Code</th><th width="35%">Nachricht</th><th>Beschreibung</th></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1000"></a><b>1000</b></td><td class="summaryTableCol">Nicht eindeutiger Verweis auf %s.
+
+
+	
+
+</td><td class="summaryTableLastCol">
+	Eventuell wird auf mehrere Objekte gleichzeitig verwiesen. Beispielsweise werden in dem folgenden Code die Namespaces <code>rss</code> und <code>xml</code> verwendet. Jeder Namespace definiert dabei einen anderen Wert für die Funktion <code>hello()</code>. Diese Fehlermeldung wird von der Anweisung <code>trace(hello())</code> ausgegeben, weil sie nicht feststellen kann, welcher Namespace verwendet werden soll.
+	
+<pre><code>private namespace rss;
+private namespace xml;
+    
+public function ErrorExamples() {
+  	use namespace rss;
+   	use namespace xml;
+	trace(hello());
+}
+    
+rss function hello():String {
+      	return "hola";
+    }
+    
+    xml function hello():String {
+        return "foo";
+    }</code></pre>
+ 
+
+	<p>Berichtigen Sie einen mehrdeutigen Verweis, indem Sie den Verweis genauer bezeichnen. Im folgenden Beispiel wird mit dem Format <i>namespace</i>::<i>function</i> genau bezeichnet, welcher Namespace verwendet werden soll:</p>
+
+
+<pre><code>public function ErrorExamples() {
+    
+    trace(rss::hello());
+    trace(xml::hello());
+}</code></pre>
+        
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1003"></a><b>1003</b></td><td class="summaryTableCol">Zugriffsspezifikatoren sind in Kombination mit Namespace-Attributen nicht zulässig.
+		</td><td class="summaryTableLastCol">Sie können nicht sowohl einen Zugriffsspezifikator (zum Beispiel „private“ oder „public“) als auch ein Namespace-Attribut in einer Definition verwenden.&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1004"></a><b>1004</b></td><td class="summaryTableCol">Namespace wurde nicht gefunden oder ist keine Konstante zur Kompilierungszeit.
+	
+
+</td><td class="summaryTableLastCol">
+		Der Namespace ist entweder unbekannt oder es handelt sich um einen Ausdruck, der zur Laufzeit unterschiedliche Werte annehmen kann. Prüfen Sie, ob der Namespace richtig geschrieben und dessen Definition korrekt importiert wurde.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1006"></a><b>1006</b></td><td class="summaryTableCol">Super-Ausdrücke können nur innerhalb von Klasseninstanzmethoden verwendet werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1007"></a><b>1007</b></td><td class="summaryTableCol">Super-Anweisungen können nur innerhalb von Klasseninstanzkonstruktoren verwendet werden.
+
+</td><td class="summaryTableLastCol">
+		Die <code>super</code>-Anweisung kann nicht in statischen Mitgliedern verwendet werden. Die <code>super</code>-Anweisung kann nur in Klasseninstanzen verwendet werden.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1008"></a><b>1008</b></td><td class="summaryTableCol">Das Attribut ist ungültig.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1010"></a><b>1010</b></td><td class="summaryTableCol">Das override-Attribut kann nur für Definitionen von Klasseneigenschaften verwendet werden.
+
+
+</td><td class="summaryTableLastCol">
+		Das Schlüsselwort <code>override</code> kann nicht in einem Funktionsblock verwendet werden.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1011"></a><b>1011</b></td><td class="summaryTableCol">Das virtual-Attribut kann nur für Definitionen von Klasseneigenschaften verwendet werden.
+
+</td><td class="summaryTableLastCol">
+		Das <code>virtual</code>-Attribut kann nicht zum Deklarieren einer Eigenschaft verwendet werden, die keiner Klasse angehört (beispielsweise, wenn Sie eine Variable in einem Funktionsblock deklarieren).
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1012"></a><b>1012</b></td><td class="summaryTableCol">Das static-Attribut kann nur für Definitionen innerhalb einer Klasse verwendet werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1013"></a><b>1013</b></td><td class="summaryTableCol">Das private-Attribut kann nur für Definitionen von Klasseneigenschaften verwendet werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1014"></a><b>1014</b></td><td class="summaryTableCol">Das intrinsic-Attribut wird nicht mehr unterstützt.
+
+
+</td><td class="summaryTableLastCol">
+		ActionScript 3.0 unterstützt das Schlüsselwort <code>intrinsic</code> nicht.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1016"></a><b>1016</b></td><td class="summaryTableCol">Basisklasse ist endgültig.
+
+
+</td><td class="summaryTableLastCol">
+		Die übergeordnete Klasse kann nicht erweitert werden, da sie als <code>final</code> gekennzeichnet ist.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1017"></a><b>1017</b></td><td class="summaryTableCol">Die Definition der Basisklasse %s wurde nicht gefunden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1018"></a><b>1018</b></td><td class="summaryTableCol">Doppelt vorhandene Klassendefinition: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1020"></a><b>1020</b></td><td class="summaryTableCol">Mit „override“ gekennzeichnete Methode muss eine andere Methode außer Kraft setzen.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1021"></a><b>1021</b></td><td class="summaryTableCol">Doppelt vorhandene Funktionsdefinition.
+
+
+</td><td class="summaryTableLastCol">
+		Sie können nicht mehr als eine Funktion mit demselben Bezeichnernamen innerhalb desselben Bereichs deklarieren.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1022"></a><b>1022</b></td><td class="summaryTableCol">Endgültiger Zugriff kann nicht außer Kraft gesetzt werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1023"></a><b>1023</b></td><td class="summaryTableCol">Nicht zulässiges Außerkraftsetzen.
+</td><td class="summaryTableLastCol"> Eine als Außerkraftsetzen gekennzeichnete Funktion muss exakt mit der Parameter- und Rückgabetypdeklaration der Funktion, die sie außer Kraft setzt, übereinstimmen. Sie muss dieselbe Anzahl Parameter aufweisen, jeweils vom selben Typ, und denselben Rückgabetyp deklarieren. Wenn eine der Parameter optional ist, muss auch dieser übereinstimmen. Beide Funktionen müssen auch denselben Zugriffsspezifikator (public, private usw.) bzw. dasselbe Namespace-Attribut verwenden.&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1024"></a><b>1024</b></td><td class="summaryTableCol">Eine nicht für „override“ gekennzeichnete Funktion wird außer Kraft gesetzt.
+
+
+</td><td class="summaryTableLastCol">
+		
+		Wenn eine Methode in einer Klasse eine Basisklassenmethode überschreibt, muss dies explizit mit dem <code>override</code>-Attribut deklariert werden. Dies wird in dem folgenden Beispiel verdeutlicht:
+
+		<pre>public override function foo():void{};</pre>
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1025"></a><b>1025</b></td><td class="summaryTableCol">Eine final-Methode kann nicht neu definiert werden.
+
+
+</td><td class="summaryTableLastCol">
+		Die Methode kann nicht erweitert werden, da sie in der Basisklasse als <code>final</code> (endgültig) gekennzeichnet ist.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1026"></a><b>1026</b></td><td class="summaryTableCol">Konstruktorfunktionen müssen Instanzmethoden sein.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1027"></a><b>1027</b></td><td class="summaryTableCol">Für Funktionen kann nicht gleichzeitig „static“ und „override“ gelten.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1028"></a><b>1028</b></td><td class="summaryTableCol">Für Funktionen kann nicht gleichzeitig „static“ und „virtual“ gelten.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1029"></a><b>1029</b></td><td class="summaryTableCol">Für Funktionen kann nicht gleichzeitig „final“ und „virtual“ gelten.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1030"></a><b>1030</b></td><td class="summaryTableCol">Der Name des Variablen-Argument-Arrays muss angegeben werden.
+
+
+</td><td class="summaryTableLastCol">
+	
+		Die Parameterdefinition ...(rest) gibt an, dass alle Werte, die nach ...(rest) eingegeben werden, in einem Array zusammengefasst werden. Sie müssen einen Namen für das Array wie im Ausdruck <code>function foo(x,...(rest))</code> eingeben.
+
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1033"></a><b>1033</b></td><td class="summaryTableCol">Virtuelle Variablen werden nicht unterstützt.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1034"></a><b>1034</b></td><td class="summaryTableCol">Variablen können nicht nativ sein.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1035"></a><b>1035</b></td><td class="summaryTableCol">Für Variablen kann nicht gleichzeitig „final“ und „virtual“ gelten.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1037"></a><b>1037</b></td><td class="summaryTableCol">Pakete dürfen nicht verschachtelt sein.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1038"></a><b>1038</b></td><td class="summaryTableCol">Ziel der break-Anweisung wurde nicht gefunden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1039"></a><b>1039</b></td><td class="summaryTableCol">Zielt der continue-Anweisung wurde nicht gefunden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1040"></a><b>1040</b></td><td class="summaryTableCol">Doppelt vorhandene Definition einer Bezeichnung.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1041"></a><b>1041</b></td><td class="summaryTableCol">Attribute können nicht aufgerufen werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1042"></a><b>1042</b></td><td class="summaryTableCol">Das this-Schlüsselwort kann in statischen Methoden nicht verwendet werden. Es kann nur in Instanzmethoden, Funktionsumhüllungen und globalem Code verwendet werden.
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Das Schlüsselwort <code>this</code> kann nicht in einem statischen Mitglied verwendet werden, da <code>this</code> keinen Kontext hätte.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1043"></a><b>1043</b></td><td class="summaryTableCol">Nicht definierter Namespace.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1044"></a><b>1044</b></td><td class="summaryTableCol">Schnittstellenmethode %s in Namespace %s nicht implementiert von Klasse %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1045"></a><b>1045</b></td><td class="summaryTableCol">Schnittstelle %s wurde nicht gefunden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1046"></a><b>1046</b></td><td class="summaryTableCol">Typ wurde nicht gefunden oder war keine Konstante zur Kompilierungszeit: %s.
+
+
+
+</td><td class="summaryTableLastCol">
+		
+		Die als Typdeklaration verwendete Klasse ist entweder unbekannt oder es handelt sich um einen Ausdruck, der zur Laufzeit unterschiedliche Werte annehmen kann. Stellen Sie sicher, dass Sie die richtige Klasse importieren und dass der Speicherort des zugehörigen Pakets nicht geändert wurde. Überprüfen Sie auch, ob das Paket mit dem Code (nicht der importierten Klasse) korrekt definiert ist. (Achten Sie beispielsweise darauf, die richtige Syntax für ein ActionScript 3.0-Paket und nicht die Syntax für ActionScript 2.0 zu verwenden.)
+
+		<p>Diese Fehlermeldung kann auch auftreten, wenn die verwiesene Klasse nicht in einem bereits verwendeten oder nicht als „public“ deklarierten Namespace definiert ist:</p>
+
+		<pre><code>public class Foo{}</code></pre>
+
+        <p>Wenn Sie Flex&#153 Builder&#153 2 verwenden und die Klasse Teil einer Bibliothek ist, stellen Sie das Festlegen des Klassenpfads für das Projekt sicher.</p>
+
+
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1047"></a><b>1047</b></td><td class="summaryTableCol">Parameterinitialisierung ist keine Konstante zur Kompilierungszeit.
+	
+	
+</td><td class="summaryTableLastCol">
+	Der als Standardwert für den Parameter verwendete Wert ist entweder nicht definiert oder könnte zur Laufzeit unterschiedliche Werte annehmen. Überprüfen Sie, ob der Initialisierer korrekt geschrieben wurde, und dass es sich bei dem Initialisierer nicht um einen Ausdruck handelt, der zur Laufzeit unterschiedliche Werte annehmen kann.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1048"></a><b>1048</b></td><td class="summaryTableCol">Methode kann nicht als Konstruktor verwendet werden.
+	
+		
+</td><td class="summaryTableLastCol">
+	Das Erstellen einer Instanz einer Klassenmethode ist nicht möglich. In <code>new</code>-Ausdrücken können nur globale Funktionen verwendet werden.
+	
+<pre>class D { function xx() { return 22; } }
+var d:D = new D();
+var x = new d.xx(); // error, method cannot be used as constructor
+function yy() { this.a = 22; }
+var z = new yy(); // no error, global functions can be used as constructors.</pre>
+
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1049"></a><b>1049</b></td><td class="summaryTableCol">Unzulässige Zuweisung zu einer als Konstante angegebenen Variablen.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1050"></a><b>1050</b></td><td class="summaryTableCol">Zuweisung zu einem Wert ohne integrierte Verweisfunktion nicht möglich.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1051"></a><b>1051</b></td><td class="summaryTableCol">Rückgabewert muss „undefined“ (nicht definiert) sein.
+
+
+
+</td><td class="summaryTableLastCol">
+		Sie versuchen, die <code>return</code>-Anweisung in einer Methode mit dem deklarierten Rückgabetyp <code>void</code> zu verwenden.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1052"></a><b>1052</b></td><td class="summaryTableCol">Konstanteninitialisierer unbekannt oder keine Konstante zur Kompilierungszeit.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Der zur Initialisierung der Konstanten verwendete Wert ist entweder nicht definiert oder könnte zur Laufzeit unterschiedliche Werte annehmen. Überprüfen Sie, ob der Initialisierer korrekt geschrieben wurde, und dass es sich bei dem Initialisierer nicht um einen Ausdruck handelt, der zur Laufzeit unterschiedliche Werte annehmen kann.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1053"></a><b>1053</b></td><td class="summaryTableCol">Accessor-Typen müssen übereinstimmen.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1054"></a><b>1054</b></td><td class="summaryTableCol">Rückgabetyp einer set-Definition muss „unspecified“ oder „void“ sein.
+
+
+</td><td class="summaryTableLastCol">
+		Sie können den Rückgabewert für eine set-Funktion nicht angeben. Der folgende Code ist beispielsweise ungültig:
+
+		<pre>public function set gamma(g:Number):Number;</pre>
+
+		<p>Der folgende Code hingegen <i>ist</i> gültig:</p>
+
+		<pre>public function set gamma(g:Number):void;</pre>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1058"></a><b>1058</b></td><td class="summaryTableCol">Eigenschaft kann nur geschrieben werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1059"></a><b>1059</b></td><td class="summaryTableCol">Eigenschaft kann nur gelesen werden.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Diese Eigenschaft wird über eine get-Funktion definiert, mit der Sie den Wert der Eigenschaft abrufen können. Jedoch ist für diese Eigenschaft keine set-Funktion definiert, sie ist also schreibgeschützt.
+	<p>In dem folgenden Beispiel erzeugt Zeile 3 eine Fehlermeldung, da keine set-Funktion für <code>xx</code> definiert ist:</p>
+	
+<pre>class D { function get xx() { return 22; } }
+var d:D = new D();
+d.xx = 44; // error, property is read-only</pre>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1061"></a><b>1061</b></td><td class="summaryTableCol">Aufruf einer möglicherweise nicht definierten Methode %s über einen Verweis mit dem statischen Typ %s.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Sie rufen eine nicht definierte Methode auf.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1063"></a><b>1063</b></td><td class="summaryTableCol">Datei konnte nicht geöffnet werden: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1064"></a><b>1064</b></td><td class="summaryTableCol">Ungültige Metadaten.
+	
+
+
+</td><td class="summaryTableLastCol">
+	Diese Metadaten werden nicht erkannt.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1065"></a><b>1065</b></td><td class="summaryTableCol">Metadatenattribute dürfen nur ein Element enthalten.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1067"></a><b>1067</b></td><td class="summaryTableCol">Implizite Typumwandlung von %s in nicht verwandten Typ %s.
+
+
+
+</td><td class="summaryTableLastCol">
+		Sie versuchen, ein Objekt in einen Typ umzuwandeln, in den es nicht konvertiert werden kann. Dies kann vorkommen, wenn sich die Zielklasse nicht in der Vererbungskette des umzuwandelnden Objekts befindet. Diese Fehlermeldung tritt nur dann auf, wenn der Compiler im strikten Modus ausgeführt wird.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1068"></a><b>1068</b></td><td class="summaryTableCol">Enthaltene Datei konnte nicht geöffnet werden: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1069"></a><b>1069</b></td><td class="summaryTableCol">Syntaxfehler: Definition oder Direktive erwartet.
+
+
+
+</td><td class="summaryTableLastCol">
+		Überprüfen Sie die Syntax der Zeile.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1071"></a><b>1071</b></td><td class="summaryTableCol">Syntaxfehler: Definitionsschlüsselwort (beispielsweise „function“) wurde nicht nach %s, sondern nach Attribut %s erwartet.
+
+
+</td><td class="summaryTableLastCol">
+	
+		Diese Fehlermeldung tritt auf, wenn der Autor vergessen hat, das Schlüsselwort „var“ oder „function“ in einer Deklaration zu verwenden.
+<pre><code>public int z;// should be 'public var z:int;'</code></pre>
+
+		Diese Fehlermeldung tritt auch dann auf, wenn der Compiler auf ein unerwartetes Zeichen trifft. Beispielsweise ist die folgende Syntax der Funktion <code>trace()</code> aufgrund der fehlenden Klammern ungültig (die korrekte Syntax lautet <code>trace("hello")</code>):
+
+<pre>
+trace "hello"
+</pre>
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1072"></a><b>1072</b></td><td class="summaryTableCol">Syntaxfehler: XML wird vor Namespace erwartet.
+
+
+</td><td class="summaryTableLastCol">
+	
+		Die korrekte Syntax für diese Anweisung lautet <code>default xml namespace = </code> <i>ns</i>. Entweder fehlt das Schlüsselwort <code>xml</code> (beachten Sie die Kleinschreibung), oder es wurde ein ungültiges Schlüsselwort verwendet. Weitere Informationen finden Sie im Abschnitt zur Anweisung <a href="statements.html#default_xml_namespace" >default xml namespace</a>.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1073"></a><b>1073</b></td><td class="summaryTableCol">Syntaxfehler: catch- oder finally-Klausel wird erwartet.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1075"></a><b>1075</b></td><td class="summaryTableCol">Syntaxfehler: „each“-Schlüsselwort ohne „in“-Operator nicht zulässig.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1076"></a><b>1076</b></td><td class="summaryTableCol">Syntaxfehler: Linke Klammer vor dem Bezeichner erwartet.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1077"></a><b>1077</b></td><td class="summaryTableCol">CaseLabel wird erwartet.
+
+	
+</td><td class="summaryTableLastCol">
+	Der Compiler erwartete an dieser Stelle im switch-Block eine <code>case</code>-Anweisung. Der folgende switch-Block enthält fälschlicherweise einen Aufruf an <code>print</code> vor der ersten <code>case</code>-Anweisung:
+
+<pre>switch(x)
+{
+trace(2);
+case 0:  trace(0); 
+break
+}</pre>
+	
+    &nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1078"></a><b>1078</b></td><td class="summaryTableCol">Bezeichnung muss ein einfacher Bezeichner sein.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1079"></a><b>1079</b></td><td class="summaryTableCol">Ein super-Ausdruck muss über einen Operanden verfügen.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1080"></a><b>1080</b></td><td class="summaryTableCol">Inkrement- oder Dekrement-Operator erwartet.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1082"></a><b>1082</b></td><td class="summaryTableCol">Einfacher Ausdruck in Klammern erforderlich.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1083"></a><b>1083</b></td><td class="summaryTableCol">Syntaxfehler: %s wird nicht erwartet.
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		In der Codezeile fehlen einige Informationen. In dem folgenden Beispiel muss hinter dem abschließenden Pluszeichen ein Ausdruck (beispielsweise eine andere Zahl) eingegeben werden:
+
+		<pre>var sum:int = 1 + 2 + ;</pre>
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1084"></a><b>1084</b></td><td class="summaryTableCol">Syntaxfehler: %s wird vor %s erwartet.
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Der Ausdruck wurde an dieser Stelle nicht erwartet. Wenn die Fehlermeldung „Rechte Klammer vor Programmende erwartet“ anzeigt, fehlt eine schließende geschweifte Klammer (&#125) in einem Codeblock.
+
+		<p>Wenn die Fehlermeldung „Linke Klammer vor _ erwartet“ lautet, haben Sie eventuell eine Klammer bei einem bedingten Ausdruck vergessen (siehe folgendes Beispiel, das absichtlich falsch ist): </p>
+
+		<pre><code>var fact:int = 1 * 2 * 3;
+if fact > 2 {
+	var bigger:Boolean = true;
+}</code></pre>
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1086"></a><b>1086</b></td><td class="summaryTableCol">Syntaxfehler: es wird ein Semikolon vor %s erwartet.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1087"></a><b>1087</b></td><td class="summaryTableCol">Syntaxfehler: Zusätzliche Zeichen wurden nach Ende des Programms gefunden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1093"></a><b>1093</b></td><td class="summaryTableCol">Syntaxfehler.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1094"></a><b>1094</b></td><td class="summaryTableCol">Syntaxfehler: Ein Stringliteral muss vor dem Zeilenumbruch beendet werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1095"></a><b>1095</b></td><td class="summaryTableCol">Syntaxfehler: Ein Stringliteral muss vor dem Zeilenumbruch beendet werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1097"></a><b>1097</b></td><td class="summaryTableCol">Syntaxfehler: Eingabe wurde vor Erreichen der schließenden Anführungszeichen für ein Stringliteral beendet.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1099"></a><b>1099</b></td><td class="summaryTableCol">Syntaxfehler.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1100"></a><b>1100</b></td><td class="summaryTableCol">Syntaxfehler: XML verfügt nicht über zueinander passende Anfangs- und Endtags.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1102"></a><b>1102</b></td><td class="summaryTableCol">Löschen von super-Nachkommen nicht möglich.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1103"></a><b>1103</b></td><td class="summaryTableCol">Doppelt vorhandene Namespace-Definition.
+
+	
+
+
+</td><td class="summaryTableLastCol">
+	Sie haben den Namespace mehrmals definiert. Löschen oder modifizieren Sie die doppelt vorhandene Definition.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1104"></a><b>1104</b></td><td class="summaryTableCol"> %s </td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1105"></a><b>1105</b></td><td class="summaryTableCol">Ziel der Zuweisung muss ein Referenzwert sein.
+
+	 
+</td><td class="summaryTableLastCol">
+	Sie können einer Variablen einen Wert zuweisen, aber Sie können einem Wert keinen anderen Wert zuweisen. 
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1106"></a><b>1106</b></td><td class="summaryTableCol">Inkrement-Operand muss ein Verweis sein.
+	
+</td><td class="summaryTableLastCol">
+	Der Operand muss eine Variable, ein Element in einem Array oder eine Objekteigenschaft sein.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1107"></a><b>1107</b></td><td class="summaryTableCol">Ungültiger Inkrement-Operand.
+
+	
+</td><td class="summaryTableLastCol">
+	Der Operand muss eine Variable, ein Element in einem Array oder eine Objekteigenschaft sein.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1108"></a><b>1108</b></td><td class="summaryTableCol">Der Dekrement-Operand ist ungültig.
+	
+</td><td class="summaryTableLastCol">
+	Der Operand muss eine Variable, ein Element in einem Array oder eine Objekteigenschaft sein.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1109"></a><b>1109</b></td><td class="summaryTableCol">Ausdruck erforderlich.
+
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		In einem Teil des Codes fehlt ein Ausdruck. Diese Fehlermeldung wird beispielsweise vom folgenden Code erzeugt (es fehlt eine Bedingung in der <code>if</code>-Anweisung):
+
+<pre><code>var x = (5 > 2) ? 
+trace(x)</code></pre>
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1110"></a><b>1110</b></td><td class="summaryTableCol">XML-Tag-Name fehlt.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1111"></a><b>1111</b></td><td class="summaryTableCol">Die Datei %s ist keine gültige ABC-Datei.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1112"></a><b>1112</b></td><td class="summaryTableCol">Möglicherweise Endlosrekursion wegen dieses Datei-Includes: %s.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Eine in der zu kompilierenden Quelle enthaltene Datei enthält weitere <code>include</code>-Anweisungen, die zu einer unendlichen Schleife führen würden. Dieser Fehler wird zum Beispiel von den Dateien „a.as“ und „b.as“ erzeugt, da jede Datei versucht, die andere einzuschließen.
+	<p>
+	Die Datei a.as enthält den folgenden Code, der versucht, die Datei b.as einzuschließen:</p>
+<pre>import foo.bar.baz;
+include "b.as"
+trace(2);</pre>
+	<p>Die Datei b.as enthält den folgenden Code, der versucht, die Datei a.as einzuschließen:</p>
+	<pre>include "a.as"</pre>
+
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1113"></a><b>1113</b></td><td class="summaryTableCol">Referenz des Typs „Circular“ wurde in %s erkannt.
+	
+
+</td><td class="summaryTableLastCol">
+	Eine Klasse versucht, eine übergeordnete Klasse zu erweitern. Beispielsweise kann Klasse A die Klasse B nicht erweitern, wenn B von A übernimmt:
+<pre><code>class a extends b { }
+class b extends a { }</code></pre>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1114"></a><b>1114</b></td><td class="summaryTableCol">Das public-Attribut kann nur innerhalb eines Pakets verwendet werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1115"></a><b>1115</b></td><td class="summaryTableCol">Das internal-Attribut kann nur innerhalb eines Pakets verwendet werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1116"></a><b>1116</b></td><td class="summaryTableCol">Ein benutzerdefiniertes Namespace-Attribut kann nur auf der obersten Ebene einer Klassendefinition verwendet werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1118"></a><b>1118</b></td><td class="summaryTableCol">Implizite Typumwandlung eines Werts mit statischem Typ %s in einen möglicherweise nicht verwandten Typ %s.
+	
+
+</td><td class="summaryTableLastCol">Sie verwenden einen Wert, der nicht dem erwarteten Datentyp entspricht. Es besteht kein impliziter Zwang zur Umwandlung dieses Typs in den erwarteten Datentyp.
+	<p>Vielleicht verwenden Sie einen übergeordneten Typ, wo ein untergeordneter Typ erwartet wird. Beispiel:</p>
+<pre><code>class A {}
+var a:A = new A(); 
+class B extends A { function f() }
+var b : B = a // error</code></pre>
+	<p>Die letzte Anweisung erzeugt eine Fehlermeldung, weil sie versucht, ein Objekt des Datentyps A einer Variablen des Datentyps B zuzuweisen.</p>
+	<p>Im Folgenden wird die <code>foo()</code>-Funktion definiert, die einen Parameter des Typs B verwendet. Die Anweisung <code> foo(a);</code> generiert einen Fehler, da sie versucht, einen Parameter des Typs A zu verwenden:</p>
+<pre><code>function foo(x:B) { }
+foo(a);</code></pre>
+	<p>Die folgende Anweisung generiert einen Fehler, da der Rückgabewert für <code>foo2()</code> vom Typ B sein muss:</p>
+	<pre><code>function foo2():B { return new A(); }</code></pre>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1119"></a><b>1119</b></td><td class="summaryTableCol">Zugriff auf möglicherweise nicht definierte Eigenschaft %s über eine Referenz mit dem statischen Datentyp %s.
+
+
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Sie versuchen, auf eine Eigenschaft zuzugreifen, die für das angegebene Objekt nicht existiert. Diese Fehlermeldung wird beispielsweise durch den folgenden Code erzeugt, weil das int-Objekt über keine Eigenschaft mit der Bezeichnung <code>assortment</code> verfügt:
+
+<pre><code>var i:int = 44;
+var str:String = i.assortment;</code></pre>
+
+		Diese Fehlermeldung tritt nur dann auf, wenn der Compiler im strikten Modus ausgeführt wird.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1120"></a><b>1120</b></td><td class="summaryTableCol">Zugriff auf nicht definierte Eigenschaft %s.
+
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Sie versuchen, auf eine nicht definierte Variable zuzugreifen. Wenn die Variable <code>huh</code> nicht definiert wurde, führt ein Aufruf dieser Variablen zu dieser Fehlermeldung:
+
+<pre><code>huh = 55;</code></pre>
+
+		Diese Fehlermeldung tritt nur dann auf, wenn der Compiler im strikten Modus ausgeführt wird.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1121"></a><b>1121</b></td><td class="summaryTableCol">Eine get-Funktion darf keine Parameter enthalten.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1122"></a><b>1122</b></td><td class="summaryTableCol">Eine set-Funktion darf nur genau einen Parameter enthalten.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1123"></a><b>1123</b></td><td class="summaryTableCol">Eine set-Definition darf keine optionalen Parameter enthalten.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1124"></a><b>1124</b></td><td class="summaryTableCol">Rückgabetyp einer get-Definition darf nicht „void“ sein.
+
+	
+</td><td class="summaryTableLastCol">
+	Eine get-Funktion simuliert eine Variable. Da Variablen den Datentyp „void“ nicht annehmen können, ist das Deklarieren von get-Funktionen zur Rückgabe des Datentyps „void“ unzulässig.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1125"></a><b>1125</b></td><td class="summaryTableCol">In einer Schnittstelle definierte Methoden dürfen keinen Hauptteil haben.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1126"></a><b>1126</b></td><td class="summaryTableCol">Funktion weist keinen Textteil (body) auf.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1127"></a><b>1127</b></td><td class="summaryTableCol">Attribut %s wurde mehrfach angegeben.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Sie haben ein Attribut mehrmals in der gleichen Anweisung angegeben. Diese Fehlermeldung wird beispielsweise von der Anweisung <code>public static public var x;</code> erzeugt, da sie die Variable <code>x</code> zweimal als „public“ deklariert. Löschen Sie doppelt vorhandene Deklarierungen.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1129"></a><b>1129</b></td><td class="summaryTableCol">Doppelt vorhandene Schnittstellendefinition: %s.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Ändern oder löschen Sie doppelt vorhandene Definitionen.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1130"></a><b>1130</b></td><td class="summaryTableCol">Ein Konstruktor kann keinen Rückgabetyp angeben.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1131"></a><b>1131</b></td><td class="summaryTableCol">Klassen dürfen nicht verschachtelt werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1132"></a><b>1132</b></td><td class="summaryTableCol">Das final-Attribut kann nur für eine in einer Klasse definierte Methode verwendet werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1133"></a><b>1133</b></td><td class="summaryTableCol">Das native-Attribut kann nur mit Funktionsdefinitionen verwendet werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1134"></a><b>1134</b></td><td class="summaryTableCol">Das dynamic-Attribut kann nur mit Klassendefinitionen verwendet werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1135"></a><b>1135</b></td><td class="summaryTableCol">Syntaxfehler: %s ist kein gültiger Typ.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1136"></a><b>1136</b></td><td class="summaryTableCol">Fehlerhafte Anzahl von Argumenten. Erwartet wurde %s.
+
+	
+</td><td class="summaryTableLastCol">
+	Die Funktion erwartet eine andere als die von Ihnen angegebene Anzahl von Argumenten. Folgendes definiert zum Beispiel die Funktion <code>goo</code>, die zwei Argumente hat:
+<pre>class A { static function goo(x:int,y:int) 
+{ return(x+y); } }</pre>
+	<p>Die folgende Anweisung würde eine Fehlermeldung erzeugen, weil sie drei Argumente bereitstellt:</p>
+<pre>A.goo(1,2,3);</pre>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1137"></a><b>1137</b></td><td class="summaryTableCol">Fehlerhafte Anzahl von Argumenten. Es wurden nicht mehr als %s erwartet.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1138"></a><b>1138</b></td><td class="summaryTableCol">Erforderliche Parameter sind nach optionalen Parametern nicht zulässig.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1139"></a><b>1139</b></td><td class="summaryTableCol">Variablendeklarationen sind in Schnittstellen nicht zulässig.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1140"></a><b>1140</b></td><td class="summaryTableCol">Nach dem Parameterdefinitionsschlüsselwort ...rest angegebene Parameter können nur vom Array-Datentyp sein.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1141"></a><b>1141</b></td><td class="summaryTableCol">Eine Klasse kann nur eine andere Klasse und keine Schnittstelle erweitern.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1142"></a><b>1142</b></td><td class="summaryTableCol">Eine Schnittstelle kann nur andere Schnittstellen erweitern, %s ist jedoch eine Klasse.
+	
+
+</td><td class="summaryTableLastCol">
+	Sie versuchen, eine Klasse mit einer Schnittstelle zu erweitern. Eine Schnittstelle kann nur eine andere Schnittstelle erweitern.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1143"></a><b>1143</b></td><td class="summaryTableCol">Das override-Attribut kann nur für eine in einer Klasse definierte Methode verwendet werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1144"></a><b>1144</b></td><td class="summaryTableCol">Schnittstellenmethode %s in Namespace %s wird mit einer nicht kompatiblen Signatur in Klasse %s implementiert.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Methodensignaturen müssen exakt übereinstimmen.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1145"></a><b>1145</b></td><td class="summaryTableCol">Native Methoden können nicht über einen Hauptteil verfügen.
+	
+
+</td><td class="summaryTableLastCol">
+	Sie können <code>native</code> nicht verwenden, da es sich hierbei um ein reserviertes Schlüsselwort handelt.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1146"></a><b>1146</b></td><td class="summaryTableCol">Ein Konstruktor kann keine Get- oder Set-Methode sein.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1147"></a><b>1147</b></td><td class="summaryTableCol">Eine AS-Quelldatei wurde nicht definiert.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1149"></a><b>1149</b></td><td class="summaryTableCol">Die return-Anweisung kann im statischen Initialisierungscode nicht verwendet werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1150"></a><b>1150</b></td><td class="summaryTableCol">Das protected-Attribut kann nur für Definitionen von Klasseneigenschaften verwendet werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1151"></a><b>1151</b></td><td class="summaryTableCol">Konflikt mit Definition %s in Namespace %s vorhanden.
+
+	
+
+
+</td><td class="summaryTableLastCol">
+	Es ist nicht möglich, mehrere Variablen mit dem gleichen Bezeichnernamen innerhalb des gleichen Gültigkeitsbereichs zu deklarieren, es sei denn, alle deklarierten Variablen weisen den gleichen Datentyp auf. In ActionScript 3.0 werden unterschiedliche Codeblöcke (z.&nbsp;B. wie die in zwei <code>for</code>-Schleifen in der gleichen function-Definition) als im gleichen Gültigkeitsbereich betrachtet. 
+	<p>Das folgende Codebeispiel wandelt die Variable <code>x</code> korrekt in den gleichen Datentyp um:</p>
+<pre><code>function test()
+{
+	var x:int = 3;
+	for(var x:int = 33; x < 55; x++)
+	trace(x);
+	for(var x:int = 11; x < 33; x++)
+	trace(x)
+}</code></pre>
+	<p>Das folgende Codebeispiel erzeugt eine Fehlermeldung, da die Datentypumwandlung in der Variablendeklaration und die <code>for</code>-Schleifen unterschiedlich sind:</p>
+<pre><code>function test()
+{
+	var x:String = "The answer is";
+	for(var x:int = 33; x < 55; x++) // error
+	trace(x);
+	for(var x:unit = 11; x < 33; x++) // error
+	trace(x)
+}</code></pre>
+&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1152"></a><b>1152</b></td><td class="summaryTableCol"> Konflikt mit übernommener Definition %s in Namespace %s vorhanden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1153"></a><b>1153</b></td><td class="summaryTableCol">Ein Konstruktor kann nur als „public“ deklariert werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1154"></a><b>1154</b></td><td class="summaryTableCol">In einer Definition kann nur eine Instanz von „public“, „private“, „protected“ oder „internal“ angegeben werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1155"></a><b>1155</b></td><td class="summaryTableCol">Zugriffsmodule dürfen nicht in anderen Funktionen verschachtelt sein.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1156"></a><b>1156</b></td><td class="summaryTableCol">Schnittstellen können nicht mit dem new-Operator instanziiert werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1157"></a><b>1157</b></td><td class="summaryTableCol">Schnittstellenmitglieder dürfen nicht als „public“, „private“, „protected“ oder „internal“ deklariert werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1158"></a><b>1158</b></td><td class="summaryTableCol">Syntaxfehler: Vor dem Funktionstext fehlt die linke Klammer ({).</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1159"></a><b>1159</b></td><td class="summaryTableCol">Die return-Anweisung kann im Initialisierungscode des Pakets nicht verwendet werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1160"></a><b>1160</b></td><td class="summaryTableCol">Das native-Attribut kann nicht in Schnittstellendefinitionen verwendet werden.
+	
+
+</td><td class="summaryTableLastCol">
+	Sie können <code>native</code> nicht verwenden, da es sich hierbei um ein reserviertes Schlüsselwort handelt.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1162"></a><b>1162</b></td><td class="summaryTableCol">Pro Definition darf nur ein Namespace-Attribut verwendet werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1163"></a><b>1163</b></td><td class="summaryTableCol">Methode %s steht in Konflikt mit von Schnittstelle %s übernommener Definition.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1165"></a><b>1165</b></td><td class="summaryTableCol">Schnittstellenattribut %s ist ungültig.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1166"></a><b>1166</b></td><td class="summaryTableCol">Namespace-Deklarationen sind in Schnittstellen nicht zulässig.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1167"></a><b>1167</b></td><td class="summaryTableCol">Klasse %s implementiert Schnittstelle %s mehrmals.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Die Klasse implementiert die gleiche Klasse mehrmals. Diese Fehlermeldung wird beispielsweise von dem folgenden Code erzeugt, da die Klasse C die Schnittstelle A zweimal implementiert:
+
+<pre><code>interface A {  public function f();  };
+class C implements A,A {
+public function f() { trace("f"); }
+}</code></pre>
+	
+	<p>Die korrekt implementierte Anweisung würde <code> class C implements A {</code> lauten.</p>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1168"></a><b>1168</b></td><td class="summaryTableCol">Unzulässige Zuweisung zu Funktion %s.
+
+	
+
+
+</td><td class="summaryTableLastCol">
+	Sie versuchen, eine Funktion neu zu definieren. Folgendes definiert die Funktion <code>topLevel()</code>, um das Wort „top“ zu drucken. Die zweite Anweisung erzeugt eine Fehlermeldung, weil sie der Funktion einen anderen Rückgabewert zuweist:
+<pre><code>function topLevel() { trace("top"); }
+topLevel = function() { trace("replacement works in ~");} // error</code></pre>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1169"></a><b>1169</b></td><td class="summaryTableCol">Namespace-Attribute sind in Schnittstellenmethoden nicht zulässig.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1170"></a><b>1170</b></td><td class="summaryTableCol">Funktion gibt keinen Wert zurück.
+
+	
+</td><td class="summaryTableLastCol">
+	Jede mögliche Ablaufsteuerung in einer Funktion muss einen Wert zurückgeben, wenn der Rückgabetyp etwas anderes als „void“ ist. Die folgende <code>f(x)</code>-Funktion generiert keinen Fehler, da die <code>if..else</code>-Anweisung immer einen Wert zurückgibt:
+
+<pre><code>function f(x):int
+{
+if (x)
+    	return 2;
+else
+    	return 3;
+} // no error</code></pre>
+
+<p>Die folgende Funktion <code>g(x)</code> erzeugt keine Fehlermeldung, da die <code>switch</code>-Anweisung nicht immer einen Wert zurückgibt.</p>
+<pre><code>function g(x:int):int
+{
+switch(x)
+{
+      	case 1: return 1;
+      	case 2: return 2:
+}
+// return 2;//uncomment to remove the error
+}</code></pre>
+
+	<p>Diese Überprüfung wird nur dann aktiviert, wenn die Funktion einen anderen Rückgabetyp als „void“ deklariert. </p>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1171"></a><b>1171</b></td><td class="summaryTableCol">Eine Namespace-Initialisierung muss entweder ein Literalstring oder ein anderer Namespace sein.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1172"></a><b>1172</b></td><td class="summaryTableCol">Definition %s wurde nicht gefunden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1173"></a><b>1173</b></td><td class="summaryTableCol">Definition der Bezeichnung ist ungültig.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1176"></a><b>1176</b></td><td class="summaryTableCol">Vergleich zwischen einem Wert mit statischem Typ %s und einem möglicherweise nicht verwandten Typ %s.
+</td><td class="summaryTableLastCol">Dieser Fehler ist im strikten Modus aktiviert.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1177"></a><b>1177</b></td><td class="summaryTableCol">Die return-Anweisung kann im globalen Initialisierungscode nicht verwendet werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1178"></a><b>1178</b></td><td class="summaryTableCol">Versuchter Aufruf einer nicht verfügbaren Eigenschaft %s über einen Verweis mit statischem Typ %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1179"></a><b>1179</b></td><td class="summaryTableCol">:Objekt ist vorübergehend nicht verfügbar. Verwenden Sie stattdessen :*.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1180"></a><b>1180</b></td><td class="summaryTableCol">Aufruf einer möglicherweise undefinierten Methode %s.
+</td><td class="summaryTableLastCol">Diese Fehlermeldung tritt nur dann auf, wenn der Compiler im strikten Modus ausgeführt wird.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1181"></a><b>1181</b></td><td class="summaryTableCol">Verweis an Basisklasse %s weiterleiten.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1182"></a><b>1182</b></td><td class="summaryTableCol">Paket kann nicht als Wert verwendet werden: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1184"></a><b>1184</b></td><td class="summaryTableCol">Inkompatibler Standardwert des Typs %s, bei dem %s erwartet wird.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1185"></a><b>1185</b></td><td class="summaryTableCol">Für switch gibt es mehr als einen Standardwert, es ist jedoch nur einer zulässig.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1188"></a><b>1188</b></td><td class="summaryTableCol">Unzulässige Zuweisung zu Klasse %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1189"></a><b>1189</b></td><td class="summaryTableCol">Es wird versucht, die feste Eigenschaft %s zu löschen. Nur dynamisch definierte Eigenschaften können gelöscht werden.
+</td><td class="summaryTableLastCol">Durch das Löschen werden dynamisch definierte Objekteigenschaften entfernt. Deklarierte Eigenschaften einer Klasse können nicht gelöscht werden. Diese Fehlermeldung tritt nur dann auf, wenn der Compiler im strikten Modus ausgeführt wird.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1190"></a><b>1190</b></td><td class="summaryTableCol">Basisklasse wurde nicht gefunden oder ist keine Konstante zur Kompilierungszeit.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1191"></a><b>1191</b></td><td class="summaryTableCol">Schnittstelle wurde nicht gefunden oder ist keine Konstante zur Kompilierungszeit.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1192"></a><b>1192</b></td><td class="summaryTableCol">Das static-Attribut ist in Namespace-Definitionen nicht zulässig.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1193"></a><b>1193</b></td><td class="summaryTableCol">Schnittstellendefinitionen dürfen nicht in Klassen oder anderen Schnittstellendefinitionen verschachtelt werden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1194"></a><b>1194</b></td><td class="summaryTableCol">Das prototype-Attribut ist ungültig.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1195"></a><b>1195</b></td><td class="summaryTableCol">Versuchter Aufruf einer nicht verfügbaren Methode %s über einen Verweis mit statischem Typ %s.
+		
+ 	</td><td class="summaryTableLastCol">Entweder rufen Sie eine als „private“ deklarierte Methode von einer anderen Klasse aus auf, oder Sie rufen eine Methode auf, die in einem nicht mehr verwendeten Namespace definiert ist. Wenn Sie eine Methode aufrufen, die in einem nicht mehr verwendeten Namespace definiert ist, müssen Sie eine <code>use</code>-Anweisung für den erforderlichen Namespace hinzufügen.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1196"></a><b>1196</b></td><td class="summaryTableCol">Syntaxfehler: Es wird ein Ausdruck nach der Ausgabe erwartet. </td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1197"></a><b>1197</b></td><td class="summaryTableCol">Die Klasse %s kann nicht mit %s erweitert werden, da beide mit Bibliothekssymbolen oder der Hauptzeitleiste verknüpft sind.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1198"></a><b>1198</b></td><td class="summaryTableCol">Attribute sind in Paketdefinitionen nicht zulässig.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1199"></a><b>1199</b></td><td class="summaryTableCol">Interner Fehler: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1200"></a><b>1200</b></td><td class="summaryTableCol">Syntaxfehler: Ungültige for-in-Initialisierung, nur 1 Ausdruck erwartet.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1201"></a><b>1201</b></td><td class="summaryTableCol">Eine super-Anweisung darf nicht einer this-, super-, return- oder throw-Anweisung folgen.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1202"></a><b>1202</b></td><td class="summaryTableCol">Zugriff auf die undefinierte Eigenschaft %s in Paket %s.
+
+
+    </td><td class="summaryTableLastCol">
+	
+		Sie versuchen, auf eine nicht definierte Variable in einem Paket zuzugreifen. Wenn die Variable <code>p.huh</code> nicht definiert wurde, führt ein Aufruf dieser Variablen zu dieser Fehlermeldung:
+
+<pre><code>p.huh = 55;</code></pre>
+
+		Diese Fehlermeldung tritt nur dann auf, wenn der Compiler im strikten Modus ausgeführt wird.
+	
+&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1203"></a><b>1203</b></td><td class="summaryTableCol">Kein Standardkonstruktor in Basisklasse %s gefunden.
+    </td><td class="summaryTableLastCol">Sie müssen den Konstruktor der Basisklasse ausdrücklich mit einer super()-Anweisung aufrufen, wenn er 1 oder mehr erforderliche Argumente hat.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1204"></a><b>1204</b></td><td class="summaryTableCol">/* gefunden ohne Übereinstimmung mit */ .
+
+	</td><td class="summaryTableLastCol">
+	
+		Die Zeichen „/*“, die den Beginn eines Kommentars kennzeichnen, wurden gefunden, jedoch nicht die entsprechenden Zeichen „*/“, die das Ende des Kommentarblocks kennzeichnen.
+    &nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1205"></a><b>1205</b></td><td class="summaryTableCol">Syntaxfehler: Linke Klammer ({) oder Stringliteral ("") erforderlich.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1206"></a><b>1206</b></td><td class="summaryTableCol">Eine super-Anweisung kann nur als letztes Element in einer Konstruktorinitialisiererliste verwendet werden.
+
+    </td><td class="summaryTableLastCol">
+		Die Anweisung <code>super</code> kann nicht in einem Konstruktor verwendet werden. Eine <code>super</code>-Anweisung kann nur als letztes Element in einer Konstruktorinitialisiererliste verwendet werden.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1207"></a><b>1207</b></td><td class="summaryTableCol">Das this-Schlüsselwort kann für Eigenschaftsinitialisierungen nicht verwendet werden.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Das Schlüsselwort <code>this</code> kann nicht in einem Eigenschaftsinitialisierer verwendet werden.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1208"></a><b>1208</b></td><td class="summaryTableCol">Beim Initialisierer für einen Konfigurationswert muss es sich um Konstanten zur Kompilierungszeit handeln.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Beim Initialisierer für einen Konfigurationswert muss es sich um einen zur Kompilierungszeit bekannten Wert handeln. Der Initialisierer kann ein Konstantenstring, eine Zahl oder ein boolescher Wert sein, oder ein Verweis auf einen anderen zuvor definierten Konfigurationswert.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1209"></a><b>1209</b></td><td class="summaryTableCol">Eine Konfigurationsvariable kann nur als „const“ deklariert werden.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Beim Definieren einer Konfigurationsvariablen muss sie als „const“ deklariert werden.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1210"></a><b>1210</b></td><td class="summaryTableCol">Ein Konfigurationswert muss auf oberster Ebene eines Programms oder Pakets deklariert werden.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Ein Konfigurationswert muss auf oberster Ebene eines Programms oder Pakets deklariert werden.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1211"></a><b>1211</b></td><td class="summaryTableCol">Namespace %s steht in Konflikt mit einem Namespace für Konfiguration.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Ein Namespace hat evtl. nicht denselben Namen wie ein Namespace für Konfiguration.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1212"></a><b>1212</b></td><td class="summaryTableCol">„Precision“ muss eine Ganzzahl zwischen 1 und 34 sein.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1214"></a><b>1214</b></td><td class="summaryTableCol">Inkompatible Version: Kann nicht auf Definition %s verweisen, die in Version %s mit Code aus Version %s eingeführt wurde.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1215"></a><b>1215</b></td><td class="summaryTableCol">Ungültige Initialisierung: Konvertierung in Typ „%s“ führt zu Datenverlust.</td><td class="summaryTableLastCol">&nbsp;</td></tr></table><br><br><div><p></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 10:20 AM Z  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/de_DE/legalnotices/index.html">Rechtliche Hinweise</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Onlinedatenschutzerklärung</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">Warum auf Englisch?</span>
+				</div>
+				<div class="white_content_body">
+					<b>Inhalt des ActionScript 3.0-Referenzhandbuchs wird in englischer Sprache angezeigt</b><br><br>
+					Nicht alle Teile des ActionScript 3.0-Referenzhandbuchs wurden in alle Sprachen übersetzt. Wenn der Text zu einem Sprachelement nicht übersetzt wurde, wird er auf Englisch angezeigt. Zum Beispiel wurden die Informationen zur ga.controls.HelpBox-Klasse nicht in andere Sprachen übersetzt. In der deutschen Version des Referenzhandbuchs erscheint der Abschnitt zur ga.controls.HelpBox-Klasse deshalb auf Englisch.
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 10:20 AM Z  -->

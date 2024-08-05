@@ -1,0 +1,900 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="適用於 Adobe&reg; Flash&reg; Platform 的 ActionScript&reg; 3.0 參考"><meta name="lang" content="zh-tw"><meta name="runtime" content="air"><meta name="runtimever" content="air:1.0"><meta name="product" content="air"><meta name="productver" content="air:1.0"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../asfilter.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="FileStream,flash.filesystem.FileStream,bytesAvailable,endian,objectEncoding,position,readAhead,close,open,openAsync,readBoolean,readByte,readBytes,readDouble,readFloat,readInt,readMultiByte,readObject,readShort,readUTF,readUTFBytes,readUnsignedByte,readUnsignedInt,readUnsignedShort,truncate,writeBoolean,writeByte,writeBytes,writeDouble,writeFloat,writeInt,writeMultiByte,writeObject,writeShort,writeUTF,writeUTFBytes,writeUnsignedInt"><title>FileStream - Adobe ActionScript&reg; 3 (AS3  ) API 參考</title>
+		<link rel="stylesheet" href="../../filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="../../filter_new.css" type="text/css">
+			
+		<script src="../../jquery.js" type="text/javascript"></script>
+		<script src="../../s_chl_code.js" type="text/javascript"></script>
+		<script src="../../jquery.zclip.js" type="text/javascript"></script>
+		<script src="../../jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="../../cookies.js" type="text/javascript"></script>
+		<script src="../../asdoc.js" type="text/javascript"></script>
+		<script src="../../iscroll.js" type="text/javascript"></script>
+		<script src="../../AC_OETags.js" type="text/javascript"></script>
+		<script src="../../omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "執行階段";
+			var productsLabel = "產品";
+			var noneLabel = "無";
+			var qsearchBoxLabel = "快速搜尋";
+			var qsearchText = "找不到字詞";
+			var ajaxErrorMsg="載入頁面時發生錯誤";
+			var ajaxErrorTryMsg="再試一次";
+			var ajaxLoadingMsg="仍在載入";
+			var cancelMsg = "取消";
+			var classesText = "類別";
+			var strJiveReply = "張貼此問題是為回應下列文章： "
+			var showFilters = "顯示篩選";
+			var hideFilters = "隱藏篩選";
+			
+		
+			var baseRef = "../../";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											適用於 Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup> Platform 的 ActionScript<sup>&reg;</sup> 3.0 參考<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="../../index.html"> 首頁 </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="FileStream.html#top" style="display:">顯示套件和類別清單</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="FileStream.html#top" style="display:none">隱藏套件和類別清單</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="../../package-summary.html"> 套件 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../class-summary.html"> 類別 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../whatsnew.html"> 新增內容 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../all-index-Symbols.html"> 索引 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../appendixes.html"> 附錄 </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">為什麼顯示英文？</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/zh_TW/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('../../')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('../../')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="../../help.js"></script>
+						<script language="javascript" type="text/javascript" src="../../asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="../../filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>篩選：</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">從伺服器擷取資料...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">從伺服器擷取資料...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="FileStream.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">flash.filesystem&nbsp;</a><br>
+								<h1 id="classProductName">FileStream&nbsp; - AS3 </h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="FileStream.html#propertySummary" style="display:none"> 屬性 </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="FileStream.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> 屬性 </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="FileStream.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> 建構函式 </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="FileStream.html#methodSummary" style="display:none"> 方法 </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="FileStream.html#constantSummary" style="display:none"> 全域常數 </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="FileStream.html#eventSummary" style="display:none"> 事件 </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="FileStream.html#styleSummary" style="display:none"> 樣式 </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="FileStream.html#SkinPartSummary" style="display:none"> 外觀部件 </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="FileStream.html#SkinStateSummary" style="display:none"> 外觀狀態 </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="FileStream.html#effectSummary" style="display:none"> 特效 </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="FileStream.html#constantSummary" style="display:none"> 常數 </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="FileStream.html#methodSummary" style="display:none"> 全域函數 </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="FileStream.html#methodSummary" style="display:none">函數</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="FileStream.html#interfaceSummary" style="display:none"> 介面 </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="FileStream.html#classSummary" style="display:none"> 類別 </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="FileStream.html#includeExamplesSummary" style="display:none"> 範例 </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="FileStream.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								類別
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">套件</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">flash.filesystem</a></td></tr><tr><td class="classHeaderTableLabel">類別</td><td class="classSignature">public  class  FileStream</td></tr><tr><td class="classHeaderTableLabel">繼承</td><td class="inheritanceList">FileStream  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../Object.html">Object</a></td></tr><tr><td class="classHeaderTableLabel">實作</td><td> <a href="../utils/IDataInput.html">IDataInput</a>,  <a href="../utils/IDataOutput.html">IDataOutput</a></td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p></p>
+ FileStream 物件可用來讀取及寫入檔案。檔案可以藉由呼叫 <code>open()</code> 方法以同步方式開啟，或藉由呼叫 <code>openAsync()</code> 方法以非同步方式開啟。
+ 
+ <p>以非同步方式開啟檔案的好處是當 Adobe AIR 在背景中執行讀取及寫入程序時，可以執行其他程式碼。以非同步方式開啟時，當作業進行時會傳送 <code>progress</code> 事件。</p>
+ 
+               <p>以同步方式所開啟之 File 物件的行為就像 ByteArray 物件；以非同步方式所開啟之檔案的行為就像 Socket 或 URLStream 物件。當 File 物件以同步方式開啟時，呼叫者會在基礎檔案中讀取或寫入要求的資料時暫停。以非同步方式開啟時，任何寫入串流的資料會立即進行緩衝，並在稍後寫入檔案。</p>
+ 
+               <p>無論以同步或非同步方式從檔案讀取，實際的讀取方法都是同步的。在這兩種案例中，都會讀取目前「可用」的資料。不同之處在於，以同步方式讀取時，所有資料隨時都可供使用，而以非同步方式讀取時，資料會隨著資料串流至讀取緩衝區而漸漸變得可用。無論如何，在目前時刻可以透過同步方式讀取的資料是由 <code>bytesAvailable</code> 屬性表示。</p>
+ 
+               <p>處理非同步輸入的應用程式通常會註冊 <code>progress</code> 事件，並在資料變得可用時藉由呼叫讀取方法使用資料。或者，應用程式也可以註冊 <code>complete</code> 事件等待所有資料可用，並在 <code>complete</code> 事件傳送時處理整個資料集。 </p>
+ 
+            <p></p><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary" id="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">公用屬性</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="FileStream.html#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隱藏繼承公用屬性</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="FileStream.html#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 顯示繼承公用屬性</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">屬性</th><th>定義自</th></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#bytesAvailable" class="signatureLink">bytesAvailable</a> : <a href="../../uint.html">uint</a><div class="summaryTableDescription">[唯讀] 
+	
+     會傳回可在輸入緩衝區中讀取之資料的位元組數。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="../../Object.html#constructor" class="signatureLink">constructor</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">
+	 類別物件的參照或是特定物件實體的建構函數。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#endian" class="signatureLink">endian</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">
+	
+     資料的位元組順序，會是 Endian 類別的 BIG_ENDIAN 或 LITTLE_ENDIAN 常數。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#objectEncoding" class="signatureLink">objectEncoding</a> : <a href="../../uint.html">uint</a><div class="summaryTableDescription">
+     指定當使用 readObject() 或 writeObject() 方法來寫入或讀取二進位資料時，要使用 AMF3 或 AMF0 格式。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#position" class="signatureLink">position</a> : <a href="../../Number.html">Number</a><div class="summaryTableDescription">
+	 檔案中目前的位置。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readAhead" class="signatureLink">readAhead</a> : <a href="../../Number.html">Number</a><div class="summaryTableDescription">
+	 非同步讀取檔案時，從磁碟讀取的最小資料量。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary" id="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">公用方法 </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="FileStream.html#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隱藏繼承公用方法</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="FileStream.html#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 顯示繼承公用方法</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">方法</th><th>定義自</th></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#FileStream()" class="signatureLink">FileStream</a>()</div><div class="summaryTableDescription">
+	 建立 FileStream 物件。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#addEventListener()" class="signatureLink">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	會在 EventDispatcher 物件註冊事件偵聽程式，以便讓偵聽程式收到事件的通知。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#close()" class="signatureLink">close</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 關閉 FileStream 物件。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	會將事件傳送到事件流程。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	會檢查 EventDispatcher 物件是否有對特定的事件類型註冊偵聽程式。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#hasOwnProperty()" class="signatureLink">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 指出物件是否有已定義的指定屬性。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#isPrototypeOf()" class="signatureLink">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 指出 Object 類別的實體是否位於指定為參數的物件原型鏈中。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#open()" class="signatureLink">open</a>(file:<a href="File.html">File</a>, fileMode:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 以同步方式開啟 FileStream 物件，並指向 file 參數所指定的檔案。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#openAsync()" class="signatureLink">openAsync</a>(file:<a href="File.html">File</a>, fileMode:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 以非同步方式開啟 FileStream 物件，並指向 file 參數所指定的檔案。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#propertyIsEnumerable()" class="signatureLink">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 指出指定的屬性是否存在，以及是否可列舉。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readBoolean()" class="signatureLink">readBoolean</a>():<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	
+     會從檔案串流、位元組串流或位元組陣列讀取 Boolean 值。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readByte()" class="signatureLink">readByte</a>():<a href="../../int.html">int</a></div><div class="summaryTableDescription">
+	
+     會從檔案串流、位元組串流或位元組陣列讀取具有正負號的位元組。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readBytes()" class="signatureLink">readBytes</a>(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:<a href="../../uint.html">uint</a> = 0, length:<a href="../../uint.html">uint</a> = 0):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     從檔案串流、位元組串流或位元組陣列，讀取 length 參數所指定的資料位元組數目。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readDouble()" class="signatureLink">readDouble</a>():<a href="../../Number.html">Number</a></div><div class="summaryTableDescription">
+	
+     會從檔案串流、位元組串流或位元組陣列讀取 IEEE 754 雙精度浮點數。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readFloat()" class="signatureLink">readFloat</a>():<a href="../../Number.html">Number</a></div><div class="summaryTableDescription">
+	
+     會從檔案串流、位元組串流或位元組陣列讀取 IEEE 754 單精度浮點數。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readInt()" class="signatureLink">readInt</a>():<a href="../../int.html">int</a></div><div class="summaryTableDescription">
+	
+     會從檔案串流、位元組串流或位元組陣列讀取具有正負號的 32 位元整數。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readMultiByte()" class="signatureLink">readMultiByte</a>(length:<a href="../../uint.html">uint</a>, charSet:<a href="../../String.html">String</a>):<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	
+     使用指定的字元集，從檔案串流、位元組串流或位元組陣列讀取指定長度的多位元組字串。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readObject()" class="signatureLink">readObject</a>():<a href="../../specialTypes.html#*">*</a></div><div class="summaryTableDescription">
+	
+     從檔案串流、位元組串流或位元組陣列讀取物件並以 AMF 序列化格式編碼。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readShort()" class="signatureLink">readShort</a>():<a href="../../int.html">int</a></div><div class="summaryTableDescription">
+	
+     會從檔案串流、位元組串流或位元組陣列讀取具有正負號的 16 位元整數。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readUnsignedByte()" class="signatureLink">readUnsignedByte</a>():<a href="../../uint.html">uint</a></div><div class="summaryTableDescription">
+	
+     會從檔案串流、位元組串流或位元組陣列讀取無正負號的位元組。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readUnsignedInt()" class="signatureLink">readUnsignedInt</a>():<a href="../../uint.html">uint</a></div><div class="summaryTableDescription">
+	
+     會從檔案串流、位元組串流或位元組陣列讀取無正負號的 32 位元整數。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readUnsignedShort()" class="signatureLink">readUnsignedShort</a>():<a href="../../uint.html">uint</a></div><div class="summaryTableDescription">
+	
+     會從檔案串流、位元組串流或位元組陣列讀取無正負號的 16 位元整數。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readUTF()" class="signatureLink">readUTF</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	
+     從檔案串流、位元組串流或位元組陣列讀取 UTF-8 字串。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readUTFBytes()" class="signatureLink">readUTFBytes</a>(length:<a href="../../uint.html">uint</a>):<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	
+     從位元組串流或位元組陣列讀取 UTF-8 位元組的序列，並傳回字串。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#removeEventListener()" class="signatureLink">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	會從 EventDispatcher 物件移除偵聽程式。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#setPropertyIsEnumerable()" class="signatureLink">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     為迴圈作業設定動態屬性的可用性。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toLocaleString()" class="signatureLink">toLocaleString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 傳回代表此物件的字串，根據地區特定慣例進行格式化。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toString()" class="signatureLink">toString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 會傳回指定之物件的字串形式。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#truncate()" class="signatureLink">truncate</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 在 FileStream 物件的 position 屬性所指定的位置上截斷檔案。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#valueOf()" class="signatureLink">valueOf</a>():<a href="../../Object.html">Object</a></div><div class="summaryTableDescription">
+	 會傳回指定之物件的基本值。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	檢查此 EventDispatcher 物件是否已註冊事件偵聽程式，或者此物件的任何祖系已為特定事件類型註冊事件偵聽程式。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeBoolean()" class="signatureLink">writeBoolean</a>(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     會寫入 Boolean 值。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeByte()" class="signatureLink">writeByte</a>(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     會寫入位元組。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeBytes()" class="signatureLink">writeBytes</a>(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:<a href="../../uint.html">uint</a> = 0, length:<a href="../../uint.html">uint</a> = 0):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     以 length 指定的長度，從指定的位元組陣列 bytes，將位元組序列從 offset 所指定的位元組 (使用從零開始的索引) 開始寫入檔案串流、位元組串流或位元組陣列。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeDouble()" class="signatureLink">writeDouble</a>(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     會寫入 IEEE 754 雙精度 (64 位元) 浮點數。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeFloat()" class="signatureLink">writeFloat</a>(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     會寫入 IEEE 754 單精度 (32 位元) 浮點數。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeInt()" class="signatureLink">writeInt</a>(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     會寫入 32 位元的具有正負號整數。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeMultiByte()" class="signatureLink">writeMultiByte</a>(value:<a href="../../String.html">String</a>, charSet:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     使用指定的字元集，將多位元組字串寫入檔案串流、位元組串流或位元組陣列。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeObject()" class="signatureLink">writeObject</a>(object:<a href="../../specialTypes.html#*">*</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     使用 AMF 序列化格式，將物件寫入檔案串流、位元組串流或位元組陣列。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeShort()" class="signatureLink">writeShort</a>(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     會寫入 16 位元整數。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeUnsignedInt()" class="signatureLink">writeUnsignedInt</a>(value:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     會寫入 32 位元的無正負號整數。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeUTF()" class="signatureLink">writeUTF</a>(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     將 UTF-8 字串寫入檔案串流、位元組串流或位元組陣列。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeUTFBytes()" class="signatureLink">writeUTFBytes</a>(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     會寫入 UTF-8 字串。</div></td><td class="summaryTableOwnerCol">FileStream</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary" id="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">事件</div><div class="showHideLinks"><a href="http://help.adobe.com/en_US/Flex/4.6/UsingSDK/WS2db454920e96a9e51e63e3d11c0bf69084-7ee9.html" target="_blank">按一下以瞭解事件的詳細資訊</a></div><div class="showHideLinks"><div id="hideInheritedEvent" class="hideInheritedEvent"><a class="showHideLink" href="FileStream.html#eventSummary" onclick="javascript:setInheritedVisible(false,'Event');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隱藏繼承事件</a></div><div id="showInheritedEvent" class="showInheritedEvent"><a class="showHideLink" href="FileStream.html#eventSummary" onclick="javascript:setInheritedVisible(true,'Event');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 顯示繼承事件</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">事件</th><th> 摘要 </th><th>定義自</th></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[廣播事件] 當 Flash Player 或 AIR 應用程式取得作業系統焦點並成為作用中時傳送。</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#event:close" class="signatureLink">close</a></div></td><td class="summaryTableDescription summaryTableCol">表示已藉由明確呼叫 close() 方法關閉串流。</td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#event:complete" class="signatureLink">complete</a></div></td><td class="summaryTableDescription summaryTableCol">指出已到達串流結尾。</td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[廣播事件] 當 Flash Player 或 AIR 應用程式失去作業系統焦點並成為非作用中時傳送。</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#event:ioError" class="signatureLink">ioError</a></div></td><td class="summaryTableDescription summaryTableCol">表示非同步檔案 I/O 作業期間發生錯誤。</td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#event:outputProgress" class="signatureLink">outputProgress</a></div></td><td class="summaryTableDescription summaryTableCol">指出緩衝資料已寫入檔案。</td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#event:progress" class="signatureLink">progress</a></div></td><td class="summaryTableDescription summaryTableCol">指出串流上新資料的可用性。</td><td class="summaryTableOwnerCol">FileStream</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">屬性詳細資訊</div><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="bytesAvailable" id="bytesAvailable"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>bytesAvailable</h3></td><td class="detailHeaderType">屬性</td></tr></table><div class="detailBody"><code>bytesAvailable:<a href="../../uint.html">uint</a></code>&nbsp;&nbsp;[唯讀] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     會傳回可在輸入緩衝區中讀取之資料的位元組數。 使用者程式碼必須呼叫 <code>bytesAvailable</code>，確定在嘗試以其中一種讀取方法進行讀取之前，具有足夠的資料。
+     </p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get bytesAvailable():<a href="../../uint.html">uint</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="endian" id="endian"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>endian</h3></td><td class="detailHeaderType">屬性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>endian:<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     資料的位元組順序，會是 Endian 類別的 <code>BIG_ENDIAN</code> 或 <code>LITTLE_ENDIAN</code> 常數。
+     
+     </p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get endian():<a href="../../String.html">String</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set endian(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="objectEncoding" id="objectEncoding"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>objectEncoding</h3></td><td class="detailHeaderType">屬性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>objectEncoding:<a href="../../uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     指定當使用 <code>readObject()</code> 或 <code>writeObject()</code> 方法來寫入或讀取二進位資料時，要使用 AMF3 或 AMF0 格式。
+	 
+	 <p>此值是來自於 ObjectEncoding 類別的常數。根據預設會使用 AMF3 格式。</p>
+	 
+	 </p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get objectEncoding():<a href="../../uint.html">uint</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set objectEncoding(value:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></code><br/><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="../net/ObjectEncoding.html" target="">ObjectEncoding</a><br/><a href="FileStream.html#readObject()" target="">readObject()</a><br/><a href="FileStream.html#writeObject()" target="">writeObject()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="position" id="position"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>position</h3></td><td class="detailHeaderType">屬性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>position:<a href="../../Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 檔案中目前的位置。 
+	 
+	 <p>以下列任何方式修改此值：</p>
+	 
+	 <ul><li>當您明確設定屬性時</li><li>當讀取 FileStream 物件時 (使用其中一個讀取方法)</li><li>當寫入 FileStream 物件時</li></ul>
+	 
+	 <p>位置定義為 Number (而非單位)，以便支援大於 2<sup>32</sup> 位元組長度的檔案。這個屬性的值一定是小於 2<sup>53</sup> 的整數。如果您將此值設定為分數，則會將值無條件捨去為最接近的整數。</p>
+	 
+	 <p>以非同步方式讀取檔案時，如果您設定 <code>position</code> 屬性，則應用程式會以指定位置開始的資料來開始填滿讀取緩衝區，而且 <code>bytesAvailable</code> 屬性可以設定為 0。請等待 <code>complete</code> 事件出現，接著使用讀取方法讀取資料，或是等待 <code>progress</code> 事件並檢查 <code>bytesAvailable</code> 屬性，才使用讀取方法。</p>
+	  
+	 </p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get position():<a href="../../Number.html">Number</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set position(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code><br/><span id="pageFilter"><br/><span class="label"> 範例 &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span>)
+            </span><br/><div class="detailBody"> 下列程式碼示範 FileStream 物件的 <code>position</code> 屬性如何隨著應用程式從檔案讀取資料而更新。
+<div class="listing"><pre>
+import flash.fileSystem.*;
+import flash.utils.ByteArray;
+import flash.events.Event;
+
+var sourceFile:File = File.documentsDirectory.resolvePath("Apollo Test/test.txt");
+var stream:FileStream = new FileStream();
+stream.addEventListener(Event.COMPLETE, readBytes);
+stream.openAsync(sourceFile, FileMode.READ);
+
+function readBytes(e:Event):void {
+    var bytes:ByteArray = new ByteArray();
+    trace("position 0:", stream.position); // 0
+    bytes[0] = stream.readByte();
+    trace("position 1:", stream.position); // 1
+    fileStream.readBytes(bytes, stream.position, 4); 
+    trace("position 2:", stream.position); // 5
+    stream.close();
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="readAhead" id="readAhead"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>readAhead</h3></td><td class="detailHeaderType">屬性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>readAhead:<a href="../../Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 非同步讀取檔案時，從磁碟讀取的最小資料量。
+	 
+	 <p>這個屬性會指定非同步串流嘗試從目前位置開始讀取的資料量。會根據檔案系統分頁大小，以區塊方式讀取資料。因此，若在 8KB (8192 位元組) 的電腦系統上將 <code>readAhead</code> 設定為 9,000，執行階段每次會預先讀取 2 個區塊，亦即 16384 個位元組。這個屬性的預設值為 infinity：根據預設，以非同步方式開啟並進行讀取的檔案會一直讀取至檔案結尾。</p>
+	 
+	 <p>從讀取緩衝區中讀取資料，不會變更 <code>readAhead</code> 屬性值。當您從緩衝區中讀取資料時，會讀取新資料以重新填滿讀取緩衝區。 
+	  </p>
+	 
+	 <p><code>readAhead</code> 屬性對以同步方式開啟的檔案沒有作用。</p>
+	 
+	 <p>以非同步方式讀取資料時，FileStream 物件會傳送 <code>progress</code> 事件。在 <code>progress</code> 事件的事件處理常式方法中，檢查是否有所需的位元組數 (藉由檢查 <code>bytesAvailable</code> 屬性)，然後使用讀取方法從讀取緩衝區中讀取資料。</p>
+	 
+	 </p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get readAhead():<a href="../../Number.html">Number</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set readAhead(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code><br/><span id="pageFilter"><br/><span class="label"> 範例 &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span>)
+            </span><br/><div class="detailBody">     下列程式碼示範如何使用 <code>readAhead</code> 屬性將讀入檔案中的資料量限制為 100 個位元組：
+<div class="listing"><pre>
+import flash.filesystem.*;
+
+var file:File = File.desktopDirectory.resolvePath("test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.readAhead = 100;
+fileStream.addEventListener(ProgressEvent.PROGRESS, readProgressHandler)
+fileStream.openAsync(file, FileMode.READ);
+var results:ByteArray;
+
+function readProgressHandler(event:ProgressEvent):void {
+    if (fileStream.bytesAvailable &gt;= 100) {
+        fileStream.readBytes(results, 0, 100);
+    }
+}
+</pre></div></div></span></div></span><a name="constructorDetail" id="constructorDetail"></a><div class="detailSectionHeader">建構函式詳細資料</div><span id="pageFilter" runtime="AIR::1.0##"><a name="FileStream()" id="FileStream()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>FileStream</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">建構函式</td></tr></table><div class="detailBody"><code>public function FileStream()</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p>
+	 建立 FileStream 物件。使用 <code>open()</code> 或 <code>openAsync()</code> 方法開啟檔案。
+	 
+	 </p><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="FileStream.html#open()" target="">open()</a><br/><a href="FileStream.html#openAsync()" target="">openAsync()</a></div></div></span><a name="methodDetail" id="methodDetail"></a><div class="detailSectionHeader">方法詳細資訊</div><span id="pageFilter" runtime="AIR::1.0##"><a name="close()" id="close()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;close</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td></tr></table><div class="detailBody"><code> public function close():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 關閉 FileStream 物件。 
+	 
+	 <p>在呼叫 <code>close()</code> 方法之後，您就無法讀取或寫入任何資料。如果檔案以非同步方式開啟 (FileStream 物件使用 <code>openAsync()</code> 方法開啟檔案)，則呼叫 <code>close()</code> 方法會使物件傳送 <code>close</code> 事件。 </p>
+	 
+	 <p>自動關閉應用程式，也會關閉應用程式中與 FileStream 物件關聯的所有檔案。不過，在以非同步開啟且有待寫入資料的所有 FileStream 物件上，最好註冊 <code>closed</code> 事件，然後再關閉應用程式 (以確保資料寫入)。</p>
+	 
+	 <p>您可以藉由呼叫 <code>open()</code> 或 <code>openAsync()</code> 方法重複使用 FileStream 物件。這會關閉與 FileStream 物件關聯的任何檔案，但物件不會傳送 <code>close</code> 事件。</p>
+	 
+	 <p>針對以非同步方式開啟的 FileStream 物件 (使用 <code>openAsync()</code> 方法)，即使您為 FileStream 物件呼叫 <code>close()</code> 事件並刪除參考該物件的屬性和變數，只要有待處理的作業和待完成的已註冊事件處理常式，FileStream 物件就不會進行記憶體回收。尤其在下列任何狀況下，未參考的 FileStream 物件仍會存在： </p>
+	 
+	 <ul><li>在檔案讀取作業中，尚未到達檔案結尾 (而且尚未傳送 <code>complete</code> 事件)。 </li><li>仍有要寫入的輸出資料，而且輸出相關事件 (如 <code>outputProgress</code> 事件或 <code>ioError</code> 事件) 有已註冊的事件偵聽程式。 </li></ul>
+	 
+	 </p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>close</b>:<a href="../events/Event.html"><code>Event</code></a></code> &mdash; 以非同步方式開啟的檔案已關閉。
+	 
+	 </td></tr></table><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="FileStream.html#open()" target="">open()</a><br/><a href="FileStream.html#event:close" target="">close 事件</a></div><span id="pageFilter"><br/><span class="label"> 範例 &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span>)
+            </span><br/><br/><div class="detailBody">     下列程式碼會以「非同步」<i></i>方式開啟 FileStream 物件，並將一個名為 test.txt 的文字檔寫入使用者文件目錄的 Apollo Test 子目錄中。呼叫 FileStream 物件的 <code>close()</code> 方法，會在資料寫入後關閉檔案。 
+<div class="listing"><pre>
+import flash.filesystem.*;
+import flash.events.Event;
+            
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.openAsync(file, FileMode.WRITE);
+fileStream.writeUTFBytes("Hello");
+fileStream.addEventListener(Event.CLOSE, fileClosed);
+fileStream.close();
+
+function fileClosed(event:Event):void {
+    trace("closed");
+}            
+</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody">     下列程式碼會以「同步」<i></i>方式開啟 FileStream 物件，並將一個名為 test.txt 的文字檔寫入使用者文件目錄的 Apollo Test 子目錄中。呼叫 FileStream 物件的 <code>close()</code> 方法，會在資料寫入後關閉檔案。
+<div class="listing"><pre>
+import flash.filesystem.*;
+            
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.open(file, FileMode.WRITE);
+fileStream.writeUTF("Hello");
+fileStream.close();
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="open()" id="open()"></a><a name="open(flash.filesystem.File,String)" id="open(flash.filesystem.File,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;open</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function open(file:<a href="File.html">File</a>, fileMode:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 以同步方式開啟 FileStream 物件，並指向 <code>file</code> 參數所指定的檔案。 
+	 
+	 <p>如果 FileStream 物件已開啟，則呼叫此方法會在開啟之前先關閉檔案，而且不會針對先前開啟的檔案傳送進一步的事件 (包括 <code>close</code>)。</p>
+	 
+	 <p>在支援檔案鎖定的系統上，以「寫入」或「更新」模式 (<code>FileMode.WRITE</code> 或 <code>FileMode.UPDATE</code>) 開啟的檔案在關閉之前是不可讀取的。</p>
+	 
+	 <p>一旦您完成對檔案執行的作業，請呼叫 FileStream 物件的 <code>close()</code> 方法。某些作業系統會限制可同時開啟的檔案數量。</p>
+	 
+	 </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">file</span>:<a href="File.html">File</a></code> &mdash; 指定要開啟之檔案的 File 物件。
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">fileMode</span>:<a href="../../String.html">String</a></code> &mdash; FileMode 類別中定義 FileStream 功能 (如讀取或寫入檔案的能力) 的字串。
+	 
+	 </td></tr></table></p><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案不存在；您沒有開啟檔案的適當權限；您開啟檔案來進行讀取存取，卻沒有讀取權限；或是您開啟檔案來進行寫入存取，卻沒有寫入權限。 
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; 檔案位置位於應用程式目錄中，而且 <code>fileMode</code> 參數設定為「附加」、「更新」或「寫入」模式。 
+	 
+	 </td></tr></table><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="FileStream.html#close()" target="">close()</a><br/><a href="File.html" target="">File</a><br/><a href="FileMode.html" target="">FileMode</a></div><span id="pageFilter"><br/><span class="label"> 範例 &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span>)
+            </span><br/><br/><div class="detailBody"> 下列程式碼示範如何以同步方式開啟使用者文件目錄 Apollo Test 子目錄中的 test.txt 檔案，然後使用系統字元集做為文字編碼，將檔案讀入字串。
+<div class="listing"><pre>
+import flash.filesystem.*;
+
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.open(file, FileMode.READ);
+var str:String = fileStream.readMultiByte(file.size, File.systemCharset);
+trace(str);
+fileStream.close();
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="openAsync()" id="openAsync()"></a><a name="openAsync(flash.filesystem.File,String)" id="openAsync(flash.filesystem.File,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;openAsync</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function openAsync(file:<a href="File.html">File</a>, fileMode:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 以非同步方式開啟 FileStream 物件，並指向 <code>file</code> 參數所指定的檔案。 
+	 
+	 <p>如果 FileStream 物件已開啟，則呼叫此方法會在開啟之前先關閉檔案，而且不會針對先前開啟的檔案傳送進一步的事件 (包括 <code>close</code>)。</p>
+	 
+	 <p>如果 <code>fileMode</code> 參數設定為 <code>FileMode.READ</code> 或 <code>FileMode.UPDATE</code>，一旦檔案開啟，AIR 就會將資料讀入輸入緩衝區，而且在資料讀入輸入緩衝區時會傳送 <code>progress</code> 和 <code>open</code> 事件。</p>
+	 
+	 <p>在支援檔案鎖定的系統上，以「寫入」或「更新」模式 (<code>FileMode.WRITE</code> 或 <code>FileMode.UPDATE</code>) 開啟的檔案在關閉之前是不可讀取的。</p>
+	 
+	 <p>一旦您完成對檔案執行的作業，請呼叫 FileStream 物件的 <code>close()</code> 方法。某些作業系統會限制可同時開啟的檔案數量。</p>
+	 
+	 </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">file</span>:<a href="File.html">File</a></code> &mdash; 指定要開啟之檔案的 File 物件。
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">fileMode</span>:<a href="../../String.html">String</a></code> &mdash; FileMode 類別中定義 FileStream 功能 (如讀取或寫入檔案的能力) 的字串。
+	 
+	 </td></tr></table></p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 檔案不存在；您沒有開啟檔案的適當權限；您開啟檔案來進行讀取存取，卻沒有讀取權限；或是您開啟檔案來進行寫入存取，卻沒有寫入權限。 
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>progress</b>:<a href="../events/ProgressEvent.html"><code>ProgressEvent</code></a></code> &mdash; 當資料讀入輸入緩衝區時傳送 (檔案必須以設定為 <code>FileMode.READ</code> 或 <code>FileMode.UPDATE</code> 的 <code>fileMode</code> 參數開啟。)
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>complete</b>:<a href="../events/Event.html"><code>Event</code></a></code> &mdash; 檔案資料已讀入輸入緩衝區。(檔案必須以設定為 <code>FileMode.READ</code> 或 <code>FileMode.UPDATE</code> 的 <code>fileMode</code> 參數開啟。)
+	 
+	 </td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; 檔案位置位於應用程式目錄中，而且 <code>fileMode</code> 參數設定為「附加」、「更新」或「寫入」模式。 
+	 
+	 </td></tr></table><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="FileStream.html#close()" target="">close()</a><br/><a href="FileStream.html#event:complete" target="">complete 事件</a><br/><a href="FileStream.html#event:ioError" target="">ioError 事件</a><br/><a href="FileStream.html#event:progress" target="">progress 事件</a><br/><a href="FileMode.html" target="">FileMode</a></div><span id="pageFilter"><br/><span class="label"> 範例 &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span>)
+            </span><br/><br/><div class="detailBody"> 下列程式碼示範如何以非同步方式開啟使用者文件目錄 Apollo Test 子目錄中的 test.txt 檔案，然後使用系統字元集做為文字編碼，將檔案讀入字串。
+<div class="listing"><pre>
+import flash.filesystem.*;
+import flash.events.Event;
+
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.addEventListener(Event.COMPLETE, fileCompleteHandler)
+fileStream.openAsync(file, FileMode.READ);
+
+function fileCompleteHandler(event:Event):void {
+    var str:String = fileStream.readMultiByte(fileStream.bytesAvailable, File.systemCharset);
+    trace(str);
+    fileStream.close();
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readBoolean()" id="readBoolean()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;readBoolean</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readBoolean():<a href="../../Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     會從檔案串流、位元組串流或位元組陣列讀取 Boolean 值。讀取單一位元組。若該位元組不為零，即傳回 <code>true</code>，否則傳回 <code>false</code>。
+     </p><p></p><span class="label">傳回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Boolean.html">Boolean</a></code> &mdash; Boolean 值，如果位元組不為零，則為 <code>true</code>，否則為 <code>false</code>。
+     </td></tr></table><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 檔案無法讀取或檔案未開啟。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用讀取功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法讀取 (例如，因為檔案遺失)。
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; 為讀取資料指定的位置超過可用的位元組數 (由 <code>bytesAvailable</code> 屬性指定)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readByte()" id="readByte()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;readByte</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readByte():<a href="../../int.html">int</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     會從檔案串流、位元組串流或位元組陣列讀取具有正負號的位元組。
+     </p><p></p><span class="label">傳回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../int.html">int</a></code> &mdash; 傳回的值介於 -128 到 127 的範圍之間。
+     </td></tr></table><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 檔案無法讀取或檔案未開啟。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用讀取功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法讀取 (例如，因為檔案遺失)。
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; 為讀取資料指定的位置超過可用的位元組數 (由 <code>bytesAvailable</code> 屬性指定)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readBytes()" id="readBytes()"></a><a name="readBytes(flash.utils.ByteArray,uint,uint)" id="readBytes(flash.utils.ByteArray,uint,uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;readBytes</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readBytes(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:<a href="../../uint.html">uint</a> = 0, length:<a href="../../uint.html">uint</a> = 0):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     從檔案串流、位元組串流或位元組陣列，讀取 <code>length</code> 參數所指定的資料位元組數目。這些位元組會讀入由 <code>bytes</code> 參數指定的 ByteArray 物件中，從 <code>offset</code> 所指定的位置開始。
+     </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">bytes</span>:<a href="../utils/ByteArray.html">ByteArray</a></code> &mdash; 要將資料讀入的 <code>ByteArray</code> 物件。
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">offset</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; <code>bytes</code> 參數中的偏移值，資料讀取應該會在此處開始。
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">length</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; 要讀取的位元組數。 預設值為 0，會讀取所有可用的資料。
+     </td></tr></table></p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 檔案無法讀取或檔案未開啟。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用讀取功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法讀取 (例如，因為檔案遺失)。
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; 為讀取資料指定的位置超過可用的位元組數 (由 <code>bytesAvailable</code> 屬性指定)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readDouble()" id="readDouble()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;readDouble</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readDouble():<a href="../../Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     會從檔案串流、位元組串流或位元組陣列讀取 IEEE 754 雙精度浮點數。
+     </p><p></p><span class="label">傳回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Number.html">Number</a></code> &mdash; IEEE 754 雙精度浮點數。
+     </td></tr></table><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 檔案無法讀取或檔案未開啟。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用讀取功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法讀取 (例如，因為檔案遺失)。
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; 為讀取資料指定的位置超過可用的位元組數 (由 <code>bytesAvailable</code> 屬性指定)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readFloat()" id="readFloat()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;readFloat</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readFloat():<a href="../../Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     會從檔案串流、位元組串流或位元組陣列讀取 IEEE 754 單精度浮點數。
+     </p><p></p><span class="label">傳回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Number.html">Number</a></code> &mdash; IEEE 754 單精度浮點數。
+     </td></tr></table><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 檔案無法讀取或檔案未開啟。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用讀取功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法讀取 (例如，因為檔案遺失)。
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; 為讀取資料指定的位置超過可用的位元組數 (由 <code>bytesAvailable</code> 屬性指定)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readInt()" id="readInt()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;readInt</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readInt():<a href="../../int.html">int</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     會從檔案串流、位元組串流或位元組陣列讀取具有正負號的 32 位元整數。
+     </p><p></p><span class="label">傳回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../int.html">int</a></code> &mdash; 傳回的值介於 -2147483648 到 2147483647 的範圍之間。
+     </td></tr></table><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 檔案無法讀取或檔案未開啟。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用讀取功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法讀取 (例如，因為檔案遺失)。
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; 為讀取資料指定的位置超過可用的位元組數 (由 <code>bytesAvailable</code> 屬性指定)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readMultiByte()" id="readMultiByte()"></a><a name="readMultiByte(uint,String)" id="readMultiByte(uint,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;readMultiByte</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readMultiByte(length:<a href="../../uint.html">uint</a>, charSet:<a href="../../String.html">String</a>):<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     使用指定的字元集，從檔案串流、位元組串流或位元組陣列讀取指定長度的多位元組字串。
+     
+     
+     </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">length</span>:<a href="../../uint.html">uint</a></code> &mdash; 所要讀取之位元組串流的位元組數。
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">charSet</span>:<a href="../../String.html">String</a></code> &mdash; 代表字元集之字串，該字元集用於解譯位元組。 可能的字元集字串包括 <code>"shift-jis"</code>、<code>"cn-gb"</code>、<code>"iso-8859-1"</code>，以及其他等等。 如需完整清單，請參閱<a href="../../charset-codes.html" >「支援的字元集」</a>。
+     
+     <p><b>注意：</b>如果目前的系統沒有辦識出 <code>charSet</code> 參數的值，則 <span>Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup> Player 或 </span>Adobe<sup>&reg;</sup> AIR<sup>&reg;</sup> 會使用系統的預設字碼頁當做字元集。例如，<code>charSet</code> 參數的值 (如同在 <code>myTest.readMultiByte(22, "iso-8859-01")</code>) 使用 <code>01</code> 取代 <code>1</code> 在您的開發系統上可能是可行的，但在其他系統可能不可行。在其他系統上，<span>Flash Player 或</span> AIR 執行階段將會使用系統的預設字碼頁。</p>
+     
+     </td></tr></table></p><p></p><span class="label">傳回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../String.html">String</a></code> &mdash; UTF-8 編碼字串。
+     </td></tr></table><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 檔案無法讀取或檔案未開啟。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用讀取功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法讀取 (例如，因為檔案遺失)。
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; 為讀取資料指定的位置超過可用的位元組數 (由 <code>bytesAvailable</code> 屬性指定)。
+	
+	</td></tr></table><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="File.html#systemCharset" target="">File.systemCharset</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readObject()" id="readObject()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;readObject</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readObject():<a href="../../specialTypes.html#*">*</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     從檔案串流、位元組串流或位元組陣列讀取物件並以 AMF 序列化格式編碼。
+     </p><p></p><span class="label">傳回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../specialTypes.html#*">*</a></code> &mdash; 經過還原序列化的物件
+     
+     </td></tr></table><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 檔案無法讀取或檔案未開啟。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用讀取功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法讀取 (例如，因為檔案遺失)。
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; 為讀取資料指定的位置超過可用的位元組數 (由 <code>bytesAvailable</code> 屬性指定)。
+	
+	</td></tr></table><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="../net/package.html#registerClassAlias()" target="">flash.net.registerClassAlias()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readShort()" id="readShort()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;readShort</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readShort():<a href="../../int.html">int</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     會從檔案串流、位元組串流或位元組陣列讀取具有正負號的 16 位元整數。
+     </p><p></p><span class="label">傳回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../int.html">int</a></code> &mdash; 傳回的值介於 -32768 到 32767 的範圍之間。
+     </td></tr></table><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 檔案無法讀取或檔案未開啟。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用讀取功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法讀取 (例如，因為檔案遺失)。
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; 為讀取資料指定的位置超過可用的位元組數 (由 <code>bytesAvailable</code> 屬性指定)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readUnsignedByte()" id="readUnsignedByte()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;readUnsignedByte</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedByte():<a href="../../uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     會從檔案串流、位元組串流或位元組陣列讀取無正負號的位元組。
+     </p><p></p><span class="label">傳回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../uint.html">uint</a></code> &mdash; 傳回的值介於 0 到 255 的範圍之間。
+     </td></tr></table><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 檔案無法讀取或檔案未開啟。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用讀取功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法讀取 (例如，因為檔案遺失)。
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; 為讀取資料指定的位置超過可用的位元組數 (由 <code>bytesAvailable</code> 屬性指定)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readUnsignedInt()" id="readUnsignedInt()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;readUnsignedInt</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedInt():<a href="../../uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     會從檔案串流、位元組串流或位元組陣列讀取無正負號的 32 位元整數。
+     </p><p></p><span class="label">傳回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../uint.html">uint</a></code> &mdash; 傳回的值介於 0 到 4294967295 的範圍之間。
+     </td></tr></table><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 檔案無法讀取或檔案未開啟。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用讀取功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法讀取 (例如，因為檔案遺失)。
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; 為讀取資料指定的位置超過可用的位元組數 (由 <code>bytesAvailable</code> 屬性指定)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readUnsignedShort()" id="readUnsignedShort()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;readUnsignedShort</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedShort():<a href="../../uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     會從檔案串流、位元組串流或位元組陣列讀取無正負號的 16 位元整數。
+     </p><p></p><span class="label">傳回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../uint.html">uint</a></code> &mdash; 傳回的值介於 0 到 65535 的範圍之間。
+     </td></tr></table><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 檔案無法讀取或檔案未開啟。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用讀取功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法讀取 (例如，因為檔案遺失)。
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; 為讀取資料指定的位置超過可用的位元組數 (由 <code>bytesAvailable</code> 屬性指定)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readUTF()" id="readUTF()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;readUTF</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUTF():<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     從檔案串流、位元組串流或位元組陣列讀取 UTF-8 字串。會假定此字串的前置詞為無正負號的短整數，以指示以位元組為單位的長度。
+     
+     <p>這個方法類似於 Java<sup>&reg;</sup> IDataInput 介面的 <code>readUTF()</code> 方法。</p>
+     </p><p></p><span class="label">傳回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../String.html">String</a></code> &mdash; 以位元組表示之字元所產生的 UTF-8 字串。
+     
+     </td></tr></table><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 檔案無法讀取或檔案未開啟。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用讀取功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法讀取 (例如，因為檔案遺失)。
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; 為讀取資料指定的位置超過可用的位元組數 (由 <code>bytesAvailable</code> 屬性指定)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readUTFBytes()" id="readUTFBytes()"></a><a name="readUTFBytes(uint)" id="readUTFBytes(uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;readUTFBytes</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUTFBytes(length:<a href="../../uint.html">uint</a>):<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     從位元組串流或位元組陣列讀取 UTF-8 位元組的序列，並傳回字串。
+     </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">length</span>:<a href="../../uint.html">uint</a></code> &mdash; 要讀取的位元組數。
+     </td></tr></table></p><p></p><span class="label">傳回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../String.html">String</a></code> &mdash; 指定之長度字元的位元組表示法所產生的 UTF-8 字串。
+     </td></tr></table><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 檔案無法讀取或檔案未開啟。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用讀取功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法讀取 (例如，因為檔案遺失)。
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; 為讀取資料指定的位置超過可用的位元組數 (由 <code>bytesAvailable</code> 屬性指定)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="truncate()" id="truncate()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;truncate</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function truncate():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 在 FileStream 物件之 <code>position</code> 屬性所指定的位置上截斷檔案。 
+	 
+	 <p>從 <code>position</code> 屬性所指定的位置到檔案結尾的位元組會被刪除。檔案必須開啟供寫入。</p>
+	 
+	 </p><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; 檔案未開啟供寫入。
+	 
+	 </td></tr></table><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="FileStream.html#position" target="">position</a></div><span id="pageFilter"><br/><span class="label"> 範例 &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span>)
+            </span><br/><br/><div class="detailBody"> 下列程式碼會以同步方式開啟使用者文件目錄 Apollo Test 子目錄中的 test.txt 檔案，而且如果檔案的長度超過 100 個字元，則會將檔案的長度修剪為 100 個字元。
+<div class="listing"><pre>
+import flash.filesystem.*;
+
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.open(file, FileMode.UPDATE);
+if (file.size &gt; 100) {
+    fileStream.position = 100;
+    fileStream.truncate();
+}
+fileStream.close();
+</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody"> 下列程式碼會以「非同步」<i></i>方式開啟使用者文件目錄 Apollo Test 子目錄中的 test.txt 檔案，而且如果檔案的長度超過 100 個字元，則會將檔案的長度修剪為 100 個字元。
+<div class="listing"><pre>
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.openAsync(file, FileMode.UPDATE);
+trace("start", file.size)
+if (file.size &gt; 100) {
+    fileStream.position = 100;
+    fileStream.truncate();
+}
+fileStream.addEventListener(Event.CLOSE, fileClosed);
+fileStream.close();
+function fileClosed(event:Event):void {
+    trace("closed", file.size); 
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeBoolean()" id="writeBoolean()"></a><a name="writeBoolean(Boolean)" id="writeBoolean(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeBoolean</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeBoolean(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     會寫入 Boolean 值。 會根據 <code>value</code> 參數寫入單一位元組；如果為 <code>true</code> 則為 1，如果為 <code>false</code> 則為 0。
+     
+     </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../Boolean.html">Boolean</a></code> &mdash; Boolean 值，用以決定寫入的位元組。如果參數為 <code>true</code> 則會寫入 1，如果為 <code>false</code> 則會寫入 0。
+     
+     </td></tr></table></p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 您無法寫入檔案 (例如，因為檔案遺失)。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用寫入功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法寫入 (例如，因為檔案遺失)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeByte()" id="writeByte()"></a><a name="writeByte(int)" id="writeByte(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeByte</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeByte(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     會寫入位元組。 使用參數的較低 8 位元，而忽略其餘較高 24 位元。
+     </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../int.html">int</a></code> &mdash; 整數的位元組值。
+     
+     </td></tr></table></p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 您無法寫入檔案 (例如，因為檔案遺失)。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用寫入功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法寫入 (例如，因為檔案遺失)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeBytes()" id="writeBytes()"></a><a name="writeBytes(flash.utils.ByteArray,uint,uint)" id="writeBytes(flash.utils.ByteArray,uint,uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeBytes</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeBytes(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:<a href="../../uint.html">uint</a> = 0, length:<a href="../../uint.html">uint</a> = 0):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     以 <code>length</code> 指定的長度，從指定的位元組陣列 <code>bytes</code>，將位元組序列從 <code>offset</code> 所指定的位元組 (使用從零開始的索引) 開始寫入檔案串流、位元組串流或位元組陣列。
+     
+     <p>如果省略 <code>length</code> 參數，便會使用 0 的預設長度，並從 <code>offset</code> 位置開始寫入整個緩衝區。如果也省略 <code>offset</code> 參數，便會寫入整個緩衝區。 </p>
+     
+     <p>如果 <code>offset</code> 或 <code>length</code> 參數超出範圍，這兩者便會固定至 <code>bytes</code> 陣列的開頭與結尾。</p>
+     </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">bytes</span>:<a href="../utils/ByteArray.html">ByteArray</a></code> &mdash; 要寫入的位元組陣列。
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">offset</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; 從零開始的索引，指定要在陣列中開始寫入的位置。
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">length</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; 無正負號的整數，指定要在緩衝區中寫入的長度。
+     
+     </td></tr></table></p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 您無法寫入檔案 (例如，因為檔案遺失)。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用寫入功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法寫入 (例如，因為檔案遺失)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeDouble()" id="writeDouble()"></a><a name="writeDouble(Number)" id="writeDouble(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeDouble</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeDouble(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     會寫入 IEEE 754 雙精度 (64 位元) 浮點數。
+     </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../Number.html">Number</a></code> &mdash; 雙精度 (64 位元) 浮點數。
+     
+     </td></tr></table></p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 您無法寫入檔案 (例如，因為檔案遺失)。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用寫入功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法寫入 (例如，因為檔案遺失)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeFloat()" id="writeFloat()"></a><a name="writeFloat(Number)" id="writeFloat(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeFloat</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeFloat(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     會寫入 IEEE 754 單精度 (32 位元) 浮點數。
+     </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../Number.html">Number</a></code> &mdash; 單精度 (32 位元) 浮點數。
+     
+     </td></tr></table></p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 您無法寫入檔案 (例如，因為檔案遺失)。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用寫入功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法寫入 (例如，因為檔案遺失)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeInt()" id="writeInt()"></a><a name="writeInt(int)" id="writeInt(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeInt</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeInt(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     會寫入 32 位元的具有正負號整數。
+     </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../int.html">int</a></code> &mdash; 做為具有正負號整數的位元組值。
+     
+     </td></tr></table></p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 您無法寫入檔案 (例如，因為檔案遺失)。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用寫入功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法寫入 (例如，因為檔案遺失)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeMultiByte()" id="writeMultiByte()"></a><a name="writeMultiByte(String,String)" id="writeMultiByte(String,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeMultiByte</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeMultiByte(value:<a href="../../String.html">String</a>, charSet:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     使用指定的字元集，將多位元組字串寫入檔案串流、位元組串流或位元組陣列。
+     
+     </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../String.html">String</a></code> &mdash; 要寫入的字串值。
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">charSet</span>:<a href="../../String.html">String</a></code> &mdash; 表示要使用之字元集的字串。 可能的字元集字串包括 <code>"shift-jis"</code>、<code>"cn-gb"</code>、<code>"iso-8859-1"</code>，以及其他等等。 如需完整清單，請參閱<a href="../../charset-codes.html" >「支援的字元集」</a>。
+     </td></tr></table></p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 您無法寫入檔案 (例如，因為檔案遺失)。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用寫入功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法寫入 (例如，因為檔案遺失)。
+	
+	</td></tr></table><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="File.html#systemCharset" target="">File.systemCharset</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeObject()" id="writeObject()"></a><a name="writeObject(any)" id="writeObject(any)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeObject</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeObject(object:<a href="../../specialTypes.html#*">*</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     使用 AMF 序列化格式，將物件寫入檔案串流、位元組串流或位元組陣列。
+     </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">object</span>:<a href="../../specialTypes.html#*">*</a></code> &mdash; 要序列化的物件。
+     
+     </td></tr></table></p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 您無法寫入檔案 (例如，因為檔案遺失)。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用寫入功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法寫入 (例如，因為檔案遺失)。
+	
+	</td></tr></table><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="../net/package.html#registerClassAlias()" target="">flash.net.registerClassAlias()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeShort()" id="writeShort()"></a><a name="writeShort(int)" id="writeShort(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeShort</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeShort(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     會寫入 16 位元整數。 使用參數的較低 16 位元，而忽略其餘較高 16 位元。
+     </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../int.html">int</a></code> &mdash; 整數的位元組值。
+     
+     </td></tr></table></p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 您無法寫入檔案 (例如，因為檔案遺失)。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用寫入功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法寫入 (例如，因為檔案遺失)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeUnsignedInt()" id="writeUnsignedInt()"></a><a name="writeUnsignedInt(uint)" id="writeUnsignedInt(uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeUnsignedInt</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUnsignedInt(value:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     會寫入 32 位元的無正負號整數。
+     </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../uint.html">uint</a></code> &mdash; 做為無正負號整數的位元組值。
+     
+     </td></tr></table></p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 您無法寫入檔案 (例如，因為檔案遺失)。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用寫入功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法寫入 (例如，因為檔案遺失)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeUTF()" id="writeUTF()"></a><a name="writeUTF(String)" id="writeUTF(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeUTF</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUTF(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     將 UTF-8 字串寫入檔案串流、位元組串流或位元組陣列。會先寫入 UTF-8 字串的長度 (以位元組為單位，16 位元整數)，後面緊接著表示字串之字元的位元組。
+     </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../String.html">String</a></code> &mdash; 要寫入的字串值。
+     
+     </td></tr></table></p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 您無法寫入檔案 (例如，因為檔案遺失)。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../RangeError.html">RangeError</a> </code> &mdash; 如果字串的長度大於 65535 個字元。
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用寫入功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法寫入 (例如，因為檔案遺失)。
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeUTFBytes()" id="writeUTFBytes()"></a><a name="writeUTFBytes(String)" id="writeUTFBytes(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeUTFBytes</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUTFBytes(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     會寫入 UTF-8 字串。 類似 <code>writeUTF()</code>，但是不以 16 位元長度的字做為字串前置詞。
+     </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../String.html">String</a></code> &mdash; 要寫入的字串值。
+     
+     </td></tr></table></p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; 您無法寫入檔案 (例如，因為檔案遺失)。此事件只會針對開啟來進行非同步作業的檔案 (使用 <code>openAsync()</code> 方法) 傳送。
+	
+	</td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; 檔案尚未開啟；檔案已開啟，但未使用寫入功能來開啟；或者針對同步作業開啟的檔案 (使用 <code>open()</code> 方法)，檔案無法寫入 (例如，因為檔案遺失)。
+	
+	</td></tr></table></div></span><div class="detailSectionHeader"> 事件詳細資訊 </div><span id="pageFilter" runtime="AIR::1.0##"><a name="event:close" id="event:close"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>close</h3></td><td class="detailHeaderType"> 事件 </td></tr></table><div class="detailBody"><span class="label">事件物件類型: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">屬性 Event.type  =  </span><a href="../events/Event.html#CLOSE"><code>flash.events.Event.CLOSE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ 表示已藉由明確呼叫 <code>close()</code> 方法關閉串流。
+ 
+ </p>
+	<code>Event.CLOSE</code> 常數會定義 <code>close</code> 事件物件的 <code>type</code> 屬性值。 
+	
+	<p>這個事件具有下列屬性：</p>
+	
+	<table class="innertable" ><tr><th>屬性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；沒有要取消的預設行為指令。</td></tr><tr><td><code>currentTarget</code></td><td>正主動使用事件偵聽程式處理 Event 物件的物件。</td></tr><tr><td><code>target</code></td><td>其連線已關閉的物件。</td></tr></table>
+	
+	<p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="FileStream.html#close()" target="">close()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:complete" id="event:complete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>complete</h3></td><td class="detailHeaderType"> 事件 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">事件物件類型: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">屬性 Event.type  =  </span><a href="../events/Event.html#COMPLETE"><code>flash.events.Event.COMPLETE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ 指出已到達串流結尾。
+ 
+ </p>
+	<code>Event.COMPLETE</code> 常數會定義 <code>complete</code> 事件物件的 <code>type</code> 屬性值。 
+	
+	<p>這個事件具有下列屬性：</p>
+	<table class="innertable" ><tr><th>屬性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；沒有要取消的預設行為指令。</td></tr><tr><td><code>currentTarget</code></td><td>正主動使用事件偵聽程式處理 Event 物件的物件。</td></tr><tr><td><code>target</code></td><td>已完成載入的網路物件。 
+	    </td></tr></table>
+	
+	<p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="FileStream.html#position" target="">position</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:ioError" id="event:ioError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>ioError</h3></td><td class="detailHeaderType"> 事件 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">事件物件類型: </span><a href="../events/IOErrorEvent.html"><code>flash.events.IOErrorEvent</code></a><br/><span class="label">屬性 IOErrorEvent.type  =  </span><a href="../events/IOErrorEvent.html#IO_ERROR"><code>flash.events.IOErrorEvent.IO_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ 表示非同步檔案 I/O 作業期間發生錯誤。
+ 
+ </p>
+	定義 <code>ioError</code> 事件物件的 <code>type</code> 屬性值。
+	<p>這個事件具有下列屬性：</p>
+	<table class="innertable" ><tr><th>屬性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；沒有要取消的預設行為指令。</td></tr><tr><td><code>currentTarget</code></td><td>正主動使用事件偵聽程式處理 Event 物件的物件。</td></tr><tr><td><code>errorID</code></td><td>與特定錯誤相關聯的參考號碼 (僅限 AIR)。</td></tr><tr><td><code>target</code></td><td>遭遇輸入/輸出錯誤的網路物件。</td></tr><tr><td><code>text</code></td><td>要顯示為錯誤訊息的文字。</td></tr></table>
+	
+	</div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:outputProgress" id="event:outputProgress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>outputProgress</h3></td><td class="detailHeaderType"> 事件 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">事件物件類型: </span><a href="../events/OutputProgressEvent.html"><code>flash.events.OutputProgressEvent</code></a><br/><span class="label">屬性 OutputProgressEvent.type  =  </span><a href="../events/OutputProgressEvent.html#OUTPUT_PROGRESS"><code>flash.events.OutputProgressEvent.OUTPUT_PROGRESS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ 指出緩衝資料已寫入檔案。
+ 
+ </p>
+    定義 <code>outputProgress</code> 事件物件的 <code>type</code> 屬性值。
+    
+    <p>這個事件具有下列屬性：</p>
+    
+    <table class="innertable" ><tr><th>屬性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>bytesPending</code></td><td>在偵聽程式處理事件時，要寫入的剩餘位元組數。</td></tr><tr><td><code>bytesTotal</code></td><td>如果寫入程序成功，最後將會寫入的位元組總數。</td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；沒有要取消的預設行為指令。</td></tr><tr><td><code>currentTarget</code></td><td>正主動使用事件偵聽程式處理 Event 物件的物件。</td></tr><tr><td><code>target</code></td><td>回報進度的 FileStream 物件。 </td></tr></table>
+    
+    </div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:progress" id="event:progress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>progress</h3></td><td class="detailHeaderType"> 事件 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">事件物件類型: </span><a href="../events/ProgressEvent.html"><code>flash.events.ProgressEvent</code></a><br/><span class="label">屬性 ProgressEvent.type  =  </span><a href="../events/ProgressEvent.html#PROGRESS"><code>flash.events.ProgressEvent.PROGRESS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ 指出串流上新資料的可用性。
+ 
+ </p>
+	定義 <code>progress</code> 事件物件的 <code>type</code> 屬性值。
+	
+	<p>這個事件具有下列屬性：</p>
+	
+	<table class="innertable" ><tr><th>屬性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>bytesLoaded</code></td><td>在偵聽程式處理事件時，載入的項目或位元組數目。</td></tr><tr><td><code>bytesTotal</code></td><td>如果載入程序成功時，最終將載入的項目或位元組總數。</td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；沒有要取消的預設行為指令。</td></tr><tr><td><code>currentTarget</code></td><td>正主動使用事件偵聽程式處理 Event 物件的物件。</td></tr><tr><td><code>target</code></td><td>回報進度的物件。 </td></tr></table>
+	
+	</div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script></div><p xmlns:xd="http://www.pnp-software.com/XSLTdoc"></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 03:47 PM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/zh_TW/legalnotices/index.html">法律聲明</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">線上隱私權政策</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">為什麼顯示英文？</span>
+				</div>
+				<div class="white_content_body">
+					<b>「ActionScript 3.0 參考」的內容是以英文顯示</b><br><br>
+					並非所有「ActionScript 3.0 參考」的內容都翻譯為所有語言。當語言元素未翻譯時，就會以英文顯示。例如，ga.controls.HelpBox 類別並沒有翻譯為任何語言。因此在參考的繁體中文版本中，ga.controls.HelpBox 類別就會以英文顯示。
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 03:47 PM Z  -->

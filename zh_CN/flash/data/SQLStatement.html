@@ -1,0 +1,668 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="用于 Adobe&reg; Flash&reg; Platform 的 ActionScript&reg; 3.0 参考"><meta name="lang" content="zh-cn"><meta name="runtime" content="air"><meta name="runtimever" content="air:1.0"><meta name="product" content="air"><meta name="productver" content="air:1.0"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../asfilter.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="SQLStatement,flash.data.SQLStatement,executing,itemClass,parameters,sqlConnection,text,cancel,clearParameters,execute,getResult,next"><title>SQLStatement - Adobe ActionScript&reg; 3 (AS3  ) API 参考</title>
+		<link rel="stylesheet" href="../../filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="../../filter_new.css" type="text/css">
+			
+		<script src="../../jquery.js" type="text/javascript"></script>
+		<script src="../../s_chl_code.js" type="text/javascript"></script>
+		<script src="../../jquery.zclip.js" type="text/javascript"></script>
+		<script src="../../jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="../../cookies.js" type="text/javascript"></script>
+		<script src="../../asdoc.js" type="text/javascript"></script>
+		<script src="../../iscroll.js" type="text/javascript"></script>
+		<script src="../../AC_OETags.js" type="text/javascript"></script>
+		<script src="../../omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "运行时";
+			var productsLabel = "产品";
+			var noneLabel = "无";
+			var qsearchBoxLabel = "快速搜索";
+			var qsearchText = "未找到所搜索的词";
+			var ajaxErrorMsg="加载页面时出错";
+			var ajaxErrorTryMsg="重试";
+			var ajaxLoadingMsg="仍在加载中";
+			var cancelMsg = "取消";
+			var classesText = "类";
+			var strJiveReply = "此问题针对以下文章提出： "
+			var showFilters = "显示过滤条件";
+			var hideFilters = "隐藏过滤条件";
+			
+		
+			var baseRef = "../../";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											用于 Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup> Platform 的 ActionScript<sup>&reg;</sup> 3.0 参考<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="../../index.html"> 主页 </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="SQLStatement.html#top" style="display:">显示包列表和类列表</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="SQLStatement.html#top" style="display:none">隐藏包列表和类列表</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="../../package-summary.html"> 包 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../class-summary.html"> 类 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../whatsnew.html"> 新增内容 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../all-index-Symbols.html"> 索引 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../appendixes.html"> 附录 </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">为什么显示为英语？</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/zh_CN/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('../../')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('../../')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="../../help.js"></script>
+						<script language="javascript" type="text/javascript" src="../../asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="../../filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>过滤条件:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">正在从服务器检索数据...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">正在从服务器检索数据...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="SQLStatement.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">flash.data&nbsp;</a><br>
+								<h1 id="classProductName">SQLStatement&nbsp; - AS3 </h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="SQLStatement.html#propertySummary" style="display:none"> 属性 </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="SQLStatement.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> 属性 </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="SQLStatement.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> 构造函数 </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="SQLStatement.html#methodSummary" style="display:none"> 方法 </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="SQLStatement.html#constantSummary" style="display:none"> 全局常量 </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="SQLStatement.html#eventSummary" style="display:none"> 事件 </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="SQLStatement.html#styleSummary" style="display:none"> 样式 </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="SQLStatement.html#SkinPartSummary" style="display:none"> 外观部件 </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="SQLStatement.html#SkinStateSummary" style="display:none"> 外观状态 </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="SQLStatement.html#effectSummary" style="display:none"> 效果 </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="SQLStatement.html#constantSummary" style="display:none"> 常量 </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="SQLStatement.html#methodSummary" style="display:none"> 全局函数 </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="SQLStatement.html#methodSummary" style="display:none">函数</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="SQLStatement.html#interfaceSummary" style="display:none"> 接口 </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="SQLStatement.html#classSummary" style="display:none"> 类 </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="SQLStatement.html#includeExamplesSummary" style="display:none"> 示例 </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="SQLStatement.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								类
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">包</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">flash.data</a></td></tr><tr><td class="classHeaderTableLabel">类</td><td class="classSignature">public  class  SQLStatement</td></tr><tr><td class="classHeaderTableLabel">继承</td><td class="inheritanceList">SQLStatement  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../Object.html">Object</a></td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p></p>
+ SQLStatement 实例用于针对通过 SQLConnection 实例打开的本地 SQL 数据库执行 SQL 语句。
+ 
+ <p>SQLStatement 实例通过将 SQLConnection 实例设置为 SQLStatement 实例的 <code>sqlConnection</code> 属性的值来链接到 SQLConnection 实例。<code>text</code> 属性用要执行的 SQL 语句的实际文本进行填充。如有必要，可以使用 <code>parameters</code> 属性指定 SQL 语句参数的值，并通过调用 <code>execute()</code> 方法执行该语句。</p>
+ 
+               <p>有关本地 SQL 数据库中支持的 SQL 术语的完整说明，请参阅附录<a href="http://adobe.com/go/learn_as3_sqlsupportdb_cn" >本地数据库中的 SQL 支持</a>。</p>
+ 
+               <p>在异步执行模式中，<code>execute()</code> 和 <code>next()</code> 方法在后台执行，并且当操作完成或失败时，运行时会对注册的事件侦听器或指定的 Responder 实例调度事件。在同步模式中，这些方法在主应用程序线程上执行，这意味着数据库操作完成之前不执行其他代码。另外，在同步模式中，如果方法失败，运行时将引发异常而不调度错误事件。</p>
+ 
+            <p></p><p><span class="classHeaderTableLabel">相关 API 元素</span></p><div class="seeAlso"><a href="SQLConnection.html" target="">flash.data.SQLConnection</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary" id="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">公共属性</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="SQLStatement.html#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隐藏继承的公共属性</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="SQLStatement.html#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 显示继承的公共属性</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">属性</th><th>由以下参数定义</th></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="../../Object.html#constructor" class="signatureLink">constructor</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">
+	 对类对象或给定对象实例的构造函数的引用。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#executing" class="signatureLink">executing</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">[只读] 
+     表示当前是否正在执行语句。</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#itemClass" class="signatureLink">itemClass</a> : <a href="../../Class.html">Class</a><div class="summaryTableDescription">
+     表示一个类（数据类型），用于由于执行语句而返回的每个行。</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#parameters" class="signatureLink">parameters</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">[只读] 
+     用作一个关联数组，将在其中添加 SQL 语句的 text 属性中指定的参数的值。</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#sqlConnection" class="signatureLink">sqlConnection</a> : <a href="SQLConnection.html">SQLConnection</a><div class="summaryTableDescription">
+     管理到执行语句的数据库的连接的 SQLConnection 对象。</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#text" class="signatureLink">text</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">
+     语句的实际 SQL 文本。</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary" id="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">公共方法 </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="SQLStatement.html#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隐藏继承的公共方法</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="SQLStatement.html#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 显示继承的公共方法</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">方法</th><th>由以下参数定义</th></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#SQLStatement()" class="signatureLink">SQLStatement</a>()</div><div class="summaryTableDescription">
+     创建 SQLStatement 实例。</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#addEventListener()" class="signatureLink">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	使用 EventDispatcher 对象注册事件侦听器对象，以使侦听器能够接收事件通知。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#cancel()" class="signatureLink">cancel</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     取消执行此语句。</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#clearParameters()" class="signatureLink">clearParameters</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     清除所有当前参数设置。</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	将事件调度到事件流中。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#execute()" class="signatureLink">execute</a>(prefetch:<a href="../../int.html">int</a> = -1, responder:<a href="../net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     针对连接到 sqlConnection 属性中的 SQLConnection 对象的数据库执行 text 属性中的 SQL。</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#getResult()" class="signatureLink">getResult</a>():<a href="SQLResult.html">SQLResult</a></div><div class="summaryTableDescription">
+     提供对包含语句执行结果的 SQLResult 对象的访问，其中包括 SELECT 语句的任何结果行以及有关执行的所有语句的语句执行情况的其他信息。</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	检查 EventDispatcher 对象是否为特定事件类型注册了任何侦听器。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#hasOwnProperty()" class="signatureLink">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 表示对象是否已经定义了指定的属性。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#isPrototypeOf()" class="signatureLink">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 表示 Object 类的实例是否在指定为参数的对象的原型链中。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#next()" class="signatureLink">next</a>(prefetch:<a href="../../int.html">int</a> = -1, responder:<a href="../net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     检索 SELECT 语句的结果集的下一部分。</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#propertyIsEnumerable()" class="signatureLink">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 表示指定的属性是否存在、是否可枚举。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#removeEventListener()" class="signatureLink">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	从 EventDispatcher 对象中删除侦听器。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#setPropertyIsEnumerable()" class="signatureLink">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     设置循环操作动态属性的可用性。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toLocaleString()" class="signatureLink">toLocaleString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 返回此对象的字符串表示形式，其格式设置遵守区域设置特定的约定。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toString()" class="signatureLink">toString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 返回指定对象的字符串表示形式。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#valueOf()" class="signatureLink">valueOf</a>():<a href="../../Object.html">Object</a></div><div class="summaryTableDescription">
+	 返回指定对象的原始值。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	检查是否用此 EventDispatcher 对象或其任何祖代为指定事件类型注册了事件侦听器。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary" id="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">事件</div><div class="showHideLinks"><a href="http://help.adobe.com/en_US/Flex/4.6/UsingSDK/WS2db454920e96a9e51e63e3d11c0bf69084-7ee9.html" target="_blank">单击此处了解有关事件的更多信息</a></div><div class="showHideLinks"><div id="hideInheritedEvent" class="hideInheritedEvent"><a class="showHideLink" href="SQLStatement.html#eventSummary" onclick="javascript:setInheritedVisible(false,'Event');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隐藏继承的事件</a></div><div id="showInheritedEvent" class="showInheritedEvent"><a class="showHideLink" href="SQLStatement.html#eventSummary" onclick="javascript:setInheritedVisible(true,'Event');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 显示继承的事件</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">事件</th><th> 摘要 </th><th>由以下参数定义</th></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[广播事件] Flash Player 或 AIR 应用程序获得操作系统焦点并变为活动状态时将调度此事件。</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[广播事件] Flash Player 或 AIR 应用程序失去操作系统焦点并变为非活动状态时将调度此事件。</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#event:error" class="signatureLink">error</a></div></td><td class="summaryTableDescription summaryTableCol">在执行操作期间发生错误时调度。</td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#event:result" class="signatureLink">result</a></div></td><td class="summaryTableDescription summaryTableCol">execute() 或 next() 方法调用操作成功完成时调度。</td><td class="summaryTableOwnerCol">SQLStatement</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">属性详细信息</div><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="executing" id="executing"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>executing</h3></td><td class="detailHeaderType">属性</td></tr></table><div class="detailBody"><code>executing:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[只读] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     表示当前是否正在执行语句。
+     
+     <p>如果已调用 <code>execute()</code> 且尚未返回数据库中的所有结果，则此属性为 true。</p>
+     
+     </p><br/><br/><span class="label"> 实现 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get executing():<a href="../../Boolean.html">Boolean</a></code><br/><p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="SQLStatement.html#execute()" target="">execute()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="itemClass" id="itemClass"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>itemClass</h3></td><td class="detailHeaderType">属性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>itemClass:<a href="../../Class.html">Class</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     表示一个类（数据类型），用于由于执行语句而返回的每个行。
+     
+     
+     
+     <p>默认情况下，由 <code>SELECT</code> 语句返回的每个行都创建为 Object 实例，以结果集的列名作为该对象的属性名，每列的值作为其相关属性的值。</p>
+     
+     <p>通过指定 <code>itemClass</code> 属性的类，由此 SQLStatement 实例执行的 <code>SELECT</code> 语句返回的每个行都创建为指定的类的实例。<code>itemClass</code> 实例的每个属性均赋予与该属性同名的列中的值。</p>
+     
+     <p>分配给此属性的任何类必须具有不需要任何参数的构造函数。另外，对于由 <code>SELECT</code> 语句返回的每个列，该类必须具有一个单一的属性。如果 <code>SELECT</code> 列表中的列在 <code>itemClass</code> 类中没有相匹配的属性名称，系统会将其视为错误。</p>
+     
+     </p><br/><br/><span class="label"> 实现 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get itemClass():<a href="../../Class.html">Class</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set itemClass(value:<a href="../../Class.html">Class</a>):<a href="../../specialTypes.html#void">void</a></code><br/><p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="SQLResult.html#data" target="">flash.data.SQLResult.data</a></div><span id="pageFilter"><br/><span class="label"> 示例 &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_cn"> 如何使用本示例 </a></span>)
+            </span><br/><div class="detailBody"> 下面的代码演示如何使用 <code>itemClass</code> 属性让运行时从 SQL <code>SELECT</code> 语句结果创建自定义类的实例。
+<div class="listing"><pre>
+// Employee class definition
+package
+{
+    public class Employee
+    {
+        public var name:String;
+        public var ssn:String;
+        public var id:uint;
+        public override function toString():String
+        {
+            return "id: "+ id.toString() + " name: " + name + " ssn: " + ssn;
+        }
+    }
+}
+
+
+// using the Employee class as SQLStatement.itemClass
+var conn:SQLConnection;
+var dbStatement:SQLStatement;
+
+function init():void
+{
+    conn = new SQLConnection();
+    conn.addEventListener(SQLEvent.OPEN, connOpenHandler);
+    
+    dbStatement = new SQLStatement();
+    dbStatement.sqlConnection = conn;
+    dbStatement.text = "SELECT id, name, ssn FROM employees";
+    dbStatement.itemClass = Employee;
+    
+    var dbFile:File = new File(File.separator + "employee.db");
+    conn.open(dbFile);
+}
+
+function connOpenHandler(event:SQLEvent):void
+{
+    dbStatement.addEventListener(SQLEvent.RESULT, resultHandler);
+    dbStatement.execute();
+}
+
+function resultHandler(event:SQLEvent):void
+{
+    var result:SQLResult = dbStatement.getResult();
+    if (result != null)
+    {
+        var emp:Employee;
+        var numRows:int = result.data.length;
+        for (var i:int = 0; i &lt; numRows; i++)
+        {
+            emp = result.data[i];
+            trace(emp.toString());
+        }
+    }
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="parameters" id="parameters"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>parameters</h3></td><td class="detailHeaderType">属性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>parameters:<a href="../../Object.html">Object</a></code>&nbsp;&nbsp;[只读] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     用作一个关联数组，将在其中添加 SQL 语句的 <code>text</code> 属性中指定的参数的值。数组键是参数的名称。如果在语句文本中指定了未命名的参数，则其键是该参数的索引。
+     
+     <p>在 SQL 语句的文本内，参数由以下字符之一表示：“?”、“:”或“@”。</p>
+     
+     <p>“:”和“@”标记表示命名的参数；标记后面的字符指定参数的名称。</p>
+     
+     <p>例如，在下面的 SQL 语句中，使用“:”字符指定了一个名为 <code>firstName</code> 的参数：</p>
+     
+     <pre>SELECT FROM employees WHERE firstName = :firstName</pre>
+     
+     <p>“?”标记表示索引（编号）参数；系统根据参数在语句文本中的顺序自动为每个参数赋予一个索引。参数的索引值从零开始。也就是说，第一个参数的索引为 0。</p>
+     
+     <p>参数用于允许对构造 SQL 语句时未知的值进行类型替代。使用参数是保证将值的存储类传递到数据库的唯一方式。不使用参数时，所有值都将根据相关联列的类型关系从其文本表示形式转换为存储类。有关存储类和列关系的详细信息，请参阅附录“<a href="http://adobe.com/go/learn_as3_sqlsupportdb_cn" >本地数据库中的 SQL 支持</a>”中的“数据类型支持”部分。</p>
+     
+     <p>参数也可用作一种安全措施，防止恶意技术攻击（称为 SQL 注入攻击）。在 SQL 注入攻击中，用户在用户可访问的位置（例如数据输入字段）输入 SQL 代码。如果应用程序代码通过将用户输入直接连接到 SQL 文本来构造 SQL 语句，则将对数据库执行用户输入的 SQL 代码。下面的列表显示将用户输入连接到 SQL 文本的示例。<b>不要使用此技术</b>：</p>
+     
+     <div class="listing"><pre>
+     // assume the variables "username" and "password"
+     // contain user-entered data
+     var sql:String =
+         "SELECT userId " +
+         "FROM users " +
+         "WHERE username = '" + username + "' " +
+         "    AND password = '" + password + "'";
+     var statement:SQLStatement = new SQLStatement();
+     statement.text = sql;
+     </pre></div>
+     
+     
+     
+     <p>使用语句参数而不将用户输入的值连接到语句的文本可防止 SQL 注入攻击，因为系统将参数值明确视为替代值，而不是作为字面语句文本的一部分。下面是对前面列表的建议替代方法：</p>
+     
+     <div class="listing"><pre>
+     // assume the variables "username" and "password"
+     // contain user-entered data
+     var sql:String =
+         "SELECT userId " +
+         "FROM users " +
+         "WHERE username = :username " +
+         "    AND password = :password";
+     var statement:SQLStatement = new SQLStatement();
+     statement.text = sql;
+     // set parameter values
+     statement.parameters[":username"] = username;
+     statement.parameters[":password"] = password;
+     </pre></div>
+     
+     
+     
+     <p>执行语句之前必须设置所有参数值。在调用 <code>execute()</code> 方法时，将会绑定 <code>parameters</code> 数组中指定的参数值（即与语句文本合并）。一旦调用 <code>execute()</code> 后，对值进行的任何后续更改都不会应用于正在执行的语句。不过，后续的 <code>execute()</code> 调用将使用更改的值。如果语句文本包括的参数没有在 <code>parameters</code> 属性中指定的值，则会发生错误。</p>
+     
+     <p>要清除 <code>parameters</code> 属性中的所有参数值，请使用 <code>clearParameters()</code> 方法。</p>
+     
+	 </p><br/><br/><span class="label"> 实现 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get parameters():<a href="../../Object.html">Object</a></code><br/><p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="SQLStatement.html#text" target="">text</a><br/><a href="SQLStatement.html#clearParameters()" target="">clearParameters()</a></div><span id="pageFilter"><br/><span class="label"> 示例 &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_cn"> 如何使用本示例 </a></span>)
+            </span><br/><div class="detailBody"> 下面的示例显示命名参数 <code>:firstName</code> 在 SQL 语句中的用法。
+<div class="listing"><pre>
+// employees is a SQLStatement instance
+employees.text = "SELECT FROM employees WHERE first = :firstName";
+employees.parameters[":firstName"] = "Sam";
+employees.execute();
+</pre></div></div></span><span id="pageFilter"><div class="detailBody"> 下面的示例显示未命名参数在 SQL 语句中的用法。
+<div class="listing"><pre>
+// employees is a SQLStatement instance
+employees.text = "SELECT FROM employees WHERE first = ?";
+employees.parameters[0] = "Sam";
+employees.execute();
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="sqlConnection" id="sqlConnection"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>sqlConnection</h3></td><td class="detailHeaderType">属性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>sqlConnection:<a href="SQLConnection.html">SQLConnection</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     管理到执行语句的数据库的连接的 SQLConnection 对象。
+     
+     </p><br/><br/><span class="label"> 实现 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get sqlConnection():<a href="SQLConnection.html">SQLConnection</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set sqlConnection(value:<a href="SQLConnection.html">SQLConnection</a>):<a href="../../specialTypes.html#void">void</a></code><br/><br/><span class="label"> 引发 </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; 当该语句正在执行的同时尝试更改此属性的值时。
+	 
+     </td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="text" id="text"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>text</h3></td><td class="detailHeaderType">属性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>text:<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     语句的实际 SQL 文本。
+	 
+     <p>该文本可以是任何受支持的 SQL。有关本地 SQL 数据库中支持的 SQL 术语的完整说明，请参阅附录“<a href="http://adobe.com/go/learn_as3_sqlsupportdb_cn" >本地数据库中的 SQL 支持</a>”。</p>
+     
+     </p><br/><br/><span class="label"> 实现 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get text():<a href="../../String.html">String</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set text(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><br/><br/><span class="label"> 引发 </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; 当该语句正在执行的同时尝试更改 <code>text</code> 属性时。
+     
+     </td></tr></table></div></span><a name="constructorDetail" id="constructorDetail"></a><div class="detailSectionHeader">构造函数详细信息</div><span id="pageFilter" runtime="AIR::1.0##"><a name="SQLStatement()" id="SQLStatement()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>SQLStatement</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">构造函数</td></tr></table><div class="detailBody"><code>public function SQLStatement()</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p>
+     创建 SQLStatement 实例。
+     
+     </p><br/><span class="label">引发</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; 如果从主应用程序沙箱外的任意沙箱中调用构造函数。 
+     
+     </td></tr></table></div></span><a name="methodDetail" id="methodDetail"></a><div class="detailSectionHeader">方法详细信息</div><span id="pageFilter" runtime="AIR::1.0##"><a name="cancel()" id="cancel()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;cancel</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td></tr></table><div class="detailBody"><code> public function cancel():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     取消执行此语句。与 <code>SQLConnection.cancel()</code> 一样，此方法用于停止长时间运行的查询或取消尚未完成的查询。但是，与 <code>SQLConnection.cancel()</code> 不同，此方法只取消单个语句。如果当前未执行该语句，则调用此方法不起作用。
+	 
+	 <p>不会调度事件以直接响应 <code>cancel()</code> 操作的完成。但是，一旦 <code>cancel()</code> 操作完成并且取消语句执行后，SQLStatement 实例即会调度 <code>error</code> 事件，表示语句执行（<code>execute()</code> 或 <code>next()</code> 调用）没有完成。或者，如果为 <code>execute()</code> 或 <code>next()</code> 调用的 <code>responder</code> 参数指定了值，则会调用指定的错误处理函数方法。不管是哪种情况，传递给侦听器的 SQLError 实例将具有值为 3118（操作已终止）的 <code>errorID</code> 属性。</p>
+	 
+	 </p></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="clearParameters()" id="clearParameters()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;clearParameters</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function clearParameters():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     清除所有当前参数设置。
+     
+     </p><p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="SQLStatement.html#parameters" target="">parameters</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="execute()" id="execute()"></a><a name="execute(int,flash.net.Responder)" id="execute(int,flash.net.Responder)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;execute</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function execute(prefetch:<a href="../../int.html">int</a> = -1, responder:<a href="../net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     针对连接到 <code>sqlConnection</code> 属性中的 SQLConnection 对象的数据库执行 <code>text</code> 属性中的 SQL。
+     
+	 <p>如果 <code>responder</code> 参数不为 <code>null</code>，则指定的 Responder 对象将指定用于处理操作结果而调用的方法。当 <code>responder</code> 参数为 <code>null</code> 时，如果操作成功，则在异步执行模式中调度 <code>result</code> 事件；如果操作失败，则调度 <code>error</code> 事件。</p>
+	 
+	 <p>若要访问执行语句的结果，例如 <code>SELECT</code> 语句的结果行或 <code>INSERT</code> 语句的数据库生成的主键，则调用 <code>getResult()</code> 方法。在同步模式中执行此语句后，以及在异步模式中调度 <code>result</code> 事件后，会立即显示结果。</p>
+     
+     <p>每个语句必须在准备好（编译）后才能执行。首次调用 SQLStatement 实例的 <code>execute()</code> 方法时，运行时将准备好该语句。语句准备好后，除非 <code>text</code> 属性发生更改，否则不需要重新准备该语句。设置一个或多个参数值不需要重新准备该语句。</p>
+	 
+     </p><p><span class="label"> 参数 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">prefetch</span>:<a href="../../int.html">int</a></code> (default = <code>-1</code>)<code></code> &mdash; 当该语句的 <code>text</code> 属性为 <code>SELECT</code> 语句时，此值表示该语句一次返回的行数。默认值为 -1，表示一次返回所有结果行。此参数与 <code>next()</code> 方法结合使用，可将大结果集拆分为较小的数据集。这样，通过更快地返回初始结果和划分结果处理操作，可以改善用户对应用程序性能的体验。
+     
+     <p>当 SQL 语句为 <code>SELECT</code> 查询并指定了大于零的 <code>prefetch</code> 参数时，该语句将被视为正在执行，直到返回整个结果集或者调用了 <code>SQLStatement.cancel()</code> 或 <code>SQLConnection.cancel()</code> 方法。请注意，由于在执行时结果集中的行数是未知的，因此，数据库光标必须移动到结果集的最后一行以后，才会认为该语句完成。如果在 <code>execute()</code> 调用中指定了 <code>prefetch</code> 参数，则只有当所请求的行数至少比结果集中的总行数多一行（通过大于结果集中行数的 <code>prefetch</code> 值或通过对 <code>next()</code> 方法的后续调用）后，生成的 SQLResult 实例的 <code>complete</code> 属性才会为 <code>true</code>。</p>
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">responder</span>:<a href="../net/Responder.html">Responder</a></code> (default = <code>null</code>)<code></code> &mdash; 一个对象，指定操作成功或失败时要调用的方法。在异步执行模式中，如果 <code>responder</code> 参数为 <code>null</code>，则执行完成时将调度 <code>result</code> 或 <code>error</code> 事件。
+     
+     </td></tr></table></p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>result</b>:<a href="../events/SQLEvent.html"><code>SQLEvent</code></a></code> &mdash; 语句成功执行时或指定了 <code>prefetch</code> 参数值且 <code>SELECT</code> 语句返回一行或多行数据时调度。
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>error</b>:<a href="../events/SQLErrorEvent.html"><code>SQLErrorEvent</code></a></code> &mdash; 在异步执行模式中操作失败时调度。
+     
+     </td></tr></table><br/><span class="label">引发</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; 如果 <code>text</code> 属性为 <code>null</code> 或包含空字符串（<code>""</code>）；如果未设置 <code>sqlConnection</code> 属性；如果未连接分配给 <code>sqlConnection</code> 属性的 SQLConnection 实例；或者该语句当前正在执行。
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/SQLError.html">SQLError</a> </code> &mdash; 如果该操作在同步执行模式中失败。
+     
+	 </td></tr></table><p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="SQLStatement.html#next()" target="">next()</a><br/><a href="SQLStatement.html#getResult()" target="">getResult()</a></div><span id="pageFilter"><br/><span class="label"> 示例 &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_cn"> 如何使用本示例 </a></span>)
+            </span><br/><br/><div class="detailBody"> 下面的示例演示如何使用事件侦听器执行 SQLStatement，以确定语句的执行何时完成或失败。
+<div class="listing"><pre>
+var conn:SQLConnection;
+var dbStatement:SQLStatement;
+
+function init():void
+{
+    conn = new SQLConnection();
+    conn.addEventListener(SQLEvent.OPEN, connOpenHandler);
+    
+    dbStatement = new SQLStatement();
+    dbStatement.sqlConnection = conn;
+    dbStatement.text = "SELECT id, name, ssn FROM employees";
+    
+    var dbFile:File = new File(File.separator + "employee.db");
+    conn.open(dbFile);
+}
+
+function connOpenHandler(event:SQLEvent):void
+{
+    dbStatement.addEventListener(SQLEvent.RESULT, resultHandler);
+    dbStatement.addEventListener(SQLErrorEvent.ERROR, errorHandler);
+    dbStatement.execute();
+}
+
+function resultHandler(event:SQLEvent):void
+{
+    var result:SQLResult = dbStatement.getResult();
+    if (result != null)
+    {
+        var numRows:int = result.data.length;
+        for (var i:int = 0; i &lt; numRows; i++)
+        {
+            var row:Object = result.data[i];
+            trace("id:", row.id, ", name:", row.name, ", ssn:", row.ssn);
+        }
+    }
+}
+
+function errorHandler(event:SQLErrorEvent):void
+{
+    trace("An error occured while executing the statement.");
+}
+</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody"> 下面的示例演示如何执行 SQLStatement，该示例使用 Responder 对象来表示语句执行完成或失败时所调用的函数。
+<div class="listing"><pre>
+var conn:SQLConnection;
+var dbStatement:SQLStatement;
+var employeeResponder:Responder;
+
+function init():void
+{
+    conn = new SQLConnection();
+    conn.addEventListener(SQLEvent.OPEN, connOpenHandler);
+    
+    dbStatement = new SQLStatement();
+    dbStatement.sqlConnection = conn;
+    dbStatement.text = "SELECT id, name, ssn FROM employees";
+    
+    var dbFile:File = new File(File.separator + "employee.db");
+    conn.open(dbFile);
+}
+
+function connOpenHandler(event:SQLEvent):void
+{
+    employeeResponder = new Responder(resultHandler, errorHandler);
+    dbStatement.execute(-1, employeeResponder);
+}
+
+function resultHandler(result:SQLResult):void
+{
+    if (result != null)
+    {
+        var numRows:int = result.data.length;
+        for (var i:int = 0; i &lt; numRows; i++)
+        {
+            var row:Object = result.data[i];
+            trace("id:", row.id, ", name:", row.name, ", ssn:", row.ssn);
+        }
+    }
+}
+
+function errorHandler(error:SQLError):void
+{
+    trace("An error occured while executing the statement.");
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="getResult()" id="getResult()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;getResult</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getResult():<a href="SQLResult.html">SQLResult</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     提供对包含语句执行结果的 SQLResult 对象的访问，其中包括 <code>SELECT</code> 语句的任何结果行以及有关执行的所有语句的语句执行情况的其他信息。在异步执行模式中，在调度 <code>result</code> 事件之前结果信息不可用。
+     
+     <p>执行 <code>SELECT</code> 语句时，如果所调用的 <code>execute()</code> 方法的默认 <code>prefetch</code> 参数为 -1，则返回的 SQLResult 对象包含整个查询结果集。</p>
+     
+     <p>如果为 <code>execute()</code> 或 <code>next()</code> 方法调用指定了 <code>prefetch</code> 参数，则 <code>getResult()</code> 方法的行为与先进先出结果队列相同。每次调度 <code>result</code> 事件时，即会向队列中添加一个新的 SQLResult 对象。每次调用 <code>getResult()</code> 方法时，即会返回最早的 SQLResult 对象（最先添加到队列中的对象）并从队列中删除该对象。当队列中不再有 SQLResult 对象时，<code>getResult()</code> 将返回 <code>null</code>。</p>
+	 
+	 <p>请注意，除非通过调用 <code>getResult()</code> 来删除 SQLResult 对象，否则这些对象会保留在队列中。例如，如果调用多次 <code>execute()</code> 方法而没有调用 <code>getResult()</code>，则与每个 <code>execute()</code> 调用相关联的 SQLResult 对象将保留在队列中。</p>
+     
+     </p><p></p><span class="label">返回</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="SQLResult.html">SQLResult</a></code> &mdash; 一个 SQLResult 对象，其中包含对 <code>execute()</code> 或 <code>next()</code> 方法调用的结果。
+     
+     </td></tr></table><p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="SQLStatement.html#execute()" target="">execute()</a><br/><a href="SQLStatement.html#next()" target="">next()</a><br/><a href="SQLStatement.html#event:result" target="">result 事件</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="next()" id="next()"></a><a name="next(int,flash.net.Responder)" id="next(int,flash.net.Responder)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;next</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function next(prefetch:<a href="../../int.html">int</a> = -1, responder:<a href="../net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     检索 <code>SELECT</code> 语句的结果集的下一部分。如果结果集中不再有行，则调度 <code>result</code> 事件，但不再向 <code>getResult()</code> 队列中添加 SQLResult 对象。
+     
+     <p>在异步执行模式中，如果 <code>responder</code> 参数不为 <code>null</code>，则指定的 Responder 对象表示为处理操作结果而调用的方法。当 <code>responder</code> 参数为 <code>null</code> 时，如果操作成功，则调度 <code>result</code> 事件；如果操作失败，则调度 <code>error</code> 事件。</p>
+     
+     <p>只能在该语句仍在执行时才能调用此方法。当语句为 <code>SELECT</code> 查询并指定了大于零的 <code>prefetch</code> 参数时，该语句将被视为正在执行，直到返回整个结果集或者调用了 <code>SQLStatement.cancel()</code> 或 <code>SQLConnection.cancel()</code> 方法。</p>
+     
+     </p><p><span class="label"> 参数 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">prefetch</span>:<a href="../../int.html">int</a></code> (default = <code>-1</code>)<code></code> &mdash; 当该语句的 <code>text</code> 属性为 <code>SELECT</code> 语句时，此值表示该语句一次返回的行数。默认值为 -1，表示一次返回所有结果行。这样，通过更快地返回初始结果和划分结果处理操作，可以改善用户对应用程序性能的体验。
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">responder</span>:<a href="../net/Responder.html">Responder</a></code> (default = <code>null</code>)<code></code> &mdash; 一个对象，指定操作成功或失败时要调用的方法。如果 <code>responder</code> 参数为 <code>null</code>，则执行完成时将调度 <code>result</code> 或 <code>error</code> 事件。
+     
+     </td></tr></table></p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>result</b>:<a href="../events/SQLEvent.html"><code>SQLEvent</code></a></code> &mdash; 语句成功执行时或指定了<code> prefetch </code>参数值且<code> next()</code> 调用返回一行或多行数据时调度。
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>error</b>:<a href="../events/SQLErrorEvent.html"><code>SQLErrorEvent</code></a></code> &mdash; 在异步执行模式中操作失败时调度。
+     
+     </td></tr></table><br/><span class="label">引发</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; 在该语句不是当前正在执行的语句时调用该方法的情况下（<code>executing</code> 属性为 <code>false</code>）。
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/SQLError.html">SQLError</a> </code> &mdash; 如果该操作在同步执行模式中失败。
+     
+	 </td></tr></table><p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="SQLStatement.html#execute()" target="">execute()</a></div><span id="pageFilter"><br/><span class="label"> 示例 &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_cn"> 如何使用本示例 </a></span>)
+            </span><br/><br/><div class="detailBody"> 下面的示例演示如何执行 SQLStatement，明确表示第一次返回结果时仅返回结果集的前 10 行。代码检查 SQLResult 的 <code>complete</code> 属性，如果尚未检索所有行，则调用 <code>next()</code> 方法。
+<div class="listing"><pre>
+var conn:SQLConnection;
+var dbStatement:SQLStatement;
+
+function init():void
+{
+    conn = new SQLConnection();
+    conn.addEventListener(SQLEvent.OPEN, connOpenHandler);
+    
+    dbStatement = new SQLStatement();
+    dbStatement.sqlConnection = conn;
+    dbStatement.text = "SELECT id, name, ssn FROM employees";
+    
+    var dbFile:File = new File(File.separator + "employee.db");
+    conn.open(dbFile);
+}
+
+function connOpenHandler(event:SQLEvent):void
+{
+    dbStatement.addEventListener(SQLEvent.RESULT, resultHandler);
+    dbStatement.addEventListener(SQLErrorEvent.ERROR, errorHandler);
+    dbStatement.execute(10);
+}
+
+function resultHandler(event:SQLEvent):void
+{
+    var result:SQLResult = dbStatement.getResult();
+    if (result != null)
+    {
+        var numRows:int = result.data.length;
+        for (var i:int = 0; i &lt; numRows; i++)
+        {
+            var row:Object = result.data[i];
+            trace("id:", row.id, ", name:", row.name, ", ssn:", row.ssn);
+        }
+        if (!result.complete)
+        {
+            dbStatement.next(10);
+        }
+    }
+}
+
+function errorHandler(event:SQLErrorEvent):void
+{
+    trace("An error occured while executing the statement.");
+}
+</pre></div></div></span></div></span><div class="detailSectionHeader"> 事件详细信息 </div><span id="pageFilter" runtime="AIR::1.0##"><a name="event:error" id="event:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>error</h3></td><td class="detailHeaderType"> 事件 </td></tr></table><div class="detailBody"><span class="label">事件对象类型: </span><a href="../events/SQLErrorEvent.html"><code>flash.events.SQLErrorEvent</code></a><br/><span class="label">属性 SQLErrorEvent.type  =  </span><a href="../events/SQLErrorEvent.html#ERROR"><code>flash.events.SQLErrorEvent.ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ 在执行操作期间发生错误时调度。
+ 
+ </p>
+     <code>SQLErrorEvent.ERROR</code> 常量定义在 SQLConnection 方法调用或 SQLStatement 实例出错完成时调度的 error 事件的 <code>type</code> 属性值。<code>error</code> 事件具有以下属性：
+	 
+	 <table class="innertable" ><tr><th>属性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；没有要取消的默认行为。</td></tr><tr><td><code>error</code></td><td>一个 SQLError 对象，其中包含有关出现的错误的类型和导致该错误的操作的信息。</td></tr><tr><td><code>currentTarget</code></td><td>当前正在使用某个事件侦听器处理 Event 对象的对象。</td></tr><tr><td><code>target</code></td><td>报告错误的 SQLConnection 或 SQLStatement 对象。</td></tr></table>
+	 
+	 <p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="SQLStatement.html#execute()" target="">execute()</a><br/><a href="SQLStatement.html#next()" target="">next()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:result" id="event:result"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>result</h3></td><td class="detailHeaderType"> 事件 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">事件对象类型: </span><a href="../events/SQLEvent.html"><code>flash.events.SQLEvent</code></a><br/><span class="label">属性 SQLEvent.type  =  </span><a href="../events/SQLEvent.html#RESULT"><code>flash.events.SQLEvent.RESULT</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ <code>execute()</code> 或 <code>next()</code> 方法调用操作成功完成时调度。一旦调度 <code>result</code> 事件后，即可以调用 <code>getResult()</code> 方法以检索语句结果。
+ 
+ 
+ </p>
+     <code>SQLEvent.RESULT</code> 常量定义 <code>result</code> 事件对象的 <code>type</code> 属性值。在 <code>SQLStatement.execute()</code> 方法或 <code>SQLStatement.next()</code> 方法成功完成时调度。调度 <code>SQLEvent.RESULT</code> 事件之后，即可调用 <code>SQLStatement.getResult()</code> 方法来访问结果数据。<code>result</code> 事件具有以下属性：
+	 
+	 <table class="innertable" ><tr><th>属性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；没有要取消的默认行为。</td></tr><tr><td><code>currentTarget</code></td><td>当前正在使用某个事件侦听器处理 Event 对象的对象。</td></tr><tr><td><code>target</code></td><td>执行操作的 SQLStatement 对象。</td></tr></table>
+	 
+	 <p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="SQLStatement.html#execute()" target="">execute()</a><br/><a href="SQLStatement.html#next()" target="">next()</a><br/><a href="SQLStatement.html#getResult()" target="">getResult()</a></div></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script></div><p xmlns:xd="http://www.pnp-software.com/XSLTdoc"></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 11:04 AM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/zh_CN/legalnotices/index.html">法律声明</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">在线隐私策略</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">为什么显示为英语？</span>
+				</div>
+				<div class="white_content_body">
+					<b>《ActionScript 3.0 参考》中的内容以英语显示</b><br><br>
+					《ActionScript 3.0 参考》中的部分内容未翻译成所有语言。当某个语言元素未翻译时，将显示为英语。例如，ga.controls.HelpBox 类未翻译成任何语言。因此在简体中文版的参考中，ga.controls.HelpBox 类显示为英语。
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 11:04 AM Z  -->

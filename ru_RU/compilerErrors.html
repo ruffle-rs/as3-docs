@@ -1,0 +1,799 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Справочник по ActionScript&reg; 3.0 для платформы Adobe&reg; Flash&reg;  "><meta name="lang" content="ru-ru"><link rel="stylesheet" href="style.css" type="text/css" media="screen"><link rel="stylesheet" href="print.css" type="text/css" media="print"><link rel="stylesheet" href="override.css" type="text/css"><link rel="stylesheet" href="asfilter.css" type="text/css"><link rel="stylesheet" href="ion.css" type="text/css"><title>Ошибки компилятора - Adobe ActionScript&reg; 3 (AS3)</title>
+		<link rel="stylesheet" href="filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="filter_new.css" type="text/css">
+			
+		<script src="jquery.js" type="text/javascript"></script>
+		<script src="s_chl_code.js" type="text/javascript"></script>
+		<script src="jquery.zclip.js" type="text/javascript"></script>
+		<script src="jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="cookies.js" type="text/javascript"></script>
+		<script src="asdoc.js" type="text/javascript"></script>
+		<script src="iscroll.js" type="text/javascript"></script>
+		<script src="AC_OETags.js" type="text/javascript"></script>
+		<script src="omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "Среды выполнения";
+			var productsLabel = "Продукты";
+			var noneLabel = "Не задан";
+			var qsearchBoxLabel = "Быстрый поиск";
+			var qsearchText = "Термин не найден";
+			var ajaxErrorMsg="Ошибка при загрузке страницы";
+			var ajaxErrorTryMsg="Повторите попытку";
+			var ajaxLoadingMsg="Загрузка еще не завершена";
+			var cancelMsg = "Отмена";
+			var classesText = "Классы";
+			var strJiveReply = "Этот вопрос был задан по поводу следующей статьи: "
+			var showFilters = "Показать фильтры";
+			var hideFilters = "Скрыть фильтры";
+			
+		
+			var baseRef = "./";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											Справочник по ActionScript<sup>&reg;</sup> 3.0 для платформы Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup>  <br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="index.html"> Домашняя страница </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="compilerErrors.html#top" style="display:">Показать список пакетов и классов</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="compilerErrors.html#top" style="display:none">Скрыть список пакетов и классов</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="package-summary.html"> Пакеты </a>&nbsp;|&nbsp;
+												<a target="_self" href="class-summary.html"> Классы </a>&nbsp;|&nbsp;
+												<a target="_self" href="whatsnew.html"> Что нового </a>&nbsp;|&nbsp;
+												<a target="_self" href="all-index-Symbols.html"> Указатель </a>&nbsp;|&nbsp;
+												<a target="_self" href="appendixes.html"> Приложения </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Почему по-английски?</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/ru_RU/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('./')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('./')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="help.js"></script>
+						<script language="javascript" type="text/javascript" src="asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>Фильтры:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">Получение данных с сервера...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">Получение данных с сервера...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="compilerErrors.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">&nbsp;</a><br>
+								<h1 id="classProductName">Ошибки компилятора&nbsp;</h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="compilerErrors.html#propertySummary" style="display:none"> Свойства </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="compilerErrors.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Свойства </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="compilerErrors.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Конструктор </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="compilerErrors.html#methodSummary" style="display:none"> Методы </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="compilerErrors.html#constantSummary" style="display:none"> Глобальные константы </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="compilerErrors.html#eventSummary" style="display:none"> События </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="compilerErrors.html#styleSummary" style="display:none"> Стили </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="compilerErrors.html#SkinPartSummary" style="display:none"> Компоненты темы оформления </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="compilerErrors.html#SkinStateSummary" style="display:none"> Состояния тем оформления </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="compilerErrors.html#effectSummary" style="display:none"> Эффекты </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="compilerErrors.html#constantSummary" style="display:none"> Константы </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="compilerErrors.html#methodSummary" style="display:none"> Глобальные функции </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="compilerErrors.html#methodSummary" style="display:none">Функции</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="compilerErrors.html#interfaceSummary" style="display:none"> Интерфейсы </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="compilerErrors.html#classSummary" style="display:none"> Классы </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="compilerErrors.html#includeExamplesSummary" style="display:none"> Примеры </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="compilerErrors.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								Классы
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><p>
+        <div id="badgeAnchorSupport" class="ionBadgeWrapper"></div>
+        <div id="badgeContainerSupport"></div>
+        <br/>
+        Это список ошибок, генерируемых компилятором при обработке неверного кода. Определенная часть этих ошибок регистрируется только при работе в строгом режиме.
+        В строгом режиме в силу вступают три дополнительных ограничения:
+        <p>
+        <ul>
+        <li>Выражения имеют статические типы, а ошибки, связанные с типом, являются ошибками проверки.</li>
+        <li>Дополнительные правила проверки способны улавливать обычные ошибки, допускаемые при программировании.</li>
+        <li>Ошибки проверки выводятся поверх всех остальных. Это ошибки проверки выводятся только в строгом режиме:</li>
+        <ul>
+        <li>Соответствие подписи вызова функции &mdash; проверяет число параметров и их типы.</li>
+        <li>Конфликты повторяющихся определений.</li>
+        <li>Несвязанные ссылки &mdash; возникает при обращении к методам или свойствам, которые не были определены во время компиляции.</li>
+        <li>Динамическое добавление свойств защищенным объектам.</li>
+        <li>Запись в постоянные переменные.</li>
+        <li>Удаление фиксированных свойств.</li>
+        <li>Выражения сравнения с несовместимыми типами.</li>
+        <li>Ненайденные пакеты.</li>
+        </ul></ul>
+        </p></p><br><a name="compilerErrorSummary"></a><table cellpadding="3" cellspacing="0" class="summaryTable"><tr><th>&nbsp;</th><th>Код</th><th width="35%">Сообщение</th><th>Описание</th></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1000"></a><b>1000</b></td><td class="summaryTableCol">Неопределенная ссылка на %s.
+
+
+	
+
+</td><td class="summaryTableLastCol">
+	Возможно, ссылка дана на несколько элементов. В следующем примере используются пространства имен <code>rss</code> и <code>xml</code>, каждое из которых задает разное значение для функции <code>hello()</code>. Инструкция <code>trace(hello())</code> возвращает данную ошибку, так как она не может определить используемое пространство имен.
+	
+<pre><code>private namespace rss;
+private namespace xml;
+    
+public function ErrorExamples() {
+  	use namespace rss;
+   	use namespace xml;
+	trace(hello());
+}
+    
+rss function hello():String {
+      	return "hola";
+    }
+    
+    xml function hello():String {
+        return "foo";
+    }</code></pre>
+ 
+
+	<p>Исправьте ссылку так, чтобы она ссылалась на определенный элемент. В следующем примере для указания используемого пространства имен используется форма <i>пространство имен</i>::<i>функция</i>:</p>
+
+
+<pre><code>public function ErrorExamples() {
+    
+    trace(rss::hello());
+    trace(xml::hello());
+}</code></pre>
+        
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1003"></a><b>1003</b></td><td class="summaryTableCol">Использование спецификаторов доступа с атрибутами пространств имен запрещено.
+		</td><td class="summaryTableLastCol">В определении нельзя одновременно использовать спецификатор доступа (например, private или public) и атрибут пространства имен.&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1004"></a><b>1004</b></td><td class="summaryTableCol">Пространство имен не найдено или не является константой периода компиляции.
+	
+
+</td><td class="summaryTableLastCol">
+		Неизвестное пространство имен или оно является выражением, значения которого во время выполнения отличались. Проверьте правильность написания пространства имен и правильность импорта его определения.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1006"></a><b>1006</b></td><td class="summaryTableCol">Выражение super может использоваться только в методах экземпляров классов.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1007"></a><b>1007</b></td><td class="summaryTableCol">Инструкция super может использоваться только в конструкторах экземпляров классов.
+
+</td><td class="summaryTableLastCol">
+		Инструкцию <code>super</code> нельзя использовать в статических членах классов. Инструкцию <code>super</code> можно использовать только в статических членах классов.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1008"></a><b>1008</b></td><td class="summaryTableCol">Неверный атрибут.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1010"></a><b>1010</b></td><td class="summaryTableCol">Атрибут override может использоваться только в определениях свойств классов.
+
+
+</td><td class="summaryTableLastCol">
+		Ключевое слово <code>override</code> нельзя использовать в блоке функции.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1011"></a><b>1011</b></td><td class="summaryTableCol">Атрибут virtual может использоваться только в определениях свойств классов.
+
+</td><td class="summaryTableLastCol">
+		Атрибут <code>virtual</code> нельзя использовать для объявления свойства, которое не принадлежит классу (например, при объявлении переменной в блоке функции).
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1012"></a><b>1012</b></td><td class="summaryTableCol">Атрибут static может использоваться только в определениях внутри класса.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1013"></a><b>1013</b></td><td class="summaryTableCol">Атрибут private может использоваться только в определениях свойств классов.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1014"></a><b>1014</b></td><td class="summaryTableCol">Атрибут intrinsic больше не поддерживается.
+
+
+</td><td class="summaryTableLastCol">
+		ActionScript 3.0 не поддерживает ключевое слово <code>intrinsic</code>.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1016"></a><b>1016</b></td><td class="summaryTableCol">final является базовым классом.
+
+
+</td><td class="summaryTableLastCol">
+		Суперкласс не может быть расширен, поскольку он помечен как <code>final</code>.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1017"></a><b>1017</b></td><td class="summaryTableCol">Определение базового класса %s не было найдено.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1018"></a><b>1018</b></td><td class="summaryTableCol">Повторяющееся определение класса: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1020"></a><b>1020</b></td><td class="summaryTableCol">Метод, помеченный как override, имеет приоритет над другими методами.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1021"></a><b>1021</b></td><td class="summaryTableCol">Повторяющееся определение функции.
+
+
+</td><td class="summaryTableLastCol">
+		Нельзя объявлять больше одной функции с использованием одного и того же имени идентификатора в пределах одной и той же области видимости.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1022"></a><b>1022</b></td><td class="summaryTableCol">Не удается заменить средство доступа final.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1023"></a><b>1023</b></td><td class="summaryTableCol">Недопустимое замещение.
+</td><td class="summaryTableLastCol"> Функция, отмеченная как override, должна четко соответствовать параметру и возвращать объявление типа функции, которую она замещает. Она должна обладать тем же количеством однотипных параметров и объявлять одно и то же возвращаемое значение. Если же какие-либо из параметров являются дополнительными, то соответствие все равно должно соблюдаться. Обе функции должны использовать один и тот же спецификатор доступа (public, private и так далее), а также атрибут пространства имен.&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1024"></a><b>1024</b></td><td class="summaryTableCol">Замена функции, которая не предназначена для замены.
+
+
+</td><td class="summaryTableLastCol">
+		
+		Если метод класса замещает метод в базовом классе, то следует объявить этот метод явным образом с использованием атрибута <code>override</code>, например:
+
+		<pre>public override function foo():void{};</pre>
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1025"></a><b>1025</b></td><td class="summaryTableCol">Не удается переопределить метод final.
+
+
+</td><td class="summaryTableLastCol">
+		Операция расширения данного метода не может быть выполнена, так как в базовом классе он помечен как <code>final</code>.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1026"></a><b>1026</b></td><td class="summaryTableCol">Функции-конструкторы должны быть методами экземпляров.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1027"></a><b>1027</b></td><td class="summaryTableCol">Функции не могут одновременно быть static и override.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1028"></a><b>1028</b></td><td class="summaryTableCol">Функции не могут одновременно быть static и virtual.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1029"></a><b>1029</b></td><td class="summaryTableCol">Функции не могут одновременно быть final и virtual.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1030"></a><b>1030</b></td><td class="summaryTableCol">Необходимо указать имя массива аргументов переменных.
+
+
+</td><td class="summaryTableLastCol">
+	
+		Определение параметра ...(rest) указывает на то, что все значения, стоящие после ...(rest), включаются в массив. Необходимо указать имя данного массива как в выражении <code>function foo(x,...(rest))</code>.
+
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1033"></a><b>1033</b></td><td class="summaryTableCol">Виртуальные переменные не поддерживаются.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1034"></a><b>1034</b></td><td class="summaryTableCol">Переменные не могут быть собственными.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1035"></a><b>1035</b></td><td class="summaryTableCol">Переменные не могут одновременно быть final и virtual.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1037"></a><b>1037</b></td><td class="summaryTableCol">Пакеты не могут быть вложенными.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1038"></a><b>1038</b></td><td class="summaryTableCol">Цель инструкции break не найдена.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1039"></a><b>1039</b></td><td class="summaryTableCol">Цель инструкции continue не найдена.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1040"></a><b>1040</b></td><td class="summaryTableCol">Повторяющееся определение метки.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1041"></a><b>1041</b></td><td class="summaryTableCol">Атрибуты не являются вызываемыми.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1042"></a><b>1042</b></td><td class="summaryTableCol">Ключевое слово this не может использоваться в статических методах. Оно может использоваться только в методах экземпляров, закрытиях функций и глобальном коде.
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Ключевое слово <code>this</code> нельзя использовать в статическом члене, так как <code>this</code> будет находиться вне контекста.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1043"></a><b>1043</b></td><td class="summaryTableCol">Неопределенное пространство имен.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1044"></a><b>1044</b></td><td class="summaryTableCol">Метод интерфейса %s в пространстве имен %s не реализован классом %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1045"></a><b>1045</b></td><td class="summaryTableCol">Интерфейс %s не найден.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1046"></a><b>1046</b></td><td class="summaryTableCol">Тип не найден или не является константой периода компиляции: %s.
+
+
+
+</td><td class="summaryTableLastCol">
+		
+		Класс, использованный в качестве объявления типа, неизвестен или является выражением, значения которого во время выполнения отличались. Убедитесь в том, что вы импортируете верный класс и что место расположения его пакета не изменилось. Также убедитесь в том, что пакет, содержащий код (не импортированный класс), определен верно (например, проверьте, не использовали ли вы синтаксис пакета ActionScript 2.0 вместо ActionScript 3.0).
+
+		<p>Это также может иметь место при обращении к классу, который не определен в используемом пространстве имен или не объявлен как public:</p>
+
+		<pre><code>public class Foo{}</code></pre>
+
+        <p>Если используется Flex&#153 Builder&#153 2 и класс содержится в библиотеке, то в проекте необходимо указать путь к данному классу.</p>
+
+
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1047"></a><b>1047</b></td><td class="summaryTableCol">Инициализатор параметра неизвестен или не является константой периода компиляции.
+	
+	
+</td><td class="summaryTableLastCol">
+	Значение, использованное в качестве значения по умолчанию для этого параметра, не определено или во время выполнения принимало другое значение. Проверьте правильность написания инициализатора, а также проверьте, не является ли значение инициализатора выражением, результат вычисления которого во время выполнения мог отличаться.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1048"></a><b>1048</b></td><td class="summaryTableCol">Невозможно использовать метод в качестве конструктора.
+	
+		
+</td><td class="summaryTableLastCol">
+	Невозможно создать экземпляр метода класса. В выражениях <code>new</code> можно использовать только глобальные функции.
+	
+<pre>class D { function xx() { return 22; } }
+var d:D = new D();
+var x = new d.xx(); // error, method cannot be used as constructor
+function yy() { this.a = 22; }
+var z = new yy(); // no error, global functions can be used as constructors.</pre>
+
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1049"></a><b>1049</b></td><td class="summaryTableCol">Недопустимое назначение переменной constant.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1050"></a><b>1050</b></td><td class="summaryTableCol">Невозможно присвоить значению, не имеющему ссылку.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1051"></a><b>1051</b></td><td class="summaryTableCol">Возвращаемое значение должно быть неопределенным.
+
+
+
+</td><td class="summaryTableLastCol">
+		Попытка использования инструкции <code>return</code> в пределах метода, объявленным возвращаемым типом которого является <code>void</code>.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1052"></a><b>1052</b></td><td class="summaryTableCol">Инициализатор константы неизвестен или не является константой периода компиляции.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Значение, использованное для инициализации константы, не определено или во время выполнения принимало другие значения. Проверьте правильность написания инициализатора, а также проверьте, не является ли значение инициализатора выражением, результат вычисления которого во время выполнения мог отличаться.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1053"></a><b>1053</b></td><td class="summaryTableCol">Типы средств доступа должны совпадать.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1054"></a><b>1054</b></td><td class="summaryTableCol">Тип возвращаемого значения определения установщика должен быть не определен или иметь значение void.
+
+
+</td><td class="summaryTableLastCol">
+		Невозможно задать возвращаемое значение для функции установщика. Например, в нижеследующем примере содержится ошибка:
+
+		<pre>public function set gamma(g:Number):Number;</pre>
+
+		<p>В следующем примере ошибки <i>не</i> содержится:</p>
+
+		<pre>public function set gamma(g:Number):void;</pre>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1058"></a><b>1058</b></td><td class="summaryTableCol">Свойство только для записи.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1059"></a><b>1059</b></td><td class="summaryTableCol">Свойство только для чтения.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Это свойство определено с помощью функции получателя, что позволяет получить значение этого свойства. Для данного свойства определенная функция установщика отсутствует, поэтому оно является свойством только для чтения.
+	<p>В третьей строке следующего примера содержится ошибка, так как для <code>xx</code> функция установщика не определена:</p>
+	
+<pre>class D { function get xx() { return 22; } }
+var d:D = new D();
+d.xx = 44; // error, property is read-only</pre>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1061"></a><b>1061</b></td><td class="summaryTableCol">Вызов, вероятно, неопределенного метода %s посредством ссылки со статическим типом %s.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Вызов неопределенного метода.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1063"></a><b>1063</b></td><td class="summaryTableCol">Не удалось открыть файл: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1064"></a><b>1064</b></td><td class="summaryTableCol">Недопустимые метаданные.
+	
+
+
+</td><td class="summaryTableLastCol">
+	Метаданные не распознаны.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1065"></a><b>1065</b></td><td class="summaryTableCol">Атрибуты метаданных не могут содержать более одного элемента.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1067"></a><b>1067</b></td><td class="summaryTableCol">Неявное приведение значения типа %s к несвязанному типу %s.
+
+
+
+</td><td class="summaryTableLastCol">
+		Попытка преобразования объекта в тип, преобразование объекта в который не поддерживается. Это происходит, если класс, в который производится преобразование, не находится в цепочке наследования преобразовываемого объекта. Эта ошибка возникает, когда компьютер работает в строгом режиме.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1068"></a><b>1068</b></td><td class="summaryTableCol">Не удалось открыть включенный файл: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1069"></a><b>1069</b></td><td class="summaryTableCol">Синтаксическая ошибка: ожидается определение или директива.
+
+
+
+</td><td class="summaryTableLastCol">
+		Проверьте синтаксис в текущей строке.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1071"></a><b>1071</b></td><td class="summaryTableCol">Синтаксическая ошибка: ожидается ключевое слово определения (например, функция) после атрибута %s, а не %s.
+
+
+</td><td class="summaryTableLastCol">
+	
+		Эта ошибка возникает, когда программист забывает включить в объявление ключевое слово «var» или «function».
+<pre><code>public int z;// should be 'public var z:int;'</code></pre>
+
+		Эта ошибка возникает, когда компилятор обнаруживает неожиданный символ. Например, такое использование функции <code>trace()</code> является неверным из-за отсутствующих кавычек (пример правильного синтаксиса: <code>trace("hello")</code>):
+
+<pre>
+trace "hello"
+</pre>
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1072"></a><b>1072</b></td><td class="summaryTableCol">Синтаксическая ошибка: ожидается xml перед пространством имен. 
+
+
+</td><td class="summaryTableLastCol">
+	
+		Примером правильного синтаксиса инструкции является: <code>default xml namespace = </code> <i>ns</i>. Отсутствует ключевое слово <code>xml</code> (обратите внимание на регистр) или использовано неверное ключевое слово. Дополнительные сведения см. в описании директивы <a href="statements.html#default_xml_namespace" >default xml namespace</a>.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1073"></a><b>1073</b></td><td class="summaryTableCol">Синтаксическая ошибка: ожидается предложение catch или finally.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1075"></a><b>1075</b></td><td class="summaryTableCol">Синтаксическая ошибка: ключевое слово each нельзя использовать без оператора in.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1076"></a><b>1076</b></td><td class="summaryTableCol">Синтаксическая ошибка: перед идентификатором ожидается открывающая круглая скобка.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1077"></a><b>1077</b></td><td class="summaryTableCol">Ожидание CaseLabel.
+
+	
+</td><td class="summaryTableLastCol">
+	В этом месте блока переключателя компилятор ожидал инструкцию <code>case</code>. Следующий блок переключения неправильно включает вызов <code>print</code> перед первой инструкцией <code>case</code>:
+
+<pre>switch(x)
+{
+trace(2);
+case 0:  trace(0); 
+break
+}</pre>
+	
+    &nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1078"></a><b>1078</b></td><td class="summaryTableCol">Метка должна представлять собой простой идентификатор.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1079"></a><b>1079</b></td><td class="summaryTableCol">Выражение super не должно иметь более одного операнда.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1080"></a><b>1080</b></td><td class="summaryTableCol">Ожидание инкрементного или декрементного оператора.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1082"></a><b>1082</b></td><td class="summaryTableCol">Ожидание одиночного выражения, заключенного в скобки.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1083"></a><b>1083</b></td><td class="summaryTableCol">Синтаксическая ошибка: %s не ожидается. 
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		В строке кода отсутствует некоторая информация. В следующем примере не хватает какого-то выражения (например, еще одного числа) после последнего знака сложения:
+
+		<pre>var sum:int = 1 + 2 + ;</pre>
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1084"></a><b>1084</b></td><td class="summaryTableCol">Синтаксическая ошибка: ожидается %s перед %s.
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		В этом месте появление данного выражения было неожиданным. Если в ошибке говорится об отсутствии правой фигурной скобки в конце программы, то это означает, что не поставлена закрывающая фигурная скобка (&#125).
+
+		<p>Если в ошибке говорится об отсутствии левой фигурной скобки перед символом «_», то это означает,что вы не поставили в условном выражении открывающую фигурную скобку (см. следующий пример, в котором умышленно допущена эта ошибка): </p>
+
+		<pre><code>var fact:int = 1 * 2 * 3;
+if fact > 2 {
+	var bigger:Boolean = true;
+}</code></pre>
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1086"></a><b>1086</b></td><td class="summaryTableCol">Синтаксическая ошибка: ожидается точка с запятой перед %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1087"></a><b>1087</b></td><td class="summaryTableCol">Синтаксическая ошибка: в конце программы обнаружены лишние символы.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1093"></a><b>1093</b></td><td class="summaryTableCol">Синтаксическая ошибка.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1094"></a><b>1094</b></td><td class="summaryTableCol">Синтаксическая ошибка: строковый литерал должен быть завершен до разрыва строки.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1095"></a><b>1095</b></td><td class="summaryTableCol">Синтаксическая ошибка: строковый литерал должен быть завершен до разрыва строки.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1097"></a><b>1097</b></td><td class="summaryTableCol">Синтаксическая ошибка: достигнут конец ввода до закрывающей кавычки строкового литерала.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1099"></a><b>1099</b></td><td class="summaryTableCol">Синтаксическая ошибка.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1100"></a><b>1100</b></td><td class="summaryTableCol">Синтаксическая ошибка: в XML отсутствуют подходящие теги начала и конца.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1102"></a><b>1102</b></td><td class="summaryTableCol">Невозможно удалить потомки super.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1103"></a><b>1103</b></td><td class="summaryTableCol">Повторяющееся определение пространства имен.
+
+	
+
+
+</td><td class="summaryTableLastCol">
+	Неоднократное определение пространства имен. Удалите или измените повторяющееся определение.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1104"></a><b>1104</b></td><td class="summaryTableCol"> %s </td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1105"></a><b>1105</b></td><td class="summaryTableCol">Целью назначения должно быть контрольное значение.
+
+	 
+</td><td class="summaryTableLastCol">
+	Можно присваивать значения переменным, но не другим значениям. 
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1106"></a><b>1106</b></td><td class="summaryTableCol">Операнд инкремента должен быть ссылкой.
+	
+</td><td class="summaryTableLastCol">
+	Операнд должен представлять собой переменную, элемент массива или свойство объекта.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1107"></a><b>1107</b></td><td class="summaryTableCol">Неверный операнд инкремента.
+
+	
+</td><td class="summaryTableLastCol">
+	Операнд должен представлять собой переменную, элемент массива или свойство объекта.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1108"></a><b>1108</b></td><td class="summaryTableCol">Неверный операнд декремента.
+	
+</td><td class="summaryTableLastCol">
+	Операнд должен представлять собой переменную, элемент массива или свойство объекта.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1109"></a><b>1109</b></td><td class="summaryTableCol">Ожидание выражения.
+
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		В части кода отсутствует выражение. Далее приведен пример с этой ошибкой (в инструкции <code>if</code> отсутствует условие):
+
+<pre><code>var x = (5 > 2) ? 
+trace(x)</code></pre>
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1110"></a><b>1110</b></td><td class="summaryTableCol">Отсутствует имя тега XML.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1111"></a><b>1111</b></td><td class="summaryTableCol">Файл %s не является верным файлом ABC.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1112"></a><b>1112</b></td><td class="summaryTableCol">В вероятную непрерывную рекурсию из-за данного файла входит: %s.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Файл, включенный в компилируемый исходный код, содержит дополнительные инструкции <code>include</code>, что может привести к возникновению бесконечного цикла. Например, следующие файлы, a.as и b.as, включают друг друга, что приводит к этой ошибке.
+	<p>
+	В файле a.as содержится строка, включающая файл b.as:</p>
+<pre>import foo.bar.baz;
+include "b.as"
+trace(2);</pre>
+	<p>В файле b.as содержится строка, включающая файл a.as:</p>
+	<pre>include "a.as"</pre>
+
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1113"></a><b>1113</b></td><td class="summaryTableCol">В %s обнаружена ссылка типа circular.
+	
+
+</td><td class="summaryTableLastCol">
+	Класс пытается расширить суперкласс. Например, класс A не может расширить класс B, если B наследуется от A:
+<pre><code>class a extends b { }
+class b extends a { }</code></pre>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1114"></a><b>1114</b></td><td class="summaryTableCol">Атрибут public можно использовать только в пределах пакета.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1115"></a><b>1115</b></td><td class="summaryTableCol">Атрибут internal можно использовать только в пределах пакета.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1116"></a><b>1116</b></td><td class="summaryTableCol">Определенный пользователем атрибут пространства имен можно использовать только на верхнем уровне определения класса.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1118"></a><b>1118</b></td><td class="summaryTableCol">Неявное приведение значения статического типа %s к вероятно несвязанному типу %s.
+	
+
+</td><td class="summaryTableLastCol">Вы используете значение с неожиданным типом, и не существует неявного приведения к типу для его преобразования в ожидаемый тип.
+	<p>Возможно, вы использовали супертип там, где ожидалось использование подтипа. Например:</p>
+<pre><code>class A {}
+var a:A = new A(); 
+class B extends A { function f() }
+var b : B = a // error</code></pre>
+	<p>В последней инструкции содержится ошибка, так как здесь происходит попытка присвоить объект типа A переменной типа B.</p>
+	<p>Аналогично, далее определяется функция <code>foo()</code>, в которой используется параметр типа B. Выполнение инструкции <code> foo(a);</code> приводит к ошибке, так как она пытается использовать параметр типа A:</p>
+<pre><code>function foo(x:B) { }
+foo(a);</code></pre>
+	<p>Кроме того, следующая инструкция порождает ошибку, поскольку возвращенное значение функции <code>foo2()</code> должно иметь тип B:</p>
+	<pre><code>function foo2():B { return new A(); }</code></pre>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1119"></a><b>1119</b></td><td class="summaryTableCol">Доступ вероятно неопределенного свойства %s посредством ссылки со статическим типом %s.
+
+
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Вы пытаетесь получить доступ к свойству, которое для указанного объекта отсутствует. В следующем фрагменте кода содержится данная ошибка, так как в объекте int отсутствует свойство под названием <code>assortment</code>:
+
+<pre><code>var i:int = 44;
+var str:String = i.assortment;</code></pre>
+
+		Эта ошибка возникает, когда компьютер работает в строгом режиме.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1120"></a><b>1120</b></td><td class="summaryTableCol">Доступ к неопределенному свойству %s.
+
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Вы попытались получить доступ к неопределенной переменной. Например, если переменная <code>huh</code> не была определена, то обращение к ней приведет к этой ошибке:
+
+<pre><code>huh = 55;</code></pre>
+
+		Эта ошибка возникает только тогда, когда компьютер работает в строгом режиме.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1121"></a><b>1121</b></td><td class="summaryTableCol">При определении получателя параметры не требуются.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1122"></a><b>1122</b></td><td class="summaryTableCol">При определении установщика требуется исключительно один параметр.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1123"></a><b>1123</b></td><td class="summaryTableCol">При определении установщика дополнительные параметры не требуются.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1124"></a><b>1124</b></td><td class="summaryTableCol">Тип возвращаемого значения определения получателя не должен иметь значение void.
+
+	
+</td><td class="summaryTableLastCol">
+	Функция получателя имитирует переменную. Так как переменные не могут быть типа void, то и объявлять функции получателей с возвращаемым типом void нельзя.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1125"></a><b>1125</b></td><td class="summaryTableCol">Определенные в интерфейсе методы не должны иметь тело.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1126"></a><b>1126</b></td><td class="summaryTableCol">В функции отсутствует тело.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1127"></a><b>1127</b></td><td class="summaryTableCol">Атрибут %s указан несколько раз.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Вы несколько раз указали атрибут в пределах одной и той же инструкции. Например, выполнение инструкции <code>public static public var x;</code> приводит к этой ошибке, так как в ней дважды указывается, что переменная <code>x</code> является public. Удалите повторяющиеся объявления.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1129"></a><b>1129</b></td><td class="summaryTableCol">Повторяющееся определение интерфейса: %s.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Удалите или измените повторяющиеся определения.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1130"></a><b>1130</b></td><td class="summaryTableCol">Конструктор не может определять возвращаемый тип.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1131"></a><b>1131</b></td><td class="summaryTableCol">Классы не должны быть вложенными.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1132"></a><b>1132</b></td><td class="summaryTableCol">Атрибут final может использоваться только в методе, определенном в классе.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1133"></a><b>1133</b></td><td class="summaryTableCol">Атрибут native может использоваться только в определениях функций.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1134"></a><b>1134</b></td><td class="summaryTableCol">Атрибут dynamic может использоваться только в определениях классов.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1135"></a><b>1135</b></td><td class="summaryTableCol">Синтаксическая ошибка: %s не является допустимым типом.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1136"></a><b>1136</b></td><td class="summaryTableCol">Неверное число аргументов. Ожидается %s.
+
+	
+</td><td class="summaryTableLastCol">
+	Число предоставленных аргументов расходится с числом аргументов, ожидаемых функцией. Например, далее определяется функция <code>goo</code> с двумя аргументами:
+<pre>class A { static function goo(x:int,y:int) 
+{ return(x+y); } }</pre>
+	<p>В следующей инструкции содержится ошибка, так как аргументов на этот раз три:</p>
+<pre>A.goo(1,2,3);</pre>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1137"></a><b>1137</b></td><td class="summaryTableCol">Неверное число аргументов. Ожидается не более %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1138"></a><b>1138</b></td><td class="summaryTableCol">Требуемые параметры после дополнительных параметров запрещены.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1139"></a><b>1139</b></td><td class="summaryTableCol">Объявления переменных в интерфейсах запрещены.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1140"></a><b>1140</b></td><td class="summaryTableCol">Тип данных параметров, указанных после ключевого слова определения параметра ...rest, может быть исключительно Array.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1141"></a><b>1141</b></td><td class="summaryTableCol">Класс может расширять только другой класс, но не интерфейс.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1142"></a><b>1142</b></td><td class="summaryTableCol">Интерфейс может расширять только другой интерфейс, в то время как %s является классом.
+	
+
+</td><td class="summaryTableLastCol">
+	Попытка расширения класса с помощью интерфейса. Интерфейс может расширять только другой интерфейс.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1143"></a><b>1143</b></td><td class="summaryTableCol">Атрибут override может использоваться только в методе, определенном в классе.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1144"></a><b>1144</b></td><td class="summaryTableCol">Метод интерфейса %s в пространстве имен %s реализован несовместимой подписью в классе %s.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Подписи методов должны полностью совпадать.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1145"></a><b>1145</b></td><td class="summaryTableCol">Собственные методы не могут иметь тело.
+	
+
+</td><td class="summaryTableLastCol">
+	Ключевое слово <code>native</code> нельзя использовать, так как оно является зарезервированным.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1146"></a><b>1146</b></td><td class="summaryTableCol">Конструктор не может быть методом получателя или установщика.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1147"></a><b>1147</b></td><td class="summaryTableCol">Исходный файл AS не указан.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1149"></a><b>1149</b></td><td class="summaryTableCol">Инструкция return не может использоваться в статическом коде инициализации.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1150"></a><b>1150</b></td><td class="summaryTableCol">Атрибут protected может использоваться только в определениях свойств классов.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1151"></a><b>1151</b></td><td class="summaryTableCol">Конфликт с определением %s в пространстве имен %s.
+
+	
+
+
+</td><td class="summaryTableLastCol">
+	Нельзя объявлять больше одной переменной с использованием одного и того же имени идентификатора в пределах одной и той же области видимости, если все эти переменные имеют один и тот же тип. В ActionScript 3.0 различные блоки кода (например, используемые в двух циклах <code>for</code> в пределах одного и того же определения function) принадлежат к одной и той же области видимости. 
+	<p>В нижеприведенном примере кода происходит верное преобразование типа переменной <code>x</code> того же типа:</p>
+<pre><code>function test()
+{
+	var x:int = 3;
+	for(var x:int = 33; x < 55; x++)
+	trace(x);
+	for(var x:int = 11; x < 33; x++)
+	trace(x)
+}</code></pre>
+	<p>А в примере далее содержится ошибка, так как типы, содержащиеся в объявлении переменной и циклах <code>for</code>, отличаются:</p>
+<pre><code>function test()
+{
+	var x:String = "The answer is";
+	for(var x:int = 33; x < 55; x++) // error
+	trace(x);
+	for(var x:unit = 11; x < 33; x++) // error
+	trace(x)
+}</code></pre>
+&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1152"></a><b>1152</b></td><td class="summaryTableCol"> Конфликт с унаследованным определением %s в пространстве имен %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1153"></a><b>1153</b></td><td class="summaryTableCol">Конструктор может быть объявлен только как public.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1154"></a><b>1154</b></td><td class="summaryTableCol">В определении допускается указание только одного из следующих типов: public, private, protected или internal.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1155"></a><b>1155</b></td><td class="summaryTableCol">Средства доступа не могут быть вложены в другие функции.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1156"></a><b>1156</b></td><td class="summaryTableCol">Создать экземпляр интерфейса с помощью оператора new нельзя.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1157"></a><b>1157</b></td><td class="summaryTableCol">Члены интерфейсов нельзя объявить как public, private, protected или internal.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1158"></a><b>1158</b></td><td class="summaryTableCol">Синтаксическая ошибка: отсутствует открывающая фигурная скобка ({) перед телом функции.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1159"></a><b>1159</b></td><td class="summaryTableCol">Инструкция return не может использоваться в коде инициализации пакета.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1160"></a><b>1160</b></td><td class="summaryTableCol">Атрибут native не может использоваться в определениях интерфейсов.
+	
+
+</td><td class="summaryTableLastCol">
+	Ключевое слово <code>native</code> нельзя использовать, так как оно является зарезервированным.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1162"></a><b>1162</b></td><td class="summaryTableCol">В каждом определении может использоваться не более одного атрибута пространства имен.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1163"></a><b>1163</b></td><td class="summaryTableCol">Метод %s конфликтует с определением, унаследованным от интерфейса %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1165"></a><b>1165</b></td><td class="summaryTableCol">Неверный атрибут интерфейса: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1166"></a><b>1166</b></td><td class="summaryTableCol">Объявления пространств имен в интерфейсах запрещены.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1167"></a><b>1167</b></td><td class="summaryTableCol">Класс %s неоднократно реализует интерфейс %s.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Класс неоднократно реализует один и тот же интерфейс. Далее приведен пример с этой ошибкой, где класс C дважды реализует интерфейс A:
+
+<pre><code>interface A {  public function f();  };
+class C implements A,A {
+public function f() { trace("f"); }
+}</code></pre>
+	
+	<p>Правильная инструкция реализации: <code> class C implements A {</code>.</p>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1168"></a><b>1168</b></td><td class="summaryTableCol">Недопустимое назначение функции %s.
+
+	
+
+
+</td><td class="summaryTableLastCol">
+	Попытка переопределения функции. Например, далее определяется функция <code>topLevel()</code> для печати слова top. Во второй инструкции содержится ошибка, так как она присваивает функции другое возвращаемое значение:
+<pre><code>function topLevel() { trace("top"); }
+topLevel = function() { trace("replacement works in ~");} // error</code></pre>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1169"></a><b>1169</b></td><td class="summaryTableCol">Атрибуты пространств имен в методах интерфейсов запрещены.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1170"></a><b>1170</b></td><td class="summaryTableCol">Функция не возвращает значение.
+
+	
+</td><td class="summaryTableLastCol">
+	Каждый возможный поток команд в функции должен возвращать значение вне зависимости от того, что иногда тип результата может отличаться от void. Следующая функция <code>f(x)</code> не порождает ошибку, так как инструкция <code>if..else</code> всегда возвращает значение:
+
+<pre><code>function f(x):int
+{
+if (x)
+    	return 2;
+else
+    	return 3;
+} // no error</code></pre>
+
+<p>Однако в примере ниже выполнение функции <code>g(x)</code> приводит к ошибке, так как инструкция <code>switch</code> не всегда возвращает значение.</p>
+<pre><code>function g(x:int):int
+{
+switch(x)
+{
+      	case 1: return 1;
+      	case 2: return 2:
+}
+// return 2;//uncomment to remove the error
+}</code></pre>
+
+	<p>Эта проверка действует только когда функция объявляет тип возвращаемого значения, отличного от void. </p>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1171"></a><b>1171</b></td><td class="summaryTableCol">Инициализатор пространства имен должен быть литеральной строкой или другим пространством имен.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1172"></a><b>1172</b></td><td class="summaryTableCol">Определение %s не найдено.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1173"></a><b>1173</b></td><td class="summaryTableCol">Недопустимое определение метки.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1176"></a><b>1176</b></td><td class="summaryTableCol">Сравнение значения статического типа %s с вероятно несвязанным типом %s.
+</td><td class="summaryTableLastCol">Эта ошибка встречается в строгом режиме.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1177"></a><b>1177</b></td><td class="summaryTableCol">Инструкция return не может использоваться в глобальном коде инициализации.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1178"></a><b>1178</b></td><td class="summaryTableCol">Доступ к вероятно неопределенному свойству %s посредством ссылки со статическим типом %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1179"></a><b>1179</b></td><td class="summaryTableCol">:Объект временно не обслуживается. Используйте вместо него :*.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1180"></a><b>1180</b></td><td class="summaryTableCol">Вызов возможно неопределенного метода %s.
+</td><td class="summaryTableLastCol">Эта ошибка возникает, когда компьютер работает в строгом режиме.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1181"></a><b>1181</b></td><td class="summaryTableCol">Опережающая ссылка на базовый класс %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1182"></a><b>1182</b></td><td class="summaryTableCol">Невозможно использовать пакет в качестве переменной: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1184"></a><b>1184</b></td><td class="summaryTableCol">Несовместимое значение по умолчанию типа %s там, где ожидалось %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1185"></a><b>1185</b></td><td class="summaryTableCol">Для переключателя допускается использовать только одно значение по умолчанию.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1188"></a><b>1188</b></td><td class="summaryTableCol">Недопустимое назначение классу %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1189"></a><b>1189</b></td><td class="summaryTableCol">Попытка удаления фиксированного свойства %s. Удалить можно только динамически определенные свойства.
+</td><td class="summaryTableLastCol">Delete удаляет динамически определенные свойства из объекта. Объявленные свойства класса удалить нельзя. Эта ошибка возникает, когда компьютер работает в строгом режиме.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1190"></a><b>1190</b></td><td class="summaryTableCol">Базовый класс не найден или не является константой периода компиляции.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1191"></a><b>1191</b></td><td class="summaryTableCol">Интерфейс не найден или не является константой периода компиляции.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1192"></a><b>1192</b></td><td class="summaryTableCol">Использование атрибута static при определении пространств имен запрещено.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1193"></a><b>1193</b></td><td class="summaryTableCol">Определения интерфейсов не должны быть вложены в класс или экземпляры других определений интерфейсов.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1194"></a><b>1194</b></td><td class="summaryTableCol">Неверный атрибут прототипа.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1195"></a><b>1195</b></td><td class="summaryTableCol">Попытка доступа к недоступному методу %s посредством ссылки со статическим типом %s.
+		
+ 	</td><td class="summaryTableLastCol">Возможно, метод private вызывается из другого класса либо происходит вызов метода, определенного в неиспользуемом пространстве имен. При вызове метода из неиспользуемого пространства имен следует добавить инструкцию <code>use</code> для требуемого пространства имен.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1196"></a><b>1196</b></td><td class="summaryTableCol">Синтаксическая ошибка: ожидается выражение после инструкции throw.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1197"></a><b>1197</b></td><td class="summaryTableCol">Класс %s не может расширить класс %s, так как оба класса связаны с символами библиотеки или главной временной шкалой.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1198"></a><b>1198</b></td><td class="summaryTableCol">В определениях пакетов атрибуты запрещены.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1199"></a><b>1199</b></td><td class="summaryTableCol">Внутренняя ошибка: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1200"></a><b>1200</b></td><td class="summaryTableCol">Синтаксическая ошибка: неверный инициализатор цикла for-in, ожидается только 1 выражение.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1201"></a><b>1201</b></td><td class="summaryTableCol">Инструкция super не может стоять после инструкции this, super, return или throw.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1202"></a><b>1202</b></td><td class="summaryTableCol">Доступ к неопределенному свойству %s в пакете %s.
+
+
+    </td><td class="summaryTableLastCol">
+	
+		Попытка доступа к неопределенной переменной пакета. Например, если переменная <code>p.huh</code> не была определена, то обращение к ней приведет к этой ошибке:
+
+<pre><code>p.huh = 55;</code></pre>
+
+		Эта ошибка возникает, когда компьютер работает в строгом режиме.
+	
+&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1203"></a><b>1203</b></td><td class="summaryTableCol">В базовом классе %s отсутствует конструктор по умолчанию.
+    </td><td class="summaryTableLastCol">Если конструктор базового класса содержит 1 или более обязательных аргументов, то его вызов следует осуществлять с помощью инструкции super() в явном виде.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1204"></a><b>1204</b></td><td class="summaryTableCol">/* найдено без соответствующего */ .
+
+	</td><td class="summaryTableLastCol">
+	
+		Найдены символы начала комментария «/*», однако соответствующих им символов конца блока комментария «*/» не найдено.
+    &nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1205"></a><b>1205</b></td><td class="summaryTableCol">Синтаксическая ошибка: ожидается открывающая скобка ({) или строковый литерал ("").</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1206"></a><b>1206</b></td><td class="summaryTableCol">Инструкция super может использоваться только в качестве последнего элемента в списке инициализатора конструктора.
+
+    </td><td class="summaryTableLastCol">
+		Инструкцию <code>super</code> нельзя использовать в конструкторе. <code>super</code> можно использовать только в качестве последнего элемента в списке инициализатора конструктора.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1207"></a><b>1207</b></td><td class="summaryTableCol">Ключевое слово this не может использоваться в инициализаторах свойств.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Ключевое слово <code>this</code> нельзя использовать в инициализаторе свойства.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1208"></a><b>1208</b></td><td class="summaryTableCol">Инициализатор значения конфигурации должен являться константой периода компиляции.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Значение инициализатора значения конфигурации должно быть известно на этапе компиляции. Инициализатор может представлять собой строковую константу, число, логическое значение или ссылку на другое предварительно определенное значение конфигурации.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1209"></a><b>1209</b></td><td class="summaryTableCol">Переменная конфигурации может быть объявлена только как const.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Переменная конфигурации может быть объявлена только как const.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1210"></a><b>1210</b></td><td class="summaryTableCol">Объявление значения конфигурации должно происходить на верхнем уровне программы или пакета.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Объявление значения конфигурации должно происходить на верхнем уровне программы или пакета.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1211"></a><b>1211</b></td><td class="summaryTableCol">Пространство имен %s конфликтует с пространством имен конфигурации.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Имя пространства имен не может совпадать с именем пространства имен конфигурации.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1212"></a><b>1212</b></td><td class="summaryTableCol">Значение «точность» должно быть целым числом в пределах от 1 до 34.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1214"></a><b>1214</b></td><td class="summaryTableCol">Несовместимая версия: недопустима ссылка на определение %s, представленное в версии %s из кода с версией %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1215"></a><b>1215</b></td><td class="summaryTableCol">Недопустимая инициализация: при преобразовании в тип %s теряются данные.</td><td class="summaryTableLastCol">&nbsp;</td></tr></table><br><br><div><p></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 11:51 AM Z  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/ru_RU/legalnotices/index.html">Юридическая информация</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Политика конфиденциальности онлайн</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">Почему по-английски?</span>
+				</div>
+				<div class="white_content_body">
+					<b>Содержимое Справочника ActionScript 3.0 отображается на английском языке</b><br><br>
+					Не все части Справочника ActionScript 3.0 переводятся на все языки. Если какой-то текстовый элемент не переведен, он отображается на английском языке. Например, компонент ga.controls.HelpBox не переведен ни на один из языков. Это значит, что в русской версии справки компонент ga.controls.HelpBox будет отображаться на английском языке.
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 11:51 AM Z  -->

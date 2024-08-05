@@ -1,0 +1,553 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Справочник по ActionScript&reg; 3.0 для платформы Adobe&reg; Flash&reg;  "><meta name="lang" content="ru-ru"><link rel="stylesheet" href="style.css" type="text/css" media="screen"><link rel="stylesheet" href="print.css" type="text/css" media="print"><link rel="stylesheet" href="override.css" type="text/css"><link rel="stylesheet" href="asfilter.css" type="text/css"><link rel="stylesheet" href="ion.css" type="text/css"><title>Константы и функции верхнего уровня - Подробно Adobe ActionScript&reg; 3 (AS3)</title>
+		<link rel="stylesheet" href="filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="filter_new.css" type="text/css">
+			
+		<script src="jquery.js" type="text/javascript"></script>
+		<script src="s_chl_code.js" type="text/javascript"></script>
+		<script src="jquery.zclip.js" type="text/javascript"></script>
+		<script src="jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="cookies.js" type="text/javascript"></script>
+		<script src="asdoc.js" type="text/javascript"></script>
+		<script src="iscroll.js" type="text/javascript"></script>
+		<script src="AC_OETags.js" type="text/javascript"></script>
+		<script src="omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "Среды выполнения";
+			var productsLabel = "Продукты";
+			var noneLabel = "Не задан";
+			var qsearchBoxLabel = "Быстрый поиск";
+			var qsearchText = "Термин не найден";
+			var ajaxErrorMsg="Ошибка при загрузке страницы";
+			var ajaxErrorTryMsg="Повторите попытку";
+			var ajaxLoadingMsg="Загрузка еще не завершена";
+			var cancelMsg = "Отмена";
+			var classesText = "Классы";
+			var strJiveReply = "Этот вопрос был задан по поводу следующей статьи: "
+			var showFilters = "Показать фильтры";
+			var hideFilters = "Скрыть фильтры";
+			
+		
+			var baseRef = "";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											Справочник по ActionScript<sup>&reg;</sup> 3.0 для платформы Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup>  <br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="index.html"> Домашняя страница </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="package.html#top" style="display:">Показать список пакетов и классов</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="package.html#top" style="display:none">Скрыть список пакетов и классов</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="package-summary.html"> Пакеты </a>&nbsp;|&nbsp;
+												<a target="_self" href="class-summary.html"> Классы </a>&nbsp;|&nbsp;
+												<a target="_self" href="whatsnew.html"> Что нового </a>&nbsp;|&nbsp;
+												<a target="_self" href="all-index-Symbols.html"> Указатель </a>&nbsp;|&nbsp;
+												<a target="_self" href="appendixes.html"> Приложения </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Почему по-английски?</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/ru_RU/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="help.js"></script>
+						<script language="javascript" type="text/javascript" src="asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>Фильтры:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">Получение данных с сервера...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">Получение данных с сервера...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="package.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">&nbsp;</a><br>
+								<h1 id="classProductName">Верхний уровень&nbsp;</h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="package.html#propertySummary" style="display:none"> Свойства </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="package.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Свойства </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="package.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Конструктор </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="package.html#methodSummary" style="display:none"> Методы </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="package.html#constantSummary" style="display:none"> Глобальные константы </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="package.html#eventSummary" style="display:none"> События </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="package.html#styleSummary" style="display:none"> Стили </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="package.html#SkinPartSummary" style="display:none"> Компоненты темы оформления </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="package.html#SkinStateSummary" style="display:none"> Состояния тем оформления </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="package.html#effectSummary" style="display:none"> Эффекты </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="package.html#constantSummary" style="display:none"> Константы </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="package.html#methodSummary" style="display:none"> Глобальные функции </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="package.html#methodSummary" style="display:none">Функции</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="package.html#interfaceSummary" style="display:none"> Интерфейсы </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="package.html#classSummary" style="display:none"> Классы </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="package.html#includeExamplesSummary" style="display:none"> Примеры </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="package.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								Классы
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><br><a name="methodSummary"></a>Глобальные функции или функции верхнего уровня доступны в любой части SWF-файла, где используется ActionScript, а также во всех определяемых пользователем классах. Большинство глобальных функций из ActionScript 2.0 стали классами.<div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Глобальные функции </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Функция</th><th>Определено</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#Array()" class="signatureLink">Array</a>(<a href="statements.html#..._(rest)_parameter">...</a> args):<a href="Array.html">Array</a></div><div class="summaryTableDescription">
+	 Создает новый массив.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#Boolean()" class="signatureLink">Boolean</a>(expression:<a href="Object.html">Object</a>):<a href="Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Преобразует параметр expression в логическое значение и возвращает его.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#decodeURI()" class="signatureLink">decodeURI</a>(uri:<a href="String.html">String</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 Расшифровывает зашифрованный URI-адрес в строку.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#decodeURIComponent()" class="signatureLink">decodeURIComponent</a>(uri:<a href="String.html">String</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 Расшифровывает зашифрованный URI-компонент в строку.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#encodeURI()" class="signatureLink">encodeURI</a>(uri:<a href="String.html">String</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 Зашифровывает строку в допустимый URI-адрес (унифицированный идентификатор ресурса).</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#encodeURIComponent()" class="signatureLink">encodeURIComponent</a>(uri:<a href="String.html">String</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 Зашифровывает строку в допустимый URI-компонент.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#escape()" class="signatureLink">escape</a>(str:<a href="String.html">String</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 Преобразует параметр в строку и кодирует ее в формат кодировки URL-адреса, где большинство символов, не являющихся алфавитно-цифровыми, заменяются шестнадцатеричными последовательностями %.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#int()" class="signatureLink">int</a>(value:<a href="Number.html">Number</a>):<a href="int.html">int</a></div><div class="summaryTableDescription">
+	 Преобразует данное числовое значение в целочисленное значение.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#isFinite()" class="signatureLink">isFinite</a>(num:<a href="Number.html">Number</a>):<a href="Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Возвращает true, если значение является конечным числом, либо false, если значение является бесконечностью или минус бесконечностью.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#isNaN()" class="signatureLink">isNaN</a>(num:<a href="Number.html">Number</a>):<a href="Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Возвращает true, если значение относится к разряду NaN (нечисловое).</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#isXMLName()" class="signatureLink">isXMLName</a>(str:<a href="String.html">String</a>):<a href="Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Определяет, является ли заданная строка допустимым именем для элемента или атрибута XML.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#Number()" class="signatureLink">Number</a>(expression:<a href="Object.html">Object</a>):<a href="Number.html">Number</a></div><div class="summaryTableDescription">
+	 Преобразует данное значение в значение Number.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#Object()" class="signatureLink">Object</a>(value:<a href="Object.html">Object</a>):<a href="Object.html">Object</a></div><div class="summaryTableDescription">
+	 Все значения в ActionScript 3.0 являются объектами. Это означает, что при вызове метода Object() для значения возвращается данное значение.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#parseFloat()" class="signatureLink">parseFloat</a>(str:<a href="String.html">String</a>):<a href="Number.html">Number</a></div><div class="summaryTableDescription">
+	 Преобразует строку в число с плавающей запятой.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#parseInt()" class="signatureLink">parseInt</a>(str:<a href="String.html">String</a>, radix:<a href="uint.html">uint</a> = 0):<a href="Number.html">Number</a></div><div class="summaryTableDescription">
+	 Преобразует строку в целое число.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#String()" class="signatureLink">String</a>(expression:<a href="Object.html">Object</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 Возвращает строковое представление заданного параметра.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#trace()" class="signatureLink">trace</a>(<a href="statements.html#..._(rest)_parameter">...</a> arguments):<a href="specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 Отображает выражения либо выполняет запись в файлы журнала во время отладки.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#uint()" class="signatureLink">uint</a>(value:<a href="Number.html">Number</a>):<a href="uint.html">uint</a></div><div class="summaryTableDescription">
+	 Преобразует данное числовое значение в целочисленное значение без знака.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#unescape()" class="signatureLink">unescape</a>(str:<a href="String.html">String</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 Вычисляет параметр str как строку, раскодирует строку из формата кодировки URL (с преобразованием всех шестнадцатеричных последовательностей в символы ASCII) и возвращает строку.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#Vector()" class="signatureLink">Vector</a>(sourceArray:<a href="Object.html">Object</a>):<a href="Vector.html">Vector</a>.&lt;T&gt;</div><div class="summaryTableDescription">
+	 Создает новый экземпляр вектора, элементы которого являются экземплярами указанного типа данных.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#XML()" class="signatureLink">XML</a>(expression:<a href="Object.html">Object</a>):<a href="XML.html">XML</a></div><div class="summaryTableDescription">
+	 Преобразует объект в объект XML.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#XMLList()" class="signatureLink">XMLList</a>(expression:<a href="Object.html">Object</a>):<a href="XMLList.html">XMLList</a></div><div class="summaryTableDescription">
+     Преобразует объект в объект XMLList.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr></table></div><br><br><a name="constantSummary"></a>Глобальные константы или константы верхнего уровня доступны в любом сценарии и видны в любой временной шкале и области видимости документа.<div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Глобальные константы</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Константа</th><th>Определено</th></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="package.html#Infinity" class="signatureLink">Infinity</a> : <a href="Number.html">Number</a><div class="summaryTableDescription">
+ Специальное значение, представляющее плюс бесконечность.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="package.html#-Infinity" class="signatureLink">-Infinity</a> : <a href="Number.html">Number</a><div class="summaryTableDescription">
+ Специальное значение, представляющее минус бесконечность.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="package.html#NaN" class="signatureLink">NaN</a> : <a href="Number.html">Number</a><div class="summaryTableDescription">
+ Специальный элемент типа Number, представляющий значение NaN (не число).</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="package.html#undefined" class="signatureLink">undefined</a> : <a href="specialTypes.html#*">*</a><div class="summaryTableDescription">
+ Специальное значение, применяемое к неинициализированным переменным без типа или неинициализированным свойствам динамического объекта.</div></td><td class="summaryTableOwnerCol">Верхний&nbsp;уровень</td></tr></table></div><div class="detailSectionHeader"> Сведения о константе </div><span id="pageFilter" runtime="Flash::9##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="constantDetail" id="constantDetail"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="-Infinity" id="-Infinity"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>-Infinity</h3></td><td class="detailHeaderType">Константа</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code>public const -Infinity:<a href="Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9</td></tr></table><p></p><p></p><p>
+ Специальное значение, представляющее минус <code>Infinity</code>. Значение этой константы совпадает со значением <code>Number.NEGATIVE_INFINITY</code>.
+ </p><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="Number.html#NEGATIVE_INFINITY" target="">Number.NEGATIVE_INFINITY</a></div><span id="pageFilter"><br/><span class="label"> Пример &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_ru"> Использование этого примера </a></span>)
+            </span><br/><br/><div class="detailBody"> Результатом деления на 0 является <code>-Infinity</code>, но лишь тогда, когда делитель &mdash; отрицательное число.
+<div class="listing"><pre>
+
+trace(0 / 0);  // NaN
+trace(7 / 0);  // Infinity
+trace(-7 / 0); // -Infinity
+
+
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="constantDetail" id="constantDetail"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Infinity" id="Infinity"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Infinity</h3></td><td class="detailHeaderType">Константа</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code>public const Infinity:<a href="Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9</td></tr></table><p></p><p></p><p>
+ Специальное значение, представляющее плюс <code>Infinity</code>. Значение этой константы совпадает со значением <code>Number.POSITIVE_INFINITY</code>.
+ </p><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="Number.html#POSITIVE_INFINITY" target="">Number.POSITIVE_INFINITY</a></div><span id="pageFilter"><br/><span class="label"> Пример &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_ru"> Использование этого примера </a></span>)
+            </span><br/><br/><div class="detailBody"> Результатом деления на 0 является <code>Infinity</code>, но лишь тогда, когда делитель &mdash; положительное число.
+<div class="listing"><pre>
+
+trace(0 / 0);  // NaN
+trace(7 / 0);  // Infinity
+trace(-7 / 0); // -Infinity
+
+
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="constantDetail" id="constantDetail"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="NaN" id="NaN"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>NaN</h3></td><td class="detailHeaderType">Константа</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code>public const NaN:<a href="Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9</td></tr></table><p></p><p></p><p>
+ Специальный элемент типа Number, представляющий значение «не число» (<code>NaN</code>). Когда результатом математического выражения является значение, которое невозможно представить в виде числа, ему присваивается обозначение <code>NaN</code>. В списке ниже описаны распространенные выражения, приводящие к появлению значения <code>NaN</code>.
+ <ul><li>В результате деления на 0 <code>NaN</code> указывается только тогда, когда делителем является также 0. Если делитель больше 0, результатом деления на 0 является <code><code>Infinity</code></code>. Если делитель меньше 0, результатом деления на 0 является <code><code>-Infinity</code></code>;</li><li>квадратный корень отрицательного числа;</li><li>арксинус числа за пределами действительного диапазона от 0 до 1;</li><li><code>Infinity</code>, отнятая от <code>Infinity</code>;</li><li><code>Infinity</code> или <code>-Infinity</code>, деленная на <code>Infinity</code> или <code>-Infinity</code>;</li><li><code>Infinity</code> или <code>-Infinity</code>, умноженная на 0;</li></ul>
+ <p>Значение <code>NaN</code> не принадлежит типам данных int или uint.</p>
+ <p>Значение <code>NaN</code> не считается равным какому-либо другому значению, включая <code>NaN</code>. По этой причине невозможно проверить с помощью оператора равенства, имеет ли выражение значение <code>NaN</code>. Чтобы определить, является ли число функцией <code>NaN</code>, воспользуйтесь функцией <code>isNaN()</code>.</p>
+ 
+ </p><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="package.html#isNaN()" target="">isNaN()</a><br/><a href="Number.html#NaN" target="">Number.NaN</a></div></div></span><span id="pageFilter" runtime="Flash::9##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="constantDetail" id="constantDetail"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="undefined" id="undefined"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>undefined</h3></td><td class="detailHeaderType">Константа</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code>public const undefined:<a href="specialTypes.html#*">*</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9</td></tr></table><p></p><p></p><p>
+ Специальное значение, применяемое к неинициализированным переменным без типа или неинициализированным свойствам динамического объекта. В ActionScript 3.0 только переменные без определенного типа могут сохранять значение <code>undefined</code> в отличие от ActionScript 1.0 и ActionScript 2.0. Например, обе следующие переменные являются <code>undefined</code>, так как для них не определен тип, и они не инициализированы:
+ <ul><li><code>var foo;</code></li><li><code>var bar:*;</code></li></ul>
+ <p>Значение <code>undefined</code> применяется также к неинициализированным или неопределенным свойствам динамических объектов. Например, если в роли объекта выступает экземпляр класса Object, значением любого динамически добавленного свойства является <code>undefined</code> до тех пор, пока данному свойству не будет присвоено значение.
+ </p>
+ <p>Если значение <code>undefined</code> используется в сочетании с разными функциями, результаты варьируют:</p>
+ <ul><li><code>String(undefined)</code> возвращает значение <code>"undefined"</code> (<code>undefined</code> преобразуется в строку).</li><li><code>Number(undefined)</code> возвращает значение <code>NaN</code>.</li><li><code>int(undefined)</code> и <code>uint(undefined)</code> возвращают 0.</li><li><code>Object(undefined)</code> возвращает значение в виде нового экземпляра Object.</li><li>Если значение <code>undefined</code> присвоено переменной определенного типа, оно преобразуется в значение по умолчанию для этого типа данных.</li></ul>
+ <p>Не путайте значения <code>undefined</code> и <code>null</code>. Если значения <code>null</code> и <code>undefined</code> сравниваются с оператором равенства (<code>==</code>), они считаются равными. Однако когда значения <code>null</code> и <code>undefined</code> сравниваются с оператором строгого равенства (<code>===</code>), они не рассматриваются как равные.</p>
+ </p><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="statements.html#null" target="">null</a></div><span id="pageFilter"><br/><span class="label"> Пример &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_ru"> Использование этого примера </a></span>)
+            </span><br/><br/><div class="detailBody"> В следующем примере объявляется, но не инициализируется переменная без типа <code>myVar</code>. Переменная <code>myVar</code> принимает значение <code>undefined</code>, так как не относится к какому-либо типу. Это происходит, когда эта переменная не имеет аннотации с указанием типа или снабжена специальной аннотацией (*) об отсутствии типа (<code>var myVar:*;</code>).
+<div class="listing"><pre>
+
+// trace value of untyped and uninitialized variable
+var myVar;
+trace(myVar); // undefined
+</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody"> То же самое правило применяется к неинициализированным свойствам динамического объекта. Например, если имеется экземпляр <code>obj</code> динамического класса <code>A</code>, неинициализированному свойству <code>obj.propName</code> экземпляра <code>obj</code> присваивается значение <code>undefined</code>.
+<div class="listing"><pre>
+
+dynamic class A {}
+var obj:A = new A()
+
+// trace undefined property of obj
+trace(obj.propName); // undefined
+
+</pre></div></div></span></div></span><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodDetail" id="methodDetail"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailSectionHeader"> Сведения о функции </div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Array()" id="Array()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Array(restParam)" id="Array(restParam)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Array</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function Array(<a href="statements.html#..._(rest)_parameter">...</a> args):<a href="Array.html">Array</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Создает новый массив. Массив может иметь нулевую или большую длину, или может быть заполнен одним указанным объектом. 
+	 <ul><li>Вызов функции <code>Array()</code> без аргументов возвращает пустой массив.</li><li>Вызов функции <code>Array()</code> с единственным целочисленным аргументом возвращает массив указанной длины, значения элементов которого, тем не менее, не определены.</li><li>При вызове функции <code>Array()</code> с указанным объектом возвращается массив с одним элементом указанного объекта.</li></ul>
+	 Использование функции <code>Array()</code> <i>похоже</i> на создание массива с конструктором класса Array, но функция <code>Array()</code> допускает использование только одного или отсутствующего значения параметра. Нельзя использовать функцию <code>Array()</code> для заполнения нового массива несколькими значениями.
+	 <p><b>Примечание.</b> При попытке использовать функцию <code>Array()</code> для создания нового массива и передаче нескольких значений в качестве параметров для заполнения массива появляется ошибка компилятора. Функция <code>Array()</code> допускает использование только одного параметра. Вместо этого используйте конструктор класса Array для создания и заполнения массива, содержащего несколько значений.</p>
+	 <p>Функция <code>Array()</code> не приводит тип объекта массива. Воспользуйтесь оператором <code>as</code> для явного преобразования или приведения типов, когда аргумент не является элементарным значением. Дополнительную информацию см. в разделе «Пример» данной записи. Если объект передается в качестве параметра в функцию <code>Array()</code>, создается новый массив, содержащий объект в качестве элемента.</p>
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><a href="statements.html#..._(rest)_parameter">...</a> <span class="label">args</span></code> &mdash; Нельзя передавать аргументы для пустого массива, один целочисленный аргумент для массива фиксированной длины или один объект для создания массива, содержащего один указанный объект.
+	 </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Array.html">Array</a></code> &mdash; Массив нулевой или большей длины.
+	 </td></tr></table><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="Array.html" target="">Класс Array</a><br/><a href="operators.html#as" target="">Оператор as</a></div><span id="pageFilter"><br/><span class="label"> Пример &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_ru"> Использование этого примера </a></span>)
+            </span><br/><br/><div class="detailBody"> В следующем примере демонстрируется поведение функции <code>Array()</code> в том случае, если аргумент не является элементарным значением. Часто возникает ситуация, когда приведение типов к массиву состоит в преобразовании экземпляра Object, сохраняющего свои значения в формате массива. Если функция <code>Array()</code> вызывается с аргументом типа <code>Object</code> или любого другого типа данных, не относящихся к элементарным, ссылка на объект сохраняется в элементе нового массива. Иными словами, если единственный переданный аргумент является объектом, ссылка на этот объект становится первым элементом нового массива.
+<div class="listing"><pre>
+var obj:Object = [ "a", "b", "c" ];
+      
+var newArray:Array = Array( obj );
+
+trace(newArray == obj);    // false
+trace(newArray[0] == obj); // true
+trace(newArray[0][0])      // a
+trace(newArray[0][1])      // b
+trace(newArray[0][2])      // c
+</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody"> Чтобы привести тип <code>obj</code> к массиву, воспользуйтесь оператором <code>as</code>, который возвращает ссылку на массив, если <code>obj</code> является действительным массивом. В противном случае возвращается <code>null</code>:
+<div class="listing"><pre>
+var obj:Object = [ "a", "b", "c" ];
+      
+var newArray:Array = obj as Array;
+
+trace(newArray == obj); // true
+trace(newArray[0]);     // a
+trace(newArray[1]);     // b
+trace(newArray[2]);     // c
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Boolean()" id="Boolean()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Boolean(Object)" id="Boolean(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Boolean</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function Boolean(expression:<a href="Object.html">Object</a>):<a href="Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Преобразует параметр <code>expression</code> в логическое значение и возвращает его. 
+	 <p>Возвращаемое значение зависит от типа данных и значения аргумента (см. таблицу ниже):</p>
+	 
+	 <table class="innertable" ><tr><th>Введенное значение</th><th>Пример</th><th>Возвращаемое значение</th></tr><tr><td><code>0</code></td><td><code>Boolean(0)</code></td><td><code>false</code></td></tr><tr><td><code>NaN</code></td><td><code>Boolean(NaN)</code></td><td><code>false</code></td></tr><tr><td>Число (не <code>0</code> или <code>NaN</code>)</td><td><code>Boolean(4)</code></td><td><code>true</code></td></tr><tr><td>Пустая строка</td><td><code>Boolean("")</code></td><td><code>false</code></td></tr><tr><td>Непустая строка</td><td><code>Boolean("6")</code></td><td><code>true</code></td></tr><tr><td><code>null</code></td><td><code>Boolean(null)</code></td><td><code>false</code></td></tr><tr><td><code>undefined</code></td><td><code>Boolean(undefined)</code></td><td><code>false</code></td></tr><tr><td>Экземпляр класса Object</td><td><code>Boolean(new Object())</code></td><td><code>true</code></td></tr><tr><td>Нет аргумента</td><td><code>Boolean()</code></td><td><code>false</code></td></tr></table>
+	 <p>В отличие от предыдущих версий ActionScript функция <code>Boolean()</code> возвращает те же результаты, что и конструктор класса Boolean.</p>
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">expression</span>:<a href="Object.html">Object</a></code> &mdash; Выражение или объект, преобразуемые в логическое значение.
+	 </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Boolean.html">Boolean</a></code> &mdash; Результат преобразования в логическое значение.
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="decodeURI()" id="decodeURI()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="decodeURI(String)" id="decodeURI(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>decodeURI</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function decodeURI(uri:<a href="String.html">String</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Расшифровывает зашифрованный URI-адрес в строку. Строка, все символы в которой были ранее закодированы с помощью функции <code>encodeURI</code>, восстанавливается и выводится в раскодированном представлении.
+	 <p>В следующей таблице показан набор управляющих последовательностей, которые <i>не</i> раскодируются в виде символов функцией <code>decodeURI</code>. Воспользуйтесь методом <code>decodeURIComponent()</code>, чтобы раскодировать управляющие последовательности в этой таблице.</p>
+	 <table class="innertable" ><tr><th>Нераскодированные управляющие последовательности</th><th>Эквиваленты символов</th></tr><tr><td><code>%23</code></td><td><code>#</code></td></tr><tr><td><code>%24</code></td><td><code>$</code></td></tr><tr><td><code>%26</code></td><td><code>&</code></td></tr><tr><td><code>%2B</code></td><td><code>+</code></td></tr><tr><td><code>%2C</code></td><td><code>,</code></td></tr><tr><td><code>%2F</code></td><td><code>/</code></td></tr><tr><td><code>%3A</code></td><td><code>:</code></td></tr><tr><td><code>%3B</code></td><td><code>;</code></td></tr><tr><td><code>%3D</code></td><td><code>=</code></td></tr><tr><td><code>%3F</code></td><td><code>?</code></td></tr><tr><td><code>%40</code></td><td><code>@</code></td></tr></table>
+	 
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">uri</span>:<a href="String.html">String</a></code> &mdash; Строка, закодированная с помощью функции <code>encodeURI</code>.
+	 </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code> &mdash; Строка, все символы в которой, ранее маскированные с помощью функции <code>encodeURI</code>, восстанавливаются в немаскированном представлении.
+	 </td></tr></table><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="package.html#decodeURIComponent()" target="">decodeURIComponent()</a><br/><a href="package.html#encodeURI()" target="">encodeURI()</a><br/><a href="package.html#encodeURIComponent()" target="">encodeURIComponent()</a></div><span id="pageFilter"><br/><span class="label"> Пример &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_ru"> Использование этого примера </a></span>)
+            </span><br/><br/><div class="detailBody"><div class="listing"><pre>package {
+    import flash.display.Sprite;
+
+    public class DecodeURIExample extends Sprite {
+        public function DecodeURIExample() {
+            var uri:String = "http://www.example.com/application.jsp?user=&lt;user name='some user'&gt;&lt;/user&gt;";
+            var encoded:String = encodeURI(uri);
+            var decoded:String = decodeURI(encoded);
+            trace(uri);        // http://www.example.com/application.jsp?user=&lt;user name='some user'&gt;&lt;/user&gt;
+            trace(encoded);    // http://www.example.com/application.jsp?user=%3Cuser%20name='some%20user'%3E%3C/user%3E
+            trace(decoded);    // http://www.example.com/application.jsp?user=&lt;user name='some user'&gt;&lt;/user&gt;
+        }
+    }
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="decodeURIComponent()" id="decodeURIComponent()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="decodeURIComponent(String)" id="decodeURIComponent(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>decodeURIComponent</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function decodeURIComponent(uri:<a href="String.html">String</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Расшифровывает зашифрованный URI-компонент в строку. Строка, все символы в которой были ранее маскированы с помощью функции <code>encodeURIComponent</code>, восстанавливается в немаскированном представлении.
+	 <p>Отличие этой функции от функции <code>decodeURI()</code> состоит в том, что она предназначена для использования только по отношению к части строки URI, которая называется компонентом URI. Компонент URI &mdash; это любой текст, который заключен между специальными символами, названными <i>разделителями компонентов</i> (<code>: / ; ? </code>). Распространенные примеры компонентов URI: «http» и «www.adobe.com».</p>
+	 <p>Другое важное различие между этой функцией и <code>decodeURI()</code> обусловлено предположением о том, что она обрабатывает компонент URI. При этом специальные символы разделителей (<code>; / ? : @ & = + $ , #</code>) рассматриваются в качестве обычного текста, который следует декодировать. </p>
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">uri</span>:<a href="String.html">String</a></code> &mdash; Строка, закодированная с помощью функции <code>encodeURIComponent</code>.
+	 </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code> &mdash; Строка, все символы в которой были ранее маскированы с помощью функции <code>encodeURIComponent</code>, восстанавливаются в немаскированном представлении.
+	 </td></tr></table><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="package.html#decodeURI()" target="">decodeURI()</a><br/><a href="package.html#encodeURI()" target="">encodeURI()</a><br/><a href="package.html#encodeURIComponent()" target="">encodeURIComponent()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="encodeURI()" id="encodeURI()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="encodeURI(String)" id="encodeURI(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>encodeURI</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function encodeURI(uri:<a href="String.html">String</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Зашифровывает строку в допустимый URI-адрес (унифицированный идентификатор ресурса). Преобразует полный URI-адрес в строку, в которой все символы имеют кодировку UTF-8, если не принадлежат к небольшой группе базисных символов.
+	 <p>В таблице ниже полностью приведен список базисных символов, которые <i>не</i> преобразуются в управляющие последовательности UTF-8 с помощью функции <code>encodeURI</code>.</p>
+	 <table class="innertable" ><tr><th>Символы, которые не кодируются</th></tr><tr><td><code>0 1 2 3 4 5 6 7 8 9</code></td></tr><tr><td><code>a b c d e f g h i j k l m n o p q r s t u v w x y z</code></td></tr><tr><td><code>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</code></td></tr><tr><td><code>; / ? : @ & = + $ , #</code></td></tr><tr><td><code>- _ . ! ~ * ' ( )</code></td></tr></table>
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">uri</span>:<a href="String.html">String</a></code> &mdash; Строка, представляющая весь URI-адрес.
+	 </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code> &mdash; Строка, где определенные символы закодированы в виде управляющих последовательностей UTF-8.
+	 </td></tr></table><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="package.html#decodeURI()" target="">decodeURI()</a><br/><a href="package.html#decodeURIComponent()" target="">decodeURIComponent()</a><br/><a href="package.html#encodeURIComponent()" target="">encodeURIComponent()</a></div><span id="pageFilter"><br/><span class="label"> Пример &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_ru"> Использование этого примера </a></span>)
+            </span><br/><br/><div class="detailBody"><div class="listing"><pre>package {
+    import flash.display.Sprite;
+
+    public class EncodeURIExample extends Sprite {
+        public function EncodeURIExample() {
+            var uri:String = "http://www.example.com/application.jsp?user=&lt;user name='some user'&gt;&lt;/user&gt;";
+            var encoded:String = encodeURI(uri);
+            var decoded:String = decodeURI(encoded);
+            trace(uri);        // http://www.example.com/application.jsp?user=&lt;user name='some user'&gt;&lt;/user&gt;
+            trace(encoded);    // http://www.example.com/application.jsp?user=%3Cuser%20name='some%20user'%3E%3C/user%3E
+            trace(decoded);    // http://www.example.com/application.jsp?user=&lt;user name='some user'&gt;&lt;/user&gt;
+        }
+    }
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="encodeURIComponent()" id="encodeURIComponent()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="encodeURIComponent(String)" id="encodeURIComponent(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>encodeURIComponent</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function encodeURIComponent(uri:<a href="String.html">String</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Зашифровывает строку в допустимый URI-компонент. Преобразует подстроку URI-адреса в строку, в которой все символы кодируются в виде управляющих последовательностей UTF-8, если не принадлежат к очень ограниченному числу базисных символов.
+	 <p>Отличие функции <code>encodeURIComponent()</code> от функции <code>encodeURI()</code> состоит в том, что она предназначена для использования только по отношению к части строки URI, которая называется компонентом URI. Компонент URI &mdash; это любой текст, который заключен между специальными символами, названными <i>разделителями компонентов</i> (<code>: / ; ? </code>). Распространенные примеры компонентов URI: «http» и «www.adobe.com».</p>
+	 <p>Другое важное различие между этой функцией и <code>encodeURI()</code> обусловлено предположением о том, что она обрабатывает компонент URI. При этом специальные символы разделителей (<code>; / ? : @ & = + $ , #</code>) рассматриваются в качестве обычного текста, который следует закодировать. </p>
+	 <p>В таблице ниже приведены все символы, которые <i>не</i> преобразуются в управляющие последовательности UTF-8 функцией <code>encodeURIComponent</code>.</p>
+	 <table class="innertable" ><tr><th>Символы, которые не кодируются</th></tr><tr><td><code>0 1 2 3 4 5 6 7 8 9</code></td></tr><tr><td><code>a b c d e f g h i j k l m n o p q r s t u v w x y z</code></td></tr><tr><td><code>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</code></td></tr><tr><td><code>- _ . ! ~ * ' ( )</code></td></tr></table>	 
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">uri</span>:<a href="String.html">String</a></code></td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code></td></tr></table><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="package.html#decodeURI()" target="">decodeURI()</a><br/><a href="package.html#decodeURIComponent()" target="">decodeURIComponent()</a><br/><a href="package.html#encodeURI()" target="">encodeURI()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="escape()" id="escape()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="escape(String)" id="escape(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>escape</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function escape(str:<a href="String.html">String</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Преобразует параметр в строку и кодирует ее в формат кодировки URL-адреса, где большинство символов, не являющихся алфавитно-цифровыми, заменяются шестнадцатеричными последовательностями <code>%</code>. Когда в строке с кодировкой URL-адреса используется символ процента (<code>%</code>), он служит для включения управляющих символов и не эквивалентен оператору модуля (<code>%</code>).
+	 <p>В таблице ниже приведены все символы, которые <i>не</i> преобразуются в управляющие последовательности функцией <code>escape()</code>.</p>
+	 <table class="innertable" ><tr><th>Символы, которые не кодируются</th></tr><tr><td><code>0 1 2 3 4 5 6 7 8 9</code></td></tr><tr><td><code>a b c d e f g h i j k l m n o p q r s t u v w x y z</code></td></tr><tr><td><code>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</code></td></tr><tr><td><code>@ - _ . * + /</code></td></tr></table>	 
+	 <p><b>Примечание.</b> При кодировании используйте функцию <code>encodeURIComponent()</code> вместо функции <code>escape()</code> для обработки специальных символов разделителей (<code>@ + /</code>) как обычного текста.</p>
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:<a href="String.html">String</a></code> &mdash; Выражение, преобразуемое в строку с кодировкой URL-адреса.
+	 </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code> &mdash; Строка в кодировке URL-адреса
+	 </td></tr></table><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="package.html#unescape()" target="">unescape()</a><br/><a href="package.html#encodeURIComponent()" target="">encodeURIComponent()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="int()" id="int()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="int(Number)" id="int(Number)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>int</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function int(value:<a href="Number.html">Number</a>):<a href="int.html">int</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Преобразует данное числовое значение в целочисленное значение. Десятичные значения усекаются до целых чисел.
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="Number.html">Number</a></code> &mdash; Значение, которое необходимо преобразовать в целочисленное.
+	 </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="int.html">int</a></code> &mdash; Преобразованное целочисленное значение.
+	 </td></tr></table><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="package.html#uint()" target="">uint()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="isFinite()" id="isFinite()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="isFinite(Number)" id="isFinite(Number)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>isFinite</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function isFinite(num:<a href="Number.html">Number</a>):<a href="Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0.</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Возвращает <code>true</code>, если значение является конечным числом, либо <code>false</code>, если значение является <code>Infinity</code> или <code>-Infinity</code>. Присутствие <code>Infinity</code> или <code>-Infinity</code> указывает на возникновение математической ошибки (например, при попытке деления на ноль).
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">num</span>:<a href="Number.html">Number</a></code> &mdash; Число, оцениваемое как конечное или бесконечное.
+	 </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Boolean.html">Boolean</a></code> &mdash; Возвращает <code>true</code>, если оно является конечным числом или <code>false</code>, если это бесконечность или минус бесконечность
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="isNaN()" id="isNaN()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="isNaN(Number)" id="isNaN(Number)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>isNaN</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function isNaN(num:<a href="Number.html">Number</a>):<a href="Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Возвращает <code>true</code>, если значение относится к разряду <code>NaN</code> (нечисловое). Функция <code>isNaN()</code> полезна при проверке успешности оценки математического выражения с помощью числа. Как правило, функция <code>isNaN()</code> используется для проверки значения, возвращенного функциями <code>parseInt()</code> и <code>parseFloat()</code>. Значение <code>NaN</code> &mdash; это специальный элемент типа данных Number, представляющий значение, которое «не является числом». 
+	 <p><b>Примечание</b>. Значение <code>NaN</code> не принадлежит типам данных int или uint.</p>
+	 <p>В таблице ниже описаны значения, возвращаемые <code>isNaN()</code> при различных типах и значениях ввода. (Если для предупреждений компилятора задан «Строгий режим», некоторые из следующих операций вызовут появление предупреждений компилятора.)</p>
+	 <table class="innertable" ><tr><th>Тип/значение ввода</th><th>Пример</th><th>Возвращаемое значение</th></tr><tr><td>0, разделенный на 0</td><td><code>isNaN(0/0)</code></td><td><code>true</code></td></tr><tr><td>Число, отличное от ноля, разделенное на <code>0</code></td><td><code>isNaN(5/0)</code></td><td><code>false</code></td></tr><tr><td>Квадратный корень отрицательного числа</td><td><code>isNaN(Math.sqrt(-1))</code></td><td><code>true</code></td></tr><tr><td>Арксинус числа, которое больше 1 или меньше 0</td><td><code>isNaN(Math.asin(2))</code></td><td><code>true</code></td></tr><tr><td>Строка, которую можно преобразовать в тип данных Number</td><td><code>isNaN("5")</code></td><td><code>false</code></td></tr><tr><td>Строка, которую невозможно преобразовать в тип данных Number</td><td><code>isNaN("5a")</code></td><td><code>true</code></td></tr></table>
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">num</span>:<a href="Number.html">Number</a></code> &mdash; Оцениваемое числовое значение или математическое выражение.
+	 </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Boolean.html">Boolean</a></code> &mdash; Возвращает <code>true</code> при наличии значения <code>NaN</code> (нечисловое) и <code>false</code> в противном случае.
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="isXMLName()" id="isXMLName()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="isXMLName(String)" id="isXMLName(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>isXMLName</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function isXMLName(str:<a href="String.html">String</a>):<a href="Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Определяет, является ли заданная строка допустимым именем для элемента или атрибута XML.
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:<a href="String.html">String</a></code> &mdash; Оцениваемая строка.
+	 </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Boolean.html">Boolean</a></code> &mdash; Возвращает <code>true</code>, если аргументом <code>str</code> является действительное имя XML. В противном случае возвращается <code>false</code>.
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Number()" id="Number()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Number(Object)" id="Number(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Number</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function Number(expression:<a href="Object.html">Object</a>):<a href="Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Преобразует данное значение в значение Number. В таблице ниже приведены результаты при различных типах ввода.
+	 
+	 <table class="innertable" ><tr><th>Тип/значение ввода</th><th>Пример</th><th>Возвращаемое значение</th></tr><tr><td><code>undefined</code></td><td><code>Number(undefined)</code></td><td><code>NaN</code></td></tr><tr><td><code>null</code></td><td><code>Number(null)</code></td><td><code>0</code></td></tr><tr><td><code>true</code></td><td><code>Number(true)</code></td><td><code>1</code></td></tr><tr><td><code>false</code></td><td><code>Number(false)</code></td><td><code>0</code></td></tr><tr><td><code>NaN</code></td><td><code>Number(NaN)</code></td><td><code>NaN</code></td></tr><tr><td>Пустая строка</td><td><code>Number("")</code></td><td><code>0</code></td></tr><tr><td>Строка, преобразуемая в значение Number</td><td><code>Number("5")</code></td><td>Число (например, <code>5</code>)</td></tr><tr><td>Строка, которая не преобразуется в значение Number</td><td><code>Number("5a")</code></td><td><code>NaN</code></td></tr></table>
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">expression</span>:<a href="Object.html">Object</a></code> &mdash; Значение, преобразуемое в число.
+	 </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Number.html">Number</a></code> &mdash; Преобразованное числовое значение
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Object()" id="Object()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Object(Object)" id="Object(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Object</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function Object(value:<a href="Object.html">Object</a>):<a href="Object.html">Object</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Все значения в ActionScript 3.0 являются объектами. Это означает, что при вызове метода <code>Object()</code> для значения возвращается данное значение.
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="Object.html">Object</a></code> &mdash; Преобразуемый объект или число, строка и логическое значение.
+	 </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Object.html">Object</a></code> &mdash; Значение, указанное параметром <code>value</code>.
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="parseFloat()" id="parseFloat()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="parseFloat(String)" id="parseFloat(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>parseFloat</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function parseFloat(str:<a href="String.html">String</a>):<a href="Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Преобразует строку в число с плавающей запятой. Эта функция считывает или <i>выполняет анализ</i> чисел, которые возвращаются в виде строки до тех пор, пока не доходит до символа, который не входит в исходное число. Если строка не начинается с числа, которое можно проанализировать, <code>parseFloat()</code> возвращает значение <code>NaN</code>. Символ пробела, указанный перед допустимыми целыми числами, игнорируется так же, как и нечисловые символы после них.
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:<a href="String.html">String</a></code> &mdash; Строка, которая считывается и преобразуется в число с плавающей запятой.
+	 </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Number.html">Number</a></code> &mdash; Число или значение <code>NaN</code> (нечисловое).
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="parseInt()" id="parseInt()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="parseInt(String,uint)" id="parseInt(String,uint)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>parseInt</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function parseInt(str:<a href="String.html">String</a>, radix:<a href="uint.html">uint</a> = 0):<a href="Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Преобразует строку в целое число. Если указанную в параметрах строку не удается преобразовать в число, функция возвращает <code>NaN</code>. Строки, которые начинаются с 0x, считаются шестнадцатеричными числами. В отличие от предыдущих версий ActionScript целые числа, которые начинаются с 0 <i>не</i> рассматриваются в качестве восьмеричных. Для восьмеричных чисел указывается основание равное 8. Символы пробела и нули, стоящие перед целыми числами, игнорируются так же, как и нечисловые символы.
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:<a href="String.html">String</a></code> &mdash; Строка, преобразуемая в целое число.
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">radix</span>:<a href="uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; Целое число, представляющее основание (базу) разбираемого числа. Допускаются значения от 2 до 36.
+	 </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Number.html">Number</a></code> &mdash; Число или значение <code>NaN</code> (нечисловое).
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="String()" id="String()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="String(Object)" id="String(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>String</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function String(expression:<a href="Object.html">Object</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Возвращает строковое представление заданного параметра.
+	 <p>В таблице ниже приведены результаты при различных типах ввода.</p>
+	 <table class="innertable" ><tr><th>Тип/значение ввода</th><th>Возвращаемое значение</th></tr><tr><td><code>undefined</code></td><td><code>undefined</code></td></tr><tr><td><code>null</code></td><td><code>"null"</code></td></tr><tr><td><code>true</code></td><td><code>"true"</code></td></tr><tr><td><code>false</code></td><td><code>"false"</code></td></tr><tr><td><code>NaN</code></td><td><code>"NaN"</code></td></tr><tr><td>String</td><td>String</td></tr><tr><td>Object</td><td>Object.toString()</td></tr><tr><td>Number</td><td>Строковое представление числа</td></tr></table>
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">expression</span>:<a href="Object.html">Object</a></code> &mdash;  Выражение, преобразуемое в строку.
+	 </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code> &mdash; Строковое представление значения, переданного для параметра <code>expression</code>.
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##AIR::1.0##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="trace()" id="trace()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="trace(restParam)" id="trace(restParam)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>trace</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function trace(<a href="statements.html#..._(rest)_parameter">...</a> arguments):<a href="specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>Flash Player 9, AIR 1.0, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Отображает выражения либо выполняет запись в файлы журнала во время отладки. Единичная инструкция trace может поддерживать несколько аргументов. Если любой аргумент инструкции trace включает тип данных, отличающийся от String, функция trace вызывает связанный метод <code>toString()</code> для этого типа данных. Например, если аргумент &mdash; это логическое значение, функция trace вызывает метод <code>Boolean.toString()</code> и показывает возвращаемое значение. 
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><a href="statements.html#..._(rest)_parameter">...</a> <span class="label">arguments</span></code> &mdash; Одно или несколько выражений для оценки, разделенных запятыми. Если указывается несколько выражений, между выводимыми выражениями вставляются пробелы.
+     </td></tr></table></p><span id="pageFilter"><br/><span class="label"> Пример &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_ru"> Использование этого примера </a></span>)
+            </span><br/><br/><div class="detailBody"> В следующем примере класс <code>TraceExample</code> используется для того, чтобы показать, как метод <code>trace()</code> можно использовать для печати простой строки. Обычно это сообщение выводится на печать с помощью консоли «Отладка».
+<div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+
+    public class TraceExample extends Sprite {
+
+        public function TraceExample() {
+            trace("Hello World");
+        }
+    }
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="uint()" id="uint()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="uint(Number)" id="uint(Number)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>uint</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function uint(value:<a href="Number.html">Number</a>):<a href="uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Преобразует данное числовое значение в целочисленное значение без знака. Десятичные значения усекаются до целых чисел.
+	 <p>В таблице ниже описано значение, возвращаемое <code>uint()</code> при различных типах и значениях ввода.</p>
+	 <table class="innertable" ><tr><th>Тип/значение ввода</th><th>Пример</th><th>Возвращаемое значение</th></tr><tr><td><code>undefined</code></td><td><code>uint(undefined)</code></td><td><code>0</code></td></tr><tr><td><code>null</code></td><td><code>uint(null)</code></td><td><code>0</code></td></tr><tr><td><code>0</code></td><td><code>uint(0)</code></td><td><code>0</code></td></tr><tr><td><code>NaN</code></td><td><code>uint(NaN)</code></td><td><code>0</code></td></tr><tr><td>Положительное число с плавающей запятой</td><td><code>uint(5.31)</code></td><td>Усеченное целое число без знака (например, <code>5</code>)</td></tr><tr><td>Отрицательное число с плавающей запятой</td><td><code>uint(-5.78)</code></td><td>Усекает целое число, а затем применяет правило для отрицательных целых чисел</td></tr><tr><td>Отрицательное число</td><td><code>uint(-5)</code></td><td>Сумма значения <code>uint.MAX_VALUE</code> и отрицательного целого числа (например, <code>uint.MAX_VALUE + (-5)</code>)</td></tr><tr><td><code>true</code></td><td><code>uint(true)</code></td><td><code>1</code></td></tr><tr><td><code>false</code></td><td><code>uint(false)</code></td><td><code>0</code></td></tr><tr><td>Пустая строка</td><td><code>uint("")</code></td><td><code>0</code></td></tr><tr><td>Строка, преобразуемая в значение Number</td><td><code>uint("5")</code></td><td>Число</td></tr><tr><td>Строка, которая не преобразуется в значение Number</td><td><code>uint("5a")</code></td><td><code>0</code></td></tr></table>
+
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="Number.html">Number</a></code> &mdash; Значение, которое необходимо преобразовать в целочисленное.
+	 </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="uint.html">uint</a></code> &mdash; Преобразованное целочисленное значение.
+	 </td></tr></table><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="package.html#int()" target="">int()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="unescape()" id="unescape()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="unescape(String)" id="unescape(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>unescape</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function unescape(str:<a href="String.html">String</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Вычисляет параметр <code>str</code> как строку, раскодирует строку из формата кодировки URL (с преобразованием всех шестнадцатеричных последовательностей в символы ASCII) и возвращает строку.
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:<a href="String.html">String</a></code> &mdash; Строка, где необходимо маскировать шестнадцатеричные последовательности.
+	 </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code> &mdash; Строка, полученная в результате раскодирования параметра в кодировке URL-адреса.
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Vector()" id="Vector()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Vector(Object)" id="Vector(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Vector</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function Vector(sourceArray:<a href="Object.html">Object</a>):<a href="Vector.html">Vector</a>.&lt;T&gt;</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>Flash Player 10, AIR 1.5, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Создает новый экземпляр вектора, элементы которого являются экземплярами указанного типа данных. При вызове этой функции указывается тип данных для элементов итогового вектора (<i>базового типа</i> вектора) с помощью параметра типа. В этой функции используется тот же синтаксис, что и при объявлении экземпляра вектора или вызове конструктора <code>new Vector.&lt;T&gt;()</code>:
+	 
+	 <div class="listing"><pre>var v:Vector.&lt;String&gt; = Vector.&lt;String&gt;(["Hello", "World"]);</pre></div>
+	 
+	 <p>Итоговый вектор заполняется значениями, указанными в элементах аргумента <code>sourceArray</code>. Если аргумент <code>sourceArray</code> уже является экземпляром Vector.&lt;T>, где <code>T</code> это базовый тип, функция возвращает данный вектор. В противном случае итоговый вектор заполняется элементами массива или вектора, представленного аргументом <code>sourceArray</code>.</p>
+	 
+	 <p>В любом случае тип данных всех элементов аргумента <code>sourceArray</code> должен совпадать с базовым типом <code>T</code>, который указан в вызове функции.</p>
+	 
+	 <p>Если аргумент <code>sourceArray</code> имеет нулевое значение свойства <code>length</code>, функция возвращает пустой вектор.</p>
+	 
+	 <p>Если вектор передан как аргумент <code>sourceArray</code>, а его базовый тип &mdash; не <code>T</code>, или если передан массив, и не все его элементы имеют тип данных <code>T</code>, выполняется попытка преобразовать значения в базовый тип. Если значения удается автоматически преобразовать, итоговый вектор содержит преобразованные значения. Если преобразование выполнить не удается, происходит ошибка.</p>
+	 
+	 <p>Точно так же, если элемент в аргументе <code>sourceArray</code> является экземпляром подкласса базового типа <code>T</code>, вызов выполняется успешно, и элемент добавляется в итоговый вектор. Это происходит даже тогда, когда аргумент <code>sourceArray</code> является вектором, чей базовый тип является подклассом <code>T</code>. Фактически, только так можно преобразовать вектор с базовым типом <code>T</code> в вектор с базовым типом, который является суперклассом <code>T</code>.</p>
+	 
+	 <p>Например, следующий код приводит к появлению ошибки компиляции в строгом режиме или ошибки TypeError во время выполнения, поскольку он пытается присвоить Vector.&lt;Sprite> переменной Vector.&lt;DisplayObject> (Sprite &mdash; это подкласс DisplayObject).</p>
+	 
+	 <div class="listing"><pre>
+     var v1:Vector.&lt;Sprite&gt; = new Vector.&lt;Sprite&gt;();
+     v1[0] = new Sprite();
+     var v2:Vector.&lt;DisplayObject&gt; = v1;
+     </pre></div>
+	 
+	 <p>Следующая альтернативная версия кода приводит к успешному копированию элементов экземпляра Vector.&lt;Sprite> в экземпляр Vector.&lt;DisplayObject>.</p>
+	 
+	 <div class="listing"><pre>
+     var v1:Vector.&lt;Sprite&gt; = new Vector.&lt;Sprite&gt;();
+     v1[0] = new Sprite();
+     var v2:Vector.&lt;DisplayObject&gt; = Vector.&lt;DisplayObject&gt;(v1);
+     </pre></div>
+	 
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">sourceArray</span>:<a href="Object.html">Object</a></code> &mdash; Экземпляр Array или Vector, элементы которого становятся элементами итогового объекта Vector. Если аргумент &mdash; это экземпляр вектора, тип данных которого совпадает с указанным типом данных, этот аргумент возвращается в качестве результата функции.
+	 
+	 </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Vector.html">Vector</a>.&lt;T&gt;</code> &mdash; Экземпляр вектора, заполненный элементами массива <code>sourceArray</code>.
+	 
+	 </td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="TypeError.html">TypeError</a> </code> &mdash; Если аргумент <code>sourceArray</code> содержит элемент, который невозможно преобразовать в указанный тип данных.
+	 
+	 </td></tr></table><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="Vector.html" target="">Класс Vector</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="XML()" id="XML()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="XML(Object)" id="XML(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>XML</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function XML(expression:<a href="Object.html">Object</a>):<a href="XML.html">XML</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Преобразует объект в объект XML. 
+	 <p>В таблице ниже дается описание значений, возвращаемых при различных типах ввода.</p>
+	 	<table class="innertable" ><tr><th>Тип параметра</th><th>Возвращаемое значение</th></tr><tr><td>Boolean</td><td>Значение сначала преобразуется в строку, а затем &mdash; в объект XML.</td></tr><tr><td>Null</td><td>Происходит ошибка при выполнении (исключение TypeError).</td></tr><tr><td>Number</td><td>Значение сначала преобразуется в строку, а затем &mdash; в объект XML.</td></tr><tr><td>Object</td><td>Преобразование в XML выполняется только тогда, когда значение относится к типам String, Number или Boolean. В противном случае происходит ошибка при выполнении (исключение TypeError).</td></tr><tr><td>String</td><td>Значение преобразуется в XML.</td></tr><tr><td>Не определен</td><td>Происходит ошибка при выполнении (исключение TypeError).</td></tr><tr><td>XML</td><td>Вводимое значение возвращается без изменений.</td></tr><tr><td>XMLList</td><td>Возвращает объект XML только в том случае, если объект XMLList содержит только одно свойство типа XML. В противном случае происходит ошибка при выполнении (исключение TypeError).</td></tr></table>
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">expression</span>:<a href="Object.html">Object</a></code> &mdash; Объект, преобразуемый в формат XML.
+	 </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="XML.html">XML</a></code> &mdash; Объект XML, содержащий значения, которые записаны в преобразуемом объекте.
+	 </td></tr></table><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="package.html#XMLList()" target="">XMLList()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="XMLList()" id="XMLList()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="XMLList(Object)" id="XMLList(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>XMLList</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">функция</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function XMLList(expression:<a href="Object.html">Object</a>):<a href="XMLList.html">XMLList</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Язык версии:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     Преобразует объект в объект XMLList.
+     <p>В таблице ниже дается описание значений, возвращаемых при различных типах ввода.</p>
+	 <table class="innertable" ><tr><th>Тип параметра</th><th>Возвращаемое значение</th></tr><tr><td>Boolean</td><td>Значение сначала преобразуется в строку, а затем &mdash; в объект XMLList.</td></tr><tr><td>Null</td><td>Происходит ошибка при выполнении (исключение TypeError).</td></tr><tr><td>Number</td><td>Значение сначала преобразуется в строку, а затем &mdash; в объект XMLList.</td></tr><tr><td>Object</td><td>Преобразование в XMLList выполняется только тогда, когда значение относится к типам String, Number или Boolean. В противном случае происходит ошибка при выполнении (исключение TypeError).</td></tr><tr><td>String</td><td>Значение преобразуется в объект XMLList</td></tr><tr><td>Не определен</td><td>Происходит ошибка при выполнении (исключение TypeError).</td></tr><tr><td>XML</td><td>Значение преобразуется в объект XMLList</td></tr><tr><td>XMLList</td><td>Вводимое значение возвращается без изменений.</td></tr></table>
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">expression</span>:<a href="Object.html">Object</a></code> &mdash; Объект, преобразуемый в объект XMLList
+	 </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="XMLList.html">XMLList</a></code> &mdash; Объект XMLList, содержащий значения, которые записаны в преобразованном объекте.
+	 </td></tr></table><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="package.html#XML()" target="">XML()</a></div></div></span><p></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 11:50 AM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/ru_RU/legalnotices/index.html">Юридическая информация</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Политика конфиденциальности онлайн</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">Почему по-английски?</span>
+				</div>
+				<div class="white_content_body">
+					<b>Содержимое Справочника ActionScript 3.0 отображается на английском языке</b><br><br>
+					Не все части Справочника ActionScript 3.0 переводятся на все языки. Если какой-то текстовый элемент не переведен, он отображается на английском языке. Например, компонент ga.controls.HelpBox не переведен ни на один из языков. Это значит, что в русской версии справки компонент ga.controls.HelpBox будет отображаться на английском языке.
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 11:50 AM Z  -->

@@ -1,0 +1,668 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg; Flash&reg; Platform용 ActionScript&reg; 3.0 참조 설명서"><meta name="lang" content="ko-kr"><meta name="runtime" content="air"><meta name="runtimever" content="air:1.0"><meta name="product" content="air"><meta name="productver" content="air:1.0"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../asfilter.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="SQLStatement,flash.data.SQLStatement,executing,itemClass,parameters,sqlConnection,text,cancel,clearParameters,execute,getResult,next"><title>SQLStatement - Adobe ActionScript&reg; 3 (AS3  ) API 참조 설명서</title>
+		<link rel="stylesheet" href="../../filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="../../filter_new.css" type="text/css">
+			
+		<script src="../../jquery.js" type="text/javascript"></script>
+		<script src="../../s_chl_code.js" type="text/javascript"></script>
+		<script src="../../jquery.zclip.js" type="text/javascript"></script>
+		<script src="../../jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="../../cookies.js" type="text/javascript"></script>
+		<script src="../../asdoc.js" type="text/javascript"></script>
+		<script src="../../iscroll.js" type="text/javascript"></script>
+		<script src="../../AC_OETags.js" type="text/javascript"></script>
+		<script src="../../omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "런타임";
+			var productsLabel = "제품";
+			var noneLabel = "없음";
+			var qsearchBoxLabel = "빠른 검색";
+			var qsearchText = "찾을 수 없는 용어";
+			var ajaxErrorMsg="페이지 불러오기 오류";
+			var ajaxErrorTryMsg="다시 시도";
+			var ajaxLoadingMsg="불러오는 중";
+			var cancelMsg = "취소";
+			var classesText = "클래스";
+			var strJiveReply = "이 질문은 다음 문서에 대응하여 제출되었습니다. "
+			var showFilters = "필터 표시";
+			var hideFilters = "필터 숨기기";
+			
+		
+			var baseRef = "../../";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup> Platform용 ActionScript<sup>&reg;</sup> 3.0 참조 설명서<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="../../index.html"> 홈 </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="SQLStatement.html#top" style="display:">패키지 및 클래스 목록 표시</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="SQLStatement.html#top" style="display:none">패키지 및 클래스 목록 숨기기</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="../../package-summary.html"> 패키지 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../class-summary.html"> 클래스 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../whatsnew.html"> 새로운 내용 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../all-index-Symbols.html"> 색인 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../appendixes.html"> 부록 </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">영어로 표시되는 이유</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/ko_KR/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('../../')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('../../')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="../../help.js"></script>
+						<script language="javascript" type="text/javascript" src="../../asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="../../filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>필터:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">서버에서 데이터를 검색하는 중...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">서버에서 데이터를 검색하는 중...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="SQLStatement.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">flash.data&nbsp;</a><br>
+								<h1 id="classProductName">SQLStatement&nbsp; - AS3 </h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="SQLStatement.html#propertySummary" style="display:none"> 속성 </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="SQLStatement.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> 속성 </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="SQLStatement.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> 생성자 </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="SQLStatement.html#methodSummary" style="display:none"> 메서드 </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="SQLStatement.html#constantSummary" style="display:none"> 전역 상수 </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="SQLStatement.html#eventSummary" style="display:none"> 이벤트 </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="SQLStatement.html#styleSummary" style="display:none"> 스타일 </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="SQLStatement.html#SkinPartSummary" style="display:none"> 스킨 파트 </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="SQLStatement.html#SkinStateSummary" style="display:none"> 스킨 상태 </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="SQLStatement.html#effectSummary" style="display:none"> 효과 </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="SQLStatement.html#constantSummary" style="display:none"> 상수 </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="SQLStatement.html#methodSummary" style="display:none"> 전역 함수 </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="SQLStatement.html#methodSummary" style="display:none">함수</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="SQLStatement.html#interfaceSummary" style="display:none"> 인터페이스 </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="SQLStatement.html#classSummary" style="display:none"> 클래스 </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="SQLStatement.html#includeExamplesSummary" style="display:none"> 예제 </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="SQLStatement.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								클래스
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">패키지</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">flash.data</a></td></tr><tr><td class="classHeaderTableLabel">클래스</td><td class="classSignature">public  class  SQLStatement</td></tr><tr><td class="classHeaderTableLabel">상속</td><td class="inheritanceList">SQLStatement  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../Object.html">Object</a></td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p></p>
+ SQLStatement 인스턴스는 SQLConnection 인스턴스를 통해 연 로컬 SQL 데이터베이스에 대해 SQL 문을 실행하는 데 사용됩니다.
+ 
+ <p>SQLStatement 인스턴스는 SQLConnection 인스턴스를 SQLStatement 인스턴스의 <code>sqlConnection</code> 속성 값으로 설정하여 SQLConnection 인스턴스에 연결됩니다. <code>text</code> 속성은 실행할 SQL 문의 실제 텍스트로 채워집니다. 필요한 경우 <code>parameters</code> 속성을 사용하여 SQL 문 매개 변수 값을 지정하고 <code>execute()</code> 메서드를 호출하여 이 명령문을 실행합니다.</p>
+ 
+               <p>로컬 SQL 데이터베이스에서 지원되는 SQL 언어에 대한 자세한 내용은 부록 <a href="http://adobe.com/go/learn_as3_sqlsupportdb_kr" >로컬 데이터베이스의 SQL 지원</a>을 참조하십시오.</p>
+ 
+               <p>비동기 실행 모드에서는 <code>execute()</code> 및 <code>next()</code> 메서드가 백그라운드에서 실행되고 작업이 완료되거나 실패할 때 런타임에서 이벤트를 등록된 이벤트 리스너나 지정된 Responder 인스턴스에 전달합니다. 동기 모드에서는 메서드가 기본 응용 프로그램 스레드에서 실행되므로 데이터베이스 작업이 완료될 때까지 다른 코드가 실행되지 않습니다. 또한 동기 모드에서는 메서드가 실패할 경우 런타임에서 오류 이벤트를 전달하지 않고 예외가 발생합니다.</p>
+ 
+            <p></p><p><span class="classHeaderTableLabel">관련 API 요소</span></p><div class="seeAlso"><a href="SQLConnection.html" target="">flash.data.SQLConnection</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary" id="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">공용 속성</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="SQLStatement.html#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 상속되는 공용 속성 숨기기</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="SQLStatement.html#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 상속되는 공용 속성 표시</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">속성</th><th>정의 주체</th></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="../../Object.html#constructor" class="signatureLink">constructor</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">
+	 지정된 객체 인스턴스의 클래스 객체 또는 생성자 함수에 대한 참조입니다.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#executing" class="signatureLink">executing</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">[읽기 전용] 
+     명령문이 현재 실행되고 있는지 여부를 나타냅니다.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#itemClass" class="signatureLink">itemClass</a> : <a href="../../Class.html">Class</a><div class="summaryTableDescription">
+     명령문 실행의 결과로 반환되는 각 행에 대해 사용되는 클래스(데이터 유형)를 나타냅니다.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#parameters" class="signatureLink">parameters</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">[읽기 전용] 
+     SQL 문의 text 속성에 지정한 매개 변수의 값을 추가하는 연결 배열로 사용됩니다.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#sqlConnection" class="signatureLink">sqlConnection</a> : <a href="SQLConnection.html">SQLConnection</a><div class="summaryTableDescription">
+     명령문을 실행할 대상 데이터베이스에 대한 연결을 관리하는 SQLConnection 객체입니다.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#text" class="signatureLink">text</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">
+     명령문의 실제 SQL 텍스트입니다.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary" id="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">공용 메서드 </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="SQLStatement.html#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 상속되는 공용 메서드 숨기기</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="SQLStatement.html#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 상속되는 공용 메서드 표시</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">메서드</th><th>정의 주체</th></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#SQLStatement()" class="signatureLink">SQLStatement</a>()</div><div class="summaryTableDescription">
+     SQLStatement 인스턴스를 만듭니다.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#addEventListener()" class="signatureLink">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	리스너에서 이벤트 알림을 받을 수 있도록 EventDispatcher 객체에 이벤트 리스너 객체를 등록합니다.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#cancel()" class="signatureLink">cancel</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     이 명령문의 실행을 취소합니다.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#clearParameters()" class="signatureLink">clearParameters</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     현재 매개 변수 설정을 모두 지웁니다.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	이벤트를 이벤트 흐름으로 전달합니다.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#execute()" class="signatureLink">execute</a>(prefetch:<a href="../../int.html">int</a> = -1, responder:<a href="../net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     sqlConnection 속성에 있는 SQLConnection 객체에 연결된 데이터베이스에 대해 텍스트 속성에 있는 SQL을 실행합니다.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#getResult()" class="signatureLink">getResult</a>():<a href="SQLResult.html">SQLResult</a></div><div class="summaryTableDescription">
+     SELECT 문의 모든 결과 행 및 실행되는 모든 명령문의 실행과 관련된 기타 정보를 비롯한 명령문 실행의 결과를 포함하는 SQLResult 객체에 대한 액세스를 제공합니다.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	EventDispatcher 객체에 특정 유형의 이벤트에 대한 리스너가 등록되어 있는지 여부를 확인합니다.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#hasOwnProperty()" class="signatureLink">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 지정된 속성이 객체에 정의되어 있는지 여부를 나타냅니다.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#isPrototypeOf()" class="signatureLink">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Object 클래스의 인스턴스가 매개 변수로 지정된 객체의 프로토타입 체인에 있는지 여부를 나타냅니다.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#next()" class="signatureLink">next</a>(prefetch:<a href="../../int.html">int</a> = -1, responder:<a href="../net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     SELECT 문 결과 집합의 다음 부분을 검색합니다.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#propertyIsEnumerable()" class="signatureLink">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 지정된 속성이 존재하고 열거 가능한지 여부를 나타냅니다.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#removeEventListener()" class="signatureLink">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	EventDispatcher 객체에서 리스너를 제거합니다.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#setPropertyIsEnumerable()" class="signatureLink">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     루프 작업에서 동적 속성을 사용할 수 있는지 여부를 설정합니다.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toLocaleString()" class="signatureLink">toLocaleString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 로캘별 규칙에 따라 서식이 지정된 이 객체의 문자열 표현을 반환합니다.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toString()" class="signatureLink">toString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 지정된 객체의 문자열 표현을 반환합니다.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#valueOf()" class="signatureLink">valueOf</a>():<a href="../../Object.html">Object</a></div><div class="summaryTableDescription">
+	 지정된 객체의 프리미티브 값을 반환합니다.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	이 EventDispatcher 객체 또는 조상 객체에 지정한 이벤트 유형에 대한 이벤트 리스너가 등록되어 있는지 여부를 확인합니다.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary" id="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">이벤트</div><div class="showHideLinks"><a href="http://help.adobe.com/en_US/Flex/4.6/UsingSDK/WS2db454920e96a9e51e63e3d11c0bf69084-7ee9.html" target="_blank">이벤트에 대한 자세한 내용을 보려면 클릭하십시오.</a></div><div class="showHideLinks"><div id="hideInheritedEvent" class="hideInheritedEvent"><a class="showHideLink" href="SQLStatement.html#eventSummary" onclick="javascript:setInheritedVisible(false,'Event');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 상속되는 이벤트 숨기기</a></div><div id="showInheritedEvent" class="showInheritedEvent"><a class="showHideLink" href="SQLStatement.html#eventSummary" onclick="javascript:setInheritedVisible(true,'Event');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 상속되는 이벤트 표시</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">이벤트</th><th> 요약 </th><th>정의 주체</th></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[브로드캐스트 이벤트] Flash Player 또는 AIR 응용 프로그램이 운영 체제 포커스를 얻어 활성화될 때 전달됩니다.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[브로드캐스트 이벤트] Flash Player 또는 AIR 응용 프로그램이 운영 체제 포커스를 잃고 비활성화될 때 전달됩니다.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#event:error" class="signatureLink">error</a></div></td><td class="summaryTableDescription summaryTableCol">작업 동안 오류가 발생할 때 전달됩니다.</td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#event:result" class="signatureLink">result</a></div></td><td class="summaryTableDescription summaryTableCol">execute() 또는 next() 메서드 호출의 작업이 성공적으로 완료될 때 전달됩니다.</td><td class="summaryTableOwnerCol">SQLStatement</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">속성 세부 정보</div><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="executing" id="executing"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>executing</h3></td><td class="detailHeaderType">속성</td></tr></table><div class="detailBody"><code>executing:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[읽기 전용] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     명령문이 현재 실행되고 있는지 여부를 나타냅니다.
+     
+     <p><code>execute()</code>가 호출되었고 데이터베이스에서 결과 중 일부가 반환되지 않은 경우 이 속성은 true입니다.</p>
+     
+     </p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get executing():<a href="../../Boolean.html">Boolean</a></code><br/><p><span class="label">관련 API 요소</span></p><div class="seeAlso"><a href="SQLStatement.html#execute()" target="">execute()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="itemClass" id="itemClass"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>itemClass</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>itemClass:<a href="../../Class.html">Class</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     명령문 실행의 결과로 반환되는 각 행에 대해 사용되는 클래스(데이터 유형)를 나타냅니다.
+     
+     
+     
+     <p>기본적으로 <code>SELECT</code> 문에서 반환하는 각 행은 Object 인스턴스로 만들어지며 결과 집합의 열 이름이 객체의 속성 이름으로 사용되고 각 열의 값이 관련 속성의 값으로 사용됩니다.</p>
+     
+     <p><code>itemClass</code> 속성의 클래스를 지정하면 이 SQLStatement 인스턴스가 실행하는 <code>SELECT</code> 문에서 반환되는 각 행은 지정한 클래스의 인스턴스로 만들어집니다. <code>itemClass</code> 인스턴스의 각 속성에는 속성과 이름이 같은 열의 값이 할당됩니다.</p>
+     
+     <p>이 속성에 할당하는 모든 클래스에는 매개 변수가 필요하지 않은 생성자가 있어야 합니다. 또한 클래스에는 <code>SELECT</code> 문에서 반환되는 각 열에 대해 하나의 속성이 있어야 합니다. <code>SELECT</code> 목록의 열에 <code>itemClass</code> 클래스의 속성 이름과 일치하는 이름이 없는 경우 오류로 간주됩니다.</p>
+     
+     </p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get itemClass():<a href="../../Class.html">Class</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set itemClass(value:<a href="../../Class.html">Class</a>):<a href="../../specialTypes.html#void">void</a></code><br/><p><span class="label">관련 API 요소</span></p><div class="seeAlso"><a href="SQLResult.html#data" target="">flash.data.SQLResult.data</a></div><span id="pageFilter"><br/><span class="label"> 예제 &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_kr"> 예제 사용 방법 </a></span>)
+            </span><br/><div class="detailBody"> 다음 코드 예제에서는 <code>itemClass</code> 속성을 사용하여 런타임이 SQL <code>SELECT</code> 문 결과에서 사용자 정의 클래스의 인스턴스를 만들도록 지정하는 방법을 보여 줍니다.
+<div class="listing"><pre>
+// Employee class definition
+package
+{
+    public class Employee
+    {
+        public var name:String;
+        public var ssn:String;
+        public var id:uint;
+        public override function toString():String
+        {
+            return "id: "+ id.toString() + " name: " + name + " ssn: " + ssn;
+        }
+    }
+}
+
+
+// using the Employee class as SQLStatement.itemClass
+var conn:SQLConnection;
+var dbStatement:SQLStatement;
+
+function init():void
+{
+    conn = new SQLConnection();
+    conn.addEventListener(SQLEvent.OPEN, connOpenHandler);
+    
+    dbStatement = new SQLStatement();
+    dbStatement.sqlConnection = conn;
+    dbStatement.text = "SELECT id, name, ssn FROM employees";
+    dbStatement.itemClass = Employee;
+    
+    var dbFile:File = new File(File.separator + "employee.db");
+    conn.open(dbFile);
+}
+
+function connOpenHandler(event:SQLEvent):void
+{
+    dbStatement.addEventListener(SQLEvent.RESULT, resultHandler);
+    dbStatement.execute();
+}
+
+function resultHandler(event:SQLEvent):void
+{
+    var result:SQLResult = dbStatement.getResult();
+    if (result != null)
+    {
+        var emp:Employee;
+        var numRows:int = result.data.length;
+        for (var i:int = 0; i &lt; numRows; i++)
+        {
+            emp = result.data[i];
+            trace(emp.toString());
+        }
+    }
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="parameters" id="parameters"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>parameters</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>parameters:<a href="../../Object.html">Object</a></code>&nbsp;&nbsp;[읽기 전용] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     SQL 문의 <code>text</code> 속성에 지정한 매개 변수의 값을 추가하는 연결 배열로 사용됩니다. 배열 키는 매개 변수의 이름입니다. 명령문 텍스트에 이름이 지정되지 않은 매개 변수를 지정한 경우 해당 키는 매개 변수의 인덱스입니다.
+     
+     <p>SQL 문의 텍스트 내에서 매개 변수는 "?", ":" 또는 "@" 문자 중 하나로 표시됩니다.</p>
+     
+     <p>":" 및 "@" 토큰은 이름이 지정된 매개 변수를 나타내고 토큰 다음의 문자는 매개 변수 이름을 지정합니다.</p>
+     
+     <p>예를 들어 다음 SQL 문에서는 ":" 문자를 사용하여 <code>firstName</code>이라는 매개 변수를 지정합니다.</p>
+     
+     <pre>SELECT FROM employees WHERE firstName = :firstName</pre>
+     
+     <p>"?" 토큰은 인덱싱된(번호 지정된) 매개 변수를 나타냅니다. 즉, 명령문 텍스트에서 매개 변수의 시퀀스에 따라 각 매개 변수에 인덱스가 자동으로 지정됩니다. 매개 변수의 인덱스 값은 0부터 시작합니다. 즉, 첫 번째 매개 변수의 인덱스는 0입니다.</p>
+     
+     <p>매개 변수를 사용하면 SQL 문을 생성할 때는 알 수 없는 값을 입력하여 대체할 수 있습니다. 데이터베이스에 전달되는 값에 대해 저장소 클래스를 확보하는 방법은 매개 변수를 사용하는 것 외에는 없습니다. 매개 변수를 사용하지 않으면 모든 값이 관련 열의 유형 선호도에 따라 텍스트 표현에서 저장소 클래스로 변환됩니다. 저장소 클래스 및 열 선호도에 대한 자세한 내용은 "데이터 유형 지원" 단원(부록 "<a href="http://adobe.com/go/learn_as3_sqlsupportdb_kr" >로컬 데이터베이스의 SQL 지원</a>")을 참조하십시오.</p>
+     
+     <p>매개 변수는 SQL 삽입 공격이라는 악의적 기술의 피해를 방지하기 위한 보안 조치로도 사용됩니다. SQL 삽입 공격에서는 사용자가 액세스 가능한 위치(예: 데이터 입력 필드)에 SQL 코드를 입력합니다. 사용자 입력을 SQL 텍스트에 직접 연결하여 응용 프로그램 코드에서 SQL 문을 생성하면 사용자가 입력한 SQL 코드가 데이터베이스에 대해 실행됩니다. 다음 목록에서는 사용자 입력을 SQL 텍스트에 연결하는 예제를 보여 줍니다. <b>이 방법을 사용하지 마십시오.</b></p>
+     
+     <div class="listing"><pre>
+     // assume the variables "username" and "password"
+     // contain user-entered data
+     var sql:String =
+         "SELECT userId " +
+         "FROM users " +
+         "WHERE username = '" + username + "' " +
+         "    AND password = '" + password + "'";
+     var statement:SQLStatement = new SQLStatement();
+     statement.text = sql;
+     </pre></div>
+     
+     
+     
+     <p>매개 변수 값은 리터럴 명령문 텍스트의 일부가 되지 않고 명시적으로 대체 값으로 처리되므로 사용자가 입력한 값을 명령문의 텍스트에 연결하는 대신 명령문 매개 변수를 사용하면 SQL 삽입 공격을 방지할 수 있습니다. 다음은 이전 목록 대신 사용할 수 있는 권장 방법입니다.</p>
+     
+     <div class="listing"><pre>
+     // assume the variables "username" and "password"
+     // contain user-entered data
+     var sql:String =
+         "SELECT userId " +
+         "FROM users " +
+         "WHERE username = :username " +
+         "    AND password = :password";
+     var statement:SQLStatement = new SQLStatement();
+     statement.text = sql;
+     // set parameter values
+     statement.parameters[":username"] = username;
+     statement.parameters[":password"] = password;
+     </pre></div>
+     
+     
+     
+     <p>모든 매개 변수 값은 명령문을 실행하기 전에 설정해야 합니다. <code>parameters</code> 배열에서 지정한 매개 변수 값은 <code>execute()</code> 메서드를 호출할 때 바인딩(즉, 명령문 텍스트와 결합)됩니다. <code>execute()</code>를 호출한 이후에는 값을 변경해도 실행 중인 명령문에 적용되지 않습니다. 그러나 다음에 <code>execute()</code>를 호출할 때 변경된 값이 사용됩니다. <code>parameters</code> 속성에 값을 지정하지 않은 매개 변수가 명령문 텍스트에 들어 있으면 오류가 발생합니다.</p>
+     
+     <p><code>parameters</code> 속성에서 매개 변수 값을 모두 지우려면 <code>clearParameters()</code> 메서드를 사용합니다.</p>
+     
+	 </p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get parameters():<a href="../../Object.html">Object</a></code><br/><p><span class="label">관련 API 요소</span></p><div class="seeAlso"><a href="SQLStatement.html#text" target="">text</a><br/><a href="SQLStatement.html#clearParameters()" target="">clearParameters()</a></div><span id="pageFilter"><br/><span class="label"> 예제 &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_kr"> 예제 사용 방법 </a></span>)
+            </span><br/><div class="detailBody"> 다음은 SQL 문에서 이름이 지정된 매개 변수 <code>:firstName</code>을 사용하는 예제입니다.
+<div class="listing"><pre>
+// employees is a SQLStatement instance
+employees.text = "SELECT FROM employees WHERE first = :firstName";
+employees.parameters[":firstName"] = "Sam";
+employees.execute();
+</pre></div></div></span><span id="pageFilter"><div class="detailBody"> 다음 예제에서는 SQL 문에서 이름이 지정되지 않은 매개 변수를 사용하는 방법을 보여 줍니다.
+<div class="listing"><pre>
+// employees is a SQLStatement instance
+employees.text = "SELECT FROM employees WHERE first = ?";
+employees.parameters[0] = "Sam";
+employees.execute();
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="sqlConnection" id="sqlConnection"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>sqlConnection</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>sqlConnection:<a href="SQLConnection.html">SQLConnection</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     명령문을 실행할 대상 데이터베이스에 대한 연결을 관리하는 SQLConnection 객체입니다.
+     
+     </p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get sqlConnection():<a href="SQLConnection.html">SQLConnection</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set sqlConnection(value:<a href="SQLConnection.html">SQLConnection</a>):<a href="../../specialTypes.html#void">void</a></code><br/><br/><span class="label"> 오류 </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; 명령문이 실행되고 있는 동안 이 속성의 값을 변경하려고 할 경우
+	 
+     </td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="text" id="text"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>text</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>text:<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     명령문의 실제 SQL 텍스트입니다.
+	 
+     <p>텍스트는 지원되는 임의의 SQL일 수 있습니다. 로컬 SQL 데이터베이스에서 지원되는 SQL 언어에 대한 자세한 내용은 부록 "<a href="http://adobe.com/go/learn_as3_sqlsupportdb_kr" >로컬 데이터베이스의 SQL 지원</a>"을 참조하십시오.</p>
+     
+     </p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get text():<a href="../../String.html">String</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set text(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><br/><br/><span class="label"> 오류 </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; 명령문이 실행되고 있는 동안 <code>text</code> 속성을 변경하려고 하는 경우
+     
+     </td></tr></table></div></span><a name="constructorDetail" id="constructorDetail"></a><div class="detailSectionHeader">생성자 세부 정보</div><span id="pageFilter" runtime="AIR::1.0##"><a name="SQLStatement()" id="SQLStatement()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>SQLStatement</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">생성자</td></tr></table><div class="detailBody"><code>public function SQLStatement()</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p>
+     SQLStatement 인스턴스를 만듭니다.
+     
+     </p><br/><span class="label">오류</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; 생성자가 기본 응용 프로그램 샌드박스 외부의 샌드박스에서 호출된 경우입니다. 
+     
+     </td></tr></table></div></span><a name="methodDetail" id="methodDetail"></a><div class="detailSectionHeader">메서드 세부 정보</div><span id="pageFilter" runtime="AIR::1.0##"><a name="cancel()" id="cancel()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;cancel</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">메서드</td></tr></table><div class="detailBody"><code> public function cancel():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     이 명령문의 실행을 취소합니다. <code>SQLConnection.cancel()</code>과 마찬가지로 이 메서드는 장기 실행 쿼리를 중단하거나 아직 완료되지 않은 쿼리를 취소하는 데 사용됩니다. 그러나 <code>SQLConnection.cancel()</code>과 달리 이 메서드는 단일 명령문만 취소합니다. 명령문이 현재 실행되고 있지 않은 경우 이 메서드를 호출하면 아무 것도 수행되지 않습니다.
+	 
+	 <p><code>cancel()</code> 작업의 완료에 대한 직접 응답으로 이벤트가 전달되지 않습니다. 그러나 <code>cancel()</code> 작업이 완료되고 명령문 실행이 취소되면 SQLStatement 인스턴스는 명령문 실행(<code>execute()</code> 또는 <code>next()</code> 호출)이 완료되지 않았음을 나타내는 <code>error</code> 이벤트를 전달합니다. 또는 <code>execute()</code> 또는 <code>next()</code> 호출의 <code>responder</code> 매개 변수에 대해 값을 지정한 경우 지정된 오류 핸들러 메서드가 호출됩니다. 두 경우 모두 리스너에 전달되는 SQLError 인스턴스는 <code>errorID</code> 속성의 값이 3118(작업이 중단됨)이 됩니다.</p>
+	 
+	 </p></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="clearParameters()" id="clearParameters()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;clearParameters</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">메서드</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function clearParameters():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     현재 매개 변수 설정을 모두 지웁니다.
+     
+     </p><p><span class="label">관련 API 요소</span></p><div class="seeAlso"><a href="SQLStatement.html#parameters" target="">parameters</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="execute()" id="execute()"></a><a name="execute(int,flash.net.Responder)" id="execute(int,flash.net.Responder)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;execute</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">메서드</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function execute(prefetch:<a href="../../int.html">int</a> = -1, responder:<a href="../net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     <code>sqlConnection</code> 속성에 있는 SQLConnection 객체에 연결된 데이터베이스에 대해 <code>text</code> 속성에 있는 SQL을 실행합니다.
+     
+	 <p><code>responder</code> 인수가 <code>null</code>이 아닌 경우 지정한 Responder 객체는 작업의 결과를 처리하기 위해 호출되는 메서드를 지정합니다. <code>responder</code> 인수가 <code>null</code>인 경우 비동기 실행 모드에서 작업이 성공하면 <code>result</code> 이벤트가 전달되고, 작업이 실패하면 <code>error</code> 이벤트가 전달됩니다.</p>
+	 
+	 <p><code>SELECT</code> 문의 결과 행 또는 데이터베이스에서 생성된 <code>INSERT</code> 문의 기본 키 같은 명령문의 결과에 액세스하려면 <code>getResult()</code> 메서드를 호출합니다. 결과는 명령문이 동기 모드에서 실행된 후 즉시 그리고 <code>result</code> 이벤트가 비동기 모드에서 전달될 때 사용할 수 있습니다. </p>
+     
+     <p>각 명령을 실행하려면 먼저 준비(컴파일)해야 합니다. SQLStatement 인스턴스의 <code>execute()</code> 메서드를 처음으로 호출하면 런타임에서 명령문을 준비합니다. 명령문이 준비되면 <code>text</code> 속성을 변경하기 전까지는 다시 준비할 필요가 없습니다. 하나 이상의 매개 변수 값을 설정해도 명령문을 다시 준비할 필요가 없습니다.</p>
+	 
+     </p><p><span class="label"> 매개 변수 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">prefetch</span>:<a href="../../int.html">int</a></code> (default = <code>-1</code>)<code></code> &mdash; 명령문의 <code>text</code> 속성이 <code>SELECT</code> 문인 경우 이 값은 명령문에서 한 번에 반환하는 행 수를 나타냅니다. 기본값인 -1은 한 번에 모든 결과 행을 반환하는 것을 나타냅니다. 이 매개 변수를 <code>next()</code> 메서드와 함께 사용하여 큰 결과 집합을 작은 데이터 집합으로 나눕니다. 이렇게 하면 초기 결과를 더 빠르게 반환하고 결과 처리 작업을 분할하여 사용자가 응용 프로그램 성능이 나아진 것으로 인식하게 할 수 있습니다.
+     
+     <p>SQL 문이 <code>SELECT</code> 쿼리이고 0보다 큰 <code>prefetch</code> 인수가 지정된 경우, 전체 결과 집합이 반환되거나 <code>SQLStatement.cancel()</code> 또는 <code>SQLConnection.cancel()</code> 메서드가 호출될 때까지 해당 문이 실행 중인 것으로 간주됩니다. 실행 중에 결과 집합의 행 수를 알 수 없으므로 데이터베이스 커서가 결과 집합의 마지막 행을 넘어가야만 해당 문이 완료된 것으로 간주됩니다. <code>execute()</code> 호출에서 <code>prefetch</code> 인수를 지정하는 경우 결과 집합의 행 수보다 큰 <code>prefetch</code> 값이나 <code>next()</code> 메서드에 대한 후속 호출을 통해 결과 집합의 총 행 수보다 하나 이상 많은 행을 요청해야만 결과 SQLResult 인스턴스의 <code>complete</code> 속성이 <code>true</code>입니다.</p>
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">responder</span>:<a href="../net/Responder.html">Responder</a></code> (default = <code>null</code>)<code></code> &mdash; 작업이 성공하거나 실패할 때 호출할 메서드를 지정하는 객체입니다. 비동기 실행 모드에서 <code>responder</code> 인수가 <code>null</code>인 경우 실행이 완료되면 <code>result</code> 또는 <code>error</code> 이벤트가 전달됩니다.
+     
+     </td></tr></table></p><br/><span class="label">이벤트</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>result</b>:<a href="../events/SQLEvent.html"><code>SQLEvent</code></a></code> &mdash; 명령문 실행이 성공적으로 완료될 때나 <code>prefetch</code> 인수 값이 지정되어 있고 <code>SELECT</code> 문이 하나 이상의 데이터 행을 반환할 때 전달됩니다.
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>error</b>:<a href="../events/SQLErrorEvent.html"><code>SQLErrorEvent</code></a></code> &mdash; 비동기 실행 모드에서 작업이 실패하는 경우 전달됩니다.
+     
+     </td></tr></table><br/><span class="label">오류</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; <code>text</code> 속성이 <code>null</code>이거나 빈 문자열(<code>""</code>)을 포함하는 경우, <code>sqlConnection</code> 속성이 설정되지 않은 경우, <code>sqlConnection</code> 속성에 할당된 SQLConnection 인스턴스가 연결되지 않은 경우 또는 명령문이 현재 실행 중인 경우입니다.
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/SQLError.html">SQLError</a> </code> &mdash; 동기 실행 모드에서 작업이 실패하는 경우입니다.
+     
+	 </td></tr></table><p><span class="label">관련 API 요소</span></p><div class="seeAlso"><a href="SQLStatement.html#next()" target="">next()</a><br/><a href="SQLStatement.html#getResult()" target="">getResult()</a></div><span id="pageFilter"><br/><span class="label"> 예제 &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_kr"> 예제 사용 방법 </a></span>)
+            </span><br/><br/><div class="detailBody"> 다음 예제에서는 이벤트 리스너를 사용하여 명령문 실행이 완료되거나 실패한 때를 확인하는 SQLStatement 실행을 보여 줍니다.
+<div class="listing"><pre>
+var conn:SQLConnection;
+var dbStatement:SQLStatement;
+
+function init():void
+{
+    conn = new SQLConnection();
+    conn.addEventListener(SQLEvent.OPEN, connOpenHandler);
+    
+    dbStatement = new SQLStatement();
+    dbStatement.sqlConnection = conn;
+    dbStatement.text = "SELECT id, name, ssn FROM employees";
+    
+    var dbFile:File = new File(File.separator + "employee.db");
+    conn.open(dbFile);
+}
+
+function connOpenHandler(event:SQLEvent):void
+{
+    dbStatement.addEventListener(SQLEvent.RESULT, resultHandler);
+    dbStatement.addEventListener(SQLErrorEvent.ERROR, errorHandler);
+    dbStatement.execute();
+}
+
+function resultHandler(event:SQLEvent):void
+{
+    var result:SQLResult = dbStatement.getResult();
+    if (result != null)
+    {
+        var numRows:int = result.data.length;
+        for (var i:int = 0; i &lt; numRows; i++)
+        {
+            var row:Object = result.data[i];
+            trace("id:", row.id, ", name:", row.name, ", ssn:", row.ssn);
+        }
+    }
+}
+
+function errorHandler(event:SQLErrorEvent):void
+{
+    trace("An error occured while executing the statement.");
+}
+</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody"> 다음 예제에서는 Responder 객체를 사용하여 명령문 실행이 완료되거나 실패할 때 호출하는 함수를 지정하는 SQLStatement 실행을 보여 줍니다.
+<div class="listing"><pre>
+var conn:SQLConnection;
+var dbStatement:SQLStatement;
+var employeeResponder:Responder;
+
+function init():void
+{
+    conn = new SQLConnection();
+    conn.addEventListener(SQLEvent.OPEN, connOpenHandler);
+    
+    dbStatement = new SQLStatement();
+    dbStatement.sqlConnection = conn;
+    dbStatement.text = "SELECT id, name, ssn FROM employees";
+    
+    var dbFile:File = new File(File.separator + "employee.db");
+    conn.open(dbFile);
+}
+
+function connOpenHandler(event:SQLEvent):void
+{
+    employeeResponder = new Responder(resultHandler, errorHandler);
+    dbStatement.execute(-1, employeeResponder);
+}
+
+function resultHandler(result:SQLResult):void
+{
+    if (result != null)
+    {
+        var numRows:int = result.data.length;
+        for (var i:int = 0; i &lt; numRows; i++)
+        {
+            var row:Object = result.data[i];
+            trace("id:", row.id, ", name:", row.name, ", ssn:", row.ssn);
+        }
+    }
+}
+
+function errorHandler(error:SQLError):void
+{
+    trace("An error occured while executing the statement.");
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="getResult()" id="getResult()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;getResult</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">메서드</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getResult():<a href="SQLResult.html">SQLResult</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     <code>SELECT</code> 문의 모든 결과 행 및 실행되는 모든 명령문의 실행과 관련된 기타 정보를 비롯한 명령문 실행의 결과를 포함하는 SQLResult 객체에 대한 액세스를 제공합니다. 비동기 실행 모드에서는 <code>result</code> 이벤트가 전달될 때까지 결과 정보를 사용할 수 없습니다.
+     
+     <p><code>SELECT</code> 문을 실행할 때 기본 <code>prefetch</code> 인수인 -1을 사용하여 <code>execute()</code> 메서드를 호출하는 경우 반환되는 SQLResult 객체에는 쿼리의 전체 결과 집합이 포함됩니다.</p>
+     
+     <p><code>execute()</code> 또는 <code>next()</code> 메서드 호출에 대해 <code>prefetch</code> 인수를 지정하면 <code>getResult()</code> 메서드는 결과의 선입 선출 대기열로 동작합니다. <code>result</code> 이벤트가 전달될 때마다 대기열에 새 SQLResult 객체가 추가됩니다. <code>getResult()</code> 메서드를 호출할 때마다 가장 오래된 SQLResult 객체(대기열에 처음으로 추가된 객체)가 반환되고 대기열에서 제거됩니다. 대기열에 SQLResult 객체가 남아 있지 않으면 <code>getResult()</code>는 <code>null</code>을 반환합니다.</p>
+	 
+	 <p><code>getResult()</code>를 호출하여 SQLResult 객체를 제거하지 않는 한 이 객체는 대기열에 그대로 유지됩니다. 예를 들어 <code>getResult()</code>를 호출하지 않고 <code>execute()</code> 메서드를 여러 번 호출하면 각 <code>execute()</code> 호출과 관련된 SQLResult 객체가 대기열에 그대로 유지됩니다.</p>
+     
+     </p><p></p><span class="label">반환값</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="SQLResult.html">SQLResult</a></code> &mdash; <code>execute()</code> 또는 <code>next()</code> 메서드에 대한 호출의 결과를 포함하는 SQLResult 객체입니다.
+     
+     </td></tr></table><p><span class="label">관련 API 요소</span></p><div class="seeAlso"><a href="SQLStatement.html#execute()" target="">execute()</a><br/><a href="SQLStatement.html#next()" target="">next()</a><br/><a href="SQLStatement.html#event:result" target="">결과 이벤트</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="next()" id="next()"></a><a name="next(int,flash.net.Responder)" id="next(int,flash.net.Responder)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;next</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">메서드</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function next(prefetch:<a href="../../int.html">int</a> = -1, responder:<a href="../net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     <code>SELECT</code> 문 결과 집합의 다음 부분을 검색합니다. 결과 집합에 행이 더 이상 없으면 <code>result</code> 이벤트는 전달되지만 <code>getResult()</code> 대기열에 SQLResult 객체가 추가되지 않습니다.
+     
+     <p>비동기 실행 모드에서 <code>responder</code> 인수가 <code>null</code>이 아닌 경우 지정한 Responder 객체는 작업 결과를 처리하기 위해 호출하는 메서드를 나타냅니다. <code>responder</code> 인수가 <code>null</code>인 경우 작업에 성공하면 <code>result</code> 이벤트가 전달되고 작업에 실패하면 <code>error</code> 이벤트가 전달됩니다.</p>
+     
+     <p>이 메서드는 명령문이 계속 실행되고 있는 경우에만 호출할 수 있습니다. 명령문이 <code>SELECT</code> 쿼리이고 0보다 큰 <code>prefetch</code> 인수를 지정하는 경우 전체 결과 집합이 반환되거나 <code>SQLStatement.cancel()</code> 또는 <code>SQLConnection.cancel()</code> 메서드가 호출될 때까지 명령문이 실행됩니다.</p>
+     
+     </p><p><span class="label"> 매개 변수 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">prefetch</span>:<a href="../../int.html">int</a></code> (default = <code>-1</code>)<code></code> &mdash; 명령문의 <code>text</code> 속성이 <code>SELECT</code> 문인 경우 이 값은 명령문에서 한 번에 반환하는 행 수를 나타냅니다. 기본값인 -1은 한 번에 모든 결과 행을 반환하는 것을 나타냅니다. 이렇게 하면 초기 결과를 더 빠르게 반환하고 결과 처리 작업을 분할하여 사용자가 응용 프로그램 성능이 나아진 것으로 인식하게 할 수 있습니다.
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">responder</span>:<a href="../net/Responder.html">Responder</a></code> (default = <code>null</code>)<code></code> &mdash; 작업이 성공하거나 실패할 때 호출할 메서드를 지정하는 객체입니다. <code>responder</code> 인수가 <code>null</code>인 경우 실행이 완료되면 <code>result</code> 또는 <code>error</code> 이벤트가 전달됩니다.
+     
+     </td></tr></table></p><br/><span class="label">이벤트</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>result</b>:<a href="../events/SQLEvent.html"><code>SQLEvent</code></a></code> &mdash; 명령문 실행이 성공적으로 완료될 때나 <code>prefetch</code> 인수 값이 지정되어 있고 <code>next()</code> 호출이 하나 이상의 데이터 행을 반환할 때 전달됩니다.
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>error</b>:<a href="../events/SQLErrorEvent.html"><code>SQLErrorEvent</code></a></code> &mdash; 비동기 실행 모드에서 작업이 실패하는 경우 전달됩니다.
+     
+     </td></tr></table><br/><span class="label">오류</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; 명령문이 현재 실행되고 있지 않은 동안 메서드를 호출하는 경우(<code>executing</code> 속성이 <code>false</code>인 경우)
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/SQLError.html">SQLError</a> </code> &mdash; 동기 실행 모드에서 작업이 실패하는 경우입니다.
+     
+	 </td></tr></table><p><span class="label">관련 API 요소</span></p><div class="seeAlso"><a href="SQLStatement.html#execute()" target="">execute()</a></div><span id="pageFilter"><br/><span class="label"> 예제 &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_kr"> 예제 사용 방법 </a></span>)
+            </span><br/><br/><div class="detailBody"> 다음 예제에서는 결과를 처음으로 반환할 때 결과 집합의 처음 10개 행만 반환하도록 명시적으로 지정하는 SQLStatement 실행을 보여 줍니다. 이 코드는 SQLResult의 <code>complete</code> 속성을 확인하고 검색되지 않은 행이 있으면 <code>next()</code> 메서드를 호출합니다.
+<div class="listing"><pre>
+var conn:SQLConnection;
+var dbStatement:SQLStatement;
+
+function init():void
+{
+    conn = new SQLConnection();
+    conn.addEventListener(SQLEvent.OPEN, connOpenHandler);
+    
+    dbStatement = new SQLStatement();
+    dbStatement.sqlConnection = conn;
+    dbStatement.text = "SELECT id, name, ssn FROM employees";
+    
+    var dbFile:File = new File(File.separator + "employee.db");
+    conn.open(dbFile);
+}
+
+function connOpenHandler(event:SQLEvent):void
+{
+    dbStatement.addEventListener(SQLEvent.RESULT, resultHandler);
+    dbStatement.addEventListener(SQLErrorEvent.ERROR, errorHandler);
+    dbStatement.execute(10);
+}
+
+function resultHandler(event:SQLEvent):void
+{
+    var result:SQLResult = dbStatement.getResult();
+    if (result != null)
+    {
+        var numRows:int = result.data.length;
+        for (var i:int = 0; i &lt; numRows; i++)
+        {
+            var row:Object = result.data[i];
+            trace("id:", row.id, ", name:", row.name, ", ssn:", row.ssn);
+        }
+        if (!result.complete)
+        {
+            dbStatement.next(10);
+        }
+    }
+}
+
+function errorHandler(event:SQLErrorEvent):void
+{
+    trace("An error occured while executing the statement.");
+}
+</pre></div></div></span></div></span><div class="detailSectionHeader"> 이벤트 세부 정보 </div><span id="pageFilter" runtime="AIR::1.0##"><a name="event:error" id="event:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>error</h3></td><td class="detailHeaderType"> 이벤트 </td></tr></table><div class="detailBody"><span class="label">이벤트 객체 유형: </span><a href="../events/SQLErrorEvent.html"><code>flash.events.SQLErrorEvent</code></a><br/><span class="label">속성 SQLErrorEvent.type  =  </span><a href="../events/SQLErrorEvent.html#ERROR"><code>flash.events.SQLErrorEvent.ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ 작업 동안 오류가 발생할 때 전달됩니다.
+ 
+ </p>
+     <code>SQLErrorEvent.ERROR</code> 상수는 SQLConnection 또는 SQLStatement 인스턴스의 메서드 호출이 완료되었지만 오류가 발생할 때 전달되는 error 이벤트의 <code>type</code> 속성 값을 정의합니다. <code>error</code> 이벤트에는 다음과 같은 속성이 있습니다.
+	 
+	 <table class="innertable" ><tr><th>속성</th><th>값</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>. 취소할 기본 비헤이비어가 없습니다.</td></tr><tr><td><code>error</code></td><td>발생한 오류 유형 및 오류를 발생시킨 작업에 대한 정보가 포함된 SQLError 객체입니다.</td></tr><tr><td><code>currentTarget</code></td><td>이벤트 리스너를 통해 Event 객체를 처리하고 있는 객체입니다.</td></tr><tr><td><code>target</code></td><td>오류를 보고하는 SQLConnection 또는 SQLStatement 객체입니다.</td></tr></table>
+	 
+	 <p><span class="label">관련 API 요소</span></p><div class="seeAlso"><a href="SQLStatement.html#execute()" target="">execute()</a><br/><a href="SQLStatement.html#next()" target="">next()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:result" id="event:result"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>result</h3></td><td class="detailHeaderType"> 이벤트 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">이벤트 객체 유형: </span><a href="../events/SQLEvent.html"><code>flash.events.SQLEvent</code></a><br/><span class="label">속성 SQLEvent.type  =  </span><a href="../events/SQLEvent.html#RESULT"><code>flash.events.SQLEvent.RESULT</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ <code>execute()</code> 또는 <code>next()</code> 메서드 호출의 작업이 성공적으로 완료될 때 전달됩니다. <code>result</code> 이벤트가 전달되면 <code>getResult()</code> 메서드를 호출하여 명령문 결과를 검색할 수 있습니다.
+ 
+ 
+ </p>
+     <code>SQLEvent.RESULT</code> 상수는 <code>result</code> 이벤트 객체의 <code>type</code> 속성 값을 정의합니다. <code>SQLStatement.execute()</code> 메서드 또는 <code>SQLStatement.next()</code>가 성공적으로 완료될 때 전달됩니다. <code>SQLEvent.RESULT</code> 이벤트가 전달되면 <code>SQLStatement.getResult()</code> 메서드를 호출하여 결과 데이터에 액세스할 수 있습니다. <code>result</code> 이벤트에는 다음과 같은 속성이 있습니다.
+	 
+	 <table class="innertable" ><tr><th>속성</th><th>값</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>. 취소할 기본 비헤이비어가 없습니다.</td></tr><tr><td><code>currentTarget</code></td><td>이벤트 리스너를 통해 Event 객체를 처리하고 있는 객체입니다.</td></tr><tr><td><code>target</code></td><td>작업을 수행한 SQLStatement 객체입니다.</td></tr></table>
+	 
+	 <p><span class="label">관련 API 요소</span></p><div class="seeAlso"><a href="SQLStatement.html#execute()" target="">execute()</a><br/><a href="SQLStatement.html#next()" target="">next()</a><br/><a href="SQLStatement.html#getResult()" target="">getResult()</a></div></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script></div><p xmlns:xd="http://www.pnp-software.com/XSLTdoc"></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 03:17 PM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/ko_KR/legalnotices/index.html">법적 고지 사항</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">온라인 개인 정보 보호 정책</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">영어로 표시되는 이유</span>
+				</div>
+				<div class="white_content_body">
+					<b>ActionScript 3.0 참조 설명서의 내용이 영어로 나타납니다.</b><br><br>
+					ActionScript 3.0 참조 설명서 중 일부는 전체 언어로 번역되지 않았습니다. 언어 요소가 번역되지 않은 경우 영어로 나타납니다. 예를 들어 ga.controls.HelpBox 클래스는 어떤 언어로도 번역되지 않았습니다. 그러므로 한국어 버전의 참조 설명서에서 ga.controls.HelpBox 클래스는 영어로 나타납니다.
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 03:17 PM Z  -->

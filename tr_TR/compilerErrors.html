@@ -1,0 +1,799 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg; Flash&reg; Platform için ActionScript&reg; 3.0 Başvurusu"><meta name="lang" content="tr-tr"><link rel="stylesheet" href="style.css" type="text/css" media="screen"><link rel="stylesheet" href="print.css" type="text/css" media="print"><link rel="stylesheet" href="override.css" type="text/css"><link rel="stylesheet" href="asfilter.css" type="text/css"><link rel="stylesheet" href="ion.css" type="text/css"><title>Derleyici Hataları - Adobe ActionScript&reg; 3 (AS3) API Başvurusu</title>
+		<link rel="stylesheet" href="filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="filter_new.css" type="text/css">
+			
+		<script src="jquery.js" type="text/javascript"></script>
+		<script src="s_chl_code.js" type="text/javascript"></script>
+		<script src="jquery.zclip.js" type="text/javascript"></script>
+		<script src="jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="cookies.js" type="text/javascript"></script>
+		<script src="asdoc.js" type="text/javascript"></script>
+		<script src="iscroll.js" type="text/javascript"></script>
+		<script src="AC_OETags.js" type="text/javascript"></script>
+		<script src="omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "Çalışma zamanları";
+			var productsLabel = "Ürünler";
+			var noneLabel = "Yok";
+			var qsearchBoxLabel = "Hızlı Arama";
+			var qsearchText = "Terim bulunamadı";
+			var ajaxErrorMsg="Sayfa Yüklenirken Hata Oluştu";
+			var ajaxErrorTryMsg="Yeniden Dene";
+			var ajaxLoadingMsg="Yükleme Devam Ediyor";
+			var cancelMsg = "İptal";
+			var classesText = "Sınıflar";
+			var strJiveReply = "Bu soru aşağıdaki makaleye yanıt olarak gönderilmiştir: "
+			var showFilters = "Filtreleri Göster";
+			var hideFilters = "Filtreleri Gizle";
+			
+		
+			var baseRef = "./";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup> Platform için ActionScript<sup>&reg;</sup> 3.0 Başvurusu<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="index.html"> Ana Sayfa </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="compilerErrors.html#top" style="display:">Paket ve Sınıf Listesini Göster</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="compilerErrors.html#top" style="display:none">Paket ve Sınıf Listesini Gizle</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="package-summary.html"> Paketler </a>&nbsp;|&nbsp;
+												<a target="_self" href="class-summary.html"> Sınıflar </a>&nbsp;|&nbsp;
+												<a target="_self" href="whatsnew.html"> Yenilikler </a>&nbsp;|&nbsp;
+												<a target="_self" href="all-index-Symbols.html"> Dizin </a>&nbsp;|&nbsp;
+												<a target="_self" href="appendixes.html"> Ekler </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Niçin İngilizce?</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/tr_TR/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('./')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('./')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="help.js"></script>
+						<script language="javascript" type="text/javascript" src="asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>Filtreler:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">Sunucudan Veri Alınıyor...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">Sunucudan Veri Alınıyor...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="compilerErrors.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">&nbsp;</a><br>
+								<h1 id="classProductName">Derleyici Hataları&nbsp;</h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="compilerErrors.html#propertySummary" style="display:none"> Özellikler </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="compilerErrors.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Özellikler </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="compilerErrors.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Yapıcı </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="compilerErrors.html#methodSummary" style="display:none"> Yöntemler </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="compilerErrors.html#constantSummary" style="display:none"> Global Sabitler </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="compilerErrors.html#eventSummary" style="display:none"> Olaylar </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="compilerErrors.html#styleSummary" style="display:none"> Stiller </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="compilerErrors.html#SkinPartSummary" style="display:none"> Kaplama Bölümleri </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="compilerErrors.html#SkinStateSummary" style="display:none"> Kaplama Durumları </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="compilerErrors.html#effectSummary" style="display:none"> Efektler </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="compilerErrors.html#constantSummary" style="display:none"> Sabitler </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="compilerErrors.html#methodSummary" style="display:none"> Global İşlevler </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="compilerErrors.html#methodSummary" style="display:none">İşlevler</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="compilerErrors.html#interfaceSummary" style="display:none"> Arabirimler </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="compilerErrors.html#classSummary" style="display:none"> Sınıflar </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="compilerErrors.html#includeExamplesSummary" style="display:none"> Örnekler </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="compilerErrors.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								Sınıflar
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><p>
+        <div id="badgeAnchorSupport" class="ionBadgeWrapper"></div>
+        <div id="badgeContainerSupport"></div>
+        <br />
+        Aşağıda, geçersiz bir kodla karşılaştığında derleyicinin oluşturduğu derleme hatalarının bir listesi yer almaktadır. Bu hataların bir alt kümesi, yalnızca derleme kodu katı modundayken algılanır.
+        Katı modu, standart dilde bulunmayan üç kısıtlama ekler:
+        <p>
+        <ul>
+        <li>İfadeler statik türler içerir ve tür hataları, doğrulama hatalarıdır.</li>
+        <li>Ek doğrulama kuralları, yaygın programlama hatalarını yakalar.</li>
+        <li>Doğrulama hataları önceden bildirilir. Bunlar yalnızca katı modunda gerçekleşen doğrulama hatalarıdır:</li>
+        <ul>
+        <li>Sağlanan parametrelerin sayısını ve türlerini kontrol eden, işlev çağrısı imzası eşleştirme.</li>
+        <li>Yinelenen tanımlar çakışıyor.</li>
+        <li>Derleme zamanında tanımlanmayan yöntem veya özelliklere erişilirken gerçekleşen bağımlı olmayan başvurular.</li>
+        <li>Mühürlü nesnelere dinamik olarak özellikler ekleniyor.</li>
+        <li>Sabit değişkenlere yazılıyor.</li>
+        <li>Sabit özellikler siliniyor.</li>
+        <li>Uyumsuz türleri kullanan karşılaştırma ifadeleri.</li>
+        <li>Bulunmayan paketler.</li>
+        </ul></ul>
+        </p></p><br><a name="compilerErrorSummary"></a><table cellpadding="3" cellspacing="0" class="summaryTable"><tr><th>&nbsp;</th><th>Kod</th><th width="35%">Mesaj</th><th>Açıklama</th></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1000"></a><b>1000</b></td><td class="summaryTableCol">%s öğesine belirsiz başvuru.
+
+
+	
+
+</td><td class="summaryTableLastCol">
+	Başvuru birden çok öğeye yapılabilir. Örneğin, aşağıdaki öğe <code>rss</code> ve <code>xml</code> ad alanlarını kullanır. Bunlardan her biri <code>hello()</code> işlevi için farklı bir değer tanımlar. <code>trace(hello())</code> ifadesi, kullanılacak ad alanını belirleyemediğinden bu hatayı döndürür.
+	
+<pre><code>private namespace rss;
+private namespace xml;
+    
+public function ErrorExamples() {
+  	use namespace rss;
+   	use namespace xml;
+	trace(hello());
+}
+    
+rss function hello():String {
+      	return "hola";
+    }
+    
+    xml function hello():String {
+        return "foo";
+    }</code></pre>
+ 
+
+	<p>Başvuruyu özel hale getirerek belirsiz bir başvuruyu düzeltin. Şu örnek, kullanılacak ad alanını belirlemek için <i>ad alanı</i>::<i>işlev</i> formunu kullanır:</p>
+
+
+<pre><code>public function ErrorExamples() {
+    
+    trace(rss::hello());
+    trace(xml::hello());
+}</code></pre>
+        
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1003"></a><b>1003</b></td><td class="summaryTableCol">Ad alanı nitelikleriyle erişim belirtenlerine izin verilmiyor.
+		</td><td class="summaryTableLastCol">Bir tanımda hem erişim belirteni (örn. özel veya genel) hem de ad alanı niteliği kullanamazsınız.&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1004"></a><b>1004</b></td><td class="summaryTableCol">Ad alanı bulunmadı veya derleme zamanı sabiti değil.
+	
+
+</td><td class="summaryTableLastCol">
+		Ad alanı bilinmiyor veya çalışma zamanında farklı değerler içerebilen bir ifade niteliğinde. Ad alanını doğru şekilde yazıp yazmadığınızı ve ad alanının tanımının doğru şekilde içe aktarılıp aktarılmadığını kontrol edin.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1006"></a><b>1006</b></td><td class="summaryTableCol">super ifadesi yalnızca sınıf örneği yöntemlerinin içinde kullanılabilir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1007"></a><b>1007</b></td><td class="summaryTableCol">super ifadesi yalnızca sınıf örneği yapıcılarının içinde kullanılabilir.
+
+</td><td class="summaryTableLastCol">
+		Statik üyeler içinde <code>super</code> ifadesini kullanamazsınız. <code>super</code> ifadesini yalnızca sınıf örneklerinin içinde kullanabilirsiniz.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1008"></a><b>1008</b></td><td class="summaryTableCol">Nitelik geçersiz.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1010"></a><b>1010</b></td><td class="summaryTableCol">override niteliği yalnızca sınıf özelliği tanımlarında kullanılabilir.
+
+
+</td><td class="summaryTableLastCol">
+		İşlev bloğu içinde <code>override</code> anahtar sözcüğünü kullanamazsınız.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1011"></a><b>1011</b></td><td class="summaryTableCol">virtual niteliği yalnızca sınıf özelliği tanımlarında kullanılabilir.
+
+</td><td class="summaryTableLastCol">
+		Bir sınıfa ait olmayan bir özelliği bildirirken (örneğin, bir işlev bloğu içerisinde bir değişken bildirirken) <code>virtual</code> niteliğini kullanamazsınız.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1012"></a><b>1012</b></td><td class="summaryTableCol">static niteliği yalnızca bir sınıf içindeki tanımlarda kullanılabilir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1013"></a><b>1013</b></td><td class="summaryTableCol">private niteliği yalnızca sınıf özelliği tanımlarında kullanılabilir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1014"></a><b>1014</b></td><td class="summaryTableCol">intrinsic niteliği artık desteklenmemektedir.
+
+
+</td><td class="summaryTableLastCol">
+		ActionScript 3.0, <code>intrinsic</code> anahtar sözcüğünü desteklemez.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1016"></a><b>1016</b></td><td class="summaryTableCol">Temel sınıf final olur.
+
+
+</td><td class="summaryTableLastCol">
+		Üst sınıf <code>final</code> olarak işaretlenmiş olduğundan genişletilemez.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1017"></a><b>1017</b></td><td class="summaryTableCol">%s temel sınıf tanımı bulunmadı.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1018"></a><b>1018</b></td><td class="summaryTableCol">Yinelenen sınıf tanımı: %%s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1020"></a><b>1020</b></td><td class="summaryTableCol">override işaretli yöntem başka bir yöntemi geçersiz kılmalıdır.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1021"></a><b>1021</b></td><td class="summaryTableCol">Yinelenen işlev tanımı.
+
+
+</td><td class="summaryTableLastCol">
+		Aynı kapsamda aynı tanımlayıcı adına sahip birden çok işlev bildiremezsiniz.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1022"></a><b>1022</b></td><td class="summaryTableCol">final erişicisi geçersiz kılınamıyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1023"></a><b>1023</b></td><td class="summaryTableCol">Uyumsuz geçersiz kılma.
+</td><td class="summaryTableLastCol"> override işaretli bir işlev, geçersiz kıldığı işlevin parametresi ve döndürme türü bildirimiyle tam olarak eşleşmelidir. Her biri aynı türde olan aynı sayıda parametre içermeli ve aynı döndürme türünü bildirmelidir. Parametrelerden herhangi biri isteğe bağlı olursa, bu parametrenin de eşleşmesi gerekir. Ayrıca her iki işlevin aynı erişim belirtenini (genel, özel, vb.) veya ad alanı niteliğini kullanması gerekir.&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1024"></a><b>1024</b></td><td class="summaryTableCol">Geçersiz kılma için işaretlenmemiş bir işlev geçersiz kılınıyor.
+
+
+</td><td class="summaryTableLastCol">
+		
+		Bir sınıftaki yöntem, temel sınıftaki bir yöntemi geçersiz kılarsa, bu örnekte gösterildiği gibi, <code>override</code> niteliğini kullanarak bu yöntemi açıkça bildirmeniz gerekir:
+
+		<pre>public override function foo():void{};</pre>
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1025"></a><b>1025</b></td><td class="summaryTableCol">final yöntemi yeniden tanımlanamıyor.
+
+
+</td><td class="summaryTableLastCol">
+		Yöntem, temel sınıfta <code>final</code> olarak işaretlenmiş olduğundan genişletilemez.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1026"></a><b>1026</b></td><td class="summaryTableCol">Yapıcı işlevleri örnek yöntemleri olmalıdır.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1027"></a><b>1027</b></td><td class="summaryTableCol">İşlevler hem static hem de override olamaz.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1028"></a><b>1028</b></td><td class="summaryTableCol">İşlevler hem static hem de virtual olamaz.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1029"></a><b>1029</b></td><td class="summaryTableCol">İşlevler hem final hem de virtual olamaz.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1030"></a><b>1030</b></td><td class="summaryTableCol">Değişken argümanları dizisinin adı belirtilmelidir.
+
+
+</td><td class="summaryTableLastCol">
+	
+		...(rest) parametre tanımı, ...(rest) parametresinden sonra sağlanan tüm değerlerin bir dizide toplandığını belirtir. <code>function foo(x,...(rest))</code> ifadesinde olduğu gibi dizi için bir ad belirtmelisiniz.
+
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1033"></a><b>1033</b></td><td class="summaryTableCol">Sanal değişkenler desteklenmiyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1034"></a><b>1034</b></td><td class="summaryTableCol">Değişkenler yerel olamaz.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1035"></a><b>1035</b></td><td class="summaryTableCol">Değişkenler hem final hem de virtual olamaz.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1037"></a><b>1037</b></td><td class="summaryTableCol">Paketler yuvalanamıyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1038"></a><b>1038</b></td><td class="summaryTableCol">break ifadesinin hedefi bulunamadı.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1039"></a><b>1039</b></td><td class="summaryTableCol">continue ifadesinin hedefi bulunamadı.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1040"></a><b>1040</b></td><td class="summaryTableCol">Yinelenen etiket tanımı.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1041"></a><b>1041</b></td><td class="summaryTableCol">Nitelikler çağrılabilir durumda değil.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1042"></a><b>1042</b></td><td class="summaryTableCol">this anahtar sözcüğü, statik yöntemlerde kullanılamaz. Yalnızca örnek yöntemlerinde, işlev kapanışlarında ve genel kodda kullanılabilir.
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		<code>this</code> anahtar sözcüğü bağlam içermediğinden, <code>this</code> anahtar sözcüğünü statik bir üyenin içerisinde kullanamazsınız.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1043"></a><b>1043</b></td><td class="summaryTableCol">Tanımsız ad alanı.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1044"></a><b>1044</b></td><td class="summaryTableCol">%s ad alanındaki %s arabirim yöntemi, %s sınıfı tarafından uygulanmıyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1045"></a><b>1045</b></td><td class="summaryTableCol">%s arabirimi bulunamadı.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1046"></a><b>1046</b></td><td class="summaryTableCol">Tür bulunmadı veya derleme zamanı sabiti değil: %s.
+
+
+
+</td><td class="summaryTableLastCol">
+		
+		Tür bildirimi olarak kullanılan sınıf bilinmiyor veya çalışma zamanında farklı değerler içerebilen bir ifade niteliğinde. Doğru sınıfı içe aktarıp aktarmadığınızı ve bu sınıfın paket konumunun değişip değişmediğini kontrol edin. Ayrıca, kodu içeren paketin (içe aktarılmış sınıf değil) doğru tanımlanıp tanımlanmadığını kontrol edin (örneğin, ActionScript 2.0 sözdizimini değil, doğru söz dizimi olan ActionScript 3.0 paketi sözdizimini kullandığınızdan emin olun).
+
+		<p>Başvurulan sınıf, kullanımda olan bir ad alanında tanımlı değilse veya genel olarak tanımlanmamışsa da bu hata gerçekleşebilir:</p>
+
+		<pre><code>public class Foo{}</code></pre>
+
+        <p>Flex&#153 Builder&#153 2 uygulamasını kullanıyorsanız ve sınıf da bir kütüphanenin içindeyse, proje için sınıf yolunu ayarladığınızdan emin olun.</p>
+
+
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1047"></a><b>1047</b></td><td class="summaryTableCol">Parametre başlatıcı bilinmiyor veya bir derleme zamanı sabiti değil.
+	
+	
+</td><td class="summaryTableLastCol">
+	Parametre için varsayılan değer olarak kullanılan değer tanımsız veya çalışma zamanında farklı değerler içerebiliyor. Başlatıcının doğru yazılıp yazılmadığını ve başlatıcı değerinin, çalışma zamanında olası farklı değerlere yol açabilen bir ifade olup olmadığını kontrol edin.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1048"></a><b>1048</b></td><td class="summaryTableCol">Yöntem bir yapıcı olarak kullanılamıyor.
+	
+		
+</td><td class="summaryTableLastCol">
+	Bir sınıf yönteminin örneğini oluşturmak mümkün değil. <code>new</code> ifadelerinde yalnızca genel işlevler kullanılabilir.
+	
+<pre>class D { function xx() { return 22; } }
+var d:D = new D();
+var x = new d.xx(); // error, method cannot be used as constructor
+function yy() { this.a = 22; }
+var z = new yy(); // no error, global functions can be used as constructors.</pre>
+
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1049"></a><b>1049</b></td><td class="summaryTableCol">Sabit olarak belirtilmiş bir değişkene kuraldışı atama.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1050"></a><b>1050</b></td><td class="summaryTableCol">Başvuru olmayan değere atama yapılamıyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1051"></a><b>1051</b></td><td class="summaryTableCol">Döndürme değeri tanımsız olmalıdır.
+
+
+
+</td><td class="summaryTableLastCol">
+		<code>return</code> ifadesini, <code>void</code> döndürme türünü bildiren bir yöntemin içinde kullanmaya çalışıyorsunuz. 
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1052"></a><b>1052</b></td><td class="summaryTableCol">Sabit başlatıcı bilinmiyor veya bir derleme zamanı sabiti değil.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Sabiti başlatmak için kullanılan değer tanımsız veya çalışma zamanında farklı değerler içerebilir. Başlatıcının doğru yazılıp yazılmadığını ve başlatıcı değerinin, çalışma zamanında olası farklı değerlere yol açabilen bir ifade olup olmadığını kontrol edin.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1053"></a><b>1053</b></td><td class="summaryTableCol">Erişici türleri eşleşmelidir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1054"></a><b>1054</b></td><td class="summaryTableCol">Ayarlayıcı tanımının döndürme türü belirtilmemiş veya void olmalıdır.
+
+
+</td><td class="summaryTableLastCol">
+		Ayarlayıcı işlevi için bir döndürme değeri belirtemezsiniz. Örneğin, şu öğe geçersizdir:
+
+		<pre>public function set gamma(g:Number):Number;</pre>
+
+		<p>Şu öğe <i>geçerlidir</i>:</p>
+
+		<pre>public function set gamma(g:Number):void;</pre>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1058"></a><b>1058</b></td><td class="summaryTableCol">Özellik salt yazılır.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1059"></a><b>1059</b></td><td class="summaryTableCol">Özellik salt okunur.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Bu özellik, özelliğin değerini almanıza olanak sağlayan bir alıcı işleviyle tanımlanır. Kendisi için tanımlanmış bir ayarlayıcı işlevi mevcut olmadığından bu özellik salt okunur.
+	<p>Şu örnekte, <code>xx</code> için bir ayarlayıcı işlevi tanımlanmadığından satır 3 bir hata oluşturur:</p>
+	
+<pre>class D { function get xx() { return 22; } }
+var d:D = new D();
+d.xx = 44; // error, property is read-only</pre>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1061"></a><b>1061</b></td><td class="summaryTableCol">%s statik türüne sahip bir başvuru üzerinden büyük olasılıkla %s tanımsız yöntemine çağrı yapılıyor.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Tanımlı olmayan bir yöntemi çağırıyorsunuz.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1063"></a><b>1063</b></td><td class="summaryTableCol">Dosya açılamıyor: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1064"></a><b>1064</b></td><td class="summaryTableCol">Geçersiz meta veri.
+	
+
+
+</td><td class="summaryTableLastCol">
+	Bu meta veri tanınmıyor.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1065"></a><b>1065</b></td><td class="summaryTableCol">Meta veri nitelikleri birden çok öğe içeremez.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1067"></a><b>1067</b></td><td class="summaryTableCol">%s türünde bir değer ilişkili olmayan %s türüne örtük şekilde zorlanıyor.
+
+
+
+</td><td class="summaryTableLastCol">
+		Bir nesneyi dönüştürülemeyeceği bir türe dağıtmayı deniyorsunuz. Bu durum, dağıttığınız nesnenin, dağıtılan nesnenin miras zincirinde olmaması durumunda meydana gelebilir. Bu hata yalnızca derleyici sıkı modda çalıştığında görüntülenebilir.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1068"></a><b>1068</b></td><td class="summaryTableCol">Dahil edilen dosya açılamıyor: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1069"></a><b>1069</b></td><td class="summaryTableCol">Sözdizimi hatası: tanım veya direktif bekleniyor.
+
+
+
+</td><td class="summaryTableLastCol">
+		Satırdaki sözdizimini kontrol edin.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1071"></a><b>1071</b></td><td class="summaryTableCol">Sözdizimi hatası: %s değil, %s niteliğinden sonra bir tanım anahtar sözcüğü (örn. işlev) bekleniyor.
+
+
+</td><td class="summaryTableLastCol">
+	
+		Yazar bir bildirimde "var" veya "function" anahtar sözcüğünü kullanmayı unutursa bu hata gerçekleşir.
+<pre><code>public int z;// should be 'public var z:int;'</code></pre>
+
+		Derleyici beklenmedik bir karakterle karşılaştığında da bu hata gerçekleşebilir. Örneğin, eksik parantezler nedeniyle <code>trace()</code> işlevinin aşağıdaki kullanımı yanlıştır (doğru sözdizimi <code>trace("hello")</code> olmalıdır):
+
+<pre>
+trace "hello"
+</pre>
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1072"></a><b>1072</b></td><td class="summaryTableCol">Sözdizimi hatası: namespace öncesinde xml bekleniyor.
+
+
+</td><td class="summaryTableLastCol">
+	
+		Doğru ifade sözdizimi: <code>default xml namespace = </code> <i>ns</i>. <code>xml</code> anahtar sözcüğü (küçük harf olmasına dikkat edin) eksik veya yanlış bir anahtar sözcük kullanılmış. Daha fazla bilgi için <a href="statements.html#default_xml_namespace" >varsayılan xml ad alanı</a> direktifine bakın.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1073"></a><b>1073</b></td><td class="summaryTableCol">Sözdizimi hatası: catch veya finally deyimi bekleniyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1075"></a><b>1075</b></td><td class="summaryTableCol">Sözdizimi hatası: 'in' operatörü olmadan 'each' anahtar sözcüğüne izin verilmiyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1076"></a><b>1076</b></td><td class="summaryTableCol">Sözdizimi hatası: tanımlayıcıdan önce sol parantez bekleniyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1077"></a><b>1077</b></td><td class="summaryTableCol">CaseLabel bekleniyor.
+
+	
+</td><td class="summaryTableLastCol">
+	Derleyici, anahtar bloğunda bu noktada <code>case</code> ifadesi bekledi. Şu anahtar bloğu, birinci <code>case</code> ifadesinden önce <code>print</code> öğesine yanlış şekilde yapılmış bir çağrı içeriyor:
+
+<pre>switch(x)
+{
+trace(2);
+case 0:  trace(0); 
+break
+}</pre>
+	
+    &nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1078"></a><b>1078</b></td><td class="summaryTableCol">Etiket basit bir tanımlayıcı olmalıdır.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1079"></a><b>1079</b></td><td class="summaryTableCol">'super' ifadesi tek bir işlenen içermelidir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1080"></a><b>1080</b></td><td class="summaryTableCol">Artırma veya azaltma operatörü bekleniyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1082"></a><b>1082</b></td><td class="summaryTableCol">Parantez içinde tek bir ifade bekleniyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1083"></a><b>1083</b></td><td class="summaryTableCol">Sözdizimi hatası.: %is beklenmiyor.
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Kod satırında bazı bilgiler eksik. Aşağıdaki örnekte, son artı işaretinden sonra bazı ifadelerin (başka bir sayı gibi) eklenmesi gerekir:
+
+		<pre>var sum:int = 1 + 2 + ;</pre>
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1084"></a><b>1084</b></td><td class="summaryTableCol">Sözdizimi hatası: %s öncesi %s bekleniyor.
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Bu noktada ifade beklenmiyordu. Hatada "Expecting rightbrace before end of program" (Program sonu öncesinde sağ ayraç bekleniyor) ifadesi belirtiliyorsa, bir kod bloğunda kapatma ayracı (&#125) eksiktir. 
+
+		<p>Hatada "Expecting left parenthesis before _" (_ öğesinden önce sol parantez bekleniyor) ifadesi belirtiliyorsa koşullu bir ifadeden bir parantezi aşağıdaki örnekte gösterildiği gibi çıkarmış olabilirsiniz. Bu durum bilerek yapılmış bir yanlıştır: </p>
+
+		<pre><code>var fact:int = 1 * 2 * 3;
+if fact > 2 {
+	var bigger:Boolean = true;
+}</code></pre>
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1086"></a><b>1086</b></td><td class="summaryTableCol">Sözdizimi hatası: %s öncesi noktalı virgül bekleniyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1087"></a><b>1087</b></td><td class="summaryTableCol">Sözdizimi hatası: program sonundan itibaren fazladan karakterler bulundu.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1093"></a><b>1093</b></td><td class="summaryTableCol">Sözdizimi hatası.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1094"></a><b>1094</b></td><td class="summaryTableCol">Sözdizimi hatası: Değişmez dize satır kesmesinden önce sonlandırılmalıdır.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1095"></a><b>1095</b></td><td class="summaryTableCol">Sözdizimi hatası: Değişmez dize satır kesmesinden önce sonlandırılmalıdır.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1097"></a><b>1097</b></td><td class="summaryTableCol">Sözdizimi hatası: değişmez dize için kapatma tırnak işaretine ulaşılmadan girdi sonlandırıldı.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1099"></a><b>1099</b></td><td class="summaryTableCol">Sözdizimi hatası.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1100"></a><b>1100</b></td><td class="summaryTableCol">Sözdizimi hatası: XML eşleşen başlama ve bitiş etiketlerini içermiyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1102"></a><b>1102</b></td><td class="summaryTableCol">super alt öğeleri silinemiyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1103"></a><b>1103</b></td><td class="summaryTableCol">Yinelenen ad alanı tanımı.
+
+	
+
+
+</td><td class="summaryTableLastCol">
+	Ad alanını birden çok defa tanımladınız. Yinelenen tanımı silin veya değiştirin.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1104"></a><b>1104</b></td><td class="summaryTableCol"> %s </td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1105"></a><b>1105</b></td><td class="summaryTableCol">Atama hedefi bir başvuru değeri olmalıdır.
+
+	 
+</td><td class="summaryTableLastCol">
+	Bir değişkene değer atayabilirsiniz ancak başka bir değere bir değer atayamazsınız. 
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1106"></a><b>1106</b></td><td class="summaryTableCol">Artırma işleneni bir başvuru olmalıdır.
+	
+</td><td class="summaryTableLastCol">
+	İşlenen, bir değişken, dizideki bir öğe veya bir nesne özelliği olmalıdır.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1107"></a><b>1107</b></td><td class="summaryTableCol">Artırma işleneni geçersiz.
+
+	
+</td><td class="summaryTableLastCol">
+	İşlenen, bir değişken, dizideki bir öğe veya bir nesne özelliği olmalıdır.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1108"></a><b>1108</b></td><td class="summaryTableCol">Azaltma işleneni geçersiz.
+	
+</td><td class="summaryTableLastCol">
+	İşlenen, bir değişken, dizideki bir öğe veya bir nesne özelliği olmalıdır.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1109"></a><b>1109</b></td><td class="summaryTableCol">Bir ifade bekleniyor.
+
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Kodun bir bölümünde bir ifade eksik. Örneğin, aşağıdaki öğe bu hatayı verir (<code>if</code> ifadesinde bir koşul eksiktir:
+
+<pre><code>var x = (5 > 2) ? 
+trace(x)</code></pre>
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1110"></a><b>1110</b></td><td class="summaryTableCol">XML etiket adı eksik.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1111"></a><b>1111</b></td><td class="summaryTableCol">%s dosyası geçerli bir ABC dosyası değil.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1112"></a><b>1112</b></td><td class="summaryTableCol">Bu dosyadan kaynaklanan olası bir sonsuz yineleme şunu içerir: %s.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Derlenen kaynağa dahil edilen bir dosya, sonsuz bir döngüye neden olan başka <code>include</code> ifadelerini içeriyor. Örneğin, her iki dosya bir diğerini dahil etmeye çalıştığından şu a.as ve b.as dosyaları bu hatayı oluşturur.
+	<p>
+	a.as dosyası şunu içerir ve b.as dosyasını dahil etmeye çalışır:</p>
+<pre>import foo.bar.baz;
+include "b.as"
+trace(2);</pre>
+	<p>b.as dosyası şunu içerir ve a.as dosyasını dahil etmeye çalışır:</p>
+	<pre>include "a.as"</pre>
+
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1113"></a><b>1113</b></td><td class="summaryTableCol">%s içinde dairesel tür başvurusu algılandı.
+	
+
+</td><td class="summaryTableLastCol">
+	Bir sınıf üst sınıfı genişletmeye çalışıyor. Örneğin, B, A'dan miras alırsa, A sınıfı B sınıfını genişletemez:
+<pre><code>class a extends b { }
+class b extends a { }</code></pre>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1114"></a><b>1114</b></td><td class="summaryTableCol">public niteliği yalnızca bir paket içinde kullanılabilir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1115"></a><b>1115</b></td><td class="summaryTableCol">internal niteliği yalnızca bir paket içinde kullanılabilir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1116"></a><b>1116</b></td><td class="summaryTableCol">Kullanıcı tanımlı ad alanı niteliği yalnızca bir sınıf tanımının üst düzeyinde kullanılabilir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1118"></a><b>1118</b></td><td class="summaryTableCol">%s statik türünde bir değer büyük olasılıkla ilişkili olmayan %s türüne örtük şekilde zorlanıyor.
+	
+
+</td><td class="summaryTableLastCol">Beklenen türde olmayan bir değer kullanıyorsunuz ve bu değeri beklenen türe dönüştürmek için herhangi bir örtük zorlama yok.
+	<p>Belki de alt tür beklenen bir yerde üst tür kullanıyorsunuz. Örneğin:</p>
+<pre><code>class A {}
+var a:A = new A(); 
+class B extends A { function f() }
+var b : B = a // error</code></pre>
+	<p>Son ifade, A türünde bir nesneyi B türünde bir değişkene atamaya çalıştığından bir hata oluşturur.</p>
+	<p>Benzer şekilde, aşağıdaki öğeler, B türündeki bir parametre alan <code>foo()</code> işlevini tanımlar. A türündeki bir parametre kullanmaya çalıştığı için <code> foo(a);</code> ifadesi bir hata oluşturur:</p>
+<pre><code>function foo(x:B) { }
+foo(a);</code></pre>
+	<p>Ayrıca, <code>foo2()</code> için döndürülen değerin B türünde olması gerektiğinden şu ifade de bir hata oluşturur:</p>
+	<pre><code>function foo2():B { return new A(); }</code></pre>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1119"></a><b>1119</b></td><td class="summaryTableCol">%s statik türüne sahip bir başvuru üzerinden büyük olasılıkla %s tanımsız özelliğine erişiliyor.
+
+
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Belirtilen nesne için varolmayan bir özelliğe erişmeye çalışıyorsunuz. Örneğin, bir int nesnesinde <code>assortment</code> adlı bir özellik olmadığından aşağıdaki kod şu hatayı oluşturur:
+
+<pre><code>var i:int = 44;
+var str:String = i.assortment;</code></pre>
+
+		Bu hata yalnızca derleyici sıkı modda çalıştığında görüntülenebilir.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1120"></a><b>1120</b></td><td class="summaryTableCol">%s tanımsız özelliğine erişiliyor.
+
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Tanımsız bir değişkene erişmeye çalışıyorsunuz. Örneğin eğer <code>huh</code> değişkeni tanımlanmamışsa, bu değişkene yapılan bir çağrı şu hatayı oluşturur:
+
+<pre><code>huh = 55;</code></pre>
+
+		Bu hata yalnızca derleyici sıkı modda çalıştığında görüntülenebilir.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1121"></a><b>1121</b></td><td class="summaryTableCol">Alıcı tanımı herhangi bir parametre içermemelidir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1122"></a><b>1122</b></td><td class="summaryTableCol">Ayarlayıcı tanımı tam olarak bir parametre içermelidir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1123"></a><b>1123</b></td><td class="summaryTableCol">Ayarlayıcı tanımı isteğe bağlı parametreler içeremez.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1124"></a><b>1124</b></td><td class="summaryTableCol">Alıcı tanımının döndürme türü void olmamalıdır.
+
+	
+</td><td class="summaryTableLastCol">
+	Alıcı işlevi bir değişkeni simüle ediyor. Değişkenler void türünde olamayacağından, void türünü döndürmek için alıcı işlevlerini bildiremezsiniz.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1125"></a><b>1125</b></td><td class="summaryTableCol">Bir arabirimde tanımlanan yöntemler gövde içermemelidir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1126"></a><b>1126</b></td><td class="summaryTableCol">İşlev bir gövde içermez.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1127"></a><b>1127</b></td><td class="summaryTableCol">%s niteliği birden çok defa belirtildi.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Bir niteliği aynı ifadede birden çok defa belirttiniz. Örneğin, <code>public static public var x;</code> ifadesi, <code>x</code> değişkeninin iki kez yayınlandığını belirttiği için bu hatayı oluşturur. Yinelenen bildirimleri silin.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1129"></a><b>1129</b></td><td class="summaryTableCol">Yinelenen arabirim tanımı: %%s.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Yinelenen tanımları değiştirin veya silin.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1130"></a><b>1130</b></td><td class="summaryTableCol">Bir yapıcı bir döndürme türü belirtemez.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1131"></a><b>1131</b></td><td class="summaryTableCol">Sınıflar yuvalanmamalıdır.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1132"></a><b>1132</b></td><td class="summaryTableCol">final niteliği yalnızca bir sınıfta tanımlanan yöntemde kullanılabilir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1133"></a><b>1133</b></td><td class="summaryTableCol">native niteliği yalnızca işlev tanımlarıyla kullanılabilir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1134"></a><b>1134</b></td><td class="summaryTableCol">dynamic niteliği yalnızca sınıf tanımlarıyla kullanılabilir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1135"></a><b>1135</b></td><td class="summaryTableCol">Sözdizimi hatası.: %s geçerli tür değil.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1136"></a><b>1136</b></td><td class="summaryTableCol">Yanlış argüman sayısı. Beklenen: %s.
+
+	
+</td><td class="summaryTableLastCol">
+	İşlev, sağladığınızdan farklı bir argüman sayısı bekliyor. Örneğin, aşağıdaki öğe iki argümana sahip olan <code>goo</code> işlevini tanımlar:
+<pre>class A { static function goo(x:int,y:int) 
+{ return(x+y); } }</pre>
+	<p>Şu ifade üç argüman sağladığından bir hata oluşturur:</p>
+<pre>A.goo(1,2,3);</pre>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1137"></a><b>1137</b></td><td class="summaryTableCol">Yanlış argüman sayısı. Beklenen: en fazla %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1138"></a><b>1138</b></td><td class="summaryTableCol">İsteğe bağlı parametrelerden sonra gerekli parametrelere izin verilmiyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1139"></a><b>1139</b></td><td class="summaryTableCol">Arabirimlerde değişken bildirimlerine izin verilmez.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1140"></a><b>1140</b></td><td class="summaryTableCol">...rest parametre tanımı anahtar sözcüğünden sonra belirtilen parametreler yalnızca Array veri türünde olabilir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1141"></a><b>1141</b></td><td class="summaryTableCol">Bir sınıf arabirimi değil yalnızca başka bir sınıfı genişletebilir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1142"></a><b>1142</b></td><td class="summaryTableCol">Bir arabirim yalnızca diğer arabirimleri genişletebilir ancak %s bir sınıftır.
+	
+
+</td><td class="summaryTableLastCol">
+	Arabirimin bir sınıfı genişletmesini sağlamaya çalışıyorsunuz. Bir arabirim yalnızca başka bir arabirimi genişletebilir.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1143"></a><b>1143</b></td><td class="summaryTableCol">override niteliği yalnızca bir sınıfta tanımlanan yöntemde kullanılabilir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1144"></a><b>1144</b></td><td class="summaryTableCol">%s ad alanındaki %s arabirim yöntemi, %s sınıfındaki uyumsuz bir imza ile uygulanıyor.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Yöntem imzaları tam olarak eşleşmeli.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1145"></a><b>1145</b></td><td class="summaryTableCol">Native yöntemleri gövde içeremez.
+	
+
+</td><td class="summaryTableLastCol">
+	<code>native</code> ayrılmış bir anahtar sözcük olduğundan bunu kullanamazsınız.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1146"></a><b>1146</b></td><td class="summaryTableCol">Yapıcı bir alıcı veya ayarlayıcı yöntemi olamaz.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1147"></a><b>1147</b></td><td class="summaryTableCol">AS kaynak dosyası belirtilmedi.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1149"></a><b>1149</b></td><td class="summaryTableCol">return ifadesi statik başlatma kodunda kullanılamaz.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1150"></a><b>1150</b></td><td class="summaryTableCol">protected niteliği yalnızca sınıf özelliği tanımlarında kullanılabilir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1151"></a><b>1151</b></td><td class="summaryTableCol">%s ad alanında %s tanımıyla bir çakışma var.
+
+	
+
+
+</td><td class="summaryTableLastCol">
+	Tüm değişkenlerin aynı türde olduğu bildirilmediği sürece, aynı kapsam içinde aynı tanımlayıcı adına sahip birden çok değişken bildiremezsiniz. ActionScript 3.0'da farklı kod bloklarının (aynı function tanımındaki iki <code>for</code> döngüsünde kullanılanlar gibi) aynı kapsamda bulunduğu düşünülür. 
+	<p>Şu kod örneği, <code>x</code> değişkenini aynı türde olarak doğru şekilde dağıtır:</p>
+<pre><code>function test()
+{
+	var x:int = 3;
+	for(var x:int = 33; x < 55; x++)
+	trace(x);
+	for(var x:int = 11; x < 33; x++)
+	trace(x)
+}</code></pre>
+	<p>Değişken bildirimindeki ve <code>for</code> döngülerindeki tür dağıtımı farklı olduğundan şu kod örneği bir hata oluşturur:</p>
+<pre><code>function test()
+{
+	var x:String = "The answer is";
+	for(var x:int = 33; x < 55; x++) // error
+	trace(x);
+	for(var x:unit = 11; x < 33; x++) // error
+	trace(x)
+}</code></pre>
+&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1152"></a><b>1152</b></td><td class="summaryTableCol"> %s ad alanında miras alınan %s tanımıyla bir çakışma var.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1153"></a><b>1153</b></td><td class="summaryTableCol">Yapıcı yalnızca bildirilen public olabilir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1154"></a><b>1154</b></td><td class="summaryTableCol">Bir tanımda public, private, protected veya internal öğelerinden yalnızca biri belirtilebilir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1155"></a><b>1155</b></td><td class="summaryTableCol">Erişiciler diğer işlevlerin içinde yuvalanamaz.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1156"></a><b>1156</b></td><td class="summaryTableCol">Arabirimler yeni operatörle başlatılamaz.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1157"></a><b>1157</b></td><td class="summaryTableCol">Arabirim üyeleri public, private, protected veya internal olarak bildirilemez.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1158"></a><b>1158</b></td><td class="summaryTableCol">Sözdizimi hatası: işlev gövdesinden önce sol ayraç ({) eksik.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1159"></a><b>1159</b></td><td class="summaryTableCol">return ifadesi, paket başlatma kodunda kullanılamaz.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1160"></a><b>1160</b></td><td class="summaryTableCol">native niteliği, arabirim tanımlarında kullanılamaz.
+	
+
+</td><td class="summaryTableLastCol">
+	<code>native</code> ayrılmış bir anahtar sözcük olduğundan bunu kullanamazsınız.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1162"></a><b>1162</b></td><td class="summaryTableCol">Bir tanım için yalnızca bir ad alanı niteliği kullanılabilir.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1163"></a><b>1163</b></td><td class="summaryTableCol">%s yöntemi, %s arabiriminden miras alınan tanımla çakışıyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1165"></a><b>1165</b></td><td class="summaryTableCol">%s arabirim niteliği geçersiz.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1166"></a><b>1166</b></td><td class="summaryTableCol">Arabirimlerde ad alanı bildirimlerine izin verilmez.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1167"></a><b>1167</b></td><td class="summaryTableCol">%s sınıfı, birden çok defa %s arabirimini uyguluyor.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Sınıf, aynı arabirimi birden çok defa uyguluyor. Örneğin, C sınıfı A arabirimini iki kez uyguladığından şu durumlar bu hatayı oluşturur:
+
+<pre><code>interface A {  public function f();  };
+class C implements A,A {
+public function f() { trace("f"); }
+}</code></pre>
+	
+	<p>İfadenin doğru uygulaması <code> class C implements A {</code> olmalıdır.</p>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1168"></a><b>1168</b></td><td class="summaryTableCol">%s işlevine kuraldışı atama.
+
+	
+
+
+</td><td class="summaryTableLastCol">
+	Bir işlevi yeniden tanımlamaya çalışıyorsunuz. Örneğin, aşağıdaki öğeler “top” (üst) sözcüğünü yazdırmak için <code>topLevel()</code> işlevini tanımlar. İkinci ifade işleve farklı bir döndürme değeri atadığından bir hata oluşturur:
+<pre><code>function topLevel() { trace("top"); }
+topLevel = function() { trace("replacement works in ~");} // error</code></pre>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1169"></a><b>1169</b></td><td class="summaryTableCol">Arabirim yöntemlerinde ad alanı niteliklerine izin verilmez.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1170"></a><b>1170</b></td><td class="summaryTableCol">İşlev bir değer döndürmez.
+
+	
+</td><td class="summaryTableLastCol">
+	Döndürme türü void dışında herhangi bir öğe olduğunda, bir işlevdeki her olası denetim akışı bir değer döndürmelidir. Şu <code>f(x)</code> işlevi bir hata oluşturmaz çünkü <code>if..else</code> her zaman bir değer döndürür:
+
+<pre><code>function f(x):int
+{
+if (x)
+    	return 2;
+else
+    	return 3;
+} // no error</code></pre>
+
+<p>Ancak <code>switch</code> ifadesi her zaman bir değer döndürmediğinden, aşağıdaki <code>g(x)</code> işlevi hata oluşturur.</p>
+<pre><code>function g(x:int):int
+{
+switch(x)
+{
+      	case 1: return 1;
+      	case 2: return 2:
+}
+// return 2;//uncomment to remove the error
+}</code></pre>
+
+	<p>+Bu denetleme yalnızca işlev void dışında bir döndürme türü bildirdiğinde etkinleştirilir. </p>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1171"></a><b>1171</b></td><td class="summaryTableCol">Ad alanı başlatıcısı değişmez bir dize veya başka bir ad alanı olmalıdır.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1172"></a><b>1172</b></td><td class="summaryTableCol">%s tanımı bulunamıyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1173"></a><b>1173</b></td><td class="summaryTableCol">Etiket tanımı geçersiz.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1176"></a><b>1176</b></td><td class="summaryTableCol">%s statik türünde bir değer ile büyük olasılıkla ilişkili olmayan %s türünde bir değer arasında karşılaştırma.
+</td><td class="summaryTableLastCol">Bu hata katı modda etkinleştirilir.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1177"></a><b>1177</b></td><td class="summaryTableCol">return ifadesi, genel başlatma kodunda kullanılamaz.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1178"></a><b>1178</b></td><td class="summaryTableCol">%s statik türüne sahip bir başvuru üzerinden %s erişilemez özelliğine erişilmeye çalışılıyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1179"></a><b>1179</b></td><td class="summaryTableCol">:Nesne geçici olarak kullanılamıyor. Bunun yerine:* kullanın.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1180"></a><b>1180</b></td><td class="summaryTableCol">Büyük olasılıkla tanımsız %s yöntemine çağrı yapılıyor.
+</td><td class="summaryTableLastCol">Bu hata yalnızca derleyici sıkı modda çalıştığında görüntülenebilir.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1181"></a><b>1181</b></td><td class="summaryTableCol">%s temel sınıfına ileri başvuru.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1182"></a><b>1182</b></td><td class="summaryTableCol">Paket bir değer olarak kullanılamıyor: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1184"></a><b>1184</b></td><td class="summaryTableCol">%s beklenen yerde %s türünde uyumsuz varsayılan değer.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1185"></a><b>1185</b></td><td class="summaryTableCol">Anahtar birden çok varsayılan içeriyor ancak yalnızca bir varsayılana izin veriliyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1188"></a><b>1188</b></td><td class="summaryTableCol">%s sınıfına kuraldışı atama.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1189"></a><b>1189</b></td><td class="summaryTableCol">%s sabit özelliği silinmeye çalışıldı. Yalnızca dinamik olarak tanımlanmış özellikler silinebilir.
+</td><td class="summaryTableLastCol">Delete öğesi, bir nesneden dinamik olarak tanımlanmış özellikleri kaldırır. Bir sınıfın bildirilmiş özellikleri silinemez. Bu hata yalnızca derleyici sıkı modda çalıştığında görüntülenebilir.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1190"></a><b>1190</b></td><td class="summaryTableCol">Temel sınıf bulunmadı veya derleme zamanı sabiti değil.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1191"></a><b>1191</b></td><td class="summaryTableCol">Arabirim bulunmadı veya derleme zamanı sabiti değil.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1192"></a><b>1192</b></td><td class="summaryTableCol">Ad alanı tanımlarında static niteliğine izin verilmiyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1193"></a><b>1193</b></td><td class="summaryTableCol">Arabirim tanımları sınıf veya diğer arabirim tanımları içinde yuvalanmamalıdır.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1194"></a><b>1194</b></td><td class="summaryTableCol">prototype niteliği geçersiz.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1195"></a><b>1195</b></td><td class="summaryTableCol">%s statik türüne sahip bir başvuru üzerinden %s erişilemez yöntemine erişilmeye çalışılıyor.
+		
+ 	</td><td class="summaryTableLastCol">Başka bir sınıftan özel bir yöntem çağırıyorsunuz veya kullanılmayan bir ad alanında tanımlanmış bir yöntem çağırıyorsunuz. Kullanılmayan bir ad alanında tanımlanmış bir yöntem çağırıyorsanız, gerekli ad alanı için bir <code>use</code> ifadesi ekleyin.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1196"></a><b>1196</b></td><td class="summaryTableCol">Sözdizimi hatası: atıştan sonra bir ifade bekleniyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1197"></a><b>1197</b></td><td class="summaryTableCol">Her iki sınıf kütüphane sembolleriyle veya ana zaman çizelgesiyle ilişkilendirilmiş olduğundan, %s sınıfı %s öğesini genişletemiyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1198"></a><b>1198</b></td><td class="summaryTableCol">Paket tanımında niteliklere izin verilmiyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1199"></a><b>1199</b></td><td class="summaryTableCol">Dahili hata: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1200"></a><b>1200</b></td><td class="summaryTableCol">Sözdizimi hatası: geçersiz for-in başlatıcısı, yalnızca 1 ifade bekleniyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1201"></a><b>1201</b></td><td class="summaryTableCol">this, super, return veya throw ifadesinden sonra bir super ifadesi bulunamaz.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1202"></a><b>1202</b></td><td class="summaryTableCol">%s paketinde %s tanımsız özelliğine erişiliyor.
+
+
+    </td><td class="summaryTableLastCol">
+	
+		Bir pakette tanımsız bir değişkene erişmeye çalışıyorsunuz. Örneğin, <code>huh</code> değişkeni tanımlanmamışsa, bu değişkene yapılan bir çağrı şu hatayı oluşturur:
+
+<pre><code>p.huh = 55;</code></pre>
+
+		Bu hata yalnızca derleyici sıkı modda çalıştığında görüntülenebilir.
+	
+&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1203"></a><b>1203</b></td><td class="summaryTableCol">%s temel sınıfında varsayılan yapıcı bulunmadı.
+    </td><td class="summaryTableLastCol">1 veya daha fazla gerekli argüman içeriyorsa, super() ifadesiyle temel sınıfın yapıcısını açık şekilde çağırmanız gerekir.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1204"></a><b>1204</b></td><td class="summaryTableCol">*/ ile eşleşmeyen /* bulundu.
+
+	</td><td class="summaryTableLastCol">
+	
+		Bir yorum başlangıcını belirten '/*' karakterleri bulundu ancak yorum bloğunun sonunu belirten karşılık gelen '*/' karakterleri bulunmadı.
+    &nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1205"></a><b>1205</b></td><td class="summaryTableCol">Sözdizimi hatası: sol ayraç ({) veya değişmez dize ("") bekleniyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1206"></a><b>1206</b></td><td class="summaryTableCol">super ifadesi yalnızca yapıcı başlatıcısı listesinde son öğe olarak kullanılabilir.
+
+    </td><td class="summaryTableLastCol">
+		Yapıcı içinde <code>super</code> ifadesini kullanamazsınız. <code>super</code> ifadesini yalnızca yapıcı başlatıcısı listesinde son öğe olarak kullanabilirsiniz.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1207"></a><b>1207</b></td><td class="summaryTableCol">this anahtar sözcüğü, özellik başlatıcılarında kullanılamaz.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Özellik başlatıcısı içinde <code>this</code> anahtar sözcüğünü kullanamazsınız.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1208"></a><b>1208</b></td><td class="summaryTableCol">Bir konfigürasyon değeri başlatıcısının derleme zamanı sabiti olması gerekir.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Bir konfigürasyon değeri başlatıcısının derleme zamanında bilinen bir değer olması gerekir. Başlatıcı; bir sabit dizesi, sayı, boolean değeri veya önceden tanımlanmış bir yapılandırma değerine yapılan bir başvuru olabilir.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1209"></a><b>1209</b></td><td class="summaryTableCol">Konfigürasyon değişkeni yalnızca bildirilmiş bir sabit olabilir.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Bir konfigürasyon değişkeni tanımlanırken sabit olarak bildirilmelidir.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1210"></a><b>1210</b></td><td class="summaryTableCol">Program veya paketin üst düzeyinde bir konfigürasyon değeri belirtilmelidir.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Program veya paketin üst düzeyinde bir konfigürasyon değeri belirtilmelidir.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1211"></a><b>1211</b></td><td class="summaryTableCol">%s ad alanı, bir konfigürasyon ad alanıyla çakışıyor.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Ad alanı, bir konfigürasyon ad alanıyla aynı ada sahip olmayabilir.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1212"></a><b>1212</b></td><td class="summaryTableCol">Kesinlik, 1 ile 34 arasında bir tam sayı olmalıdır.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1214"></a><b>1214</b></td><td class="summaryTableCol">Uyumsuz Sürüm: %s sürümüne sahip kodda %s sürümünde tanıtılmış %s tanımına başvurulamıyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1215"></a><b>1215</b></td><td class="summaryTableCol">Geçersiz Başlatma: %s türüne dönüştürme işlemi veri kaybediyor.</td><td class="summaryTableLastCol">&nbsp;</td></tr></table><br><br><div><p></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 01:25 PM Z  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/tr_TR/legalnotices/index.html">Yasal Uyarılar</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Çevrimiçi Gizlilik İlkesi</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">Niçin İngilizce?</span>
+				</div>
+				<div class="white_content_body">
+					<b>ActionScript 3.0 Başvurusu'ndaki içerik İngilizce görünür</b><br><br>
+					ActionScript 3.0 Başvurusu'nun tüm bölümleri tüm dillere çevrilmemiştir. Bir dil öğesi çevrilmediğinde İngilizce görünür. Örneğin, ga.controls.HelpBox sınıfı hiçbir dile çevrilmez. Bu nedenle, başvurunun Türkçe versiyonunda ga.controls.HelpBox sınıfı İngilizce görünür.
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 01:25 PM Z  -->

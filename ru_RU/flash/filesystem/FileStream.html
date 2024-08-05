@@ -1,0 +1,900 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Справочник по ActionScript&reg; 3.0 для платформы Adobe&reg; Flash&reg;  "><meta name="lang" content="ru-ru"><meta name="runtime" content="air"><meta name="runtimever" content="air:1.0"><meta name="product" content="air"><meta name="productver" content="air:1.0"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../asfilter.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="FileStream,flash.filesystem.FileStream,bytesAvailable,endian,objectEncoding,position,readAhead,close,open,openAsync,readBoolean,readByte,readBytes,readDouble,readFloat,readInt,readMultiByte,readObject,readShort,readUTF,readUTFBytes,readUnsignedByte,readUnsignedInt,readUnsignedShort,truncate,writeBoolean,writeByte,writeBytes,writeDouble,writeFloat,writeInt,writeMultiByte,writeObject,writeShort,writeUTF,writeUTFBytes,writeUnsignedInt"><title>FileStream - Adobe ActionScript&reg; 3 (AS3 )</title>
+		<link rel="stylesheet" href="../../filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="../../filter_new.css" type="text/css">
+			
+		<script src="../../jquery.js" type="text/javascript"></script>
+		<script src="../../s_chl_code.js" type="text/javascript"></script>
+		<script src="../../jquery.zclip.js" type="text/javascript"></script>
+		<script src="../../jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="../../cookies.js" type="text/javascript"></script>
+		<script src="../../asdoc.js" type="text/javascript"></script>
+		<script src="../../iscroll.js" type="text/javascript"></script>
+		<script src="../../AC_OETags.js" type="text/javascript"></script>
+		<script src="../../omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "Среды выполнения";
+			var productsLabel = "Продукты";
+			var noneLabel = "Не задан";
+			var qsearchBoxLabel = "Быстрый поиск";
+			var qsearchText = "Термин не найден";
+			var ajaxErrorMsg="Ошибка при загрузке страницы";
+			var ajaxErrorTryMsg="Повторите попытку";
+			var ajaxLoadingMsg="Загрузка еще не завершена";
+			var cancelMsg = "Отмена";
+			var classesText = "Классы";
+			var strJiveReply = "Этот вопрос был задан по поводу следующей статьи: "
+			var showFilters = "Показать фильтры";
+			var hideFilters = "Скрыть фильтры";
+			
+		
+			var baseRef = "../../";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											Справочник по ActionScript<sup>&reg;</sup> 3.0 для платформы Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup>  <br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="../../index.html"> Домашняя страница </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="FileStream.html#top" style="display:">Показать список пакетов и классов</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="FileStream.html#top" style="display:none">Скрыть список пакетов и классов</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="../../package-summary.html"> Пакеты </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../class-summary.html"> Классы </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../whatsnew.html"> Что нового </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../all-index-Symbols.html"> Указатель </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../appendixes.html"> Приложения </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Почему по-английски?</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/ru_RU/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('../../')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('../../')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="../../help.js"></script>
+						<script language="javascript" type="text/javascript" src="../../asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="../../filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>Фильтры:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">Получение данных с сервера...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">Получение данных с сервера...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="FileStream.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">flash.filesystem&nbsp;</a><br>
+								<h1 id="classProductName">FileStream&nbsp; - AS3 </h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="FileStream.html#propertySummary" style="display:none"> Свойства </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="FileStream.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Свойства </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="FileStream.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Конструктор </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="FileStream.html#methodSummary" style="display:none"> Методы </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="FileStream.html#constantSummary" style="display:none"> Глобальные константы </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="FileStream.html#eventSummary" style="display:none"> События </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="FileStream.html#styleSummary" style="display:none"> Стили </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="FileStream.html#SkinPartSummary" style="display:none"> Компоненты темы оформления </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="FileStream.html#SkinStateSummary" style="display:none"> Состояния тем оформления </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="FileStream.html#effectSummary" style="display:none"> Эффекты </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="FileStream.html#constantSummary" style="display:none"> Константы </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="FileStream.html#methodSummary" style="display:none"> Глобальные функции </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="FileStream.html#methodSummary" style="display:none">Функции</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="FileStream.html#interfaceSummary" style="display:none"> Интерфейсы </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="FileStream.html#classSummary" style="display:none"> Классы </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="FileStream.html#includeExamplesSummary" style="display:none"> Примеры </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="FileStream.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								Классы
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Пакет</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">flash.filesystem</a></td></tr><tr><td class="classHeaderTableLabel">Класс</td><td class="classSignature">public  class  FileStream</td></tr><tr><td class="classHeaderTableLabel">Наследование</td><td class="inheritanceList">FileStream  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../Object.html">Object</a></td></tr><tr><td class="classHeaderTableLabel">Реализует</td><td> <a href="../utils/IDataInput.html">IDataInput</a>,  <a href="../utils/IDataOutput.html">IDataOutput</a></td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p></p>
+ Объект FileStream используется для чтения и записи файлов. Файлы можно открывать в синхронном режиме с помощью метода <code>open()</code> или в асинхронном с помощью метода <code>openAsync()</code>.
+ 
+ <p>Преимущество открытия файлов в асинхронном режиме состоит в том, что пока Adobe AIR выполняет чтение и запись в фоновом режиме, может исполняться и другой код. При открытии в асинхронном режиме события <code>progress</code> вызываются по мере выполнения операций.</p>
+ 
+               <p>Поведение объекта File, открываемого в асинхронном режиме, похоже на поведение объекта ByteArray, а поведение файла, открываемого в асинхронном режиме, похоже на поведение объекта Socket или URLStream. Когда объект File открывается в синхронном режиме, вызывающий оператор приостанавливает работу, пока запрошенные данные считываются или записываются в файл. Когда же он открывается в асинхронном режиме, все записываемые данные немедленно помещаются в буфер и записываются в файл позднее.</p>
+ 
+               <p>Независимо от того, в синхронном или асинхронном режиме выполняется чтение, в действительности методы чтения являются синхронными. В обоих случаях считывание производится из данных, которые «доступны» в текущий момент времени. Разница в том, что при синхронном чтении все данные доступны постоянно, а при асинхронном данные становятся доступны по мере того, как они передаются в буфер считывания. В любом случае, данные, которые в настоящий момент можно считать синхронным способом, представлены свойством <code>bytesAvailable</code>.</p>
+ 
+               <p>Приложение, обрабатывающее вводимые данные в асинхронном режиме, обычно ожидает событий <code>progress</code> и использует данные по мере того, как они становятся доступны, через вызов методов чтения. С другой стороны, приложение может просто дождаться, когда станут доступны все данные (событие <code>complete</code>), и как только событие <code>complete</code> будет выполнено, обработать все данные сразу. </p>
+ 
+            <p></p><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary" id="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Общедоступные свойства</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="FileStream.html#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Скрыть унаследованные общедоступные свойства</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="FileStream.html#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Показать унаследованные общедоступные свойства</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Свойство</th><th>Определено</th></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#bytesAvailable" class="signatureLink">bytesAvailable</a> : <a href="../../uint.html">uint</a><div class="summaryTableDescription">[только для чтения] 
+	
+     Возвращает число байтов данных, доступных для чтения во входном буфере.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="../../Object.html#constructor" class="signatureLink">constructor</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">
+	 Ссылка на объект класса или функцию конструктора для данного экземпляра объекта.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#endian" class="signatureLink">endian</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">
+	
+     Порядок байтов данных, константа BIG_ENDIAN или LITTLE_ENDIAN класса Endian.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#objectEncoding" class="signatureLink">objectEncoding</a> : <a href="../../uint.html">uint</a><div class="summaryTableDescription">
+     Указывает, какой формат, AMF3 или AMF0, используется для записи или чтения бинарных данных методом readObject() или writeObject().</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#position" class="signatureLink">position</a> : <a href="../../Number.html">Number</a><div class="summaryTableDescription">
+	 Текущее положение в файле.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readAhead" class="signatureLink">readAhead</a> : <a href="../../Number.html">Number</a><div class="summaryTableDescription">
+	 Минимальный объем данных, читаемых с диска в асинхронном режиме.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary" id="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Общедоступные методы </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="FileStream.html#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Скрыть унаследованные общедоступные методы</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="FileStream.html#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Показать унаследованные общедоступные методы</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Метод</th><th>Определено</th></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#FileStream()" class="signatureLink">FileStream</a>()</div><div class="summaryTableDescription">
+	 Создает объект FileStream.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#addEventListener()" class="signatureLink">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	Регистрирует объект прослушивателя события на объекте EventDispatcher для получения прослушивателем уведомления о событии.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#close()" class="signatureLink">close</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 Закрывает объект FileStream.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	Посылает событие в поток событий.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	Проверяет, имеет ли объект EventDispatcher прослушиватели, зарегистрированные для определенного типа события.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#hasOwnProperty()" class="signatureLink">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Показывает, определено ли заданное свойство для объекта.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#isPrototypeOf()" class="signatureLink">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Показывает, есть ли экземпляр класса Object в цепи прототипов объекта, заданного в качестве параметра.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#open()" class="signatureLink">open</a>(file:<a href="File.html">File</a>, fileMode:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 Открывает объект FileStream в синхронном режиме, указывая на файл, заданный параметром file.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#openAsync()" class="signatureLink">openAsync</a>(file:<a href="File.html">File</a>, fileMode:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 Открывает объект FileStream в асинхронном режиме, указывая на файл, заданный параметром file.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#propertyIsEnumerable()" class="signatureLink">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Показывает наличие заданного свойства и его перечисляемость.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readBoolean()" class="signatureLink">readBoolean</a>():<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	
+     Считывает логическое значение из потока файлов, байтов или массива байтов.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readByte()" class="signatureLink">readByte</a>():<a href="../../int.html">int</a></div><div class="summaryTableDescription">
+	
+     Считывает байт со знаком из потока файлов, байтов или массива байтов.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readBytes()" class="signatureLink">readBytes</a>(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:<a href="../../uint.html">uint</a> = 0, length:<a href="../../uint.html">uint</a> = 0):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Считывает число байтов данных, заданное параметром length, из потока файлов, байтов или массива байтов.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readDouble()" class="signatureLink">readDouble</a>():<a href="../../Number.html">Number</a></div><div class="summaryTableDescription">
+	
+     Считывает из потока файлов, байтов или массива байтов число IEEE 754 с двойной точностью и плавающей запятой.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readFloat()" class="signatureLink">readFloat</a>():<a href="../../Number.html">Number</a></div><div class="summaryTableDescription">
+	
+     Считывает из потока файлов, байтов или массива байтов число IEEE 754 с одинарной точностью и плавающей запятой.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readInt()" class="signatureLink">readInt</a>():<a href="../../int.html">int</a></div><div class="summaryTableDescription">
+	
+     Считывает из потока файлов, байтов или массива байтов 32-разрядное целое число со знаком.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readMultiByte()" class="signatureLink">readMultiByte</a>(length:<a href="../../uint.html">uint</a>, charSet:<a href="../../String.html">String</a>):<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	
+     Считывает из потока файлов, байтов или массива байтов многобайтовую строку заданной длины с использованием указанного набора символов.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readObject()" class="signatureLink">readObject</a>():<a href="../../specialTypes.html#*">*</a></div><div class="summaryTableDescription">
+	
+     Считывает объект из потока файлов, байтов или массива байтов зашифрованный в сериализованном формате AMF.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readShort()" class="signatureLink">readShort</a>():<a href="../../int.html">int</a></div><div class="summaryTableDescription">
+	
+     Считывает из потока файлов, байтов или массива байтов 16-разрядное целое число со знаком.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readUnsignedByte()" class="signatureLink">readUnsignedByte</a>():<a href="../../uint.html">uint</a></div><div class="summaryTableDescription">
+	
+     Считывает байт без знака из потока файлов, байтов или массива байтов.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readUnsignedInt()" class="signatureLink">readUnsignedInt</a>():<a href="../../uint.html">uint</a></div><div class="summaryTableDescription">
+	
+     Считывает из потока файлов, байтов или массива байтов 32-разрядное целое число без знака.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readUnsignedShort()" class="signatureLink">readUnsignedShort</a>():<a href="../../uint.html">uint</a></div><div class="summaryTableDescription">
+	
+     Считывает из потока файлов, байтов или массива байтов 16-разрядное целое число без знака.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readUTF()" class="signatureLink">readUTF</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	
+     Считывает из потока файлов, байтов или массива байтов строку UTF-8.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readUTFBytes()" class="signatureLink">readUTFBytes</a>(length:<a href="../../uint.html">uint</a>):<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	
+     Считывает последовательность байтов UTF-8 из потока байтов или массива байтов и возвращает строку.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#removeEventListener()" class="signatureLink">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	Удаляет прослушиватель из объекта EventDispatcher.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#setPropertyIsEnumerable()" class="signatureLink">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     Задает доступность динамического свойства для операций цикла.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toLocaleString()" class="signatureLink">toLocaleString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 Возвращает строковое представление этого объекта, отформатированного в соответствии со стандартами, принятыми для данной локали.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toString()" class="signatureLink">toString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 Возвращает строковое представление заданного объекта.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#truncate()" class="signatureLink">truncate</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 Сокращает файл до положения, заданного свойством position объекта FileStream.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#valueOf()" class="signatureLink">valueOf</a>():<a href="../../Object.html">Object</a></div><div class="summaryTableDescription">
+	 Возвращает элементарное значение заданного объекта.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	Проверяет, зарегистрирован ли прослушиватель события для указанного типа события с данным объектом EventDispatcher или любым его предшественником.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeBoolean()" class="signatureLink">writeBoolean</a>(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Записывает логическое значение.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeByte()" class="signatureLink">writeByte</a>(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Записывает байт.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeBytes()" class="signatureLink">writeBytes</a>(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:<a href="../../uint.html">uint</a> = 0, length:<a href="../../uint.html">uint</a> = 0):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Записывает последовательность байтов из заданного массива байтов, начиная с байта, заданного параметром offset (используя индекс с нулевой базой), длиной, заданной параметром length, в поток файлов, байтов или массив байтов.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeDouble()" class="signatureLink">writeDouble</a>(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Записывает число IEEE 754 с двойной точностью (64-разрядное) и плавающей запятой.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeFloat()" class="signatureLink">writeFloat</a>(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Записывает число IEEE 754 с одинарной точностью (32-разрядное) и плавающей запятой.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeInt()" class="signatureLink">writeInt</a>(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Записывает 32-разрядное целое число со знаком.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeMultiByte()" class="signatureLink">writeMultiByte</a>(value:<a href="../../String.html">String</a>, charSet:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Записывает в поток файлов, байтов или массив байтов многобайтовую строку заданной длины с использованием заданного набора символов.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeObject()" class="signatureLink">writeObject</a>(object:<a href="../../specialTypes.html#*">*</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Записывает объект в поток файлов, байтов или массив байтов в сериализованном формате AMF.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeShort()" class="signatureLink">writeShort</a>(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Записывает 16-разрядное целое число.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeUnsignedInt()" class="signatureLink">writeUnsignedInt</a>(value:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Записывает 32-разрядное целое число без знака.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeUTF()" class="signatureLink">writeUTF</a>(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Записывает в поток файлов, байтов или массив байтов строку UTF-8.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeUTFBytes()" class="signatureLink">writeUTFBytes</a>(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Записывает строку UTF-8.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary" id="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">События</div><div class="showHideLinks"><a href="http://help.adobe.com/ru_RU/Flex/4.6/UsingSDK/WS2db454920e96a9e51e63e3d11c0bf69084-7ee9.html" target="_blank">Дополнительные сведения о событиях</a></div><div class="showHideLinks"><div id="hideInheritedEvent" class="hideInheritedEvent"><a class="showHideLink" href="FileStream.html#eventSummary" onclick="javascript:setInheritedVisible(false,'Event');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Скрыть унаследованные события</a></div><div id="showInheritedEvent" class="showInheritedEvent"><a class="showHideLink" href="FileStream.html#eventSummary" onclick="javascript:setInheritedVisible(true,'Event');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Показать унаследованные события</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Событие</th><th> Сводка </th><th>Определено</th></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[многоадресное событие] Отправляется, когда проигрыватель Flash Player или приложение AIR перемещается в фокус операционной системы и становится активным.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#event:close" class="signatureLink">close</a></div></td><td class="summaryTableDescription summaryTableCol">Указывает, что поток был закрыт формальным вызовом метода close().</td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#event:complete" class="signatureLink">complete</a></div></td><td class="summaryTableDescription summaryTableCol">Сообщает о достижении конца потока.</td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[многоадресное событие] Отправляется, когда проигрыватель Flash Player или приложение AIR теряет фокус системы и становится неактивным.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#event:ioError" class="signatureLink">ioError</a></div></td><td class="summaryTableDescription summaryTableCol">Указывает, что во время выполнения асинхронной операции ввода-вывода произошла ошибка.</td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#event:outputProgress" class="signatureLink">outputProgress</a></div></td><td class="summaryTableDescription summaryTableCol">Сообщает, что запись данных из буфера в файл завершена.</td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#event:progress" class="signatureLink">progress</a></div></td><td class="summaryTableDescription summaryTableCol">Сообщает, что в потоке появились новые доступные данные.</td><td class="summaryTableOwnerCol">FileStream</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Сведения о свойстве</div><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="bytesAvailable" id="bytesAvailable"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>bytesAvailable</h3></td><td class="detailHeaderType">свойство</td></tr></table><div class="detailBody"><code>bytesAvailable:<a href="../../uint.html">uint</a></code>&nbsp;&nbsp;[только для чтения] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Возвращает число байтов данных, доступных для чтения во входном буфере. В коде должен быть вызов свойства <code>bytesAvailable</code>, проверяющий доступность необходимого объема данных до того, как будет выполнена попытка их считывания с помощью одного из методов чтения.
+     </p><br/><br/><span class="label"> Реализация </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get bytesAvailable():<a href="../../uint.html">uint</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="endian" id="endian"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>endian</h3></td><td class="detailHeaderType">свойство</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>endian:<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Порядок байтов данных, константа <code>BIG_ENDIAN</code> или <code>LITTLE_ENDIAN</code> класса Endian.
+     
+     </p><br/><br/><span class="label"> Реализация </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get endian():<a href="../../String.html">String</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set endian(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="objectEncoding" id="objectEncoding"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>objectEncoding</h3></td><td class="detailHeaderType">свойство</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>objectEncoding:<a href="../../uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     Указывает, какой формат, AMF3 или AMF0, используется для записи или чтения бинарных данных методом <code>readObject()</code> или <code>writeObject()</code>.
+	 
+	 <p>Значение представлено константой из класса ObjectEncoding. По умолчанию используется формат AMF3.</p>
+	 
+	 </p><br/><br/><span class="label"> Реализация </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get objectEncoding():<a href="../../uint.html">uint</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set objectEncoding(value:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></code><br/><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="../net/ObjectEncoding.html" target="">ObjectEncoding</a><br/><a href="FileStream.html#readObject()" target="">readObject()</a><br/><a href="FileStream.html#writeObject()" target="">writeObject()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="position" id="position"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>position</h3></td><td class="detailHeaderType">свойство</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>position:<a href="../../Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 Текущее положение в файле. 
+	 
+	 <p>Данное значение изменяется при следующих условиях:</p>
+	 
+	 <ul><li>Если явно задано свойство.</li><li>Если производится считывание из объекта FileStream (с использованием одного из методов чтения).</li><li>Если производится запись в объект FileStream.</li></ul>
+	 
+	 <p>Положение определяется как Number (а не uint) для поддержки файлов длиной более 2<sup>32</sup> байтов. Значение данного свойства всегда представлено целым числом до 2<sup>53</sup>. Если задать это значение дробным числом, то оно будет округлено до целого в меньшую сторону.</p>
+	 
+	 <p>Если при асинхронном чтении файла задать свойство <code>position</code>, приложение начнет заполнять буфер чтения данными, начиная с указанного положения, а свойство <code>bytesAvailable</code> может принять значение 0. Дождитесь события <code>complete</code>, прежде чем использовать метод read для чтения данных или дождитесь события <code>progress</code> и проверьте свойство <code>bytesAvailable</code>, прежде чем использовать метод read.</p>
+	  
+	 </p><br/><br/><span class="label"> Реализация </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get position():<a href="../../Number.html">Number</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set position(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code><br/><span id="pageFilter"><br/><span class="label"> Пример &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_ru"> Использование этого примера </a></span>)
+            </span><br/><div class="detailBody"> На примере следующего кода показано, как обновляется свойство <code>position</code> объекта FileStream по мере считывания приложением данных из файла.
+<div class="listing"><pre>
+import flash.fileSystem.*;
+import flash.utils.ByteArray;
+import flash.events.Event;
+
+var sourceFile:File = File.documentsDirectory.resolvePath("Apollo Test/test.txt");
+var stream:FileStream = new FileStream();
+stream.addEventListener(Event.COMPLETE, readBytes);
+stream.openAsync(sourceFile, FileMode.READ);
+
+function readBytes(e:Event):void {
+    var bytes:ByteArray = new ByteArray();
+    trace("position 0:", stream.position); // 0
+    bytes[0] = stream.readByte();
+    trace("position 1:", stream.position); // 1
+    fileStream.readBytes(bytes, stream.position, 4); 
+    trace("position 2:", stream.position); // 5
+    stream.close();
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="readAhead" id="readAhead"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>readAhead</h3></td><td class="detailHeaderType">свойство</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>readAhead:<a href="../../Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 Минимальный объем данных, читаемых с диска в асинхронном режиме.
+	 
+	 <p>Это свойство указывает, сколько данных пытается считать асинхронный поток за точкой текущего положения. Данные считываются блоками на основе размера страницы файловой системы. Поэтому, если для <code>readAhead</code> установлено значение 9000 в компьютерной системе с размером страницы 8 КБ (8192 байт), среда выполнения одновременно считывает следующие 2 блока или 16384 байт данных. Значение этого свойства по умолчанию &mdash; бесконечность: по умолчанию из файла, открытого для асинхронного чтения, данные считываются, пока не будет достигнут конец файла.</p>
+	 
+	 <p>Считывание данных из буфера чтения не влияет на значение свойства <code>readAhead</code>. При считывании данных из буфера новые данные считываются в буфер для его пополнения. 
+	  </p>
+	 
+	 <p>Свойство <code>readAhead</code> не влияет на файл, открытый в синхронном режиме.</p>
+	 
+	 <p>При считывании данных в асинхронном режиме объект FileStream отправляет события <code>progress</code>. В методе обработчика событий для события <code>progress</code> проверьте доступность необходимого количества байтов (это можно проверить с помощью свойства <code>bytesAvailable</code>), а затем считайте данные из буфера чтения с помощью метода read.</p>
+	 
+	 </p><br/><br/><span class="label"> Реализация </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get readAhead():<a href="../../Number.html">Number</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set readAhead(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code><br/><span id="pageFilter"><br/><span class="label"> Пример &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_ru"> Использование этого примера </a></span>)
+            </span><br/><div class="detailBody">     На примере следующего кода показано, как с помощью свойства <code>readAhead</code> ограничить объем данных, считываемых в файл, до 100 байтов:
+<div class="listing"><pre>
+import flash.filesystem.*;
+
+var file:File = File.desktopDirectory.resolvePath("test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.readAhead = 100;
+fileStream.addEventListener(ProgressEvent.PROGRESS, readProgressHandler)
+fileStream.openAsync(file, FileMode.READ);
+var results:ByteArray;
+
+function readProgressHandler(event:ProgressEvent):void {
+    if (fileStream.bytesAvailable &gt;= 100) {
+        fileStream.readBytes(results, 0, 100);
+    }
+}
+</pre></div></div></span></div></span><a name="constructorDetail" id="constructorDetail"></a><div class="detailSectionHeader">Сведения о конструкторе</div><span id="pageFilter" runtime="AIR::1.0##"><a name="FileStream()" id="FileStream()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>FileStream</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Конструктор</td></tr></table><div class="detailBody"><code>public function FileStream()</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p>
+	 Создает объект FileStream. Для открытия файла используйте методы <code>open()</code> или <code>openAsync()</code>.
+	 
+	 </p><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="FileStream.html#open()" target="">open()</a><br/><a href="FileStream.html#openAsync()" target="">openAsync()</a></div></div></span><a name="methodDetail" id="methodDetail"></a><div class="detailSectionHeader">Сведения о методе</div><span id="pageFilter" runtime="AIR::1.0##"><a name="close()" id="close()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;close</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td></tr></table><div class="detailBody"><code> public function close():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 Закрывает объект FileStream. 
+	 
+	 <p>После вызова метода <code>close()</code> данные невозможно считывать или записывать. Если файл был открыт в асинхронном режиме (объект FileStream использует для открытия файла метод <code>openAsync()</code>), вызов метода <code>close()</code> заставляет объект вызвать событие <code>close</code>. </p>
+	 
+	 <p>Автоматическое закрытие приложения закрывает все файлы, связанные с объектами FileStream в приложении. Тем не менее, рекомендуется ставить все асинхронно открытые объекты FileStream, у которых есть данные, ожидающие записи, в очередь на событие <code>closed</code>, прежде чем закрывать приложение (чтобы данные точно были записаны).</p>
+	 
+	 <p>Можно повторно использовать объект FileStream, вызвав метод <code>open()</code> или <code>openAsync()</code>. Все файлы, связанные с объектом FileStream, при этом закрываются, но объект не вызывает событие <code>close</code>.</p>
+	 
+	 <p>Что касается объекта FileStream, открытого в асинхронном режиме (с использованием метода <code>openAsync()</code>), то даже если вызвать событие <code>close()</code> для этого объекта и удалить свойства и переменные, ссылающиеся на него, объект FileStream не будет удален из памяти до тех пор, пока в остаются невыполненные операции и обработчики событий, ждущие их выполнения. В частности, объект FileStream, на который нет других ссылок, будет существовать, пока выполняется хотя бы одно из следующих условий: </p>
+	 
+	 <ul><li>При выполнении считывания из файла не был достигнут конец файла (и не было вызвано событие <code>complete</code>). </li><li>Выходные данные будут по-прежнему доступны для записи, а у связанных с ними событий (таких как <code>outputProgress</code> или <code>ioError</code>) будут прослушиватели событий. </li></ul>
+	 
+	 </p><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>close</b>:<a href="../events/Event.html"><code>Event</code></a></code> &mdash; Открытый в асинхронном режиме файл будет закрыт.
+	 
+	 </td></tr></table><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="FileStream.html#open()" target="">open()</a><br/><a href="FileStream.html#event:close" target="">Событие close</a></div><span id="pageFilter"><br/><span class="label"> Пример &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_ru"> Использование этого примера </a></span>)
+            </span><br/><br/><div class="detailBody">     Следующий код открывает объект FileStream <i>асинхронно</i> и записывает текстовый файл с именем test.txt во вложенный каталог Apollo Test каталога документов пользователя. Вызов метода <code>close()</code> объекта FileStream закрывает файл после записи данных. 
+<div class="listing"><pre>
+import flash.filesystem.*;
+import flash.events.Event;
+            
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.openAsync(file, FileMode.WRITE);
+fileStream.writeUTFBytes("Hello");
+fileStream.addEventListener(Event.CLOSE, fileClosed);
+fileStream.close();
+
+function fileClosed(event:Event):void {
+    trace("closed");
+}            
+</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody">     Следующий код открывает объект FileStream <i>синхронно</i> и записывает текстовый файл с именем test.txt во вложенный каталог Apollo Test каталога документов пользователя. Вызов метода <code>close()</code> объекта FileStream закрывает файл после записи данных.
+<div class="listing"><pre>
+import flash.filesystem.*;
+            
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.open(file, FileMode.WRITE);
+fileStream.writeUTF("Hello");
+fileStream.close();
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="open()" id="open()"></a><a name="open(flash.filesystem.File,String)" id="open(flash.filesystem.File,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;open</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function open(file:<a href="File.html">File</a>, fileMode:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 Открывает объект FileStream в синхронном режиме, указывая на файл, заданный параметром <code>file</code>. 
+	 
+	 <p>Если объект FileStream уже открыт, вызов метода закрывает файл перед открытием, и последующие события (включая <code>close</code>) не передаются ранее открытому файлу.</p>
+	 
+	 <p>В системах, поддерживающих блокирование файлов, файлы, открытые только для записи или только для обновления (<code>FileMode.WRITE</code> или <code>FileMode.UPDATE</code>), недоступны для чтения, пока они не будут закрыты.</p>
+	 
+	 <p>После завершения выполнения операций с файлом необходимо вызвать метод <code>close()</code> объекта FileStream. В некоторых системах число одновременно открытых файлов ограничено.</p>
+	 
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">file</span>:<a href="File.html">File</a></code> &mdash; Объект File, указывающий на файл, который необходимо открыть.
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">fileMode</span>:<a href="../../String.html">String</a></code> &mdash; Строка класса FileMode, определяющая доступные действия объекта FileStream, например чтение или запись в файл.
+	 
+	 </td></tr></table></p><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файла не существует; у вас нет прав для открытия файла; вы открываете файл для чтения, но у вас нет прав на чтение; вы открываете файл для записи, но у вас нет прав для записи. 
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; Файл находится в каталоге приложения, и для параметра <code>fileMode</code> задан режим append, update или write. 
+	 
+	 </td></tr></table><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="FileStream.html#close()" target="">close()</a><br/><a href="File.html" target="">Файл</a><br/><a href="FileMode.html" target="">FileMode</a></div><span id="pageFilter"><br/><span class="label"> Пример &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_ru"> Использование этого примера </a></span>)
+            </span><br/><br/><div class="detailBody"> Следующий код показывает, как синхронно открыть файл test.txt во вложенном каталоге Apollo Test каталога документов пользователя, а затем считать этот файл в строку, используя для кодировки текста системный набор символов.
+<div class="listing"><pre>
+import flash.filesystem.*;
+
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.open(file, FileMode.READ);
+var str:String = fileStream.readMultiByte(file.size, File.systemCharset);
+trace(str);
+fileStream.close();
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="openAsync()" id="openAsync()"></a><a name="openAsync(flash.filesystem.File,String)" id="openAsync(flash.filesystem.File,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;openAsync</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function openAsync(file:<a href="File.html">File</a>, fileMode:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 Открывает объект FileStream в асинхронном режиме, указывая на файл, заданный параметром <code>file</code>. 
+	 
+	 <p>Если объект FileStream уже открыт, вызов метода закрывает файл перед открытием, и последующие события (включая <code>close</code>) не передаются ранее открытому файлу.</p>
+	 
+	 <p>Если параметру <code>fileMode</code> присвоена константа <code>FileMode.READ</code> или <code>FileMode.UPDATE</code>, AIR считывает данные во входной буфер при открытии файла, а события <code>progress</code> и <code>open</code> отправляются по мере считывания данных во входной буфер.</p>
+	 
+	 <p>В системах, поддерживающих блокирование файлов, файлы, открытые только для записи или только для обновления (<code>FileMode.WRITE</code> или <code>FileMode.UPDATE</code>), недоступны для чтения, пока они не будут закрыты.</p>
+	 
+	 <p>После завершения выполнения операций с файлом необходимо вызвать метод <code>close()</code> объекта FileStream. В некоторых системах число одновременно открытых файлов ограничено.</p>
+	 
+	 </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">file</span>:<a href="File.html">File</a></code> &mdash; Объект File, указывающий на файл, который необходимо открыть.
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">fileMode</span>:<a href="../../String.html">String</a></code> &mdash; Строка класса FileMode, определяющая доступные действия объекта FileStream, например чтение или запись в файл.
+	 
+	 </td></tr></table></p><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Файла не существует; у вас нет прав для открытия файла; вы открываете файл для чтения, но у вас нет прав на чтение; вы открываете файл для записи, но у вас нет прав для записи. 
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>progress</b>:<a href="../events/ProgressEvent.html"><code>ProgressEvent</code></a></code> &mdash; Вызывается при считывании данных во входной буфер. (При открытии файла для параметра <code>fileMode</code> должно быть установлено значение <code>FileMode.READ</code> или <code>FileMode.UPDATE</code>.)
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>complete</b>:<a href="../events/Event.html"><code>Event</code></a></code> &mdash; Данные файла считаны во входной буфер. (При открытии файла для параметра <code>fileMode</code> должно быть установлено значение <code>FileMode.READ</code> или <code>FileMode.UPDATE</code>.)
+	 
+	 </td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; Файл находится в каталоге приложения, и для параметра <code>fileMode</code> задан режим append, update или write. 
+	 
+	 </td></tr></table><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="FileStream.html#close()" target="">close()</a><br/><a href="FileStream.html#event:complete" target="">Событие complete</a><br/><a href="FileStream.html#event:ioError" target="">Событие ioError</a><br/><a href="FileStream.html#event:progress" target="">Событие progress</a><br/><a href="FileMode.html" target="">FileMode</a></div><span id="pageFilter"><br/><span class="label"> Пример &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_ru"> Использование этого примера </a></span>)
+            </span><br/><br/><div class="detailBody"> Следующий код показывает, как синхронно открыть файл test.txt во вложенном каталоге Apollo Test каталога документов пользователя, а затем считать этот файл в строку, используя для кодировки текста системный набор символов.
+<div class="listing"><pre>
+import flash.filesystem.*;
+import flash.events.Event;
+
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.addEventListener(Event.COMPLETE, fileCompleteHandler)
+fileStream.openAsync(file, FileMode.READ);
+
+function fileCompleteHandler(event:Event):void {
+    var str:String = fileStream.readMultiByte(fileStream.bytesAvailable, File.systemCharset);
+    trace(str);
+    fileStream.close();
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readBoolean()" id="readBoolean()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;readBoolean</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readBoolean():<a href="../../Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Считывает логическое значение из потока файлов, байтов или массива байтов. Считывается один байт. Если этот байт ненулевой, то возвращается значение <code>true</code>. В противном случае возвращается значение <code>false</code>.
+     </p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Boolean.html">Boolean</a></code> &mdash; Логическое значение будет <code>true</code>, если количество байтов не равно нулю, в остальных случаях оно будет <code>false</code>.
+     </td></tr></table><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Чтение файла невозможно или файл не открыт. Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на чтение; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), файл не может быть считан (например, из-за отсутствия файла).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Положение, определенное для считывания данных, превышает количество доступных байтов (задается свойством <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readByte()" id="readByte()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;readByte</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readByte():<a href="../../int.html">int</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Считывает байт со знаком из потока файлов, байтов или массива байтов.
+     </p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../int.html">int</a></code> &mdash; Возвращенное значение находится в диапазоне от -128 до 127.
+     </td></tr></table><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Чтение файла невозможно или файл не открыт. Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на чтение; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), файл не может быть считан (например, из-за отсутствия файла).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Положение, определенное для считывания данных, превышает количество доступных байтов (задается свойством <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readBytes()" id="readBytes()"></a><a name="readBytes(flash.utils.ByteArray,uint,uint)" id="readBytes(flash.utils.ByteArray,uint,uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;readBytes</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readBytes(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:<a href="../../uint.html">uint</a> = 0, length:<a href="../../uint.html">uint</a> = 0):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Считывает число байтов данных, заданное параметром <code>length</code>, из потока файлов, байтов или массива байтов. Байты считываются в объект ByteArray, определяемый параметром <code>bytes</code>, при этом начальная позиция определяется параметром <code>offset</code>.
+     </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">bytes</span>:<a href="../utils/ByteArray.html">ByteArray</a></code> &mdash; Объект <code>ByteArray</code>, в который считываются данные.
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">offset</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; Смещение в параметре <code>bytes</code>, с которого должно начинаться считывание данных.
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">length</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; Число байтов для считывания. Если значение по умолчанию равно 0, считываются все доступные данные.
+     </td></tr></table></p><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Чтение файла невозможно или файл не открыт. Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на чтение; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), файл не может быть считан (например, из-за отсутствия файла).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Положение, определенное для считывания данных, превышает количество доступных байтов (задается свойством <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readDouble()" id="readDouble()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;readDouble</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readDouble():<a href="../../Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Считывает из потока файлов, байтов или массива байтов число IEEE 754 с двойной точностью и плавающей запятой.
+     </p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Number.html">Number</a></code> &mdash; Число IEEE 754 с двойной точностью и плавающей запятой.
+     </td></tr></table><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Чтение файла невозможно или файл не открыт. Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на чтение; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), файл не может быть считан (например, из-за отсутствия файла).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Положение, определенное для считывания данных, превышает количество доступных байтов (задается свойством <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readFloat()" id="readFloat()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;readFloat</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readFloat():<a href="../../Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Считывает из потока файлов, байтов или массива байтов число IEEE 754 с одинарной точностью и плавающей запятой.
+     </p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Number.html">Number</a></code> &mdash; Число IEEE 754 с одинарной точностью и плавающей запятой.
+     </td></tr></table><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Чтение файла невозможно или файл не открыт. Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на чтение; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), файл не может быть считан (например, из-за отсутствия файла).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Положение, определенное для считывания данных, превышает количество доступных байтов (задается свойством <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readInt()" id="readInt()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;readInt</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readInt():<a href="../../int.html">int</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Считывает из потока файлов, байтов или массива байтов 32-разрядное целое число со знаком.
+     </p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../int.html">int</a></code> &mdash; Возвращаемое значение находится в диапазоне от -2147483648 до 2147483647.
+     </td></tr></table><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Чтение файла невозможно или файл не открыт. Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на чтение; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), файл не может быть считан (например, из-за отсутствия файла).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Положение, определенное для считывания данных, превышает количество доступных байтов (задается свойством <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readMultiByte()" id="readMultiByte()"></a><a name="readMultiByte(uint,String)" id="readMultiByte(uint,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;readMultiByte</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readMultiByte(length:<a href="../../uint.html">uint</a>, charSet:<a href="../../String.html">String</a>):<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Считывает из потока файлов, байтов или массива байтов многобайтовую строку заданной длины с использованием указанного набора символов.
+     
+     
+     </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">length</span>:<a href="../../uint.html">uint</a></code> &mdash; Число считываемых из потока байтов.
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">charSet</span>:<a href="../../String.html">String</a></code> &mdash; Строка, обозначающая набор символов, которые используются для интерпретации байтов. Возможные строки наборов символов: <code>"shift_jis"</code>, <code>"cn-gb"</code>, <code>"iso-8859-1"</code> и другие. Полный список см. в разделе <a href="../../charset-codes.html" >Поддерживаемые наборы символов</a>.
+     
+     <p><b>Примечание.</b> Если в текущей системе не распознается значение параметра <code>charSet</code>, то в качестве набора символов <span> Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup> Player или </span> Adobe<sup>&reg;</sup> AIR<sup>&reg;</sup> будет использована кодовая страница по умолчанию. Например, значение параметра <code>charSet</code>, как в <code>myTest.readMultiByte(22, iso-8859-01)</code>, использующее <code>01</code> вместо <code>1</code>, может работать в системе разработчика, а в другой системе нет. В другой системе программа <span>Flash Player</span> или среда выполнения AIR будет использовать кодовую страницу, заданную по умолчанию в системе.</p>
+     
+     </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../String.html">String</a></code> &mdash; Строка в кодировке UTF-8.
+     </td></tr></table><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Чтение файла невозможно или файл не открыт. Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на чтение; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), файл не может быть считан (например, из-за отсутствия файла).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Положение, определенное для считывания данных, превышает количество доступных байтов (задается свойством <code>bytesAvailable</code>).
+	
+	</td></tr></table><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="File.html#systemCharset" target="">File.systemCharset</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readObject()" id="readObject()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;readObject</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readObject():<a href="../../specialTypes.html#*">*</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Считывает объект из потока файлов, байтов или массива байтов зашифрованный в сериализованном формате AMF.
+     </p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../specialTypes.html#*">*</a></code> &mdash; Десериализованный объект
+     
+     </td></tr></table><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Чтение файла невозможно или файл не открыт. Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на чтение; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), файл не может быть считан (например, из-за отсутствия файла).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Положение, определенное для считывания данных, превышает количество доступных байтов (задается свойством <code>bytesAvailable</code>).
+	
+	</td></tr></table><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="../net/package.html#registerClassAlias()" target="">flash.net.registerClassAlias()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readShort()" id="readShort()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;readShort</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readShort():<a href="../../int.html">int</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Считывает из потока файлов, байтов или массива байтов 16-разрядное целое число со знаком.
+     </p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../int.html">int</a></code> &mdash; Возвращаемое значение находится в диапазоне от -32768 до 32767.
+     </td></tr></table><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Чтение файла невозможно или файл не открыт. Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на чтение; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), файл не может быть считан (например, из-за отсутствия файла).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Положение, определенное для считывания данных, превышает количество доступных байтов (задается свойством <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readUnsignedByte()" id="readUnsignedByte()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;readUnsignedByte</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedByte():<a href="../../uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Считывает байт без знака из потока файлов, байтов или массива байтов.
+     </p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../uint.html">uint</a></code> &mdash; Возвращенное значение находится в диапазоне от 0 до 255.
+     </td></tr></table><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Чтение файла невозможно или файл не открыт. Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на чтение; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), файл не может быть считан (например, из-за отсутствия файла).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Положение, определенное для считывания данных, превышает количество доступных байтов (задается свойством <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readUnsignedInt()" id="readUnsignedInt()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;readUnsignedInt</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedInt():<a href="../../uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Считывает из потока файлов, байтов или массива байтов 32-разрядное целое число без знака.
+     </p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../uint.html">uint</a></code> &mdash; Возвращенное значение находится в диапазоне от 0 до 4294967295.
+     </td></tr></table><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Чтение файла невозможно или файл не открыт. Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на чтение; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), файл не может быть считан (например, из-за отсутствия файла).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Положение, определенное для считывания данных, превышает количество доступных байтов (задается свойством <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readUnsignedShort()" id="readUnsignedShort()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;readUnsignedShort</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedShort():<a href="../../uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Считывает из потока файлов, байтов или массива байтов 16-разрядное целое число без знака.
+     </p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../uint.html">uint</a></code> &mdash; Возвращенное значение находится в диапазоне от 0 до 65535.
+     </td></tr></table><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Чтение файла невозможно или файл не открыт. Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на чтение; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), файл не может быть считан (например, из-за отсутствия файла).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Положение, определенное для считывания данных, превышает количество доступных байтов (задается свойством <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readUTF()" id="readUTF()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;readUTF</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUTF():<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Считывает из потока файлов, байтов или массива байтов строку UTF-8. Предполагается, что в строку вставляется префикс с неподписанным значением, указывающим длину в байтах.
+     
+     <p>Этот метод похож на метод <code>readUTF()</code> в интерфейсе Java<sup>&reg;</sup> IDataInput.</p>
+     </p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../String.html">String</a></code> &mdash; Строка в кодировке UTF-8, являющаяся байтовым представлением символов.
+     
+     </td></tr></table><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Чтение файла невозможно или файл не открыт. Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на чтение; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), файл не может быть считан (например, из-за отсутствия файла).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Положение, определенное для считывания данных, превышает количество доступных байтов (задается свойством <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readUTFBytes()" id="readUTFBytes()"></a><a name="readUTFBytes(uint)" id="readUTFBytes(uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;readUTFBytes</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUTFBytes(length:<a href="../../uint.html">uint</a>):<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Считывает последовательность байтов UTF-8 из потока байтов или массива байтов и возвращает строку.
+     </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">length</span>:<a href="../../uint.html">uint</a></code> &mdash; Число байтов для считывания.
+     </td></tr></table></p><p></p><span class="label">Возвращает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../String.html">String</a></code> &mdash; Строка в кодировке UTF-8, являющаяся байтовым представлением символов указанной длины.
+     </td></tr></table><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Чтение файла невозможно или файл не открыт. Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на чтение; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), файл не может быть считан (например, из-за отсутствия файла).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Положение, определенное для считывания данных, превышает количество доступных байтов (задается свойством <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="truncate()" id="truncate()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;truncate</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function truncate():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 Сокращает файл до положения, заданного свойством <code>position</code> объекта FileStream. 
+	 
+	 <p>Все байты от положения, заданного свойством <code>position</code>, до конца файла, удаляются. Файл должен быть открыт для записи.</p>
+	 
+	 </p><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; Файл не открыт для записи.
+	 
+	 </td></tr></table><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="FileStream.html#position" target="">position</a></div><span id="pageFilter"><br/><span class="label"> Пример &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_ru"> Использование этого примера </a></span>)
+            </span><br/><br/><div class="detailBody"> Следующий код синхронно открывает файл test.txt во вложенном каталоге Apollo Test каталога документов пользователя, а затем обрезает этот файл до 100 символов, если его длина превышает 100 символов.
+<div class="listing"><pre>
+import flash.filesystem.*;
+
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.open(file, FileMode.UPDATE);
+if (file.size &gt; 100) {
+    fileStream.position = 100;
+    fileStream.truncate();
+}
+fileStream.close();
+</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody"> Следующий код <i>асинхронно</i> открывает файл test.txt во вложенном каталоге Apollo Test каталога документов пользователя, а затем обрезает этот файл до 100 символов, если его длина превышает 100 символов.
+<div class="listing"><pre>
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.openAsync(file, FileMode.UPDATE);
+trace("start", file.size)
+if (file.size &gt; 100) {
+    fileStream.position = 100;
+    fileStream.truncate();
+}
+fileStream.addEventListener(Event.CLOSE, fileClosed);
+fileStream.close();
+function fileClosed(event:Event):void {
+    trace("closed", file.size); 
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeBoolean()" id="writeBoolean()"></a><a name="writeBoolean(Boolean)" id="writeBoolean(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeBoolean</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeBoolean(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Записывает логическое значение. Записывается один байт, соответствующий параметру <code>value</code>, 1 в случае значения <code>true</code> и 0 в случае значения <code>false</code>.
+     
+     </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../Boolean.html">Boolean</a></code> &mdash; Логическое значение, показывающее, какой байт записывается. Если параметр имеет значение <code>true</code>, записывается 1; если <code>false</code>, записывается 0.
+     
+     </td></tr></table></p><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Вы не можете произвести запись в файл (например, потому что файл отсутствует). Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на запись; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), в файл не может быть произведена запись (например, из-за отсутствия файла).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeByte()" id="writeByte()"></a><a name="writeByte(int)" id="writeByte(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeByte</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeByte(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Записывает байт. Используются 8 младших битов параметра, а 24 старших битов игнорируются.
+     </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../int.html">int</a></code> &mdash; Значение байта в виде целого числа.
+     
+     </td></tr></table></p><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Вы не можете произвести запись в файл (например, потому что файл отсутствует). Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на запись; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), в файл не может быть произведена запись (например, из-за отсутствия файла).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeBytes()" id="writeBytes()"></a><a name="writeBytes(flash.utils.ByteArray,uint,uint)" id="writeBytes(flash.utils.ByteArray,uint,uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeBytes</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeBytes(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:<a href="../../uint.html">uint</a> = 0, length:<a href="../../uint.html">uint</a> = 0):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Записывает последовательность байтов из заданного массива байтов <code>bytes</code>, начиная с байта, заданного параметром <code>offset</code> (используя индекс с нулевой базой), длиной, заданной параметром <code>length</code>, в поток файлов, байтов или массив байтов.
+     
+     <p>Если параметр <code>length</code> опущен, применение длины по умолчанию, равной 0, приведет к тому, что будет записан весь буфер, начиная со значения параметра <code>offset</code>. Если также опустить параметр <code>offset</code>, будет записываться весь буфер. </p>
+     
+     <p>Если параметры <code>offset</code> или <code>length</code> находятся за пределами диапазона, то они корректируются так, чтобы совпасть с началом и концом массива <code>bytes</code>.</p>
+     </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">bytes</span>:<a href="../utils/ByteArray.html">ByteArray</a></code> &mdash; Массив байтов для записи.
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">offset</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; Индекс с нулевой базой, определяющий положение в массиве для начала записи.
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">length</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; Целое число без знака, определяющее глубину буфера для записи.
+     
+     </td></tr></table></p><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Вы не можете произвести запись в файл (например, потому что файл отсутствует). Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на запись; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), в файл не может быть произведена запись (например, из-за отсутствия файла).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeDouble()" id="writeDouble()"></a><a name="writeDouble(Number)" id="writeDouble(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeDouble</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeDouble(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Записывает число IEEE 754 с двойной точностью (64-разрядное) и плавающей запятой.
+     </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../Number.html">Number</a></code> &mdash; Число с двойной точностью (64-разрядное) и плавающей запятой.
+     
+     </td></tr></table></p><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Вы не можете произвести запись в файл (например, потому что файл отсутствует). Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на запись; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), в файл не может быть произведена запись (например, из-за отсутствия файла).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeFloat()" id="writeFloat()"></a><a name="writeFloat(Number)" id="writeFloat(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeFloat</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeFloat(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Записывает число IEEE 754 с одинарной точностью (32-разрядное) и плавающей запятой.
+     </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../Number.html">Number</a></code> &mdash; Число с одинарной точностью (32-разрядное) и плавающей запятой.
+     
+     </td></tr></table></p><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Вы не можете произвести запись в файл (например, потому что файл отсутствует). Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на запись; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), в файл не может быть произведена запись (например, из-за отсутствия файла).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeInt()" id="writeInt()"></a><a name="writeInt(int)" id="writeInt(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeInt</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeInt(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Записывает 32-разрядное целое число со знаком.
+     </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../int.html">int</a></code> &mdash; Значение байта в виде целого числа со знаком.
+     
+     </td></tr></table></p><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Вы не можете произвести запись в файл (например, потому что файл отсутствует). Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на запись; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), в файл не может быть произведена запись (например, из-за отсутствия файла).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeMultiByte()" id="writeMultiByte()"></a><a name="writeMultiByte(String,String)" id="writeMultiByte(String,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeMultiByte</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeMultiByte(value:<a href="../../String.html">String</a>, charSet:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Записывает в поток файлов, байтов или массив байтов многобайтовую строку заданной длины с использованием заданного набора символов.
+     
+     </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../String.html">String</a></code> &mdash; Записываемое значение строки.
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">charSet</span>:<a href="../../String.html">String</a></code> &mdash; Строка, определяющая используемый набор символов. Возможные строки наборов символов: <code>"shift_jis"</code>, <code>"cn-gb"</code>, <code>"iso-8859-1"</code> и другие. Полный список см. в разделе <a href="../../charset-codes.html" >Поддерживаемые наборы символов</a>.
+     </td></tr></table></p><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Вы не можете произвести запись в файл (например, потому что файл отсутствует). Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на запись; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), в файл не может быть произведена запись (например, из-за отсутствия файла).
+	
+	</td></tr></table><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="File.html#systemCharset" target="">File.systemCharset</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeObject()" id="writeObject()"></a><a name="writeObject(any)" id="writeObject(any)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeObject</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeObject(object:<a href="../../specialTypes.html#*">*</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Записывает объект в поток файлов, байтов или массив байтов в сериализованном формате AMF.
+     </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">object</span>:<a href="../../specialTypes.html#*">*</a></code> &mdash; Объект для сериализации.
+     
+     </td></tr></table></p><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Вы не можете произвести запись в файл (например, потому что файл отсутствует). Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на запись; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), в файл не может быть произведена запись (например, из-за отсутствия файла).
+	
+	</td></tr></table><p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="../net/package.html#registerClassAlias()" target="">flash.net.registerClassAlias()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeShort()" id="writeShort()"></a><a name="writeShort(int)" id="writeShort(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeShort</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeShort(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Записывает 16-разрядное целое число. Используются 16 младших битов параметра, а 16 старших битов игнорируются.
+     </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../int.html">int</a></code> &mdash; Значение байта в виде целого числа.
+     
+     </td></tr></table></p><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Вы не можете произвести запись в файл (например, потому что файл отсутствует). Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на запись; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), в файл не может быть произведена запись (например, из-за отсутствия файла).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeUnsignedInt()" id="writeUnsignedInt()"></a><a name="writeUnsignedInt(uint)" id="writeUnsignedInt(uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeUnsignedInt</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUnsignedInt(value:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Записывает 32-разрядное целое число без знака.
+     </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../uint.html">uint</a></code> &mdash; Значение байта в виде целого числа без знака.
+     
+     </td></tr></table></p><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Вы не можете произвести запись в файл (например, потому что файл отсутствует). Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на запись; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), в файл не может быть произведена запись (например, из-за отсутствия файла).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeUTF()" id="writeUTF()"></a><a name="writeUTF(String)" id="writeUTF(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeUTF</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUTF(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Записывает в поток файлов, байтов или массив байтов строку UTF-8. Сначала записывается длина строки UTF-8 в байтах (в виде 16-разрядного целого числа), за которой следуют байты символов строки.
+     </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../String.html">String</a></code> &mdash; Записываемое значение строки.
+     
+     </td></tr></table></p><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Вы не можете произвести запись в файл (например, потому что файл отсутствует). Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../RangeError.html">RangeError</a> </code> &mdash; Если длина строки превышает 65535.
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на запись; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), в файл не может быть произведена запись (например, из-за отсутствия файла).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeUTFBytes()" id="writeUTFBytes()"></a><a name="writeUTFBytes(String)" id="writeUTFBytes(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeUTFBytes</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">метод</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUTFBytes(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Записывает строку UTF-8. Аналогично <code>writeUTF()</code>, но строке не предшествует 16-разрядное слово, указывающее длину.
+     </p><p><span class="label"> Параметры </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../String.html">String</a></code> &mdash; Записываемое значение строки.
+     
+     </td></tr></table></p><br/><span class="label">События</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Вы не можете произвести запись в файл (например, потому что файл отсутствует). Данное событие вызывается только для файлов, открытых для асинхронных операций (с помощью метода <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Выдает</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Файл не был открыт; файл был открыт, но без прав на запись; либо, если файл был открыт для синхронных операций (с помощью метода <code>open()</code>), в файл не может быть произведена запись (например, из-за отсутствия файла).
+	
+	</td></tr></table></div></span><div class="detailSectionHeader"> Сведения о событии </div><span id="pageFilter" runtime="AIR::1.0##"><a name="event:close" id="event:close"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>close</h3></td><td class="detailHeaderType"> Событие </td></tr></table><div class="detailBody"><span class="label">Тип объекта события: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">свойство Event.type  =  </span><a href="../events/Event.html#CLOSE"><code>flash.events.Event.CLOSE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ Указывает, что поток был закрыт формальным вызовом метода <code>close()</code>.
+ 
+ </p>
+	Константа <code>Event.CLOSE</code> определяет значение свойства <code>type</code> объекта события <code>close</code>. 
+	
+	<p>Это событие имеет следующие свойства:</p>
+	
+	<table class="innertable" ><tr><th>Свойство</th><th>Значение</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; поведение по умолчанию, подлежащее отмене, не определено.</td></tr><tr><td><code>currentTarget</code></td><td>Объект, активно обрабатывающий объект Event с помощью прослушивателя событий.</td></tr><tr><td><code>target</code></td><td>Объект, для которого разорвано подключение.</td></tr></table>
+	
+	<p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="FileStream.html#close()" target="">close()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:complete" id="event:complete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>complete</h3></td><td class="detailHeaderType"> Событие </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Тип объекта события: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">свойство Event.type  =  </span><a href="../events/Event.html#COMPLETE"><code>flash.events.Event.COMPLETE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ Сообщает о достижении конца потока.
+ 
+ </p>
+	Константа <code>Event.COMPLETE</code> определяет значение свойства <code>type</code> объекта <code>complete</code>. 
+	
+	<p>Это событие имеет следующие свойства:</p>
+	<table class="innertable" ><tr><th>Свойство</th><th>Значение</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; поведение по умолчанию, подлежащее отмене, не определено.</td></tr><tr><td><code>currentTarget</code></td><td>Объект, активно обрабатывающий объект Event с помощью прослушивателя событий.</td></tr><tr><td><code>target</code></td><td>Сетевой объект, который завершил загрузку. 
+	    </td></tr></table>
+	
+	<p><span class="label">Связанные элементы API</span></p><div class="seeAlso"><a href="FileStream.html#position" target="">position</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:ioError" id="event:ioError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>ioError</h3></td><td class="detailHeaderType"> Событие </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Тип объекта события: </span><a href="../events/IOErrorEvent.html"><code>flash.events.IOErrorEvent</code></a><br/><span class="label">свойство IOErrorEvent.type  =  </span><a href="../events/IOErrorEvent.html#IO_ERROR"><code>flash.events.IOErrorEvent.IO_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ Указывает, что во время выполнения асинхронной операции ввода-вывода произошла ошибка.
+ 
+ </p>
+	Задает значение свойства <code>type</code> для объекта события <code>ioError</code>.
+	<p>Это событие имеет следующие свойства:</p>
+	<table class="innertable" ><tr><th>Свойство</th><th>Значение</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; поведение по умолчанию, подлежащее отмене, не определено.</td></tr><tr><td><code>currentTarget</code></td><td>Объект, активно обрабатывающий объект Event с помощью прослушивателя событий.</td></tr><tr><td><code>errorID</code></td><td>Ссылочный номер, связываемый с конкретной ошибкой (только AIR).</td></tr><tr><td><code>target</code></td><td>Сетевой объект, с которым произошла ошибка ввода/вывода.</td></tr><tr><td><code>text</code></td><td>Текст, отображаемый в качестве сообщения об ошибке.</td></tr></table>
+	
+	</div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:outputProgress" id="event:outputProgress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>outputProgress</h3></td><td class="detailHeaderType"> Событие </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Тип объекта события: </span><a href="../events/OutputProgressEvent.html"><code>flash.events.OutputProgressEvent</code></a><br/><span class="label">свойство OutputProgressEvent.type  =  </span><a href="../events/OutputProgressEvent.html#OUTPUT_PROGRESS"><code>flash.events.OutputProgressEvent.OUTPUT_PROGRESS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ Сообщает, что запись данных из буфера в файл завершена.
+ 
+ </p>
+    Задает значение свойства <code>type</code> для объекта события <code>outputProgress</code>.
+    
+    <p>Это событие имеет следующие свойства:</p>
+    
+    <table class="innertable" ><tr><th>Свойство</th><th>Значение</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>bytesPending</code></td><td>Число байт, которые остается записать на момент обработки события прослушивателем.</td></tr><tr><td><code>bytesTotal</code></td><td>Общее число элементов или байт, которые в итоге будут записаны в случае успешного завершения записи.</td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; поведение по умолчанию, подлежащее отмене, не определено.</td></tr><tr><td><code>currentTarget</code></td><td>Объект, активно обрабатывающий объект Event с помощью прослушивателя событий.</td></tr><tr><td><code>target</code></td><td>Объект FileStream, сообщающий сведения о прогрессе. </td></tr></table>
+    
+    </div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:progress" id="event:progress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Доступно только во время выполнения AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>progress</h3></td><td class="detailHeaderType"> Событие </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Тип объекта события: </span><a href="../events/ProgressEvent.html"><code>flash.events.ProgressEvent</code></a><br/><span class="label">свойство ProgressEvent.type  =  </span><a href="../events/ProgressEvent.html#PROGRESS"><code>flash.events.ProgressEvent.PROGRESS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Версии среды выполнения:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ Сообщает, что в потоке появились новые доступные данные.
+ 
+ </p>
+	Задает значение свойства <code>type</code> для объекта события <code>progress</code>.
+	
+	<p>Это событие имеет следующие свойства:</p>
+	
+	<table class="innertable" ><tr><th>Свойство</th><th>Значение</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>bytesLoaded</code></td><td>Число элементов или байтов, загруженных на момент обработки события прослушивателем.</td></tr><tr><td><code>bytesTotal</code></td><td>Общее число элементов или байтов, которые в итоге будут получены в случае успешного завершения загрузки.</td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; поведение по умолчанию, подлежащее отмене, не определено.</td></tr><tr><td><code>currentTarget</code></td><td>Объект, активно обрабатывающий объект Event с помощью прослушивателя событий.</td></tr><tr><td><code>target</code></td><td>Объект, сообщающий сведения о прогрессе. </td></tr></table>
+	
+	</div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script></div><p xmlns:xd="http://www.pnp-software.com/XSLTdoc"></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 11:34 AM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/ru_RU/legalnotices/index.html">Юридическая информация</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Политика конфиденциальности онлайн</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">Почему по-английски?</span>
+				</div>
+				<div class="white_content_body">
+					<b>Содержимое Справочника ActionScript 3.0 отображается на английском языке</b><br><br>
+					Не все части Справочника ActionScript 3.0 переводятся на все языки. Если какой-то текстовый элемент не переведен, он отображается на английском языке. Например, компонент ga.controls.HelpBox не переведен ни на один из языков. Это значит, что в русской версии справки компонент ga.controls.HelpBox будет отображаться на английском языке.
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 11:34 AM Z  -->

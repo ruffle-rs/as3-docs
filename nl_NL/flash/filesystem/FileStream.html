@@ -1,0 +1,900 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Naslaggids voor Adobe ActionScript&reg; 3.0 voor het Adobe&reg; Flash&reg;-platform"><meta name="lang" content="nl-nl"><meta name="runtime" content="air"><meta name="runtimever" content="air:1.0"><meta name="product" content="air"><meta name="productver" content="air:1.0"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../asfilter.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="FileStream,flash.filesystem.FileStream,bytesAvailable,endian,objectEncoding,position,readAhead,close,open,openAsync,readBoolean,readByte,readBytes,readDouble,readFloat,readInt,readMultiByte,readObject,readShort,readUTF,readUTFBytes,readUnsignedByte,readUnsignedInt,readUnsignedShort,truncate,writeBoolean,writeByte,writeBytes,writeDouble,writeFloat,writeInt,writeMultiByte,writeObject,writeShort,writeUTF,writeUTFBytes,writeUnsignedInt"><title>FileStream - Bron voor Adobe ActionScript&reg; 3 (AS3  ) API</title>
+		<link rel="stylesheet" href="../../filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="../../filter_new.css" type="text/css">
+			
+		<script src="../../jquery.js" type="text/javascript"></script>
+		<script src="../../s_chl_code.js" type="text/javascript"></script>
+		<script src="../../jquery.zclip.js" type="text/javascript"></script>
+		<script src="../../jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="../../cookies.js" type="text/javascript"></script>
+		<script src="../../asdoc.js" type="text/javascript"></script>
+		<script src="../../iscroll.js" type="text/javascript"></script>
+		<script src="../../AC_OETags.js" type="text/javascript"></script>
+		<script src="../../omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "Runtimes";
+			var productsLabel = "Producten";
+			var noneLabel = "Geen";
+			var qsearchBoxLabel = "Snel zoeken";
+			var qsearchText = "Term niet gevonden";
+			var ajaxErrorMsg="Fout bij laden van pagina";
+			var ajaxErrorTryMsg="Opnieuw proberen";
+			var ajaxLoadingMsg="Nog bezig met laden";
+			var cancelMsg = "Annuleren";
+			var classesText = "Klassen";
+			var strJiveReply = "Deze vraag is geplaatst als reactie op het volgende artikel: "
+			var showFilters = "Filters weergeven";
+			var hideFilters = "Filters verbergen";
+			
+		
+			var baseRef = "../../";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											Naslaggids voor Adobe ActionScript<sup>&reg;</sup> 3.0 voor het Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup>-platform<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="../../index.html"> Startpagina </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="FileStream.html#top" style="display:">Lijst met pakketten en klassen weergeven</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="FileStream.html#top" style="display:none">Lijst met pakketten en klassen verbergen</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="../../package-summary.html"> Pakketten </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../class-summary.html"> Klassen </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../whatsnew.html"> Nieuw </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../all-index-Symbols.html"> Index </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../appendixes.html"> Bijlagen </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Waarom in het Engels?</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/nl_NL/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('../../')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('../../')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="../../help.js"></script>
+						<script language="javascript" type="text/javascript" src="../../asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="../../filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>Filters:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">Gegevens ophalen van server...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">Gegevens ophalen van server...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="FileStream.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">flash.filesystem&nbsp;</a><br>
+								<h1 id="classProductName">FileStream&nbsp; - AS3 </h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="FileStream.html#propertySummary" style="display:none"> Eigenschappen </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="FileStream.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Eigenschappen </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="FileStream.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="FileStream.html#methodSummary" style="display:none"> Methoden </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="FileStream.html#constantSummary" style="display:none"> Algemene constanten </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="FileStream.html#eventSummary" style="display:none"> Gebeurtenissen </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="FileStream.html#styleSummary" style="display:none"> Stijlen </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="FileStream.html#SkinPartSummary" style="display:none"> Skinonderdelen  </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="FileStream.html#SkinStateSummary" style="display:none"> Skinstatussen </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="FileStream.html#effectSummary" style="display:none"> Effecten </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="FileStream.html#constantSummary" style="display:none"> Constanten </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="FileStream.html#methodSummary" style="display:none"> Algemene functies </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="FileStream.html#methodSummary" style="display:none">Functies</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="FileStream.html#interfaceSummary" style="display:none"> Interfaces </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="FileStream.html#classSummary" style="display:none"> Klassen </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="FileStream.html#includeExamplesSummary" style="display:none"> Voorbeelden </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="FileStream.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								Klassen
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Pakket</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">flash.filesystem</a></td></tr><tr><td class="classHeaderTableLabel">Klasse</td><td class="classSignature">public  class  FileStream</td></tr><tr><td class="classHeaderTableLabel">Overerving</td><td class="inheritanceList">FileStream  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../Object.html">Object</a></td></tr><tr><td class="classHeaderTableLabel">Implementatie</td><td> <a href="../utils/IDataInput.html">IDataInput</a>,  <a href="../utils/IDataOutput.html">IDataOutput</a></td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p></p>
+ Een FileStream-object wordt gebruikt om bestanden te lezen en te schrijven. Bestanden kunnen synchroon worden geopend door de methode <code>open()</code> aan te roepen of asynchroon door de methode <code>openAsync()</code> aan te roepen.
+ 
+ <p>Het voordeel van het asynchroon openen van bestanden is dat andere code kan worden uitgevoerd terwijl Adobe AIR in de achtergrond lees- en schrijfprocessen uitvoert. Bij asynchroon openen worden <code>progress</code>-gebeurtenissen verzonden tijdens de voortgang van de verschillende bewerkingen.</p>
+ 
+               <p>Een File-object dat synchroon wordt geopend, gedraagt zich als een ByteArray-object; een bestand dat asynchroon wordt geopend, gedraagt zich als een Socket- of URLStream-object. Wanneer een File-object synchroon wordt geopend, wordt de aanroeper onderbroken terwijl de gevraagde gegevens in of naar het onderliggende bestand worden gelezen of geschreven. Bij asynchroon openen worden alle gegevens die naar de stroom worden geschreven, direct gebufferd en later naar het bestand geschreven.</p>
+ 
+               <p>Bij synchroon én asynchroon lezen in een bestand verlopen de daadwerkelijke leesmethoden synchroon. In beide gevallen worden gegevens gelezen die momenteel "beschikbaar" zijn. Het verschil is dat bij synchroon lezen alle gegevens altijd beschikbaar zijn, en bij asynchroon lezen gegevens geleidelijk beschikbaar komen terwijl deze in een leesbuffer stromen. In beide gevallen worden de gegevens die op dat moment synchroon kunnen worden gelezen, worden aangeduid met de eigenschap <code>bytesAvailable</code>.</p>
+ 
+               <p>Een toepassing die asynchrone invoer verwerkt, registreert normaal gesproken voor <code>progress</code>-gebeurtenissen en verbruikt de gegevens wanneer deze beschikbaar komen door leesmethoden aan te roepen. Een toepassing kan ook gewoon wachten totdat alle gegevens beschikbaar zijn door te registreren voor de gebeurtenis <code>complete</code> de complete gegevensset te verwerken wanneer de gebeurtenis <code>complete</code> is verzonden. </p>
+ 
+            <p></p><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary" id="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Openbare eigenschappen</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="FileStream.html#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Overerfde openbare eigenschappen verbergen</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="FileStream.html#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Overerfde openbare eigenschappen weergeven</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Eigenschap</th><th>Gedefinieerd door</th></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#bytesAvailable" class="signatureLink">bytesAvailable</a> : <a href="../../uint.html">uint</a><div class="summaryTableDescription">[alleen-lezen] 
+	
+     Hiermee wordt het aantal beschikbare gegevensbytes voor het lezen in de invoerbuffer geretourneerd.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="../../Object.html#constructor" class="signatureLink">constructor</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">
+	 Verwijzing naar het klasseobject of de constructorfunctie van een bepaalde objectinstantie.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#endian" class="signatureLink">endian</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">
+	
+     De bytevolgorde voor de gegevens, de constante BIG_ENDIAN of LITTLE_ENDIAN uit de klasse Endian.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#objectEncoding" class="signatureLink">objectEncoding</a> : <a href="../../uint.html">uint</a><div class="summaryTableDescription">
+     Bepaalt of de indeling AMF3 of AMF0 wordt gebruikt bij het lezen of schrijven van binaire gegevens met de methode readObject() of writeObject().</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#position" class="signatureLink">position</a> : <a href="../../Number.html">Number</a><div class="summaryTableDescription">
+	 De huidige positie in het bestand.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readAhead" class="signatureLink">readAhead</a> : <a href="../../Number.html">Number</a><div class="summaryTableDescription">
+	 De minimale hoeveelheid gegevens die van de schijf kan worden gelezen bij het asynchroon lezen van bestanden.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary" id="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Openbare methoden </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="FileStream.html#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Overerfde openbare methoden verbergen</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="FileStream.html#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Overerfde openbare methoden weergeven</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Methode</th><th>Gedefinieerd door</th></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#FileStream()" class="signatureLink">FileStream</a>()</div><div class="summaryTableDescription">
+	 Maakt een object van het type FileStream.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#addEventListener()" class="signatureLink">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	Registreert een gebeurtenislistenerobject bij een object EventDispatcher, zodat de listener een melding van een gebeurtenis ontvangt.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#close()" class="signatureLink">close</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 Sluit het FileStream-object.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	Verzendt een gebeurtenis naar de gebeurtenisstroom.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	Controleert of het object EventDispatcher listeners heeft geregistreerd voor een specifiek type gebeurtenis.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#hasOwnProperty()" class="signatureLink">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Geeft aan of voor een object een opgegeven eigenschap is gedefinieerd.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#isPrototypeOf()" class="signatureLink">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Geeft aan of een instantie van de klasse Object zich in de prototypeketen van het object bevindt dat als parameter is opgegeven.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#open()" class="signatureLink">open</a>(file:<a href="File.html">File</a>, fileMode:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 Opent het FileStream-object synchroon, waarbij het bestand wordt aangewezen dat met de parameter file is opgegeven.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#openAsync()" class="signatureLink">openAsync</a>(file:<a href="File.html">File</a>, fileMode:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 Opent het FileStream-object asynchroon, waarbij het bestand wordt aangewezen dat met de parameter file is opgegeven.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#propertyIsEnumerable()" class="signatureLink">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Geeft aan of de opgegeven eigenschap bestaat en kan worden opgesomd.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readBoolean()" class="signatureLink">readBoolean</a>():<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	
+     Leest een Booleaanse waarde uit de bestandsstream, bytestream of bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readByte()" class="signatureLink">readByte</a>():<a href="../../int.html">int</a></div><div class="summaryTableDescription">
+	
+     Leest een byte met teken uit de bestandsstream, bytestream of bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readBytes()" class="signatureLink">readBytes</a>(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:<a href="../../uint.html">uint</a> = 0, length:<a href="../../uint.html">uint</a> = 0):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Leest het aantal gegevensbytes dat met de parameter length is opgegeven, uit de bestandsstream, bytestream of bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readDouble()" class="signatureLink">readDouble</a>():<a href="../../Number.html">Number</a></div><div class="summaryTableDescription">
+	
+     Leest een IEEE 754 drijvende-kommagetal met dubbele precisie uit de bestandsstream, bytestream of bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readFloat()" class="signatureLink">readFloat</a>():<a href="../../Number.html">Number</a></div><div class="summaryTableDescription">
+	
+     Leest een IEEE 754 drijvende-kommagetal met enkele precisie uit de bestandsstream, bytestream of bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readInt()" class="signatureLink">readInt</a>():<a href="../../int.html">int</a></div><div class="summaryTableDescription">
+	
+     Leest een 32-bits geheel getal met teken uit de bestandsstream, bytestream of bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readMultiByte()" class="signatureLink">readMultiByte</a>(length:<a href="../../uint.html">uint</a>, charSet:<a href="../../String.html">String</a>):<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	
+     Leest een multibyte-tekenreeks van de opgegeven lengte met de opgegeven tekenset uit de bestandsstream, bytestream of bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readObject()" class="signatureLink">readObject</a>():<a href="../../specialTypes.html#*">*</a></div><div class="summaryTableDescription">
+	
+     Leest een object dat in AMF-indeling met serienummering is gecodeerd, uit de bestandsstream, bytestream of bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readShort()" class="signatureLink">readShort</a>():<a href="../../int.html">int</a></div><div class="summaryTableDescription">
+	
+     Leest een 16-bits geheel getal met teken uit de bestandsstream, bytestream of bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readUnsignedByte()" class="signatureLink">readUnsignedByte</a>():<a href="../../uint.html">uint</a></div><div class="summaryTableDescription">
+	
+     Leest een byte zonder teken uit de bestandsstream, bytestream of bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readUnsignedInt()" class="signatureLink">readUnsignedInt</a>():<a href="../../uint.html">uint</a></div><div class="summaryTableDescription">
+	
+     Leest een 32-bits geheel zonder teken uit de bestandsstream, bytestream of bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readUnsignedShort()" class="signatureLink">readUnsignedShort</a>():<a href="../../uint.html">uint</a></div><div class="summaryTableDescription">
+	
+     Leest een 16-bits geheel zonder teken uit de bestandsstream, bytestream of bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readUTF()" class="signatureLink">readUTF</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	
+     Leest een UTF-8-tekenreeks uit de bestandsstream, bytestream of bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readUTFBytes()" class="signatureLink">readUTFBytes</a>(length:<a href="../../uint.html">uint</a>):<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	
+     Leest een reeks van UTF-8-bytes uit de bytestream of bytearray en retourneert een tekenreeks.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#removeEventListener()" class="signatureLink">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	Verwijdert een listener uit het object EventDispatcher.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#setPropertyIsEnumerable()" class="signatureLink">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     Stelt de beschikbaarheid van een dynamische eigenschap voor lusbewerkingen in.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toLocaleString()" class="signatureLink">toLocaleString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 Geeft de tekenreeksweergave van dit object weer, geformatteerd volgens de locatiespecifieke conventies.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toString()" class="signatureLink">toString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 Retourneert een tekenreeksrepresentatie van het opgegeven object.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#truncate()" class="signatureLink">truncate</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 Kort het bestand in op de positie die is aangegeven door de eigenschap position van het FileStream-object.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#valueOf()" class="signatureLink">valueOf</a>():<a href="../../Object.html">Object</a></div><div class="summaryTableDescription">
+	 Retourneert de primitieve waarde van het opgegeven object.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	Controleert of een gebeurtenislistener is geregistreerd bij dit object EventDispatcher of een van de voorouders voor het opgegeven type gebeurtenis.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeBoolean()" class="signatureLink">writeBoolean</a>(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schrijft een booleaanse waarde.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeByte()" class="signatureLink">writeByte</a>(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schrijft een byte.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeBytes()" class="signatureLink">writeBytes</a>(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:<a href="../../uint.html">uint</a> = 0, length:<a href="../../uint.html">uint</a> = 0):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schrijft een reeks van bytes vanuit de opgegeven bytearray bytes, te beginnen op de byte die is opgegeven met offset (met een op nul gebaseerde indexwaarde) met een lengte die is opgegeven met length, naar de bestandsstream, bytestream of bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeDouble()" class="signatureLink">writeDouble</a>(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schrijft een IEEE 754 drijvende-kommagetal (64-bits) met dubbele precisie.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeFloat()" class="signatureLink">writeFloat</a>(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schrijft een IEEE 754 drijvende-kommagetal (32-bits) met enkele precisie.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeInt()" class="signatureLink">writeInt</a>(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schrijft een 32-bits geheel getal met teken.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeMultiByte()" class="signatureLink">writeMultiByte</a>(value:<a href="../../String.html">String</a>, charSet:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schrijft een multibyte-tekenreeks naar de bestandsstream, bytestream of byte-array met de opgegeven tekenset.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeObject()" class="signatureLink">writeObject</a>(object:<a href="../../specialTypes.html#*">*</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schrijft een object dat in AMF-indeling met serienummering is gecodeerd, naar de bestandsstream, bytestream of bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeShort()" class="signatureLink">writeShort</a>(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schrijft een 16-bits geheel getal.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeUnsignedInt()" class="signatureLink">writeUnsignedInt</a>(value:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schrijft een 32-bits geheel getal zonder teken.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeUTF()" class="signatureLink">writeUTF</a>(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schrijft een UTF-8-tekenreeks naar de bestandsstream, bytestream of byte-array.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeUTFBytes()" class="signatureLink">writeUTFBytes</a>(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schrijft een UTF-8-tekenreeks.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary" id="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Gebeurtenissen</div><div class="showHideLinks"><a href="http://help.adobe.com/en_US/Flex/4.6/UsingSDK/WS2db454920e96a9e51e63e3d11c0bf69084-7ee9.html" target="_blank">Klik voor meer informatie over gebeurtenissen.</a></div><div class="showHideLinks"><div id="hideInheritedEvent" class="hideInheritedEvent"><a class="showHideLink" href="FileStream.html#eventSummary" onclick="javascript:setInheritedVisible(false,'Event');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Overerfde gebeurtenissen verbergen</a></div><div id="showInheritedEvent" class="showInheritedEvent"><a class="showHideLink" href="FileStream.html#eventSummary" onclick="javascript:setInheritedVisible(true,'Event');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Overerfde gebeurtenissen weergeven</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Gebeurtenis</th><th> Overzicht </th><th>Gedefinieerd door</th></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[uitgezonden gebeurtenis] Wordt verzonden wanneer Flash Player of de AIR-toepassing de besturingssysteemfocus krijgt en actief wordt.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#event:close" class="signatureLink">close</a></div></td><td class="summaryTableDescription summaryTableCol">Geeft aan dat de stroom is gesloten door een expliciete aanroep van de methode close().</td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#event:complete" class="signatureLink">complete</a></div></td><td class="summaryTableDescription summaryTableCol">Geeft aan dat het einde van de stroom is bereikt.</td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[uitgezonden gebeurtenis] Wordt verzonden wanneer Flash Player of de AIR-toepassing de systeemfocus verliest en inactief wordt.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#event:ioError" class="signatureLink">ioError</a></div></td><td class="summaryTableDescription summaryTableCol">Geeft aan dat er een fout is opgetreden tijdens een asynchrone I/O-bewerking van het bestand.</td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#event:outputProgress" class="signatureLink">outputProgress</a></div></td><td class="summaryTableDescription summaryTableCol">Geeft aan dat de gebufferde gegevens naar het bestand zijn geschreven.</td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#event:progress" class="signatureLink">progress</a></div></td><td class="summaryTableDescription summaryTableCol">Geeft aan dat er nieuwe gegevens beschikbaar zijn in de stroom.</td><td class="summaryTableOwnerCol">FileStream</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Eigenschapdetails</div><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="bytesAvailable" id="bytesAvailable"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>bytesAvailable</h3></td><td class="detailHeaderType">eigenschap</td></tr></table><div class="detailBody"><code>bytesAvailable:<a href="../../uint.html">uint</a></code>&nbsp;&nbsp;[alleen-lezen] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Hiermee wordt het aantal beschikbare gegevensbytes voor het lezen in de invoerbuffer geretourneerd. Gebruikerscode moet <code>bytesAvailable</code> aanroepen om er zeker van te zijn dat voldoende gegevens beschikbaar zijn voordat wordt geprobeerd deze te lezen met een van de methoden read.
+     </p><br/><br/><span class="label"> Implementatie </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get bytesAvailable():<a href="../../uint.html">uint</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="endian" id="endian"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>endian</h3></td><td class="detailHeaderType">eigenschap</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>endian:<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     De bytevolgorde voor de gegevens, de constante <code>BIG_ENDIAN</code> of <code>LITTLE_ENDIAN</code> uit de klasse Endian.
+     
+     </p><br/><br/><span class="label"> Implementatie </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get endian():<a href="../../String.html">String</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set endian(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="objectEncoding" id="objectEncoding"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>objectEncoding</h3></td><td class="detailHeaderType">eigenschap</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>objectEncoding:<a href="../../uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     Bepaalt of de indeling AMF3 of AMF0 wordt gebruikt bij het lezen of schrijven van binaire gegevens met de methode <code>readObject()</code> of <code>writeObject()</code>.
+	 
+	 <p>De waarde is een constante van de klasse ObjectEncoding. Standaard wordt de indeling AMF3 gebruikt.</p>
+	 
+	 </p><br/><br/><span class="label"> Implementatie </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get objectEncoding():<a href="../../uint.html">uint</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set objectEncoding(value:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></code><br/><p><span class="label">Verwante API-elementen</span></p><div class="seeAlso"><a href="../net/ObjectEncoding.html" target="">ObjectEncoding</a><br/><a href="FileStream.html#readObject()" target="">readObject()</a><br/><a href="FileStream.html#writeObject()" target="">writeObject()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="position" id="position"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>position</h3></td><td class="detailHeaderType">eigenschap</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>position:<a href="../../Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 De huidige positie in het bestand. 
+	 
+	 <p>De waarde wordt op een van de volgende manieren gewijzigd:</p>
+	 
+	 <ul><li>wanneer u de eigenschap expliciet instelt</li><li>Wanneer wordt gelezen van het FileStream-object (met een van de leesmethoden)</li><li>wanneer wordt geschreven naar het FileStream-object</li></ul>
+	 
+	 <p>De positie is gedefinieerd als een getal (in plaats van een eenheid) om bestanden te ondersteunen die langer zijn dan 2<sup>32</sup> bytes. De waarde van deze eigenschap is altijd een geheel getal kleiner dan 2<sup>53</sup>. Als u deze waarde op een getal met een breuk instelt, wordt de waarde naar beneden afgerond naar het dichtstbijzijnde gehele getal.</p>
+	 
+	 <p>Als u bij het asynchroon lezen van een bestand de eigenschap <code>position</code> instelt, begint de toepassing de leesbuffer te vullen met gegevens, vanaf de opgegeven positie, en kan de eigenschap <code>bytesAvailable</code> op 0 worden gezet. Wacht op een gebeurtenis <code>complete</code> voordat u een leesmethode gebruikt om gegevens te lezen; of wacht op een gebeurtenis <code>progress</code> en controleer de eigenschap <code>bytesAvailable</code> voordat u een leesmethode gebruikt.</p>
+	  
+	 </p><br/><br/><span class="label"> Implementatie </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get position():<a href="../../Number.html">Number</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set position(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code><br/><span id="pageFilter"><br/><span class="label"> Voorbeeld &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_nl"> Hoe dit voorbeeld te gebruiken </a></span>)
+            </span><br/><div class="detailBody"> De volgende code laat zien hoe de eigenschap <code>position</code> van het FileStream-object wordt bijgewerkt terwijl de toepassing gegevens van een bestand leest.
+<div class="listing"><pre>
+import flash.fileSystem.*;
+import flash.utils.ByteArray;
+import flash.events.Event;
+
+var sourceFile:File = File.documentsDirectory.resolvePath("Apollo Test/test.txt");
+var stream:FileStream = new FileStream();
+stream.addEventListener(Event.COMPLETE, readBytes);
+stream.openAsync(sourceFile, FileMode.READ);
+
+function readBytes(e:Event):void {
+    var bytes:ByteArray = new ByteArray();
+    trace("position 0:", stream.position); // 0
+    bytes[0] = stream.readByte();
+    trace("position 1:", stream.position); // 1
+    fileStream.readBytes(bytes, stream.position, 4); 
+    trace("position 2:", stream.position); // 5
+    stream.close();
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="readAhead" id="readAhead"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>readAhead</h3></td><td class="detailHeaderType">eigenschap</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>readAhead:<a href="../../Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 De minimale hoeveelheid gegevens die van de schijf kan worden gelezen bij het asynchroon lezen van bestanden.
+	 
+	 <p>Deze eigenschap bepaalt hoeveel gegevens een asynchrone stroom probeert te lezen na de huidige positie. De gegevens worden in blokken gelezen, op basis van het paginaformaat van het bestandssysteem. Als u <code>readAhead</code> bijvoorbeeld instelt op 9000 op een computersysteem met een paginaformaat van 8 kB (8192 byte), leest de runtime 2 blokken vooruit (of 16.384 bytes tegelijkertijd). De standaardwaarde van deze eigenschap is oneindig: standaard wordt een bestand dat is geopend om asynchroon te worden gelezen, gelezen tot aan het einde van het bestand.</p>
+	 
+	 <p>Gegevens in de leesbuffer lezen verandert de waarde van de eigenschap <code>readAhead</code> niet. Wanneer u gegevens uit de buffer leest, worden nieuwe gegevens gelezen om de leesbuffer opnieuw te vullen. 
+	  </p>
+	 
+	 <p>De eigenschap <code>readAhead</code> heeft geen invloed op een bestand dat synchroon is geopend.</p>
+	 
+	 <p>Bij het asynchroon lezen van gegevens verzendt het FileStream-object <code>progress</code>-gebeurtenissen. In de gebeurtenishandlermethode voor de gebeurtenis <code>progress</code> controleert u of het vereiste aantal bytes beschikbaar is (door de eigenschap <code>bytesAvailable</code> te controleren) en leest u daarna de gegevens uit de leesbuffer met een leesmethode.</p>
+	 
+	 </p><br/><br/><span class="label"> Implementatie </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get readAhead():<a href="../../Number.html">Number</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set readAhead(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code><br/><span id="pageFilter"><br/><span class="label"> Voorbeeld &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_nl"> Hoe dit voorbeeld te gebruiken </a></span>)
+            </span><br/><div class="detailBody">     De volgende code laat zien hoe u de eigenschap <code>readAhead</code> gebruikt om de hoeveelheid gegevens die in een bestand wordt gelezen tot 100 bytes:
+<div class="listing"><pre>
+import flash.filesystem.*;
+
+var file:File = File.desktopDirectory.resolvePath("test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.readAhead = 100;
+fileStream.addEventListener(ProgressEvent.PROGRESS, readProgressHandler)
+fileStream.openAsync(file, FileMode.READ);
+var results:ByteArray;
+
+function readProgressHandler(event:ProgressEvent):void {
+    if (fileStream.bytesAvailable &gt;= 100) {
+        fileStream.readBytes(results, 0, 100);
+    }
+}
+</pre></div></div></span></div></span><a name="constructorDetail" id="constructorDetail"></a><div class="detailSectionHeader">Constructordetails</div><span id="pageFilter" runtime="AIR::1.0##"><a name="FileStream()" id="FileStream()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>FileStream</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function FileStream()</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p>
+	 Maakt een object van het type FileStream. Gebruik de methode <code>open()</code> of <code>openAsync()</code> om een bestand te openen.
+	 
+	 </p><p><span class="label">Verwante API-elementen</span></p><div class="seeAlso"><a href="FileStream.html#open()" target="">open()</a><br/><a href="FileStream.html#openAsync()" target="">openAsync()</a></div></div></span><a name="methodDetail" id="methodDetail"></a><div class="detailSectionHeader">Methodedetails</div><span id="pageFilter" runtime="AIR::1.0##"><a name="close()" id="close()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;close</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td></tr></table><div class="detailBody"><code> public function close():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 Sluit het FileStream-object. 
+	 
+	 <p>Nadat u de methode <code>close()</code> hebt aangeroepen, kunt u geen gegevens meer lezen of schrijven. Als het bestand asynchroon is geopend (het FileStream-object heeft de methode <code>openAsync()</code> gebruikt om het bestand te openen), verzendt het object met het aanroepen van de methode <code>close()</code> de gebeurtenis <code>close</code>. </p>
+	 
+	 <p>Als de toepassing automatisch wordt gesloten, worden alle bestanden gesloten die in de toepassing aan FileStream-objecten zijn gekoppeld. Het is echter het beste om te registreren voor de gebeurtenis <code>closed</code> op alle FileStream-objecten die asynchroon zijn geopend waarvoor nog gegevens klaar staan om te worden geschreven, voordat u de toepassing sluit (om er zeker van te zijn dat de gegevens worden geschreven).</p>
+	 
+	 <p>U kunt het FileStream-object nogmaals gebruiken door de methode <code>open()</code> of <code>openAsync()</code> aan te roepen. Hierdoor worden alle bestanden gesloten die aan het FileStream-object zijn gekoppeld, maar het object verzendt de gebeurtenis <code>close</code> niet.</p>
+	 
+	 <p>Voor een FileStream-object dat asynchroon is geopend (met de methode <code>openAsync()</code>) geldt dat, zelfs als u de gebeurtenis <code>close()</code> aanroept voor een FileStream-object en eigenschappen en variabelen verwijdert die naar het object verwijzen, het FileStream-object niet wordt opgeschoond zolang er bewerkingen in behandeling zijn en er gebeurtenishandlers zijn geregistreerd voor de voltooiing. Een FileStream-object waarnaar verder niet wordt verwezen, zal dan aanwezig blijven zolang een van de volgende mogelijkheden nog bestaan: </p>
+	 
+	 <ul><li>Bij het lezen van bestanden is het einde van het bestand nog niet bereikt (en de gebeurtenis <code>complete</code> is niet verzonden). </li><li>Er zijn nog uitvoergegevens beschikbaar die moeten worden geschreven en aan uitvoer gerelateerde gebeurtenissen (zoals de gebeurtenis <code>outputProgress</code> of <code>ioError</code>) hebben gebeurtenislisteners geregistreerd. </li></ul>
+	 
+	 </p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>close</b>:<a href="../events/Event.html"><code>Event</code></a></code> &mdash; Het bestand, dat asynchroon is geopend, wordt gesloten.
+	 
+	 </td></tr></table><p><span class="label">Verwante API-elementen</span></p><div class="seeAlso"><a href="FileStream.html#open()" target="">open()</a><br/><a href="FileStream.html#event:close" target="">Gebeurtenis close</a></div><span id="pageFilter"><br/><span class="label"> Voorbeeld &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_nl"> Hoe dit voorbeeld te gebruiken </a></span>)
+            </span><br/><br/><div class="detailBody">     De volgende code opent een object FileStream <i>asynchroon</i> en schrijft een tekstbestand met de naam test.txt naar de submap Apollo Test van de documentenmap van de gebruiker. Een aanroep van de methode <code>close()</code> van het FileStream-object sluit het bestand wanneer de gegevens zijn geschreven. 
+<div class="listing"><pre>
+import flash.filesystem.*;
+import flash.events.Event;
+            
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.openAsync(file, FileMode.WRITE);
+fileStream.writeUTFBytes("Hello");
+fileStream.addEventListener(Event.CLOSE, fileClosed);
+fileStream.close();
+
+function fileClosed(event:Event):void {
+    trace("closed");
+}            
+</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody">     De volgende code opent een object FileStream <i>synchroon</i> en schrijft een tekstbestand met de naam test.txt naar de submap Apollo Test van de documentenmap van de gebruiker. Een aanroep van de methode <code>close()</code> van het FileStream-object sluit het bestand wanneer de gegevens zijn geschreven.
+<div class="listing"><pre>
+import flash.filesystem.*;
+            
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.open(file, FileMode.WRITE);
+fileStream.writeUTF("Hello");
+fileStream.close();
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="open()" id="open()"></a><a name="open(flash.filesystem.File,String)" id="open(flash.filesystem.File,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;open</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function open(file:<a href="File.html">File</a>, fileMode:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 Opent het FileStream-object synchroon, waarbij het bestand wordt aangewezen dat met de parameter <code>file</code> is opgegeven. 
+	 
+	 <p>Als het FileStream-object al geopend is, wordt het bestand eerst gesloten voordat het wordt geopend en worden geen andere gebeurtenissen (inclusief <code>close</code>) verzonden voor het eerder geopende bestand.</p>
+	 
+	 <p>Op systemen waarop bestandsblokkering wordt ondersteund, is een bestand dat in de modus "schrijven" of "bijwerken" is geopend (<code>FileMode.WRITE</code> of <code>FileMode.UPDATE</code>), pas leesbaar wanneer het gesloten is.</p>
+	 
+	 <p>Wanneer u klaar bent met het uitvoeren van bewerkingen op het bestand, roept u de <code>close()</code>-methode van het FileStream-object op. Sommige besturingssystemen beperken het aantal bestanden die tegelijkertijd geopend kunnen worden.</p>
+	 
+	 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">file</span>:<a href="File.html">File</a></code> &mdash; Het object File dat aangeeft welk bestand moet worden geopend.
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">fileMode</span>:<a href="../../String.html">String</a></code> &mdash; Een tekenreeks uit de klasse FileMode die de mogelijkheden van de FileStream definieert, zoals de mogelijkheid om van of naar het bestand te lezen of te schrijven.
+	 
+	 </td></tr></table></p><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand bestaat niet; u hebt niet de juiste bevoegdheden om het bestand te openen; u opent een bestand omdat u leestoegang wilt maar u hebt niet de juiste bevoegdheden hiervoor of u opent een bestand omdat u ernaar wilt schrijven maar u hebt hiervoor niet de juiste bevoegdheden. 
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; De bestandslocatie is de toepassingsmap en de parameter <code>fileMode</code> is ingesteld op de modus "append", "update" of "write". 
+	 
+	 </td></tr></table><p><span class="label">Verwante API-elementen</span></p><div class="seeAlso"><a href="FileStream.html#close()" target="">close()</a><br/><a href="File.html" target="">File</a><br/><a href="FileMode.html" target="">FileMode</a></div><span id="pageFilter"><br/><span class="label"> Voorbeeld &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_nl"> Hoe dit voorbeeld te gebruiken </a></span>)
+            </span><br/><br/><div class="detailBody"> De volgende code laat zien hoe u een bestand met de naam test.txt in de submap Apollo Test van de documentenmap van de gebruiker synchroon opent en dit vervolgens in een tekenreeks leest, waarbij de tekst wordt gecodeerd met de tekenset van het systeem.
+<div class="listing"><pre>
+import flash.filesystem.*;
+
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.open(file, FileMode.READ);
+var str:String = fileStream.readMultiByte(file.size, File.systemCharset);
+trace(str);
+fileStream.close();
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="openAsync()" id="openAsync()"></a><a name="openAsync(flash.filesystem.File,String)" id="openAsync(flash.filesystem.File,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;openAsync</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function openAsync(file:<a href="File.html">File</a>, fileMode:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 Opent het FileStream-object asynchroon, waarbij het bestand wordt aangewezen dat met de parameter <code>file</code> is opgegeven. 
+	 
+	 <p>Als het FileStream-object al geopend is, wordt het bestand eerst gesloten voordat het wordt geopend en worden geen andere gebeurtenissen (inclusief <code>close</code>) verzonden voor het eerder geopende bestand.</p>
+	 
+	 <p>Als de <code>fileMode</code>-parameter is ingesteld op <code>FileMode.READ</code> of <code>FileMode.UPDATE</code>, leest AIR gegevens in de invoerbuffer zodra het bestand wordt geopend en worden de gebeurtenissen <code>progress</code> en <code>open</code> verzonden terwijl de gegevens in de invoerbuffer worden gelezen.</p>
+	 
+	 <p>Op systemen waarop bestandsblokkering wordt ondersteund, is een bestand dat in de modus "schrijven" of "bijwerken" is geopend (<code>FileMode.WRITE</code> of <code>FileMode.UPDATE</code>), pas leesbaar wanneer het gesloten is.</p>
+	 
+	 <p>Wanneer u klaar bent met het uitvoeren van bewerkingen op het bestand, roept u de <code>close()</code>-methode van het FileStream-object op. Sommige besturingssystemen beperken het aantal bestanden die tegelijkertijd geopend kunnen worden.</p>
+	 
+	 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">file</span>:<a href="File.html">File</a></code> &mdash; Het object File dat aangeeft welk bestand moet worden geopend.
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">fileMode</span>:<a href="../../String.html">String</a></code> &mdash; Een tekenreeks uit de klasse FileMode die de mogelijkheden van de FileStream definieert, zoals de mogelijkheid om van of naar het bestand te lezen of te schrijven.
+	 
+	 </td></tr></table></p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Het bestand bestaat niet; u hebt niet de juiste bevoegdheden om het bestand te openen; u opent een bestand omdat u leestoegang wilt maar u hebt niet de juiste bevoegdheden hiervoor of u opent een bestand omdat u ernaar wilt schrijven maar u hebt hiervoor niet de juiste bevoegdheden. 
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>progress</b>:<a href="../events/ProgressEvent.html"><code>ProgressEvent</code></a></code> &mdash; Wordt verzonden terwijl gegevens in de invoerbuffer worden gelezen. (Het bestand moet zijn geopend met de <code>fileMode</code>-parameter ingesteld op <code>FileMode.READ</code> of <code>FileMode.UPDATE</code>.)
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>complete</b>:<a href="../events/Event.html"><code>Event</code></a></code> &mdash; De bestandsgegevens zijn in de invoerbuffer gelezen. (Het bestand moet zijn geopend met de <code>fileMode</code>-parameter ingesteld op <code>FileMode.READ</code> of <code>FileMode.UPDATE</code>.)
+	 
+	 </td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; De bestandslocatie is de toepassingsmap en de parameter <code>fileMode</code> is ingesteld op de modus "append", "update" of "write". 
+	 
+	 </td></tr></table><p><span class="label">Verwante API-elementen</span></p><div class="seeAlso"><a href="FileStream.html#close()" target="">close()</a><br/><a href="FileStream.html#event:complete" target="">Gebeurtenis complete</a><br/><a href="FileStream.html#event:ioError" target="">Gebeurtenis ioError</a><br/><a href="FileStream.html#event:progress" target="">Gebeurtenis progress</a><br/><a href="FileMode.html" target="">FileMode</a></div><span id="pageFilter"><br/><span class="label"> Voorbeeld &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_nl"> Hoe dit voorbeeld te gebruiken </a></span>)
+            </span><br/><br/><div class="detailBody"> De volgende code laat zien hoe u een bestand met de naam test.txt in de submap Apollo Test van de documentenmap van de gebruiker asynchroon opent en dit vervolgens in een tekenreeks leest, waarbij de tekst wordt gecodeerd met de tekenset van het systeem.
+<div class="listing"><pre>
+import flash.filesystem.*;
+import flash.events.Event;
+
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.addEventListener(Event.COMPLETE, fileCompleteHandler)
+fileStream.openAsync(file, FileMode.READ);
+
+function fileCompleteHandler(event:Event):void {
+    var str:String = fileStream.readMultiByte(fileStream.bytesAvailable, File.systemCharset);
+    trace(str);
+    fileStream.close();
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readBoolean()" id="readBoolean()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;readBoolean</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readBoolean():<a href="../../Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Leest een booleaanse waarde uit de bestandsstream, bytestream of bytearray. Er wordt één byte gelezen en <code>true</code> wordt geretourneerd wanneer de byte niet gelijk is aan 0. Anders wordt <code>false</code> geretourneerd.
+     </p><p></p><span class="label">Geretourneerde waarde</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Boolean.html">Boolean</a></code> &mdash; Een Booleaanse waarde die <code>true</code> is wanneer de byte niet-nul is, anders <code>false</code>.
+     </td></tr></table><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Het bestand kan niet worden gelezen of het bestand is niet geopend. Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met leesmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden gelezen (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; De positie die voor het lezen van gegevens is opgegeven, is groter dan het aantal beschikbare bytes (aangeduid door de eigenschap <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readByte()" id="readByte()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;readByte</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readByte():<a href="../../int.html">int</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Leest een byte met teken uit de bestandsstream, bytestream of bytearray.
+     </p><p></p><span class="label">Geretourneerde waarde</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../int.html">int</a></code> &mdash; De geretourneerde waarde ligt in het bereik -128 t/m 127.
+     </td></tr></table><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Het bestand kan niet worden gelezen of het bestand is niet geopend. Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met leesmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden gelezen (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; De positie die voor het lezen van gegevens is opgegeven, is groter dan het aantal beschikbare bytes (aangeduid door de eigenschap <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readBytes()" id="readBytes()"></a><a name="readBytes(flash.utils.ByteArray,uint,uint)" id="readBytes(flash.utils.ByteArray,uint,uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;readBytes</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readBytes(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:<a href="../../uint.html">uint</a> = 0, length:<a href="../../uint.html">uint</a> = 0):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Leest het aantal gegevensbytes dat met de parameter <code>length</code> is opgegeven, uit de bestandsstream, bytestream of bytearray. De bytes worden ingelezen in het object ByteArray, dat is opgegeven door de parameter <code>bytes</code>, te beginnen bij de positie die is opgegeven door <code>offset</code>.
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">bytes</span>:<a href="../utils/ByteArray.html">ByteArray</a></code> &mdash; Het object <code>ByteArray</code> waarin gegevens worden ingelezen.
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">offset</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; De verschuiving naar de parameter <code>bytes</code> waar begonnen moet worden met het lezen van gegevens.
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">length</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; Het aantal bytes dat moet worden gelezen. De standaardwaarde 0 zorgt ervoor dat alle beschikbare gegevens worden gelezen.
+     </td></tr></table></p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Het bestand kan niet worden gelezen of het bestand is niet geopend. Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met leesmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden gelezen (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; De positie die voor het lezen van gegevens is opgegeven, is groter dan het aantal beschikbare bytes (aangeduid door de eigenschap <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readDouble()" id="readDouble()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;readDouble</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readDouble():<a href="../../Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Leest een IEEE 754 drijvende-kommagetal met dubbele precisie uit de bestandsstream, bytestream of bytearray.
+     </p><p></p><span class="label">Geretourneerde waarde</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Number.html">Number</a></code> &mdash; Een IEEE 754 drijvende-kommagetal met dubbele precisie.
+     </td></tr></table><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Het bestand kan niet worden gelezen of het bestand is niet geopend. Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met leesmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden gelezen (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; De positie die voor het lezen van gegevens is opgegeven, is groter dan het aantal beschikbare bytes (aangeduid door de eigenschap <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readFloat()" id="readFloat()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;readFloat</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readFloat():<a href="../../Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Leest een IEEE 754 drijvende-kommagetal met enkele precisie uit de bestandsstream, bytestream of bytearray.
+     </p><p></p><span class="label">Geretourneerde waarde</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Number.html">Number</a></code> &mdash; Een IEEE 754 drijvende-kommagetal met enkele precisie.
+     </td></tr></table><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Het bestand kan niet worden gelezen of het bestand is niet geopend. Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met leesmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden gelezen (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; De positie die voor het lezen van gegevens is opgegeven, is groter dan het aantal beschikbare bytes (aangeduid door de eigenschap <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readInt()" id="readInt()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;readInt</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readInt():<a href="../../int.html">int</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Leest een 32-bits geheel getal met teken uit de bestandsstream, bytestream of bytearray.
+     </p><p></p><span class="label">Geretourneerde waarde</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../int.html">int</a></code> &mdash; De geretourneerde waarde ligt in het bereik -2147483648 t/m 2147483647.
+     </td></tr></table><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Het bestand kan niet worden gelezen of het bestand is niet geopend. Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met leesmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden gelezen (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; De positie die voor het lezen van gegevens is opgegeven, is groter dan het aantal beschikbare bytes (aangeduid door de eigenschap <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readMultiByte()" id="readMultiByte()"></a><a name="readMultiByte(uint,String)" id="readMultiByte(uint,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;readMultiByte</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readMultiByte(length:<a href="../../uint.html">uint</a>, charSet:<a href="../../String.html">String</a>):<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Leest een multibyte-tekenreeks van de opgegeven lengte met de opgegeven tekenset uit de bestandsstream, bytestream of bytearray.
+     
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">length</span>:<a href="../../uint.html">uint</a></code> &mdash; Het aantal bytes van de bytestream dat moet worden gelezen.
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">charSet</span>:<a href="../../String.html">String</a></code> &mdash; De tekenreeks die de tekenset aangeeft die moet worden gebruikt om de bytes te interpreteren. Mogelijke tekensetreeksen zijn onder andere <code>shift-jis</code>, <code>cn-gb</code>, <code>iso-8859-1</code> en andere. Zie <a href="../../charset-codes.html" >Ondersteunde tekensets</a> voor een complete lijst.
+     
+     <p><b>Opmerking:</b> wanneer de waarde voor de parameter <code>charSet</code> niet wordt herkend door het huidige systeem, gebruikt <span> Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup> Player of </span> Adobe<sup>&reg;</sup> AIR<sup>&trade;</sup> de standaardcodepagina van uw systeem als tekenset. De waarde voor de parameter <code>charSet</code>, zoals <code>myTest.readMultiByte(22, 'iso-8859-01')</code> die gebruikmaakt van <code>01</code> in plaats van <code>1</code>, kan mogelijk werken op het systeem dat u voor het ontwikkelen gebruikt, maar niet op een ander systeem. Op het andere systeem wordt de standaardcodepagina van het systeem gebruikt door <span>Flash Player of</span> de AIR-runtime.</p>
+     
+     </td></tr></table></p><p></p><span class="label">Geretourneerde waarde</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../String.html">String</a></code> &mdash; Een UTF-8-gecodeerde tekenreeks.
+     </td></tr></table><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Het bestand kan niet worden gelezen of het bestand is niet geopend. Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met leesmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden gelezen (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; De positie die voor het lezen van gegevens is opgegeven, is groter dan het aantal beschikbare bytes (aangeduid door de eigenschap <code>bytesAvailable</code>).
+	
+	</td></tr></table><p><span class="label">Verwante API-elementen</span></p><div class="seeAlso"><a href="File.html#systemCharset" target="">File.systemCharset</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readObject()" id="readObject()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;readObject</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readObject():<a href="../../specialTypes.html#*">*</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Leest een object dat in AMF-indeling met serienummering is gecodeerd, uit de bestandsstream, bytestream of bytearray.
+     </p><p></p><span class="label">Geretourneerde waarde</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../specialTypes.html#*">*</a></code> &mdash; Het gedeserialiseerde object.
+     
+     </td></tr></table><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Het bestand kan niet worden gelezen of het bestand is niet geopend. Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met leesmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden gelezen (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; De positie die voor het lezen van gegevens is opgegeven, is groter dan het aantal beschikbare bytes (aangeduid door de eigenschap <code>bytesAvailable</code>).
+	
+	</td></tr></table><p><span class="label">Verwante API-elementen</span></p><div class="seeAlso"><a href="../net/package.html#registerClassAlias()" target="">flash.net.registerClassAlias()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readShort()" id="readShort()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;readShort</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readShort():<a href="../../int.html">int</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Leest een 16-bits geheel getal met teken uit de bestandsstream, bytestream of bytearray.
+     </p><p></p><span class="label">Geretourneerde waarde</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../int.html">int</a></code> &mdash; De geretourneerde waarde ligt in het bereik -32768 t/m 32767.
+     </td></tr></table><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Het bestand kan niet worden gelezen of het bestand is niet geopend. Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met leesmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden gelezen (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; De positie die voor het lezen van gegevens is opgegeven, is groter dan het aantal beschikbare bytes (aangeduid door de eigenschap <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readUnsignedByte()" id="readUnsignedByte()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;readUnsignedByte</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedByte():<a href="../../uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Leest een byte zonder teken uit de bestandsstream, bytestream of bytearray.
+     </p><p></p><span class="label">Geretourneerde waarde</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../uint.html">uint</a></code> &mdash; De geretourneerde waarde ligt in het bereik 0 t/m 255.
+     </td></tr></table><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Het bestand kan niet worden gelezen of het bestand is niet geopend. Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met leesmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden gelezen (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; De positie die voor het lezen van gegevens is opgegeven, is groter dan het aantal beschikbare bytes (aangeduid door de eigenschap <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readUnsignedInt()" id="readUnsignedInt()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;readUnsignedInt</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedInt():<a href="../../uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Leest een 32-bits geheel zonder teken uit de bestandsstream, bytestream of bytearray.
+     </p><p></p><span class="label">Geretourneerde waarde</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../uint.html">uint</a></code> &mdash; De geretourneerde waarde ligt in het bereik 0 t/m 4294967295.
+     </td></tr></table><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Het bestand kan niet worden gelezen of het bestand is niet geopend. Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met leesmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden gelezen (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; De positie die voor het lezen van gegevens is opgegeven, is groter dan het aantal beschikbare bytes (aangeduid door de eigenschap <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readUnsignedShort()" id="readUnsignedShort()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;readUnsignedShort</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedShort():<a href="../../uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Leest een 16-bits geheel zonder teken uit de bestandsstream, bytestream of bytearray.
+     </p><p></p><span class="label">Geretourneerde waarde</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../uint.html">uint</a></code> &mdash; De geretourneerde waarde ligt in het bereik 0 t/m 65535.
+     </td></tr></table><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Het bestand kan niet worden gelezen of het bestand is niet geopend. Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met leesmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden gelezen (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; De positie die voor het lezen van gegevens is opgegeven, is groter dan het aantal beschikbare bytes (aangeduid door de eigenschap <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readUTF()" id="readUTF()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;readUTF</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUTF():<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Leest een UTF-8-tekenreeks uit de bestandsstream, bytestream of bytearray. Er wordt aangenomen dat de tekenreeks begint met een kort geheel getal zonder teken dat de lengte in bytes aangeeft.
+     
+     <p>Deze methode is vergelijkbaar met de methode <code>readUTF()</code> in de Java<sup>&reg;</sup>-interface IDataInput.</p>
+     </p><p></p><span class="label">Geretourneerde waarde</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../String.html">String</a></code> &mdash; Een UTF-8-tekenreeks die is geproduceerd door de byterepresentatie van tekens.
+     
+     </td></tr></table><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Het bestand kan niet worden gelezen of het bestand is niet geopend. Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met leesmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden gelezen (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; De positie die voor het lezen van gegevens is opgegeven, is groter dan het aantal beschikbare bytes (aangeduid door de eigenschap <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readUTFBytes()" id="readUTFBytes()"></a><a name="readUTFBytes(uint)" id="readUTFBytes(uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;readUTFBytes</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUTFBytes(length:<a href="../../uint.html">uint</a>):<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Leest een reeks van UTF-8-bytes uit de bytestream of bytearray en retourneert een tekenreeks.
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">length</span>:<a href="../../uint.html">uint</a></code> &mdash; Het aantal bytes dat moet worden gelezen.
+     </td></tr></table></p><p></p><span class="label">Geretourneerde waarde</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../String.html">String</a></code> &mdash; Een UTF-8-tekenreeks die is geproduceerd door de byterepresentatie van tekens met de opgegeven lengte.
+     </td></tr></table><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Het bestand kan niet worden gelezen of het bestand is niet geopend. Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met leesmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden gelezen (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; De positie die voor het lezen van gegevens is opgegeven, is groter dan het aantal beschikbare bytes (aangeduid door de eigenschap <code>bytesAvailable</code>).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="truncate()" id="truncate()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;truncate</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function truncate():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 Kort het bestand in op de positie die is aangegeven door de eigenschap <code>position</code> van het FileStream-object. 
+	 
+	 <p>Bytes worden verwijderd vanaf de positie die is aangegeven door de eigenschap <code>position</code> tot het einde van het bestand. Het bestand moet geopend zijn voor schrijven.</p>
+	 
+	 </p><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; Het bestand is niet geopend en er kan niet naar worden geschreven.
+	 
+	 </td></tr></table><p><span class="label">Verwante API-elementen</span></p><div class="seeAlso"><a href="FileStream.html#position" target="">position</a></div><span id="pageFilter"><br/><span class="label"> Voorbeeld &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_nl"> Hoe dit voorbeeld te gebruiken </a></span>)
+            </span><br/><br/><div class="detailBody"> De volgende code opent een bestand met de naam test.txt in de submap Apollo Test van de documentenmap van de gebruiker synchroon en kort het bestand tot 100 tekens af als het langer is dan 100 tekens.
+<div class="listing"><pre>
+import flash.filesystem.*;
+
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.open(file, FileMode.UPDATE);
+if (file.size &gt; 100) {
+    fileStream.position = 100;
+    fileStream.truncate();
+}
+fileStream.close();
+</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody"> De volgende code opent een bestand met de naam test.txt in de submap Apollo Test van de documentenmap van de gebruiker <i>asynchroon</i> en kort het bestand tot 100 tekens af als het langer is dan 100 tekens.
+<div class="listing"><pre>
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.openAsync(file, FileMode.UPDATE);
+trace("start", file.size)
+if (file.size &gt; 100) {
+    fileStream.position = 100;
+    fileStream.truncate();
+}
+fileStream.addEventListener(Event.CLOSE, fileClosed);
+fileStream.close();
+function fileClosed(event:Event):void {
+    trace("closed", file.size); 
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeBoolean()" id="writeBoolean()"></a><a name="writeBoolean(Boolean)" id="writeBoolean(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeBoolean</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeBoolean(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schrijft een booleaanse waarde. Er wordt volgens de parameter <code>value</code> één byte geschreven, 1 indien <code>true</code> of 0 indien <code>false</code>.
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../Boolean.html">Boolean</a></code> &mdash; Een booleaanse waarde die bepaalt welke byte wordt geschreven. Als de parameter <code>true</code> is, wordt 1 geschreven; als de parameter <code>false</code>, wordt 0 geschreven.
+     
+     </td></tr></table></p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; U kunt niet naar het bestand schrijven (bijvoorbeeld omdat het niet aanwezig is). Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met schrijfmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden geschreven (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeByte()" id="writeByte()"></a><a name="writeByte(int)" id="writeByte(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeByte</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeByte(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schrijft een byte. De lage 8 bits van de parameter worden gebruikt, de hoge 24 bits worden genegeerd.
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../int.html">int</a></code> &mdash; De waarde van een byte als geheel getal.
+     
+     </td></tr></table></p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; U kunt niet naar het bestand schrijven (bijvoorbeeld omdat het niet aanwezig is). Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met schrijfmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden geschreven (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeBytes()" id="writeBytes()"></a><a name="writeBytes(flash.utils.ByteArray,uint,uint)" id="writeBytes(flash.utils.ByteArray,uint,uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeBytes</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeBytes(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:<a href="../../uint.html">uint</a> = 0, length:<a href="../../uint.html">uint</a> = 0):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schrijft een reeks van bytes vanuit de opgegeven bytearray <code>bytes</code>, te beginnen op de byte die is opgegeven met <code>offset</code> (met een op nul gebaseerde indexwaarde) met een lengte die is opgegeven met <code>length</code>, naar de bestandsstream, bytestream of bytearray.
+     
+     <p>Wanneer de parameter <code>length</code> wordt weggelaten, wordt de standaardlengte 0 gebruikt en wordt de gehele buffer geschreven, beginnend bij <code>offset</code>. Wanneer de parameter <code>offset</code> ook wordt weggelaten, wordt de gehele buffer geschreven. </p>
+     
+     <p>Wanneer de parameter <code>offset</code> of <code>length</code> zich buiten het bereik bevindt, worden ze vastgeklemd aan het begin en het einde van de array <code>bytes</code>.</p>
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">bytes</span>:<a href="../utils/ByteArray.html">ByteArray</a></code> &mdash; De bytearray die moet worden geschreven.
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">offset</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; Een op nul gebaseerde index die de positie in de array opgeeft waar met schrijven moet worden begonnen.
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">length</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; Een geheel getal zonder teken dat aangeeft tot hoever in de buffer moet worden geschreven.
+     
+     </td></tr></table></p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; U kunt niet naar het bestand schrijven (bijvoorbeeld omdat het niet aanwezig is). Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met schrijfmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden geschreven (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeDouble()" id="writeDouble()"></a><a name="writeDouble(Number)" id="writeDouble(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeDouble</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeDouble(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schrijft een IEEE 754 drijvende-kommagetal (64-bits) met dubbele precisie.
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../Number.html">Number</a></code> &mdash; Een drijvende-kommagetal (64 bits) met dubbele precisie.
+     
+     </td></tr></table></p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; U kunt niet naar het bestand schrijven (bijvoorbeeld omdat het niet aanwezig is). Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met schrijfmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden geschreven (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeFloat()" id="writeFloat()"></a><a name="writeFloat(Number)" id="writeFloat(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeFloat</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeFloat(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schrijft een IEEE 754 drijvende-kommagetal (32-bits) met enkele precisie.
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../Number.html">Number</a></code> &mdash; Een drijvende-kommagetal (32 bits) met enkele precisie.
+     
+     </td></tr></table></p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; U kunt niet naar het bestand schrijven (bijvoorbeeld omdat het niet aanwezig is). Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met schrijfmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden geschreven (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeInt()" id="writeInt()"></a><a name="writeInt(int)" id="writeInt(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeInt</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeInt(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schrijft een 32-bits geheel getal met teken.
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../int.html">int</a></code> &mdash; De waarde van een byte als een geheel getal met teken.
+     
+     </td></tr></table></p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; U kunt niet naar het bestand schrijven (bijvoorbeeld omdat het niet aanwezig is). Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met schrijfmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden geschreven (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeMultiByte()" id="writeMultiByte()"></a><a name="writeMultiByte(String,String)" id="writeMultiByte(String,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeMultiByte</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeMultiByte(value:<a href="../../String.html">String</a>, charSet:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schrijft een multibyte-tekenreeks naar de bestandsstream, bytestream of byte-array met de opgegeven tekenset.
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../String.html">String</a></code> &mdash; De tekenreekswaarde die moet worden geschreven.
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">charSet</span>:<a href="../../String.html">String</a></code> &mdash; De tekenreeks die de tekenset aangeeft die moet worden gebruikt. Mogelijke tekensetreeksen zijn onder andere <code>shift-jis</code>, <code>cn-gb</code>, <code>iso-8859-1</code> en andere. Zie <a href="../../charset-codes.html" >Ondersteunde tekensets</a> voor een complete lijst.
+     </td></tr></table></p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; U kunt niet naar het bestand schrijven (bijvoorbeeld omdat het niet aanwezig is). Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met schrijfmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden geschreven (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr></table><p><span class="label">Verwante API-elementen</span></p><div class="seeAlso"><a href="File.html#systemCharset" target="">File.systemCharset</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeObject()" id="writeObject()"></a><a name="writeObject(any)" id="writeObject(any)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeObject</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeObject(object:<a href="../../specialTypes.html#*">*</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schrijft een object dat in AMF-indeling met serienummering is gecodeerd, naar de bestandsstream, bytestream of bytearray.
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">object</span>:<a href="../../specialTypes.html#*">*</a></code> &mdash; Het object waarop serienummering moet worden toegepast.
+     
+     </td></tr></table></p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; U kunt niet naar het bestand schrijven (bijvoorbeeld omdat het niet aanwezig is). Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met schrijfmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden geschreven (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr></table><p><span class="label">Verwante API-elementen</span></p><div class="seeAlso"><a href="../net/package.html#registerClassAlias()" target="">flash.net.registerClassAlias()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeShort()" id="writeShort()"></a><a name="writeShort(int)" id="writeShort(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeShort</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeShort(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schrijft een 16-bits geheel getal. De lage 16 bits van de parameter worden gebruikt, de hoge 16 bits worden genegeerd.
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../int.html">int</a></code> &mdash; De waarde van een byte als geheel getal.
+     
+     </td></tr></table></p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; U kunt niet naar het bestand schrijven (bijvoorbeeld omdat het niet aanwezig is). Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met schrijfmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden geschreven (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeUnsignedInt()" id="writeUnsignedInt()"></a><a name="writeUnsignedInt(uint)" id="writeUnsignedInt(uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeUnsignedInt</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUnsignedInt(value:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schrijft een 32-bits geheel getal zonder teken.
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../uint.html">uint</a></code> &mdash; De waarde van een byte als een geheel getal zonder teken.
+     
+     </td></tr></table></p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; U kunt niet naar het bestand schrijven (bijvoorbeeld omdat het niet aanwezig is). Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met schrijfmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden geschreven (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeUTF()" id="writeUTF()"></a><a name="writeUTF(String)" id="writeUTF(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeUTF</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUTF(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schrijft een UTF-8-tekenreeks naar de bestandsstream, bytestream of byte-array. De lengte van de UTF-8-tekenreeks in bytes wordt eerst als een 16-bits geheel getal geschreven en wordt gevolgd door de bytes die de tekens van de tekenreeks vertegenwoordigen.
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../String.html">String</a></code> &mdash; De tekenreekswaarde die moet worden geschreven.
+     
+     </td></tr></table></p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; U kunt niet naar het bestand schrijven (bijvoorbeeld omdat het niet aanwezig is). Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../RangeError.html">RangeError</a> </code> &mdash; Als de tekenreeks langer is dan 65.535 tekens.
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met schrijfmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden geschreven (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeUTFBytes()" id="writeUTFBytes()"></a><a name="writeUTFBytes(String)" id="writeUTFBytes(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeUTFBytes</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUTFBytes(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schrijft een UTF-8-tekenreeks. Vergelijkbaar met <code>writeUTF()</code>, maar voegt geen 16-bits woord als voorvoegsel toe aan de tekenreeks.
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../String.html">String</a></code> &mdash; De tekenreekswaarde die moet worden geschreven.
+     
+     </td></tr></table></p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; U kunt niet naar het bestand schrijven (bijvoorbeeld omdat het niet aanwezig is). Deze gebeurtenis wordt alleen verzonden voor bestanden die voor asynchrone bewerkingen zijn geopend (met de methode <code>openAsync()</code>).
+	
+	</td></tr></table><br/><span class="label">Gegenereerde uitzondering</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Het bestand is niet geopend; het bestand is geopend maar niet met schrijfmogelijkheden; of, in het geval van een bestand dat voor synchrone bewerkingen is geopend (met de methode <code>open()</code>), het bestand kan niet worden geschreven (omdat het bijvoorbeeld niet aanwezig is).
+	
+	</td></tr></table></div></span><div class="detailSectionHeader"> Gebeurtenisdetails </div><span id="pageFilter" runtime="AIR::1.0##"><a name="event:close" id="event:close"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>close</h3></td><td class="detailHeaderType"> Gebeurtenis </td></tr></table><div class="detailBody"><span class="label">Type gebeurtenisobject: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">eigenschap Event.type  =  </span><a href="../events/Event.html#CLOSE"><code>flash.events.Event.CLOSE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ Geeft aan dat de stroom is gesloten door een expliciete aanroep van de methode <code>close()</code>.
+ 
+ </p>
+	De constante <code>Event.CLOSE</code> definieert de waarde van de eigenschap <code>type</code> van een <code>close</code>-gebeurtenisobject. 
+	
+	<p>Deze gebeurtenis heeft de volgende eigenschappen:</p>
+	
+	<table class="innertable" ><tr><th>Eigenschap</th><th>Waarde</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; er is geen standaardgedrag om te annuleren.</td></tr><tr><td><code>currentTarget</code></td><td>Het object dat het gebeurtenisobject actief verwerkt met een gebeurtenislistener.</td></tr><tr><td><code>target</code></td><td>Het object waarvan de verbinding is gesloten.</td></tr></table>
+	
+	<p><span class="label">Verwante API-elementen</span></p><div class="seeAlso"><a href="FileStream.html#close()" target="">close()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:complete" id="event:complete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>complete</h3></td><td class="detailHeaderType"> Gebeurtenis </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Type gebeurtenisobject: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">eigenschap Event.type  =  </span><a href="../events/Event.html#COMPLETE"><code>flash.events.Event.COMPLETE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ Geeft aan dat het einde van de stroom is bereikt.
+ 
+ </p>
+	De constante <code>Event.COMPLETE</code> definieert de waarde van de eigenschap <code>type</code> van een <code>complete</code>-gebeurtenisobject. 
+	
+	<p>Deze gebeurtenis heeft de volgende eigenschappen:</p>
+	<table class="innertable" ><tr><th>Eigenschap</th><th>Waarde</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; er is geen standaardgedrag om te annuleren.</td></tr><tr><td><code>currentTarget</code></td><td>Het object dat het gebeurtenisobject actief verwerkt met een gebeurtenislistener.</td></tr><tr><td><code>target</code></td><td>Het netwerkobject dat klaar is met laden. 
+	    </td></tr></table>
+	
+	<p><span class="label">Verwante API-elementen</span></p><div class="seeAlso"><a href="FileStream.html#position" target="">position</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:ioError" id="event:ioError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>ioError</h3></td><td class="detailHeaderType"> Gebeurtenis </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Type gebeurtenisobject: </span><a href="../events/IOErrorEvent.html"><code>flash.events.IOErrorEvent</code></a><br/><span class="label">eigenschap IOErrorEvent.type  =  </span><a href="../events/IOErrorEvent.html#IO_ERROR"><code>flash.events.IOErrorEvent.IO_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ Geeft aan dat er een fout is opgetreden tijdens een asynchrone I/O-bewerking van het bestand.
+ 
+ </p>
+	Definieert de waarde van de eigenschap <code>type</code> van een gebeurtenisobject <code>ioError</code>.
+	<p>Deze gebeurtenis heeft de volgende eigenschappen:</p>
+	<table class="innertable" ><tr><th>Eigenschap</th><th>Waarde</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; er is geen standaardgedrag om te annuleren.</td></tr><tr><td><code>currentTarget</code></td><td>Het object dat het gebeurtenisobject actief verwerkt met een gebeurtenislistener.</td></tr><tr><td><code>errorID</code></td><td>Een referentienummer dat aan de specifieke fout is gekoppeld (alleen AIR).</td></tr><tr><td><code>target</code></td><td>Het netwerkobject dat de invoer-/uitvoerfout ondervindt.</td></tr><tr><td><code>text</code></td><td>Tekst die moet worden weergegeven als foutbericht. </td></tr></table>
+	
+	</div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:outputProgress" id="event:outputProgress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>outputProgress</h3></td><td class="detailHeaderType"> Gebeurtenis </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Type gebeurtenisobject: </span><a href="../events/OutputProgressEvent.html"><code>flash.events.OutputProgressEvent</code></a><br/><span class="label">eigenschap OutputProgressEvent.type  =  </span><a href="../events/OutputProgressEvent.html#OUTPUT_PROGRESS"><code>flash.events.OutputProgressEvent.OUTPUT_PROGRESS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ Geeft aan dat de gebufferde gegevens naar het bestand zijn geschreven.
+ 
+ </p>
+    Definieert de waarde van de eigenschap <code>type</code> van een gebeurtenisobject <code>outputProgress</code>.
+    
+    <p>Deze gebeurtenis heeft de volgende eigenschappen:</p>
+    
+    <table class="innertable" ><tr><th>Eigenschap</th><th>Waarde</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>bytesPending</code></td><td>Het aantal bytes dat nog moet worden geschreven op het moment dat de listener de gebeurtenis verwerkt.</td></tr><tr><td><code>bytesTotal</code></td><td>Het totaal aantal bytes dat uiteindelijk is geschreven als het schrijfproces slaagt.</td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; er is geen standaardgedrag om te annuleren.</td></tr><tr><td><code>currentTarget</code></td><td>Het object dat het gebeurtenisobject actief verwerkt met een gebeurtenislistener.</td></tr><tr><td><code>target</code></td><td>Het FileStream-object dat de voortgang rapporteert. </td></tr></table>
+    
+    </div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:progress" id="event:progress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>progress</h3></td><td class="detailHeaderType"> Gebeurtenis </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Type gebeurtenisobject: </span><a href="../events/ProgressEvent.html"><code>flash.events.ProgressEvent</code></a><br/><span class="label">eigenschap ProgressEvent.type  =  </span><a href="../events/ProgressEvent.html#PROGRESS"><code>flash.events.ProgressEvent.PROGRESS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ Geeft aan dat er nieuwe gegevens beschikbaar zijn in de stroom.
+ 
+ </p>
+	Definieert de waarde van de eigenschap <code>type</code> van een gebeurtenisobject <code>progress</code>.
+	
+	<p>Deze gebeurtenis heeft de volgende eigenschappen:</p>
+	
+	<table class="innertable" ><tr><th>Eigenschap</th><th>Waarde</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>bytesLoaded</code></td><td>Het aantal items of bytes dat wordt geladen wanneer de listener de gebeurtenis verwerkt.</td></tr><tr><td><code>bytesTotal</code></td><td>Het totale aantal items of bytes dat uiteindelijk wordt geladen wanneer het laadproces is voltooid.</td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; er is geen standaardgedrag om te annuleren.</td></tr><tr><td><code>currentTarget</code></td><td>Het object dat het gebeurtenisobject actief verwerkt met een gebeurtenislistener.</td></tr><tr><td><code>target</code></td><td>Het object dat de voortgang rapporteert. </td></tr></table>
+	
+	</div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script></div><p xmlns:xd="http://www.pnp-software.com/XSLTdoc"></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Wed Jun 13 2018, 11:42 AM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/nl_NL/legalnotices/index.html">Juridische kennisgeving</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online privacybeleid</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">Waarom in het Engels?</span>
+				</div>
+				<div class="white_content_body">
+					<b>Sommige inhoud van de Naslaggids voor ActionScript 3.0 staat in het Engels</b><br><br>
+					Niet alle onderdelen van de Naslaggids voor ActionScript 3.0 zijn in alle talen vertaald. Wanneer een taalelement niet is vertaald, wordt het in het Engels weergegeven. Zo is de klasse ga.controls.HelpBox niet in elke taal vertaald. In de Nederlandse versie van de naslaggids wordt de klasse ga.controls.HelpBox bijvoorbeeld in het Engels weergegeven.
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Wed Jun 13 2018, 11:42 AM Z  -->

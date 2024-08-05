@@ -1,0 +1,1426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="適用於 Adobe&reg; Flash&reg; Platform 的 ActionScript&reg; 3.0 參考"><meta name="lang" content="zh-tw"><link rel="stylesheet" href="style.css" type="text/css" media="screen"><link rel="stylesheet" href="print.css" type="text/css" media="print"><link rel="stylesheet" href="override.css" type="text/css"><link rel="stylesheet" href="asfilter.css" type="text/css"><link rel="stylesheet" href="ion.css" type="text/css"><title>陳述式、關鍵字和指令 - Adobe ActionScript&reg; 3 (AS3 ) API 參考</title>
+		<link rel="stylesheet" href="filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="filter_new.css" type="text/css">
+			
+		<script src="jquery.js" type="text/javascript"></script>
+		<script src="s_chl_code.js" type="text/javascript"></script>
+		<script src="jquery.zclip.js" type="text/javascript"></script>
+		<script src="jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="cookies.js" type="text/javascript"></script>
+		<script src="asdoc.js" type="text/javascript"></script>
+		<script src="iscroll.js" type="text/javascript"></script>
+		<script src="AC_OETags.js" type="text/javascript"></script>
+		<script src="omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "執行階段";
+			var productsLabel = "產品";
+			var noneLabel = "無";
+			var qsearchBoxLabel = "快速搜尋";
+			var qsearchText = "找不到字詞";
+			var ajaxErrorMsg="載入頁面時發生錯誤";
+			var ajaxErrorTryMsg="再試一次";
+			var ajaxLoadingMsg="仍在載入";
+			var cancelMsg = "取消";
+			var classesText = "類別";
+			var strJiveReply = "張貼此問題是為回應下列文章： "
+			var showFilters = "顯示篩選";
+			var hideFilters = "隱藏篩選";
+			
+		
+			var baseRef = "./";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											適用於 Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup> Platform 的 ActionScript<sup>&reg;</sup> 3.0 參考<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="index.html"> 首頁 </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="statements.html#top" style="display:">顯示套件和類別清單</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="statements.html#top" style="display:none">隱藏套件和類別清單</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="package-summary.html"> 套件 </a>&nbsp;|&nbsp;
+												<a target="_self" href="class-summary.html"> 類別 </a>&nbsp;|&nbsp;
+												<a target="_self" href="whatsnew.html"> 新增內容 </a>&nbsp;|&nbsp;
+												<a target="_self" href="all-index-Symbols.html"> 索引 </a>&nbsp;|&nbsp;
+												<a target="_self" href="appendixes.html"> 附錄 </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">為什麼顯示英文？</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/zh_TW/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('./')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('./')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="help.js"></script>
+						<script language="javascript" type="text/javascript" src="asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>篩選：</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">從伺服器擷取資料...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">從伺服器擷取資料...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="statements.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">&nbsp;</a><br>
+								<h1 id="classProductName">陳述式、關鍵字和指令&nbsp;</h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="statements.html#propertySummary" style="display:none"> 屬性 </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="statements.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> 屬性 </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="statements.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> 建構函式 </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="statements.html#methodSummary" style="display:none"> 方法 </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="statements.html#constantSummary" style="display:none"> 全域常數 </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="statements.html#eventSummary" style="display:none"> 事件 </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="statements.html#styleSummary" style="display:none"> 樣式 </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="statements.html#SkinPartSummary" style="display:none"> 外觀部件 </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="statements.html#SkinStateSummary" style="display:none"> 外觀狀態 </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="statements.html#effectSummary" style="display:none"> 特效 </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="statements.html#constantSummary" style="display:none"> 常數 </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="statements.html#methodSummary" style="display:none"> 全域函數 </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="statements.html#methodSummary" style="display:none">函數</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="statements.html#interfaceSummary" style="display:none"> 介面 </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="statements.html#classSummary" style="display:none"> 類別 </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="statements.html#includeExamplesSummary" style="display:none"> 範例 </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="statements.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								類別
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><p>陳述式是在執行階段執行或指定動作的語言元素。例如，<code>return</code> 陳述式會傳回它在函數中執行之後的結果值；<code>if</code> 陳述式會評估條件，以決定下一個應該要採取的動作；而 <code>switch</code> 陳述式則會建立 ActionScript 陳述式的分歧判斷結構。 
+		<p>特質關鍵字會改變定義的意義，並且可以套用至類別、變數、函數與名稱空間定義；而定義關鍵字則是用來定義諸如變數、函數、類別與介面之類的實體；主要運算式關鍵字則代表常值。如需保留字清單，請參閱 <a href="http://www.adobe.com/go/learn_as3_reservedwords_tw" >學習 ActionScript 3.0</a>。</p> 
+		<p>指令包含陳述式與定義，可在編譯階段與執行階段發揮效用。只要不是陳述式或定義的指令，都會下表中列出，並且標記為指令。</p>
+		</p><br><a name="statementSummary"></a><table cellspacing="0" cellpadding="3" class="summaryTable"><tr><th>&nbsp;</th><th colspan="2">陳述式</th></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#break">break</a></td><td class="summaryTableLastCol">會出現在迴圈 (<code>for</code>、<code>for..in</code>、<code>for each..in</code>、<code>do..while</code> 或 <code>while</code>) 或是在與 <code>switch</code> 陳述式中某個 case 關聯的陳述式區塊中。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#case">case</a></td><td class="summaryTableLastCol">定義 <code>switch</code> 陳述式的跳躍目標。</td></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#continue">continue</a></td><td class="summaryTableLastCol">跳過最內層迴圈中所有其餘的陳述式，然後如同控制項已經正常抵達迴圈的結尾一般，直接開始下一個迴圈循環。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#default">default</a></td><td class="summaryTableLastCol">定義 <code>switch</code> 陳述式的 default case。</td></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#do..while">do..while</a></td><td class="summaryTableLastCol">類似於 <code>while</code> 迴圈，只不過陳述式會在初始評估條件之前執行一次。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#else">else</a></td><td class="summaryTableLastCol">指定如果 <code>if</code> 陳述式中的條件傳回 <code>false</code> 時所要執行的陳述式。</td></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#for">for</a></td><td class="summaryTableLastCol">評估 <code>init</code> (初始化) 運算式一次，然後開始迴圈序列。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#for..in">for..in</a></td><td class="summaryTableLastCol">重複執行物件之動態屬性或陣列中的元素，並針對每一個屬性或元素執行 <code>statement</code>。</td></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#for_each..in">for each..in</a></td><td class="summaryTableLastCol">重複執行集合的所有項目，並針對每個項目分別執行 <code>statement</code>。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#if">if</a></td><td class="summaryTableLastCol">評估條件，以決定下一個要執行的陳述式。</td></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#label">label</a></td><td class="summaryTableLastCol">將陳述式與可透過 <code>break</code> 或 <code>continue</code> 參考的識別名稱進行關聯。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#return">return</a></td><td class="summaryTableLastCol">造成執行立即傳回至發出呼叫的函數。</td></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#super">super</a></td><td class="summaryTableLastCol">叫用方法或建構函式的父類別或父版本。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#switch">switch</a></td><td class="summaryTableLastCol">根據運算式的數值而定，會導致控制權轉移至其中一個陳述式。</td></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#throw">throw</a></td><td class="summaryTableLastCol">產生 (或「擲出」) <code>catch</code> 程式碼區塊可以處理 (或「捕捉」) 的錯誤。<em></em><em></em></td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#try..catch..finally">try..catch..finally</a></td><td class="summaryTableLastCol">包含發生錯誤的程式碼區塊，然後再回應這個錯誤。</td></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#while">while</a></td><td class="summaryTableLastCol">評估條件，如果條件評估為 <code>true</code>，則會在迴圈返回以再次評估條件之前執行一或多個陳述式。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#with">with</a></td><td class="summaryTableLastCol">建立用來執行一或多個陳述式的預設物件，可能會減少需要覆寫的程式碼數量。</td></tr><tr><th>&nbsp;</th><th colspan="2"> 命名空間 </th></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#AS3">AS3</a></td><td class="summaryTableLastCol">定義具有固定屬性 (而不是 prototype 屬性) 之核心 ActionScript 類別的方法與屬性。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#flash_proxy">flash_proxy</a></td><td class="summaryTableLastCol">定義 Proxy 類別的方法。</td></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#object_proxy">object_proxy</a></td><td class="summaryTableLastCol">定義 ObjectProxy 類別的方法。</td></tr><tr><th>&nbsp;</th><th colspan="2">主要運算式關鍵字</th></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#false">false</a></td><td class="summaryTableLastCol">表示為 false 的 Boolean 值。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#null">null</a></td><td class="summaryTableLastCol">可以指定給變數、或者是在沒有提供資料時由函數傳回的特殊值。</td></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#this">this</a></td><td class="summaryTableLastCol">對方法所包含之物件的參考。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#true">true</a></td><td class="summaryTableLastCol">表示為 true 的 Boolean 值。</td></tr><tr><th>&nbsp;</th><th colspan="2">定義關鍵字</th></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#..._(rest)_parameter">... (rest) parameter</a></td><td class="summaryTableLastCol">指定函數將接受任何數量的逗號分隔引數。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#class">class</a></td><td class="summaryTableLastCol">定義類別，以便將物件實體化，這些物件會共用您定義的方法和屬性。</td></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#const">const</a></td><td class="summaryTableLastCol">指定常數，也就是只能指定一次數值的變數。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#extends">extends</a></td><td class="summaryTableLastCol">定義本身為另一個類別之子類別的類別。</td></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#function">function</a></td><td class="summaryTableLastCol">由為執行特定工作而定義的一組陳述式組成。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#get">get</a></td><td class="summaryTableLastCol">定義 getter，一種作用類似屬性的方法。</td></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#implements">implements</a></td><td class="summaryTableLastCol">指定類別實作一或多個介面。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#interface">interface</a></td><td class="summaryTableLastCol">定義介面。</td></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#namespace">namespace</a></td><td class="summaryTableLastCol">可讓您控制定義的可見性。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#package">package</a></td><td class="summaryTableLastCol">可讓您將程式碼組織為不連續的群組，這些群組可以匯入其它程式碼中。</td></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#set">set</a></td><td class="summaryTableLastCol">定義 setter，這是會在 public 介面中以屬性型態出現的方法。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#var">var</a></td><td class="summaryTableLastCol">指定變數。</td></tr><tr><th>&nbsp;</th><th colspan="2">指令</th></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#default_xml_namespace">default xml namespace</a></td><td class="summaryTableLastCol">
+			<code>default xml namespace</code> 指令會設定 XML 物件所使用的預設名稱空間。
+			</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#import">import</a></td><td class="summaryTableLastCol">可讓程式碼使用外部定義的類別與套件。</td></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#include">include</a></td><td class="summaryTableLastCol">包含指定的檔案內容，就好像檔案中的命令屬於所呼叫之程式碼的一部分。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#use_namespace">use namespace</a></td><td class="summaryTableLastCol">使指定的命名空間加入至開放的命名空間集。</td></tr><tr><th>&nbsp;</th><th colspan="2">特質關鍵字</th></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#dynamic">dynamic</a></td><td class="summaryTableLastCol">指定類別的實體可取得在執行階段加入的動態屬性。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#final">final</a></td><td class="summaryTableLastCol">指定方法無法加以覆寫，或者類別無法加以擴充。</td></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#internal">internal</a></td><td class="summaryTableLastCol">指定相同套件中的任何呼叫者都可使用類別、變數、常數或函數。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#native">native</a></td><td class="summaryTableLastCol">指定在原生程式碼中使用 Flash Player 實作函數或方法。</td></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#override">override</a></td><td class="summaryTableLastCol">指定某個方法會取代繼承的方法。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#private">private</a></td><td class="summaryTableLastCol">指定只有當類別宣告或定義變數、常數或名稱空間時，才可使用這個變數、常數或名稱空間。</td></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#protected">protected</a></td><td class="summaryTableLastCol">指定只有當類別定義變數、常數、方法或名稱空間時，此類別與其子類別才可使用這些變數、常數、方法或名稱空間。</td></tr><tr class="row0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#public">public</a></td><td class="summaryTableLastCol">指定任何呼叫者都可使用類別、變數、常數或方法。</td></tr><tr class="row1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableStatementCol"><a class="signatureLink" href="statements.html#static">static</a></td><td class="summaryTableLastCol">指定變數、常數或方法屬於類別，而不屬於該類別的實體。</td></tr></table><div class="detailSectionHeader">陳述式、關鍵字和指令詳細資訊</div><a name="..._(rest)_parameter"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">... (rest) parameter</td><td class="detailHeaderType">定義關鍵字</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>function functionName(parameter0, parameter1, ...rest){ 
+	// statement(s) 
+} </pre>
+			</p></td></tr></table><p></p><p><p>指定函數將接受任何數量的逗號分隔引數。此引數清單會變成整個函數主體都可使用的陣列。此陣列名稱會在參數宣告中的 <code>...</code> 字元後面指定，該參數可以包含任何不是保留字的名稱。 
+			<p>如果與其它參數一併使用，則 <code>...</code> (rest) 參數宣告必須是最後指定的參數。只有當傳遞至函數的引數數量超出其它參數數量時，才會填入 <code>...</code> (rest) 參數陣列。</p> 
+			<p>逗號分隔引數清單中的每個引數都會放入陣列元素中。如果您傳遞 Array 類別的實體，則會將整個陣列放入 <code>...</code> (rest) 參數陣列的單一元素中。</p>
+			<p>使用此參數將會使得 <code>arguments</code> 物件無法使用。雖然 <code>...</code> (rest) 參數可提供您等同 <code>arguments</code> 陣列與 <code>arguments.length</code> 屬性的功能，但卻無法提供類似 <code>arguments.callee</code> 所提供的功能。在使用 <code>...</code> (rest) 參數之前，請確定您不需要使用 <code>arguments.callee</code>。</p></p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">rest</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 代表傳入函數之引數陣列名稱的識別名稱。該參數不一定要稱為 rest，而是可以為任何非關鍵字的名稱。您可以將 ... (rest) 參數的資料類型指定為 Array，但是這麼做可能會造成混淆，因為參數會接受逗號分隔的數值清單，而該清單與 Array 類別的實體並不相同。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例在兩個不同的函數中使用 ... (rest) 參數。第一個函數 traceParams 只會針對 rest 陣列中每個引數呼叫 trace() 函數。第二個函數 average() 會採用引數清單，並傳回平均差值，同時也會使用不同的參數名稱 args。
+<div class="listing"><pre>
+package {
+	import flash.display.MovieClip;
+	
+	public class RestParamExample extends MovieClip {
+		public function RestParamExample() {
+			traceParams(100, 130, "two"); // 100,130,two
+			trace(average(4, 7, 13));     // 8
+		}
+	}
+}
+
+
+function traceParams(... rest) {
+ 	trace(rest);
+ }
+ 
+function average(... args) : Number{
+	var sum:Number = 0;
+	for (var i:uint = 0; i < args.length; i++) {
+		sum += args[i];
+	}
+	return (sum / args.length);
+}
+</pre></div>
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="arguments.html" target="">arguments 物件</a></div></div><a name="AS3"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">AS3</td><td class="detailHeaderType"> 命名空間 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><p></p><p><p>定義具有固定屬性 (而不是 prototype 屬性) 之核心 ActionScript 類別的方法與屬性。當您將 "-as3" 編譯器選項設定為 <code>true</code> (這是 Flex Builder 2 中的預設值) 時，會為所有核心類別自動開啟 AS3 命名空間。也就是說，核心類別的實體將會使用固定屬性與方法，而不使用這些附加到該類別之原型物件的相同屬性與方法的版本。使用固定屬性通常可以提供較好的效能，但是卻會犧牲掉與 ECMAScript 第 3 版語言規格 (ECMA-262) 的向下相容性。</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"></table><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="Object.html" target="">Object 類別</a></div></div><a name="break"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">break</td><td class="detailHeaderType">陳述式</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><p><code>break [label]</code></p></p></td></tr></table><p></p><p><p>會出現在迴圈 (<code>for</code>、<code>for..in</code>、<code>for each..in</code>、<code>do..while</code> 或 <code>while</code>) 或是在與 <code>switch</code> 陳述式中某個 case 關聯的陳述式區塊中。用於迴圈中時，<code>break</code> 陳述式會指示 Flash 略過迴圈主體的其餘部分、停止迴圈動作，並執行迴圈陳述式後面的陳述式。用於 <code>switch</code> 中時，<code>break</code> 陳述式會指示 Flash 略過該 <code>case</code> 區塊中的其它陳述式，並跳到緊接在包含 <code>switch</code> 陳述式後面的第一個陳述式。 
+			<p>在巢狀迴圈中，<code>break</code> 陳述式只會略過當前這個迴圈的其餘部分，並且不會中斷一整個系列的巢狀迴圈。如需從一整個系列的巢狀迴圈中跳出，請使用 <code>label</code> 或 <code>try..catch..finally</code>。</p>
+			<p><code>break</code> 陳述式可包含選擇性標籤，而該標籤必須符合具有外部標籤的陳述式。如果所使用的標籤不符合外部陳述式的標籤，則會造成語法錯誤。包含標籤的 <code>break</code> 陳述式可用來跳出多層巢狀迴圈陳述式、<code>switch</code> 陳述式，或者 <code>block</code> 陳述式。如需範例說明，請參閱 <code>label</code> 陳述式項目。</p>
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">label</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 與陳述式有關聯的標籤名稱。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例會使用 break 來結束無窮迴圈： 
+<div class="listing"><pre>
+var i:int = 0;
+while (true) { 
+	trace(i); 
+	if (i >= 10) { 
+		break; // this will terminate/exit the loop 
+	} 
+	i++; 
+} 
+/*
+0 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10*/</pre></div>  
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#do..while" target="">do..while</a><br/><a href="statements.html#for" target="">for</a><br/><a href="statements.html#for..in" target="">for..in</a><br/><a href="statements.html#for_each..in" target="">for each..in</a><br/><a href="statements.html#label" target="">label</a><br/><a href="statements.html#while" target="">while</a></div></div><a name="case"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">case</td><td class="detailHeaderType">陳述式</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>case jumpTarget: statements</pre></p></td></tr></table><p></p><p><p>定義 <code>switch</code> 陳述式的跳躍目標。如果 <code>jumpTarget</code> 參數等於使用嚴謹相等 (<code>===</code>) 之 <code>switch</code> 陳述式的 <code>expression</code> 參數，則除非遇到 <code>break</code> 陳述式或 <code>switch</code> 陳述式的結尾，不然 Flash Player 都會執行 <code>statements</code> 參數中的陳述式。 <p>如果您在 <code>switch</code> 陳述式外使用 <code>case</code> 陳述式，就會產生錯誤，並且不會編譯 Script。</p> 
+			<p></p>
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">jumpTarget</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 任何運算式。</td></tr><tr><td width="20px"></td><td><code><span class="label">statements</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 如果 jumpTarget 符合 switch 陳述式中的條件式運算式，則會是要執行的陳述式。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例會定義 switch 陳述式 thisMonth 的跳躍目標。如果 thisMonth 等於 case 陳述式中的運算式，則會執行該陳述式。 
+<div class="listing"><pre>
+var thisMonth:int = new Date().getMonth(); 
+switch (thisMonth) { 
+	case 0 : 
+		trace("January"); 
+		break; 
+	case 1 : 
+		trace("February"); 
+		break; 
+	case 5 : 
+	case 6 : 
+	case 7 : 
+		trace("Some summer month"); 
+		break; 
+	case 8 : 
+		trace("September"); 
+		break; 
+	default : 
+		trace("some other month"); 
+}</pre></div>
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#break" target="">break</a><br/><a href="statements.html#switch" target="">switch</a></div></div><a name="class"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">class</td><td class="detailHeaderType">定義關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>[dynamic] [public | internal] [final] class className [ extends superClass ] [ implements interfaceName[, interfaceName... ] ] { 
+	// class definition here
+}</pre>
+			</p></td></tr></table><p></p><p><p>定義類別，以便將物件實體化，這些物件會共用您定義的方法和屬性。例如，開發發票追蹤系統時，您可以建立 Invoice 類別，來定義每張發票所應具備的所有方法和屬性。接著，再使用新的 <code>new Invoice()</code> 命令來建立 Invoice 物件。 
+			<p>每個 ActionScript 原始檔案都只能包含一個其它原始檔案或 Script 看得見的類別。外部可見的類別可以是公用或內部類別，而且必須在套件陳述式內定義。如果要在同一個檔案中加入其它類別，則必須將類別放到套件陳述式之外與檔案結尾的地方。 </p>
+			<p>外部可見的類別名稱必須和包含該類別的 ActionScript 原始檔案名稱相符。而此原始檔案的名稱，必須是類別名稱加上 .as 做為副檔名。例如，若您將類別命名為 Student，則用來定義該類別的檔案必須命名為 Student.as。</p> 
+			<p>您不能以巢狀方式定義類別；也就是說，您不可以在一個類別定義中定義其它的類別。</p> 
+			<p>您可以定義一個建構函式方法，每當建立類別的新實體時，就會執行這個方法。建構函式方法的名稱必須符合類別的名稱。如果尚未定義建構函式方法，將會建立預設的建構函式。</p>
+			<p>若要指明物件可以在執行階段加入並存取動態屬性，請在類別陳述式之前加上 <code>dynamic</code> 關鍵字；若要宣告某個類別實作某個介面，請使用 <code>implements</code> 關鍵字；而若要建立某個類別的子類別，請使用 <code>extends</code> 關鍵字(一個類別只能擴充一個類別，但卻可以實作數個介面)。您可以在單一陳述式中使用 <code>implements</code> 和 <code>extends</code>。下列範例會顯示 <code>implements</code> 和 <code>extends</code> 關鍵字的一般用法：</p> 
+<div class="listing"><pre>class C implements Interface_i, Interface_j // OK 
+class C extends Class_d implements Interface_i, Interface_j // OK 
+class C extends Class_d, Class_e // not OK </pre></div> 
+
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">className</span>:<a href="Class.html">Class</a></code> &mdash; 類別的完整名稱。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例將建立名為 Plant 的類別，Plant 建構函式會接受兩個參數。 
+<div class="listing"><pre>// Filename Plant.as 
+package {
+  public class Plant { 
+	// Define property names and types 
+	private var _leafType:String; 
+	private var _bloomSeason:String; 
+	// Following line is constructor 
+	// because it has the same name as the class 
+	public function Plant(param_leafType:String, param_bloomSeason:String) { 
+		// Assign passed values to properties when new Plant object is created 
+		_leafType = param_leafType; 
+		_bloomSeason = param_bloomSeason; 
+	} 
+	// Create methods to return property values, because best practice 
+	// recommends against directly referencing a property of a class 
+	public function get leafType():String { 
+		return _leafType; 
+	} 
+	public function get bloomSeason():String { 
+		return _bloomSeason; 
+	} 
+  }
+}</pre></div> 
+在您的 Script 中，請使用 new 運算子來建立 Plant 物件。
+<div class="listing"><pre>
+var pineTree:Plant = new Plant("Evergreen", "N/A"); 
+// Confirm parameters were passed correctly 
+trace(pineTree.leafType); 
+trace(pineTree.bloomSeason); </pre></div> 
+			
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#dynamic" target="">dynamic</a><br/><a href="statements.html#extends" target="">extends</a><br/><a href="statements.html#final" target="">final</a><br/><a href="statements.html#internal" target="">internal</a><br/><a href="statements.html#public" target="">public</a></div></div><a name="const"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">const</td><td class="detailHeaderType">定義關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>const identifier = value </pre></p></td></tr></table><p></p><p><p>指定常數，也就是只能指定一次數值的變數。  
+			<p>您可以在變數後面加上冒號 (:) 字元並接著資料類型，嚴格地將類型指定為常數。</p>
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">identifier</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 常數的識別名稱。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例會說明若您嘗試不只一次將數值指定給常數，就會發生錯誤。
+<div class="listing"><pre>
+const MIN_AGE:int = 21;
+MIN_AGE = 18; // error</pre></div>
+下列範例會說明如果常數是陣列，您還是可以呼叫 Array 類別方法 (其中包括 Array.push())。然而，您卻無法指定新的陣列常值。 
+<div class="listing"><pre>
+const product_array:Array = new Array("Studio", "Dreamweaver", "Flash", "ColdFusion", "Contribute", "Breeze"); 
+product_array.push("Flex"); // array operations are allowed
+product_array = ["Other"];  // assignment is an error
+trace(product_array); 
+</pre></div>
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#var" target="">var</a></div></div><a name="continue"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">continue</td><td class="detailHeaderType">陳述式</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>continue [label]</pre></p></td></tr></table><p></p><p><p>跳過最內層迴圈中所有其餘的陳述式，然後如同控制項已經正常抵達迴圈的結尾一般，直接開始下一個迴圈循環。<code>continue</code> 陳述式在迴圈外便不會產生任何作用。在巢狀迴圈中，請使用選擇性的 <code>label</code> 參數，以便除了最內層迴圈以外，還能跳過更多迴圈。
+			<p><code>continue</code> 陳述式可包含選擇性標籤，而該標籤必須符合具有外部標籤的陳述式。如果所使用的標籤不符合外部陳述式的標籤，則會造成語法錯誤。加上標籤的 <code>continue</code> 陳述式可用來跳過多層巢狀迴圈陳述式。</p>
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>在下列 while 迴圈中，每進入三層迴圈，便可使用 continue 陳述式來跳過其餘的迴圈主體部分，並跳到迴圈頂端測試條件的位置。 
+<div class="listing"><pre>
+var i:int = 0; 
+while (i < 10) { 
+	if (i % 3 == 0) { 
+		i++; 
+		continue; 
+	} 
+	trace(i); 
+	i++; 
+}</pre></div> 
+在 for 迴圈中，continue 陳述式也可用來跳過其餘的迴圈主體。在下列範例中，如果 i % 3 等於 0，則會跳過 trace(i) 陳述式： 
+<div class="listing"><pre> 
+for (var i:int = 0; i < 10; i++) { 
+	if (i % 3 == 0) { 
+		continue; 
+	} 
+	trace(i); 
+}</pre></div> 
+
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#do..while" target="">do..while</a><br/><a href="statements.html#for" target="">for</a><br/><a href="statements.html#for..in" target="">for..in</a><br/><a href="statements.html#for_each..in" target="">for each..in</a><br/><a href="statements.html#label" target="">label</a><br/><a href="statements.html#while" target="">while</a></div></div><a name="default"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">default</td><td class="detailHeaderType">陳述式</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>default: statements </pre></p></td></tr></table><p></p><p><p>定義 <code>switch</code> 陳述式的 default case。如果 <code>switch</code> 陳述式中的 <code>expression</code> 參數不等於 (使用嚴謹相等 [<code>===</code>] 運算) 指定 <code>switch</code> 陳述式的 <code>case</code> 關鍵字後面的任何 <code>expression</code> 參數，便會執行陳述式。 
+			<p><code>switch</code> 陳述式不需要 <code>default</code> case 陳述式。<code>default</code> case 陳述式也不一定要放在清單的最後面。如果您在 <code>switch</code> 陳述式外使用 <code>default</code> 陳述式，就會發生錯誤，並且不會編譯 Script。</p></p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">statements</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 可以是任何陳述式。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>在下列範例中，如果天次是星期六或星期日，則不適用任何一個 case 陳述式，因此會移到 default 陳述式來執行。 
+<div class="listing"><pre>
+var dayOfWeek:int = new Date().getDay(); 
+switch (dayOfWeek) { 
+	case 1 : 
+		trace("Monday"); 
+		break; 
+	case 2 : 
+		trace("Tuesday"); 
+		break; 
+	case 3 : 
+		trace("Wednesday"); 
+		break; 
+	case 4 : 
+		trace("Thursday"); 
+		break; 
+	case 5 : 
+		trace("Friday"); 
+		break; 
+	default : 
+		trace("Weekend"); 
+}</pre></div>
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#switch" target="">switch</a></div></div><a name="default_xml_namespace"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">default xml namespace</td><td class="detailHeaderType">指令</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><p><code>default xml namespace = ns</code></p></p></td></tr></table><p></p><p><p>
+			<code>default xml namespace</code> 指令會設定 XML 物件所使用的預設名稱空間。 
+			
+			<p>如果您沒有設定 <code>default xml namespace</code>，則預設的名稱空間將為未命名的名稱空間 (其中 URI 將設為空字串)。 <code>default xml namespace</code> 宣告的範圍位於函數區塊內，如同變數範圍一樣。
+			</p>
+			
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例會說明 default xml namespace 的範圍為函數區塊：
+			<div class="listing"><pre>var nsDefault1:Namespace = new Namespace("http://www.example.com/namespaces/");
+default xml namespace = nsDefault1;
+	    
+var x1:XML = <test1 />;
+trace("x1 ns: " + x1.namespace());
+			
+scopeCheck();	
+
+var x2:XML = <test2 />;
+trace("x2 ns: " + x2.namespace());
+		
+function scopeCheck(): void {
+	
+	var x3:XML = <test3 />;
+	trace("x3 ns: " + x3.namespace());
+				
+	var nsDefault2:Namespace = new Namespace("http://schemas.xmlsoap.org/soap/envelope/");
+	default xml namespace = nsDefault2;
+		    
+	var x4:XML = <test4 />;
+	trace("x4 ns: " + x4.namespace());
+
+}</pre></div>
+			
+			下列為此範例的 trace() 輸出：
+			
+			x1 ns: http://www.example.com/namespaces/
+x3 ns: 
+x4 ns: http://schemas.xmlsoap.org/soap/envelope/
+x2 ns: http://www.example.com/namespaces/
+
+
+
+下列範例會使用 default xml namespace 指定預設的名稱空間。第二個 XML 物件 (x2) 不會使用此設定，因為 x2 會定義自己的預設命名空間 ： 
+<div class="listing"><pre>
+var nsDefault:Namespace = new Namespace("http://www.example.com/namespaces/");
+default xml namespace = nsDefault;
+            
+var x1:XML = <test1 />;
+
+trace(x1.namespace());
+	// http://www.example.com/namespaces/
+
+var x2:XML = <test2 xmlns = "http://www.w3.org/1999/XSL/Transform/" />;
+trace(x2.namespace());
+	// http://www.w3.org/1999/XSL/Transform/
+
+var x3:XML = <test3 xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/" />;
+trace(x3.namespace());
+	// http://www.example.com/namespaces/
+</pre></div>  
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#namespace" target="">namespace</a><br/><a href="Namespace.html" target="">Namespace 類別</a><br/><a href="statements.html#use_namespace" target="">use namespace</a><br/><a href="XML.html" target="">XML</a></div></div><a name="do..while"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">do..while</td><td class="detailHeaderType">陳述式</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>do { statement(s) } while (condition)</pre></p></td></tr></table><p></p><p><p>類似於 <code>while</code> 迴圈，只不過陳述式會在初始評估條件之前執行一次。接著，只有當條件評估為 <code>true</code> 時才會執行陳述式。 <p><code>do..while</code> 迴圈能確保迴圈內的程式碼至少會執行一次。雖然使用 <code>while</code> 迴圈 (將這些陳述式放在 <code>while</code> 迴圈的前面執行) 也具有同等功效，但是許多程式設計人員卻認為 <code>do..while</code> 迴圈比較容易閱讀。</p> 
+			<p>如果該條件永遠都評估為 <code>true</code>，則 <code>do..while</code> 迴圈是無止盡迴圈。如果您進入一個無止盡的迴圈，Flash Player 就會發生問題，最後若不是收到警告訊息，就是造成播放程式當掉。如果您知道要執行的迴圈數，便應該盡量使用 <code>for</code> 迴圈。雖然 <code>for</code> 迴圈很容易閱讀與除錯，但還是無法完全取代 <code>do..while</code> 迴圈。</p></p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">condition</span>:<a href="Boolean.html">Boolean</a></code> &mdash; 所要評估的條件。只要 condition 參數評估為 true，就會執行 do 程式碼區塊中的陳述式。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例使用 do..while 迴圈來評估條件是否為 true，並且直到 myVar 大於等於 5 之前，都會追蹤 myVar。當 myVar 大於等於 5，迴圈會終止。 
+<div class="listing"><pre>
+var myVar:Number = 0; 
+do { 
+	trace(myVar); 
+	myVar++; 
+} 
+while (myVar < 5); 
+/*
+0 
+1 
+2 
+3 
+4
+*/</pre></div>
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#break" target="">break</a><br/><a href="statements.html#continue" target="">continue</a><br/><a href="statements.html#while" target="">while</a></div></div><a name="dynamic"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dynamic</td><td class="detailHeaderType">特質關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>dynamic class className { // class definition here }</pre></p></td></tr></table><p></p><p><p>指定類別的實體可取得在執行階段加入的動態屬性。如果您對類別使用 <code>dynamic</code> 特質，就可以在執行階段將屬性加入該類別的實體中。未標示為 <code>dynamic</code> 的類別將被視為「密封」，代表屬性無法加入該類別的實體。<em></em>
+			<p>如果類別已密封 (非動態)，則嘗試取得或設定類別實體上的屬性將會造成錯誤。如果您將編譯器設為嚴謹模式，並在建立實體時指定資料類型，則嘗試將屬性加入密封的物件會產生編譯器錯誤，或者會產生執行階段錯誤。</p> 
+			<p>子類別不會繼承 <code>dynamic</code> 特質。如果您擴充動態類別，則只有在宣告具有 <code>dynamic</code> 特質的子類別時，這個子類別才會是動態類別。</p>
+			
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例會建立一個名為 Expando 的動態類別，以及一個名為 Sealed 的密封類別，並將運用在後續的範例中。
+<div class="listing"><pre>
+package {
+
+	dynamic class Expando  {
+	}
+	
+	class Sealed {
+	}
+}
+</pre></div>
+下列程式碼會建立 Expando 類別的實體，並顯示您可以將屬性加入該實體。
+<div class="listing"><pre>
+var myExpando:Expando = new Expando();
+myExpando.prop1 = "new";
+trace(myExpando.prop1); // new
+</pre></div>
+下列程式碼會建立 Sealed 類別的實體，並顯示嘗試加入屬性會產生錯誤。
+<div class="listing"><pre>
+var mySealed:Sealed = new Sealed();
+mySealed.prop1 = "newer"; // error
+</pre></div>
+		
+
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#class" target="">class</a></div></div><a name="else"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">else</td><td class="detailHeaderType">陳述式</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>if (condition) { 
+	// statement(s)
+} 
+else {
+	// statement(s)
+}</pre></p></td></tr></table><p></p><p><p>指定如果 <code>if</code> 陳述式中的條件傳回 <code>false</code> 時所要執行的陳述式。如果只是要執行一個陳述式，就不需要使用大括號 (<code>{}</code>) 括住 <code>else</code> 陳述式所要執行的陳述式。</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">condition</span>:<a href="Boolean.html">Boolean</a></code> &mdash; 評估為 true 或 false 的運算式。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>在下列範例中，else 條件用來檢查 age_txt 變數是否大於或小於 18： 
+<div class="listing"><pre>
+if (age_txt.text>=18) { 
+	trace("welcome, user"); 
+} 
+else { 
+	trace("sorry, junior"); 
+	userObject.minor = true; 
+	userObject.accessAllowed = false;
+}</pre></div> 
+在下列範例中，不需要用到大括號 ({})，因為 else 陳述式後面只有一個陳述式：
+<div class="listing"><pre>
+if (age_txt.text>18) { 
+	trace("welcome, user");
+} 
+else trace("sorry, junior");</pre></div>
+下列範例會合併使用 if 與 else 陳述式，比較 score_txt 與指定的數值： 
+<div class="listing"><pre>
+
+if (score_txt.text>90) { 
+	trace("A"); 
+} 
+else if (score_txt.text>75) { 
+	trace("B"); 
+} 
+else if (score_txt.text>60) { 
+	trace("C"); 
+} 
+else { 
+	trace("F"); 
+}</pre></div><p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#if" target="">if</a></div></div><a name="extends"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">extends</td><td class="detailHeaderType">定義關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>class className extends otherClassName {}
+interface interfaceName extends otherInterfaceName {} </pre> </p></td></tr></table><p></p><p><p>定義本身為另一個類別之子類別的類別。子類別繼承定義在父類別中的所有方法、函數，依此類推。標示為 <code>final</code> 的類別無法加以擴充。
+			<p>您也可以使用 <code>extends</code> 關鍵字來延伸介面。擴充另一個介面的介面會包括所有原始介面的方法宣告。</p>
+			
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">className</span>:<a href="Class.html">Class</a></code> &mdash; 您要定義的類別名稱。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>在下列範例中，Car 類別會擴充 Vehicle 類別，以繼承其所有的方法、屬性與函數。如果您的 Script 初始化 Car 物件，則來自 Car 類別與 Vehicle 類別的方法就都可以使用。 
+			下列範例會顯示 Vehicle.as 檔案的內容，該檔案會定義 Vehicle 類別：  
+<div class="listing"><pre>
+package {
+	class Vehicle { 
+	    var numDoors:Number; 
+	    var color:String; 
+	    public function Vehicle(param_numDoors:Number = 2, param_color:String = null) { 
+	        numDoors = param_numDoors; 
+	        color = param_color; 
+	    } 
+	    public function start():void { 
+	        trace("[Vehicle] start"); 
+	    } 
+	    public function stop():void { 
+	        trace("[Vehicle] stop"); 
+	    } 
+	    public function reverse():void { 
+	        trace("[Vehicle] reverse"); 
+	    } 
+	}	
+}</pre></div> 
+下列範例會顯示位於相同目錄中，名為 Car.as 的第二個 ActionScript 檔案。此類別會擴充 Vehicle 類別，並以三種方法修改 Vehicle 類別。首先，Car 類別會加入變數 fullSizeSpare 來追蹤 car 物件是否有完整尺寸的備胎。接著，它會加入專門針對車子的新方法 activateCarAlarm()，用來啟動車子的防竊警報。然後，它會覆寫 stop() 函數，讓 Car 類別使用防鎖死煞車系統來停止。
+<div class="listing"><pre>
+package {
+
+	public class Car extends Vehicle { 
+	    var fullSizeSpare:Boolean; 
+	    public function Car(param_numDoors:Number, param_color:String, param_fullSizeSpare:Boolean) { 
+	        numDoors = param_numDoors; 
+	        color = param_color; 
+	        fullSizeSpare = param_fullSizeSpare; 
+	    } 
+	    public function activateCarAlarm():void { 
+	        trace("[Car] activateCarAlarm"); 
+	    } 
+	    public override function stop():void { 
+	        trace("[Car] stop with antilock brakes"); 
+	    } 
+	}
+}</pre></div> 
+下列範例會依序將 Car 物件實體化、呼叫在 Vehicle 類別中定義的方法 (start())、呼叫 Car 類別覆寫的方法 (stop())，最後再從 Car 類別呼叫方法 (activateCarAlarm())：
+<div class="listing"><pre>var myNewCar:Car = new Car(2, "Red", true); 
+myNewCar.start(); // [Vehicle] start 
+myNewCar.stop(); // [Car] stop with anti-lock brakes 
+myNewCar.activateCarAlarm(); // [Car] activateCarAlarm</pre></div> 
+您也可以使用 super 陳述式來撰寫 Vehicle 類別的子類別，該子類別可以使用這個陳述式來存取父類別的建構函式。下列範例會顯示位於相同目錄中，名為 Truck.as 的第三個 ActionScript 檔案。Truck 類別會在建構函式和覆寫的 reverse() 方法中使用 super。 
+<div class="listing"><pre>
+package {
+	class Truck extends Vehicle {
+		var numWheels:Number;
+		public function Truck(param_numDoors:Number, param_color:String, param_numWheels:Number) { 
+			super(param_numDoors, param_color); 
+			numWheels = param_numWheels; 
+		} 
+		public override function reverse():void { 
+			beep();
+			super.reverse();
+		} 
+		public function beep():void { 
+			trace("[Truck] make beeping sound"); 
+		} 
+	}
+}</pre></div> 
+下列範例會依序將 Truck 物件實體化、呼叫由 Truck 類別覆寫的方法 (reverse())，然後呼叫在 Vehicle 類別中定義的方法 (stop())：  
+<div class="listing"><pre>var myTruck:Truck = new Truck(2, "White", 18); 
+myTruck.reverse(); // [Truck] make beeping sound [Vehicle] reverse 
+myTruck.stop(); // [Vehicle] stop</pre></div>
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#class" target="">class</a><br/><a href="statements.html#final" target="">final</a><br/><a href="statements.html#interface" target="">interface</a></div></div><a name="false"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">false</td><td class="detailHeaderType">主要運算式關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>false</pre></p></td></tr></table><p></p><p><p>表示為 false 的 Boolean 值。Boolean 值不是 <code>true</code> 便是 <code>false</code>。<code>false</code> 的相反就是 <code>true</code>。
+			<p>當「自動指定資料類型」將 <code>false</code> 轉換為數值時，結果為 <code>0</code>；將 <code>false</code> 轉換為字串時，則為 <code>"false"</code>。</p>
+			<p><b>注意：</b>字串 <code>"false"</code> 會轉換為 Boolean 值 <code>true</code>。</p>
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>此範例會說明「自動指定資料類型」如何將 false 轉換為數字與字串：
+<div class="listing"><pre>
+var bool1:Boolean = Boolean(false);
+
+// converts it to the number 0
+trace(1 + bool1); // outputs 1
+
+// converts it to a string
+trace("String: " + bool1); // outputs String: false
+</pre></div>
+下列範例會示範字串 "false" 轉換為 Boolean 值 true：
+<div class="listing"><pre>
+trace(Boolean("false")); // true
+
+if ("false") {
+	trace("condition expression evaluated to true");
+}
+else {
+	trace("condition expression evaluated to false");
+}
+// condition expression evaluated to true
+</pre></div>
+
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="Boolean.html" target="">Boolean 類別</a><br/><a href="statements.html#true" target="">true</a></div></div><a name="final"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">final</td><td class="detailHeaderType">特質關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>
+final function methodName() { 
+	// your statements here 
+}
+final class className {}</pre> </p></td></tr></table><p></p><p><p>指定方法無法加以覆寫，或者類別無法加以擴充。如果嘗試覆寫標示為 <code>final</code> 的方法或擴充類別，將會發生錯誤。</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">methodName</span>:<a href="Function.html">Function</a></code> &mdash; 無法覆寫的方法名稱。</td></tr><tr><td width="20px"></td><td><code><span class="label">className</span>:<a href="Class.html">Class</a></code> &mdash; 無法擴充的類別名稱。</td></tr></table><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#override" target="">覆寫</a><br/><a href="statements.html#extends" target="">extends</a></div></div><a name="flash_proxy"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">flash_proxy</td><td class="detailHeaderType"> 命名空間 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><p></p><p><p>定義 Proxy 類別的方法。當 Proxy 子類別包含符合任何 Proxy 類別方法名稱的實體方法名稱時，Proxy 類別方法會位於自己的名稱空間以避免名稱衝突。</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"></table><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="flash/utils/Proxy.html" target="">Proxy 類別</a></div></div><a name="for"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">for</td><td class="detailHeaderType">陳述式</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>for ([init]; [condition]; [next]) { 
+	// statement(s)
+}</pre>
+			</p></td></tr></table><p></p><p><p>評估 <code>init</code> (初始化) 運算式一次，然後開始迴圈序列。迴圈序列是經由評估 <code>condition</code> 運算式而開始。如果 <code>condition</code> 運算式評估為 <code>true</code>，就會執行 <code>statement</code> 並評估 <code>next</code>。然後會評估 <code>condition</code> 運算式，再次執行迴圈序列。 
+			<p>如果只是要執行一個陳述式，就不需要使用大括號 (<code>{}</code>) 括住 <code>for</code> 陳述式所要執行的陳述式區塊。</p></p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">init</span></code> &mdash; 要在迴圈序列開始之前評估的選擇性運算式，通常是指定運算式。這個參數也可以使用 var 陳述式。</td></tr><tr><td width="20px"></td><td><code><span class="label">condition</span></code> &mdash; 要在迴圈序列開始之前評估的選擇性運算式，通常是比較運算式。如果運算式評估為 true，則會執行與 for 陳述式關聯的陳述式。</td></tr><tr><td width="20px"></td><td><code><span class="label">next</span></code> &mdash; 要在迴圈序列開始之後評估的選擇性運算式，通常是遞增或遞減運算式。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例會使用 for 來增加陣列中的元素： 
+<div class="listing"><pre>
+var my_array:Array = new Array(); 
+for (var i:Number = 0; i < 10; i++) { 
+	my_array[i] = (i + 5) * 10;  
+} 
+trace(my_array); // 50,60,70,80,90,100,110,120,130,140 </pre></div> 
+下列範例會使用 for 來重複執行相同的動作。在程式碼中，for 迴圈會將數字由 1 增加到 100。 
+<div class="listing"><pre>var sum:Number = 0; 
+for (var i:Number = 1; i <= 100; i++) { 
+	sum += i; 
+} 
+trace(sum); // 5050</pre></div> 
+下列範例會顯示僅執行一個陳述式時，不需要使用大括號 ( {})： 
+<div class="listing"><pre>var sum:Number = 0; 
+for (var i:Number = 1; i <= 100; i++) 
+	sum += i; 
+trace(sum); // 5050</pre></div>
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="operators.html#increment" target="">++ (遞增)</a></div></div><a name="for..in"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">for..in</td><td class="detailHeaderType">陳述式</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p>
+<pre>for (variableIterant:String in object){ 
+	// statement(s)
+} </pre></p></td></tr></table><p></p><p><p>重複執行物件之動態屬性或陣列中的元素，並針對每一個屬性或元素執行 <code>statement</code>。物件屬性並沒有任何特定的順序，因此屬性看來似乎是依隨機的順序出現。以下陳述式並不會列舉固定屬性，例如類別中定義的變數與方法：<code>for..in</code> 陳述式。如需固定屬性清單，請使用 flash.utils 套件中的 <code>describeType()</code> 函數。
+			 
+			 
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">variableIterant</span>:<a href="String.html">String</a></code> &mdash; 當作迭代元的變數名稱，用來參照物件的每個屬性或陣列中的元素。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例使用 for..in 重複執行物件的屬性： 
+<div class="listing"><pre>
+var myObject:Object = {firstName:"Tara", age:27, city:"San Francisco"}; 
+for (var prop in myObject) { 
+	trace("myObject."+prop+" = "+myObject[prop]); 
+} 
+/*
+myObject.firstName = Tara 
+myObject.age = 27 
+myObject.city = San Francisco
+*/</pre></div> 
+下列範例將 typeof 運算子與 for..in 搭配使用，以重複執行特定類型的子系： 
+<div class="listing"><pre>
+var myObject:Object = {firstName:"Tara", age:27, city:"San Francisco"}; 
+for (var name in myObject) { 
+	if (typeof (myObject[name]) == "string") { 
+		trace("I have a string property named "+name); 
+	} 
+}
+/*
+I have a string property named city
+I have a string property named firstName
+*/
+</pre></div> 
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="flash/utils/package.html#describeType()" target="">describeType()</a></div></div><a name="for_each..in"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">for each..in</td><td class="detailHeaderType">陳述式</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>for each (variableIterant in object){ 
+	// statement(s)
+} </pre></p></td></tr></table><p></p><p><p>重複執行集合的所有項目，並針對每個項目分別執行 <code>statement</code>。<code>for each..in</code> 陳述式是新的 E4X 語言擴充功能，不只可針對 XML 物件使用，也可針對其它物件與陣列使用。<code>for each..in</code> 陳述式只能透過物件的動態屬性 (而非固定屬性) 來重複執行。固定屬性指的是定義為類別定義其中一部分的屬性。若要將 <code>for each..in</code> 陳述式與使用者定義的類別實體搭配使用，您必須使用 <code>dynamic</code> 特質來宣告該類別。 
+			<p>與 <code>for..in</code> 陳述式不同的是，<code>for each..in</code> 陳述式會重複執行物件的屬性值，而非屬性名稱。</p>
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">variableIterant</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 用來當作迭代元的變數名稱，並參照集合中項目。</td></tr><tr><td width="20px"></td><td><code><span class="label">object</span>:<a href="Object.html">Object</a></code> &mdash; 要重複執行的集合名稱。此集合可以是 XML 物件、一般物件，或是陣列。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例使用 for each..in 重複執行物件的屬性值： 
+<div class="listing"><pre>
+var myObject:Object = {firstName:"Tara", age:27, city:"San Francisco"}; 
+for each (var item in myObject) { 
+	trace(item); 
+} 
+/*
+Tara
+27
+San Francisco
+*/</pre></div> 
+下列範例使用 for each..in 重複執行陣列的元素： 
+<div class="listing"><pre>
+var myArray:Array = new Array("one", "two", "three"); 
+for each(var item in myArray) 
+	trace(item); 
+/*
+one
+two
+three
+*/</pre></div> 
+下列範例將 is 運算子與 for each..in 搭配使用，以重複執行特定類型的子系： 
+<div class="listing"><pre>
+var myObject:Object = {firstName:"Tara", age:27, city:"San Francisco"}; 
+for each (var item in myObject) { 
+	if (item is String) {  
+		trace("I have a string property with value " + item); 
+	} 
+}
+
+/*
+I have a string property with value Tara
+I have a string property with value San Francisco
+*/
+</pre></div> 
+
+下列範例說明使用 for each..in，重複執行 XMLList 物件 (doc.p) 中的屬性：
+
+<div class="listing"><pre>
+var doc:XML = 
+		<body>
+			<p>Hello</p>
+			<p>Hola</p>
+			<hr />
+			<p>Bonjour</p>
+		</body>;
+for each (var item in doc.p) {
+	trace(item);
+}
+
+/*
+Hello
+Hola
+Bonjour
+*/
+</pre></div>
+			<p></p></div><a name="function"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">function</td><td class="detailHeaderType">定義關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>function functionName([parameter0, parameter1,...parameterN]) : returnType{ 
+	// statement(s) 
+} 
+var functionName:Function = function ([parameter0, parameter1,...parameterN]) : returnType{ 
+	// statement(s) 
+} </pre>
+			</p></td></tr></table><p></p><p><p>由為執行特定工作而定義的一組陳述式組成。您可以在某個位置定義函數，再從 SWF 檔的不同 Script 中叫用 (或「呼叫」) 它。<em></em>當您定義函數時，也可以為函數指定參數。參數是指函數運作時，所需值的預留位置。您可以在每次呼叫函數時，傳遞不同的參數，這樣就可以在不同的情況下重複使用該函數。 
+			<p>在函數的 <code>statement(s)</code> 區塊中使用 <code>return</code> 陳述式，會使函數產生或「傳回」值。<em></em></p> 
+			<p>用法 1：您可以使用 <code>function</code> 關鍵字，以指定的函數名稱、參數與陳述式定義函數。當 Script 呼叫函數時，就會執行此函數定義中的陳述式。您可以使用正向參考；也就是在同一個 Script 中，可以先呼叫函數，再進行宣告。函數定義會取代同一個函數先前的任何定義，只要是允許使用陳述式的地方，就可以使用這個語法。 </p> 
+			<p>用法 2：您也可以使用 <code>function</code> 建立匿名函數，並傳回它的參考。這個語法是用於運算式，而且對於在物件中安裝方法特別有用。</p> 
+			<p>如需其它功能，您可以在函數定義中使用 <code>arguments</code> 物件。 <code>arguments</code> 物件一般可用來建立可接受參數之變數數值的函數，並建立遞迴匿名函數。</p></p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">functionName</span>:<a href="Function.html">Function</a></code> &mdash; 新函數的名稱。</td></tr><tr><td width="20px"></td><td><code><span class="label">returnType</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 傳回值的資料類型。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例會定義 sqr 函數，此函數會傳回平方數值： 
+<div class="listing"><pre>function sqr(xNum:Number) { 
+	return Math.pow(xNum, 2); 
+} 
+var yNum:Number = sqr(3); 
+trace(yNum); // 9</pre></div> 
+如果已經定義此函數，而且已經在相同的 Script 中使用，函數定義就可以在使用此函數之後再次出現： 
+<div class="listing"><pre>var yNum:Number = sqr(3); 
+trace(yNum); // 9 
+function sqr(xNum:Number) { 
+	return Math.pow(xNum, 2); 
+}</pre></div> 
+
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="arguments.html" target="">arguments 物件</a><br/><a href="statements.html#return" target="">return</a></div></div><a name="get"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">get</td><td class="detailHeaderType">定義關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>
+function get property() : returnType{ 
+	// your statements here 
+}</pre> </p></td></tr></table><p></p><p><p>定義 getter，一種作用類似屬性的方法。getter 是一個特殊函數，它會傳回使用 <code>var</code> 或 <code>const</code> 關鍵字宣告的屬性值。與其它方法不同的是，您不需要使用括號 ( <code>()</code>) 呼叫 getter，也因此 getter 看起來就像是變數一般。
+			<p>getter 可讓您建立 private 屬性的 public 介面，以套用資訊隱藏的原則。資訊隱藏的好處是，即使變更 private 屬性的下層實作，public 介面還是會維持不變。</p>
+			<p>使用 getter 的另一項好處是，您可以在子類別中覆寫它們，而使用 <code>var</code> 或 <code>const</code> 宣告的屬性則無法這麼做。</p>
+			<p>getter 可以和 setter 合併使用，建立可讀寫的屬性。若要建立唯讀屬性，請建立不含相對應 setter 的 getter。若要建立唯寫屬性，請建立不含相對應 getter 的 setter。</p>
+			
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">property</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; get 所存取的屬性識別名稱。此值必須與相對應之 set 命令中所用的值相同。</td></tr><tr><td width="20px"></td><td><code><span class="label">returnType</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 傳回值的資料類型。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例會定義 Team 類別。Team 類別中包含 getter 和 setter 方法，可讓您擷取及設定類別內的屬性： 
+<div class="listing"><pre>
+package {
+	public class Team { 
+		var teamName:String; 
+		var teamCode:String; 
+		var teamPlayers:Array = new Array(); 
+		public function Team(param_name:String, param_code:String) { 
+			teamName = param_name; 
+			teamCode = param_code; 
+		} 
+		public function get name():String { 
+			return teamName; 
+		} 
+		public function set name(param_name:String):void { 
+			teamName = param_name; 
+		}
+	} 
+}</pre></div>
+在程式碼中輸入下列 Script： 
+<div class="listing"><pre>
+var giants:Team = new Team("San Fran", "SFO"); 
+trace(giants.name); 
+giants.name = "San Francisco"; 
+trace(giants.name); 
+/*
+San Fran San Francisco */</pre></div> 
+當您追蹤 giants.name 時，可以使用 getter 方法傳回屬性值。
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#set" target="">set</a></div></div><a name="if"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">if</td><td class="detailHeaderType">陳述式</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>if (condition) {
+	// statement(s)
+}</pre></p></td></tr></table><p></p><p><p>評估條件，以決定下一個要執行的陳述式。如果條件為 <code>true</code>，Flash Player 會執行大括號 (<code>{}</code>) 內條件後面的陳述式。如果條件為 <code>false</code>，Flash Player 會略過大括號內的陳述式，並執行大括號後面的陳述式。若要在 Script 中建立分歧邏輯，請同時使用 <code>if</code> 陳述式和 <code>else</code> 陳述式。 
+			<p>如果只是要執行一個陳述式，就不需要使用大括號 (<code>{}</code>) 括住 <code>if</code> 陳述式所要執行的陳述式。</p>
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">condition</span>:<a href="Boolean.html">Boolean</a></code> &mdash; 評估為 true 或 false 的運算式。</td></tr></table><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#else" target="">else</a></div></div><a name="implements"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">implements</td><td class="detailHeaderType">定義關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>myClass implements interface01 [, interface02 , ...] </pre> </p></td></tr></table><p></p><p><p>指定類別實作一或多個介面。當類別實作介面時，必須定義介面中宣告的所有方法。任何實作介面的類別實體將被視為該介面所定義的資料類型成員。因此，當類別實體為第一個運算元，並且介面為第二個運算元時，<code>is</code> 運算子會傳回 <code>true</code>。此外，介面工作所定義的資料類型之間也會進行強制轉型。
+			
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"></table><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#class" target="">class</a><br/><a href="statements.html#interface" target="">interface</a></div></div><a name="import"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">import</td><td class="detailHeaderType">指令</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p>
+<pre>import packageName.className 
+import packageName.*</pre> </p></td></tr></table><p></p><p><p>可讓程式碼使用外部定義的類別與套件。例如，如果您想要在 Script 中使用 flash.display.Sprite 類別，必須先將它匯入。在上一版的 ActionScript 中， <code>import</code> 指令是選擇性使用的，與此版的要求不同。
+			<p>使用 <code>import</code> 指令後，您就可以使用完整的類別名稱 (包括套件名稱) 或是單純的類別名稱。</p>
+<div class="listing"><pre> 
+import flash.display.Sprite; 
+
+// name of class only
+var mySprite:Sprite = new Sprite();
+
+// full class name
+var mySprite:flash.display.Sprite = new flash.display.Sprite();
+</pre></div> 
+<p>如果您想要存取的套件中有數個類別，您可以在單一陳述式中將它們全部匯入，如下列範例所示：</p>
+<div class="listing"><pre>import flash.display.*;</pre></div>
+<p><code>import</code> 指令只會匯入位於所匯入套件最上層的類別、函數與變數；巢狀套件則必須明確匯入。</p>
+<p>若您已匯入類別，卻沒有在 Script 中使用該類別，則該類別不會匯出成為 SWF 檔的一部分。這意謂著您可以匯入大型套件，而不用擔心 SWF 檔的大小；只有實際使用類別時，才會將該類別相關的位元組碼加入 SWF 檔內。匯入您不需要之類別的其中一個缺點，就是會增加名稱衝突的可能性。</p> 
+ 
+<pre>
+// On Frame 1 of a FLA: 
+import adobe.example.*; 
+var myFoo:foo = new foo();</pre> 
+ 
+
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">packageName</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 您已在不同類別檔案中定義的套件名稱。</td></tr><tr><td width="20px"></td><td><code><span class="label">className</span>:<a href="Class.html">Class</a></code> &mdash; 您已在不同類別檔案中定義的類別名稱。</td></tr></table></div><a name="include"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">include</td><td class="detailHeaderType">指令</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>include "[path]filename.as"</pre></p></td></tr></table><p></p><p><p>包含指定的檔案內容，就好像檔案中的命令屬於所呼叫之程式碼的一部分。在編譯階段會叫用 <code>include</code> 指令。因此，如果您變更所包含的檔案，就必須加以儲存，並重新編輯使用此檔案的 SWF 檔。
+			
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"></table></div><a name="interface"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">interface</td><td class="detailHeaderType">定義關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre> interface InterfaceName [extends InterfaceName ] {}</pre> </p></td></tr></table><p></p><p><p>定義介面。介面指的是會定義一組方法的資料類型，而這些方法必須透過任何會實作介面的類別來定義。
+			<p> 介面和類別相似，但有下列顯著的差異：</p> 
+			<ul> 
+			  <li>介面只包含方法的宣告，而不包含它們的實作。也就是說，實作介面的每個類別都必須針對該介面中宣告的每個方法提供實作。</li> 
+			  <li>介面方法定義無法包含任何像是 <code>public</code> 或 <code>private</code> 的特質，但是在會實作介面之類別的定義中，實作的方法卻必須標示為 <code>public</code>。</li> 
+			  <li>一個介面可以透過 <code>extends</code> 陳述式繼承多個介面；而一個類別則可以透過 <code>implements</code> 陳述式繼承多個介面。</li> 
+			</ul>
+			<p>與 ActionScript 2.0 不同的是，ActionScript 3.0 允許您在介面定義中使用 getter 與 setter 方法。</p>
+			
+			
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"></table><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#class" target="">class</a><br/><a href="statements.html#implements" target="">implements</a></div></div><a name="internal"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">internal</td><td class="detailHeaderType">特質關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>
+[internal] var varName
+[internal] const kName
+[internal] function functionName()  { 
+	// your statements here 
+}
+[internal] class className{
+	// your statements here 
+}
+[internal] namespace nsName
+</pre> </p></td></tr></table><p></p><p><p>指定相同套件中的任何呼叫者都可使用類別、變數、常數或函數。根據預設，類別、屬性與方法都屬於 <code>internal</code> 名稱空間。</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">className</span>:<a href="Class.html">Class</a></code> &mdash; 您想要將其指定為 internal 的類別名稱。</td></tr><tr><td width="20px"></td><td><code><span class="label">varName</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 您想要將其指定為 internal 的變數名稱。不管該變數是否為類別的一部分，您都可以套用 internal 特質。</td></tr><tr><td width="20px"></td><td><code><span class="label">kName</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 您想要將其指定為 internal 的常數名稱。不管該常數是否為類別的一部分，您都可以套用內部特質。</td></tr><tr><td width="20px"></td><td><code><span class="label">functionName</span>:<a href="Function.html">Function</a></code> &mdash; 您想要將其指定為 internal 的函數或方法名稱。不管該函數是否為類別的一部分，您都可以套用 internal 特質。</td></tr><tr><td width="20px"></td><td><code><span class="label">nsName</span>:<a href="Namespace.html">Namespace</a></code> &mdash; 您想要將其指定為 internal 之名稱空間的名稱。不管該命名空間是否為類別的一部分，您都可以套用內部特質。</td></tr></table><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#package" target="">package</a><br/><a href="statements.html#private" target="">private</a><br/><a href="statements.html#protected" target="">protected</a><br/><a href="statements.html#public" target="">public</a></div></div><a name="label"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">label</td><td class="detailHeaderType">陳述式</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>label: statement
+label: {
+    statements
+}</pre></p></td></tr></table><p></p><p><p>將陳述式與可透過 <code>break</code> 或 <code>continue</code> 參考的識別名稱進行關聯。在巢狀迴圈中，沒有參考標籤的 <code>break</code> 或 <code>continue</code> 陳述式只會略過當前這個迴圈的其餘部分，而不會略過一整個系列的迴圈。然而，如果定義一整個系列迴圈的陳述式具有關聯的標籤，則 <code>break</code> 或 <code>continue</code> 陳述式會參照該標籤來略過整個系列的迴圈。
+			<p>標籤也可以讓您跳出區塊陳述式。除非區塊陳述式屬於迴圈的一部分，否則您無法在該陳述式中放置沒有參考標籤的 <code>break</code> 陳述式。如果區塊陳述式具有關聯的標籤，則您可以在該陳述式中放置會參照該標籤的 <code>break</code> 陳述式。</p>		
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">label</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 要與陳述式進行關聯的有效識別名稱。</td></tr><tr><td width="20px"></td><td><code><span class="label">statements</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 要與標籤進行關聯的陳述式。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例會說明如何使用 label 搭配巢狀迴圈，以跳出一整個系列的迴圈。程式碼會使用巢狀迴圈產生從 0 到 99 的數字清單。break 陳述式會剛好在數到 80 之前發生。如果 break 陳述式沒有使用 outerLoop 標籤，則程式碼只會略過當前這個迴圈的其餘部分，並繼續輸出 90 到 99 的數字。然而，由於使用了 outerLoop 標籤，break 陳述式就會略過一整個系列迴圈的其餘部分，並在最後輸出 79 這個數字。
+<div class="listing"><pre>
+outerLoop: for (var i:int = 0; i < 10; i++) {
+	for (var j:int = 0; j < 10; j++) {
+		if ( (i == 8) && (j == 0)) {
+			break outerLoop;
+		}
+		trace(10 * i + j);
+	}
+}
+/*
+1
+2
+...
+79
+*/
+</pre></div>
+下列範例會說明使用標籤搭配區塊陳述式的方式。在下列範例中，區塊陳述式已加上 foo 標籤，以便讓 break 陳述式跳過區塊中的最後一個陳述式：
+<div class="listing"><pre>
+foo: {
+	trace("a");
+	break foo;
+	trace("b");
+}
+// a
+</pre></div>
+
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#break" target="">break</a><br/><a href="statements.html#continue" target="">continue</a></div></div><a name="namespace"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">namespace</td><td class="detailHeaderType">定義關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>namespace name [= uri]</pre> </p></td></tr></table><p></p><p><p>可讓您控制定義的可見性。預先定義的命名空間包括 <code>public</code>、<code>private</code>、<code>protected</code> 與 <code>internal</code>。 
+			<p>下列步驟會說明如何建立、套用與參照名稱空間：</p>
+			<ul>
+			  <li>首先，使用 <code>namespace</code> 關鍵字來定義自訂名稱空間。例如，<code>namespace version1</code> 程式碼會建立一個名為 <code>version1</code> 的命名空間。</li>
+			  <li>接著，使用您在屬性或方法宣告中自訂的名稱空間，將該名稱空間套用至屬性或方法中。例如，程式碼 <code>version1 myProperty:String</code> 會建立名為 <code>myProperty</code> (屬於 <code>version1</code> 命名空間) 的屬性。</li>
+			  <li>再來，使用 <code>use</code> 關鍵字或是在該名稱空間加上識別名稱前置詞，以參考該名稱空間。例如，程式碼 <code>use namespace version1;</code> 會參考後續程式碼行的 <code>version1</code> 命名空間 ，並且程式碼 <code>version1::myProperty</code> 會參考 <code>myProperty</code> 屬性的 <code>version1</code> 命名空間。</li>
+			</ul>
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">name</span>:<a href="Namespace.html">Namespace</a></code> &mdash; 名稱空間的名稱，可以是任何合法的識別名稱。</td></tr><tr><td width="20px"></td><td><code><span class="label">uri</span>:<a href="String.html">String</a></code> &mdash; 命名空間的統一資源識別項 (URI)。這是選擇性的參數。</td></tr></table><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#class" target="">class</a><br/><a href="statements.html#internal" target="">internal</a><br/><a href="statements.html#package" target="">package</a><br/><a href="statements.html#private" target="">private</a><br/><a href="statements.html#protected" target="">protected</a><br/><a href="statements.html#public" target="">public</a></div></div><a name="native"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">native</td><td class="detailHeaderType">特質關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>
+native function functionName();
+class className { 
+	native function methodName();
+}</pre> </p></td></tr></table><p></p><p><p>指定在原生程式碼中使用 Flash Player 實作函數或方法。Flash Player 會在內部使用 <code>native</code> 關鍵字，宣告 ActionScript 應用程式設計介面 (API) 中的函數與方法。您無法在自己撰寫的程式碼中使用此關鍵字。&nbsp;			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"></table></div><a name="null"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">null</td><td class="detailHeaderType">主要運算式關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>null</pre></p></td></tr></table><p></p><p><p>可以指定給變數、或者是在沒有提供資料時由函數傳回的特殊值。您可以使用 <code>null</code> 來表示遺失或未包含已定義資料類型的值。
+				<p> 請勿把 <code>null</code> 值與特殊值 <code>undefined</code> 混淆。如果用相等運算子 (<code>==</code>) 來比較 <code>null</code> 與 <code>undefined</code>，其結果會是相等的。然而，如果用嚴謹相等運算子 (<code>===</code>) 來比較 ( <code>null</code> and <code>undefined</code>，其結果不會相等。</p> 
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例會檢查索引陣列的前六個值，如果未設定任何值 ( value == null)，就會輸出訊息：
+<div class="listing"><pre>
+
+var testArray:Array = new Array();
+testArray[0] = "fee";
+testArray[1] = "fi";
+testArray[4] = "foo";
+
+for (i = 0; i < 6; i++) {
+    if (testArray[i] == null) {
+        trace("testArray[" + i + "] == null");
+    }
+}
+
+/* 
+testArray[2] == null
+testArray[3] == null
+testArray[5] == null
+*/
+</pre></div>	
+
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="package.html#undefined" target="">undefined</a></div></div><a name="object_proxy"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">object_proxy</td><td class="detailHeaderType"> 命名空間 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><p></p><p><p>定義 ObjectProxy 類別的方法。當 Proxy 子類別包含符合任何 Proxy 類別方法名稱的實體方法名稱時，ObjectProxy 類別方法會位於自己的名稱空間以避免名稱衝突。</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"></table></div><a name="override"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">override</td><td class="detailHeaderType">特質關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>
+override function name() { 
+	// your statements here 
+}</pre> 
+			</p></td></tr></table><p></p><p><p>指定某個方法會取代繼承的方法。若要覆寫繼承的方法，您必須使用 <code>override</code> 特質，並確保名稱、類別特質屬性、數字和參數類型，以及傳回類型都要一致。若在嘗試覆寫方法時，沒有使用 <code>override</code> 特質，則會發生錯誤。同理，如果該方法沒有一致的繼承方法，則使用 <code>override</code> 特質也會發生錯誤。
+			<p>您不可以針對下列任一項目使用 <code>override</code> 特質：</p>
+			<ul>
+			  <li>變數</li>
+			  <li>常數</li>
+			  <li>靜態方法</li>
+			  <li>非繼承的方法</li>
+			  <li>實作介面方法的方法</li>
+			  <li>在父類別中標示為 <code>final</code> 的繼承方法</li>
+			</ul>
+			<p>雖然您無法覆寫以 <code>var</code> 或 <code>const</code> 宣告的屬性，但可以藉由將 base 類別屬性變成 getter-setter，並覆寫使用 <code>get</code> 與 <code>set</code> 所定義的方法，來達到類似的功能。</p>
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">name</span>:<a href="Function.html">Function</a></code> &mdash; 要覆寫的方法名稱。</td></tr></table><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#final" target="">final</a><br/><a href="statements.html#get" target="">get</a><br/><a href="statements.html#set" target="">set</a></div></div><a name="package"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">package</td><td class="detailHeaderType">定義關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>
+package packageName {
+    class someClassName { 
+    } 
+}</pre> </p></td></tr></table><p></p><p><p>可讓您將程式碼組織為不連續的群組，這些群組可以匯入其它程式碼中。您必須使用 <code>package</code> 關鍵字，指出類別為套件的成員。</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">packageName</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 套件名稱。</td></tr></table><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#internal" target="">internal</a><br/><a href="statements.html#public" target="">public</a><br/><a href="statements.html#class" target="">class</a></div></div><a name="private"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">private</td><td class="detailHeaderType">特質關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>
+class className{ 
+	private var varName;
+	private const kName;
+	private function methodName() { 
+		// your statements here 
+	}
+	private namespace nsName;
+}</pre> </p></td></tr></table><p></p><p><p>指定只有當類別宣告或定義變數、常數或方法時，才可使用這個變數、常數或方法。與 ActionScript 2.0 不同的是，在 ActionScript 3.0 中您不能再使用 <code>private</code> 來存取子類別。此外， <code>private</code> 將同時限制編譯階段與執行階段的存取。根據預設，相同套件中的任何呼叫者都可以使用變數或函數。若您想要限制變數或函數被某些類別存取，請使用這個關鍵字。 
+			<p>這個關鍵字只能在類別定義中使用，而不能在介面定義中使用。您也無法將 <code>private</code> 套用至類別或其它套件層級的定義中。</p></p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">varName</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 您想要將其指定為 private 的變數名稱。只有當該變數位於類別中，才可以套用 private 特質。</td></tr><tr><td width="20px"></td><td><code><span class="label">kName</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 您想要將其指定為 private 的常數名稱。只有當該常數位於類別中，才可以套用 private 特質。</td></tr><tr><td width="20px"></td><td><code><span class="label">methodName</span>:<a href="Function.html">Function</a></code> &mdash; 您想要將其指定為 private 的方法名稱。只有當該方法位於類別中，才可以套用 private 特質。</td></tr><tr><td width="20px"></td><td><code><span class="label">nsName</span>:<a href="Namespace.html">Namespace</a></code> &mdash; 您想要將其指定為 private 的名稱空間名稱。只有當該命名空間位於類別中，才可以套用 private 特質。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例將說明如何使用 private 關鍵字，隱藏類別中的特定屬性。 
+<div class="listing"><pre>
+class A { 
+  private var alpha:String = "visible only inside class A"; 
+  public var beta:String = "visible everywhere"; 
+}
+	
+class B extends A {
+  function B() {
+    alpha = "Access attempt from subclass"; // error
+  }
+}
+</pre></div> 
+由於 alpha 為 private 變數，所以您無法從 A 類別外面存取它，也無法從子類別 B 中存取它，若是嘗試存取 private 變數則會產生錯誤。
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#internal" target="">internal</a><br/><a href="statements.html#protected" target="">protected</a><br/><a href="statements.html#public" target="">public</a></div></div><a name="protected"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">protected</td><td class="detailHeaderType">特質關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>
+class className{ 
+	protected var varName;
+	protected const kName;
+	protected function methodName() { 
+		// your statements here 
+	}
+	protected namespace nsName;
+}</pre> </p></td></tr></table><p></p><p><p>指定只有當類別定義變數、常數、方法或名稱空間時，此類別與其子類別才可使用這些變數、常數、方法或名稱空間。ActionScript 3.0 對 <code>protected</code> 的定義與 ActionScript 2.0 對 <code>private</code> 的定義類似，不同的是 <code>protected</code> 會同時限制編譯階段與執行階段的存取。根據預設，相同套件中的任何呼叫者都可以使用變數或函數。若您想要限制變數或函數被某些類別存取，請使用這個關鍵字。  
+				<p>這個關鍵字只能在類別定義中使用，而不能在介面定義中使用。您也無法將 <code>private</code> 套用至類別或其它套件層級的定義中。</p>
+				<p>ActionScript 3.0 對 <code>protected</code> 的定義相較於 Java 程式語言對 <code>protected</code> 的定義有更多的限制。在 ActionScript 3.0 中，<code>protected</code> 會嚴格限制對子類別的存取，而在 Java 中，<code>protected</code> 則可允許在相同套件中存取任何類別。例如，如果名為 <code>Base</code> 的類別包含有標示為 <code>protected</code> 的屬性，則在 ActionScript 3.0 中，只有擴充 Base 的類別可以存取此 protected 屬性。在 Java 中，任何與 Base 類別位於相同套件中的類別都可以存取 protected 屬性，即使該類別不是 Base 的子類別亦然。</p>
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">varName</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 您想要將其指定為 protected 的變數名稱。只有當該變數位於類別中，才可以套用 protected 特質。</td></tr><tr><td width="20px"></td><td><code><span class="label">kName</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 您想要將其指定為 protected 的常數名稱。只有當該常數位於類別中，才可以套用 protected 特質。</td></tr><tr><td width="20px"></td><td><code><span class="label">methodName</span>:<a href="Function.html">Function</a></code> &mdash; 您想要將其指定為 protected 的方法名稱。只有當該方法位於類別中，才可以套用 protected 特質。</td></tr><tr><td width="20px"></td><td><code><span class="label">nsName</span>:<a href="Namespace.html">Namespace</a></code> &mdash; 您想要將其指定為 protected 的名稱空間名稱。只有當該命名空間位於類別中，才可以套用 protected 特質。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例會在類別 A 中建立 protected 類別變數，並且由於類別 B 是類別 A 的子類別，所以可以順利在類別 B 中存取該變數。
+<div class="listing"><pre>
+class A { 
+  private var alpha:String = "visible only inside class A"; 
+  protected var beta:String = "visible inside class A and its subclasses"; 
+}
+	
+class B extends A {
+  public function B() {
+    beta = "Access attempt from subclass succeeded";
+    trace(beta);  // Access attempt from subclass succeeded
+  }
+}
+</pre></div>
+			
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#internal" target="">internal</a><br/><a href="statements.html#private" target="">private</a><br/><a href="statements.html#public" target="">public</a></div></div><a name="public"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">public</td><td class="detailHeaderType">特質關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>
+public var varName
+public const kName
+public function functionName()  { 
+	// your statements here 
+}
+public class className {
+	// your statements here 
+}
+public namespace nsName
+</pre> </p></td></tr></table><p></p><p><p>指定任何呼叫者都可使用類別、變數、常數或方法。類別、變數與方法預設都是 internal，也就是說，您只能在目前的套件中看得見它們。若要讓所有呼叫者都看得見類別、變數或方法，您必須使用 <code>public</code> 特質。</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">className</span>:<a href="Class.html">Class</a></code> &mdash; 您想要將其指定為 public 的類別名稱。</td></tr><tr><td width="20px"></td><td><code><span class="label">varName</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 您想要將其指定為 public 的變數名稱。不管該變數是否為類別的一部分，您都可以套用 public 特質。</td></tr><tr><td width="20px"></td><td><code><span class="label">kName</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 您想要將其指定為 public 的常數名稱。不管常該數是否為類別的一部分，您都可以套用 public 特質。</td></tr><tr><td width="20px"></td><td><code><span class="label">functionName</span>:<a href="Function.html">Function</a></code> &mdash; 您想要將其指定為 public 的函數或方法名稱。不管該函數是否為類別的一部分，您都可以套用 public 特質。</td></tr><tr><td width="20px"></td><td><code><span class="label">nsName</span>:<a href="Namespace.html">Namespace</a></code> &mdash; 您想要將其指定為 public 的名稱空間名稱。不管該命名空間是否為類別的一部分，您都可以套用 public 特質。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例會說明如何使用類別檔案中的 public 變數： 
+<div class="listing"><pre>class User { 
+	public var age:Number; 
+	public var fname:String; 
+} // end of class User definition
+ 
+var jimmy:User = new User(); 
+jimmy.age = 27; 
+jimmy.fname = "jimmy";
+trace(jimmy.age, jimmy.fname); // 27 jimmy</pre></div> 
+如果您將 User 類別中任何一個 public 變數變更為 private 變數，則任何在 User 類別外嘗試存取該變數的行為都會產生編譯階段錯誤。 
+
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#class" target="">class</a><br/><a href="statements.html#internal" target="">internal</a><br/><a href="statements.html#private" target="">private</a><br/><a href="statements.html#protected" target="">protected</a></div></div><a name="return"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">return</td><td class="detailHeaderType">陳述式</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>
+function functionName () {
+	return [expression]
+}</pre></p></td></tr></table><p></p><p><p>造成執行立即傳回至發出呼叫的函數。如果 <code>return</code> 陳述式後面接著運算式，則會評估運算式並傳回結果。 
+			<p>如果函數定義中包含傳回類型，則 <code>return</code> 陳述式後面必定接著運算式。如果沒有指定傳回類型並單獨使用 <code>return</code> 陳述式，則會傳回 <code>undefined</code>。</p>
+			<p>您無法傳回多個值。若您試圖這麼做，只有最後一個值會被傳回。在下列範例中，會傳回 <code>c</code>：</p> <pre>return a, b, c ;</pre> <p>如果您需要傳回多個值，請改用陣列或物件。</p></p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">expression</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 要評估並當作函數值傳回的運算式，這個參數是選用的參數。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例會使用 sum() 函數主體內部的 return 陳述式，傳回三個參數的總合值。下一行程式碼會呼叫 sum()，並將傳回值指定給變數 newValue。 
+<div class="listing"><pre>function sum(a:Number, b:Number, c:Number):Number { 
+	return (a + b + c); 
+} 
+var newValue:Number = sum(4, 32, 78); 
+trace(newValue); // 114</pre></div>
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#function" target="">函數</a></div></div><a name="set"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">set</td><td class="detailHeaderType">定義關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>
+function set property(newValue:*) : void{ 
+	// your statements here 
+}</pre> 
+			</p></td></tr></table><p></p><p><p>定義 setter，這是會在 public 介面中以屬性型態出現的方法。setter 是一個特殊方法，它會設定使用 <code>var</code> 關鍵字宣告的屬性值。與其它方法不同的是，您不需要使用括號 ( <code>()</code>) 呼叫 setter，也因此 setter 看起來就像是變數一般。
+			<p>setter 可讓您建立 private 屬性的 public 介面，以套用資訊隱藏的原則。資訊隱藏的好處是，即使變更 private 屬性的下層實作，public 介面還是會維持不變。</p>
+			<p>使用 setter 的另一項好處是，您可以在子類別中覆寫它們，而使用 <code>var</code> 宣告的屬性則無法這麼做。</p>
+			<p>setter 的傳回類型必須是 <code>void</code> 或未指定。</p>
+			<p>setter 可以和 getter 合併使用，建立可讀寫的屬性。若要建立唯讀屬性，請建立不含相對應 setter 的 getter。若要建立唯寫屬性，請建立不含相對應 getter 的 setter。</p>
+			
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">property</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; set 所修改的屬性識別名稱。此值必須與對應之 get 命令中所用的值相同。</td></tr><tr><td width="20px"></td><td><code><span class="label">newValue</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 要指定的新值。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例會藉由定義 getter-setter 來建立名為 age 的可讀寫屬性。
+<div class="listing"><pre>
+package {
+	class User { 
+	    private var userAge:Number; 
+	    
+	    public function get age():Number {
+	    	return userAge;
+	    }
+	    
+	    public function set age(x:Number):void {
+	    	userAge = x;	
+	    }
+	} 
+} 
+</pre></div>
+在程式碼中輸入下列 Script：
+<div class="listing"><pre>
+var myUser:User = new User();
+myUser.age = 25;
+trace(myUser.age); // 25
+</pre></div>
+			
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#get" target="">get</a></div></div><a name="static"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">static</td><td class="detailHeaderType">特質關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p>
+<pre>class someClassName{ 
+	static var varName; 
+	static const kName;
+	static function methodName() { 
+		// your statements here
+	} 
+}</pre> </p></td></tr></table><p></p><p><p>指定變數、常數或方法屬於類別，而不屬於該類別的實體。
+			<p>若要存取靜態類別成員，請使用類別名稱，而不要使用實體名稱。例如，Date 類別包含名為 <code>parse()</code> 的靜態方法，此方法僅可使用下列語法來呼叫：</p>
+			<div class="listing"><pre>Date.parse()</pre></div>
+			<p>在 Date 類別的實體上無法呼叫 <code>parse()</code> 方法。例如，下列程式碼會產生錯誤：</p>
+			<div class="listing"><pre>var myDate:Date = new Date();
+            myDate.parse("Jan 01 00:00:00 2006"); // error</pre></div>
+			<p>您只能在類別定義中使用 <code>static</code>，而不能用在介面定義中使用。</p>
+			<p>靜態類別成員無法繼承。您無法像在 Java 或 C++ 中，使用子類別名稱來參照靜態類別成員。然而，您可以在不使用任何資格修飾詞的情況下，在類別或子類別中參照靜態變數或方法。請參閱以下範例。</p>
+			<p>您無法在靜態方法中使用 <code>super</code> 陳述式或 <code>this</code> 關鍵字。</p>
+			
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">varName</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 您想要將其指定為 static 的變數名稱。</td></tr><tr><td width="20px"></td><td><code><span class="label">kName</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 您想要將其指定為 static 的常數名稱。</td></tr><tr><td width="20px"></td><td><code><span class="label">methodName</span>:<a href="Function.html">Function</a></code> &mdash; 您想要將其指定為 static 的方法名稱。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例會示範如何使用 static 關鍵字來建立計數器，以追蹤已經建立了多少個類別實體。因為 numInstances 為靜態變數，只會針對整個類別建立一次，而不是針對單一實體建立。請建立名為 Users.as 的新 ActionScript 檔案，並輸入下列程式碼： 
+<div class="listing"><pre>class Users { 
+	private static var numInstances:Number = 0; 
+	function Users() { 
+		numInstances++; 
+	} 
+	static function get instances():Number { 
+		return numInstances; 
+	} 
+}</pre></div> 
+在程式碼中輸入下列 Script：
+<div class="listing"><pre>
+trace(Users.instances); 
+var user1:Users = new Users(); 
+trace(Users.instances); 
+var user2:Users = new Users(); 
+trace(Users.instances); 
+</pre></div>
+下列範例會擴充 Users 類別，以顯示靜態變數與方法無法繼承，但可以在子類別中參照。
+<div class="listing"><pre>
+class PowerUsers extends Users{
+    function PowerUsers() {
+        instances++;  // unqualified reference to static property Users.instances is legal
+    }
+}
+
+trace(PowerUsers.instances); // error, cannot access static property using PowerUsers class
+</pre></div>
+
+			<p></p></div><a name="super"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">super</td><td class="detailHeaderType">陳述式</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>super([arg1, ..., argN])
+super.method([arg1, ..., argN])</pre></p></td></tr></table><p></p><p><p>叫用方法或建構函式的父類別或父版本。當您在類別建構函式主體中使用 <code>super()</code> 陳述式，它會叫用該建構函式的父類別版本。對父類別建構函式的呼叫必須具有正確的引數數目。請注意，不管您是否明確地呼叫父類別建構函式，都一定會呼叫它。如果您沒有明確地呼叫它，則不含引數的呼叫會自動插入子類別建構函式主體的第一個陳述式之前。這表示如果您在子類別中定義建構函數，而且父類別建構函式會採用一或多個引數，則您必須明確地呼叫包含正確引數數目的父類別建構函式，否則會發生錯誤。然而，對父類別建構函式的呼叫卻不一定必須是子類別建構函式中的第一個陳述式 (ActionScript 2.0 則是如此要求)。
+			<p>當您在實體方法主體中使用 <code>super</code> 時，可以搭配使用點 (.) 運算子來叫用方法的父類別版本，並可以選擇性地將引數 <code>(arg1 ... argN)</code> 傳遞至父類別方法中。這在建立子類別方法時非常有用，這些方法不僅能將額外的行為加入父類別方法，而且也會叫用父類別方法來執行其原來的行為。</p>
+			<p>您無法在靜態方法中使用 <code>super</code> 陳述式。</p></p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">method</span>:<a href="Function.html">Function</a></code> &mdash; 要在父類別中叫用的方法。</td></tr><tr><td width="20px"></td><td><code><span class="label">argN</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 傳遞到方法的父類別版本或傳遞到父類別的建構函數之選擇性參數。</td></tr></table><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#class" target="">class</a><br/><a href="statements.html#extends" target="">extends</a></div></div><a name="switch"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">switch</td><td class="detailHeaderType">陳述式</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p>
+<pre>
+switch (expression) {
+	caseClause: 
+	[defaultClause:] 
+}</pre></p></td></tr></table><p></p><p><p>根據運算式的數值而定，會導致控制權轉移至其中一個陳述式。所有的 <code>switch</code> 陳述式都應該包含預設的狀況，當所有的 <code>case</code> 陳述式與運算式都不一致時，就會執行此預設 case。每個 <code>case</code> 陳述式都應該以 <code>break</code> 陳述式做為結尾，以避免發生失敗錯誤。如此當某個狀況失敗，還是可以執行下一個 <code>case</code> 陳述式中的程式碼，就算該狀況不符合測試運算式也一樣。</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">expression</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 任何運算式。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例會定義在預設狀況中失敗的 switch 陳述式：
+
+<div class="listing"><pre>
+
+var switchExpression:int = 3;
+		
+switch (switchExpression) {
+	case 0:
+		trace(0);
+		break;
+	case 1:
+		trace(1);
+		break;
+	case 2:
+		trace(2);
+		break;
+	default:
+		trace("Not 0, 1, or 2");
+}
+
+// Not 0, 1, or 2
+</pre></div>
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="operators.html#strict_equality" target="">=== (嚴謹相等)</a><br/><a href="statements.html#case" target="">case</a><br/><a href="statements.html#default" target="">default</a></div></div><a name="this"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">this</td><td class="detailHeaderType">主要運算式關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>this</pre></p></td></tr></table><p></p><p><p>對方法所包含之物件的參考。當 Script 執行時， <code>this</code> 關鍵字會參照包含 Script 的物件。在方法主體中， <code>this</code> 關鍵字會參照包含所呼叫之該方法的類別實體。</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>若要呼叫在動態類別中定義的函數，您必須使用 this 叫用適當範圍內的函數：
+<div class="listing"><pre>
+// incorrect version of Simple.as
+/*
+dynamic class Simple {
+    function callfunc() {
+        func();
+    }
+}
+*/
+// correct version of Simple.as
+dynamic class Simple {
+    function callfunc() {
+        this.func();
+    }
+}
+</pre></div>
+在 Script 中加入下列程式碼：
+<div class="listing"><pre>
+var simpleObj:Simple = new Simple();
+simpleObj.func = function() {
+	trace("hello there");
+}
+simpleObj.callfunc();
+</pre></div>
+當您在 callfunc() 方法中使用 this 時，會執行以上程式碼。然而，如果使用不正確的 Simple.as 版本，可能會發生語法錯誤 (在上述範例中有標示註解)。
+
+			
+			<p></p></div><a name="throw"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">throw</td><td class="detailHeaderType">陳述式</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>throw expression </pre></p></td></tr></table><p></p><p><p>產生 (或「擲出」) <code>catch</code> 程式碼區塊可以處理 (或「捕捉」) 的錯誤。<em></em><em></em>如果 <code>catch</code> 區塊沒有捕捉到例外狀況，就會將擲出值呈現的字串傳送到「輸出」面板。 如果 <code>catch</code> 或 <code>finally</code> 區塊沒有捕捉到例外，就會將擲出值呈現的字串傳送到記錄檔。 <p>通常您會擲出 Error 類別的實體，或是 Error 類別的子類別之實體 (請參閱以下「範例」一節)。</p></p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">expression</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; ActionScript 運算式或物件。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>在此範例中，名為 checkEmail() 的函數會檢查傳遞給它的字串裡面，其電子郵件地址的格式是否正確。如果字串未包含 @ 符號，此函數就會擲出錯誤。 
+<div class="listing"><pre>function checkEmail(email:String) { 
+	if (email.indexOf("@") == -1) { 
+		throw new Error("Invalid email address"); 
+	} 
+} 
+checkEmail("someuser_theirdomain.com");</pre></div> 
+接著，下列程式碼會在 try 程式碼區塊中呼叫相同的 checkEmail() 函數。如果電子郵件字串中不包含有效的電子郵件地址，則 trace 陳述式會輸出錯誤訊息。
+<div class="listing"><pre>
+try { 
+	checkEmail("Joe Smith"); 
+} 
+catch (e) { 
+	trace(e); 
+}
+// Error: Invalid email address.</pre></div> 
+在下列範例中，會擲出 Error 類別的子類別。接著，會修改 checkEmail() 函數來擲出該子類別的實體。
+<div class="listing"><pre>
+// Define Error subclass InvalidEmailError 
+class InvalidEmailAddress extends Error { 
+    public function InvalidEmailAddress() {
+    	message = "Invalid email address."; 
+    }
+}
+</pre></div> 
+在程式碼中輸入下列 Script：
+<div class="listing"><pre>
+import InvalidEmailAddress; 
+function checkEmail(email:String) { 
+	if (email.indexOf("@") == -1) { 
+		throw new InvalidEmailAddress(); 
+	} 
+} 
+try { 
+	checkEmail("Joe Smith"); 
+} 
+catch (e) { 
+	trace(e);
+}
+// Error: Invalid email address.</pre></div>
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="Error.html" target="">Error 類別</a><br/><a href="statements.html#try..catch..finally" target="">try..catch..finally</a></div></div><a name="true"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">true</td><td class="detailHeaderType">主要運算式關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>true</pre></p></td></tr></table><p></p><p><p>表示為 true 的 Boolean 值。Boolean 值不是 <code>true</code> 便是 <code>false</code>；<code>true</code> 的相反就是 <code>false</code>。當「自動指定資料類型」將 <code>true</code> 轉換為數字時，結果為 1；當它將 <code>true</code> 轉換為字串時，則為 <code>"true"</code>。
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例會說明在 if 陳述式中 true 的用法：
+<div class="listing"><pre>
+
+var shouldExecute:Boolean;
+// ...
+// code that sets shouldExecute to either true or false goes here
+// shouldExecute is set to true for this example:
+
+shouldExecute = true;
+
+if (shouldExecute == true) {
+    trace("your statements here");
+}
+
+// true is also implied, so the if statement could also be written:
+// if (shouldExecute) {
+//         trace("your statements here");
+// }</pre></div>
+下列範例會說明「自動指定資料類型」如何將 true 轉換為數值 1：
+<div class="listing"><pre>
+
+var myNum:Number;
+myNum = 1 + true;
+trace(myNum); // 2</pre></div>
+
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="Boolean.html" target="">Boolean 類別</a><br/><a href="statements.html#false" target="">false</a></div></div><a name="try..catch..finally"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">try..catch..finally</td><td class="detailHeaderType">陳述式</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>try { 
+    // try block 
+} finally { 
+    // finally block  
+} 
+
+try { 
+    // try block 
+} catch(error[:ErrorType1]) {
+    // catch block 
+} [catch(error[:ErrorTypeN]) { 
+    // catch block 
+}] [finally {
+    // finally block 
+}]</pre></p></td></tr></table><p></p><p><p>包含發生錯誤的程式碼區塊，然後再回應這個錯誤。使用 <code>try..catch..finally</code> 陳述式實作的例外處理，是處理 ActionScript 3.0 中執行階段錯誤條件的主要機制。當執行階段錯誤發生時，Flash Player 會擲出例外，這表示 Flash Player 會暫停正常的執行作業，並建立類型為 <code>Error</code> 的特殊物件。接著，Flash Player 會傳遞 (或「擲出」) 該 error 物件至第一個可用的<code> catch</code> 區塊。<em></em>如果沒有可用的 <code>catch</code> 區塊，則該例外會被視為未捕捉的例外。未捕捉的例外會導致 Script 終止。
+			<p>您可以使用 <code>throw</code> 陳述式，在程式碼中明確擲出例外。您可以擲出任何數值，但是最佳的作法是擲出物件，因為這種作法具有彈性，並且能符合 Flash Player 的行為。</p>
+			<p>若要捕捉例外，不管是由 Flash Player 或是自己的程式碼所擲出，請將可能會擲出例外的程式碼置於 <code>try</code> 區塊中。如果 <code>try</code> 區塊內有任何程式碼擲出例外，就會將控制權傳遞至 <code>catch</code> 區塊 (如果此區塊存在的話)，然後再傳遞至 <code>finally</code> 區塊 (如果此區塊存在的話)。不論是否有擲出例外，都會執行 <code>finally</code> 區塊。如果 <code>try</code> 區塊中的程式碼沒有擲出例外 (也就是說，如果 <code>try</code> 區塊正常完成)，則會忽略 <code>catch</code> 區塊中的程式碼，但還是會執行 <code>finally</code> 區塊中的程式碼。即使 <code>try</code> 區塊使用 <code>return</code> 陳述式結束，仍會執行 <code>finally</code> 區塊。 </p>
+			<p><code>try</code> 區塊後面必須接著 <code>catch</code> 區塊、<code>finally</code> 區塊，或是兩者。一個 <code>try</code> 區塊可以有多個 <code>catch</code> 區塊，但是只能有一個 <code>finally</code> 區塊。您可以巢狀化 <code>try</code> 區塊，讓它的深度能達到您所希望的階層數。</p> 
+			<p><code>catch</code> 處理常式中指定的 <code>error</code> 參數必須是簡單的識別名稱，例如 <code>e</code> 或 <code>theException</code> 或 <code>x</code>。此參數也可以是具有類型的參數。搭配使用多個 <code>catch</code> 區塊時，具有類型的參數可讓您捕捉到從單一 <code>try</code> 區塊中擲出的多種錯誤物件類型。</p> 
+			<p>如果擲出的例外是物件，而且該擲出的物件是指定之類型的子類別時，該類型即為符合的類型。如果擲出的是指定類型的錯誤，就會執行處理相對應錯誤的 <code>catch</code> 區塊。如果擲出的例外不是指定的類型，就不會執行 <code>catch</code> 區塊，並且會自動地將例外從 <code>try</code> 區塊擲出到符合的 <code>catch</code> 處理常式。 </p> 
+			<p>如果錯誤是在函數中擲出，且該函數不包含 <code>catch</code> 處理常式，則 Flash Player 會結束該函數以及任何呼叫者函數，直到找到 <code>catch</code> 區塊為止。在這項處理中，可在任何階層呼叫 <code>finally</code> 處理常式。</p>
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">error</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 從 throw 陳述式擲出的運算式，通常會是 Error 類別的實體，或是該類別的其中一個子類別。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例將示範 try..catch 陳述式中處理。 try 區塊中的程式碼包含不合法的運算，因為 Sprite 不可以將自身當作子系加入。因此，Flash Player 會擲出例外，並將類型為 ArgumentError 的物件傳遞至相對應的 catch 區塊。
+<div class="listing"><pre>
+import flash.display.Sprite;
+
+var spr:Sprite = new Sprite();
+try {
+	spr.addChild(spr);
+}
+catch (e:ArgumentError) {
+	trace (e); // ArgumentError: Error #2024: An object may not be added as a child of itself.
+}
+</pre></div> 
+在下列範例中，RecordSetException 和 MalformedRecord 物件是 Error 類別的子類別。  
+<div class="listing"><pre>
+class RecordSetException extends Error { 
+	public function RecordSetException () {
+		message = "Record set exception occurred."; 
+	}
+}
+
+class MalformedRecord extends Error { 
+	public function MalformedRecord {
+		message = "Malformed record exception occurred."; 
+	}
+}</pre></div> 
+
+在 RecordSet 類別的 sortRows() 方法中，會根據所發生的例外類型，擲出這些先前定義的其中一個錯誤物件。下列範例會顯示此程式碼的大致內容： 
+<div class="listing"><pre>
+class RecordSet { 
+	public function sortRows() { 
+		var returnVal:Number = randomNum(); 
+		if (returnVal == 1) { 
+			throw new RecordSetException(); 
+		} 
+		else if (returnVal == 2) { 
+			throw new MalformedRecord(); 
+		} 
+	}
+	public function randomNum():Number { 
+		return Math.round(Math.random() * 10) % 3; 
+	}
+}</pre></div> 
+最後，下列程式碼會針對 RecordSet 類別的實體叫用 sortRows() 方法。它會定義每種由 sortRows() 所擲出之錯誤物件類型的 catch 區塊。
+<div class="listing"><pre>import RecordSet; 
+var myRecordSet:RecordSet = new RecordSet();
+try { 
+	myRecordSet.sortRows(); 
+	trace("everything is fine"); 
+} 
+catch (e:RecordSetException) { 
+	trace(e.toString()); 
+} 
+catch (e:MalformedRecord) { 
+	trace(e.toString()); 
+}</pre></div>
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="Error.html" target="">Error 類別</a><br/><a href="statements.html#throw" target="">throw</a></div></div><a name="use_namespace"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">use namespace</td><td class="detailHeaderType">指令</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>use namespace ns1[, ns2, ...nsN]</pre></p></td></tr></table><p></p><p><p>使指定的命名空間加入至開放的命名空間集。當目前的程式碼區塊結束時，指定的名稱空間會從開放的名稱空間集移除。 <code>use namespace</code> 指令可以出現在程式、套件定義，或類別定義的最上層。</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">nsN</span>:<a href="Namespace.html">Namespace</a></code> &mdash; 一或多個加入至開放的名稱空間集的名稱空間。</td></tr></table><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#default_xml_namespace" target="">default xml namespace</a><br/><a href="statements.html#namespace" target="">namespace</a><br/><a href="XML.html" target="">XML 類別</a></div></div><a name="var"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">var</td><td class="detailHeaderType">定義關鍵字</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>var variableName [= value1][...,variableNameN[=valueN]] </pre></p></td></tr></table><p></p><p><p>指定變數。如果您在函數中宣告變數，則該變數為區域性的；這些變數是針對該函數而定義，並會在函數呼叫結束後失效。 
+			 
+			<p>您無法將位於另一個物件範圍內的變數宣告為區域變數。</p> 
+<pre>my_array.length = 25; // ok 
+var my_array.length = 25; // syntax error </pre> 
+			<p>您可以在變數後面加上冒號字元並接著資料類型，來指定變數的資料類型。</p>
+			<p>您可以在單一陳述式中宣告多個變數，並使用逗號來分隔宣告 (但是這個語法可能會降低程式碼的簡潔度)：</p>
+			<pre>var first:String = "Bart", middle:String = "J.", last:String = "Bartleby";</pre>
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">variableName</span>:<a xmlns:xd="http://www.pnp-software.com/XSLTdoc" href="specialTypes.html#*">*</a></code> &mdash; 識別名稱。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列 ActionScript 會建立產品名稱的新陣列，並且 Array.push 會將元素加入陣列結尾。 
+<div class="listing"><pre>
+var product_array:Array = new Array("Studio", "Dreamweaver", "Flash", "ColdFusion", "Contribute", "Breeze"); 
+product_array.push("Flex"); 
+trace(product_array); 
+// Studio,Dreamweaver,Flash,ColdFusion,Contribute,Breeze,Flex</pre></div>
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#const" target="">const</a></div></div><a name="while"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">while</td><td class="detailHeaderType">陳述式</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>while (condition) { 
+	// statement(s)
+}</pre></p></td></tr></table><p></p><p><p>評估條件，如果條件評估為 <code>true</code>，則會在迴圈返回以再次評估條件之前執行一或多個陳述式。一旦條件評估為 <code>false</code>，則會跳過陳述式並結束迴圈。 
+			<p> <code>while</code> 陳述式會執行下面一系列的步驟。每重複一次步驟 1 到 4，便稱為迴圈的一個「循環」。<em></em>在每一個循環開始時都會重新測試條件，如下列步驟所示：</p> 
+			<ol> 
+				<li>首先會評估運算式 <code>condition</code>。</li> 
+				<li>如果 <code>condition</code> 評估為 <code>true</code> 或某個轉換成 Boolean 值 <code>true</code> 的值 (如一個不是零的數字)，請移至步驟 3。否則，<code>while</code> 陳述式就會執行完畢，並在 <code>while</code> 迴圈之後的下一個陳述式繼續執行。</li> 
+				<li>執行陳述式區塊 <code>statement(s)</code>。如果遇到 <code>continue</code> 陳述式，則會跳過剩餘的陳述式並回到步驟 1。如果遇到 <code>break</code> 陳述式，則會完成 <code>while</code> 陳述式並在 <code>while</code> 迴圈之後的下一個陳述式繼續執行。</li> 
+				<li>回到步驟 1。</li> 
+			</ol> 
+			<p>如果計數器變數小於指定值時，通常會使用迴圈來執行動作。在每一個迴圈結束時，會將計數器遞增，直到達到指定數值為止。此時，<code>condition</code> 即不再是 <code>true</code>，因此迴圈便會結束。</p> 
+			<p>如果只是要執行一個陳述式，就不需要使用大括號 (<code>{}</code>) 括住 <code>while</code> 陳述式所要執行的陳述式。</p>
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">condition</span>:<a href="Boolean.html">Boolean</a></code> &mdash; 評估為 true 或 false 的運算式。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例會使用 while 陳述式來測試運算式。當 i 值小於 20，就會追蹤 i 的值。當條件不再為 true，就會結束迴圈。 
+<div class="listing"><pre>
+var i:Number = 0; 
+while (i < 20) { 
+	trace(i); 
+	i += 3; 
+}
+/*
+0 
+3 
+6 
+9 
+12
+15 
+18
+*/</pre></div>
+			<p></p><p><span class="label"> 相關 API 元素 </span></p><div class="seeAlso"><a href="statements.html#break" target="">break</a><br/><a href="statements.html#continue" target="">continue</a><br/><a href="statements.html#do..while" target="">do..while</a></div></div><a name="with"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">with</td><td class="detailHeaderType">陳述式</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">用法</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><p><pre>with (object:Object) { 
+	// statement(s)
+}</pre></p></td></tr></table><p></p><p><p>建立用來執行一或多個陳述式的預設物件，可能會減少需要覆寫的程式碼數量。
+			<p><code>object</code> 參數會變成 <code>statement(s)</code> 參數內的屬性、變數和函數可從中讀取的內容。例如，如果 <code>object</code> 是 <code>my_array</code>，而且其中兩個指定的屬性分別是 <code>length</code> 和 <code>concat</code>，則這些屬性會自動讀取為 <code>my_array.length</code> 和 <code>my_array.concat</code>。再舉另外一個例子，如果 <code>object</code> 是 <code>state.california</code>，則 <code>with</code> 陳述式內的任何動作或陳述式都會從 <code>california</code> 實體內進行呼叫。</p> 
+			<p>為了找出 <code>statement(s)</code> 參數中識別名稱的值，ActionScript 會從 <code>object</code> 所指定的範圍鏈的開頭開始，並在範圍鏈的每一個階層中，依指定順序搜尋識別名稱。 </p> 
+			<p> <code>with</code> 陳述式用來解析識別名稱的範圍鏈是從下列清單中的第一個項目開始，並持續到最後一個項目：</p> 
+			<ul> 
+				<li>在最內層 <code>with</code> 陳述式之 <code>object</code> 參數中指定的物件。</li> 
+				<li>在最外層 <code>with</code> 陳述式之 <code>object</code> 參數中指定的物件。</li> 
+				<li>Activation 物件 (當 Script 呼叫函數，而該函數會保留函數中呼叫的區域變數時，所自動建立的暫時物件)。</li> 
+				<li>包含目前所執行之 Script 的物件。</li> 
+				<li>Global 物件 (內建物件，如 Math 和 String)</li> 
+			</ul> 
+			<p>若要在 <code>with</code> 陳述式內設定變數，您必須先在 <code>with</code> 陳述式外宣告這個變數，或者必須輸入變數所要存在之「時間軸」的完整路徑。如果沒有先宣告變數，就在 <code>with</code> 陳述式中設定這個變數，<code>with</code> 陳述式將會根據範圍鏈來尋找它的值。如果變數已經不存在，將會在呼叫 <code>with</code> 陳述式時所在「時間軸」上設定新的值。 </p> 
+			</p></p><p></p><span class="label">參數</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">object</span>:<a href="Object.html">Object</a></code> &mdash; ActionScript 物件或影片片段的實體。</td></tr></table><br/><span class="label">範例</span><br/><span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span><br/>下列範例會設定 someOther_mc 實體的 _x 和 _y 屬性，然後指示 someOther_mc 跳到「影格 3」並停止。 
+with (someOther_mc) { 
+	_x = 50; 
+	_y = 100; 
+	gotoAndStop(3); 
+} 
+下列程式碼片段會說明，如果不使用 with 陳述式，要如何撰寫上述程式碼。 
+someOther_mc._x = 50; 
+someOther_mc._y = 100; 
+someOther_mc.gotoAndStop(3); 
+ with 陳述式對於同時在範圍鏈清單中存取多個項目很有用。在下列範例中，內建的 Math 物件會放在範圍鏈的前面。將 Math 設為預設的物件可以分別將識別名稱 cos、sin 以及 PI 解析為 Math.cos、Math.sin 以及 Math.PI。識別名稱 a、x、y 和 r 都不是 Math 物件的方法或屬性，但是因為它們存在於函數 polar() 的物件啟動範圍內，因此都會解析為對應的區域變數。 
+<div class="listing"><pre>function polar(r:Number):void { 
+	var a:Number, x:Number, y:Number; 
+	with (Math) { 
+		a = PI * pow(r, 2); 
+		x = r * cos(PI); 
+		y = r * sin(PI / 2); 
+	} 
+	trace("area = " + a); 
+	trace("x = " + x); 
+	trace("y = " + y); 
+} polar(3);
+/* 
+area = 28.2743338823081 
+x = -3 
+y = 3
+*/</pre></div>
+			<p></p></div><p></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 04:05 PM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/zh_TW/legalnotices/index.html">法律聲明</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">線上隱私權政策</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">為什麼顯示英文？</span>
+				</div>
+				<div class="white_content_body">
+					<b>「ActionScript 3.0 參考」的內容是以英文顯示</b><br><br>
+					並非所有「ActionScript 3.0 參考」的內容都翻譯為所有語言。當語言元素未翻譯時，就會以英文顯示。例如，ga.controls.HelpBox 類別並沒有翻譯為任何語言。因此在參考的繁體中文版本中，ga.controls.HelpBox 類別就會以英文顯示。
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 04:05 PM Z  -->

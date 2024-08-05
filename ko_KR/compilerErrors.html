@@ -1,0 +1,795 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg; Flash&reg; Platform용 ActionScript&reg; 3.0 참조 설명서"><meta name="lang" content="ko-kr"><link rel="stylesheet" href="style.css" type="text/css" media="screen"><link rel="stylesheet" href="print.css" type="text/css" media="print"><link rel="stylesheet" href="override.css" type="text/css"><link rel="stylesheet" href="asfilter.css" type="text/css"><link rel="stylesheet" href="ion.css" type="text/css"><title>컴파일러 오류 - Adobe ActionScript&reg; 3 (AS3 ) API 참조 설명서</title>
+		<link rel="stylesheet" href="filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="filter_new.css" type="text/css">
+			
+		<script src="jquery.js" type="text/javascript"></script>
+		<script src="s_chl_code.js" type="text/javascript"></script>
+		<script src="jquery.zclip.js" type="text/javascript"></script>
+		<script src="jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="cookies.js" type="text/javascript"></script>
+		<script src="asdoc.js" type="text/javascript"></script>
+		<script src="iscroll.js" type="text/javascript"></script>
+		<script src="AC_OETags.js" type="text/javascript"></script>
+		<script src="omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "런타임";
+			var productsLabel = "제품";
+			var noneLabel = "없음";
+			var qsearchBoxLabel = "빠른 검색";
+			var qsearchText = "찾을 수 없는 용어";
+			var ajaxErrorMsg="페이지 불러오기 오류";
+			var ajaxErrorTryMsg="다시 시도";
+			var ajaxLoadingMsg="불러오는 중";
+			var cancelMsg = "취소";
+			var classesText = "클래스";
+			var strJiveReply = "이 질문은 다음 문서에 대응하여 제출되었습니다. "
+			var showFilters = "필터 표시";
+			var hideFilters = "필터 숨기기";
+			
+		
+			var baseRef = "./";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup> Platform용 ActionScript<sup>&reg;</sup> 3.0 참조 설명서<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="index.html"> 홈 </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="compilerErrors.html#top" style="display:">패키지 및 클래스 목록 표시</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="compilerErrors.html#top" style="display:none">패키지 및 클래스 목록 숨기기</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="package-summary.html"> 패키지 </a>&nbsp;|&nbsp;
+												<a target="_self" href="class-summary.html"> 클래스 </a>&nbsp;|&nbsp;
+												<a target="_self" href="whatsnew.html"> 새로운 내용 </a>&nbsp;|&nbsp;
+												<a target="_self" href="all-index-Symbols.html"> 색인 </a>&nbsp;|&nbsp;
+												<a target="_self" href="appendixes.html"> 부록 </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">영어로 표시되는 이유</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/ko_KR/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('./')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('./')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="help.js"></script>
+						<script language="javascript" type="text/javascript" src="asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>필터:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">서버에서 데이터를 검색하는 중...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">서버에서 데이터를 검색하는 중...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="compilerErrors.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">&nbsp;</a><br>
+								<h1 id="classProductName">컴파일러 오류&nbsp;</h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="compilerErrors.html#propertySummary" style="display:none"> 속성 </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="compilerErrors.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> 속성 </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="compilerErrors.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> 생성자 </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="compilerErrors.html#methodSummary" style="display:none"> 메서드 </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="compilerErrors.html#constantSummary" style="display:none"> 전역 상수 </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="compilerErrors.html#eventSummary" style="display:none"> 이벤트 </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="compilerErrors.html#styleSummary" style="display:none"> 스타일 </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="compilerErrors.html#SkinPartSummary" style="display:none"> 스킨 파트 </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="compilerErrors.html#SkinStateSummary" style="display:none"> 스킨 상태 </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="compilerErrors.html#effectSummary" style="display:none"> 효과 </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="compilerErrors.html#constantSummary" style="display:none"> 상수 </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="compilerErrors.html#methodSummary" style="display:none"> 전역 함수 </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="compilerErrors.html#methodSummary" style="display:none">함수</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="compilerErrors.html#interfaceSummary" style="display:none"> 인터페이스 </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="compilerErrors.html#classSummary" style="display:none"> 클래스 </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="compilerErrors.html#includeExamplesSummary" style="display:none"> 예제 </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="compilerErrors.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								클래스
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><p>
+        <div id="badgeAnchorSupport" class="ionBadgeWrapper"></div>
+        <div id="badgeContainerSupport"></div>
+        <br/>다음은 컴파일러에서 유효하지 않은 코드가 발견되었을 때 생성되는 컴파일 오류 목록입니다. 이러한 오류 중 일부는 Strict 모드에서 코드를 컴파일할 때만 발생합니다. Strict 모드에서는 표준 언어에서 사용되지 않는 세 가지 제한이 추가됩니다.
+        <p>
+        <ul>
+        <li>표현식은 정적 유형을 가지며 유형 오류는 확인 오류입니다.</li>
+        <li>추가 확인 규칙을 통해 일반적인 프로그래밍 오류를 포착할 수 있습니다.</li>
+        <li>확인 오류는 사전에 보고됩니다. Strict 모드에서만 발생하는 확인 오류는 다음과 같습니다.</li> <ul>
+        <li>제공된 매개 변수의 수와 유형을 확인하는 함수 호출 서명 일치</li>
+        <li>중복 정의 충돌</li>
+        <li>컴파일 타임에 정의되지 않은 메서드 또는 속성에 액세스할 때 발생하는 제한되지 않은 참조</li>
+        <li>봉인된 객체에 동적으로 속성 추가</li>
+        <li>상수 변수에 쓰기</li>
+        <li>고정된 속성 삭제</li>
+        <li>호환되지 않는 유형을 사용하는 비교 표현식</li>
+        <li>찾을 수 없는 패키지</li> </ul></ul>
+        </p></p><br><a name="compilerErrorSummary"></a><table cellpadding="3" cellspacing="0" class="summaryTable"><tr><th>&nbsp;</th><th>코드</th><th width="35%">메시지</th><th>설명</th></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1000"></a><b>1000</b></td><td class="summaryTableCol">%s에 대한 모호한 참조입니다.
+
+
+	
+
+</td><td class="summaryTableLastCol">
+	하나의 참조가 둘 이상의 항목을 참조할 수 있습니다. 예를 들어 다음 코드에서는 <code>rss</code> 및 <code>xml</code> 네임스페이스를 사용하며, 각 네임스페이스는 <code>hello()</code> 함수에 대해 서로 다른 값을 정의합니다. <code>trace(hello())</code> 문은 사용할 네임스페이스를 결정할 수 없으므로 이 오류를 반환합니다.
+	
+<pre><code>private namespace rss;
+private namespace xml;
+    
+public function ErrorExamples() {
+  	use namespace rss;
+   	use namespace xml;
+	trace(hello());
+}
+    
+rss function hello():String {
+      	return "hola";
+    }
+    
+    xml function hello():String {
+        return "foo";
+    }</code></pre>
+ 
+
+	<p>참조를 구체적으로 지정하여 모호한 참조를 수정합니다. 다음 예제에서는 <i>네임스페이스</i>::<i>함수</i> 형식을 사용하여 사용할 네임스페이스를 지정합니다.</p>
+
+
+<pre><code>public function ErrorExamples() {
+    
+    trace(rss::hello());
+    trace(xml::hello());
+}</code></pre>
+        
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1003"></a><b>1003</b></td><td class="summaryTableCol">액세스 지정자를 namespace 특성과 함께 사용할 수 없습니다.
+		</td><td class="summaryTableLastCol">하나의 정의에서 액세스 지정자(예: private 또는 public)와 namespace 특성을 모두 사용할 수 없습니다.&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1004"></a><b>1004</b></td><td class="summaryTableCol">네임스페이스가 없거나 컴파일 타임 상수가 아닙니다.
+	
+
+</td><td class="summaryTableLastCol">
+		네임스페이스가 알 수 없는 네임스페이스이거나 런타임에 다른 값을 가질 수 있는 표현식입니다. 네임스페이스의 맞춤법이 맞는지 확인하고 정의를 올바르게 가져왔는지 확인합니다.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1006"></a><b>1006</b></td><td class="summaryTableCol">super 표현식은 클래스 인스턴스 메서드 내에서만 사용할 수 있습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1007"></a><b>1007</b></td><td class="summaryTableCol">super 문은 클래스 인스턴스 생성자 내에서만 사용할 수 있습니다.
+
+</td><td class="summaryTableLastCol">
+		<code>super</code> 문은 static 멤버 내에서 사용할 수 없습니다. <code>super</code> 문은 클래스 인스턴스 내에서만 사용할 수 있습니다.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1008"></a><b>1008</b></td><td class="summaryTableCol">특성이 유효하지 않습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1010"></a><b>1010</b></td><td class="summaryTableCol">override 특성은 클래스 속성 정의에서만 사용할 수 있습니다.
+
+
+</td><td class="summaryTableLastCol">
+		<code>override</code> 키워드는 함수 블록 내에서 사용할 수 없습니다.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1011"></a><b>1011</b></td><td class="summaryTableCol">virtual 특성은 클래스 속성 정의에서만 사용할 수 있습니다.
+
+</td><td class="summaryTableLastCol">
+		클래스에 속하지 않은 속성을 선언할 때(예: 함수 블록 내에서 변수를 선언할 때) <code>virtual</code> 특성을 사용할 수 없습니다.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1012"></a><b>1012</b></td><td class="summaryTableCol">static 특성은 클래스 내의 정의에서만 사용할 수 있습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1013"></a><b>1013</b></td><td class="summaryTableCol">private 특성은 클래스 속성 정의에서만 사용할 수 있습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1014"></a><b>1014</b></td><td class="summaryTableCol">intrinsic 특성은 더 이상 지원되지 않습니다.
+
+
+</td><td class="summaryTableLastCol">
+		ActionScript 3.0에서는 <code>intrinsic</code>키워드를 지원하지 않습니다.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1016"></a><b>1016</b></td><td class="summaryTableCol">Base 클래스는 final입니다.
+
+
+</td><td class="summaryTableLastCol">
+		수퍼 클래스는 <code>final</code>로 표시되므로 확장할 수 없습니다.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1017"></a><b>1017</b></td><td class="summaryTableCol">기본 클래스 %s의 정의를 찾을 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1018"></a><b>1018</b></td><td class="summaryTableCol">중복 클래스 정의: %s..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1020"></a><b>1020</b></td><td class="summaryTableCol">override로 표시된 메서드는 다른 메서드를 재정의해야 합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1021"></a><b>1021</b></td><td class="summaryTableCol">함수 정의가 중복되었습니다.
+
+
+</td><td class="summaryTableLastCol">
+		동일한 범위 내에서 동일한 식별자 이름을 가진 함수를 두 개 이상 선언할 수 없습니다.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1022"></a><b>1022</b></td><td class="summaryTableCol">final 접근자를 재정의할 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1023"></a><b>1023</b></td><td class="summaryTableCol">호환되지 않는 재정의입니다.
+</td><td class="summaryTableLastCol"> override로 표시된 함수는 재정의하는 함수의 매개 변수 및 반환 유형 선언과 정확히 일치해야 합니다. 매개 변수 수 및 유형이 같아야 하며, 동일한 반환 유형을 선언해야 합니다. 선택적 매개 변수가 있는 경우, 해당 매개 변수도 일치해야 합니다. 두 함수는 동일한 액세스 지정자(public, private 등) 또는 namespace 특성도 사용해야 합니다.&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1024"></a><b>1024</b></td><td class="summaryTableCol">override로 표시되지 않은 함수를 재정의합니다.
+
+
+</td><td class="summaryTableLastCol">
+		
+		다음 예제와 같이 클래스의 메서드가 기본 클래스의 메서드를 재정의하는 경우 <code>override</code> 특성을 사용하여 해당 메서드를 명시적으로 선언해야 합니다.
+
+		<pre>public override function foo():void{};</pre>
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1025"></a><b>1025</b></td><td class="summaryTableCol">final 메서드를 재정의할 수 없습니다..
+
+
+</td><td class="summaryTableLastCol">
+		기본 클래스에서 <code>final</code>로 표시된 메서드는 확장할 수 없습니다.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1026"></a><b>1026</b></td><td class="summaryTableCol">생성자 함수는 인스턴스 메서드여야 합니다..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1027"></a><b>1027</b></td><td class="summaryTableCol">함수는 static이면서 override일 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1028"></a><b>1028</b></td><td class="summaryTableCol">함수는 static이면서 virtual일 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1029"></a><b>1029</b></td><td class="summaryTableCol">함수는 final이면서 virtual일 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1030"></a><b>1030</b></td><td class="summaryTableCol">가변 인수 배열의 이름을 지정해야 합니다..
+
+
+</td><td class="summaryTableLastCol">
+	
+		...(rest) 매개 변수 정의는 ...(rest) 이후 제공되는 모든 값이 임의의 배열로 수집됨을 지정합니다. <code>function foo(x,...(rest))</code> 표현식에서와 같이 배열의 이름을 지정해야 합니다.
+
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1033"></a><b>1033</b></td><td class="summaryTableCol">virtual 변수는 지원되지 않습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1034"></a><b>1034</b></td><td class="summaryTableCol">변수는 native일 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1035"></a><b>1035</b></td><td class="summaryTableCol">변수는 final이면서 virtual일 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1037"></a><b>1037</b></td><td class="summaryTableCol">패키지는 중첩될 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1038"></a><b>1038</b></td><td class="summaryTableCol">break 문의 대상을 찾을 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1039"></a><b>1039</b></td><td class="summaryTableCol">continue 문의 대상을 찾을 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1040"></a><b>1040</b></td><td class="summaryTableCol">레이블 정의가 중복됩니다..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1041"></a><b>1041</b></td><td class="summaryTableCol">특성은 호출할 수 없습니다..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1042"></a><b>1042</b></td><td class="summaryTableCol">this 키워드는 정적 메서드에서 사용할 수 없습니다. 이 키워드는 인스턴스 메서드, 함수 닫기 및 전역 코드에서만 사용할 수 있습니다.
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		<code>this</code>에는 컨텍스트가 없으므로 static 멤버 내에서 <code>this</code> 키워드를 사용할 수 없습니다.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1043"></a><b>1043</b></td><td class="summaryTableCol">네임스페이스가 정의되지 않았습니다..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1044"></a><b>1044</b></td><td class="summaryTableCol">인터페이스 메서드 %s(%s 네임스페이스에 있음)이(가) %s 클래스에서 구현되지 않습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1045"></a><b>1045</b></td><td class="summaryTableCol">%s 인터페이스를 찾을 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1046"></a><b>1046</b></td><td class="summaryTableCol">%s 유형이 없거나 컴파일 타임 상수가 아닙니다.
+
+
+
+</td><td class="summaryTableLastCol">
+		
+		유형 선언으로 사용되는 클래스가 알 수 없는 클래스이거나 런타임에 다른 값을 가질 수 있는 표현식입니다. 올바른 클래스를 가져왔는지 그리고 클래스의 패키지 위치가 변경되지 않았는지 확인합니다. 그리고 코드(가져온 클래스가 아님)를 포함하는 패키지가 올바르게 정의되었는지 확인합니다. 예를 들어, ActionScript 2.0 구문이 아닌 올바른 ActionScript 3.0 패키지 구문이 사용되었는지 확인합니다.
+
+		<p>참조되는 클래스가 사용 중인 네임스페이스에 정의되어 있지 않거나 public으로 정의되지 않은 경우에도 오류가 발생할 수 있습니다.</p>
+
+		<pre><code>public class Foo{}</code></pre>
+
+        <p>Flex&#153 Builder&#153 2 및 라이브러리의 클래스를 사용하는 경우 프로젝트의 클래스 경로를 설정해야 합니다.</p>
+
+
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1047"></a><b>1047</b></td><td class="summaryTableCol">매개 변수 이니셜라이저가 알 수 없는 이니셜라이저이거나 컴파일 타임 상수가 아닙니다.
+	
+	
+</td><td class="summaryTableLastCol">
+	매개 변수의 기본값으로 사용된 값이 정의되지 않았거나 런타임에 다른 값을 가질 수 있는 값입니다. 이니셜라이저의 맞춤법이 올바른지 확인하고, 이니셜라이저 값이 런타임에 다른 값으로 변경될 수 있는 표현식이 아닌지 확인합니다.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1048"></a><b>1048</b></td><td class="summaryTableCol">메서드는 생성자로 사용할 수 없습니다..
+	
+		
+</td><td class="summaryTableLastCol">
+	클래스의 메서드 인스턴스를 만들 수 없습니다. <code>new</code> 표현식에서는 전역 함수만 사용할 수 있습니다.
+	
+<pre>class D { function xx() { return 22; } }
+var d:D = new D();
+var x = new d.xx(); // error, method cannot be used as constructor
+function yy() { this.a = 22; }
+var z = new yy(); // no error, global functions can be used as constructors.</pre>
+
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1049"></a><b>1049</b></td><td class="summaryTableCol">상수로 지정된 변수에 대입이 잘못되었습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1050"></a><b>1050</b></td><td class="summaryTableCol">참조가 아닌 값에는 대입할 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1051"></a><b>1051</b></td><td class="summaryTableCol">반환값은 undefined여야 합니다..
+
+
+
+</td><td class="summaryTableLastCol">
+		<code>void</code> 반환 유형을 선언한 메서드 내에서 <code>return</code> 문을 사용하려고 합니다.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1052"></a><b>1052</b></td><td class="summaryTableCol">상수 이니셜라이저가 알 수 없는 이니셜라이저이거나 컴파일 타임 상수가 아닙니다.
+
+	
+
+</td><td class="summaryTableLastCol">
+	상수를 초기화하는 데 사용된 값이 정의되지 않았거나 런타임에 다른 값을 가질 수 있는 값입니다. 이니셜라이저의 맞춤법이 올바른지 확인하고, 이니셜라이저 값이 런타임에 다른 값으로 변경될 수 있는 표현식이 아닌지 확인합니다.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1053"></a><b>1053</b></td><td class="summaryTableCol">접근자 유형이 일치해야 합니다..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1054"></a><b>1054</b></td><td class="summaryTableCol">setter 정의의 반환 유형은 지정되지 않거나 void여야 합니다.
+
+
+</td><td class="summaryTableLastCol">
+		setter 함수의 반환값은 지정할 수 없습니다. 예를 들어, 다음과 같은 경우는 유효하지 않습니다.
+
+		<pre>public function set gamma(g:Number):Number;</pre>
+
+		<p>다음과 같은 경우는 <i>유효합니다</i>.</p>
+
+		<pre>public function set gamma(g:Number):void;</pre>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1058"></a><b>1058</b></td><td class="summaryTableCol">속성이 쓰기 전용입니다..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1059"></a><b>1059</b></td><td class="summaryTableCol">속성이 읽기 전용입니다..
+
+	
+
+</td><td class="summaryTableLastCol">
+	이 속성은 getter 함수를 통해 정의되었으므로 해당 속성의 값을 검색할 수 있습니다. 그러나 이 속성에 대해 정의된 setter 함수가 없으므로 이 속성은 읽기 전용입니다.
+	<p>다음 예제에서는 <code>xx</code>에 대해 정의된 setter 함수가 없으므로 3행에서 오류가 발생합니다.</p>
+	
+<pre>class D { function get xx() { return 22; } }
+var d:D = new D();
+d.xx = 44; // error, property is read-only</pre>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1061"></a><b>1061</b></td><td class="summaryTableCol">정의되지 않은 메서드 %s을(를) 정적 유형 %s이(가) 있는 참조를 통해 호출합니다.
+
+	
+
+</td><td class="summaryTableLastCol">
+	정의되지 않은 메서드를 호출하고 있습니다.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1063"></a><b>1063</b></td><td class="summaryTableCol">%s 파일을 열 수 없습니다..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1064"></a><b>1064</b></td><td class="summaryTableCol">메타데이터가 유효하지 않습니다.
+	
+
+
+</td><td class="summaryTableLastCol">
+	알 수 없는 메타데이터입니다.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1065"></a><b>1065</b></td><td class="summaryTableCol">메타데이터 특성은 두 개 이상의 요소를 가질 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1067"></a><b>1067</b></td><td class="summaryTableCol">%s 유형의 값을 관련되지 않은 %s 유형으로 암시적으로 강제 형 변환합니다.
+
+
+
+</td><td class="summaryTableLastCol">
+		객체를 변환할 수 없는 유형으로 형 변환하려고 합니다. 이 오류는 형 변환되는 객체의 상속 체인에 형 변환의 대상 클래스가 없는 경우에 발생할 수 있습니다. 이 오류는 컴파일러가 Strict 모드에서 실행 중일 때만 발생합니다.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1068"></a><b>1068</b></td><td class="summaryTableCol">포함된 파일 %s을(를) 열 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1069"></a><b>1069</b></td><td class="summaryTableCol">구문 오류: 정의 또는 지시문이 필요합니다.
+
+
+
+</td><td class="summaryTableLastCol">
+		해당 행의 구문을 확인합니다.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1071"></a><b>1071</b></td><td class="summaryTableCol">구문 오류: %s(%s이(가) 아님) 특성 뒤에 정의 키워드(예: 함수)가 있어야 합니다.
+
+
+</td><td class="summaryTableLastCol">
+	
+		이 오류는 제작자가 선언에서 "var" 또는 "function" 키워드를 사용하지 않은 경우에 발생합니다.
+<pre><code>public int z;// should be 'public var z:int;'</code></pre>
+
+		이 오류는 컴파일러에서 예기치 못한 문자가 발견된 경우에도 발생할 수 있습니다. 다음은 <code>trace()</code> 함수를 잘못 사용한 예제입니다. 올바른 구문은 <code>trace("hello")</code>인데 괄호가 누락되었습니다.
+
+<pre>
+trace "hello"
+</pre>
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1072"></a><b>1072</b></td><td class="summaryTableCol">구문 오류: 네임스페이스 앞에 xml이 있어야 합니다.
+
+
+</td><td class="summaryTableLastCol">
+	
+		올바른 명령문 구문은 <code>default xml namespace = </code> <i>ns</i>입니다. 키워드 <code>xml</code>(소문자에 주의)이 누락되었거나 잘못된 키워드가 사용되었습니다. 자세한 내용은 <a href="statements.html#default_xml_namespace" >default xml namespace</a> 지시문을 참조하십시오.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1073"></a><b>1073</b></td><td class="summaryTableCol">구문 오류: catch 또는 finally 절이 있어야 합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1075"></a><b>1075</b></td><td class="summaryTableCol">구문 오류: 'each' 키워드는 'in' 연산자와 함께 사용해야 합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1076"></a><b>1076</b></td><td class="summaryTableCol">구문 오류: 식별자 앞에 여는 괄호가 있어야 합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1077"></a><b>1077</b></td><td class="summaryTableCol">CaseLabel이 있어야 합니다..
+
+	
+</td><td class="summaryTableLastCol">
+	switch 블록의 이 지점에 <code>case</code> 문이 있어야 합니다. 다음 switch 블록에서 첫 번째 <code>case</code> 문 이전에 <code>print</code>에 대한 호출이 잘못 포함되어 있습니다.
+
+<pre>switch(x)
+{
+trace(2);
+case 0:  trace(0); 
+break
+}</pre>
+	
+    &nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1078"></a><b>1078</b></td><td class="summaryTableCol">레이블은 간단한 식별자여야 합니다..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1079"></a><b>1079</b></td><td class="summaryTableCol">super 표현식에는 피연산자가 하나 있어야 합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1080"></a><b>1080</b></td><td class="summaryTableCol">증가 또는 감소 연산자가 있어야 합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1082"></a><b>1082</b></td><td class="summaryTableCol">괄호 안에 단일 표현식이 있어야 합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1083"></a><b>1083</b></td><td class="summaryTableCol">구문 오류: %s은(는) 예기치 않은 구문입니다.
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		코드에서 일부 정보가 누락되었습니다. 다음 예제의 경우 마지막 더하기 기호 뒤에 숫자와 같은 일부 표현식이 포함되어야 합니다.
+
+		<pre>var sum:int = 1 + 2 + ;</pre>
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1084"></a><b>1084</b></td><td class="summaryTableCol">구문 오류: %s이(가) %s 앞에 있어야 합니다.
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		이 지점에 예기치 않은 표현식이 있습니다. 코드 블록에서 닫는 괄호(&#125)가 누락된 경우 "프로그램 끝 앞에 닫는 중괄호가 있어야 합니다"라는 오류가 표시됩니다.
+
+		<p>일부러 잘못 작성한 다음 예제와 같이 조건 표현식에서 괄호를 생략할 경우 "_ 앞에 여는 괄호가 있어야 합니다"라는 오류가 표시됩니다. </p>
+
+		<pre><code>var fact:int = 1 * 2 * 3;
+if fact > 2 {
+	var bigger:Boolean = true;
+}</code></pre>
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1086"></a><b>1086</b></td><td class="summaryTableCol">구문 오류: %s 앞에 세미콜론이 있어야 합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1087"></a><b>1087</b></td><td class="summaryTableCol">구문 오류: 프로그램 끝에 추가 문자가 있습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1093"></a><b>1093</b></td><td class="summaryTableCol">구문 오류입니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1094"></a><b>1094</b></td><td class="summaryTableCol">구문 오류: 문자열 리터럴은 행 분리 문자 앞에서 끝나야 합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1095"></a><b>1095</b></td><td class="summaryTableCol">구문 오류: 문자열 리터럴은 행 분리 문자 앞에서 끝나야 합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1097"></a><b>1097</b></td><td class="summaryTableCol">구문 오류: 문자열 리터럴의 닫는 따옴표에 도달하기 전에 입력이 종료되었습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1099"></a><b>1099</b></td><td class="summaryTableCol">구문 오류입니다..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1100"></a><b>1100</b></td><td class="summaryTableCol">구문 오류: XML에 일치하는 begin 및 end 태그가 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1102"></a><b>1102</b></td><td class="summaryTableCol">super 자손을 삭제할 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1103"></a><b>1103</b></td><td class="summaryTableCol">네임스페이스 정의가 중복되었습니다..
+
+	
+
+
+</td><td class="summaryTableLastCol">
+	네임스페이스를 두 번 이상 정의했습니다. 중복된 정의를 삭제하거나 수정합니다.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1104"></a><b>1104</b></td><td class="summaryTableCol"> %s </td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1105"></a><b>1105</b></td><td class="summaryTableCol">대입 대상은 참조 값이어야 합니다..
+
+	 
+</td><td class="summaryTableLastCol">
+	값을 변수에 대입할 수는 있지만 다른 값에 대입할 수는 없습니다. 
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1106"></a><b>1106</b></td><td class="summaryTableCol">증가의 피연산자는 참조여야 합니다.
+	
+</td><td class="summaryTableLastCol">
+	피연산자는 변수, 배열 요소 또는 객체의 속성이어야 합니다.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1107"></a><b>1107</b></td><td class="summaryTableCol">Increment 피연산자가 유효하지 않습니다.
+
+	
+</td><td class="summaryTableLastCol">
+	피연산자는 변수, 배열 요소 또는 객체의 속성이어야 합니다.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1108"></a><b>1108</b></td><td class="summaryTableCol">Decrement 피연산자가 유효하지 않습니다.
+	
+</td><td class="summaryTableLastCol">
+	피연산자는 변수, 배열 요소 또는 객체의 속성이어야 합니다.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1109"></a><b>1109</b></td><td class="summaryTableCol">표현식이 있어야 합니다.
+
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		코드에서 표현식이 누락되었습니다. 예를 들어 다음 예제에서는 이 오류가 발생합니다. <code>if</code> 문에서 누락된 조건이 있습니다.
+
+<pre><code>var x = (5 > 2) ? 
+trace(x)</code></pre>
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1110"></a><b>1110</b></td><td class="summaryTableCol">XML 태그 이름이 누락되었습니다..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1111"></a><b>1111</b></td><td class="summaryTableCol">%s 파일은 유효한 ABC 파일이 아닙니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1112"></a><b>1112</b></td><td class="summaryTableCol">이 파일에서 %s을(를) 포함하므로 무한 반복이 발생할 수 있습니다..
+
+	
+
+</td><td class="summaryTableLastCol">
+	컴파일되는 소스에 포함된 파일에 무한 루프를 발생시킬 수 있는 다른 <code>include</code> 문이 있습니다. 예를 들어 다음 파일입니다. a.as 및 b.as, 각 파일이 서로 다른 파일을 포함하려고 하므로 이 오류가 발생합니다.
+	<p>
+	a.as 파일은 다음과 같이 b.as를 포함하려고 합니다.</p>
+<pre>import foo.bar.baz;
+include "b.as"
+trace(2);</pre>
+	<p>b.as 파일은 다음과 같이 a.as를 포함하려고 합니다.</p>
+	<pre>include "a.as"</pre>
+
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1113"></a><b>1113</b></td><td class="summaryTableCol">%s에서 순환 유형 참조가 발견되었습니다.
+	
+
+</td><td class="summaryTableLastCol">
+	클래스가 수퍼 클래스를 확장하려고 합니다. 예를 들어, 클래스 B가 클래스 A로부터 상속한 경우 클래스 A는 클래스 B를 확장할 수 없습니다.
+<pre><code>class a extends b { }
+class b extends a { }</code></pre>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1114"></a><b>1114</b></td><td class="summaryTableCol">public 특성은 패키지 내에서만 사용할 수 있습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1115"></a><b>1115</b></td><td class="summaryTableCol">internal 특성은 패키지 내에서만 사용할 수 있습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1116"></a><b>1116</b></td><td class="summaryTableCol">사용자 정의 네임스페이스 특성은 최상위 클래스 정의에서만 사용할 수 있습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1118"></a><b>1118</b></td><td class="summaryTableCol">정적 유형 %s을(를) 가진 값을 관련되지 않은 유형 %s(으)로 암시적으로 강제 형 변환합니다.
+	
+
+</td><td class="summaryTableLastCol">예기치 않은 유형의 값을 사용하고 있으며 이러한 값을 예상 유형으로 변환하는 암시적 강제 형 변환이 존재하지 않습니다.
+	<p>하위 유형이 있어야 하는 위치에서 수퍼 유형을 사용하고 있습니다. 예를 들면 다음과 같습니다.</p>
+<pre><code>class A {}
+var a:A = new A(); 
+class B extends A { function f() }
+var b : B = a // error</code></pre>
+	<p>마지막 명령문에서 유형 A의 객체를 유형 B의 변수에 대입하기 때문에 오류가 발생합니다.</p>
+	<p>마찬가지로 다음 예제에서는 유형 B의 매개 변수를 사용하는 <code>foo()</code> 함수를 정의합니다. <code> foo(a);</code> 문은 유형 A의 매개 변수를 사용하려고 하므로 오류가 발생합니다.</p>
+<pre><code>function foo(x:B) { }
+foo(a);</code></pre>
+	<p>또한 다음 문에서는 <code>foo2()</code>의 반환값이 유형 B여야 하므로 오류가 발생합니다.</p>
+	<pre><code>function foo2():B { return new A(); }</code></pre>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1119"></a><b>1119</b></td><td class="summaryTableCol">정의되지 않은 속성 %s을(를) 정적 유형 %s이(가) 있는 참조를 통해 액세스합니다.
+
+
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		지정된 객체에 존재하지 않는 속성에 액세스하려고 합니다. 예를 들어 다음 코드에서는 int 객체에 <code>assortment</code> 속성이 없으므로 이 오류가 발생합니다.
+
+<pre><code>var i:int = 44;
+var str:String = i.assortment;</code></pre>
+
+		이 오류는 컴파일러가 Strict 모드에서 실행 중일 때만 발생합니다.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1120"></a><b>1120</b></td><td class="summaryTableCol">정의되지 않은 속성 %s에 액세스합니다.
+
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		정의되지 않은 변수에 액세스하려고 합니다. 예를 들어 변수 <code>huh</code>가 정의되지 않은 경우 이 변수를 호출하면 이 오류가 발생합니다.
+
+<pre><code>huh = 55;</code></pre>
+
+		이 오류는 컴파일러가 Strict 모드에서 실행 중일 때만 발생할 수 있습니다.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1121"></a><b>1121</b></td><td class="summaryTableCol">getter 정의에는 매개 변수가 없어야 합니다..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1122"></a><b>1122</b></td><td class="summaryTableCol">setter 정의에는 한 개의 매개 변수만 있어야 합니다..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1123"></a><b>1123</b></td><td class="summaryTableCol">setter 정의에는 선택적 매개 변수가 있을 수 없습니다..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1124"></a><b>1124</b></td><td class="summaryTableCol">getter 정의의 반환 유형은 void가 아니어야 합니다.
+
+	
+</td><td class="summaryTableLastCol">
+	getter 함수는 변수를 시뮬레이션합니다. 변수는 void 유형이 될 수 없으므로 void 유형을 반환하는 getter 함수를 선언할 수 없습니다.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1125"></a><b>1125</b></td><td class="summaryTableCol">인터페이스에 정의된 메서드는 본문을 가질 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1126"></a><b>1126</b></td><td class="summaryTableCol">함수에 본문이 없습니다..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1127"></a><b>1127</b></td><td class="summaryTableCol">%s 특성이 여러 번 지정되었습니다.
+
+	
+
+</td><td class="summaryTableLastCol">
+	동일한 명령문에서 한 특성을 두 번 이상 지정했습니다. 예를 들어 <code>public static public var x;</code> 문은 <code>x</code> 변수가 public임을 두 번 지정하므로 이 오류가 발생합니다. 중복된 선언을 삭제합니다.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1129"></a><b>1129</b></td><td class="summaryTableCol">중복 인터페이스 정의: %s..
+
+	
+
+</td><td class="summaryTableLastCol">
+	중복된 정의를 변경하거나 삭제합니다.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1130"></a><b>1130</b></td><td class="summaryTableCol">생성자는 반환 유형을 지정할 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1131"></a><b>1131</b></td><td class="summaryTableCol">클래스는 중첩되면 안 됩니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1132"></a><b>1132</b></td><td class="summaryTableCol">final 특성은 클래스에 정의된 메서드에서만 사용할 수 있습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1133"></a><b>1133</b></td><td class="summaryTableCol">native 특성은 함수 정의와만 함께 사용할 수 있습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1134"></a><b>1134</b></td><td class="summaryTableCol">dynamic 특성은 클래스 정의와만 함께 사용할 수 있습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1135"></a><b>1135</b></td><td class="summaryTableCol">구문 오류: %s 유형이 올바르지 않습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1136"></a><b>1136</b></td><td class="summaryTableCol">인수의 수가 잘못되었습니다. %s개여야 합니다.
+
+	
+</td><td class="summaryTableLastCol">
+	제공한 인수의 수가 함수에 필요한 인수의 수와 다릅니다. 다음 예제에서는 두 개의 인수를 갖는 <code>goo</code> 함수를 정의합니다.
+<pre>class A { static function goo(x:int,y:int) 
+{ return(x+y); } }</pre>
+	<p>다음 명령문은 인수 세 개를 제공하므로 오류가 발생합니다.</p>
+<pre>A.goo(1,2,3);</pre>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1137"></a><b>1137</b></td><td class="summaryTableCol">인수의 수가 잘못되었습니다. %s개 이하여야 합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1138"></a><b>1138</b></td><td class="summaryTableCol">필수 매개 변수는 선택적 매개 변수 앞에 있어야 합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1139"></a><b>1139</b></td><td class="summaryTableCol">인터페이스에서는 변수를 선언할 수 없습니다..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1140"></a><b>1140</b></td><td class="summaryTableCol">...rest 매개 변수 정의 키워드 뒤에 지정된 매개 변수의 데이터 유형은 Array여야 합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1141"></a><b>1141</b></td><td class="summaryTableCol">클래스는 다른 클래스만을 확장할 수 있으며 인터페이스를 확장할 수 없습니다..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1142"></a><b>1142</b></td><td class="summaryTableCol">인터페이스는 다른 인터페이스만을 확장할 수 있지만 %s은(는) 클래스입니다.
+	
+
+</td><td class="summaryTableLastCol">
+	인터페이스에서 클래스를 확장하려고 합니다. 인터페이스는 다른 인터페이스만 확장할 수 있습니다.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1143"></a><b>1143</b></td><td class="summaryTableCol">override 특성은 클래스에 정의된 메서드에서만 사용할 수 있습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1144"></a><b>1144</b></td><td class="summaryTableCol">인터페이스 메서드 %s(%s 네임스페이스에 있음)이(가) %s 클래스에서 호환되지 않는 서명과 함께 구현되었습니다.
+
+	
+
+</td><td class="summaryTableLastCol">
+	메서드 서명이 정확히 일치해야 합니다.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1145"></a><b>1145</b></td><td class="summaryTableCol">기본 메서드는 본문을 가질 수 없습니다.
+	
+
+</td><td class="summaryTableLastCol">
+	<code>native</code>는 예약 키워드이므로 사용할 수 없습니다.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1146"></a><b>1146</b></td><td class="summaryTableCol">생성자는 getter 또는 setter 메서드가 될 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1147"></a><b>1147</b></td><td class="summaryTableCol">AS 소스 파일이 지정되지 않았습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1149"></a><b>1149</b></td><td class="summaryTableCol">return 문은 정적 초기화 코드에서 사용할 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1150"></a><b>1150</b></td><td class="summaryTableCol">protected 특성은 클래스 속성 정의에서만 사용할 수 있습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1151"></a><b>1151</b></td><td class="summaryTableCol">%s 정의가 %s 네임스페이스에서 충돌합니다.
+
+	
+
+
+</td><td class="summaryTableLastCol">
+	모든 해당 변수를 동일한 유형으로 선언하지 않는 한 동일한 범위 내에서 동일한 식별자 이름을 가진 변수를 두 개 이상 선언할 수 없습니다. ActionScript 3.0에서는 동일한 function 정의에 있는 두 개의 <code>for</code> 루프에 사용된 블록처럼 서로 다른 코드 블록을 동일한 범위에 있는 것으로 간주합니다. 
+	<p>다음 코드 예제에서는 <code>x</code> 변수를 동일한 유형으로 올바르게 형 변환합니다.</p>
+<pre><code>function test()
+{
+	var x:int = 3;
+	for(var x:int = 33; x < 55; x++)
+	trace(x);
+	for(var x:int = 11; x < 33; x++)
+	trace(x)
+}</code></pre>
+	<p>다음 코드 예제에서는 변수 선언과 <code>for</code> 루프의 유형 변환이 다르기 때문에 오류가 발생합니다.</p>
+<pre><code>function test()
+{
+	var x:String = "The answer is";
+	for(var x:int = 33; x < 55; x++) // error
+	trace(x);
+	for(var x:unit = 11; x < 33; x++) // error
+	trace(x)
+}</code></pre>
+&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1152"></a><b>1152</b></td><td class="summaryTableCol"> 상속된 %s 정의가 %s 네임스페이스에서 충돌합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1153"></a><b>1153</b></td><td class="summaryTableCol">생성자는 public으로만 선언될 수 있습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1154"></a><b>1154</b></td><td class="summaryTableCol">public, private, protected 또는 internal 중 하나만 정의에서 지정될 수 있습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1155"></a><b>1155</b></td><td class="summaryTableCol">접근자는 다른 함수 내에서 중첩될 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1156"></a><b>1156</b></td><td class="summaryTableCol">인터페이스는 new 연산자를 사용해서 인스턴스화할 수 없습니다..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1157"></a><b>1157</b></td><td class="summaryTableCol">인터페이스는 public, private, protected 또는 internal로 선언될 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1158"></a><b>1158</b></td><td class="summaryTableCol">구문 오류: 함수 본문 앞에서 여는 중괄호({)가 누락되었습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1159"></a><b>1159</b></td><td class="summaryTableCol">return 문은 패키지 초기화 코드에서 사용할 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1160"></a><b>1160</b></td><td class="summaryTableCol">native 특성은 인터페이스 정의에서 사용할 수 없습니다.
+	
+
+</td><td class="summaryTableLastCol">
+	<code>native</code>는 예약 키워드이므로 사용할 수 없습니다.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1162"></a><b>1162</b></td><td class="summaryTableCol">한 개의 정의에 한 개의 namespace 특성만 사용할 수 있습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1163"></a><b>1163</b></td><td class="summaryTableCol">%s 메서드가 %s 인터페이스로부터 상속된 정의와 충돌합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1165"></a><b>1165</b></td><td class="summaryTableCol">인터페이스 특성 %s이(가) 유효하지 않습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1166"></a><b>1166</b></td><td class="summaryTableCol">인터페이스에서는 네임스페이스를 선언할 수 없습니다..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1167"></a><b>1167</b></td><td class="summaryTableCol">%s 클래스에서 %s 인터페이스가 여러 번 구현됩니다.
+
+	
+
+</td><td class="summaryTableLastCol">
+	클래스에서 동일한 인터페이스를 두 번 이상 구현합니다. 예를 들어, 다음 코드에서는 클래스 C가 인터페이스 A를 두 번 구현하므로 이 오류가 발생합니다.
+
+<pre><code>interface A {  public function f();  };
+class C implements A,A {
+public function f() { trace("f"); }
+}</code></pre>
+	
+	<p>올바른 구현 문은 <code>class C implements A {</code>여야 합니다.</p>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1168"></a><b>1168</b></td><td class="summaryTableCol">%s 함수에 대입이 잘못되었습니다.
+
+	
+
+
+</td><td class="summaryTableLastCol">
+	함수를 재정의하려고 합니다. 예를 들어 다음은 <code>topLevel()</code> 함수를 정의하여 단어 "top"을 인쇄합니다. 두 번째 명령문에서 다른 반환 값이 함수에 대입되기 때문에 오류가 발생합니다.
+<pre><code>function topLevel() { trace("top"); }
+topLevel = function() { trace("replacement works in ~");} // error</code></pre>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1169"></a><b>1169</b></td><td class="summaryTableCol">네임스페이스 특성은 인터페이스 메서드에서 사용할 수 없습니다..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1170"></a><b>1170</b></td><td class="summaryTableCol">함수가 값을 반환하지 않습니다.
+
+	
+</td><td class="summaryTableLastCol">
+	함수에서 가능한 모든 제어 흐름은 반환 유형이 void가 아닌 경우 항상 값을 반환해야 합니다. 다음 <code>f(x)</code> 함수에서는 <code>if..else</code> 문이 항상 값을 반환하므로 오류가 발생하지 않습니다.
+
+<pre><code>function f(x):int
+{
+if (x)
+    	return 2;
+else
+    	return 3;
+} // no error</code></pre>
+
+<p>그러나 아래 <code>g(x)</code> 함수에서는 <code>switch</code> 문에서 값이 반환되지 않을 수도 있으므로 오류가 발생합니다.</p>
+<pre><code>function g(x:int):int
+{
+switch(x)
+{
+      	case 1: return 1;
+      	case 2: return 2:
+}
+// return 2;//uncomment to remove the error
+}</code></pre>
+
+	<p>이 검사는 함수에서 void 이외의 반환 유형을 선언할 때만 사용합니다. </p>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1171"></a><b>1171</b></td><td class="summaryTableCol">네임스페이스 이니셜라이저는 리터럴 문자열이거나 다른 네임스페이스여야 합니다..</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1172"></a><b>1172</b></td><td class="summaryTableCol">%s 정의를 찾을 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1173"></a><b>1173</b></td><td class="summaryTableCol">레이블 정의가 유효하지 않습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1176"></a><b>1176</b></td><td class="summaryTableCol">정적 유형 %s와 관련되지 않은 유형 %s의 값을 비교합니다.
+</td><td class="summaryTableLastCol">이 오류는 Strict 모드에서 발생합니다.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1177"></a><b>1177</b></td><td class="summaryTableCol">return 문은 전역 초기화 코드에서 사용할 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1178"></a><b>1178</b></td><td class="summaryTableCol">액세스할 수 없는 속성 %s을(를) 정적 유형 %s이(가) 있는 참조를 통해 액세스하려고 시도했습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1179"></a><b>1179</b></td><td class="summaryTableCol">:객체를 일시적으로 사용할 수 없습니다. 대신 :*을 사용합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1180"></a><b>1180</b></td><td class="summaryTableCol">정의되지 않은 메서드 %s을(를) 호출합니다.
+</td><td class="summaryTableLastCol">이 오류는 컴파일러가 Strict 모드에서 실행 중일 때만 발생합니다.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1181"></a><b>1181</b></td><td class="summaryTableCol">참조를 기본 클래스 %s(으)로 이동합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1182"></a><b>1182</b></td><td class="summaryTableCol">패키지(%s)는 값으로 사용할 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1184"></a><b>1184</b></td><td class="summaryTableCol">호환되지 않는 기본값 유형(%s)이며, 호환되는 유형은 %s입니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1185"></a><b>1185</b></td><td class="summaryTableCol">switch 문의 기본값이 두 개 이상입니다. 기본값은 한 개만 사용할 수 있습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1188"></a><b>1188</b></td><td class="summaryTableCol">%s 클래스에 대입이 잘못되었습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1189"></a><b>1189</b></td><td class="summaryTableCol">고정된 속성 %s을(를) 삭제하려고 시도했습니다. 동적으로 정의된 속성만 삭제할 수 있습니다.
+</td><td class="summaryTableLastCol">삭제를 수행하면 동적으로 정의된 속성이 객체에서 제거됩니다. 클래스의 선언된 속성은 삭제할 수 없습니다. 이 오류는 컴파일러가 Strict 모드에서 실행 중일 때만 발생합니다.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1190"></a><b>1190</b></td><td class="summaryTableCol">기본 클래스가 없거나 컴파일 타임 상수가 아닙니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1191"></a><b>1191</b></td><td class="summaryTableCol">인터페이스가 없거나 컴파일 타임 상수가 아닙니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1192"></a><b>1192</b></td><td class="summaryTableCol">static 특성은 네임스페이스 정의에서 사용할 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1193"></a><b>1193</b></td><td class="summaryTableCol">인터페이스 정의는 클래스 또는 다른 인터페이스 정의 내에서 중첩되면 안 됩니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1194"></a><b>1194</b></td><td class="summaryTableCol">프로토타입 특성이 유효하지 않습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1195"></a><b>1195</b></td><td class="summaryTableCol">액세스할 수 없는 메서드 %s을(를) 정적 유형 %s이(가) 있는 참조를 통해 액세스하려고 시도했습니다.
+		
+ 	</td><td class="summaryTableLastCol">다른 클래스에서 전용 메서드를 호출하거나 사용되지 않는 네임스페이스에 정의된 메서드를 호출하고 있습니다. 사용되지 않는 네임스페이스에서 정의된 메서드를 호출하는 경우에는 필요한 네임스페이스에 대해 <code>use</code> 문을 추가합니다.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1196"></a><b>1196</b></td><td class="summaryTableCol">구문 오류: throw 뒤에 표현식이 있어야 합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1197"></a><b>1197</b></td><td class="summaryTableCol">두 클래스 모두 라이브러리 심볼 또는 기본 타임라인과 연관되어 있기 때문에 %s 클래스는 %s을(를) 확장할 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1198"></a><b>1198</b></td><td class="summaryTableCol">특성은 패키지 정의에서 사용할 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1199"></a><b>1199</b></td><td class="summaryTableCol">내부 오류: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1200"></a><b>1200</b></td><td class="summaryTableCol">구문 오류: for-in 이니셜라이저가 유효하지 않습니다. 1개의 표현식만 필요합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1201"></a><b>1201</b></td><td class="summaryTableCol">super 문은 this, super, return 또는 throw 문 뒤에 사용할 수 없습니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1202"></a><b>1202</b></td><td class="summaryTableCol">정의되지 않은 속성 %s(%s 패키지에 있음)에 액세스합니다.
+
+
+    </td><td class="summaryTableLastCol">
+	
+		패키지에 있는 정의되지 않은 변수에 액세스하려고 합니다. 예를 들어 변수 <code>p.huh</code>가 정의되지 않은 경우 이 변수를 호출하면 이 오류가 발생합니다.
+
+<pre><code>p.huh = 55;</code></pre>
+
+		이 오류는 컴파일러가 Strict 모드에서 실행 중일 때만 발생할 수 있습니다.
+	
+&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1203"></a><b>1203</b></td><td class="summaryTableCol">기본 클래스 %s에 기본 생성자가 없습니다.
+    </td><td class="summaryTableLastCol">필수 인수가 1개 이상인 경우에는 super() 문을 사용하여 기본 클래스의 생성자를 명시적으로 호출해야 합니다.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1204"></a><b>1204</b></td><td class="summaryTableCol">발견된 /*에 짝이 되는 */가 없습니다.
+
+	</td><td class="summaryTableLastCol">
+	
+		주석의 시작을 나타내는 문자(/*)는 있지만 주석 블록의 끝을 나타내는 문자(*/)가 없습니다.
+    &nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1205"></a><b>1205</b></td><td class="summaryTableCol">구문 오류: 여는 중괄호({) 또는 문자열 리터럴("")이 있어야 합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1206"></a><b>1206</b></td><td class="summaryTableCol">super 문은 생성자 이니셜라이저 목록의 마지막 항목으로만 사용할 수 있습니다.
+
+    </td><td class="summaryTableLastCol">
+		<code>super</code> 문은 생성자 내에서 사용할 수 없습니다. <code>super</code> 문은 생성자 이니셜라이저 목록의 마지막 항목으로만 사용할 수 있습니다.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1207"></a><b>1207</b></td><td class="summaryTableCol">this 키워드는 속성 이니셜라이저에서 사용할 수 없습니다.
+    
+    </td><td class="summaryTableLastCol">
+	
+		<code>this</code> 키워드는 속성 이니셜라이저 내에서 사용할 수 없습니다.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1208"></a><b>1208</b></td><td class="summaryTableCol">구성 값 이니셜라이저는 컴파일 타임 상수여야 합니다.
+    
+    </td><td class="summaryTableLastCol">
+	
+		구성 값 이니셜라이저는 컴파일 타임에 확인되는 값이어야 합니다. 이니셜라이저는 상수 문자열, 숫자, 부울 또는 이전에 정의된 다른 구성 값에 대한 참조가 될 수 있습니다.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1209"></a><b>1209</b></td><td class="summaryTableCol">구성 변수는 선언된 상수여야 합니다.
+    
+    </td><td class="summaryTableLastCol">
+	
+		구성 변수를 정의할 때는 상수로 선언해야 합니다.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1210"></a><b>1210</b></td><td class="summaryTableCol">구성 값은 프로그램 또는 패키지의 최상위 수준에서 선언해야 합니다.
+    
+    </td><td class="summaryTableLastCol">
+	
+		구성 값은 프로그램 또는 패키지의 최상위 수준에서 선언해야 합니다.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1211"></a><b>1211</b></td><td class="summaryTableCol">%s 네임스페이스가 구성 네임스페이스와 충돌합니다.
+    
+    </td><td class="summaryTableLastCol">
+	
+		네임스페이스는 구성 네임스페이스와 같은 이름을 가질 수 없습니다.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1212"></a><b>1212</b></td><td class="summaryTableCol">정밀도는 1과 34 사이의 정수여야 합니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1214"></a><b>1214</b></td><td class="summaryTableCol">호환되지 않는 버전: %s 정의를 참조할 수 없습니다. 이 정의는 %s 버전에 도입되었고, %s 버전의 코드에서 가져온 것입니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1215"></a><b>1215</b></td><td class="summaryTableCol">잘못된 초기화: %s 유형으로 변환하면 데이터가 손실됩니다.</td><td class="summaryTableLastCol">&nbsp;</td></tr></table><br><br><div><p></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 03:34 PM Z  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/ko_KR/legalnotices/index.html">법적 고지 사항</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">온라인 개인 정보 보호 정책</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">영어로 표시되는 이유</span>
+				</div>
+				<div class="white_content_body">
+					<b>ActionScript 3.0 참조 설명서의 내용이 영어로 나타납니다.</b><br><br>
+					ActionScript 3.0 참조 설명서 중 일부는 전체 언어로 번역되지 않았습니다. 언어 요소가 번역되지 않은 경우 영어로 나타납니다. 예를 들어 ga.controls.HelpBox 클래스는 어떤 언어로도 번역되지 않았습니다. 그러므로 한국어 버전의 참조 설명서에서 ga.controls.HelpBox 클래스는 영어로 나타납니다.
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 03:34 PM Z  -->

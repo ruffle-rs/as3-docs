@@ -1,0 +1,938 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Referenshandbok för ActionScript&reg; 3.0 i Adobe&reg; Flash&reg;-plattformen"><meta name="lang" content="sv-se"><meta name="runtime" content="flash player"><meta name="runtimever" content="flash player:9"><meta name="runtime" content="lite"><meta name="runtimever" content="lite:4"><meta name="product" content="flash player"><meta name="productver" content="flash player:9"><meta name="product" content="lite"><meta name="productver" content="lite:4"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../asfilter.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="Sound,flash.media.Sound,bytesLoaded,bytesTotal,id3,isBuffering,isURLInaccessible,length,url,close,extract,load,loadCompressedDataFromByteArray,loadPCMFromByteArray,play"><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" src="../../AC_OETags.js" type="text/javascript"></script><title>Sound - API-referens för Adobe ActionScript&reg; 3 (AS3  )</title>
+		<link rel="stylesheet" href="../../filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="../../filter_new.css" type="text/css">
+			
+		<script src="../../jquery.js" type="text/javascript"></script>
+		<script src="../../s_chl_code.js" type="text/javascript"></script>
+		<script src="../../jquery.zclip.js" type="text/javascript"></script>
+		<script src="../../jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="../../cookies.js" type="text/javascript"></script>
+		<script src="../../asdoc.js" type="text/javascript"></script>
+		<script src="../../iscroll.js" type="text/javascript"></script>
+		<script src="../../AC_OETags.js" type="text/javascript"></script>
+		<script src="../../omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "Körningsmiljöer";
+			var productsLabel = "Produkter";
+			var noneLabel = "Inget";
+			var qsearchBoxLabel = "Snabbsökning";
+			var qsearchText = "Termen hittades inte";
+			var ajaxErrorMsg="Fel Laddar sidan";
+			var ajaxErrorTryMsg="Försök igen";
+			var ajaxLoadingMsg="Läser in ...";
+			var cancelMsg = "Avbryt";
+			var classesText = "Klasser";
+			var strJiveReply = "Den här frågan skrevs som svar på följande artikel: "
+			var showFilters = "Visa filter";
+			var hideFilters = "Dölj filter";
+			
+		
+			var baseRef = "../../";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											Referenshandbok för ActionScript<sup>&reg;</sup> 3.0 i Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup>-plattformen<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="../../index.html"> Hem </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="Sound.html#top" style="display:">Visa paket och klasslista</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="Sound.html#top" style="display:none">Dölj paket och klasslista</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="../../package-summary.html"> Paket </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../class-summary.html"> Klasser </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../whatsnew.html"> Nyheter </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../all-index-Symbols.html"> Index </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../appendixes.html"> Bilagor </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Varför på engelska?</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/sv_SE/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('../../')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('../../')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="../../help.js"></script>
+						<script language="javascript" type="text/javascript" src="../../asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="../../filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>Filter:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">Hämtar data från servern&nbsp;...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">Hämtar data från servern&nbsp;...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="Sound.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">flash.media&nbsp;</a><br>
+								<h1 id="classProductName">Sound&nbsp; - AS3 </h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="Sound.html#propertySummary" style="display:none"> Egenskaper </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="Sound.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Egenskaper </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="Sound.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Konstruktor </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="Sound.html#methodSummary" style="display:none"> Metoder </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="Sound.html#constantSummary" style="display:none"> Globala konstanter </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="Sound.html#eventSummary" style="display:none"> Händelser </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="Sound.html#styleSummary" style="display:none"> Format </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="Sound.html#SkinPartSummary" style="display:none"> Skaldelar </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="Sound.html#SkinStateSummary" style="display:none"> Skallägen </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="Sound.html#effectSummary" style="display:none"> Effekter </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="Sound.html#constantSummary" style="display:none"> Konstanter </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="Sound.html#methodSummary" style="display:none"> Globala funktioner </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="Sound.html#methodSummary" style="display:none">Funktioner</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="Sound.html#interfaceSummary" style="display:none"> Gränssnitt </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="Sound.html#classSummary" style="display:none"> Klasser </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="Sound.html#includeExamplesSummary" style="display:none"> Exempel </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="Sound.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								Klasser
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Paket</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">flash.media</a></td></tr><tr><td class="classHeaderTableLabel">Klass</td><td class="classSignature">public  class  Sound</td></tr><tr><td class="classHeaderTableLabel">Arv</td><td class="inheritanceList">Sound  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../Object.html">Object</a></td></tr><tr><td class="classHeaderTableLabel">Underklasser</td><td> <a href="../../mx/core/SoundAsset.html">SoundAsset</a></td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p></p>
+  Med klassen Sound kan du arbeta med ljud i ett program. Med klassen Sound kan du skapa ett Sound-objekt, läsa in och spela upp en extern MP3-fil i det objektet, stänga ljudflödet och få åtkomst till data om ljudet, till exempel information om antal byte i flödet och ID3-metadata.  En utförligare kontroll av ljudet utförs via ljudkällan – SoundChannel- eller Microphone-objektet för ljudet – och via egenskaperna i SoundTransform-klassen som kontrollerar ljudet till datorns högtalare. 
+  
+  <p>I Flash Player 10 och senare och AIR 1.5 och senare kan du också använda denna klass för att arbeta med ljud som skapas dynamiskt.  I detta fall använder Sound-objektet den funktion du tilldelar till en <code>sampleData</code>-händelsehanterare för att hämta ljuddata.  Ljudet spelas upp under det att det hämtas från ett ByteArray-objekt som du fyller på med ljuddata. Du kan använda <code>Sound.extract()</code> för att extrahera ljuddata från ett Sound-objekt. Sedan kan du bearbeta det innan du skriver tillbaka det till strömmen för uppspelning.</p>
+  
+               <p>Om du vill kontrollera ljud som är inbäddade i en SWF-fil använder du egenskaperna i SoundMixer-klassen.</p>
+  
+               <p>
+                  <b>Obs</b>: ActionScript 3.0 Sound API skiljer sig från ActionScript 2.0. I ActionScript 3.0 kan du inte kontrollera egenskaper för sound-objekt genom att ordna dem hierarkiskt.</p>
+  
+               <p>Överväg följande säkerhetsmodell när du använder den här klassen: </p>
+  
+               <ul>
+                  <li>Inläsning och uppspelning av ett ljud tillåts inte om den anropande filen finns i en nätverkssandlåda och ljudfilen som ska läsas in är lokal.</li>
+                  <li>Som standard är det inte tillåtet att läsa in och spela upp ett ljud om den anropade filen är lokal och försöker läsa in och spela upp ett fjärrljud. En användare måste ge särskild behörighet som tillåter den här typen av åtkomst.</li>
+                  <li>Vissa åtgärder som har med ljud att göra är begränsade. Det går inte att få åtkomst till data i ett inläst ljud med en fil i en annan domän om du inte implementerar en korsdomänprincipfil. Ljudrelaterade API:er som faller under denna begränsning är <code>Sound.id3</code>, <code>SoundMixer.computeSpectrum()</code>, <code>SoundMixer.bufferTime</code> och klassen <code>SoundTransform</code>.</li>
+               </ul>
+  
+               <p>I Adobe AIR begränsas emellertid inte innehåll i säkerhetssandlådan <code>application</code> (innehåll som installeras med AIR-programmet) av de här säkerhetsbegränsningarna.</p>
+  
+               <p>Mer information om säkerhet finns i avsnittet <a href="http://www.adobe.com/go/devnet_security_se" target="external">Security</a> på Flash Player Developer Center.</p>
+  
+            <p></p><p><a href="Sound.html#includeExamplesSummary">Visa exemplen</a></p><p><span class="classHeaderTableLabel">Relaterade API-element</span></p><div class="seeAlso"><a href="../net/NetStream.html" target="">flash.net.NetStream</a><br/><a href="Microphone.html" target="">Microphone</a><br/><a href="SoundChannel.html" target="">SoundChannel</a><br/><a href="SoundMixer.html" target="">SoundMixer</a><br/><a href="SoundTransform.html" target="">SoundTransform</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary" id="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Publika egenskaper</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="Sound.html#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Dölj ärvda publika egenskaper</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="Sound.html#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Visa ärvda publika egenskaper</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Egenskap</th><th>Definieras med</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="Sound.html#bytesLoaded" class="signatureLink">bytesLoaded</a> : <a href="../../uint.html">uint</a><div class="summaryTableDescription">[skrivskyddad] 
+     Returnerar det tillgängliga antalet byte i det här ljudobjektet.</div></td><td class="summaryTableOwnerCol">Sound</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="Sound.html#bytesTotal" class="signatureLink">bytesTotal</a> : <a href="../../int.html">int</a><div class="summaryTableDescription">[skrivskyddad] 
+     Returnerar det totala antalet byte i det här ljudobjektet.</div></td><td class="summaryTableOwnerCol">Sound</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="../../Object.html#constructor" class="signatureLink">constructor</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">
+	 En referens till klassobjektet eller konstruktorfunktionen för en given objektinstans.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="Sound.html#id3" class="signatureLink">id3</a> : <a href="ID3Info.html">ID3Info</a><div class="summaryTableDescription">[skrivskyddad] 
+     Ger tillgång till metadata som ingår i en MP3-fil.</div></td><td class="summaryTableOwnerCol">Sound</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="Sound.html#isBuffering" class="signatureLink">isBuffering</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">[skrivskyddad] 
+     Returnerar buffringsläget för externa MP3-filer.</div></td><td class="summaryTableOwnerCol">Sound</td></tr><tr class="" runtime="Flash::10.1##AIR::2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="Sound.html#isURLInaccessible" class="signatureLink">isURLInaccessible</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">[skrivskyddad] 
+	 Anger om egenskapen Sound.url har trunkerats.</div></td><td class="summaryTableOwnerCol">Sound</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="Sound.html#length" class="signatureLink">length</a> : <a href="../../Number.html">Number</a><div class="summaryTableDescription">[skrivskyddad] 
+     Det aktuella ljudets varaktighet i millisekunder.</div></td><td class="summaryTableOwnerCol">Sound</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="Sound.html#url" class="signatureLink">url</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">[skrivskyddad] 
+     URL:en som ljudet lästes in från.</div></td><td class="summaryTableOwnerCol">Sound</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary" id="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Publika metoder </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="Sound.html#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Dölj ärvda publika metoder</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="Sound.html#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Visa ärvda publika metoder</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Metod</th><th>Definieras med</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Sound.html#Sound()" class="signatureLink">Sound</a>(stream:<a href="../net/URLRequest.html">URLRequest</a> = null, context:<a href="SoundLoaderContext.html">SoundLoaderContext</a> = null)</div><div class="summaryTableDescription">
+     Skapar ett nytt Sound-objekt.</div></td><td class="summaryTableOwnerCol">Sound</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#addEventListener()" class="signatureLink">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	Registrerar ett händelseavlyssnarobjekt för ett EventDispatcher-objekt så att avlyssnaren får meddelanden om händelser.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Sound.html#close()" class="signatureLink">close</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     Stänger flödet så att eventuell datanedladdning avbryts.</div></td><td class="summaryTableOwnerCol">Sound</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	Skickar en händelse till händelseflödet.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::10##AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Sound.html#extract()" class="signatureLink">extract</a>(target:<a href="../utils/ByteArray.html">ByteArray</a>, length:<a href="../../Number.html">Number</a>, startPosition:<a href="../../Number.html">Number</a> = -1):<a href="../../Number.html">Number</a></div><div class="summaryTableDescription">
+      Extraherar ljuddata i raw-format från ett Sound-objekt.</div></td><td class="summaryTableOwnerCol">Sound</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	Kontrollerar om EventDispatcher-objektet har några avlyssnare registrerade för en viss typ av händelse.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#hasOwnProperty()" class="signatureLink">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Anger om det finns en egenskap angiven för ett objekt.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#isPrototypeOf()" class="signatureLink">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Anger om en instans av klassen Object finns i prototypkedjan för objektet som anges som parameter.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Sound.html#load()" class="signatureLink">load</a>(stream:<a href="../net/URLRequest.html">URLRequest</a>, context:<a href="SoundLoaderContext.html">SoundLoaderContext</a> = null):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     Initierar inläsning av en extern MP3-fil från den angivna URL:en.</div></td><td class="summaryTableOwnerCol">Sound</td></tr><tr class="" runtime="AIR::3##Flash::11##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Sound.html#loadCompressedDataFromByteArray()" class="signatureLink">loadCompressedDataFromByteArray</a>(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, bytesLength:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 läs in MP3-ljudinformation från ett ByteArray-objekt till ett Sound-objekt.</div></td><td class="summaryTableOwnerCol">Sound</td></tr><tr class="" runtime="AIR::3##Flash::11##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Sound.html#loadPCMFromByteArray()" class="signatureLink">loadPCMFromByteArray</a>(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, samples:<a href="../../uint.html">uint</a>, format:<a href="../../String.html">String</a> = "float", stereo:<a href="../../Boolean.html">Boolean</a> = true, sampleRate:<a href="../../Number.html">Number</a> = 44100.0):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 Läs in PCM 32-bitars flyttalsljudinformation för ett ByteArray-objekt till ett Sound-objekt.</div></td><td class="summaryTableOwnerCol">Sound</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Sound.html#play()" class="signatureLink">play</a>(startTime:<a href="../../Number.html">Number</a> = 0, loops:<a href="../../int.html">int</a> = 0, sndTransform:<a href="SoundTransform.html">flash.media:SoundTransform</a> = null):<a href="SoundChannel.html">SoundChannel</a></div><div class="summaryTableDescription">
+     Skapar ett nytt SoundChannel-objekt som ska spela upp ljudet.</div></td><td class="summaryTableOwnerCol">Sound</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#propertyIsEnumerable()" class="signatureLink">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Anger om den angivna egenskapen finns och är uppräkningsbar.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#removeEventListener()" class="signatureLink">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	Tar bort en avlyssnare från EventDispatcher-objektet.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#setPropertyIsEnumerable()" class="signatureLink">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     Anger tillgänglighet för en dynamisk egenskap för slingåtgärder.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toLocaleString()" class="signatureLink">toLocaleString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 Returnerar det här objektets strängrepresentation, formaterad i enlighet med språkspecifika konventioner.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toString()" class="signatureLink">toString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 Returnerar det angivna objektets strängbeteckning.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#valueOf()" class="signatureLink">valueOf</a>():<a href="../../Object.html">Object</a></div><div class="summaryTableDescription">
+	 Returnerar det angivna objektets primitiva värde.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	Kontrollerar om en händelseavlyssnare är registrerad för det här EventDispatcher-objektet eller något av dess överordnade objekt för den angivna händelsetypen.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary" id="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Händelser</div><div class="showHideLinks"><a href="http://help.adobe.com/en_US/Flex/4.6/UsingSDK/WS2db454920e96a9e51e63e3d11c0bf69084-7ee9.html" target="_blank">Klicka för mer information om händelser</a></div><div class="showHideLinks"><div id="hideInheritedEvent" class="hideInheritedEvent"><a class="showHideLink" href="Sound.html#eventSummary" onclick="javascript:setInheritedVisible(false,'Event');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Dölj ärvda händelser</a></div><div id="showInheritedEvent" class="showInheritedEvent"><a class="showHideLink" href="Sound.html#eventSummary" onclick="javascript:setInheritedVisible(true,'Event');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Visa ärvda händelser</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Händelse</th><th> Sammanfattning </th><th>Definieras med</th></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[utsändningshändelse] Skickas när Flash Player eller AIR får operativsystemfokus och blir aktivt.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Sound.html#event:complete" class="signatureLink">complete</a></div></td><td class="summaryTableDescription summaryTableCol">Skickas när alla data är inlästa.</td><td class="summaryTableOwnerCol">Sound</td></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[utsändningshändelse] Skickas när Flash Player eller AIR förlorar operativsystemfokus och blir inaktivt.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Sound.html#event:id3" class="signatureLink">id3</a></div></td><td class="summaryTableDescription summaryTableCol">Skickas av ett Sound-objekt när ID3-data finns tillgängligt för ett MP3-ljud.</td><td class="summaryTableOwnerCol">Sound</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Sound.html#event:ioError" class="signatureLink">ioError</a></div></td><td class="summaryTableDescription summaryTableCol">Skickas om ett in- eller utdatafel orsakar en misslyckad inläsningsåtgärd.</td><td class="summaryTableOwnerCol">Sound</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Sound.html#event:open" class="signatureLink">open</a></div></td><td class="summaryTableDescription summaryTableCol">Skickas när en inläsning initieras.</td><td class="summaryTableOwnerCol">Sound</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Sound.html#event:progress" class="signatureLink">progress</a></div></td><td class="summaryTableDescription summaryTableCol">Skickas när data tas emot som ett inläsningsförlopp.</td><td class="summaryTableOwnerCol">Sound</td></tr><tr class="" runtime="Flash::10##AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Sound.html#event:sampleData" class="signatureLink">sampleData</a></div></td><td class="summaryTableDescription summaryTableCol">Skickas när miljön begär nya ljuddata.</td><td class="summaryTableOwnerCol">Sound</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Egenskapsdetaljer</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail" id="propertyDetail"></a><a name="bytesLoaded" id="bytesLoaded"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>bytesLoaded</h3></td><td class="detailHeaderType">egenskap</td></tr></table><div class="detailBody"><code>bytesLoaded:<a href="../../uint.html">uint</a></code>&nbsp;&nbsp;[skrivskyddad] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     Returnerar det tillgängliga antalet byte i det här ljudobjektet. Den här egenskapen är vanligtvis endast användbar för externt inlästa filer.
+     
+     </p><br/><br/><span class="label"> Implementering </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get bytesLoaded():<a href="../../uint.html">uint</a></code><br/></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail" id="propertyDetail"></a><a name="bytesTotal" id="bytesTotal"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>bytesTotal</h3></td><td class="detailHeaderType">egenskap</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>bytesTotal:<a href="../../int.html">int</a></code>&nbsp;&nbsp;[skrivskyddad] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     Returnerar det totala antalet byte i det här ljudobjektet. 
+     
+     </p><br/><br/><span class="label"> Implementering </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get bytesTotal():<a href="../../int.html">int</a></code><br/></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail" id="propertyDetail"></a><a name="id3" id="id3"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>id3</h3></td><td class="detailHeaderType">egenskap</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>id3:<a href="ID3Info.html">ID3Info</a></code>&nbsp;&nbsp;[skrivskyddad] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     Ger tillgång till metadata som ingår i en MP3-fil.
+     
+     <p>MP3-ljudfiler kan innehålla ID3-taggar som innehåller metadata för filen. Om ett MP3-ljud du läser in med metoden <code>Sound.load()</code> eller innehåller ID3-taggar kan du avfråga dessa egenskaper. Bara ID3-taggar med teckenuppsättningen UTF-8 stöds.</p>
+     
+     <p><span>Flash Player&nbsp;9 och senare versioner samt AIR har stöd för</span> ID3 2.0-taggar, närmare bestämt 2.3 och 2.4. I följande tabell visas standardtaggarna för ID3&nbsp;2.0 och den typ av innehåll som taggarna representerar. Egenskapen <code>Sound.id3</code> ger tillgång till dessa taggar via formatet <code>my_sound.id3.COMM</code>, <code>my_sound.id3.TIME</code> och så vidare. Den första tabellen innehåller en beskrivning av taggar som går att få åtkomst till antingen via ID3 2.0-egenskapsnamnet eller via ActionScript-egenskapsnamnet. Den andra tabellen innehåller en beskrivning av ID3-taggar som stöds med som inte har fördefinierade egenskaper i ActionScript. </p>
+     
+     <table class="innertable" ><tr><td><b>ID3 2.0-tagg</b></td><td><b>Motsvarande egenskap i klassen Sound</b></td></tr><tr><td>COMM</td><td>Sound.id3.comment</td></tr><tr><td>TALB</td><td>Sound.id3.album </td></tr><tr><td>TCON</td><td>Sound.id3.genre</td></tr><tr><td>TIT2</td><td>Sound.id3.songName </td></tr><tr><td>TPE1</td><td>Sound.id3.artist</td></tr><tr><td>TRCK</td><td>Sound.id3.track </td></tr><tr><td>TYER</td><td>Sound.id3.year </td></tr></table>
+     
+     <p>Följande tabell innehåller en beskrivning av ID3-taggar som stöds men som inte har fördefinierade egenskaper i klassen Sound. Du får tillgång till dem genom att anropa <code>mySound.id3.TFLT</code>, <code>mySound.id3.TIME</code> och så vidare. <b>Obs!</b> Ingen av dessa taggar stöds i Flash Lite&nbsp;4.</p>  
+      <table class="innertable" ><tr><td><b>Egenskap</b></td><td><b>Beskrivning</b></td></tr><tr><td>TFLT</td><td>Filtyp</td></tr><tr><td>TIME</td><td>Tidpunkt</td></tr><tr><td>TIT1</td><td>Beskrivning av innehållsgrupp</td></tr><tr><td>TIT2</td><td>Beskrivning av titel/låtnamn/innehåll</td></tr><tr><td>TIT3</td><td>Textnings-/beskrivningsutveckling</td></tr><tr><td>TKEY</td><td>Initialnyckel</td></tr><tr><td>TLAN</td><td>Språk</td></tr><tr><td>TLEN</td><td>Längd</td></tr><tr><td>TMED</td><td>Medietyp</td></tr><tr><td>TOAL</td><td>Albumets/filmens/showens originaltitel</td></tr><tr><td>TOFN</td><td>Originalfilnamn</td></tr><tr><td>TOLY</td><td>Originalets textförfattare</td></tr><tr><td>TOPE</td><td>Originalartister</td></tr><tr><td>TORY</td><td>Ursprungligt utgivningsår</td></tr><tr><td>TOWN</td><td>Filens ägare/licenstagare</td></tr><tr><td>TPE1</td><td>Huvudartister/solister</td></tr><tr><td>TPE2</td><td>Band/orkester/ackompanjemang</td></tr><tr><td>TPE3</td><td>Dirigent-/artistutveckling</td></tr><tr><td>TPE4</td><td>Tolkad, remixad eller på annat sätt ändrad av</td></tr><tr><td>TPOS</td><td>Del av en serie</td></tr><tr><td>TPUB</td><td>Utgivare</td></tr><tr><td>TRCK</td><td>Spårnummer/plats i en serie</td></tr><tr><td>TRDA</td><td>Inspelningsdatum</td></tr><tr><td>TRSN</td><td>Namn på Internet-radiostation</td></tr><tr><td>TRSO</td><td>Internet-radiostationens ägare</td></tr><tr><td>TSIZ</td><td>Storlek</td></tr><tr><td>TSRC</td><td>ISRC (International Standard Recording Code)</td></tr><tr><td>TSSE</td><td>Programvara/maskinvara och inställningar som används för kodning</td></tr><tr><td>TYER</td><td>År</td></tr><tr><td>WXXX</td><td>URL-länkram</td></tr></table>
+     
+     
+     <p>Tänk på Flash Players säkerhetsmodell när du använder den här egenskapen:</p>
+     
+     <ul><li>Egenskapen <code>id3</code> för ett Sound-objekt tillåts alltid för SWF-filer som finns i samma säkerhetssandlåda som ljudfilen. För filer i andra sandlådor finns det säkerhetskontroller.</li><li>Om du läser in ljudet med metoden <code>load()</code> i Sound-klassen kan du ange en <code>context</code>-parameter som är ett SoundLoaderContext-objekt. Om du ställer in egenskapen <code>checkPolicyFile</code> för SoundLoaderContext-objektet på <code>true</code> söker Flash Player efter en URL-principfil på den server från vilken ljudet lästes in. Om det finns en principfil och om filen godkänner åtkomst från domänen för den inlästa SWF-filen, får filen åtkomst till <code>id3</code>-egenskapen i Sound-objekt. Annars får den inte åtkomst.</li></ul>
+     
+     <p>I Adobe AIR begränsas emellertid inte innehåll i säkerhetssandlådan <code>application</code> (innehåll som installeras med AIR-programmet) av de här säkerhetsbegränsningarna.</p>
+     
+     <p>Mer information om säkerhet finns i avsnittet <a href="http://www.adobe.com/go/devnet_security_se" target="external">Security</a> på Flash Player Developer Center.</p>
+     
+     </p><br/><br/><span class="label"> Implementering </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get id3():<a href="ID3Info.html">ID3Info</a></code><br/><p><span class="label">Relaterade API-element</span></p><div class="seeAlso"><a href="SoundLoaderContext.html#checkPolicyFile" target="">SoundLoaderContext.checkPolicyFile</a></div><span id="pageFilter"><br/><span class="label"> Exempel &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_se"> Så här använder du exemplet </a></span>)
+            </span><br/><div class="detailBody"> I följande exempel läses ID3-information från en ljudfil och visas i ett textfält.
+ 
+ <p>I konstruktorn läses ljudfilen in men den ställs inte in på uppspelning. Här antas filen finnas i SWF-katalogen. Datorn måste ha behörighet för att kunna läsa ID3-taggar i en inläst ljudfil. Om det fins ID3-information i filen och programmet får läsa den aktiveras en <code>Event.ID3</code>-händelse och egenskapen <code>id3</code> i ljudfilen fylls i. Egenskapen <code>id3</code> innehåller ett <code>ID3Info</code>-objekt med all ID3-information.</p>
+ 
+ <p>I metoden <code>id3Handler()</code> sparas filens ID3-taggar i <code>id3</code>, ett objekt av klassen ID3Info. En textfältsinstans skapas för att visa listan med ID3-taggar. for-slingan itererar genom alla ID3 2.0-taggar och lägger till deras namn och värden i textfältets innehåll. Med hjälp av egenskaper för ID3-info (<code>ID3Info</code>) läggs även artist, låttitel och album till. ActionScript 3.0 och Flash Player 9 och senare har stöd för ID3 2.0-taggar, specifikt 2.3 och 2.4. Om du itererar genom egenskaper som i for-slingan visas bara ID3 2.0-taggar. Data från tidigare versioner lagras också i låtens <code>id3</code>-egenskap och kan visas med hjälp av egenskaperna i klassen ID3Info. Taggarna för ID3 1.0 finns i slutet av filen medan ID3 2.0-taggar finns i början av filen. (Ibland kan filerna ha både tidigare och senare versioner av taggarna på samma ställe.) Om en fil som är kodad med både version 1.0- och version 2.0-taggar i början och slutet av filen anropas metoden <code>id3Handler()</code> två gånger. Först läses version 2.0 och sedan version 1.0. Om det bara finns ID3 1.0-taggar är informationen tillgänglig via ID3-egenskaperna, till exempel <code>id3.songname</code>. För ID3 2.0 hämtar egenskapen <code>id3.TITS</code> låttiteln med den nya taggen (TITS).</p>
+ 
+ <p>Observera att ingen felhantering har skrivits för det här exemplet och om ID3-innehållet är långt kanske inte resultatet får plats i det synliga området.</p> 
+ 
+<div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+    import flash.media.Sound;
+    import flash.net.URLRequest;
+    import flash.media.ID3Info;
+    import flash.text.TextField;
+    import flash.text.TextFieldAutoSize;
+    import flash.events.Event;
+
+    public class Sound_id3Example extends Sprite {
+        private var snd:Sound = new Sound();       
+        private var myTextField:TextField = new TextField();
+
+        public function Sound_id3Example() {
+            snd.addEventListener(Event.ID3, id3Handler);
+            snd.load(new URLRequest("mySound.mp3"));
+        }
+    
+        private function id3Handler(event:Event):void {
+            var id3:ID3Info = snd.id3;
+
+            myTextField.autoSize = TextFieldAutoSize.LEFT;
+            myTextField.border = true;
+
+            myTextField.appendText("Received ID3 Info: \n");
+              
+            for (var propName:String in id3) {
+                myTextField.appendText(propName + " = " + id3[propName] + "\n");
+            }
+ 
+            myTextField.appendText("\n" + "Artist: " + id3.artist + "\n");
+            myTextField.appendText("Song name: " + id3.songName + "\n");
+            myTextField.appendText("Album: " + id3.album + "\n\n"); 
+ 
+            this.addChild(myTextField);
+        }
+    }
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail" id="propertyDetail"></a><a name="isBuffering" id="isBuffering"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>isBuffering</h3></td><td class="detailHeaderType">egenskap</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isBuffering:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[skrivskyddad] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     Returnerar buffringsläget för externa MP3-filer. Om värdet är <code>true</code> är eventuell uppspelning för tillfället inaktiverad medan objektet väntar på mer data.
+     
+     </p><br/><br/><span class="label"> Implementering </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isBuffering():<a href="../../Boolean.html">Boolean</a></code><br/></div></span><span id="pageFilter" runtime="Flash::10.1##AIR::2##"><a name="propertyDetail" id="propertyDetail"></a><a name="isURLInaccessible" id="isURLInaccessible"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>isURLInaccessible</h3></td><td class="detailHeaderType">egenskap</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isURLInaccessible:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[skrivskyddad] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>Flash Player 10.1, AIR 2</td></tr></table><p></p><p></p><p>
+	 Anger om egenskapen <code>Sound.url</code> har trunkerats. När värdet <code>isURLInaccessible</code> är <code>true</code> är värdet <code>Sound.url</code> bara domänen för den slutliga webbadress varifrån ljudet lästes in. Egenskapen är till exempel trunkerad om ljudet läses in från <code>http://www.adobe.com/assets/hello.mp3</code> och egenskapen <code>Sound.url</code> har värdet <code>http://www.adobe.com</code>. Värdet för <code>isURLInaccessible</code> är bara <code>true</code> om alla följande påståenden stämmer:
+	 
+	 <ul><li>En HTTP-omdirigering inträffade när ljudfilen lästes in.</li><li>Den SWF-fil som anropar <code>Sound.load()</code> är från en annan domän än ljudets slutliga webbadress.</li><li>Den SWF-fil som anropar <code>Sound.load()</code> har inte behörighet att komma åt ljudfilen. Behörighet för ljudfilen ges på samma sätt som för egenskapen <code>Sound.id3</code>: skapa en principfil och använd egenskapen <code>SoundLoaderContext.checkPolicyFile</code>.</li></ul>
+	 
+	 <p><b>Obs!</b> Egenskapen <code>isURLInaccessible</code> har lagts till i Flash Player&nbsp;10.1 och AIR&nbsp;2.0, men den här egenskapen är tillgänglig för alla SWF-filer oavsett version när Flash-miljön stöder den. Om du använder vissa utvecklingsverktyg i s.k. strikt läge kan det därför orsaka ett kompileringsfel. Du kan undvika felet genom att använda den indirekta syntaxen <code>mySound["isURLInaccessible"]</code> eller inaktivera strikt läge. Om du använder Flash Professional&nbsp;CS5 eller Flex SDK&nbsp;4.1 kan du använda och kompilera detta API för körningsmiljöer som släpptes före Flash Player&nbsp;10.1 och AIR&nbsp;2.</p>
+	 
+	 <p>För programinnehåll i AIR är värdet på den här egenskapen alltid <code>false</code>.</p>
+	 
+	 </p><br/><br/><span class="label"> Implementering </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isURLInaccessible():<a href="../../Boolean.html">Boolean</a></code><br/><p><span class="label">Relaterade API-element</span></p><div class="seeAlso"><a href="Sound.html#url" target="">url</a><br/><a href="Sound.html#id3" target="">id3</a><br/><a href="SoundLoaderContext.html#checkPolicyFile" target="">flash.media.SoundLoaderContext.checkPolicyFile</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail" id="propertyDetail"></a><a name="length" id="length"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>length</h3></td><td class="detailHeaderType">egenskap</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>length:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[skrivskyddad] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     Det aktuella ljudets varaktighet i millisekunder.
+     
+     </p><br/><br/><span class="label"> Implementering </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get length():<a href="../../Number.html">Number</a></code><br/></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail" id="propertyDetail"></a><a name="url" id="url"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>url</h3></td><td class="detailHeaderType">egenskap</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>url:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[skrivskyddad] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     URL:en som ljudet lästes in från. Den här egenskapen används bara på Sound-objekt som lästs in med metoden <code>Sound.load()</code>. För Sound-objekt som associeras med en ljudresurs från en SWF-fils bibliotek är värdet för egenskapen <code>url</code> <code>null</code>.
+     
+     <p>Fösta gången du anropar <code>Sound.load()</code> har <code>url</code>-egenskapen till en början ett värde på <code>null</code> eftersom man inte känner till den slutliga URL:en än. Egenskapen <code>url</code> kommer att ha ett värde som inte är null så fort en <code>open</code>-händelse skickas från Sound-objektet.</p>
+     
+     <p>Egenskapen <code>url</code> innehåller den slutliga, absoluta URL:en som ett ljud läses in från. Värdet för <code>url</code> är oftast samma som värdet som skickas till parametern <code>stream</code> för <code>Sound.load()</code>. Om du skickade en relativ URL till <code>Sound.load()</code> representerar värdet för <code>url</code>-egenskapen den absoluta URL:en. Om den ursprungliga URL-begäran dessutom omdirigeras av en HTTP-server, återspeglar värdet för <code>url</code>-egenskapen den slutliga URL:en som ljudfilen i själva verket har lästs in från. Denna rapportering av en absolut, slutlig URL motsvarar beteendet för <code>LoaderInfo.url</code>.</p>
+     <p>I vissa fall trunkeras värdet på egenskapen <code>url</code>. Läs mer om detta i avsnittet om egenskapen <code>isURLInaccessible</code>.</p>
+     
+     
+     </p><br/><br/><span class="label"> Implementering </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get url():<a href="../../String.html">String</a></code><br/><p><span class="label">Relaterade API-element</span></p><div class="seeAlso"><a href="Sound.html#load()" target="">load()</a><br/><a href="../display/LoaderInfo.html#url" target="">flash.display.LoaderInfo.url</a><br/><a href="Sound.html#isURLInaccessible" target="">isURLInaccessible</a></div></div></span><a name="constructorDetail" id="constructorDetail"></a><div class="detailSectionHeader">Konstruktordetaljer</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="Sound()" id="Sound()"></a><a name="Sound(flash.net.URLRequest,flash.media.SoundLoaderContext)" id="Sound(flash.net.URLRequest,flash.media.SoundLoaderContext)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Sound</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Konstruktor</td></tr></table><div class="detailBody"><code>public function Sound(stream:<a href="../net/URLRequest.html">URLRequest</a> = null, context:<a href="SoundLoaderContext.html">SoundLoaderContext</a> = null)</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p>
+     Skapar ett nytt Sound-objekt. Om du skickar ett giltigt URLRequest-objekt till Sound-konstruktorn anropas funktionen <code>load()</code> för Sound-objektet automatiskt. Om du skickar ett giltigt URLRequest-objekt till Sound-konstruktorn måste du anropa funktionen <code>load()</code> för Sound-objektet, annars läses flödet inte in.
+     
+     <p>Om <code>load()</code> har anropats för ett Sound-objekt går det inte att senare läsa in en annan ljudfil till det Sound-objektet. Om du vill läsa in en annan ljudfil skapar du ett nytt Sound-objekt.</p>
+     
+     I Flash Player&nbsp;10 och senare versioner, samt AIR&nbsp;1.5 och senare versioner, kan du i stället för att använda <code>load()</code> använda händelsehanteraren <code>sampleData</code> för att läsa in ljud dynamiskt till Sound-objektet.
+     
+     </p><span class="label"> Parametrar </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">stream</span>:<a href="../net/URLRequest.html">URLRequest</a></code> (default = <code>null</code>)<code></code> &mdash;  URL:en som pekar på en extern MP3-fil.
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">context</span>:<a href="SoundLoaderContext.html">SoundLoaderContext</a></code> (default = <code>null</code>)<code></code> &mdash;  Ett valfritt SoundLoader-kontextobjekt som kan definiera bufferttiden (det minsta antal millisekunder med MP3-data som ska lagras i Sound-objektets buffert) och ange huruvida programmet ska söka efter en korsdomänprincipfil före inläsningen av ljudet.
+     
+     </td></tr></table></div></span><a name="methodDetail" id="methodDetail"></a><div class="detailSectionHeader">Metoddetaljer</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="close()" id="close()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>close</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">metod</td></tr></table><div class="detailBody"><code> public function close():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     Stänger flödet så att eventuell datanedladdning avbryts. Det går inte att läsa några data från flödet efter att <code>close()</code>-metoden har anropats.
+     
+     </p><br/><span class="label">Utlöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Dataflödet kunde inte stängas eller så var det inte öppet.
+     
+     </td></tr></table><span id="pageFilter"><br/><span class="label"> Exempel &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_se"> Så här använder du exemplet </a></span>)
+            </span><br/><br/><div class="detailBody"> I följande exempel anropas metoden <code>Sound.close()</code> och direktuppspelningen av ljudet stoppas.
+ 
+ <p>I konstruktorn skapas ett textfält för start- och stoppknappen. När användaren klickar på textfältet anropas metoden <code>clickHandler()</code>. Den hanterar start och stopp för ljudfilen. Beroende på nätverksanslutningen och på när användaren klickar på stoppknappen kan en stor del av filen redan ha lästs in och det kan ta en stund innan ljuduppspelningen avbryts. Ett <code>try...catch</code>-block används för att hantera eventuella IO-fel som kan uppstå när flödet stängs. Om ljudet till exempel läses in från en lokal katalog och inte direktuppspelas uppstår fel 2029, vilket innebär "URLStream-objektet har inget öppet dataflöde".</p> 
+ 
+<div class="listing"><pre> 
+package {
+    import flash.display.Sprite;
+    import flash.net.URLRequest;
+    import flash.media.Sound;    
+    import flash.text.TextField;
+    import flash.text.TextFieldAutoSize;
+    import flash.events.MouseEvent;
+    import flash.errors.IOError;
+    import flash.events.IOErrorEvent;
+
+    public class Sound_closeExample extends Sprite {
+        private var snd:Sound = new Sound();
+        private var button:TextField = new TextField();
+        private var req:URLRequest = new URLRequest("http://av.adobe.com/podcast/csbu_dev_podcast_epi_2.mp3");
+        
+        public function Sound_closeExample() {
+            button.x = 10;
+            button.y = 10;
+            button.text = "START";
+            button.border = true;
+            button.background = true;
+            button.selectable = false;
+            button.autoSize = TextFieldAutoSize.LEFT;
+
+            button.addEventListener(MouseEvent.CLICK, clickHandler);
+
+            this.addChild(button);
+        }
+
+        private function clickHandler(e:MouseEvent):void {
+
+            if(button.text == "START") {
+
+                snd.load(req);
+                snd.play();        
+
+                snd.addEventListener(IOErrorEvent.IO_ERROR, errorHandler);
+
+                button.text = "STOP";
+            }
+            else if(button.text == "STOP") {
+                    
+                try {
+                    snd.close();
+                    button.text = "Wait for loaded stream to finish.";
+                }
+                catch (error:IOError) {
+                    button.text = "Couldn't close stream " + error.message;    
+                }
+            }
+        }
+        
+        private function errorHandler(event:IOErrorEvent):void {
+                button.text = "Couldn't load the file " + event.text;
+        }
+    }
+}
+
+
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##"><a name="extract()" id="extract()"></a><a name="extract(flash.utils.ByteArray,Number,Number)" id="extract(flash.utils.ByteArray,Number,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>extract</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">metod</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function extract(target:<a href="../utils/ByteArray.html">ByteArray</a>, length:<a href="../../Number.html">Number</a>, startPosition:<a href="../../Number.html">Number</a> = -1):<a href="../../Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>Flash Player 10, AIR 1.5</td></tr></table><p></p><p></p><p>
+      Extraherar ljuddata i raw-format från ett Sound-objekt.
+     
+      <p>Denna metod är utformad för att användas när du arbetar med dynamiskt skapade ljud. Den använder en funktion som du tilldelar till <code>sampleData</code>-händelsen för ett annat Sound-objekt. Det innebär att du kan använda den här metoden för att extrahera ljuddata från ett Sound-objekt. Sedan kan du skriva dessa data till den bytearray som ett annat Sound-objekt använder för att strömma dynamiskt ljud.</p>
+     
+      <p>Ljuddata placeras i byte-arrayen med början från den aktuella positionen i byte-arrayen. Ljuddata visas alltid som 44 100 Hz Stereo. Samplingstypen är ett 32-bitars flyttalsvärde som kan konverteras till ett Number-objekt med hjälp av <code>ByteArray.readFloat()</code>. </p>
+     
+     </p><p><span class="label"> Parametrar </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">target</span>:<a href="../utils/ByteArray.html">ByteArray</a></code> &mdash; Ett ByteArray-objekt i vilket de extraherade ljudsamplingarna placeras.
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">length</span>:<a href="../../Number.html">Number</a></code> &mdash; Antal ljudsamplingar som ska extraheras. En sampling innehåller både vänster och höger kanal, vilket innebär två 32-bitars flyttalsvärden.
+          
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">startPosition</span>:<a href="../../Number.html">Number</a></code> (default = <code>-1</code>)<code></code> &mdash; Samplingen där extraheringen börjar. Om du inte anger ett värde startar det första anropet till <code>Sound.extract()</code> vid början av ljudet. Påföljande anrop utan värde för <code>startPosition</code> angivet går sekventiellt genom filen.
+     
+     </td></tr></table></p><p></p><span class="label">Returnerar</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Number.html">Number</a></code> &mdash; Det antal samplingar som skrivs till den ByteArray som anges i parametern <code>target</code>.
+     
+     </td></tr></table><p><span class="label">Relaterade API-element</span></p><div class="seeAlso"><a href="Sound.html#play()" target="">play()</a><br/><a href="Sound.html#event:sampleData" target="">sampleData</a></div><span id="pageFilter"><br/><span class="label"> Exempel &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_se"> Så här använder du exemplet </a></span>)
+            </span><br/><br/><div class="detailBody"> Följande exempel läser in en mp3-fil och använder metoden <code>extract()</code> från klassen Sound för att komma åt ljuddata.
+ <p>Dessa mp3-data läses in i Sound-objektet <code>sourceSnd</code>. När programmet läser in mp3-data, anropar det funktionen <code>loaded()</code> (händelsehanteraren för <code>complete</code>-händelsen för <code>sourceSnd</code>-objektet). Ett andra Sound-objekt, <code>outputSound</code>, används för att spela upp det ändrade ljudet. Objektet <code>outputSound</code> har en <code>sampleData</code>-händelseavlyssnare. Objektet skickar därför periodiskt <code>sampleData</code>-händelser när du anropar dess <code>play()</code>-metod. Metoden <code>upOctave()</code> returnerar en bytearray med ändrade ljuddata som baseras på dina källjuddata. Den returnerar ljud som är en oktav högre genom att hoppa över varannan ljudsampling i dess källdata. Händelsehanteraren för <code>sampleData</code>-händelsen skriver den returnerade bytearrayen till <code>data</code>-egenskapen för <code>outputSound</code>-objektet. <code>data</code>-bytearrayen läggs till utdataljuddata för <code>outputSound</code>-objektet.</p>
+ <p>Testa det här exemplet genom att lägga till en test.mp3-fil i samma katalog som SWF-filen.</p>
+<div class="listing"><pre>
+
+var sourceSnd:Sound = new Sound();
+var outputSnd:Sound = new Sound();
+var urlReq:URLRequest = new URLRequest("test.mp3");
+
+sourceSnd.load(urlReq);
+sourceSnd.addEventListener(Event.COMPLETE, loaded);
+
+function loaded(event:Event):void
+{
+    outputSnd.addEventListener(SampleDataEvent.SAMPLE_DATA, processSound);
+    outputSnd.play();
+}
+
+function processSound(event:SampleDataEvent):void
+{
+    var bytes:ByteArray = new ByteArray();
+    sourceSnd.extract(bytes, 4096);
+    event.data.writeBytes(upOctave(bytes));
+}
+
+function upOctave(bytes:ByteArray):ByteArray
+{
+    var returnBytes:ByteArray = new ByteArray();
+    bytes.position = 0;
+    while(bytes.bytesAvailable &gt; 0)
+    {
+        returnBytes.writeFloat(bytes.readFloat());
+        returnBytes.writeFloat(bytes.readFloat());
+        if (bytes.bytesAvailable &gt; 0)
+        {
+            bytes.position += 8;
+        }
+    }
+    return returnBytes;
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="load()" id="load()"></a><a name="load(flash.net.URLRequest,flash.media.SoundLoaderContext)" id="load(flash.net.URLRequest,flash.media.SoundLoaderContext)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>load</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">metod</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function load(stream:<a href="../net/URLRequest.html">URLRequest</a>, context:<a href="SoundLoaderContext.html">SoundLoaderContext</a> = null):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     Initierar inläsning av en extern MP3-fil från den angivna URL:en. Om du skickar ett giltigt URLRequest-objekt till Sound-konstruktorn anropas funktionen <code>Sound.load()</code>. Du behöver bara anropa <code>Sound.load()</code> om du inte skickar ett giltigt URLRequest-objekt till Sound-konstruktorn eller om du skickar ett <code>null</code>-värde.
+     
+     <p>Om <code>load()</code> har anropats för ett Sound-objekt går det inte att senare läsa in en annan ljudfil till det Sound-objektet. Om du vill läsa in en annan ljudfil skapar du ett nytt Sound-objekt.</p>
+     
+     <p>Överväg följande säkerhetsmodell när du använder den här metoden:</p>
+     
+     <ul><li>Det är inte tillåtet att anropa <code>Sound.load()</code> om den anropande filen finns i filsystemets lokala sandlåda och ljudet kommer från en sandlåda i ett nätverk. </li><li>Åtkomst från sandlådan lokal-tillförlitlig eller sandlådan lokal-med-nätverk kräver tillstånd från en webbplats i en URL-principfil.</li><li>Du kan inte ansluta till vanligtvis reserverade portar. Du hittar en fullständig lista över spärrade portar i avsnittet ”Begränsa nätverks-API:er” i <i>Utvecklarhandbok för Adobe ActionScript&nbsp;3.0</i>.</li><li>Du kan förhindra att den här metoden används av en SWF-fil genom att ställa in parametern <code>allowNetworking</code> i <code>object</code>- och <code>embed</code>-taggarna på den HTML-sida där SWF-innehållet finns.</li></ul>
+     
+     <p> Om du i Flash Player 10 eller senare använder en multipart-innehållstyp (till exempel ”multipart/form-data”) som innehåller en överföring (vilket indikeras av en ”filename”-parameter i ett ”content-disposition”-huvud inuti POST), gäller de säkerhetsregler som används för överföringar också för POST-åtgärden.</p>
+     <ul><li>POST-åtgärden måste utföras som ett svar på en användarinitierad åtgärd som exempelvis en musklickning eller en tangenttryckning.</li><li>Om POST-åtgärden är för korsdomän (POST-målet ligger inte på samma server som SWF-filen som skickar POST-begäran), måste målservern ha en URL-policyfil som tillåter korsdomänåtkomst.</li></ul>
+     <p>För en multipart-innehållstyp måste också syntaxen vara giltig (enligt RFC2046-standarderna). Om syntaxen verkar vara ogiltig, gäller samma regler för POST-åtgärden som för överföringar.</p>
+     <p>I Adobe AIR begränsas inte innehåll i säkerhetssandlådan <code>application</code> (innehåll som installeras med AIR-programmet) av de här säkerhetsbegränsningarna.</p>
+     
+     <p>Mer information om säkerhet finns i avsnittet <a href="http://www.adobe.com/go/devnet_security_se" target="external">Security</a> på Flash Player Developer Center.</p>
+     
+     </p><p><span class="label"> Parametrar </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">stream</span>:<a href="../net/URLRequest.html">URLRequest</a></code> &mdash;  En URL som pekar på en extern MP3-fil.
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">context</span>:<a href="SoundLoaderContext.html">SoundLoaderContext</a></code> (default = <code>null</code>)<code></code> &mdash;  Ett valfritt SoundLoader-kontextobjekt som kan definiera bufferttiden (det minsta antal millisekunder med MP3-data som ska lagras i Sound-objektets buffert) och ange huruvida programmet ska söka efter en korsdomänprincipfil före inläsningen av ljudet.
+     </td></tr></table></p><br/><span class="label">Utlöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Inläsningen misslyckades på grund av ett nätverksfel.
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; Lokala otillförlitliga filer kanske inte kan kommunicera med Internet. Du kan undvika problemet genom att klassificera om filen som <span>lokal med nätverkstjänst eller</span> tillförlitlig.
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; Du kan inte ansluta till vanligtvis reserverade portar. Du hittar en fullständig lista över spärrade portar i avsnittet ”Begränsa nätverks-API:er” i <i>Utvecklarhandbok för Adobe ActionScript&nbsp;3.0</i>.
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Egenskapen <code>digest</code> för objektet <code>stream</code> är inte <code>null</code>. Du bör endast ange egenskapen <code>digest</code> för ett URLRequest-objekt när du anropar metoden <code>URLLoader.load()</code> när du läser in en SWZ-fil (en plattformskomponent för Adobe).
+     
+     </td></tr></table><span id="pageFilter"><br/><span class="label"> Exempel &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_se"> Så här använder du exemplet </a></span>)
+            </span><br/><br/><div class="detailBody"> I följande exempel visas inläsningsprocessen för en ljudfil.
+ 
+ <p>I konstruktorn skapas ett <code>URLRequest</code>-objekt för att identifiera platsen för ljudfilen, som är en poddsändning från Adobe. Filen läses in i ett <code>try...catch</code>-block för att eventuella fel som kan uppstå i filinläsningen ska kunna hanteras. Om ett IO-fel skulle uppstå anropas även metoden <code>errorHandler()</code> och felmeddelandet skrivs i textfältet som är avsett för förloppsrapporten. När en inläsning pågår skickas en <code>ProgressEvent.PROGRESS</code>-händelse och metoden <code>progressHandler()</code> anropas. Här används <code>ProgressEvent.PROGRESS</code>-händelsen som en timer för att beräkna inläsningens förlopp.</p> 
+  
+ <p>Metoden <code>progressHandler()</code> delar <code>bytesLoaded</code>-värdet som skickas med <code>ProgressEvent</code>-objektet med <code>bytesTotal</code>-värdet för beräkna hur många procent av ljuddata som har lästs in. Sedan visas värdena i textfältet. (Observera att om filen är liten, chachad eller finns i en lokal katalog kanske förloppet går för fort för att märkas.)</p>
+<div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+    import flash.net.URLRequest;
+    import flash.media.Sound;
+    import flash.text.TextField;
+    import flash.text.TextFieldAutoSize;
+    import flash.events.ProgressEvent;
+    import flash.events.IOErrorEvent;
+    
+    public class Sound_loadExample extends Sprite {
+        private var snd:Sound = new Sound();
+        private var statusTextField:TextField  = new TextField();
+
+        public function Sound_loadExample(){
+
+            statusTextField.autoSize = TextFieldAutoSize.LEFT;
+            var req:URLRequest = new URLRequest("http://av.adobe.com/podcast/csbu_dev_podcast_epi_2.mp3");
+            
+            try {
+            snd.load(req);
+            
+            snd.play();
+            }
+            catch (err:Error) {
+                trace(err.message);
+            }
+ 
+            snd.addEventListener(IOErrorEvent.IO_ERROR, errorHandler);
+            snd.addEventListener(ProgressEvent.PROGRESS, progressHandler);
+                     
+            this.addChild(statusTextField);
+        }
+    
+        private function progressHandler(event:ProgressEvent):void {
+            var loadTime:Number = event.bytesLoaded / event.bytesTotal;
+            var LoadPercent:uint = Math.round(100 * loadTime);
+              
+            statusTextField.text = "Sound file's size in bytes: " + event.bytesTotal + "\n" 
+                                 + "Bytes being loaded: " + event.bytesLoaded + "\n" 
+                                 + "Percentage of sound file that is loaded " + LoadPercent + "%.\n";
+        }
+ 
+        private function errorHandler(errorEvent:IOErrorEvent):void {
+            statusTextField.text = "The sound could not be loaded: " + errorEvent.text;
+        }
+    }
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::3##Flash::11##"><a name="loadCompressedDataFromByteArray()" id="loadCompressedDataFromByteArray()"></a><a name="loadCompressedDataFromByteArray(flash.utils.ByteArray,uint)" id="loadCompressedDataFromByteArray(flash.utils.ByteArray,uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>loadCompressedDataFromByteArray</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">metod</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function loadCompressedDataFromByteArray(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, bytesLength:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>AIR 3, Flash Player 11</td></tr></table><p></p><p></p><p>
+	 läs in MP3-ljudinformation från ett ByteArray-objekt till ett Sound-objekt. Informationen kommer att läsas från den aktuella ByteArray-positionen och kommer att lämna ByteArray-positionen i slutet av den angivna bytelängden när allt är klart. Om MP3-ljudinformationen innehåller ID3-data, kommer ID3-händelser att skickas under detta funktionsanrop. Den här funktionen kommer att generera ett undantag om ByteArray-objektet inte innehåller tillräckligt med data.
+	 
+     </p><p><span class="label"> Parametrar </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">bytes</span>:<a href="../utils/ByteArray.html">ByteArray</a></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">bytesLength</span>:<a href="../../uint.html">uint</a></code></td></tr></table></p></div></span><span id="pageFilter" runtime="AIR::3##Flash::11##"><a name="loadPCMFromByteArray()" id="loadPCMFromByteArray()"></a><a name="loadPCMFromByteArray(flash.utils.ByteArray,uint,String,Boolean,Number)" id="loadPCMFromByteArray(flash.utils.ByteArray,uint,String,Boolean,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>loadPCMFromByteArray</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">metod</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function loadPCMFromByteArray(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, samples:<a href="../../uint.html">uint</a>, format:<a href="../../String.html">String</a> = "float", stereo:<a href="../../Boolean.html">Boolean</a> = true, sampleRate:<a href="../../Number.html">Number</a> = 44100.0):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>AIR 3, Flash Player 11</td></tr></table><p></p><p></p><p>
+	 Läs in PCM 32-bitars flyttalsljudinformation för ett ByteArray-objekt till ett Sound-objekt. Informationen kommer att läsas från den aktuella ByteArray-positionen och lämna ByteArray-positionen i slutet av den angivna sampellängden fördelad på antingen en kanal eller två kanaler om stereoflaggan är inställd när allt är klart. 
+	 
+	 <p>Från och med Flash Player&nbsp;11.8 är mängden ljuddata som kan skickas till den här funktionen begränsad. För SWF-versioner från och med 21 genererar den här funktionen ett undantagsfel om mängden ljuddata som skickas till den är mer än 1&nbsp;800 sekunder. Det betyder att samples/sampleRate bör vara mindre än eller lika med 1&nbsp;800. För SWF-versioner tidigare än 21 uppstår ett tyst fel i körningen om mängden ljuddata är mer än 12&nbsp;000 sekunder. Detta är endast för bakåtkompatibilitet.</p>
+	 
+	 <p>Den här funktionen kommer att generera ett undantag om ByteArray-objektet inte innehåller tillräckligt med data.</p>
+	 
+	 
+     </p><p><span class="label"> Parametrar </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">bytes</span>:<a href="../utils/ByteArray.html">ByteArray</a></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">samples</span>:<a href="../../uint.html">uint</a></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">format</span>:<a href="../../String.html">String</a></code> (default = "<code>float</code>")<code></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">stereo</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>true</code>)<code></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">sampleRate</span>:<a href="../../Number.html">Number</a></code> (default = <code>44100.0</code>)<code></code></td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="play()" id="play()"></a><a name="play(Number,int,flash.media.SoundTransform)" id="play(Number,int,flash.media.SoundTransform)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>play</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">metod</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function play(startTime:<a href="../../Number.html">Number</a> = 0, loops:<a href="../../int.html">int</a> = 0, sndTransform:<a href="SoundTransform.html">flash.media:SoundTransform</a> = null):<a href="SoundChannel.html">SoundChannel</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     Skapar ett nytt SoundChannel-objekt som ska spela upp ljudet. Den här metoden returnerar ett SoundChannel-objekt, vilket du får åtkomst när du vill stoppa ljudet och justera volymen. (Om du vill kontrollera volymen, panoreringen och balansen går du till SoundTransform-objektet som tilldelats ljudkanalen.)
+     
+     </p><p><span class="label"> Parametrar </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">startTime</span>:<a href="../../Number.html">Number</a></code> (default = <code>0</code>)<code></code> &mdash; Den ursprungliga positionen (i millisekunder) som uppspelningen ska starta på.
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">loops</span>:<a href="../../int.html">int</a></code> (default = <code>0</code>)<code></code> &mdash; Anger hur många gånger ett ljud går tillbaka i en slinga till <code>startTime</code>-värdet innan uppspelningen stoppas av ljudkanalen. 
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">sndTransform</span>:<a href="SoundTransform.html">flash.media:SoundTransform</a></code> (default = <code>null</code>)<code></code> &mdash; Det ursprungliga SoundTransform-objekt som är tilldelat ljudkanalen.
+     
+     </td></tr></table></p><p></p><span class="label">Returnerar</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="SoundChannel.html">SoundChannel</a></code> &mdash; Ett SoundChannel-objekt som du använder för att kontrollera ljudet. Den här metoden returnerar <code>null</code> om du inte har något ljudkort eller om du inte har några ljudkanaler kvar. Högsta antal ljudkort som finns tillgängliga samtidigt är 32.
+     
+     </td></tr></table><p><span class="label">Relaterade API-element</span></p><div class="seeAlso"><a href="SoundChannel.html#stop()" target="">SoundChannel.stop()</a><br/><a href="SoundMixer.html#stopAll()" target="">SoundMixer.stopAll()</a></div><span id="pageFilter"><br/><span class="label"> Exempel &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_se"> Så här använder du exemplet </a></span>)
+            </span><br/><br/><div class="detailBody"> I följande exempel kan användaren använda en grafisk stapel för att välja startposition (starttid) i en inläst ljudfil.
+ 
+ <p>Konstruktorn anropar metoden <code>Sound.load()</code> för att börja läsa in ljuddata. Sedan anropas metoden <code>Sound.play()</code>, som börjar spela upp ljudet så snart tillräckligt med data har lästs in. Metoden <code>Sound.play()</code> returnerar ett SoundChannel-objekt som kan användas för att styra ljuduppspelningen. I textfältet visas instruktionerna. För att det innehåll användaren vill börja spela upp vid säkert ska ha lästs in, skapas och visas Sprite-objektet <code>bar</code> efter att hela filen har lästs in. En <code>Event.COMPLETE</code>-händelse skickas när filen har lästs in, vilket aktiverar metoden <code>completeHandler()</code>. Metoden <code>completeHandler()</code> skapar sedan stapeln och lägger till den i visningslistan. (Ett Sprite-objekt används i stället för ett Shape-objekt för interaktivitetens skull.) När användaren klickar på stapeln anropas metoden <code>clickHandler()</code>.</p> 
+ 
+ <p>I metoden <code>clickHandler()</code> avgör x-koordinaten för användarens klick, <code>event.localX</code>, var användaren vill att filen ska börja spelas upp. Eftersom stapeln är 100 pixlar och börjar vid x-koordinaten 100 pixlar är det lätt att avgöra en positionens procentvärde. Eftersom filen har lästs in är ljudfilens <code>length</code>-egenskap lika med hela filens längd i millisekunder. Med hjälp av ljudfilens längd och positionen på linjen beräknas en startposition för ljudfilen. När ljuduppspelningen har stoppats, startar den om från den valda startpositionen, som skickas som <code>startTime</code>-parameter till metoden <code>play()</code>.</p>
+ 
+<div class="listing"><pre> 
+package {
+    import flash.display.Sprite;
+    import flash.display.Graphics;
+    import flash.events.MouseEvent;
+    import flash.media.Sound;;
+    import flash.net.URLRequest;
+    import flash.media.SoundChannel;
+    import flash.events.ProgressEvent;
+    import flash.events.Event;
+    import flash.text.TextField;
+    import flash.text.TextFieldAutoSize;
+    import flash.events.IOErrorEvent;
+    
+    public class Sound_playExample1 extends Sprite {
+        private var snd:Sound = new Sound();
+        private var channel:SoundChannel = new SoundChannel();
+        private var infoTextField:TextField = new TextField();
+    
+        public function Sound_playExample1() {
+
+            var req:URLRequest = new URLRequest("MySound.mp3");
+            
+            infoTextField.autoSize = TextFieldAutoSize.LEFT;
+            infoTextField.text = "Please wait for the file to be loaded.\n" 
+                                + "Then select from the bar to decide where the file should start.";
+            
+            snd.load(req);               
+            channel = snd.play();
+
+            snd.addEventListener(IOErrorEvent.IO_ERROR, errorHandler);
+            snd.addEventListener(Event.COMPLETE, completeHandler);
+
+
+            this.addChild(infoTextField);
+        }
+
+        private function completeHandler(event:Event):void {                
+            infoTextField.text = "File is ready.";
+
+            var bar:Sprite = new Sprite();
+
+            bar.graphics.lineStyle(5, 0xFF0000);
+            bar.graphics.moveTo(100, 100);
+            bar.graphics.lineTo(200, 100);
+
+            bar.addEventListener(MouseEvent.CLICK, clickHandler);
+
+            this.addChild(bar);
+        }
+    
+        private function clickHandler(event:MouseEvent):void {
+            
+                var position:uint = event.localX;
+                var percent:uint = Math.round(position) - 100;   
+                var cue:uint = (percent / 100) * snd.length;
+
+                channel.stop();
+                channel = snd.play(cue);    
+        }
+
+        private function errorHandler(errorEvent:IOErrorEvent):void {
+            infoTextField.text = "The sound could not be loaded: " + errorEvent.text;
+        }
+    }
+}
+</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody"> I följande exempel spelas ljudet upp en eller två gånger beroende på om användaren klickar en gång eller dubbelklickar på en knapp.
+ 
+ <p>I konstruktorn läses ljudet in och det enkla rektangulära Sprite-objektet <code>button</code> skapas. (Ett Sprite-objekt används i stället för ett Shape-objekt för interaktivitetens skull.) Här antas ljudfilen finnas i samma katalog som SWF-filen. (Det finns ingen felhantering för det här exemplet.)</p>
+ 
+ <p>Två händelseavlyssnare skapas för att reagera på enstaka musklick och dubbelklick. Om användaren klickar en gång anropas metoden <code>clickHandler()</code> och ljudet spelas upp. Om användaren dubbelklickar på knappen anropas metoden <code>doubleClickHandler()</code> och ljudfilen spelas upp två gånger. Det andra argumentet i metoden <code>play()</code> ställs in på <code>1</code>, vilket innebär att ljudet kommer att gå tillbaka till starttiden en gång för att spelas upp igen. Starttiden (det första argumentet) ställs in på <code>0</code>, vilket innebär att filen ska spelas upp från början.</p>
+ 
+<div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.media.Sound;
+    import flash.net.URLRequest;
+
+    public class Sound_playExample2 extends Sprite {
+        private var button:Sprite = new Sprite(); 
+        private var snd:Sound = new Sound();
+            
+        public function Sound_playExample2() {
+
+            var req:URLRequest = new URLRequest("click.mp3");
+            snd.load(req);               
+     
+            button.graphics.beginFill(0x00FF00);
+            button.graphics.drawRect(10, 10, 50, 30);
+            button.graphics.endFill();
+     
+            button.addEventListener(MouseEvent.CLICK, clickHandler);
+            button.addEventListener(MouseEvent.DOUBLE_CLICK, doubleClickHandler);
+     
+            this.addChild(button);
+        }
+
+        private function clickHandler(event:MouseEvent):void {
+            snd.play();            
+        }
+
+        private function doubleClickHandler(event:MouseEvent):void {
+            snd.play(0, 2);        
+        }
+    }
+}
+</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody"> I följande exempel visas inläsnings- och uppspelningsprocessen för en ljudfil.
+ 
+ <p>I konstruktorn läses filen in i ett <code>try...catch</code>-block för att eventuella fel som kan uppstå i filinläsningen ska kunna hanteras. En avlyssnare läggs till i ljudobjektet för att svara på en <code>IOErrorEvent</code>-händelse genom att anropa metoden <code>errorHandler()</code>. En annan avlyssnare läggs till för huvudprogrammet. Den ska svara på en <code>Event.ENTER_FRAME</code>-händelse, vilket används som tidsmekanism för att visa uppspelningsförloppet. Slutligen läggs en tredje avlyssnare till för ljudkanalen. Den ska svara på en <code>Event.SOUND_COMPLETE</code>-händelse (när hela ljudet har spelats upp) genom att anropa metoden <code>soundCompleteHandler()</code>. Metoden <code>soundCompleteHandler()</code> tar också bort händelseavlyssnaren för händelsen <code>Event.ENTER_FRAME</code>.</p>
+ 
+ <p>Metoden <code>enterFrameHandler()</code> delar <code>bytesLoaded</code>-värdet som skickas med <code>ProgressEvent</code>-objektet med <code>bytesTotal</code>-värdet för beräkna hur många procent av ljuddata som har lästs in. Procentandelen ljuddata som spelas upp kan beräknas genom att värdet för ljudkanalens <code>position</code>-egenskap delas med ljudfilens totala längd. Men om ljudet inte har lästs in helt visar ljudobjektets <code>length</code>-egenskap bara den del av ljudfilen som har lästs in. En uppskattning av hela ljudfilens längd beräknas genom att värdet för det aktuella ljudobjektets <code>length</code> delas med värdet för <code>bytesLoaded</code>-egenskapen delat med egenskapen <code>bytesTotal</code>.</p>
+ 
+ <p>Observera att om filen är liten, chachad eller finns i en lokal katalog kanske inläsningsförloppet går för fort för att märkas. Fördröjningen från att ljudfilen börjar läsas in till att inlästa data börjar spelas upp avgörs av värdet för egenskapen <code>SoundLoaderContext.buffertime</code>. Standardvärdet är 1000 millisekunder och kan ändras.</p>
+<div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+    import flash.net.URLRequest;
+    import flash.media.Sound;
+    import flash.media.SoundChannel;
+    import flash.text.TextField;
+    import flash.text.TextFieldAutoSize;
+    import flash.events.Event;
+    import flash.events.IOErrorEvent;
+    
+    public class Sound_playExample3 extends Sprite {
+        private var snd:Sound = new Sound();
+        private var channel:SoundChannel;
+        private var statusTextField:TextField  = new TextField();
+
+        public function Sound_playExample3(){
+
+            statusTextField.autoSize = TextFieldAutoSize.LEFT;
+
+           var req:URLRequest = new URLRequest("http://av.adobe.com/podcast/csbu_dev_podcast_epi_2.mp3");
+            
+            try {
+                snd.load(req);
+            
+                channel = snd.play();
+            }
+            catch (err:Error) {
+                trace(err.message);
+            }
+                    
+            snd.addEventListener(IOErrorEvent.IO_ERROR, errorHandler);
+            addEventListener(Event.ENTER_FRAME, enterFrameHandler);
+            channel.addEventListener(Event.SOUND_COMPLETE, soundCompleteHandler);
+                    
+            this.addChild(statusTextField);
+        }
+    
+        private function enterFrameHandler(event:Event):void {    
+            var loadTime:Number = snd.bytesLoaded / snd.bytesTotal;
+            var loadPercent:uint = Math.round(100 * loadTime);
+            var estimatedLength:int = Math.ceil(snd.length / (loadTime));
+            var playbackPercent:uint = Math.round(100 * (channel.position / estimatedLength));
+      
+            statusTextField.text = "Sound file's size is " + snd.bytesTotal + " bytes.\n" 
+                                   + "Bytes being loaded: " + snd.bytesLoaded + "\n" 
+                                   + "Percentage of sound file that is loaded " + loadPercent + "%.\n"
+                                   + "Sound playback is " + playbackPercent + "% complete.";     
+        }
+ 
+        private function errorHandler(errorEvent:IOErrorEvent):void {
+            statusTextField.text = "The sound could not be loaded: " + errorEvent.text;
+        }
+
+        private function soundCompleteHandler(event:Event):void {
+            statusTextField.text = "The sound has finished playing.";
+            removeEventListener(Event.ENTER_FRAME, enterFrameHandler);
+        }
+    }
+}
+</pre></div></div></span></div></span><div class="detailSectionHeader"> Händelsedetaljer </div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:complete" id="event:complete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>complete</h3></td><td class="detailHeaderType"> Händelse </td></tr></table><div class="detailBody"><span class="label">Typ av händelseobjekt: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">egenskap Event.type  =  </span><a href="../events/Event.html#COMPLETE"><code>flash.events.Event.COMPLETE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+ Skickas när alla data är inlästa. 
+ </p>
+	<code>Event.COMPLETE</code>-konstanten definierar värdet på <code>type</code>-egenskapen i ett <code>complete</code>-händelseobjekt. 
+	
+	<p>Den här händelsen har följande egenskaper:</p>
+	<table class="innertable" ><tr><th>Egenskap</th><th>Värde</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; det finns inget standardbeteende att avbryta.</td></tr><tr><td><code>currentTarget</code></td><td>Det objekt som aktivt behandlar Event-objektet med en händelseavlyssnare.</td></tr><tr><td><code>target</code></td><td>Det nätverksobjekt som har lästs in. 
+	    </td></tr></table>
+	
+	<p><span class="label">Relaterade API-element</span></p><div class="seeAlso"><a href="Sound.html#load()" target="">load()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:id3" id="event:id3"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>id3</h3></td><td class="detailHeaderType"> Händelse </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Typ av händelseobjekt: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">egenskap Event.type  =  </span><a href="../events/Event.html#ID3"><code>flash.events.Event.ID3</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+ Skickas av ett Sound-objekt när ID3-data finns tillgängligt för ett MP3-ljud. 
+ </p>
+	<code>Event.ID3</code>-konstanten definierar värdet på <code>type</code>-egenskapen i ett <code>id3</code>-händelseobjekt. 
+	<p>Den här händelsen har följande egenskaper:</p>
+	<table class="innertable" ><tr><th>Egenskap</th><th>Värde</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; det finns inget standardbeteende att avbryta.</td></tr><tr><td><code>currentTarget</code></td><td>Det objekt som aktivt behandlar Event-objektet med en händelseavlyssnare.</td></tr><tr><td><code>target</code></td><td>Sound-objektet som läser in den MP3 som ID3-data nu är tillgänglig för. <code>target</code> är inte alltid det objekt i visningslistan som har registrerat händelseavlyssnaren. Använd egenskapen <code>currentTarget</code> om du vill komma åt det objekt i visningslistan som bearbetar händelsen.</td></tr></table>
+	
+	<p><span class="label">Relaterade API-element</span></p><div class="seeAlso"><a href="Sound.html#id3" target="">Sound.id3</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:ioError" id="event:ioError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>ioError</h3></td><td class="detailHeaderType"> Händelse </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Typ av händelseobjekt: </span><a href="../events/IOErrorEvent.html"><code>flash.events.IOErrorEvent</code></a><br/><span class="label">egenskap IOErrorEvent.type  =  </span><a href="../events/IOErrorEvent.html#IO_ERROR"><code>flash.events.IOErrorEvent.IO_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+ Skickas om ett in- eller utdatafel orsakar en misslyckad inläsningsåtgärd. 
+ </p>
+	Definierar värdet för ett <code>ioError</code>-händelseobjekts <code>type</code>-egenskap.
+	<p>Den här händelsen har följande egenskaper:</p>
+	<table class="innertable" ><tr><th>Egenskap</th><th>Värde</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; det finns inget standardbeteende att avbryta.</td></tr><tr><td><code>currentTarget</code></td><td>Det objekt som aktivt behandlar Event-objektet med en händelseavlyssnare.</td></tr><tr><td><code>errorID</code></td><td>Ett referensnummer som associeras med det specifika felet (enbart AIR).</td></tr><tr><td><code>target</code></td><td>Objektet är med om ett in-/utdatafel.</td></tr><tr><td><code>text</code></td><td>Text som visas som felmeddelande. </td></tr></table>
+	
+	<p><span class="label">Relaterade API-element</span></p><div class="seeAlso"><a href="Sound.html#load()" target="">load()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:open" id="event:open"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>open</h3></td><td class="detailHeaderType"> Händelse </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Typ av händelseobjekt: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">egenskap Event.type  =  </span><a href="../events/Event.html#OPEN"><code>flash.events.Event.OPEN</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+ Skickas när en inläsning initieras.
+ </p>
+	<code>Event.OPEN</code>-konstanten definierar värdet på <code>type</code>-egenskapen i ett <code>open</code>-händelseobjekt. 
+	
+	<p>Den här händelsen har följande egenskaper:</p>
+	
+	<table class="innertable" ><tr><th>Egenskap</th><th>Värde</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; det finns inget standardbeteende att avbryta.</td></tr><tr><td><code>currentTarget</code></td><td>Det objekt som aktivt behandlar Event-objektet med en händelseavlyssnare.</td></tr><tr><td><code>target</code></td><td>Det nätverksobjekt som har öppnat en anslutning. </td></tr></table>
+	
+	<p><span class="label">Relaterade API-element</span></p><div class="seeAlso"><a href="Sound.html#load()" target="">load()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:progress" id="event:progress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>progress</h3></td><td class="detailHeaderType"> Händelse </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Typ av händelseobjekt: </span><a href="../events/ProgressEvent.html"><code>flash.events.ProgressEvent</code></a><br/><span class="label">egenskap ProgressEvent.type  =  </span><a href="../events/ProgressEvent.html#PROGRESS"><code>flash.events.ProgressEvent.PROGRESS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+ Skickas när data tas emot som ett inläsningsförlopp.
+ </p>
+	Definierar värdet för ett <code>progress</code>-händelseobjekts <code>type</code>-egenskap.
+	
+	<p>Den här händelsen har följande egenskaper:</p>
+	
+	<table class="innertable" ><tr><th>Egenskap</th><th>Värde</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>bytesLoaded</code></td><td>Antalet objekt eller byte som har lästs in när avlyssnaren bearbetar händelsen.</td></tr><tr><td><code>bytesTotal</code></td><td>Det totala antalet objekt eller byte som kommer att ha lästs in om inläsningen lyckas.</td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; det finns inget standardbeteende att avbryta.</td></tr><tr><td><code>currentTarget</code></td><td>Det objekt som aktivt behandlar Event-objektet med en händelseavlyssnare.</td></tr><tr><td><code>target</code></td><td>Objektet rapporterar förlopp. </td></tr></table>
+	
+	<p><span class="label">Relaterade API-element</span></p><div class="seeAlso"><a href="Sound.html#load()" target="">load()</a></div></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##"><a name="event:sampleData" id="event:sampleData"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>sampleData</h3></td><td class="detailHeaderType"> Händelse </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Typ av händelseobjekt: </span><a href="../events/SampleDataEvent.html"><code>flash.events.SampleDataEvent</code></a><br/><span class="label">egenskap SampleDataEvent.type  =  </span><a href="../events/SampleDataEvent.html#SAMPLE_DATA"><code>flash.events.SampleDataEvent.SAMPLE_DATA</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Språkversion:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Körningsmiljöversioner:&nbsp;</b></td><td>Flash Player 10, AIR 1.5</td></tr></table><p></p><p></p><p>
+  Skickas när miljön begär nya ljuddata. 
+ 
+ </p>
+		Definierar värdet för ett <code>SampleDataEvent</code>-händelseobjekts <code>type</code>-egenskap. 
+		<p>Den här händelsen har följande egenskaper:</p>
+		<table class="innertable" ><tr><th>Egenskap</th><th>Värde</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; det finns inget standardbeteende att avbryta.</td></tr><tr><td><code>position</code></td><td>Platsen som ljuddata kommer ifrån.</td></tr></table>
+		
+		<span id="pageFilter"><br/><span class="label"> Exempel &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_se"> Så här använder du exemplet </a></span>)
+            </span><br/><br/><div class="detailBody"> Följande exempel spelar upp en enkel sinusvåg.
+ 
+<div class="listing"><pre>
+var mySound:Sound = new Sound();
+function sineWaveGenerator(event:SampleDataEvent):void {
+    for ( var c:int=0; c&lt;8192; c++ ) {
+        event.data.writeFloat(Math.sin((Number(c+event.position)/Math.PI/2))*0.25);
+        event.data.writeFloat(Math.sin((Number(c+event.position)/Math.PI/2))*0.25);
+    }
+}
+
+mySound.addEventListener(SampleDataEvent.SAMPLE_DATA,sineWaveGenerator);
+mySound.play();
+</pre></div></div></span><p><span class="label">Relaterade API-element</span></p><div class="seeAlso"><a href="Sound.html#extract()" target="">extract()</a><br/><a href="Sound.html#play()" target="">play()</a><br/><a href="../events/SampleDataEvent.html" target="">flash.events.SampleDataEvent</a></div></div></span><a name="includeExamplesSummary" id="includeExamplesSummary"></a><div class="detailSectionHeader">Exempel<span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_se"> Så här använder du exemplet </a></span></div><span id="pageFilter"><div class="exampleHeader">SoundExample.as</div><br/><div class="detailBody"> I följande exempel visas information om ljudhändelser som inträffar när en MP3-fil öppnas och spelas upp. Om du vill köra det här exemplet placerar du en fil med namnet MySound.mp3 i samma katalog som din SWF-fil.
+<div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+    import flash.events.*;
+    import flash.media.Sound;
+    import flash.media.SoundChannel;
+    import flash.net.URLRequest;
+
+    public class SoundExample extends Sprite {
+        private var url:String = "MySound.mp3";
+        private var song:SoundChannel;
+
+        public function SoundExample() {
+            var request:URLRequest = new URLRequest(url);
+            var soundFactory:Sound = new Sound();
+            soundFactory.addEventListener(Event.COMPLETE, completeHandler);
+            soundFactory.addEventListener(Event.ID3, id3Handler);
+            soundFactory.addEventListener(IOErrorEvent.IO_ERROR, ioErrorHandler);
+            soundFactory.addEventListener(ProgressEvent.PROGRESS, progressHandler);
+            soundFactory.load(request);
+            song = soundFactory.play();
+        }
+
+        private function completeHandler(event:Event):void {
+            trace("completeHandler: " + event);
+        }
+
+        private function id3Handler(event:Event):void {
+            trace("id3Handler: " + event);
+        }
+
+        private function ioErrorHandler(event:Event):void {
+            trace("ioErrorHandler: " + event);
+        }
+
+        private function progressHandler(event:ProgressEvent):void {
+            trace("progressHandler: " + event);
+        }
+    }
+}
+</pre></div></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,true,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script></div><p xmlns:xd="http://www.pnp-software.com/XSLTdoc"></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 01:40 PM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/sv_SE/legalnotices/index.html">Juridiska meddelanden</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Onlinesekretesspolicy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">Varför på engelska?</span>
+				</div>
+				<div class="white_content_body">
+					<b>Innehåll i Referenshandbok för ActionScript&nbsp;3.0 i Adobe Flash-plattformen är på engelska</b><br><br>
+					Det är inte alla delar av Referenshandbok för ActionScript&nbsp;3.0 i Adobe Flash-plattformen som översätts till alla språk. Om ett språkelement inte översätts visas det på engelska. Klassen ga.controls.HelpBox översätts till exempel inte till något språk. I den svenska versionen av referenshandboken visas därför klassen ga.controls.HelpBox på engelska.
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 01:40 PM Z  -->

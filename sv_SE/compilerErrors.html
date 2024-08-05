@@ -1,0 +1,795 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Referenshandbok för ActionScript&reg; 3.0 i Adobe&reg; Flash&reg;-plattformen"><meta name="lang" content="sv-se"><link rel="stylesheet" href="style.css" type="text/css" media="screen"><link rel="stylesheet" href="print.css" type="text/css" media="print"><link rel="stylesheet" href="override.css" type="text/css"><link rel="stylesheet" href="asfilter.css" type="text/css"><link rel="stylesheet" href="ion.css" type="text/css"><title>Kompilatorfel - API-referens för Adobe ActionScript&reg; 3 (AS3 )</title>
+		<link rel="stylesheet" href="filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="filter_new.css" type="text/css">
+			
+		<script src="jquery.js" type="text/javascript"></script>
+		<script src="s_chl_code.js" type="text/javascript"></script>
+		<script src="jquery.zclip.js" type="text/javascript"></script>
+		<script src="jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="cookies.js" type="text/javascript"></script>
+		<script src="asdoc.js" type="text/javascript"></script>
+		<script src="iscroll.js" type="text/javascript"></script>
+		<script src="AC_OETags.js" type="text/javascript"></script>
+		<script src="omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "Körningsmiljöer";
+			var productsLabel = "Produkter";
+			var noneLabel = "Inget";
+			var qsearchBoxLabel = "Snabbsökning";
+			var qsearchText = "Termen hittades inte";
+			var ajaxErrorMsg="Fel Laddar sidan";
+			var ajaxErrorTryMsg="Försök igen";
+			var ajaxLoadingMsg="Läser in ...";
+			var cancelMsg = "Avbryt";
+			var classesText = "Klasser";
+			var strJiveReply = "Den här frågan skrevs som svar på följande artikel: "
+			var showFilters = "Visa filter";
+			var hideFilters = "Dölj filter";
+			
+		
+			var baseRef = "./";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											Referenshandbok för ActionScript<sup>&reg;</sup> 3.0 i Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup>-plattformen<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="index.html"> Hem </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="compilerErrors.html#top" style="display:">Visa paket och klasslista</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="compilerErrors.html#top" style="display:none">Dölj paket och klasslista</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="package-summary.html"> Paket </a>&nbsp;|&nbsp;
+												<a target="_self" href="class-summary.html"> Klasser </a>&nbsp;|&nbsp;
+												<a target="_self" href="whatsnew.html"> Nyheter </a>&nbsp;|&nbsp;
+												<a target="_self" href="all-index-Symbols.html"> Index </a>&nbsp;|&nbsp;
+												<a target="_self" href="appendixes.html"> Bilagor </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Varför på engelska?</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/sv_SE/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('./')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('./')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="help.js"></script>
+						<script language="javascript" type="text/javascript" src="asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>Filter:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">Hämtar data från servern&nbsp;...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">Hämtar data från servern&nbsp;...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="compilerErrors.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">&nbsp;</a><br>
+								<h1 id="classProductName">Kompilatorfel&nbsp;</h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="compilerErrors.html#propertySummary" style="display:none"> Egenskaper </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="compilerErrors.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Egenskaper </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="compilerErrors.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Konstruktor </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="compilerErrors.html#methodSummary" style="display:none"> Metoder </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="compilerErrors.html#constantSummary" style="display:none"> Globala konstanter </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="compilerErrors.html#eventSummary" style="display:none"> Händelser </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="compilerErrors.html#styleSummary" style="display:none"> Format </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="compilerErrors.html#SkinPartSummary" style="display:none"> Skaldelar </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="compilerErrors.html#SkinStateSummary" style="display:none"> Skallägen </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="compilerErrors.html#effectSummary" style="display:none"> Effekter </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="compilerErrors.html#constantSummary" style="display:none"> Konstanter </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="compilerErrors.html#methodSummary" style="display:none"> Globala funktioner </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="compilerErrors.html#methodSummary" style="display:none">Funktioner</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="compilerErrors.html#interfaceSummary" style="display:none"> Gränssnitt </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="compilerErrors.html#classSummary" style="display:none"> Klasser </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="compilerErrors.html#includeExamplesSummary" style="display:none"> Exempel </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="compilerErrors.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								Klasser
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><p>
+        <div id="badgeAnchorSupport" class="ionBadgeWrapper"></div>
+        <div id="badgeContainerSupport"></div>
+        <br/>Nedan följer en lista över kompileringsfel som kompilatorn genererar när den träffar på ogiltig kod. En del av de här felen uppstår bara vid kompilering i strikt läge. I strikt läge läggs tre begränsningar till som inte finns i standardspråket:
+        <p>
+        <ul>
+        <li>Uttryck har statiska typer och typfel är verifieringsfel.</li>
+        <li>Extra verifieringsregler fångar upp vanliga programmeringsfel.</li>
+        <li>Verifieringsfel rapporteras i förväg. De här verifieringsfelen uppstår bara i strikt läge:</li> <ul>
+        <li>Signaturmatchning för funktionsanrop, som kontrollerar antalet angivna parametrar och deras typ.</li>
+        <li>Konflikter mellan duplicerade definitioner.</li>
+        <li>Obundna referenser, som uppstår när metoder eller egenskaper som inte är definierade används vid kompilering.</li>
+        <li>Lägga till egenskaper dynamiskt på fasta objekt.</li>
+        <li>Skriva till konstanta variabler.</li>
+        <li>Ta bort fasta egenskaper.</li>
+        <li>Jämförelseuttryck som använder inkompatibla typer.</li>
+        <li>Paket som inte hittas.</li> </ul></ul>
+        </p></p><br><a name="compilerErrorSummary"></a><table cellpadding="3" cellspacing="0" class="summaryTable"><tr><th>&nbsp;</th><th>Kod</th><th width="35%">Meddelande</th><th>Beskrivning</th></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1000"></a><b>1000</b></td><td class="summaryTableCol">Tvetydig referens till %s.
+
+
+	
+
+</td><td class="summaryTableLastCol">
+	En referens kan vara till mer än ett objekt. I följande exempel används till exempel namnutrymmena <code>rss</code> och <code>xml</code>, som vart och ett definierar ett eget värde för funktionen <code>hello()</code>. Programsatsen <code>trace(hello())</code> returnerar det här felet eftersom den inte kan avgöra vilket namnutrymme som ska användas.
+	
+<pre><code>private namespace rss;
+private namespace xml;
+    
+public function ErrorExamples() {
+  	use namespace rss;
+   	use namespace xml;
+	trace(hello());
+}
+    
+rss function hello():String {
+      	return "hola";
+    }
+    
+    xml function hello():String {
+        return "foo";
+    }</code></pre>
+ 
+
+	<p>Korrigera en tvetydig referens genom att göra referensen specifik. I följande exempel används formen <i>namnutrymme</i>::<i>funktion</i> för att ange vilket namnutrymme som ska användas:</p>
+
+
+<pre><code>public function ErrorExamples() {
+    
+    trace(rss::hello());
+    trace(xml::hello());
+}</code></pre>
+        
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1003"></a><b>1003</b></td><td class="summaryTableCol">Åtkomstspecifikationer är inte tillåtna med namnutrymmesattribut.
+		</td><td class="summaryTableLastCol">Det går inte att använda både en åtkomstspecifikation (som private eller public) och ett namnutrymmesattribut i en definition.&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1004"></a><b>1004</b></td><td class="summaryTableCol">Namnutrymmet hittades inte eller är inte en kompileringskonstant.
+	
+
+</td><td class="summaryTableLastCol">
+		Namnutrymmet är antingen okänt eller ett uttryck som kan ha flera värden vid körning. Kontrollera att namnutrymmet är rättstavat och att dess definition har importerats korrekt.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1006"></a><b>1006</b></td><td class="summaryTableCol">Ett superuttryck får bara användas inuti metoder för klassinstanserer.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1007"></a><b>1007</b></td><td class="summaryTableCol">En superprogramsats får bara användas i konstruktorer för klassinstanser.
+
+</td><td class="summaryTableLastCol">
+		Du kan inte använda programsatsen <code>super</code> i statiska medlemmar. Du kan bara använda programsatsen <code>super</code> inuti klassinstanser.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1008"></a><b>1008</b></td><td class="summaryTableCol">Attributet är ogiltigt.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1010"></a><b>1010</b></td><td class="summaryTableCol">Attributet override får bara användas på definitioner av klassegenskaper.
+
+
+</td><td class="summaryTableLastCol">
+		Du kan inte använda nyckelordet <code>override</code> i ett funktionsblock.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1011"></a><b>1011</b></td><td class="summaryTableCol">Attributet virtual får bara användas på definitioner av klassegenskaper.
+
+</td><td class="summaryTableLastCol">
+		Du kan inte använda attributet <code>virtual</code> när du deklarerar en egenskap som inte tillhör en klass (till exempel när du deklarerar en variabel i ett funktionsblock).
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1012"></a><b>1012</b></td><td class="summaryTableCol">Attributet static får bara användas på definitioner i en klass.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1013"></a><b>1013</b></td><td class="summaryTableCol">Attributet private får bara användas på definitioner av klassegenskaper.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1014"></a><b>1014</b></td><td class="summaryTableCol">Attributet intrinsic stöds inte längre.
+
+
+</td><td class="summaryTableLastCol">
+		ActionScript&nbsp;3.0 saknar stöd för nyckelordet <code>intrinsic</code>.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1016"></a><b>1016</b></td><td class="summaryTableCol">Basklassen är final.
+
+
+</td><td class="summaryTableLastCol">
+		Det går inte att utöka superklassen eftersom den är markerad som <code>final</code>.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1017"></a><b>1017</b></td><td class="summaryTableCol">Definitionen för basklassen %s hittades inte.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1018"></a><b>1018</b></td><td class="summaryTableCol">Definition på duplikatklassen: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1020"></a><b>1020</b></td><td class="summaryTableCol">En metod som är markerad som override måste åsidosätta en annan metod.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1021"></a><b>1021</b></td><td class="summaryTableCol">Funktionsdefinition är en dubblett.
+
+
+</td><td class="summaryTableLastCol">
+		Du kan inte deklarera mer än en funktion med samma ID-namn i samma omfång.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1022"></a><b>1022</b></td><td class="summaryTableCol">Det går inte att åsidosätta en åtkomst av typen final.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1023"></a><b>1023</b></td><td class="summaryTableCol">Inkompatibel åsidosättning.
+</td><td class="summaryTableLastCol"> En funktion som är markerad override måste matcha parameter- och returtypsdeklarationen för funktionen som åsidosätts. Den måste ha lika många parametrar, parametrarna måste ha samma typer och samma returtyp måste deklareras. Om någon parameter är valfri måste även detta vara samma. Båda funktionerna måste också ha samma åtkomstspecifikation (public, private osv.) eller namnutrymmesattribut.&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1024"></a><b>1024</b></td><td class="summaryTableCol">Åsidosätta en funktion som inte är markerad för åsidosättning.
+
+
+</td><td class="summaryTableLastCol">
+		
+		Om en metod i en klass åsidosätter en metod i en basklass måste du uttryckligen deklarera den genom att använda attributet <code>override</code>, som i följande exempel:
+
+		<pre>public override function foo():void{};</pre>
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1025"></a><b>1025</b></td><td class="summaryTableCol">Det går inte att omdefiniera en final metod.
+
+
+</td><td class="summaryTableLastCol">
+		Metoden kan inte utökas eftersom den är markerad som <code>final</code> i basklassen.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1026"></a><b>1026</b></td><td class="summaryTableCol">Konstruktorfunktioner måste vara instansmetoder.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1027"></a><b>1027</b></td><td class="summaryTableCol">Funktioner kan inte vara både static och override.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1028"></a><b>1028</b></td><td class="summaryTableCol">Funktioner kan inte vara både static och virtual.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1029"></a><b>1029</b></td><td class="summaryTableCol">Funktioner kan inte vara både final och virtual.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1030"></a><b>1030</b></td><td class="summaryTableCol">Du måste ange namnet på argumentvariabelns array.
+
+
+</td><td class="summaryTableLastCol">
+	
+		Parameterdefinitionen ...(rest) anger att alla värden efter ...(rest) samlas i en array. Du måste ange ett namn på den arrayen, som i uttrycket <code>function foo(x,...(rest))</code>.
+
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1033"></a><b>1033</b></td><td class="summaryTableCol">Virtuella variabler stöds inte.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1034"></a><b>1034</b></td><td class="summaryTableCol">Variabler kan inte vara interna.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1035"></a><b>1035</b></td><td class="summaryTableCol">Variabler kan inte vara både final och virtual.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1037"></a><b>1037</b></td><td class="summaryTableCol">Paket kan inte vara inkapslade.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1038"></a><b>1038</b></td><td class="summaryTableCol">Målet för programsatsen break hittades inte.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1039"></a><b>1039</b></td><td class="summaryTableCol">Målet för programsatsen continue hittades inte.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1040"></a><b>1040</b></td><td class="summaryTableCol">Duplicerad etikettsdefinition.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1041"></a><b>1041</b></td><td class="summaryTableCol">Det går inte att anropa attribut.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1042"></a><b>1042</b></td><td class="summaryTableCol">Nyckelordet this kan inte användas i statiska metoder. Det kan bara användas i instansmetoder, funktionsslut och global kod.
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Du kan inte använda nyckelordet <code>this</code> i en statisk medlem, eftersom <code>this</code> skulle sakna kontext.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1043"></a><b>1043</b></td><td class="summaryTableCol">Odefinierat namnutrymme.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1044"></a><b>1044</b></td><td class="summaryTableCol">Gränssnittsmetoden %s i namnutrymmet %s implementerades inte av klassen %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1045"></a><b>1045</b></td><td class="summaryTableCol">Gränssnittet %s hittades inte.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1046"></a><b>1046</b></td><td class="summaryTableCol">Typen hittades inte eller är inte en kompileringskonstant: %s.
+
+
+
+</td><td class="summaryTableLastCol">
+		
+		Den klass som används som typdeklaration är antingen okänd eller ett uttryck som kan ha flera värden vid körning. Kontrollera att du importerar rätt klass och att dess paketplats inte har ändrats. Kontrollera också att paketet som koden finns i (inte den importerade klassen) har definierats korrekt (till exempel att du använder ActionScript 3.0-paketsyntax, och inte ActionScript 2.0-syntax).
+
+		<p>Felet kan också uppstå om klassen som refereras inte är definierad i ett namnutrymme som används eller inte är definierad som public:</p>
+
+		<pre><code>public class Foo{}</code></pre>
+
+        <p>Om du använder Flex&#153 Builder&#153&nbsp;2, och klassen finns i ett bibliotek, försäkrar du dig om att du anger klassökvägen för projektet.</p>
+
+
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1047"></a><b>1047</b></td><td class="summaryTableCol">Parameterinitieraren är okänd eller är inte en kompileringskonstant.
+	
+	
+</td><td class="summaryTableLastCol">
+	Det värde som används som standardvärde för parametern är antingen odefinierad eller kan ha olika värden vid körning. Kontrollera att initieraren är rättstavad och att initieringsvärdet inte är ett uttryck som kan ha olika värden vid körning.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1048"></a><b>1048</b></td><td class="summaryTableCol">Metoden kan inte användas som en konstruktor.
+	
+		
+</td><td class="summaryTableLastCol">
+	Det går inte att skapa en instans av en metod i en klass. Bara globala funktioner kan användas i <code>new</code>-uttryck.
+	
+<pre>class D { function xx() { return 22; } }
+var d:D = new D();
+var x = new d.xx(); // error, method cannot be used as constructor
+function yy() { this.a = 22; }
+var z = new yy(); // no error, global functions can be used as constructors.</pre>
+
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1049"></a><b>1049</b></td><td class="summaryTableCol">Ogiltig tilldelning till en variabel som angetts som constant.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1050"></a><b>1050</b></td><td class="summaryTableCol">Det går inte att tilldela till icke-referensvärden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1051"></a><b>1051</b></td><td class="summaryTableCol">Returvärdet måste vara odefinierat.
+
+
+
+</td><td class="summaryTableLastCol">
+		Du försöker använda programsatsen <code>return</code> i en metod som har den deklarerade returtypen <code>void</code>.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1052"></a><b>1052</b></td><td class="summaryTableCol">Konstantinitieraren är okänd eller är inte en kompileringskonstant.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Det värde som används för att initiera konstanten är antingen odefinierad eller kan ha olika värden vid körning. Kontrollera att initieraren är rättstavad och att initieringsvärdet inte är ett uttryck som kan ha olika värden vid körning.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1053"></a><b>1053</b></td><td class="summaryTableCol">Åtkomsttyperna måste matcha.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1054"></a><b>1054</b></td><td class="summaryTableCol">Returtypen för en set-definition måste vara ospecificerad eller void.
+
+
+</td><td class="summaryTableLastCol">
+		Du kan inte ange ett returvärde för en set-funktion. Följande är till exempel ogiltigt:
+
+		<pre>public function set gamma(g:Number):Number;</pre>
+
+		<p>Följande <i>är</i> giltigt:</p>
+
+		<pre>public function set gamma(g:Number):void;</pre>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1058"></a><b>1058</b></td><td class="summaryTableCol">Egenskapen är lässkyddad.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1059"></a><b>1059</b></td><td class="summaryTableCol">Egenskapen är skrivskyddad.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Egenskapen definieras med en get-funktion som gör att du kan hämta egenskapens värde. Det finns dock ingen set-funktion definierad för egenskapen. Därför är den skrivskyddad.
+	<p>I följande exempel genererar rad&nbsp;3 ett fel, eftersom ingen set-funktion har definierats för <code>xx</code>:</p>
+	
+<pre>class D { function get xx() { return 22; } }
+var d:D = new D();
+d.xx = 44; // error, property is read-only</pre>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1061"></a><b>1061</b></td><td class="summaryTableCol">Ett anrop görs till en möjligtvis odefinierad metod, %s, via en referens med den statiska typen %s.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Du anropar en metod som inte är definierad.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1063"></a><b>1063</b></td><td class="summaryTableCol">Det går inte att öppna filen: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1064"></a><b>1064</b></td><td class="summaryTableCol">Ogiltiga metadata.
+	
+
+
+</td><td class="summaryTableLastCol">
+	Dessa metadata är okända.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1065"></a><b>1065</b></td><td class="summaryTableCol">Attribut för metadata får inte ha fler än ett element.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1067"></a><b>1067</b></td><td class="summaryTableCol">Implicit tvång för ett värde av typen %s till den orelaterade typen %s
+
+
+
+</td><td class="summaryTableLastCol">
+		Du försöker byta ut ett objekt mot en typ som det inte kan konverteras till. Detta kan inträffa om klassen som du byter ut till inte finns i arvskedjan för objektet som ska bytas ut. Felet kan bara uppstå när kompilatorn körs i strikt läge.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1068"></a><b>1068</b></td><td class="summaryTableCol">Det går inte att öppna den inkluderade filen: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1069"></a><b>1069</b></td><td class="summaryTableCol">Syntaxfel: Definition eller direktiv förväntades.
+
+
+
+</td><td class="summaryTableLastCol">
+		Kontrollera syntaxen på raden.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1071"></a><b>1071</b></td><td class="summaryTableCol">Syntaxfel: Ett definitionsnyckelord förväntades (till exempel en funktion) efter attributet %s, inte %s.
+
+
+</td><td class="summaryTableLastCol">
+	
+		Det här felet inträffar om du glömmer att använda nyckelorden ”var” eller ”function” i en deklaration.
+<pre><code>public int z;// should be 'public var z:int;'</code></pre>
+
+		Du kan också få det här felet när kompilatorn påträffar ett oväntat tecken. Följande användning av funktionen <code>trace()</code> är till exempel ogiltig, eftersom parenteser saknas (rätt syntax är <code>trace("hello")</code>):
+
+<pre>
+trace "hello"
+</pre>
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1072"></a><b>1072</b></td><td class="summaryTableCol">Syntaxfel: XML förväntades före namnutrymme.
+
+
+</td><td class="summaryTableLastCol">
+	
+		Korrekt syntax för programsatsen är <code>default xml namespace = </code> <i>ns</i>. Antingen saknas nyckelordet <code>xml</code> (observera att det ska vara små bokstäver) eller så användes ett felaktigt nyckelord. Mer information finns i direktivet <a href="statements.html#default_xml_namespace" >default xml namespace</a>.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1073"></a><b>1073</b></td><td class="summaryTableCol">Syntaxfel: En catch- eller finally-sats förväntades.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1075"></a><b>1075</b></td><td class="summaryTableCol">Syntaxfel: Nyckelordet 'each' är inte tillåtet utan operatorn 'in'.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1076"></a><b>1076</b></td><td class="summaryTableCol">Syntaxfel: Vänster parentes förväntades före identifieraren.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1077"></a><b>1077</b></td><td class="summaryTableCol">CaseLabel förväntades.
+
+	
+</td><td class="summaryTableLastCol">
+	Kompilatorn förväntade en <code>case</code>-sats vid den här punkten i switch-blocket. Följande switch-block anropar felaktigt <code>print</code> före den första <code>case</code>-satsen:
+
+<pre>switch(x)
+{
+trace(2);
+case 0:  trace(0); 
+break
+}</pre>
+	
+    &nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1078"></a><b>1078</b></td><td class="summaryTableCol">Etiketten måste vara en enkel identifierare.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1079"></a><b>1079</b></td><td class="summaryTableCol">Ett superuttryck måste ha en operand.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1080"></a><b>1080</b></td><td class="summaryTableCol">Öknings- eller minskningsoperator förväntades.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1082"></a><b>1082</b></td><td class="summaryTableCol">Ett enda uttryck inom parentes förväntades.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1083"></a><b>1083</b></td><td class="summaryTableCol">Syntaxfel: %s förväntades inte.
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Information saknas i kodraden. I följande exempel måste något uttryck (som ett annat tal) anges efter det sista plustecknet:
+
+		<pre>var sum:int = 1 + 2 + ;</pre>
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1084"></a><b>1084</b></td><td class="summaryTableCol">Syntaxfel: %s förväntades före %s.
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Uttrycket förväntades inte vid den här tidpunkten. Om felet är att "höger klammerparentes förväntades före programmets slut" saknar ett kodblock en avslutande klammerparentes (&#125).
+
+		<p>Om felet är att "en vänsterparentes förväntades före _" kan du ha glömt att ange en parentes för ett villkorligt uttryck, vilket visas i följande exempel (som är avsiktligt felaktigt): </p>
+
+		<pre><code>var fact:int = 1 * 2 * 3;
+if fact > 2 {
+	var bigger:Boolean = true;
+}</code></pre>
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1086"></a><b>1086</b></td><td class="summaryTableCol">Syntaxfel: Semikolon förväntades före %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1087"></a><b>1087</b></td><td class="summaryTableCol">Syntaxfel: Extra tecken hittades efter programslutet.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1093"></a><b>1093</b></td><td class="summaryTableCol">Syntaxfel.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1094"></a><b>1094</b></td><td class="summaryTableCol">Syntaxfel: Stränglitteralen måste avslutas före radbrytningen.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1095"></a><b>1095</b></td><td class="summaryTableCol">Syntaxfel: Stränglitteralen måste avslutas före radbrytningen.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1097"></a><b>1097</b></td><td class="summaryTableCol">Syntaxfel: Indata tog slut före det avslutande citattecknet för en stränglitteral.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1099"></a><b>1099</b></td><td class="summaryTableCol">Syntaxfel.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1100"></a><b>1100</b></td><td class="summaryTableCol">Syntaxfel: XML har inte matchande start- och sluttaggar.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1102"></a><b>1102</b></td><td class="summaryTableCol">Det går inte att ta bort underordnade objekt till super.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1103"></a><b>1103</b></td><td class="summaryTableCol">Duplicerad namnutrymmesdefinition.
+
+	
+
+
+</td><td class="summaryTableLastCol">
+	Du definierade namnutrymmet mer än en gång. Ta bort eller ändra dubblettdefinitionen.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1104"></a><b>1104</b></td><td class="summaryTableCol"> %s </td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1105"></a><b>1105</b></td><td class="summaryTableCol">Tilldelningens mål måste vara ett referensvärde.
+
+	 
+</td><td class="summaryTableLastCol">
+	Du kan tilldela ett värde till en variabel, men det går inte att tilldela ett värde till ett annat värde. 
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1106"></a><b>1106</b></td><td class="summaryTableCol">Ökningsoperanden måste vara en referens.
+	
+</td><td class="summaryTableLastCol">
+	Operanden måste vara en variabel, ett element i en array eller en objektegenskap.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1107"></a><b>1107</b></td><td class="summaryTableCol">Ogiltig ökningsoperand.
+
+	
+</td><td class="summaryTableLastCol">
+	Operanden måste vara en variabel, ett element i en array eller en objektegenskap.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1108"></a><b>1108</b></td><td class="summaryTableCol">Ogiltig minskningsoperand.
+	
+</td><td class="summaryTableLastCol">
+	Operanden måste vara en variabel, ett element i en array eller en objektegenskap.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1109"></a><b>1109</b></td><td class="summaryTableCol">Ett uttryck förväntades.
+
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Ett uttryck saknas i en del av koden. Följande genererar till exempel det här felet (ett villkor saknas i <code>if</code>-satsen):
+
+<pre><code>var x = (5 > 2) ? 
+trace(x)</code></pre>
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1110"></a><b>1110</b></td><td class="summaryTableCol">Namnet på en XML-tagg saknas.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1111"></a><b>1111</b></td><td class="summaryTableCol">Filen %s är inte en giltig ABC-fil.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1112"></a><b>1112</b></td><td class="summaryTableCol">Möjlig oändlig rekursion på grund av den här filen: %s.
+
+	
+
+</td><td class="summaryTableLastCol">
+	En fil som ingår i den källa som kompileras innehåller andra <code>include</code>-satser som skulle orsaka en oändlig slinga. Till exempel följande filer: a.as och b.as genererar det här felet eftersom båda filerna försöker inkludera den andra.
+	<p>
+	Filen a.as innehåller följande, som försöker inkludera filen b.as:</p>
+<pre>import foo.bar.baz;
+include "b.as"
+trace(2);</pre>
+	<p>Filen b.as innehåller följande, som försöker inkludera filen a.as:</p>
+	<pre>include "a.as"</pre>
+
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1113"></a><b>1113</b></td><td class="summaryTableCol">Cirkulär typreferens upptäcktes i %s.
+	
+
+</td><td class="summaryTableLastCol">
+	En klass försöker utöka en superklass. Klassen A kan inte utöka klassen B om B ärver från A:
+<pre><code>class a extends b { }
+class b extends a { }</code></pre>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1114"></a><b>1114</b></td><td class="summaryTableCol">Attributet public får bara användas i ett paket.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1115"></a><b>1115</b></td><td class="summaryTableCol">Attributet internal får bara användas i ett paket.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1116"></a><b>1116</b></td><td class="summaryTableCol">Ett användardefinierat namnutrymmesattribut kan bara användas på den högsta nivån i en klassdefinition.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1118"></a><b>1118</b></td><td class="summaryTableCol">Implicit tvång för ett värde av den statiska typen %s till den möjligtvis orelaterade typen %s.
+	
+
+</td><td class="summaryTableLastCol">Du använder ett värde som inte har den förväntade typen och inget implicit tvång som konverterar det till den förväntade typen finns.
+	<p>Du kanske använder en övertyp där en undertyp förväntas. Till exempel:</p>
+<pre><code>class A {}
+var a:A = new A(); 
+class B extends A { function f() }
+var b : B = a // error</code></pre>
+	<p>I den sista programsatsen genereras ett fel eftersom den försöker tilldela ett objekt av typ A till en variabel av typ B.</p>
+	<p>På samma sätt definierar följande funktionen <code>foo()</code>, som tar en parameter av typen B. Programsatsen <code>foo(a);</code> genererar ett fel eftersom den försöker använda en parameter av typ A:</p>
+<pre><code>function foo(x:B) { }
+foo(a);</code></pre>
+	<p>Även följande sats genererar ett fel, eftersom det returnerade värdet för <code>foo2()</code> måste vara av typen B:</p>
+	<pre><code>function foo2():B { return new A(); }</code></pre>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1119"></a><b>1119</b></td><td class="summaryTableCol">Åtkomst till den möjligen odefinierade egenskapen %s via en referens med den statiska typen %s.
+
+
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Du försöker komma åt en egenskap som inte finns för det angivna objektet. Följande kod genererar till exempel det här felet eftersom ett int-objekt inte har någon egenskap med namnet <code>assortment</code>:
+
+<pre><code>var i:int = 44;
+var str:String = i.assortment;</code></pre>
+
+		Felet kan bara uppstå när kompilatorn körs i strikt läge.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1120"></a><b>1120</b></td><td class="summaryTableCol">Åtkomst till den odefinierade egenskapen %s.
+
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Du försöker komma åt en odefinierad variabel. Om variabeln <code>huh</code> till exempel inte har definierats får du följande fel när den anropas:
+
+<pre><code>huh = 55;</code></pre>
+
+		Felet kan bara uppstå när kompilatorn körs i strikt läge.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1121"></a><b>1121</b></td><td class="summaryTableCol">En get-definition får inte ha några parametrar.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1122"></a><b>1122</b></td><td class="summaryTableCol">En set-definition måste ha exakt en parameter.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1123"></a><b>1123</b></td><td class="summaryTableCol">En set-definition får inte ha valfria parametrar.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1124"></a><b>1124</b></td><td class="summaryTableCol">Returtypen för en get-definition får inte vara void.
+
+	
+</td><td class="summaryTableLastCol">
+	En get-funktion simulerar en variabel. Eftersom variabler inte kan ha typen void kan du inte deklarera att get-funktioner ska returnera typen void.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1125"></a><b>1125</b></td><td class="summaryTableCol">Metoderna som är definierade i ett gränssnitt får inte har något innehåll.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1126"></a><b>1126</b></td><td class="summaryTableCol">Funktionen har inget innehåll.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1127"></a><b>1127</b></td><td class="summaryTableCol">Attributet %s angavs flera gånger.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Du specificerade ett attribut mer än en gång i samma programsats. Satsen <code>public static public var x;</code> genererar till exempel det här felet, eftersom den anger att variabeln <code>x</code> är publik två gånger. Ta bort dubblettdeklarationer.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1129"></a><b>1129</b></td><td class="summaryTableCol">Definition på duplikatgränssnitt: %s.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Ta bort eller ändra dubblettdefinitionerna.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1130"></a><b>1130</b></td><td class="summaryTableCol">En konstruktor kan inte ange en returtyp.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1131"></a><b>1131</b></td><td class="summaryTableCol">Klasser får inte kapslas in.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1132"></a><b>1132</b></td><td class="summaryTableCol">Attributet final kan bara användas på en metod som är definierad i en klass.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1133"></a><b>1133</b></td><td class="summaryTableCol">Attributet native kan bara användas med funktionsdefinitioner.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1134"></a><b>1134</b></td><td class="summaryTableCol">Attributet dynamic kan bara användas med klassdefinitioner.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1135"></a><b>1135</b></td><td class="summaryTableCol">Syntaxfel: %s är inte en giltig typ.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1136"></a><b>1136</b></td><td class="summaryTableCol">Felaktigt antal argument. %s förväntades.
+
+	
+</td><td class="summaryTableLastCol">
+	Funktionen förväntar sig ett annat antal argument än dem du skickade. Följande definierar till exempel funktionen <code>goo</code>, som har två argument:
+<pre>class A { static function goo(x:int,y:int) 
+{ return(x+y); } }</pre>
+	<p>Följande programsats genererar ett fel eftersom den har tre argument:</p>
+<pre>A.goo(1,2,3);</pre>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1137"></a><b>1137</b></td><td class="summaryTableCol">Felaktigt antal argument. Högst %s argument förväntades.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1138"></a><b>1138</b></td><td class="summaryTableCol">Obligatoriska parametrar är inte tillåtna efter valfria parametrar.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1139"></a><b>1139</b></td><td class="summaryTableCol">Variabeldeklarationer får inte förekomma i gränssnitt.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1140"></a><b>1140</b></td><td class="summaryTableCol">Parametrar som anges efter nyckelordet …rest i parameterdefinitionen kan bara ha datatypen Array.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1141"></a><b>1141</b></td><td class="summaryTableCol">En klass kan bara utöka en annan klass, inte ett gränssnitt.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1142"></a><b>1142</b></td><td class="summaryTableCol">Ett gränssnitt kan bara utöka andra gränssnitt, men %s är en klass.
+	
+
+</td><td class="summaryTableLastCol">
+	Du försöker låta gränssnittet utöka en klass. Ett gränssnitt kan bara utöka ett annat gränssnitt.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1143"></a><b>1143</b></td><td class="summaryTableCol">Attributet override kan bara användas på en metod som är definierad i en klass.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1144"></a><b>1144</b></td><td class="summaryTableCol">Gränssnittsmetoden %s i namnutrymmet %s implementeras med en inkompatibel signatur i klassen %s.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Metodsignaturer måste matcha exakt.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1145"></a><b>1145</b></td><td class="summaryTableCol">Interna metoder får inte ha något innehåll.
+	
+
+</td><td class="summaryTableLastCol">
+	Du kan inte använda <code>native</code> eftersom det är ett reserverat nyckelord.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1146"></a><b>1146</b></td><td class="summaryTableCol">En konstruktor får inte vara en get- eller set-metod.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1147"></a><b>1147</b></td><td class="summaryTableCol">Ingen AS-källfil har angetts.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1149"></a><b>1149</b></td><td class="summaryTableCol">Programsatsen return kan inte användas i statisk initieringskod.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1150"></a><b>1150</b></td><td class="summaryTableCol">Attributet protected får bara användas på definitioner av klassegenskaper.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1151"></a><b>1151</b></td><td class="summaryTableCol">Konflikt med definitionen %s i namnutrymmet %s.
+
+	
+
+
+</td><td class="summaryTableLastCol">
+	Du kan inte deklarera mer än en variabel med samma ID-namn i samma omfång om inte alla sådana variabler deklareras med samma typ. I ActionScript&nbsp;3.0 anses olika kodblock (till exempel de som används i två <code>for</code>-slingor i samma funktionsdefinition) vara i samma omfång. 
+	<p>I följande kodexempel typbestäms variabeln <code>x</code> korrekt som samma typ:</p>
+<pre><code>function test()
+{
+	var x:int = 3;
+	for(var x:int = 33; x < 55; x++)
+	trace(x);
+	for(var x:int = 11; x < 33; x++)
+	trace(x)
+}</code></pre>
+	<p>I följande kodexempel genereras ett fel eftersom typbestämningen i variabeldeklarationen och i <code>for</code>-slingorna är olika:</p>
+<pre><code>function test()
+{
+	var x:String = "The answer is";
+	for(var x:int = 33; x < 55; x++) // error
+	trace(x);
+	for(var x:unit = 11; x < 33; x++) // error
+	trace(x)
+}</code></pre>
+&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1152"></a><b>1152</b></td><td class="summaryTableCol"> Konflikt med den ärvda definitionen %s i namnutrymmet %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1153"></a><b>1153</b></td><td class="summaryTableCol">En konstruktor kan bara definieras som public.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1154"></a><b>1154</b></td><td class="summaryTableCol">Endast en av public, private, protected och internal får anges för en definition.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1155"></a><b>1155</b></td><td class="summaryTableCol">Åtkomster får inte kapslas i andra funktioner.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1156"></a><b>1156</b></td><td class="summaryTableCol">Gränssnitt kan inte skapas med den nya operatorn.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1157"></a><b>1157</b></td><td class="summaryTableCol">Gränssnittsmedlemmar får inte deklareras som public, private, protected eller internal.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1158"></a><b>1158</b></td><td class="summaryTableCol">Syntaxfel: Vänsterklammer ({) före funktionsinnehållet saknas.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1159"></a><b>1159</b></td><td class="summaryTableCol">Programsatsen return kan inte användas i paketinitieringskod.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1160"></a><b>1160</b></td><td class="summaryTableCol">Attributet native kan inte användas i gränssnittsdefinitioner.
+	
+
+</td><td class="summaryTableLastCol">
+	Du kan inte använda <code>native</code> eftersom det är ett reserverat nyckelord.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1162"></a><b>1162</b></td><td class="summaryTableCol">Endast ett namnutrymmesattribut får användas per definition.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1163"></a><b>1163</b></td><td class="summaryTableCol">Metoden %s står i konflikt med definitionen som har ärvts från gränssnittet %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1165"></a><b>1165</b></td><td class="summaryTableCol">Gränssnittsattributet %s är ogiltigt.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1166"></a><b>1166</b></td><td class="summaryTableCol">Namnutrymmesdeklarationer får inte förekomma i gränssnitt.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1167"></a><b>1167</b></td><td class="summaryTableCol">Klassen %s implementerar gränssnittet %s flera gånger.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Klassen implementerar samma gränssnitt mer än en gång. Följande kod genererar exempelvis ett fel eftersom klassen C implementerar gränssnittet A två gånger:
+
+<pre><code>interface A {  public function f();  };
+class C implements A,A {
+public function f() { trace("f"); }
+}</code></pre>
+	
+	<p>Den korrekta implementeringssatsen ska vara <code> class C implements A {</code>.</p>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1168"></a><b>1168</b></td><td class="summaryTableCol">Ogiltig tilldelning till funktionen %s.
+
+	
+
+
+</td><td class="summaryTableLastCol">
+	Du försöker omdefiniera en funktion. Följande definierar till exempel funktionen <code>topLevel()</code> för utskrift av ordet "top". Den andra programsatsen genererar ett fel eftersom den tilldelar ett annat returvärde till funktionen:
+<pre><code>function topLevel() { trace("top"); }
+topLevel = function() { trace("replacement works in ~");} // error</code></pre>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1169"></a><b>1169</b></td><td class="summaryTableCol">Namnutrymmesattribut tillåts inte för gränssnittsmetoder.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1170"></a><b>1170</b></td><td class="summaryTableCol">Funktionen returnerar inget värde.
+
+	
+</td><td class="summaryTableLastCol">
+	Alla möjliga kontrollflöden i en funktion måste returnera ett värde om returtypen är något annat än void. Följande <code>f(x)</code>-funktion genererar inget fel eftersom <code>if..else</code>-satsen alltid returnerar ett värde:
+
+<pre><code>function f(x):int
+{
+if (x)
+    	return 2;
+else
+    	return 3;
+} // no error</code></pre>
+
+<p>Däremot genererar funktionen <code>g(x)</code> nedan felet, eftersom <code>switch</code>-satsen inte alltid returnerar ett värde.</p>
+<pre><code>function g(x:int):int
+{
+switch(x)
+{
+      	case 1: return 1;
+      	case 2: return 2:
+}
+// return 2;//uncomment to remove the error
+}</code></pre>
+
+	<p>Kontrollen används bara om funktionen deklarerar en returtyp som inte är void. </p>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1171"></a><b>1171</b></td><td class="summaryTableCol">En namnutrymmesstart måste vara antingen en litteral sträng eller ett annat namnutrymme.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1172"></a><b>1172</b></td><td class="summaryTableCol">Definitionen %s kunde inte hittas.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1173"></a><b>1173</b></td><td class="summaryTableCol">Etikettdefinitionen är ogiltig.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1176"></a><b>1176</b></td><td class="summaryTableCol">Jämförelse av ett värde av den statiska typen %s och den möjligen orelaterade typen %s.
+</td><td class="summaryTableLastCol">Detta fel kan uppstå i strikt läge.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1177"></a><b>1177</b></td><td class="summaryTableCol">Programsatsen return kan inte användas i global initieringskod.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1178"></a><b>1178</b></td><td class="summaryTableCol">Ett försök gjordes att komma åt den otillgängliga egenskapen %s via en referens med den statiska typen %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1179"></a><b>1179</b></td><td class="summaryTableCol">:Objektet är tillfälligt otillgängligt. Använd :* i&nbsp;stället.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1180"></a><b>1180</b></td><td class="summaryTableCol">Anrop till den möjligen odefinierade metoden %s.
+</td><td class="summaryTableLastCol">Felet kan bara uppstå när kompilatorn körs i strikt läge.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1181"></a><b>1181</b></td><td class="summaryTableCol">Framåtreferens till basklassen %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1182"></a><b>1182</b></td><td class="summaryTableCol">Paketet kan inte användas som ett värde: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1184"></a><b>1184</b></td><td class="summaryTableCol">Inkompatibelt standardvärde av typen %s där %s förväntas.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1185"></a><b>1185</b></td><td class="summaryTableCol">Programsatsen switch har mer än ett standardvärde. Bara ett standardvärde får användas.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1188"></a><b>1188</b></td><td class="summaryTableCol">Ogiltig tilldelning till klassen %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1189"></a><b>1189</b></td><td class="summaryTableCol">Ett försök gjordes att ta bort den fasta egenskapen %s. Det går endast att ta bort dynamiskt definierade egenskaper.
+</td><td class="summaryTableLastCol">Delete tar bort dynamiskt definierade egenskaper från ett objekt. Deklarerade klassegenskaper kan inte tas bort. Felet kan bara uppstå när kompilatorn körs i strikt läge.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1190"></a><b>1190</b></td><td class="summaryTableCol">Basklassen hittades inte eller är inte en kompileringskonstant.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1191"></a><b>1191</b></td><td class="summaryTableCol">Gränssnittet hittades inte eller är inte en kompileringskonstant.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1192"></a><b>1192</b></td><td class="summaryTableCol">Attributet static tillåts inte i namnutrymmesdefinitioner.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1193"></a><b>1193</b></td><td class="summaryTableCol">Gränssnittsdefinitioner får inte vara inkapslade i definitioner av klasser eller av andra gränssnitt.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1194"></a><b>1194</b></td><td class="summaryTableCol">Attributet prototype är ogiltigt.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1195"></a><b>1195</b></td><td class="summaryTableCol">Ett försök gjordes att komma åt den otillgängliga metoden %s via en referens med den statiska typen %s.
+		
+ 	</td><td class="summaryTableLastCol">Antingen anropar du en privat metod från en annan klass, eller så anropar du en metod som är definierad i ett namnutrymme som inte används. Om du anropar en metod som definierats i ett namnutrymme som inte används lägger du till programsatsen <code>use</code> för det namnutrymmet.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1196"></a><b>1196</b></td><td class="summaryTableCol">Syntaxfel: Ett uttryck förväntades efter throw.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1197"></a><b>1197</b></td><td class="summaryTableCol">Klassen %s kan inte utöka %s eftersom båda är kopplade till bibliotekssymboler eller till huvudtidslinjen.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1198"></a><b>1198</b></td><td class="summaryTableCol">Attribut får inte användas i paketdefinitioner.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1199"></a><b>1199</b></td><td class="summaryTableCol">Internt fel: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1200"></a><b>1200</b></td><td class="summaryTableCol">Syntaxfel: Ogiltig for-in-initierare, bara 1 uttryck förväntades.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1201"></a><b>1201</b></td><td class="summaryTableCol">En super-programsats får inte användas efter programsatserna this, super, return eller throw.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1202"></a><b>1202</b></td><td class="summaryTableCol">Åtkomst till odefinierad egenskap, %s, i paketet %s.
+
+
+    </td><td class="summaryTableLastCol">
+	
+		Du försöker komma åt en odefinierad variabel i ett paket. Om variabeln <code>p.huh</code> till exempel inte har definierats får du följande fel när den anropas:
+
+<pre><code>p.huh = 55;</code></pre>
+
+		Felet kan bara uppstå när kompilatorn körs i strikt läge.
+	
+&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1203"></a><b>1203</b></td><td class="summaryTableCol">Ingen standardkonstruktor hittades i basklassen %s.
+    </td><td class="summaryTableLastCol">Du måste anropa basklassens konstruktor explicit med programsatsen super() om det krävs ett eller flera argument.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1204"></a><b>1204</b></td><td class="summaryTableCol">/* påträffades utan matchande */ .
+
+	</td><td class="summaryTableLastCol">
+	
+		Tecknen ”/*” påträffades, vilket innebär att en kommentar börjar där, men de motsvarande tecknen ”*/” som avslutar blockkommentaren påträffades inte.
+    &nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1205"></a><b>1205</b></td><td class="summaryTableCol">Syntaxfel: En vänster klammerparentes ({) eller stränglitteral ("") förväntas.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1206"></a><b>1206</b></td><td class="summaryTableCol">En super-programsats kan endast användas som det sista objektet i en konstruktorinitierarlista.
+
+    </td><td class="summaryTableLastCol">
+		Du kan inte använda programsatsen <code>super</code> i en konstruktor. Du kan bara använda programsatsen <code>super</code> som det sista objektet i konstruktorinitierarlistan.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1207"></a><b>1207</b></td><td class="summaryTableCol">Nyckelordet this kan inte användas i egenskapsinitierare.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Du kan inte använda nyckelordet <code>this</code> i en egenskapsinitierare.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1208"></a><b>1208</b></td><td class="summaryTableCol">Initieraren för ett konfigurationsvärde måste vara en kompileringstidskontant.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Initieraren för ett konfigurationsvärde måste vara ett värde som är känt vid kompilering. Initieraren kan vara en konstant sträng, ett konstant tal eller booleskt värde eller en referens till ett annat konfigurationsvärde som redan definierats.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1209"></a><b>1209</b></td><td class="summaryTableCol">En konfigurationsvariabel får endast deklareras som const.
+    
+    </td><td class="summaryTableLastCol">
+	
+		När en konfigurationsvariabel definieras måste den deklareras som const.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1210"></a><b>1210</b></td><td class="summaryTableCol">Ett konfigurationsvärde måste deklareras på den översta program- eller paketnivån.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Ett konfigurationsvärde måste deklareras på den översta program- eller paketnivån.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1211"></a><b>1211</b></td><td class="summaryTableCol">Namnutrymmet %s är i konflikt med ett konfigurationsnamnutrymme.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Ett namnutrymme får inte ha samma namn som ett konfigurationsnamnutrymme.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1212"></a><b>1212</b></td><td class="summaryTableCol">Precisionen måste vara ett heltal mellan 1 och 34.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1214"></a><b>1214</b></td><td class="summaryTableCol">Inkompatibel version: Det går inte att referera till definitionen %s som introducerades i version %s från kod med version %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1215"></a><b>1215</b></td><td class="summaryTableCol">Ogiltig initiering: Konvertering till typ %s förlorar data.</td><td class="summaryTableLastCol">&nbsp;</td></tr></table><br><br><div><p></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 01:57 PM Z  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/sv_SE/legalnotices/index.html">Juridiska meddelanden</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Onlinesekretesspolicy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">Varför på engelska?</span>
+				</div>
+				<div class="white_content_body">
+					<b>Innehåll i Referenshandbok för ActionScript&nbsp;3.0 i Adobe Flash-plattformen är på engelska</b><br><br>
+					Det är inte alla delar av Referenshandbok för ActionScript&nbsp;3.0 i Adobe Flash-plattformen som översätts till alla språk. Om ett språkelement inte översätts visas det på engelska. Klassen ga.controls.HelpBox översätts till exempel inte till något språk. I den svenska versionen av referenshandboken visas därför klassen ga.controls.HelpBox på engelska.
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 01:57 PM Z  -->

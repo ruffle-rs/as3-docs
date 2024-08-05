@@ -1,0 +1,632 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Naslaggids voor Adobe ActionScript&reg; 3.0 voor het Adobe&reg; Flash&reg;-platform"><meta name="lang" content="nl-nl"><meta name="runtime" content="air"><meta name="runtimever" content="air:1.5"><meta name="product" content="air"><meta name="productver" content="air:1.5"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../asfilter.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="ApplicationUpdater,air.update.ApplicationUpdater,configurationFile,currentState,currentVersion,delay,isFirstRun,isNewerVersionFunction,previousApplicationStorageDirectory,previousVersion,updateDescriptor,updateURL,wasPendingUpdate,cancelUpdate,checkForUpdate,checkNow,downloadUpdate,initialize,installFromAIRFile,installUpdate"><title>ApplicationUpdater - Bron voor Adobe ActionScript&reg; 3 (AS3  ) API</title>
+		<link rel="stylesheet" href="../../filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="../../filter_new.css" type="text/css">
+			
+		<script src="../../jquery.js" type="text/javascript"></script>
+		<script src="../../s_chl_code.js" type="text/javascript"></script>
+		<script src="../../jquery.zclip.js" type="text/javascript"></script>
+		<script src="../../jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="../../cookies.js" type="text/javascript"></script>
+		<script src="../../asdoc.js" type="text/javascript"></script>
+		<script src="../../iscroll.js" type="text/javascript"></script>
+		<script src="../../AC_OETags.js" type="text/javascript"></script>
+		<script src="../../omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "Runtimes";
+			var productsLabel = "Producten";
+			var noneLabel = "Geen";
+			var qsearchBoxLabel = "Snel zoeken";
+			var qsearchText = "Term niet gevonden";
+			var ajaxErrorMsg="Fout bij laden van pagina";
+			var ajaxErrorTryMsg="Opnieuw proberen";
+			var ajaxLoadingMsg="Nog bezig met laden";
+			var cancelMsg = "Annuleren";
+			var classesText = "Klassen";
+			var strJiveReply = "Deze vraag is geplaatst als reactie op het volgende artikel: "
+			var showFilters = "Filters weergeven";
+			var hideFilters = "Filters verbergen";
+			
+		
+			var baseRef = "../../";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											Naslaggids voor Adobe ActionScript<sup>&reg;</sup> 3.0 voor het Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup>-platform<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="../../index.html"> Startpagina </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="ApplicationUpdater.html#top" style="display:">Lijst met pakketten en klassen weergeven</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="ApplicationUpdater.html#top" style="display:none">Lijst met pakketten en klassen verbergen</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="../../package-summary.html"> Pakketten </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../class-summary.html"> Klassen </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../whatsnew.html"> Nieuw </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../all-index-Symbols.html"> Index </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../appendixes.html"> Bijlagen </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Waarom in het Engels?</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/nl_NL/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('../../')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('../../')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="../../help.js"></script>
+						<script language="javascript" type="text/javascript" src="../../asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="../../filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>Filters:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">Gegevens ophalen van server...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">Gegevens ophalen van server...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="ApplicationUpdater.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">air.update&nbsp;</a><br>
+								<h1 id="classProductName">ApplicationUpdater&nbsp; - AS3 </h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="ApplicationUpdater.html#propertySummary" style="display:none"> Eigenschappen </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="ApplicationUpdater.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Eigenschappen </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="ApplicationUpdater.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="ApplicationUpdater.html#methodSummary" style="display:none"> Methoden </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="ApplicationUpdater.html#constantSummary" style="display:none"> Algemene constanten </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="ApplicationUpdater.html#eventSummary" style="display:none"> Gebeurtenissen </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="ApplicationUpdater.html#styleSummary" style="display:none"> Stijlen </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="ApplicationUpdater.html#SkinPartSummary" style="display:none"> Skinonderdelen  </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="ApplicationUpdater.html#SkinStateSummary" style="display:none"> Skinstatussen </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="ApplicationUpdater.html#effectSummary" style="display:none"> Effecten </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="ApplicationUpdater.html#constantSummary" style="display:none"> Constanten </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="ApplicationUpdater.html#methodSummary" style="display:none"> Algemene functies </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="ApplicationUpdater.html#methodSummary" style="display:none">Functies</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="ApplicationUpdater.html#interfaceSummary" style="display:none"> Interfaces </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="ApplicationUpdater.html#classSummary" style="display:none"> Klassen </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="ApplicationUpdater.html#includeExamplesSummary" style="display:none"> Voorbeelden </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="ApplicationUpdater.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								Klassen
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Pakket</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">air.update</a></td></tr><tr><td class="classHeaderTableLabel">Klasse</td><td class="classSignature">public  class  ApplicationUpdater</td></tr><tr><td class="classHeaderTableLabel">Overerving</td><td class="inheritanceList">ApplicationUpdater  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../flash/events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../Object.html">Object</a></td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p></p>
+	De klasse ApplicationUpdater bevat de basisfunctionaliteit van het updateframework voor Adobe<sup>&reg;</sup> AIR<sup>&reg;</sup>-toepassingen, zonder een standaardgebruikersinterface. (De klasse ApplicationUpdaterUI bevat updatefunctionaliteit <i>en</i> een standaardgebruikersinterface.) 
+		
+	<p>Deze klasse is opgenomen in het bestand applicationupdater_ui.swc, dat deel uitmaakt van de SDK van Adobe AIR. Het bestand applicationupdater_ui.swc staat in de directory frameworks/libs/air van de SDK van AIR.</p>
+	
+	              <p>Adobe<sup>&reg;</sup> Flex&trade; Builder&trade; laadt deze klasse automatisch wanneer u een project maakt voor Adobe AIR. Wanneer u de toepassing compileert met de SDK van Adobe<sup>&reg;</sup> Flex&trade;, moet u het SWC-bestand opnemen.</p>
+	
+	
+	
+	
+		
+	              <p>Het beheren van updates van toepassingen kan ingewikkeld zijn. Het updateframework van AIR bevat API´s waarmee ontwikkelaars goede updatemogelijkheden kunnen bieden in AIR-toepassingen. De functionaliteit in het updateframework van AIR helpt ontwikkelaars bij het volgende:</p>
+	
+	              <ul>
+                  <li>
+	                    <p>Periodiek controleren op updates op basis van een interval of op verzoek van de gebruiker</p>
+	                 </li>
+                  <li>
+	                    <p>AIR-bestanden (updates) downloaden vanaf een webbron</p>
+	                 </li>
+                  <li>
+	                    <p>De gebruiker waarschuwen wanneer de nieuw geïnstalleerde versie voor het eerst wordt uitgevoerd</p>
+	                 </li>
+                  <li>
+	                    <p>Bevestigen dat de gebruiker wilt controleren op updates</p>
+	                 </li>
+                  <li>
+	                    <p>Aan de gebruiker informatie weergeven over de nieuwe updateversie</p>
+	                 </li>
+                  <li>
+	                    <p>De voortgang van het downloaden en informatie over fouten weergeven aan de gebruiker</p>
+	                 </li>
+               </ul>
+	
+	              <p>Met het updateframework van AIR kunt u informatie over de updateversie van een AIR-toepassing opslaan in eenvoudige XML-configuratiebestanden. Voor de meeste toepassingen biedt het instellen van deze configuratiebestanden en het opnemen van enige basiscode goede updatefunctionaliteit voor de eindgebruiker.</p>
+	
+	              <p>Gebruik de klasse AIRUpdater als u uw eigen gebruikersinterface wilt definiëren voor het updateframework van AIR.</p>
+	
+	              <p>Tijdens het updateproces wordt een reeks statussen doorlopen. De eigenschap <code>currentState</code> van het updaterobject bevat de huidige status van de updater:</p>
+	
+	              <p>
+                  <table class="innertable" ><tr><th>
+	Waarde van currentState
+	</th><th>
+	Beschrijving
+	</th></tr><tr><td>"UNINITIALIZED"</td><td>De updater is niet geïnitialiseerd.</td></tr><tr><td>"INITIALIZING"</td><td>De updater wordt geïnitialiseerd.</td></tr><tr><td>"READY"</td><td>De updater is geïnitialiseerd.</td></tr><tr><td>"BEFORE_CHECKING"</td><td>De updater heeft nog niet gecontroleerd of er een updatebeschrijvingsbestand is.</td></tr><tr><td>"CHECKING"</td><td>De updater controleert of er een updatebeschrijvingsbestand is.</td></tr><tr><td>"AVAILABLE"</td><td>Het updatebeschrijvingsbestand is beschikbaar.</td></tr><tr><td>"DOWNLOADING"</td><td>De updater downloadt het AIR-bestand.</td></tr><tr><td>"DOWNLOADED"</td><td>De updater heeft het AIR-bestand gedownload.</td></tr><tr><td>"INSTALLING"</td><td>De updater installeert het AIR-bestand.</td></tr><tr><td>"PENDING_INSTALLING"</td><td>De updater is geïnitialiseerd en er zijn updates in behandeling.</td></tr></table>
+               </p>
+	
+	              <p>Wanneer u een toepassing test met de toepassing AIR Debug Launcher (ADL), wordt de uitzondering IllegalOperationError gegenereerd als u probeert de toepassing bij te werken.</p>
+	
+	              <p>Het AIR-updateframework wordt alleen ondersteund in het bureaubladprofiel. Het wordt niet ondersteund voor uitgebreide bureaubladtoepassingen (toepassingen die met een native installatieprogramma zijn geïnstalleerd) en in het gsm-profiel (iPhone-toepassingen die geschreven zijn met ActionScript 3.0). Controleer de eigenschap <code>Updater.isSupported</code> bij uitvoering om te kijken of het updateframework wordt ondersteund.</p>
+	
+	              <p>Zie het hoofdstuk "AIR-toepassingen bijwerken" in <a href="http://help.adobe.com/nl_NL/air/build/index.html" target="external">Adobe AIR-toepassingen samenstellen</a> voor informatie over het gebruik van het AIR-updateframework.</p> 
+	
+	           <p></p><p><span class="classHeaderTableLabel">Verwante API-elementen</span></p><div class="seeAlso"><a href="ApplicationUpdaterUI.html" target="">ApplicationUpdaterUI</a><br/><a href="../../flash/desktop/Updater.html" target="">flash.desktop.Updater</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary" id="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Openbare eigenschappen</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="ApplicationUpdater.html#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Overerfde openbare eigenschappen verbergen</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="ApplicationUpdater.html#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Overerfde openbare eigenschappen weergeven</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Eigenschap</th><th>Gedefinieerd door</th></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#configurationFile" class="signatureLink">configurationFile</a> : <a href="../../flash/filesystem/File.html">File</a><div class="summaryTableDescription">
+		De locatie van het configuratiebestand waarin de waarden zijn ingesteld voor de eigenschappen delay en updateURL.</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="../../Object.html#constructor" class="signatureLink">constructor</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">
+	 Verwijzing naar het klasseobject of de constructorfunctie van een bepaalde objectinstantie.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#currentState" class="signatureLink">currentState</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">[alleen-lezen] 
+		De interne status van de updater.</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#currentVersion" class="signatureLink">currentVersion</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">[alleen-lezen] 
+		De huidige versie van de toepassing.</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#delay" class="signatureLink">delay</a> : <a href="../../Number.html">Number</a><div class="summaryTableDescription">
+		Het interval, in dagen, tussen periodieke controles op nieuwe updates.</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#isFirstRun" class="signatureLink">isFirstRun</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">[alleen-lezen] 
+		Geeft aan of dit de eerste uitvoering is na een geslaagde update (true) of niet (false).</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#isNewerVersionFunction" class="signatureLink">isNewerVersionFunction</a> : <a href="../../Function.html">Function</a><div class="summaryTableDescription">
+		Een functie die de updater moet gebruiken om versies te vergelijken.</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#previousApplicationStorageDirectory" class="signatureLink">previousApplicationStorageDirectory</a> : <a href="../../flash/filesystem/File.html">File</a><div class="summaryTableDescription">[alleen-lezen] 
+		De vorige locatie van de opslagmap van de toepassing, als deze na een update is gewijzigd.</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#previousVersion" class="signatureLink">previousVersion</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">[alleen-lezen] 
+		De vorige versie van de toepassing.</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#updateDescriptor" class="signatureLink">updateDescriptor</a> : <a href="../../XML.html">XML</a><div class="summaryTableDescription">[alleen-lezen] 
+		De inhoud van het updatebeschrijvingsbestand dat is gedownload uit de update-URL.</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#updateURL" class="signatureLink">updateURL</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">
+		De locatie van het updatebeschrijvingsbestand.</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#wasPendingUpdate" class="signatureLink">wasPendingUpdate</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">[alleen-lezen] 
+		Geeft aan of er een uitgestelde update was, ook als de installatie daarvan is mislukt (true); anders is de waarde false.</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary" id="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Openbare methoden </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="ApplicationUpdater.html#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Overerfde openbare methoden verbergen</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="ApplicationUpdater.html#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Overerfde openbare methoden weergeven</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Methode</th><th>Gedefinieerd door</th></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#ApplicationUpdater()" class="signatureLink">ApplicationUpdater</a>()</div><div class="summaryTableDescription">
+		De constructorfunctie.</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#addEventListener()" class="signatureLink">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	Registreert een gebeurtenislistenerobject bij een object EventDispatcher, zodat de listener een melding van een gebeurtenis ontvangt.</div></td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#cancelUpdate()" class="signatureLink">cancelUpdate</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+		Hiermee wordt het updateproces geannuleerd.</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#checkForUpdate()" class="signatureLink">checkForUpdate</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+		Het updatebeschrijvingsbestand wordt asynchroon gedownload en geïnterpreteerd.</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#checkNow()" class="signatureLink">checkNow</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+		Het updateproces starten.</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../../flash/events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	Verzendt een gebeurtenis naar de gebeurtenisstroom.</div></td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#downloadUpdate()" class="signatureLink">downloadUpdate</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+		Het updatebestand wordt asynchroon gedownload.</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	Controleert of het object EventDispatcher listeners heeft geregistreerd voor een specifiek type gebeurtenis.</div></td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#hasOwnProperty()" class="signatureLink">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Geeft aan of voor een object een opgegeven eigenschap is gedefinieerd.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#initialize()" class="signatureLink">initialize</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+		 Hiermee wordt de updater geïnitialiseerd.</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#installFromAIRFile()" class="signatureLink">installFromAIRFile</a>(file:<a href="../../flash/filesystem/File.html">File</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+		Hiermee wordt het updateproces gestart met een lokaal AIR-bestand.</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#installUpdate()" class="signatureLink">installUpdate</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+		Hiermee wordt het updatebestand geïnstalleerd.</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#isPrototypeOf()" class="signatureLink">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Geeft aan of een instantie van de klasse Object zich in de prototypeketen van het object bevindt dat als parameter is opgegeven.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#propertyIsEnumerable()" class="signatureLink">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Geeft aan of de opgegeven eigenschap bestaat en kan worden opgesomd.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#removeEventListener()" class="signatureLink">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	Verwijdert een listener uit het object EventDispatcher.</div></td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#setPropertyIsEnumerable()" class="signatureLink">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     Stelt de beschikbaarheid van een dynamische eigenschap voor lusbewerkingen in.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toLocaleString()" class="signatureLink">toLocaleString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 Geeft de tekenreeksweergave van dit object weer, geformatteerd volgens de locatiespecifieke conventies.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toString()" class="signatureLink">toString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 Retourneert een tekenreeksrepresentatie van het opgegeven object.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#valueOf()" class="signatureLink">valueOf</a>():<a href="../../Object.html">Object</a></div><div class="summaryTableDescription">
+	 Retourneert de primitieve waarde van het opgegeven object.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	Controleert of een gebeurtenislistener is geregistreerd bij dit object EventDispatcher of een van de voorouders voor het opgegeven type gebeurtenis.</div></td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary" id="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Gebeurtenissen</div><div class="showHideLinks"><a href="http://help.adobe.com/en_US/Flex/4.6/UsingSDK/WS2db454920e96a9e51e63e3d11c0bf69084-7ee9.html" target="_blank">Klik voor meer informatie over gebeurtenissen.</a></div><div class="showHideLinks"><div id="hideInheritedEvent" class="hideInheritedEvent"><a class="showHideLink" href="ApplicationUpdater.html#eventSummary" onclick="javascript:setInheritedVisible(false,'Event');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Overerfde gebeurtenissen verbergen</a></div><div id="showInheritedEvent" class="showInheritedEvent"><a class="showHideLink" href="ApplicationUpdater.html#eventSummary" onclick="javascript:setInheritedVisible(true,'Event');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Overerfde gebeurtenissen weergeven</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Gebeurtenis</th><th> Overzicht </th><th>Gedefinieerd door</th></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[uitgezonden gebeurtenis] Wordt verzonden wanneer Flash Player of de AIR-toepassing de besturingssysteemfocus krijgt en actief wordt.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:beforeInstall" class="signatureLink">beforeInstall</a></div></td><td class="summaryTableDescription summaryTableCol">Wordt verzonden vlak voordat de update wordt geïnstalleerd, nadat de methode installUpdate() is aangeroepen.</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:checkForUpdate" class="signatureLink">checkForUpdate</a></div></td><td class="summaryTableDescription summaryTableCol">Wordt verzonden voordat het updateproces begint, vlak voordat de updater het updatebeschrijvingsbestand probeert te downloaden.</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[uitgezonden gebeurtenis] Wordt verzonden wanneer Flash Player of de AIR-toepassing de systeemfocus verliest en inactief wordt.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:downloadComplete" class="signatureLink">downloadComplete</a></div></td><td class="summaryTableDescription summaryTableCol">Wordt verzonden wanneer het downloaden van updatebestand is voltooid.</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:downloadError" class="signatureLink">downloadError</a></div></td><td class="summaryTableDescription summaryTableCol">Wordt verzonden als er een fout optreedt wanneer verbinding wordt gemaakt met het updatebestand of wanneer het wordt gedownload.</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:downloadStart" class="signatureLink">downloadStart</a></div></td><td class="summaryTableDescription summaryTableCol">Wordt verzonden nadat de methode downloadUpdate() is aangeroepen en de verbinding met de server tot stand is gebracht.</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:error" class="signatureLink">error</a></div></td><td class="summaryTableDescription summaryTableCol">Wordt verzonden wanneer er een fout is opgetreden tijden de initialisatie of tijdens het updateproces (als er iets onverwachts is gebeurd).</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:fileUpdateError" class="signatureLink">fileUpdateError</a></div></td><td class="summaryTableDescription summaryTableCol">Wordt verzonden wanneer er een fout optreedt tijdens het valideren van het bestand dat is doorgegeven met de parameter airFile in een aanroep van de methode installFromAIRFile().</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:fileUpdateStatus" class="signatureLink">fileUpdateStatus</a></div></td><td class="summaryTableDescription summaryTableCol">Wordt verzonden nadat het bestand in de aanroep van de methode installFromAIRFile() met succes is gevalideerd.</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:initialized" class="signatureLink">initialized</a></div></td><td class="summaryTableDescription summaryTableCol">Wordt verzonden nadat de initialisatie is voltooid.</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:progress" class="signatureLink">progress</a></div></td><td class="summaryTableDescription summaryTableCol">Verzonden tijdens het downloaden van het updatebestand.</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:updateError" class="signatureLink">updateError</a></div></td><td class="summaryTableDescription summaryTableCol">Wordt verzonden als er een fout optreedt wanneer wordt geprobeerd het updatebeschrijvingsbestand te downloaden of te parseren.</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:updateStatus" class="signatureLink">updateStatus</a></div></td><td class="summaryTableDescription summaryTableCol">Wordt verzonden nadat het updatebeschrijvingsbestand met succes is gedownload en geïnterpreteerd.</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Eigenschapdetails</div><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="configurationFile" id="configurationFile"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>configurationFile</h3></td><td class="detailHeaderType">eigenschap</td></tr></table><div class="detailBody"><code>configurationFile:<a href="../../flash/filesystem/File.html">File</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		De locatie van het configuratiebestand waarin de waarden zijn ingesteld voor de eigenschappen <code>delay</code> en <code>updateURL</code>. Als deze eigenschap naar een niet-bestaand bestand verwijst, treedt er een fout op als de methode <code>initialize()</code> wordt aangeroepen.
+		
+		<p>Hier volgt een voorbeeld van een configuratiebestand:</p>
+		
+		<div class="listing"><pre> &lt;?xml version="1.0" encoding="utf-8"?&gt; 
+         &lt;configuration xmlns="http://ns.adobe.com/air/framework/update/configuration/1.0" &gt;
+           &lt;url&gt;app:/server/update.xml&lt;/url&gt;
+           &lt;delay&gt;1&lt;/delay&gt;
+        &lt;/configuration&gt;</pre></div>
+		
+		<p>In plaats van een configuratiebestand te laden, kunt u <span>ActionScript</span>-code gebruiken om de eigenschappen <code>delay</code> en <code>updateURL</code> in te stellen.</p> 
+		
+		</p><br/><br/><span class="label"> Implementatie </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get configurationFile():<a href="../../flash/filesystem/File.html">File</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set configurationFile(value:<a href="../../flash/filesystem/File.html">File</a>):<a href="../../specialTypes.html#void">void</a></code><br/><p><span class="label">Verwante API-elementen</span></p><div class="seeAlso"><a href="ApplicationUpdater.html#delay" target="">delay</a><br/><a href="ApplicationUpdater.html#updateURL" target="">updateURL</a></div></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="currentState" id="currentState"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>currentState</h3></td><td class="detailHeaderType">eigenschap</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>currentState:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[alleen-lezen] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		De interne status van de updater. U kunt de volgende waarden instellen voor de eigenschap:
+		
+		<p><ul><li>
+		<p><code>"UNINITIALIZED"</code> &mdash; De updater is niet geïnitialiseerd.</p>
+		</li><li>
+		<p><code>"INITIALIZING"</code> &mdash; De updater wordt geïnitialiseerd.</p>
+		</li><li>
+		<p><code>"READY"</code> &mdash; De updater is geïnitialiseerd.</p>
+		</li><li>
+		<p><code>"BEFORE_CHECKING"</code> &mdash; De updater heeft nog niet gecontroleerd of er een updatebeschrijvingsbestand is.</p>
+		</li><li>
+		<p><code>"CHECKING"</code> &mdash; De updater controleert of er een updatebeschrijvingsbestand is.</p>
+		</li><li>
+		<p><code>"AVAILABLE"</code> &mdash; Het updatebeschrijvingsbestand is beschikbaar.</p>
+		</li><li>
+		<p><code>"DOWNLOADING"</code> &mdash; De updater downloadt het AIR-bestand.</p>
+		</li><li>
+		<p><code>"DOWNLOADED"</code> &mdash; De updater heeft het AIR-bestand gedownload.</p>
+		</li><li>
+		<p><code>"INSTALLING"</code> &mdash; De updater installeert het AIR-bestand.</p>
+		</li><li>
+		<p><code>"PENDING_INSTALLING"</code> &mdash; De updater is geïnitialiseerd en er zijn updates in behandeling.</p>
+		</li></ul></p>
+		
+		</p><br/><br/><span class="label"> Implementatie </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get currentState():<a href="../../String.html">String</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="currentVersion" id="currentVersion"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>currentVersion</h3></td><td class="detailHeaderType">eigenschap</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>currentVersion:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[alleen-lezen] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		De huidige versie van de toepassing. Deze eigenschap wordt ingesteld tijdens het aanroepen van de methode <code>initialize()</code>. De eigenschap wordt ingesteld op de versie uit het toepassingsbeschrijvingsbestand.
+		
+		</p><br/><br/><span class="label"> Implementatie </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get currentVersion():<a href="../../String.html">String</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="delay" id="delay"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>delay</h3></td><td class="detailHeaderType">eigenschap</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>delay:<a href="../../Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		Het interval, in dagen, tussen periodieke controles op nieuwe updates.
+		
+		<p>De waarde 0 (de standaardwaarde) geeft aan dat de timer niet actief is, zodat er geen periodieke controles worden uitgevoerd. Dit kan worden ingesteld via deze eigenschap of via het configuratiebestand. Wanneer de waarde is ingesteld met beide methoden, wordt de waarde gebruikt die met de eigenschap is ingesteld.</p>
+		
+		</p><p> De standaardwaarde is <code>0.</code></p><br/><br/><span class="label"> Implementatie </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get delay():<a href="../../Number.html">Number</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set delay(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="isFirstRun" id="isFirstRun"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>isFirstRun</h3></td><td class="detailHeaderType">eigenschap</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isFirstRun:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[alleen-lezen] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		Geeft aan of dit de eerste uitvoering is na een geslaagde update (<code>true</code>) of niet (<code>false</code>). Deze waarde wordt ingesteld na het aanroepen van de methode <code>initialize()</code>. De ontwikkelaar moet controleren of <code>isFirstRun</code> op <code>true</code> is ingesteld als er gegevens moeten worden gemigreerd van de ene versie naar een andere.
+		
+		</p><br/><br/><span class="label"> Implementatie </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isFirstRun():<a href="../../Boolean.html">Boolean</a></code><br/><p><span class="label">Verwante API-elementen</span></p><div class="seeAlso"><a href="ApplicationUpdater.html#wasPendingUpdate" target="">wasPendingUpdate</a></div></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="isNewerVersionFunction" id="isNewerVersionFunction"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>isNewerVersionFunction</h3></td><td class="detailHeaderType">eigenschap</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isNewerVersionFunction:<a href="../../Function.html">Function</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		Een functie die de updater moet gebruiken om versies te vergelijken. Standaard worden versies vergeleken om te bepalen of de versie van de externe site nieuwer is dan de versie van de geïnstalleerde toepassing. Soms komt de standaardvergelijkingsfunctie echter niet overeen met het versieschema van de ontwikkelaar. Stel deze eigenschap in om een nieuwe vergelijkingsfunctie op te geven. 
+		
+		<p>De standaardvergelijkingsfunctie accepteert versies zoals <i>x.y.z</i>, waarbij x, y en z letters en cijfers kunnen bevatten. Er zijn enkele speciale voorwaarden die de standaardvergelijkingsfunctie herkent. Als de testfunctie <code>"alpha"</code>, <code>"beta"</code> of <code>"rc"</code> aantreft in de versietekenreeksen, is de volgorde: <code>alpha</code> &lt; <code>beta</code> &lt; <code>rc</code>.</p>
+		
+		</p><br/><br/><span class="label"> Implementatie </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isNewerVersionFunction():<a href="../../Function.html">Function</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set isNewerVersionFunction(value:<a href="../../Function.html">Function</a>):<a href="../../specialTypes.html#void">void</a></code><br/><span id="pageFilter"><br/><span class="label"> Voorbeeld &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_nl"> Hoe dit voorbeeld te gebruiken </a></span>)
+            </span><br/><div class="detailBody"> Met de volgende code wordt een aangepaste functie <code>customFn</code> gedefinieerd voor het updaterobject <code>appUpdate</code>. De voorbeeldfunctie is opzettelijk eenvoudig gehouden. Uw aangepaste functie moet een Booleaanse waarde retourneren die is gebaseerd op de regels van uw versieschema.
+<div class="listing"><pre>
+appUpdate.isNewerVersionFunction = customFn; 
+
+function customFn (currentVersion:String, updateVersion:String):Boolean 
+{
+    return updateVersion &gt; currentVersion;
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="previousApplicationStorageDirectory" id="previousApplicationStorageDirectory"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>previousApplicationStorageDirectory</h3></td><td class="detailHeaderType">eigenschap</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>previousApplicationStorageDirectory:<a href="../../flash/filesystem/File.html">File</a></code>&nbsp;&nbsp;[alleen-lezen] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		De vorige locatie van de opslagmap van de toepassing, als deze na een update is gewijzigd. De locatie van de opslagmap van de toepassing wordt gewijzigd na een upgrade met een certificaatmigratie. Als er geen certificaatmigratie plaatsvindt, verandert de opslagmap van de toepassing niet wanneer de gebruiker de toepassing bijwerkt. en deze eigenschap wordt ingesteld op <code>null</code>. Deze eigenschap wordt ingesteld tijdens het aanroepen van de methode <code>initialize()</code>. 
+		
+		<p>Een nieuwe versie van een AIR-toepassing kan met een nieuw certificaat worden ondertekend als de ontwikkelaar de optie <code>-migrate</code> gebruikt wanneer het AIR-pakket wordt gemaakt met ADT. Als een nieuwe versie van een AIR-toepassing een nieuw handtekeningcertificaat gebruikt, verandert de lokale opslagmap van de toepassing wanneer de gebruiker de nieuwe versie installeert. Gebruik deze eigenschap om gegevens vanuit de oude opslagmap van de toepassing over te brengen naar de nieuwe opslagmap (<code>File.applicationStorageDirectory</code>). Raadpleeg 'Een AIR-bestand ondertekenen om het toepassingscertificaat te wijzigen' in het hoofdstuk 'AIR-toepassingen maken met de opdrachtregelprogramma's' van de handleiding voor ontwikkelaars van Adobe AIR voor meer informatie.</p>
+		
+		</p><br/><br/><span class="label"> Implementatie </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get previousApplicationStorageDirectory():<a href="../../flash/filesystem/File.html">File</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="previousVersion" id="previousVersion"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>previousVersion</h3></td><td class="detailHeaderType">eigenschap</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>previousVersion:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[alleen-lezen] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		De vorige versie van de toepassing. Deze eigenschap wordt ingesteld tijdens het aanroepen van de methode <code>initialize()</code>. Retourneert de <i>vorige versie</i> van de toepassing vóór de upgrade (wordt alleen ingesteld als <code>isfirstRun</code> <code>true</code> is); anders is de waarde <code>null</code>.
+		
+		</p><br/><br/><span class="label"> Implementatie </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get previousVersion():<a href="../../String.html">String</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="updateDescriptor" id="updateDescriptor"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>updateDescriptor</h3></td><td class="detailHeaderType">eigenschap</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>updateDescriptor:<a href="../../XML.html">XML</a></code>&nbsp;&nbsp;[alleen-lezen] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		De inhoud van het updatebeschrijvingsbestand dat is gedownload uit de update-URL. Deze eigenschap is alleen niet null nadat het updaterobject een gebeurtenis <code>updateStatus</code> heeft verzonden.
+		
+		</p><br/><br/><span class="label"> Implementatie </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get updateDescriptor():<a href="../../XML.html">XML</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="updateURL" id="updateURL"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>updateURL</h3></td><td class="detailHeaderType">eigenschap</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>updateURL:<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		De locatie van het updatebeschrijvingsbestand. Elke locatie die geldig is voor een URLRequest-pad, wordt geaccepteerd. Dit is de enige verplichte instelling voor de updater. U kunt de URL van de update instellen via deze eigenschap of via het configuratiebestand. Waneer de waarde met beide methoden is ingesteld, gebruikt de updater de waarde die met deze eigenschap is ingesteld.
+		
+		</p><br/><br/><span class="label"> Implementatie </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get updateURL():<a href="../../String.html">String</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set updateURL(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="wasPendingUpdate" id="wasPendingUpdate"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>wasPendingUpdate</h3></td><td class="detailHeaderType">eigenschap</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>wasPendingUpdate:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[alleen-lezen] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		Geeft aan of er een uitgestelde update was, ook als de installatie daarvan is mislukt (<code>true</code>); anders is de waarde <code>false</code>. Deze eigenschap wordt ingesteld tijdens het aanroepen van de methode <code>initialize()</code>. Gebruik de eigenschappen <code>wasPendingUpdate</code> en <code>isFirstRun</code> om te controleren of de installatie van een update is mislukt (in dat geval is <code>wasPendingUpdate</code> ingesteld op <code>true</code> en is <code>isFirstRun</code> ingesteld op <code>false</code>).
+		
+		</p><br/><br/><span class="label"> Implementatie </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get wasPendingUpdate():<a href="../../Boolean.html">Boolean</a></code><br/><p><span class="label">Verwante API-elementen</span></p><div class="seeAlso"><a href="ApplicationUpdater.html#isFirstRun" target="">isFirstRun</a></div></div></span><a name="constructorDetail" id="constructorDetail"></a><div class="detailSectionHeader">Constructordetails</div><span id="pageFilter" runtime="AIR::1.5##"><a name="ApplicationUpdater()" id="ApplicationUpdater()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>ApplicationUpdater</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function ApplicationUpdater()</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p>
+		De constructorfunctie. 
+		
+		</p></div></span><a name="methodDetail" id="methodDetail"></a><div class="detailSectionHeader">Methodedetails</div><span id="pageFilter" runtime="AIR::1.5##"><a name="cancelUpdate()" id="cancelUpdate()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;cancelUpdate</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td></tr></table><div class="detailBody"><code> public function cancelUpdate():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		Hiermee wordt het updateproces geannuleerd. Als deze methode wordt aangeroepen, worden alle downloads die in behandeling zijn, geannuleerd, worden alle onvolledig gedownloade bestanden verwijderd en wordt de periodieke controletimer opnieuw gestart.
+		
+		<p>Het updateproces kan op elk moment worden geannuleerd, behalve wanneer de status "UNINITIALIZED" of "INITIALIZING" is. Er gebeurt niets wanneer de methode wordt aangeroepen als de status "UNINITIALIZED" of "INITIALIZING" is.</p>
+		
+		</p></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="checkForUpdate()" id="checkForUpdate()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;checkForUpdate</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function checkForUpdate():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		Het updatebeschrijvingsbestand wordt asynchroon gedownload en geïnterpreteerd. Als deze methode wordt aangeroepen, verandert de status van de updater in "CHECKING". Roep deze methode alleen aan als de gebeurtenis <code>checkForUpdate</code> is geannuleerd.
+		
+		<p>Deze methode wordt alleen uitgevoerd wanneer de updater de status "BEFORE_CHECKING" heeft. </p>
+		
+		</p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>updateStatus</b>:<a href="events/StatusUpdateEvent.html"><code>StatusUpdateEvent</code></a></code> &mdash; De updater heeft het updatebeschrijvingsbestand gedownload en geïnterpreteerd.
+		
+		</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>updateError</b>:<a href="events/StatusUpdateErrorEvent.html"><code>StatusUpdateErrorEvent</code></a></code> &mdash; Er is een fout opgetreden terwijl werd geprobeerd het updatebeschrijvingsbestand te downloaden of te parseren.
+		
+		</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="checkNow()" id="checkNow()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;checkNow</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function checkNow():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		Het updateproces starten. Als deze methode wordt aangeroepen, wordt de periodieke timer niet gestopt. Er wordt echter ontdekt dat er een updateproces wordt uitgevoerd en de huidige iteratie wordt overgeslagen.
+		
+		<p>Deze methode wordt alleen uitgevoerd als de huidige status "READY" is. </p>
+		
+		<p>Deze methode kan ertoe leiden dat het updaterobject de volgende gebeurtenis verzendt:</p>
+		
+		</p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>checkForUpdate</b>:<a href="events/UpdateEvent.html"><code>UpdateEvent</code></a></code> &mdash; Wordt verzonden vlak voordat het updateproces begint.
+		
+		</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="downloadUpdate()" id="downloadUpdate()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;downloadUpdate</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function downloadUpdate():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		Het updatebestand wordt asynchroon gedownload. Als deze methode wordt aangeroepen, verandert de status in "DOWNLOADING". Deze methode moet alleen worden aangeroepen als de gebeurtenis StatusUpdateEvent.UPDATE_STATUS is geannuleerd toen de eigenschap available van de gebeurtenis waar was.
+		
+		<p>Deze methode wordt alleen uitgevoerd als de huidige status "AVAILABLE" is.</p>
+		
+		</p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>downloadStart</b>:<a href="events/UpdateEvent.html"><code>UpdateEvent</code></a></code> &mdash; Wordt verzonden nadat de verbinding met de server tot stand is gebracht. 
+		
+		</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>progress</b>:<a href="../../flash/events/ProgressEvent.html"><code>ProgressEvent</code></a></code> &mdash; Wordt verzonden nadat de initialisatie is voltooid.
+		
+		</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>downloadError</b>:<a href="events/DownloadErrorEvent.html"><code>DownloadErrorEvent</code></a></code> &mdash; Wordt verzonden als er een fout optreedt wanneer verbinding wordt gemaakt met het updatebestand of wanneer het wordt gedownload. Wordt ook verzonden voor een ongeldige HTTP-status (zoals 404 - Bestand niet gevonden).
+		
+		</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="initialize()" id="initialize()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;initialize</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function initialize():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		 Hiermee wordt de updater geïnitialiseerd. Als u deze methode aanroept, gebeurt het volgende: 
+		
+		<p><ol><li>
+		<p>Het updateframework wordt geïnitialiseerd en alle updates die in behandeling zijn, worden stil (en synchroon) geïnstalleerd. U moet deze methode tijdens het starten van de toepassing aanroepen, omdat de toepassing mogelijk opnieuw moet worden opgestart.</p>
+		</li><li>
+		
+		<p>Als er een uitgestelde update aanwezig is, wordt deze geïnstalleerd.</p>
+		</li><li>
+		<p>Als er iets verkeerd is gegaan tijdens een vorige update, worden het updatebestand en de versiegegevens in het opslaggebied gewist.</p>
+		</li><li>
+		<p>Als de tijd van de periodieke timer is verstreken, wordt het updateproces gestart; anders wordt de periodieke timer gestart. Wanneer u echter een toepassing test met de toepassing AIR Debug Launcher (ADL), wordt de uitzondering IllegalOperationError gegenereerd als u probeert de toepassing bij te werken.</p>
+		</li></ol></p>
+		
+		</p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>initialized</b>:<a href="events/UpdateEvent.html"><code>UpdateEvent</code></a></code> &mdash; De initialisatie is voltooid. 
+		
+		</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>error</b>:<a href="../../flash/events/ErrorEvent.html"><code>ErrorEvent</code></a></code> &mdash; Er is een fout opgetreden tijdens de intialisatie.
+		
+		</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="installFromAIRFile()" id="installFromAIRFile()"></a><a name="installFromAIRFile(flash.filesystem.File)" id="installFromAIRFile(flash.filesystem.File)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;installFromAIRFile</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function installFromAIRFile(file:<a href="../../flash/filesystem/File.html">File</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		Hiermee wordt het updateproces gestart met een lokaal AIR-bestand. 
+		
+		<p>Het aanroepen van deze methode heeft geen effect als er een updateproces wordt uitgevoerd (als de status niet <code>"DOWNLOADED"</code> is).</p>
+		
+		<p>Deze functie is nuttig voor een toepassing waarbij het element <code>customUpdateUI</code> is ingesteld op <code>true</code> in het toepassingsbeschrijvingsbestand.</p>
+		
+		<p>Wanneer u een toepassing test met de toepassing AIR Debug Launcher (ADL), leidt het aanroepen van deze methode tot de uitzondering IllegalOperationError.</p>
+		
+		</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">file</span>:<a href="../../flash/filesystem/File.html">File</a></code> &mdash; Het lokale AIR-bestand dat wordt geïnstalleerd.
+		
+		</td></tr></table></p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>fileUpdateStatus</b>:<a href="events/StatusFileUpdateEvent.html"><code>StatusFileUpdateEvent</code></a></code> &mdash; Wordt verzonden nadat het AIR-bestand met succes is gevalideerd.
+		
+		</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>updateError</b>:<a href="events/StatusFileUpdateErrorEvent.html"><code>StatusFileUpdateErrorEvent</code></a></code> &mdash; Wordt verzonden als er een fout optreedt wanneer wordt geprobeerd het updatebeschrijvingsbestand te parseren.
+		
+		</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="installUpdate()" id="installUpdate()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;installUpdate</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function installUpdate():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		Hiermee wordt het updatebestand geïnstalleerd. Als deze methode wordt aangeroepen, verandert de status in "INSTALLING" en deze methode moet alleen worden aangeroepen als de gebeurtenis <code>downLoadComplete</code> is geannuleerd.
+		
+		<p>Roep deze methode aan wanneer de updater de status "DOWNLOADED" heeft. Als u deze methode bij een andere status aanroep, gebeurt er niets.</p>
+		
+		<p>Wanneer u een toepassing test met de toepassing AIR Debug Launcher (ADL), leidt het aanroepen van deze methode tot de uitzondering IllegalOperationError.</p>
+		
+		</p><br/><span class="label">Gebeurtenissen</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>beforeInstall</b>:<a href="events/UpdateEvent.html"><code>UpdateEvent</code></a></code> &mdash; Wordt verzonden vlak voordat de update wordt geïnstalleerd. Het is soms beter om de installatie van de update op dit moment te verhinderen, omdat de gebruiker al het huidige werk zou kunnen kwijtraken wanneer de runtime de toepassing afsluit om de update te installeren.
+		 
+		</td></tr></table></div></span><div class="detailSectionHeader"> Gebeurtenisdetails </div><span id="pageFilter" runtime="AIR::1.5##"><a name="event:beforeInstall" id="event:beforeInstall"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>beforeInstall</h3></td><td class="detailHeaderType"> Gebeurtenis </td></tr></table><div class="detailBody"><span class="label">Type gebeurtenisobject: </span><a href="events/UpdateEvent.html"><code>air.update.events.UpdateEvent</code></a><br/><span class="label">eigenschap UpdateEvent.type  =  </span><a href="events/UpdateEvent.html#BEFORE_INSTALL"><code>air.update.events.UpdateEvent.BEFORE_INSTALL</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	 Wordt verzonden vlak voordat de update wordt geïnstalleerd, nadat de methode <code>installUpdate()</code> is aangeroepen. Het is soms beter om de installatie van de update op dit moment te verhinderen, omdat de gebruiker al het huidige werk zou kunnen kwijtraken wanneer de runtime de toepassing afsluit om de update te installeren. 
+	 
+	 <p>Door de methode <code>preventDefault()</code> van deze gebeurtenis aan te roepen, wordt de installatie uitgesteld totdat de toepassing opnieuw wordt gestart. Als u de methode <code>preventDefault()</code> aanroept, kan er geen ander updateproces worden gestart tijdens deze toepassingssessie (via het aanroepen van de methode <code>installUpdate()</code> of wegens de periodieke controle). </p>
+	 
+	 <p>Standaard wordt het updatebeschrijvingsbestand gedownload door de ApplicationUpdater-bibliotheek. U kunt de methode <code>preventDefault()</code> aanroepen om dit standaardgedrag te annuleren.</p>
+	
+	</p>
+		 De constante <code>UpdateEvent.BEFORE_INSTALL</code> bevat de waarde van de eigenschap <code>type</code> van het gebeurtenisobject voor een gebeurtenis <code>beforeInstall</code>.
+		 
+		<p>Deze gebeurtenis heeft de volgende eigenschappen:</p>
+		
+		<table class="innertable" ><tr><th>Eigenschap</th><th>Waarde</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; er is geen standaardgedrag om te annuleren.</td></tr><tr><td><code>currentTarget</code></td><td>Het object dat het gebeurtenisobject actief verwerkt met een gebeurtenislistener.</td></tr><tr><td><code>target</code></td><td>Het updaterobject. </td></tr></table>
+		
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:checkForUpdate" id="event:checkForUpdate"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>checkForUpdate</h3></td><td class="detailHeaderType"> Gebeurtenis </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Type gebeurtenisobject: </span><a href="events/UpdateEvent.html"><code>air.update.events.UpdateEvent</code></a><br/><span class="label">eigenschap UpdateEvent.type  =  </span><a href="events/UpdateEvent.html#CHECK_FOR_UPDATE"><code>air.update.events.UpdateEvent.CHECK_FOR_UPDATE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	Wordt verzonden voordat het updateproces begint, vlak voordat de updater het updatebeschrijvingsbestand probeert te downloaden. De updater kan deze gebeurtenis verzenden nadat de methode <code>checkNow()</code> rechtstreeks is aanroepen of omdat de timer voor periodieke controle is verlopen. 
+	
+	</p>
+		 De constante <code>UpdateEvent.CHECK_FOR_UPDATE</code> bevat de waarde van de eigenschap <code>type</code> van het gebeurtenisobject voor een gebeurtenis <code>checkForUpdate</code>.
+		 
+		<p>Deze gebeurtenis heeft de volgende eigenschappen:</p>
+		
+		<table class="innertable" ><tr><th>Eigenschap</th><th>Waarde</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; er is geen standaardgedrag om te annuleren.</td></tr><tr><td><code>currentTarget</code></td><td>Het object dat het gebeurtenisobject actief verwerkt met een gebeurtenislistener.</td></tr><tr><td><code>target</code></td><td>Het updaterobject. </td></tr></table>
+		
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:downloadComplete" id="event:downloadComplete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>downloadComplete</h3></td><td class="detailHeaderType"> Gebeurtenis </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Type gebeurtenisobject: </span><a href="events/UpdateEvent.html"><code>air.update.events.UpdateEvent</code></a><br/><span class="label">eigenschap UpdateEvent.type  =  </span><a href="events/UpdateEvent.html#DOWNLOAD_COMPLETE"><code>air.update.events.UpdateEvent.DOWNLOAD_COMPLETE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	Wordt verzonden wanneer het downloaden van updatebestand is voltooid.
+	
+	<p>Deze gebeurtenis wordt gewoonlijk gebruikt om een bericht weer te geven waarin wordt gevraagd of de gebruiker wil doorgaan met de installatie van de update. </p>
+	
+	<p>Standaard wordt de methode <code>installUpdate()</code> automatisch aangeroepen door de ApplicationUpdater-bibliotheek.</p>
+	
+	</p>
+		 De constante <code>UpdateEvent.DOWNLOAD_COMPLETE</code> bevat de waarde van de eigenschap <code>type</code> van het gebeurtenisobject voor een gebeurtenis <code>downloadComplete</code>.
+		 
+		<p>Deze gebeurtenis heeft de volgende eigenschappen:</p>
+		
+		<table class="innertable" ><tr><th>Eigenschap</th><th>Waarde</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; er is geen standaardgedrag om te annuleren.</td></tr><tr><td><code>currentTarget</code></td><td>Het object dat het gebeurtenisobject actief verwerkt met een gebeurtenislistener.</td></tr><tr><td><code>target</code></td><td>Het updaterobject. </td></tr></table>
+		 
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:downloadError" id="event:downloadError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>downloadError</h3></td><td class="detailHeaderType"> Gebeurtenis </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Type gebeurtenisobject: </span><a href="events/DownloadErrorEvent.html"><code>air.update.events.DownloadErrorEvent</code></a><br/><span class="label">eigenschap DownloadErrorEvent.type  =  </span><a href="events/DownloadErrorEvent.html#DOWNLOAD_ERROR"><code>air.update.events.DownloadErrorEvent.DOWNLOAD_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	Wordt verzonden als er een fout optreedt wanneer verbinding wordt gemaakt met het updatebestand of wanneer het wordt gedownload. Wordt ook verzonden voor een ongeldige HTTP-status (zoals 404 - Bestand niet gevonden).
+	
+	<p>Wanneer deze gebeurtenis wordt verzonden, wordt de periodieke timer automatisch opnieuw gestart (als de vertraging groter is dan 0). </p>
+	
+	</p>
+		 De constante <code>DownloadErrorEvent.DOWNLOAD_ERROR</code> bevat de waarde van de eigenschap <code>type</code> van het gebeurtenisobject voor een gebeurtenis <code>downloadError</code>.
+		 
+		<p>De eigenschap <code>errorID</code> van een object DownloadErrorEvent is een geheel getal waarmee informatie over de fout wordt gedefinieerd (zie de volgende tabel). Een extra eigenschap <code>subErrorID</code> kan meer informatie over de fout bevatten.</p>
+		
+		<table class="innertable" ><tr><th>errorID-foutcode</th><th>Beschrijving</th></tr><tr><td>16800</td><td>Treedt op tijdens het valideren van het gedownloade updatebestand. De eigenschap <code>subErrorID</code> kan aanvullende informatie bevatten.</td></tr><tr><td>16801</td><td>Ongeldig Adobe AIR-bestand (application.xml ontbreekt).</td></tr><tr><td>16802</td><td>Ongeldig Adobe AIR-bestand (MIME-type ontbreekt).</td></tr><tr><td>16803</td><td>Ongeldig Adobe AIR-bestand (indeling).</td></tr><tr><td>16804</td><td>Ongeldig Adobe AIR-bestand (ongeldige vlaggen).</td></tr><tr><td>16805</td><td>Ongeldig Adobe AIR-bestand (onbekende compressie).</td></tr><tr><td>16806</td><td>Ongeldig Adobe AIR-bestand (ongeldige bestandsnaam).</td></tr><tr><td>16807</td><td>Ongeldig Adobe AIR-bestand (beschadigd).</td></tr><tr><td>16808</td><td>Configuratiebestand bestaat niet.</td></tr><tr><td>16809</td><td>De eigenschap <code>updateURL</code> is niet ingesteld.</td></tr><tr><td>16810</td><td>Gereserveerd.</td></tr><tr><td>16811</td><td>Ongeldig configuratiebestand (onbekende configuratieversie).</td></tr><tr><td>16812</td><td>Ongeldig configuratiebestand (URL ontbreekt).</td></tr><tr><td>16813</td><td>Ongeldig configuratiebestand (indeling van vertraging).</td></tr><tr><td>16814</td><td>Ongeldig configuratiebestand (ongeldige waarden voor standaardgebruikersinterface).</td></tr><tr><td>16815</td><td>Ongeldige updatebeschrijving (onbekende beschrijvingsversie).</td></tr><tr><td>16816</td><td>Ongeldige updatebeschrijving (updateversie ontbreekt).</td></tr><tr><td>16817</td><td>Ongeldige updatebeschrijving (ongeldige beschrijving).</td></tr><tr><td>16818</td><td>I/O-fout tijdens opslaan van gegevens op schijf. De eigenschap <code>subErrorID</code> kan meer informatie bevatten.</td></tr><tr><td>16819</td><td>Beveiligingsfout tijdens downloaden. De eigenschap <code>subErrorID</code> kan meer informatie bevatten.</td></tr><tr><td>16820</td><td>Ongeldige HTTP-statuscode. De eigenschap <code>subErrorID</code> kan de ongeldige statuscode bevatten.</td></tr><tr><td>16821</td><td>Gereserveerd.</td></tr><tr><td>16822</td><td>I/O-fout tijdens downloaden. De eigenschap <code>subErrorID</code> kan meer informatie bevatten.</td></tr><tr><td>16823</td><td>Bestandseindefout tijdens opslaan van gegevens op schijf. De eigenschap <code>subErrorID</code> kan meer informatie bevatten.</td></tr><tr><td>16824</td><td>Ongeldige updatebeschrijving. De eigenschap <code>subErrorID</code> kan meer informatie bevatten.</td></tr><tr><td>16825</td><td>Het updatebestand bevat een toepassing met een andere toepassings-id.</td></tr><tr><td>16826</td><td>Het updatebestand bevat geen nieuwere versie van de toepassing.</td></tr><tr><td>16827</td><td>De versie in het updatebestand komt niet overeen met de versie in de updatebeschrijving.</td></tr><tr><td>16828</td><td>De toepassing kan niet worden bijgewerkt; gewoonlijk omdat de toepassing wordt uitgevoerd in ADL (AIR Debug Launcher).</td></tr><tr><td>16829</td><td>Updatebestand ontbreekt op moment van installatie.</td></tr></table>
+		
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:downloadStart" id="event:downloadStart"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>downloadStart</h3></td><td class="detailHeaderType"> Gebeurtenis </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Type gebeurtenisobject: </span><a href="events/UpdateEvent.html"><code>air.update.events.UpdateEvent</code></a><br/><span class="label">eigenschap UpdateEvent.type  =  </span><a href="events/UpdateEvent.html#DOWNLOAD_START"><code>air.update.events.UpdateEvent.DOWNLOAD_START</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	 Wordt verzonden nadat de methode <code>downloadUpdate()</code> is aangeroepen en de verbinding met de server tot stand is gebracht. Wanneer u de ApplicationUpdater-bibliotheek gebruikt, kunt u met de gebeurtenishandler voor deze gebeurtenis een voortgangsbalk weergeven om de voortgang van het downloaden aan de gebruiker te tonen. 
+	
+	</p>
+		 De constante <code>UpdateEvent.DOWNLOAD_START</code> bevat de waarde van de eigenschap <code>type</code> van het gebeurtenisobject voor een gebeurtenis <code>downloadStart</code>.
+		 
+		<p>Deze gebeurtenis heeft de volgende eigenschappen:</p>
+		
+		<table class="innertable" ><tr><th>Eigenschap</th><th>Waarde</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; er is geen standaardgedrag om te annuleren.</td></tr><tr><td><code>currentTarget</code></td><td>Het object dat het gebeurtenisobject actief verwerkt met een gebeurtenislistener.</td></tr><tr><td><code>target</code></td><td>Het updaterobject. </td></tr></table>
+		 
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:error" id="event:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>error</h3></td><td class="detailHeaderType"> Gebeurtenis </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Type gebeurtenisobject: </span><a href="../../flash/events/ErrorEvent.html"><code>flash.events.ErrorEvent</code></a><br/><span class="label">eigenschap ErrorEvent.type  =  </span><a href="../../flash/events/ErrorEvent.html#ERROR"><code>flash.events.ErrorEvent.ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	Wordt verzonden wanneer er een fout is opgetreden tijden de initialisatie of tijdens het updateproces (als er iets onverwachts is gebeurd).
+	
+	</p>
+	Definieert de waarde van de eigenschap <code>type</code> van een gebeurtenisobject <code>error</code>. 
+	<p>Deze gebeurtenis heeft de volgende eigenschappen:</p>
+	<table class="innertable" ><tr><th>Eigenschap</th><th>Waarde</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; er is geen standaardgedrag om te annuleren.</td></tr><tr><td><code>currentTarget</code></td><td>Het object dat het gebeurtenisobject actief verwerkt met een gebeurtenislistener.</td></tr><tr><td><code>target</code></td><td>Het object ondervindt een fout in een netwerkbewerking.</td></tr><tr><td><code>text</code></td><td>Tekst die moet worden weergegeven als foutbericht. </td></tr></table>
+	
+	</div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:fileUpdateError" id="event:fileUpdateError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>fileUpdateError</h3></td><td class="detailHeaderType"> Gebeurtenis </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Type gebeurtenisobject: </span><a href="events/StatusFileUpdateErrorEvent.html"><code>air.update.events.StatusFileUpdateErrorEvent</code></a><br/><span class="label">eigenschap StatusFileUpdateErrorEvent.type  =  </span><a href="events/StatusFileUpdateErrorEvent.html#FILE_UPDATE_ERROR"><code>air.update.events.StatusFileUpdateErrorEvent.FILE_UPDATE_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	 Wordt verzonden wanneer er een fout optreedt tijdens het valideren van het bestand dat is doorgegeven met de parameter <code>airFile</code> in een aanroep van de methode <code>installFromAIRFile()</code>.
+	
+	</p>
+		 De constante <code>StatusUpdateErrorEvent.UPDATE_ERROR</code> bevat de waarde van de eigenschap <code>type</code> van het gebeurtenisobject voor een gebeurtenis <code>statusUpdateError</code>.
+		 
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:fileUpdateStatus" id="event:fileUpdateStatus"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>fileUpdateStatus</h3></td><td class="detailHeaderType"> Gebeurtenis </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Type gebeurtenisobject: </span><a href="events/StatusFileUpdateEvent.html"><code>air.update.events.StatusFileUpdateEvent</code></a><br/><span class="label">eigenschap StatusFileUpdateEvent.type  =  </span><a href="events/StatusFileUpdateEvent.html#FILE_UPDATE_STATUS"><code>air.update.events.StatusFileUpdateEvent.FILE_UPDATE_STATUS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	Wordt verzonden nadat het bestand in de aanroep van de methode <code>installFromAIRFile()</code> met succes is gevalideerd.
+	
+	</p>
+		 De constante <code>StatusUpdateEvent.UPDATE_STATUS</code> bevat de waarde van de eigenschap <code>type</code> van het gebeurtenisobject voor een gebeurtenis <code>updateStatus</code>.
+		 
+		<p>Deze gebeurtenis heeft de volgende eigenschappen:</p>
+		
+		<p><table class="innertable" ><tr><th>Eigenschap</th><th>Waarde</th></tr><tr><td><code>available</code></td><td>Geeft aan of er een andere versie beschikbaar is dan een versie van de huidige toepassing (<code>true</code>); <code>false</code> als dat niet zo is (dezelfde versie).</td></tr><tr><td><code>path</code></td><td>De eigenschap <code>nativePath</code> van het updateobject File dat is opgegeven met de parameter <code>airFile</code> in een aanroep van de methode <code>installFromAIRFile()</code>.</td></tr><tr><td><code>versie</code></td><td>Geeft de versie van de nieuwe update aan.</td></tr></table></p>
+		
+		</div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:initialized" id="event:initialized"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>initialized</h3></td><td class="detailHeaderType"> Gebeurtenis </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Type gebeurtenisobject: </span><a href="events/UpdateEvent.html"><code>air.update.events.UpdateEvent</code></a><br/><span class="label">eigenschap UpdateEvent.type  =  </span><a href="events/UpdateEvent.html#INITIALIZED"><code>air.update.events.UpdateEvent.INITIALIZED</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	Wordt verzonden nadat de initialisatie is voltooid. 
+	
+	</p>
+		 De constante <code>UpdateEvent.INITIALIZED</code> bevat de waarde van de eigenschap <code>type</code> van het gebeurtenisobject voor een gebeurtenis <code>initialized</code>.
+		 
+		<p>Deze gebeurtenis heeft de volgende eigenschappen:</p>
+		
+		<table class="innertable" ><tr><th>Eigenschap</th><th>Waarde</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; er is geen standaardgedrag om te annuleren.</td></tr><tr><td><code>currentTarget</code></td><td>Het object dat het gebeurtenisobject actief verwerkt met een gebeurtenislistener.</td></tr><tr><td><code>target</code></td><td>Het updaterobject. </td></tr></table>
+		
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:progress" id="event:progress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>progress</h3></td><td class="detailHeaderType"> Gebeurtenis </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Type gebeurtenisobject: </span><a href="../../flash/events/ProgressEvent.html"><code>flash.events.ProgressEvent</code></a><br/><span class="label">eigenschap ProgressEvent.type  =  </span><a href="../../flash/events/ProgressEvent.html#PROGRESS"><code>flash.events.ProgressEvent.PROGRESS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	Verzonden tijdens het downloaden van het updatebestand. 
+	
+	</p>
+	Definieert de waarde van de eigenschap <code>type</code> van een gebeurtenisobject <code>progress</code>.
+	
+	<p>Deze gebeurtenis heeft de volgende eigenschappen:</p>
+	
+	<table class="innertable" ><tr><th>Eigenschap</th><th>Waarde</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>bytesLoaded</code></td><td>Het aantal items of bytes dat wordt geladen wanneer de listener de gebeurtenis verwerkt.</td></tr><tr><td><code>bytesTotal</code></td><td>Het totale aantal items of bytes dat uiteindelijk wordt geladen wanneer het laadproces is voltooid.</td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; er is geen standaardgedrag om te annuleren.</td></tr><tr><td><code>currentTarget</code></td><td>Het object dat het gebeurtenisobject actief verwerkt met een gebeurtenislistener.</td></tr><tr><td><code>target</code></td><td>Het object dat de voortgang rapporteert. </td></tr></table>
+	
+	</div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:updateError" id="event:updateError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>updateError</h3></td><td class="detailHeaderType"> Gebeurtenis </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Type gebeurtenisobject: </span><a href="events/StatusUpdateErrorEvent.html"><code>air.update.events.StatusUpdateErrorEvent</code></a><br/><span class="label">eigenschap StatusUpdateErrorEvent.type  =  </span><a href="events/StatusUpdateErrorEvent.html#UPDATE_ERROR"><code>air.update.events.StatusUpdateErrorEvent.UPDATE_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	Wordt verzonden als er een fout optreedt wanneer wordt geprobeerd het updatebeschrijvingsbestand te downloaden of te parseren.
+	
+	<p>Wanneer deze gebeurtenis door de updater wordt verzonden, wordt de periodieke timer automatisch opnieuw gestart (als de vertraging groter is dan 0). De toepassing zou dialoogvensters met foutmeldingen kunnen verbergen wanneer de updater een nieuwe gebeurtenis <code>checkForUpdate</code> verzendt. </p>
+	
+	</p>
+		 De constante <code>StatusUpdateErrorEvent.UPDATE_ERROR</code> bevat de waarde van de eigenschap <code>type</code> van het gebeurtenisobject voor een gebeurtenis <code>statusUpdateError</code>.
+		 
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:updateStatus" id="event:updateStatus"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Alleen beschikbaar in de AIR runtime">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>updateStatus</h3></td><td class="detailHeaderType"> Gebeurtenis </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Type gebeurtenisobject: </span><a href="events/StatusUpdateEvent.html"><code>air.update.events.StatusUpdateEvent</code></a><br/><span class="label">eigenschap StatusUpdateEvent.type  =  </span><a href="events/StatusUpdateEvent.html#UPDATE_STATUS"><code>air.update.events.StatusUpdateEvent.UPDATE_STATUS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Taalversie:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtimeversies:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	Wordt verzonden nadat het updatebeschrijvingsbestand met succes is gedownload en geïnterpreteerd. 
+	
+	<p>Standaard start het downloaden van de update als de eigenschap available van het object StatusUpdateEvent is ingesteld op <code>true</code>. Dit standaardgedrag kan alleen worden verhinderd bij gebruik van de klasse ApplicationUpdater, niet bij gebruik van de klasse ApplicationUpdatorUI.</p>
+	
+	</p>
+		 De constante <code>StatusUpdateEvent.UPDATE_STATUS</code> bevat de waarde van de eigenschap <code>type</code> van het gebeurtenisobject voor een gebeurtenis <code>updateStatus</code>.
+		 
+		<p>Deze gebeurtenis heeft de volgende eigenschappen:</p>
+		
+		<table class="innertable" ><tr><th>Eigenschap</th><th>Waarde</th></tr><tr><td><code>available</code></td><td>Is op <code>true</code> ingesteld als in het updatebeschrijvingsbestand een andere versie is opgegeven dan de versie van de huidige toepassing; <code>false</code> als dat niet zo is (de versie is hetzelfde).</td></tr><tr><td><code>versie</code></td><td>De tekenreeks met de nieuwe beschikbare versie.</td></tr><tr><td><code>details</code></td><td>Een array die de tekenreeks <code>details</code> bevat voor elke taal die wordt ondersteund. Als er geen gelokaliseerde beschrijving is, is het eerste element van deze array een lege tekenreeks (<code>""</code>) en bevat het tweede element de tekenreeks details. Als er gelokaliseerde beschrijvingen zijn, is elk element in de array een array dat twee elementen bevat. Het eerste element is de landcode en het tweede is de beschrijving. De volgende array heeft bijvoorbeeld subarrays voor twee talen (V.S. Engels en Frans): <code>["en-US", "Hello World"], ["fr", "Bonjour monde"]</code>. De talen worden in dezelfde volgorde weergegeven als in de updatebeschrijving. De tekst voor de eigenschap Details wordt opgegeven in het updatebeschrijvingsbestand.</td></tr><tr><td><code>versionLabel</code></td><td>(AIR 2.5+) Het versielabel van de toepassingsbeschrijving van de update. Het versielabel moet worden weergegeven aan de gebruikers, en niet de versie. Als er geen versielabel is opgegeven, bestaat deze eigenschap uit een lege tekenreeks.</td></tr></table>
+		
+		 </div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script></div><p xmlns:xd="http://www.pnp-software.com/XSLTdoc"></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Wed Jun 13 2018, 11:42 AM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/nl_NL/legalnotices/index.html">Juridische kennisgeving</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online privacybeleid</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">Waarom in het Engels?</span>
+				</div>
+				<div class="white_content_body">
+					<b>Sommige inhoud van de Naslaggids voor ActionScript 3.0 staat in het Engels</b><br><br>
+					Niet alle onderdelen van de Naslaggids voor ActionScript 3.0 zijn in alle talen vertaald. Wanneer een taalelement niet is vertaald, wordt het in het Engels weergegeven. Zo is de klasse ga.controls.HelpBox niet in elke taal vertaald. In de Nederlandse versie van de naslaggids wordt de klasse ga.controls.HelpBox bijvoorbeeld in het Engels weergegeven.
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Wed Jun 13 2018, 11:42 AM Z  -->

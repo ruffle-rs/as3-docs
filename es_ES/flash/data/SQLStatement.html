@@ -1,0 +1,668 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Referencia de ActionScript&reg;&nbsp;3.0 para la plataforma de Adobe&reg;&nbsp;Flash&reg;"><meta name="lang" content="es-es"><meta name="runtime" content="air"><meta name="runtimever" content="air:1.0"><meta name="product" content="air"><meta name="productver" content="air:1.0"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../asfilter.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="SQLStatement,flash.data.SQLStatement,executing,itemClass,parameters,sqlConnection,text,cancel,clearParameters,execute,getResult,next"><title>SQLStatement - Referencia de la API de Adobe ActionScript&reg; 3 (AS3 )</title>
+		<link rel="stylesheet" href="../../filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="../../filter_new.css" type="text/css">
+			
+		<script src="../../jquery.js" type="text/javascript"></script>
+		<script src="../../s_chl_code.js" type="text/javascript"></script>
+		<script src="../../jquery.zclip.js" type="text/javascript"></script>
+		<script src="../../jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="../../cookies.js" type="text/javascript"></script>
+		<script src="../../asdoc.js" type="text/javascript"></script>
+		<script src="../../iscroll.js" type="text/javascript"></script>
+		<script src="../../AC_OETags.js" type="text/javascript"></script>
+		<script src="../../omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "Motores de ejecución";
+			var productsLabel = "Productos";
+			var noneLabel = "Ninguno";
+			var qsearchBoxLabel = "Búsqueda rápida";
+			var qsearchText = "Término no encontrado";
+			var ajaxErrorMsg="Error al cargar la página";
+			var ajaxErrorTryMsg="Reintentar";
+			var ajaxLoadingMsg="Carga en curso";
+			var cancelMsg = "Cancelar";
+			var classesText = "Clases";
+			var strJiveReply = "Esta pregunta se publicó en respuesta al siguiente artículo: "
+			var showFilters = "Mostrar filtros";
+			var hideFilters = "Ocultar filtros";
+			
+		
+			var baseRef = "../../";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											Referencia de ActionScript<sup>&reg;</sup>&nbsp;3.0 para la plataforma de Adobe<sup>&reg;</sup>&nbsp;Flash<sup>&reg;</sup><br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="../../index.html"> Inicio </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="SQLStatement.html#top" style="display:">Mostrar lista de paquetes y clases</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="SQLStatement.html#top" style="display:none">Ocultar lista de paquetes y clases</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="../../package-summary.html"> Paquetes </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../class-summary.html"> Clases </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../whatsnew.html"> Novedades </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../all-index-Symbols.html"> Índice </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../appendixes.html"> Apéndices </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">¿Por qué hay texto en inglés?</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/es_ES/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('../../')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('../../')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="../../help.js"></script>
+						<script language="javascript" type="text/javascript" src="../../asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="../../filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>Filtros:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">Recuperando datos del servidor...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">Recuperando datos del servidor...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="SQLStatement.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">flash.data&nbsp;</a><br>
+								<h1 id="classProductName">SQLStatement&nbsp; - AS3 </h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="SQLStatement.html#propertySummary" style="display:none"> Propiedades </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="SQLStatement.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Propiedades </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="SQLStatement.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Información sobre </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="SQLStatement.html#methodSummary" style="display:none"> Métodos </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="SQLStatement.html#constantSummary" style="display:none"> Constantes globales </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="SQLStatement.html#eventSummary" style="display:none"> Eventos </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="SQLStatement.html#styleSummary" style="display:none"> Estilos </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="SQLStatement.html#SkinPartSummary" style="display:none"> Partes del aspecto </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="SQLStatement.html#SkinStateSummary" style="display:none"> Estados del aspecto </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="SQLStatement.html#effectSummary" style="display:none"> Efectos </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="SQLStatement.html#constantSummary" style="display:none"> Constantes </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="SQLStatement.html#methodSummary" style="display:none"> Funciones globales </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="SQLStatement.html#methodSummary" style="display:none">Funciones</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="SQLStatement.html#interfaceSummary" style="display:none"> Interfaces </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="SQLStatement.html#classSummary" style="display:none"> Clases </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="SQLStatement.html#includeExamplesSummary" style="display:none"> Ejemplos </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="SQLStatement.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								Clases
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Paquete</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">flash.data</a></td></tr><tr><td class="classHeaderTableLabel">Clase</td><td class="classSignature">public  class  SQLStatement</td></tr><tr><td class="classHeaderTableLabel">Herencia</td><td class="inheritanceList">SQLStatement  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../Object.html">Object</a></td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versión del lenguaje:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versiones de motor de ejecución:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p></p>
+ Se utiliza una instancia de SQLStatement para ejecutar una declaración SQL y compararla en una base de datos SQL local abierta mediante una instancia de SQLConnection.
+ 
+ <p>Se vincula una instancia de SQLStatement a una instancia de SQLConnection configurando la instancia de SQLConnection como el valor de la propiedad <code>sqlConnection</code> de la instancia de SQLStatement. La propiedad <code>text</code> se llena con el texto real de la declaración SQL que se va a ejecutar. Si es necesario, los valores de los parámetros de la declaración SQL se especifican mediante la propiedad <code>parameters</code>, y la declaración se lleva a cabo llamando al método <code>execute()</code>.</p>
+ 
+               <p>Para obtener una descripción completa deldel lenguaje SQL admitido en las bases de datos SQL locales, consulte el apéndice <a href="http://adobe.com/go/learn_as3_sqlsupportdb_es" >Compatiblidad de SQL en bases de datos locales</a>.</p>
+ 
+               <p>En modo de ejecución asíncrono, los métodos <code>execute()</code> y <code>next()</code> se ejecutan en segundo plano y el motor de ejecución distribuye eventos a los detectores de eventos registrados o a una instancia concreta de Responder cuando la operación finaliza o falla. En modo sincrónico, los métodos se ejecutan en el proceso principal de la aplicación, lo que significa que ningún otro código puede ejecutarse hasta que no finalicen las operaciones en la base de datos. Además, en modo sincrónico, si el método falla, el motor de ejecución emite una excepción en vez de distribuir un evento de error.</p>
+ 
+            <p></p><p><span class="classHeaderTableLabel">Elementos de API relacionados</span></p><div class="seeAlso"><a href="SQLConnection.html" target="">flash.data.SQLConnection</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary" id="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Propiedades públicas</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="SQLStatement.html#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Ocultar propiedades públicas heredadas</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="SQLStatement.html#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Mostrar propiedades públicas heredadas</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Propiedad</th><th>Definido por</th></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="../../Object.html#constructor" class="signatureLink">constructor</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">
+	 Una referencia a la clase de objeto o función constructora para una instancia de objeto determinada.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#executing" class="signatureLink">executing</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">[solo lectura] 
+     Indica si la declaración se está ejecutando.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#itemClass" class="signatureLink">itemClass</a> : <a href="../../Class.html">Class</a><div class="summaryTableDescription">
+     Indica una clase (tipo de datos) que se utiliza para cada fila devuelta como resultado de la ejecución de la declaración.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#parameters" class="signatureLink">parameters</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">[solo lectura] 
+     Sirve de conjunto asociativo al que añadir valores para los parámetros especificados en la propiedad text de la declaración SQL.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#sqlConnection" class="signatureLink">sqlConnection</a> : <a href="SQLConnection.html">SQLConnection</a><div class="summaryTableDescription">
+     El objeto SQLConnection que administra la conexión con las bases de datos en las que se ejecuta la declaración.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#text" class="signatureLink">text</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">
+     Texto SQL real de la declaración.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary" id="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Métodos públicos </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="SQLStatement.html#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Ocultar métodos públicos heredados</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="SQLStatement.html#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Mostrar métodos públicos heredados</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Método</th><th>Definido por</th></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#SQLStatement()" class="signatureLink">SQLStatement</a>()</div><div class="summaryTableDescription">
+     Crea una instancia de SQLStatement.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#addEventListener()" class="signatureLink">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	Registra un objeto de detector de eventos con un objeto EventDispatcher, de modo que el detector reciba la notificación de un evento.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#cancel()" class="signatureLink">cancel</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     Cancela la ejecución de esta declaración.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#clearParameters()" class="signatureLink">clearParameters</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     Borra toda la configuración actual de los parámetros.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	Distribuye un evento en el flujo del evento.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#execute()" class="signatureLink">execute</a>(prefetch:<a href="../../int.html">int</a> = -1, responder:<a href="../net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     Ejecuta el SQL en la propiedad text comparándola con la base de datos conectada al objeto SQLConnection de la propiedad sqlConnection.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#getResult()" class="signatureLink">getResult</a>():<a href="SQLResult.html">SQLResult</a></div><div class="summaryTableDescription">
+     Proporciona acceso a un objeto SQLResult que contiene los resultados de la ejecución de la declaración. Incluye todos las filas de resultados desde una declaración SELECT y el resto de información sobre la ejecución de todas las declaraciones.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	Comprueba si el objeto EventDispatcher tiene detectores registrados para un tipo concreto de evento.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#hasOwnProperty()" class="signatureLink">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Indica si un objeto tiene definida una propiedad especificada.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#isPrototypeOf()" class="signatureLink">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Indica si hay una instancia de la clase Object en la cadena de prototipo del objeto especificado como parámetro.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#next()" class="signatureLink">next</a>(prefetch:<a href="../../int.html">int</a> = -1, responder:<a href="../net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     Recupera la siguiente porción del conjunto de resultados de una declaración SELECT.</div></td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#propertyIsEnumerable()" class="signatureLink">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Indica si existe la propiedad especificada y si es enumerable.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#removeEventListener()" class="signatureLink">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	Elimina un detector del objeto EventDispatcher.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#setPropertyIsEnumerable()" class="signatureLink">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     Establece la disponibilidad de una propiedad dinámica para operaciones de bucle.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toLocaleString()" class="signatureLink">toLocaleString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 Devuelve la representación de cadena de este objeto, con formato según las convenciones específicas de configuración regional.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toString()" class="signatureLink">toString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 Devuelve la representación de cadena del objeto especificado.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#valueOf()" class="signatureLink">valueOf</a>():<a href="../../Object.html">Object</a></div><div class="summaryTableDescription">
+	 Devuelve el valor simple del objeto especificado.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	Comprueba si hay registrado un detector de eventos con este objeto EventDispatcher o con cualquiera de sus ascendientes para el tipo de evento concreto.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary" id="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Eventos</div><div class="showHideLinks"><a href="http://help.adobe.com/en_US/Flex/4.6/UsingSDK/WS2db454920e96a9e51e63e3d11c0bf69084-7ee9.html" target="_blank">Haga clic para obtener más información sobre los eventos</a></div><div class="showHideLinks"><div id="hideInheritedEvent" class="hideInheritedEvent"><a class="showHideLink" href="SQLStatement.html#eventSummary" onclick="javascript:setInheritedVisible(false,'Event');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Ocultar eventos heredados</a></div><div id="showInheritedEvent" class="showInheritedEvent"><a class="showHideLink" href="SQLStatement.html#eventSummary" onclick="javascript:setInheritedVisible(true,'Event');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Mostrar eventos heredados</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Evento</th><th> Resumen </th><th>Definido por</th></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[evento broadcast] Se distribuye cuando Flash Player o AIR pasan a estar activos.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[evento broadcast] Se distribuye cuando Flash Player o de AIR pasan a estar inactivos.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#event:error" class="signatureLink">error</a></div></td><td class="summaryTableDescription summaryTableCol">Se distribuye cuando se produce un error durante la operación.</td><td class="summaryTableOwnerCol">SQLStatement</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SQLStatement.html#event:result" class="signatureLink">result</a></div></td><td class="summaryTableDescription summaryTableCol">Se distribuyen cuando la operación de llamada a los métodos execute() o next() finaliza correctamente.</td><td class="summaryTableOwnerCol">SQLStatement</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Información sobre propiedades</div><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="executing" id="executing"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>executing</h3></td><td class="detailHeaderType">propiedad</td></tr></table><div class="detailBody"><code>executing:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[solo lectura] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versión del lenguaje:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versiones de motor de ejecución:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     Indica si la declaración se está ejecutando.
+     
+     <p>Esta propiedad es true si se ha llamado a <code>execute()</code> y no se han devuelto todos los valores de la base de datos.</p>
+     
+     </p><br/><br/><span class="label"> Implementación </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get executing():<a href="../../Boolean.html">Boolean</a></code><br/><p><span class="label">Elementos de API relacionados</span></p><div class="seeAlso"><a href="SQLStatement.html#execute()" target="">execute()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="itemClass" id="itemClass"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>itemClass</h3></td><td class="detailHeaderType">propiedad</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>itemClass:<a href="../../Class.html">Class</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versión del lenguaje:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versiones de motor de ejecución:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     Indica una clase (tipo de datos) que se utiliza para cada fila devuelta como resultado de la ejecución de la declaración.
+     
+     
+     
+     <p>De forma predeterminada, cada fila devuelta por una declaración <code>SELECT</code> se crea como una instancia de Object. Los nombres de los conjuntos de datos de resultados pasan a ser los nombres de las propiedades del objeto y el valor de cada columa se convierte en el valor de su propiedad asociada.</p>
+     
+     <p>Al especificar una clase para la propiedad <code>itemClass</code>, cada fila devuelve una declaración <code>SELECT</code> ejecutada por esta instancia de SQLStatement se crea como una instancia de la clase designada. Cada propiedad de la instancia de <code>itemClass</code> se asigna al valor de la columna del mismo nombre que la propiedad.</p>
+     
+     <p>Todas las clases asignadas a esta propiedad deben tener un constructor que no requiera parámetros. Además, la clase debe disponer de una propiedad para cada columna devuelta por la declaración <code>SELECT</code>. Se considera un error que una columna de la lista <code>SELECT</code> no tenga su nombre de propiedad correspondiente en la clase <code>itemClass</code>.</p>
+     
+     </p><br/><br/><span class="label"> Implementación </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get itemClass():<a href="../../Class.html">Class</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set itemClass(value:<a href="../../Class.html">Class</a>):<a href="../../specialTypes.html#void">void</a></code><br/><p><span class="label">Elementos de API relacionados</span></p><div class="seeAlso"><a href="SQLResult.html#data" target="">flash.data.SQLResult.data</a></div><span id="pageFilter"><br/><span class="label"> Ejemplo &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_es"> Cómo utilizar este ejemplo </a></span>)
+            </span><br/><div class="detailBody"> En este ejemplo, la propiedad <code>itemClass</code> hace que el motor de ejecución cree instancias de una clase personalizada a partir de los resultados de la declaración SQL <code>SELECT</code>.
+<div class="listing"><pre>
+// Employee class definition
+package
+{
+    public class Employee
+    {
+        public var name:String;
+        public var ssn:String;
+        public var id:uint;
+        public override function toString():String
+        {
+            return "id: "+ id.toString() + " name: " + name + " ssn: " + ssn;
+        }
+    }
+}
+
+
+// using the Employee class as SQLStatement.itemClass
+var conn:SQLConnection;
+var dbStatement:SQLStatement;
+
+function init():void
+{
+    conn = new SQLConnection();
+    conn.addEventListener(SQLEvent.OPEN, connOpenHandler);
+    
+    dbStatement = new SQLStatement();
+    dbStatement.sqlConnection = conn;
+    dbStatement.text = "SELECT id, name, ssn FROM employees";
+    dbStatement.itemClass = Employee;
+    
+    var dbFile:File = new File(File.separator + "employee.db");
+    conn.open(dbFile);
+}
+
+function connOpenHandler(event:SQLEvent):void
+{
+    dbStatement.addEventListener(SQLEvent.RESULT, resultHandler);
+    dbStatement.execute();
+}
+
+function resultHandler(event:SQLEvent):void
+{
+    var result:SQLResult = dbStatement.getResult();
+    if (result != null)
+    {
+        var emp:Employee;
+        var numRows:int = result.data.length;
+        for (var i:int = 0; i &lt; numRows; i++)
+        {
+            emp = result.data[i];
+            trace(emp.toString());
+        }
+    }
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="parameters" id="parameters"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>parameters</h3></td><td class="detailHeaderType">propiedad</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>parameters:<a href="../../Object.html">Object</a></code>&nbsp;&nbsp;[solo lectura] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versión del lenguaje:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versiones de motor de ejecución:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     Sirve de conjunto asociativo al que añadir valores para los parámetros especificados en la propiedad <code>text</code> de la declaración SQL. Las claves del conjunto son los nombres de los parámetros. Si se especifica un parámetro sin nombre en el texto de la declaración, su clave se convierte en el índice del parámetro.
+     
+     <p>En el texto de una declaración SQL, un parámetro se indica con uno de los siguientes caracteres: "?", ":" o "@".</p>
+     
+     <p>Los símbolos ":" y "@" indican parámetros con nombre; los caracteres situados detrás del símbolo indican el nombre del parámetro.</p>
+     
+     <p>Por ejemplo, en la siguiente declaración SQL, se especifica un parámetro llamado <code>firstName</code> mediante el carácter ":":</p>
+     
+     <pre>SELECT FROM employees WHERE firstName = :firstName</pre>
+     
+     <p>El símbolo "?" indica un parámetro indexado (numerado); cada parámetro adquiere automáticamente un índica en función de la secuencia de parámetros del texto de la declaración. Los valores de índice de los parámetros están basados en ceros. Dicho de otro modo, el índice del primer parámetro es 0.</p>
+     
+     <p>Los parámetros se utilizan para poder realizar sustituciones de tipos de valores que son desconocidos en el momento en que se construye la declaración SQL. Utilizar los parámetros es el único modo de garantizar los valores transferidos a las clases de almacenamiento en la base de datos. Si no se utilizan parámetros, todos los valores se convierten de representación textual en clase de almacenamiento por tipo de columna asociada. Para obtener más información sobre las clases de almacenamiento y la afinidad de columnas, consulte la sección “Compatibilidad de tipos de datos” del apéndice “<a href="http://adobe.com/go/learn_as3_sqlsupportdb_es" >Compatibilidad de SQL en bases de datos locales</a>”.</p>
+     
+     <p>Los parámetros también se utilizan como medida de seguridad para impedir la ejecución de técnicas malintencionadas conocidas como ataques de inyección SQL. Durante un ataque de inyección SQL, un usuario accede al código SQL en una ubicación a la que el usuario tiene acceso (por ejemplo, un campo de introducción de datos). Si el código de la aplicación construye una declaración SQL concatenando directamente la entrada del usuario con el texto SQL, el código SQL introducido por el usuario se ejecuta en la base de datos. A continuación se muestra un ejemplo de concatenación de entrada del usuario en texto SQL. <b>No se recomienda utilizar esta técnica</b>:</p>
+     
+     <div class="listing"><pre>
+     // assume the variables "username" and "password"
+     // contain user-entered data
+     var sql:String =
+         "SELECT userId " +
+         "FROM users " +
+         "WHERE username = '" + username + "' " +
+         "    AND password = '" + password + "'";
+     var statement:SQLStatement = new SQLStatement();
+     statement.text = sql;
+     </pre></div>
+     
+     
+     
+     <p>Si se utilizan parámetros de declaración y no la concatenación de valores introducidos por el usuario en el texto de la declaración, se impiden ataques de inyección SQL, ya que los valores de los parámetros se tratan explícitamente como valores sustituidos y no forman parte del texto literal de la declaración. A continuación se muestra una alternativa recomendada distinta a la anterior:</p>
+     
+     <div class="listing"><pre>
+     // assume the variables "username" and "password"
+     // contain user-entered data
+     var sql:String =
+         "SELECT userId " +
+         "FROM users " +
+         "WHERE username = :username " +
+         "    AND password = :password";
+     var statement:SQLStatement = new SQLStatement();
+     statement.text = sql;
+     // set parameter values
+     statement.parameters[":username"] = username;
+     statement.parameters[":password"] = password;
+     </pre></div>
+     
+     
+     
+     <p>Se deben establecer todos los valores de los parámetros para poder ejecutar la declaración. Los valores de los parámetros especificados en el conjunto <code>parameters</code> están vinculados (es decir, combinados con el texto de la declaración) cuando se llama al método <code>execute()</code>. Una vez realizada la llamada a <code>execute()</code>, los cambios sucesivos en los valores no se aplican a la declaración en ejecución. No obstante, sí se utilizarán los valores modificados en sucesivas llamadas a <code>execute()</code>. Si el texto de la declaración contiene un parámetro sin valor especificado en la propiedad <code>parameters</code>, se produce un error.</p>
+     
+     <p>Para borrar todos los valores de los parámetros de la propiedad <code>parameters</code>, utilice el método <code>clearParameters()</code>.</p>
+     
+	 </p><br/><br/><span class="label"> Implementación </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get parameters():<a href="../../Object.html">Object</a></code><br/><p><span class="label">Elementos de API relacionados</span></p><div class="seeAlso"><a href="SQLStatement.html#text" target="">text</a><br/><a href="SQLStatement.html#clearParameters()" target="">clearParameters()</a></div><span id="pageFilter"><br/><span class="label"> Ejemplo &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_es"> Cómo utilizar este ejemplo </a></span>)
+            </span><br/><div class="detailBody"> En el siguiente ejemplo se muestra el uso de un parámetro con nombre (<code>:firstName</code>) en una declaración SQL.
+<div class="listing"><pre>
+// employees is a SQLStatement instance
+employees.text = "SELECT FROM employees WHERE first = :firstName";
+employees.parameters[":firstName"] = "Sam";
+employees.execute();
+</pre></div></div></span><span id="pageFilter"><div class="detailBody"> En el siguiente ejemplo se muestra el uso de un parámetro sin nombre en una declaración SQL.
+<div class="listing"><pre>
+// employees is a SQLStatement instance
+employees.text = "SELECT FROM employees WHERE first = ?";
+employees.parameters[0] = "Sam";
+employees.execute();
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="sqlConnection" id="sqlConnection"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>sqlConnection</h3></td><td class="detailHeaderType">propiedad</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>sqlConnection:<a href="SQLConnection.html">SQLConnection</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versiones de motor de ejecución:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     El objeto SQLConnection que administra la conexión con las bases de datos en las que se ejecuta la declaración.
+     
+     </p><br/><br/><span class="label"> Implementación </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get sqlConnection():<a href="SQLConnection.html">SQLConnection</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set sqlConnection(value:<a href="SQLConnection.html">SQLConnection</a>):<a href="../../specialTypes.html#void">void</a></code><br/><br/><span class="label"> Emite </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; Cuando se intenta cambiar el valor de esta propiedad y la declaración está en ejecución.
+	 
+     </td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="text" id="text"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>text</h3></td><td class="detailHeaderType">propiedad</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>text:<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versión del lenguaje:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versiones de motor de ejecución:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     Texto SQL real de la declaración.
+	 
+     <p>El texto puede estar en cualquier tipo de SQL admitido. Para obtener una descripción completa del lenguaje SQL admitido en las bases de datos SQL locales, consulte el apéndice “<a href="http://adobe.com/go/learn_as3_sqlsupportdb_es" >Compatibilidad de SQL en bases de datos locales</a>”.</p>
+     
+     </p><br/><br/><span class="label"> Implementación </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get text():<a href="../../String.html">String</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set text(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><br/><br/><span class="label"> Emite </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; Cuando se intenta cambiar el valor de la propiedad <code>text</code> y la declaración está en ejecución.
+     
+     </td></tr></table></div></span><a name="constructorDetail" id="constructorDetail"></a><div class="detailSectionHeader">Información sobre constructores</div><span id="pageFilter" runtime="AIR::1.0##"><a name="SQLStatement()" id="SQLStatement()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>SQLStatement</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Información sobre</td></tr></table><div class="detailBody"><code>public function SQLStatement()</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versión del lenguaje:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versiones de motor de ejecución:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p>
+     Crea una instancia de SQLStatement.
+     
+     </p><br/><span class="label">Emite</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; Si se llama al constructor desde cualquier entorno limitado que esté fuera del entorno limitado principal de la aplicación. 
+     
+     </td></tr></table></div></span><a name="methodDetail" id="methodDetail"></a><div class="detailSectionHeader">Información sobre métodos</div><span id="pageFilter" runtime="AIR::1.0##"><a name="cancel()" id="cancel()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;cancel</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">método</td></tr></table><div class="detailBody"><code> public function cancel():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versión del lenguaje:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versiones de motor de ejecución:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     Cancela la ejecución de esta declaración. Al igual que ocurre con <code>SQLConnection.cancel()</code>, este método se utiliza para detener una consulta que lleve mucho tiempo ejecutándose o para cancelar consultas que aún no hayan finalizado. No obstante, y al contrario de lo que ocurre con <code>SQLConnection.cancel()</code>, este método cancela únicamente la declaración. Si la declaración no se está ejecutando en ese momento, la llamada al método no servirá de nada.
+	 
+	 <p>No se distribuyen eventos como respuesta directa a la finalización de la operación de <code>cancel()</code>. Sin embargo, una vez finalizada la operación de <code>cancel()</code> y cancelada la ejecución de la declaración, la instancia de SQLStatement distribuye un evento <code>error</code> para indicar que la ejecución de la declaración (la llamada a <code>execute()</code> o a <code>next()</code>) no se ha completado. Como alternativa, si se especificó un valor para el parámetro <code>responder</code> de la llamada a <code>execute()</code> o a <code>next()</code>, se llamará al método concreto de control de errores. En cualquier caso, la instancia de SQLError que se transfiere a los detectores tiene una propiedad <code>errorID</code> con un valor de 3118 (operación fallida).</p>
+	 
+	 </p></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="clearParameters()" id="clearParameters()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;clearParameters</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">método</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function clearParameters():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versión del lenguaje:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versiones de motor de ejecución:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     Borra toda la configuración actual de los parámetros.
+     
+     </p><p><span class="label">Elementos de API relacionados</span></p><div class="seeAlso"><a href="SQLStatement.html#parameters" target="">parameters</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="execute()" id="execute()"></a><a name="execute(int,flash.net.Responder)" id="execute(int,flash.net.Responder)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;execute</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">método</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function execute(prefetch:<a href="../../int.html">int</a> = -1, responder:<a href="../net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versión del lenguaje:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versiones de motor de ejecución:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     Ejecuta el SQL en la propiedad <code>text</code> comparándola con la base de datos conectada al objeto <code>SQLConnection</code> de la propiedad sqlConnection.
+     
+	 <p>Si el argumento <code>responder</code> no es <code>null</code>, el objeto Responder especificado designa los métodos a los que se llama para controlar los resultados de la operación. En modo de ejecución asíncrono, si el argumento <code>responder</code> es <code>null</code>, se distribuye un evento <code>result</code> si la operación se realiza correctamente, o un evento <code>error</code> si la operación falla.</p>
+	 
+	 <p>Para acceder a los resultados de una declaración, como las filas de resultados de una declaración <code>SELECT</code> o la clave principal generada de la base de datos de una declaración <code>INSERT</code>, llame al método <code>getResult()</code>. Los resultados están disponibles inmediatamente después de la ejecución de la declaración en modo sincrónico y cuando el evento <code>result</code> se distribuye en modo asíncrono.</p>
+     
+     <p>Cada declaración debe estar preparada (compilada) para poder ejecutarse. La primera vez que se llama al método <code>execute()</code> de una instancia de SQLStatement, el motor de ejecución prepara la declaración. Una vez preparada, no es necesario volverla a preparar, a no ser que la propiedad <code>text</code> cambie. Si establece uno o varios valores de parámetros, no es necesario volver a preparar la declaración.</p>
+	 
+     </p><p><span class="label"> Parámetros </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">prefetch</span>:<a href="../../int.html">int</a></code> (default = <code>-1</code>)<code></code> &mdash; Cuando la propiedad <code>text</code> de la declaración es una declaración <code>SELECT</code>, este valor indica el número de filas que la declaración devuelve de una vez. El valor predeterminado es -1. Este valor indica que se devuelven de una vez todas las filas de resultados. Este parámetro se utiliza en combinación con el método <code>next()</code> para dividir conjuntos grandes de datos en conjuntos más pequeños. De este modo se puede mejorar la percepción que el usuario tiene del rendimiento de la aplicación, ya que los valores iniciales se devuelven más rápido y se dividen las operaciones de procesamiento de resultados.
+     
+     <p>Si la declaración SQL es una consulta <code>SELECT</code> y se especifica un argumento <code>prefetch</code> mayor que cero, se considera que la declaración está en ejecución hasta que se devuelve todo el conjunto de resultados, o hasta que se llama al método <code>SQLStatement.cancel()</code> o <code>SQLConnection.cancel()</code>. Tenga en cuenta que, dado que el número de filas de un conjunto de resultados es un valor desconocido en el momento de la ejecución, el cursor de la base de datos debe desplazarse más allá de la última fila del conjunto de resultados para que la declaración se considere finalizada. Si se especifica un argumento <code>prefetch</code> en una llamada a <code>execute()</code>, se debe solicitar como mínimo una fila más del número total de filas del conjunto de resultados (bien mediante un valor de <code>prefetch</code> mayor que el número de filas del conjunto de resultados, o mediante llamadas sucesivas al método <code>next()</code>) antes de que la propiedad <code>complete</code> de la instancia de SQLResult sea <code>true</code>.</p>
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">responder</span>:<a href="../net/Responder.html">Responder</a></code> (default = <code>null</code>)<code></code> &mdash; Un objeto que designa métodos a los que se debe llamar si la operación falla o si se realiza correctamente. En modo de ejecución asíncrono, si el argumento <code>responder</code> es <code>null</code> se distribuye un evento <code>result</code> o <code>error</code> cuando finaliza la ejecución.
+     
+     </td></tr></table></p><br/><span class="label">Eventos</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>result</b>:<a href="../events/SQLEvent.html"><code>SQLEvent</code></a></code> &mdash; Se distribuye cuando la ejecución de la declaración se realiza correctamente o si se especifica un valor del argumento <code>prefetch</code> y una declaración <code>SELECT</code> devuelve una o varias filas de datos.
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>error</b>:<a href="../events/SQLErrorEvent.html"><code>SQLErrorEvent</code></a></code> &mdash; Se distribuye si la operación falla en modo de ejecución asíncrono.
+     
+     </td></tr></table><br/><span class="label">Emite</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; Si la propiedad <code>text</code> es <code>null</code> o si contiene una cadena vacía (<code>""</code>); si la propiedad <code>sqlConnection</code> no está definida; si la declaración de SQLConnection asignada a la propiedad <code>sqlConnection</code> no está conectada; o si la declaración está en ejecución.
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/SQLError.html">SQLError</a> </code> &mdash; Si la operación falla en modo de ejecución síncrono.
+     
+	 </td></tr></table><p><span class="label">Elementos de API relacionados</span></p><div class="seeAlso"><a href="SQLStatement.html#next()" target="">next()</a><br/><a href="SQLStatement.html#getResult()" target="">getResult()</a></div><span id="pageFilter"><br/><span class="label"> Ejemplo &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_es"> Cómo utilizar este ejemplo </a></span>)
+            </span><br/><br/><div class="detailBody"> En el ejemplo siguiente se muestra la ejecución de una declaración SQLStatement. Se utilizan detectores de eventos para determinar si la ejecución de la declaración se realiza correctamente o si falla.
+<div class="listing"><pre>
+var conn:SQLConnection;
+var dbStatement:SQLStatement;
+
+function init():void
+{
+    conn = new SQLConnection();
+    conn.addEventListener(SQLEvent.OPEN, connOpenHandler);
+    
+    dbStatement = new SQLStatement();
+    dbStatement.sqlConnection = conn;
+    dbStatement.text = "SELECT id, name, ssn FROM employees";
+    
+    var dbFile:File = new File(File.separator + "employee.db");
+    conn.open(dbFile);
+}
+
+function connOpenHandler(event:SQLEvent):void
+{
+    dbStatement.addEventListener(SQLEvent.RESULT, resultHandler);
+    dbStatement.addEventListener(SQLErrorEvent.ERROR, errorHandler);
+    dbStatement.execute();
+}
+
+function resultHandler(event:SQLEvent):void
+{
+    var result:SQLResult = dbStatement.getResult();
+    if (result != null)
+    {
+        var numRows:int = result.data.length;
+        for (var i:int = 0; i &lt; numRows; i++)
+        {
+            var row:Object = result.data[i];
+            trace("id:", row.id, ", name:", row.name, ", ssn:", row.ssn);
+        }
+    }
+}
+
+function errorHandler(event:SQLErrorEvent):void
+{
+    trace("An error occured while executing the statement.");
+}
+</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody"> En el siguiente ejemplo se muestra la ejecución de una declaración SQLStatement. Se utiliza un objeto Responder para indicar a qué funciones se llama cuando la ejecución de la declaración se realiza correctamente y cuando falla.
+<div class="listing"><pre>
+var conn:SQLConnection;
+var dbStatement:SQLStatement;
+var employeeResponder:Responder;
+
+function init():void
+{
+    conn = new SQLConnection();
+    conn.addEventListener(SQLEvent.OPEN, connOpenHandler);
+    
+    dbStatement = new SQLStatement();
+    dbStatement.sqlConnection = conn;
+    dbStatement.text = "SELECT id, name, ssn FROM employees";
+    
+    var dbFile:File = new File(File.separator + "employee.db");
+    conn.open(dbFile);
+}
+
+function connOpenHandler(event:SQLEvent):void
+{
+    employeeResponder = new Responder(resultHandler, errorHandler);
+    dbStatement.execute(-1, employeeResponder);
+}
+
+function resultHandler(result:SQLResult):void
+{
+    if (result != null)
+    {
+        var numRows:int = result.data.length;
+        for (var i:int = 0; i &lt; numRows; i++)
+        {
+            var row:Object = result.data[i];
+            trace("id:", row.id, ", name:", row.name, ", ssn:", row.ssn);
+        }
+    }
+}
+
+function errorHandler(error:SQLError):void
+{
+    trace("An error occured while executing the statement.");
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="getResult()" id="getResult()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;getResult</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">método</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getResult():<a href="SQLResult.html">SQLResult</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versión del lenguaje:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versiones de motor de ejecución:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     Proporciona acceso a un objeto SQLResult que contiene los resultados de la ejecución de la declaración. Incluye todos las filas de resultados desde una declaración <code>SELECT</code> y el resto de información sobre la ejecución de todas las declaraciones. En mood de ejecución asíncrono, la información de los resultados no está disponible hasta que se distribuye el evento <code>result</code>.
+     
+     <p>Cuando se ejecuta una declaración <code>SELECT</code>, si se llama al método <code>execute()</code> con el argumento <code>prefetch</code> en su valor predeterminado de -1, el objeto SQLResult devuelto contiene todo el conjunto de resultados de la consulta.</p>
+     
+     <p>Cuando se especifica un argumento <code>prefetch</code> para una llamada al método <code>execute()</code> o <code>next()</code>, el método <code>getResult()</code> se comporta como una cola en la que los resultados se producen a medida que entran los datos. Cada vez que se distribuye el evento <code>result</code>, se añade a la cola un nuevo objeto SQLResult. Cada vez que se llama al método <code>getResult()</code>, el objeto SQLResult más antiguo (el que se añadió a la lista en primer lugar) se devuelve y se elimina de la cola. Si ya no quedan objetos SQLResult en la cola, <code>getResult()</code> devuelve <code>null</code>.</p>
+	 
+	 <p>Tenga en cuenta que, a no ser que se eliminen llamando a <code>getResult()</code>, los objetos SQLResult permanecen en la cola. Por ejemplo, si se llama varias veces al método <code>execute()</code> sin llamar a <code>getResult()</code>, los objetos SQLResult asociados a cada llamada a <code>execute()</code> permanecen en la cola.</p>
+     
+     </p><p></p><span class="label">Valor devuelto</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="SQLResult.html">SQLResult</a></code> &mdash; Un objeto SQLResult que contiene el resultado de una llamada al método <code>execute()</code> o <code>next()</code>.
+     
+     </td></tr></table><p><span class="label">Elementos de API relacionados</span></p><div class="seeAlso"><a href="SQLStatement.html#execute()" target="">execute()</a><br/><a href="SQLStatement.html#next()" target="">next()</a><br/><a href="SQLStatement.html#event:result" target="">Evento result</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="next()" id="next()"></a><a name="next(int,flash.net.Responder)" id="next(int,flash.net.Responder)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;next</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">método</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function next(prefetch:<a href="../../int.html">int</a> = -1, responder:<a href="../net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versión del lenguaje:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versiones de motor de ejecución:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     Recupera la siguiente porción del conjunto de resultados de una declaración <code>SELECT</code>. Si ya no hay más filas en el conjunto de resultados, se distribuye un evento <code>result</code> pero no se añaden más objetos SQLResult a la cola <code>getResult()</code>.
+     
+     <p>En modo de ejecución asíncrono, si el argumento <code>responder</code> no es <code>null</code>, el objeto Responder indica a los métodos llamados que deben controlar los resultados de la operación. Si el argumento <code>responder</code> es <code>null</code>, se distribuye un evento <code>result</code> si la operación se realiza correctamente, o un evento <code>error</code> si la operación falla.</p>
+     
+     <p>Sólo se puede llamar a este método si la declaración sigue ejecutándose. Si la declaración es una consulta <code>SELECT</code> y se especifica un argumento <code>prefetch</code> mayor que cero, se considera que la declaración está en ejecución hasta que se devuelve todo el conjunto de resultados, o hasta que se llama al método <code>SQLStatement.cancel()</code> o <code>SQLConnection.cancel()</code>.</p>
+     
+     </p><p><span class="label"> Parámetros </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">prefetch</span>:<a href="../../int.html">int</a></code> (default = <code>-1</code>)<code></code> &mdash; Cuando la propiedad <code>text</code> de la declaración es una declaración <code>SELECT</code>, este valor indica el número de filas que la declaración devuelve de una vez. El valor predeterminado es -1. Este valor indica que se devuelven de una vez todas las filas de resultados. De este modo se puede mejorar la percepción que el usuario tiene del rendimiento de la aplicación, ya que los valores iniciales se devuelven más rápido y se dividen las operaciones de procesamiento de resultados.
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">responder</span>:<a href="../net/Responder.html">Responder</a></code> (default = <code>null</code>)<code></code> &mdash; Un objeto que designa métodos a los que se debe llamar si la operación falla o si se realiza correctamente. Si el argumento <code>responder</code> es <code>null</code> se distribuye un evento <code>result</code> o <code>error</code> cuando finaliza la ejecución.
+     
+     </td></tr></table></p><br/><span class="label">Eventos</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>result</b>:<a href="../events/SQLEvent.html"><code>SQLEvent</code></a></code> &mdash; Se distribuye cuando la ejecución de la declaración se realiza correctamente, o si se especifica un valor del argumento <code>prefetch</code> y la llamada a <code>next()</code> devuelve una o varias filas de datos.
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>error</b>:<a href="../events/SQLErrorEvent.html"><code>SQLErrorEvent</code></a></code> &mdash; Se distribuye si la operación falla en modo de ejecución asíncrono.
+     
+     </td></tr></table><br/><span class="label">Emite</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; Si se llama al método mientras la declaración no está en ejecución, (la propiedad <code>executing</code> es <code>false</code>).
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/SQLError.html">SQLError</a> </code> &mdash; si la operación falla en modo de ejecución sincrónico.
+     
+	 </td></tr></table><p><span class="label">Elementos de API relacionados</span></p><div class="seeAlso"><a href="SQLStatement.html#execute()" target="">execute()</a></div><span id="pageFilter"><br/><span class="label"> Ejemplo &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_es"> Cómo utilizar este ejemplo </a></span>)
+            </span><br/><br/><div class="detailBody"> En el siguiente ejemplo se muestra la ejecución de una declaración SQLStatement. En ella se indica explícitamente que sólo se devolverán las 10 primeras filas de resultados la primera vez que se ofrezcan los resultados. El código comprueba la propiedad <code>complete</code> de SQLResult y, si no se han recuperado todas las filas, llama al método <code>next()</code>.
+<div class="listing"><pre>
+var conn:SQLConnection;
+var dbStatement:SQLStatement;
+
+function init():void
+{
+    conn = new SQLConnection();
+    conn.addEventListener(SQLEvent.OPEN, connOpenHandler);
+    
+    dbStatement = new SQLStatement();
+    dbStatement.sqlConnection = conn;
+    dbStatement.text = "SELECT id, name, ssn FROM employees";
+    
+    var dbFile:File = new File(File.separator + "employee.db");
+    conn.open(dbFile);
+}
+
+function connOpenHandler(event:SQLEvent):void
+{
+    dbStatement.addEventListener(SQLEvent.RESULT, resultHandler);
+    dbStatement.addEventListener(SQLErrorEvent.ERROR, errorHandler);
+    dbStatement.execute(10);
+}
+
+function resultHandler(event:SQLEvent):void
+{
+    var result:SQLResult = dbStatement.getResult();
+    if (result != null)
+    {
+        var numRows:int = result.data.length;
+        for (var i:int = 0; i &lt; numRows; i++)
+        {
+            var row:Object = result.data[i];
+            trace("id:", row.id, ", name:", row.name, ", ssn:", row.ssn);
+        }
+        if (!result.complete)
+        {
+            dbStatement.next(10);
+        }
+    }
+}
+
+function errorHandler(event:SQLErrorEvent):void
+{
+    trace("An error occured while executing the statement.");
+}
+</pre></div></div></span></div></span><div class="detailSectionHeader"> Información sobre eventos </div><span id="pageFilter" runtime="AIR::1.0##"><a name="event:error" id="event:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>error</h3></td><td class="detailHeaderType"> Evento </td></tr></table><div class="detailBody"><span class="label">Tipo de objeto de evento: </span><a href="../events/SQLErrorEvent.html"><code>flash.events.SQLErrorEvent</code></a><br/><span class="label">propiedad SQLErrorEvent.type  =  </span><a href="../events/SQLErrorEvent.html#ERROR"><code>flash.events.SQLErrorEvent.ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versión del lenguaje:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versiones de motor de ejecución:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ Se distribuye cuando se produce un error durante la operación.
+ 
+ </p>
+     La constante <code>SQLErrorEvent.ERROR</code> define el valor de la propiedad <code>type</code> de un evento de error distribuido cuando la llamada a una instancia de SQLConnection o de SQLStatement finaliza con un error. El evento <code>error</code> tiene las siguientes propiedades:
+	 
+	 <table class="innertable" ><tr><th>Propiedad</th><th>Valor</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; no hay ningún comportamiento predeterminado que cancelar.</td></tr><tr><td><code>error</code></td><td>Objeto SQLError que contiene información sobre el tipo de error ocurrido y la operación que lo provocó.</td></tr><tr><td><code>currentTarget</code></td><td>Objeto que procesa de forma activa el objeto de evento con un detector de eventos.</td></tr><tr><td><code>target</code></td><td>Objeto SQLConnection o SQLStatement que informa sobre el error.</td></tr></table>
+	 
+	 <p><span class="label">Elementos de API relacionados</span></p><div class="seeAlso"><a href="SQLStatement.html#execute()" target="">execute()</a><br/><a href="SQLStatement.html#next()" target="">next()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:result" id="event:result"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Solo disponible en el motor de ejecución AIR">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>result</h3></td><td class="detailHeaderType"> Evento </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Tipo de objeto de evento: </span><a href="../events/SQLEvent.html"><code>flash.events.SQLEvent</code></a><br/><span class="label">propiedad SQLEvent.type  =  </span><a href="../events/SQLEvent.html#RESULT"><code>flash.events.SQLEvent.RESULT</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versión del lenguaje:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versiones de motor de ejecución:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ Se distribuyen cuando la operación de llamada a los métodos <code>execute()</code> o <code>next()</code> finaliza correctamente. Una vez distribuido el evento <code>result</code>, es posible llamar al método <code>getResult()</code> para recuperar los resultados de la declaración.
+ 
+ 
+ </p>
+     La constante <code>SQLEvent.RESULT</code> define el valor de la propiedad <code>type</code> de un objeto de evento <code>result</code>. Se distribuye si el método <code>SQLStatement.execute()</code> o <code>SQLStatement.next()</code> finaliza correctamente. Una vez distribuido el evento <code>SQLEvent.RESULT</code>, se puede llamar al método <code>SQLStatement.getResult()</code> para acceder a los datos del resultado. El evento <code>result</code> tiene las siguientes propiedades:
+	 
+	 <table class="innertable" ><tr><th>Propiedad</th><th>Valor</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; no hay ningún comportamiento predeterminado que cancelar.</td></tr><tr><td><code>currentTarget</code></td><td>Objeto que procesa de forma activa el objeto de evento con un detector de eventos.</td></tr><tr><td><code>target</code></td><td>Objeto SQLStatement que ha llevado a cabo la operación.</td></tr></table>
+	 
+	 <p><span class="label">Elementos de API relacionados</span></p><div class="seeAlso"><a href="SQLStatement.html#execute()" target="">execute()</a><br/><a href="SQLStatement.html#next()" target="">next()</a><br/><a href="SQLStatement.html#getResult()" target="">getResult()</a></div></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script></div><p xmlns:xd="http://www.pnp-software.com/XSLTdoc"></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 02:12 PM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/es_ES/legalnotices/index.html">Avisos legales</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Política de privacidad en línea</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">¿Por qué hay texto en inglés?</span>
+				</div>
+				<div class="white_content_body">
+					<b>Cierto contenido de la Referencia de ActionScript 3.0 se muestra en inglés</b><br><br>
+					No todo el contenido de la Referencia de ActionScript 3.0 se traduce a todos los idiomas. Si un elemento del lenguaje no se traduce, aparecerá en inglés. Por ejemplo, la clase ga.controls.HelpBox no está traducida en ningún idioma. Por lo tanto, en la versión en español de la referencia, la clase ga.controls.HelpBox aparecerá en inglés.
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 02:12 PM Z  -->

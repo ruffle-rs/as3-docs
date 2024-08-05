@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Referência do ActionScript&reg; 3.0 para Adobe&reg; Flash&reg; Platform"><meta name="lang" content="pt-br"><meta name="runtime" content="flash player"><meta name="runtimever" content="flash player:11.5"><meta name="runtime" content="air"><meta name="runtimever" content="air:3.5"><meta name="product" content="flash player"><meta name="productver" content="flash player:11.5"><meta name="product" content="air"><meta name="productver" content="air:3.5"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../asfilter.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="Condition,flash.concurrent.Condition,isSupported,mutex,notify,notifyAll,wait"><title>Condition - Referência da API Adobe ActionScript&reg; 3 (AS3  )</title>
+		<link rel="stylesheet" href="../../filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="../../filter_new.css" type="text/css">
+			
+		<script src="../../jquery.js" type="text/javascript"></script>
+		<script src="../../s_chl_code.js" type="text/javascript"></script>
+		<script src="../../jquery.zclip.js" type="text/javascript"></script>
+		<script src="../../jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="../../cookies.js" type="text/javascript"></script>
+		<script src="../../asdoc.js" type="text/javascript"></script>
+		<script src="../../iscroll.js" type="text/javascript"></script>
+		<script src="../../AC_OETags.js" type="text/javascript"></script>
+		<script src="../../omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "Runtimes";
+			var productsLabel = "Produtos";
+			var noneLabel = "Nenhum";
+			var qsearchBoxLabel = "Pesquisa rápida";
+			var qsearchText = "Termo não encontrado";
+			var ajaxErrorMsg="Erro ao carregar a página";
+			var ajaxErrorTryMsg="Tentar novamente";
+			var ajaxLoadingMsg="Ainda carregando";
+			var cancelMsg = "Cancelar";
+			var classesText = "Classes";
+			var strJiveReply = "Esta pergunta foi publicada em resposta ao seguinte artigo: "
+			var showFilters = "Mostrar filtros";
+			var hideFilters = "Ocultar filtros";
+			
+		
+			var baseRef = "../../";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											Referência do ActionScript<sup>&reg;</sup> 3.0 para Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup> Platform<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="../../index.html"> Início </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="Condition.html#top" style="display:">Exibir listas de Pacotes e Classes</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="Condition.html#top" style="display:none">Ocultar listas de Pacotes e Classes</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="../../package-summary.html"> Pacotes </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../class-summary.html"> Classes </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../whatsnew.html"> Novidades </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../all-index-Symbols.html"> Índice </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../appendixes.html"> Apêndices </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Por que inglês?</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/pt_BR/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('../../')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('../../')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="../../help.js"></script>
+						<script language="javascript" type="text/javascript" src="../../asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="../../filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>Filtros:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">Recuperando dados do servidor...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">Recuperando dados do servidor...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="Condition.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">flash.concurrent&nbsp;</a><br>
+								<h1 id="classProductName">Condition&nbsp; - AS3 </h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="Condition.html#propertySummary" style="display:none"> Propriedades </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="Condition.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Propriedades </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="Condition.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Construtor </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="Condition.html#methodSummary" style="display:none"> Métodos </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="Condition.html#constantSummary" style="display:none"> Constantes globais </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="Condition.html#eventSummary" style="display:none"> Eventos </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="Condition.html#styleSummary" style="display:none"> Estilos </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="Condition.html#SkinPartSummary" style="display:none"> Partes da capa </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="Condition.html#SkinStateSummary" style="display:none"> Estados da capa </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="Condition.html#effectSummary" style="display:none"> Efeitos </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="Condition.html#constantSummary" style="display:none"> Constantes </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="Condition.html#methodSummary" style="display:none"> Funções globais </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="Condition.html#methodSummary" style="display:none">Funções</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="Condition.html#interfaceSummary" style="display:none"> Interfaces </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="Condition.html#classSummary" style="display:none"> Classes </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="Condition.html#includeExamplesSummary" style="display:none"> Exemplos </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="Condition.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								Classes
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Pacote</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">flash.concurrent</a></td></tr><tr><td class="classHeaderTableLabel">Classe</td><td class="classSignature">public final   class  Condition</td></tr><tr><td class="classHeaderTableLabel">Herança</td><td class="inheritanceList">Condition  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../Object.html">Object</a></td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versão da linguagem:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versões de runtime:&nbsp;</b></td><td>Flash Player 11.5, AIR 3.5</td></tr></table><p></p><p></p><p></p>
+ Um objeto Condition é uma ferramenta para compartilhar um recurso entre workers com o recurso adicional de execução de pausa até que uma condição específica seja atendida. Um objeto Condition é usado em conjunto com um objeto Mutex e acrescenta funcionalidade adicional ao comportamento da mutex. Ao trabalhar em conjunto com uma mutex, o runtime garante que cada transição de propriedade entre workers seja atômica.
+ 
+ <p>O seguinte é um fluxo de trabalho possível para usar o objeto Condition:</p>
+               <ol>
+                  <li>Antes de usar um objeto Condition, o primeiro worker deve obter a propriedade da mutex associada da condição ao chamar os métodos <code>lock()</code> ou <code>tryLock()</code> do objeto Mutex.</li>
+                  <li>O código do worker funciona com o recurso compartilhado até que alguma condição se torne falsa, o que evita que worker trabalhe mais com o recursos compartilhado. Por exemplo, se o recursos compartilhado for um conjunto de dados a serem processados, quando não houver mais dados a serem processadas o worker não pode trabalhar mais.</li>
+                  <li>Nesse momento, chame o método <code>wait()</code> do objeto Condition para pausar a execução do worker e liberar a propriedade da mutex.</li>
+                  <li>Em algum momento, um segundo worker toma a propriedade da mutex. Como a mutex está disponível, é seguro operar o código do segundo worker no recurso compartilhado. O segundo worker faz o que for necessário para atender a condição, para que o primeiro worker possa fazer seu trabalho novamente. Por exemplo, se o primeiro worker não tiver dados a serem processados, o segundo worker pode passar mais dados a serem processados para o recursos compartilhado.</li>
+                  <li>Nesse momento, a condição relacionada ao trabalho do primeiro worker é verdadeira, então o primeiro worker precisa ser notificado que a condição foi cumprida. Para notificar o primeiro worker, o código do segundo worker chama o método <code>notify()</code> do objeto de condição ou seu método <code>notifyAll()</code>.</li>
+                  <li>Além de chamar <code>notify()</code>, o segundo worker precisa liberar a propriedade da mutex. Ele faz isso chamando o método <code>unlock()</code> do objeto Mutex ou o método <code>wait()</code> do objeto Condition. Como o primeiro worker chamou o método <code>wait()</code>, a propriedade da mutex retorna ao primeiro worker. A execução de código no primeiro worker continua novamente com a próxima linha do código seguindo a chamada <code>wait()</code>.</li>
+               </ol>
+ 
+               <p>A classe Condition é um dos tipos de objeto especial compartilhado entre os workers, em vez de copiados entre eles. Quando você passa uma condição de um worker a outro efetuando uma chamada ao método <code>setSharedProperty()</code> do objeto do Worker ou usando um canal MessageChannel, ambos os workers têm referência ao mesmo objeto Condition na memória do runtime.</p>
+ 
+            <p></p><p><span class="classHeaderTableLabel">Elementos da API relacionados</span></p><div class="seeAlso"><a href="Mutex.html" target="">Classe Mutex</a><br/><a href="../system/Worker.html" target="">Classe Worker</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary" id="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Propriedades públicas</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="Condition.html#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Ocultar propriedades públicas herdadas</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="Condition.html#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Mostrar propriedades públicas herdadas</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Propriedade</th><th>Definido por</th></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="../../Object.html#constructor" class="signatureLink">constructor</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">
+	 Uma referência ao objeto de classe ou à função de construtor de uma determinada ocorrência de objeto.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="Flash::11.5##AIR::3.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="Condition.html#isSupported" class="signatureLink">isSupported</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">[estático] [somente leitura] 
+     Indica se a classe Condition é suportada na plataforma atual.</div></td><td class="summaryTableOwnerCol">Condition</td></tr><tr class="" runtime="Flash::11.5##AIR::3.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="Condition.html#mutex" class="signatureLink">mutex</a> : <a href="Mutex.html">Mutex</a><div class="summaryTableDescription">[somente leitura] 
+     A mutex associado a esta condição.</div></td><td class="summaryTableOwnerCol">Condition</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary" id="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Métodos públicos </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="Condition.html#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Ocultar métodos públicos herdados</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="Condition.html#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Mostrar métodos públicos herdados</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Método</th><th>Definido por</th></tr><tr class="" runtime="Flash::11.5##AIR::3.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Condition.html#Condition()" class="signatureLink">Condition</a>(mutex:<a href="Mutex.html">Mutex</a>)</div><div class="summaryTableDescription">
+     Cria uma nova ocorrência Condition.</div></td><td class="summaryTableOwnerCol">Condition</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#hasOwnProperty()" class="signatureLink">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Indica se um objeto tem uma propriedade especificada definida.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#isPrototypeOf()" class="signatureLink">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Indica se uma ocorrência da classe Object está na cadeia de protótipos do objeto especificado como o parâmetro.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="Flash::11.5##AIR::3.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Condition.html#notify()" class="signatureLink">notify</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     Especifica que a condição que esse objeto Condition representa foi atendida e que a propriedade da mutex será retornada ao worker seguinte (se houver) que está aguardando essa condição.</div></td><td class="summaryTableOwnerCol">Condition</td></tr><tr class="" runtime="Flash::11.5##AIR::3.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Condition.html#notifyAll()" class="signatureLink">notifyAll</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     Especifica que a condição que esse objeto Condition representa foi atendida e que a propriedade da mutex será retornada a todos os workers que estão aguardando essa condição.</div></td><td class="summaryTableOwnerCol">Condition</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#propertyIsEnumerable()" class="signatureLink">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Indica se a propriedade especificada existe e é enumerável.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#setPropertyIsEnumerable()" class="signatureLink">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     Define a disponibilidade de uma propriedade dinâmica para operações de repetição.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toLocaleString()" class="signatureLink">toLocaleString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 Retorna a representação da string deste objeto, formatado segundo as convenções específicas para a localidade.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toString()" class="signatureLink">toString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 Retorna a representação de string do objeto especificado.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#valueOf()" class="signatureLink">valueOf</a>():<a href="../../Object.html">Object</a></div><div class="summaryTableDescription">
+	 Retorna o valor primitivo do objeto especificado.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="Flash::11.5##AIR::3.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Condition.html#wait()" class="signatureLink">wait</a>(timeout:<a href="../../Number.html">Number</a> = -1):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+     Especifica que a condição que esse objeto Condition representa não é atendida e que o worker atual precisa aguardar até que seja atendida, antes de executar mais códigos.</div></td><td class="summaryTableOwnerCol">Condition</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Detalhes da propriedade</div><span id="pageFilter" runtime="Flash::11.5##AIR::3.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="isSupported" id="isSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>isSupported</h3></td><td class="detailHeaderType">propriedade</td></tr></table><div class="detailBody"><code>isSupported:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[somente leitura] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versão da linguagem:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versões de runtime:&nbsp;</b></td><td>Flash Player 11.5, AIR 3.5</td></tr></table><p></p><p></p><p>
+     Indica se a classe Condition é suportada na plataforma atual.
+     
+     <p><b>Observação</b>: se a classe Mutex não for suportada, a criação de uma ocorrência Condition não é possível e essa propriedade é <code>false</code>.</p>
+     
+     </p><br/><br/><span class="label"> Implementação </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get isSupported():<a href="../../Boolean.html">Boolean</a></code><br/></div></span><span id="pageFilter" runtime="Flash::11.5##AIR::3.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="mutex" id="mutex"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>mutex</h3></td><td class="detailHeaderType">propriedade</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>mutex:<a href="Mutex.html">Mutex</a></code>&nbsp;&nbsp;[somente leitura] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versão da linguagem:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versões de runtime:&nbsp;</b></td><td>Flash Player 11.5, AIR 3.5</td></tr></table><p></p><p></p><p>
+     A mutex associado a esta condição.
+     
+     </p><br/><br/><span class="label"> Implementação </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get mutex():<a href="Mutex.html">Mutex</a></code><br/></div></span><a name="constructorDetail" id="constructorDetail"></a><div class="detailSectionHeader">Detalhes do construtor</div><span id="pageFilter" runtime="Flash::11.5##AIR::3.5##"><a name="Condition()" id="Condition()"></a><a name="Condition(flash.concurrent.Mutex)" id="Condition(flash.concurrent.Mutex)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Condition</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Construtor</td></tr></table><div class="detailBody"><code>public function Condition(mutex:<a href="Mutex.html">Mutex</a>)</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versão da linguagem:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versões de runtime:&nbsp;</b></td><td>Flash Player 11.5, AIR 3.5</td></tr></table><p></p><p>
+     Cria uma nova ocorrência Condition.
+     
+     </p><span class="label"> Parâmetros </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">mutex</span>:<a href="Mutex.html">Mutex</a></code> &mdash; a mutex que a condição usa para controlar a transição entre workers
+     
+     </td></tr></table></div></span><a name="methodDetail" id="methodDetail"></a><div class="detailSectionHeader">Detalhes do método</div><span id="pageFilter" runtime="Flash::11.5##AIR::3.5##"><a name="notify()" id="notify()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>notify</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">método</td></tr></table><div class="detailBody"><code> public function notify():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versão da linguagem:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versões de runtime:&nbsp;</b></td><td>Flash Player 11.5, AIR 3.5</td></tr></table><p></p><p></p><p>
+     Especifica que a condição que esse objeto Condition representa foi atendida e que a propriedade da mutex será retornada ao worker seguinte (se houver) que está aguardando essa condição.
+     
+     <p>Chamar esse método não libera automaticamente a propriedade da mutex. Depois de chamar <code>notify()</code>, libere explicitamente a propriedade da mutex em uma das duas maneiras a seguir: chamar o método <code>Mutex.unlock()</code> se o worker atual não precisar da mutex novamente ou chamar<code>wait()</code> se o worker precisar obter a propriedade do mutex novamente após outros workers completarem seus trabalhos.</p>
+     
+     <p>Um dos bloqueios de mutex é liberado, o worker seguinte na fila de workers que chamaram o método <code>wait()</code> adquire a mutex e retoma a execução de código.</p>
+     
+     </p><br/><span class="label">Lança</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; se o worker atual não tem a mutex desta condição
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::11.5##AIR::3.5##"><a name="notifyAll()" id="notifyAll()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>notifyAll</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">método</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function notifyAll():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versão da linguagem:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versões de runtime:&nbsp;</b></td><td>Flash Player 11.5, AIR 3.5</td></tr></table><p></p><p></p><p>
+     Especifica que a condição que esse objeto Condition representa foi atendida e que a propriedade da mutex será retornada a todos os workers que estão aguardando essa condição.
+     
+     <p>Chamar esse método não libera automaticamente a propriedade da mutex. Depois de chamar <code>notify()</code>, libere explicitamente a propriedade da mutex em uma das duas maneiras a seguir: chamar o método <code>Mutex.unlock()</code> se o worker atual não precisar da mutex novamente ou chamar<code>wait()</code> se o worker precisar obter a propriedade do mutex novamente após outros workers completarem seus trabalhos.</p>
+     
+     <p>Quando o bloqueio da mutex estiver liberado, os workers em aguardo recebem a propriedade, um de cada vez, na ordem em que são chamados no método <code>wait()</code>. Cada worker que foi chamado no método <code>wait()</code> adquire a mutex por vez e continua retoma a execução de código. Quando o worker chama o método <code>Mutex.unlock()</code> ou o método <code>wait()</code>, a propriedade da mutex alterna para o próximo worker em aguardo. Cada vez que a propriedade da mutex alterna entre workers, a transição é executada como uma operação atômica única.</p>
+     
+     </p><br/><span class="label">Lança</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; se o worker atual não tem a mutex desta condição
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::11.5##AIR::3.5##"><a name="wait()" id="wait()"></a><a name="wait(Number)" id="wait(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>wait</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">método</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function wait(timeout:<a href="../../Number.html">Number</a> = -1):<a href="../../Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versão da linguagem:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Versões de runtime:&nbsp;</b></td><td>Flash Player 11.5, AIR 3.5</td></tr></table><p></p><p></p><p>
+     Especifica que a condição que esse objeto Condition representa não é atendida e que o worker atual precisa aguardar até que seja atendida, antes de executar mais códigos. Chamar esse método pausa a execução do worker atual e libera a propriedade da mutex da condição.  Essas etapas são realizadas como uma operação atômica única. O worker continua pausado até que outro worker chame os métodos <code>notify()</code> ou <code>notifyAll()</code> desse objeto Condition.
+     
+     </p><p><span class="label"> Parâmetros </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">timeout</span>:<a href="../../Number.html">Number</a></code> (default = <code>-1</code>)<code></code> &mdash; a quantidade máxima de tempo, em milissegundos, que o worker deve pausar a execução antes de continuar. Se esse valor for -1 (o padrão) não há tempo limite e a execução é pausada indefinidamente.
+     
+     </td></tr></table></p><p></p><span class="label">Retorna</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Boolean.html">Boolean</a></code> &mdash; <code>true</code> se o método foi retornado porque o tempo limite foi esgotado. Do contrário, o método retorna <code>false</code>.
+     
+     </td></tr></table><br/><span class="label">Lança</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; se o worker atual não tem a mutex desta condição
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; se o argumento <code>timeout</code> for menor que 0 e não for -1
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/ScriptTimeoutError.html">ScriptTimeoutError</a> </code> &mdash; se o método for chamado a partir do código no worker primário no Flash Player e o worker pausar por mais tempo que o limite de tempo do script (15 segundos por padrão)
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../../Error.html">Error</a> </code> &mdash; se o método for chamado e, enquanto a execução do worker que chama estiver pausada, o worker em aguardo for encerrado.
+     
+     </td></tr></table></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,true,false,false,false,false,false,false,true,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script></div><p xmlns:xd="http://www.pnp-software.com/XSLTdoc"></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Wed Jun 13 2018, 11:10 AM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/pt_BR/legalnotices/index.html">Aspectos jurídicos</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Política de privacidade on-line</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">Por que inglês?</span>
+				</div>
+				<div class="white_content_body">
+					<b>O conteúdo na Referência do ActionScript 3.0 aparece em inglês</b><br><br>
+					Nem todas as partes da Referência do ActionScript 3.0 estão traduzidas em todos os idiomas. Quando um elemento de um idioma não está traduzido, ele é exibido em inglês. Por exemplo, a classe ga.controls.HelpBox não está traduzida em nenhum idioma. Por isso, na versão da referência em português do Brasil, a classe ga.controls.HelpBox é exibida em inglês.
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Wed Jun 13 2018, 11:10 AM Z  -->

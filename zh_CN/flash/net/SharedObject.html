@@ -1,0 +1,835 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="用于 Adobe&reg; Flash&reg; Platform 的 ActionScript&reg; 3.0 参考"><meta name="lang" content="zh-cn"><meta name="runtime" content="flash player"><meta name="runtimever" content="flash player:9"><meta name="runtime" content="lite"><meta name="runtimever" content="lite:4"><meta name="product" content="flash player"><meta name="productver" content="flash player:9"><meta name="product" content="lite"><meta name="productver" content="lite:4"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../asfilter.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="SharedObject,flash.net.SharedObject,client,data,defaultObjectEncoding,fps,objectEncoding,preventBackup,size,clear,close,connect,flush,getLocal,getRemote,send,setDirty,setProperty"><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" src="../../AC_OETags.js" type="text/javascript"></script><title>SharedObject - Adobe ActionScript&reg; 3 (AS3  ) API 参考</title>
+		<link rel="stylesheet" href="../../filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="../../filter_new.css" type="text/css">
+			
+		<script src="../../jquery.js" type="text/javascript"></script>
+		<script src="../../s_chl_code.js" type="text/javascript"></script>
+		<script src="../../jquery.zclip.js" type="text/javascript"></script>
+		<script src="../../jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="../../cookies.js" type="text/javascript"></script>
+		<script src="../../asdoc.js" type="text/javascript"></script>
+		<script src="../../iscroll.js" type="text/javascript"></script>
+		<script src="../../AC_OETags.js" type="text/javascript"></script>
+		<script src="../../omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "运行时";
+			var productsLabel = "产品";
+			var noneLabel = "无";
+			var qsearchBoxLabel = "快速搜索";
+			var qsearchText = "未找到所搜索的词";
+			var ajaxErrorMsg="加载页面时出错";
+			var ajaxErrorTryMsg="重试";
+			var ajaxLoadingMsg="仍在加载中";
+			var cancelMsg = "取消";
+			var classesText = "类";
+			var strJiveReply = "此问题针对以下文章提出： "
+			var showFilters = "显示过滤条件";
+			var hideFilters = "隐藏过滤条件";
+			
+		
+			var baseRef = "../../";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											用于 Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup> Platform 的 ActionScript<sup>&reg;</sup> 3.0 参考<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="../../index.html"> 主页 </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="SharedObject.html#top" style="display:">显示包列表和类列表</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="SharedObject.html#top" style="display:none">隐藏包列表和类列表</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="../../package-summary.html"> 包 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../class-summary.html"> 类 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../whatsnew.html"> 新增内容 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../all-index-Symbols.html"> 索引 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../appendixes.html"> 附录 </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">为什么显示为英语？</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/zh_CN/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('../../')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('../../')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="../../help.js"></script>
+						<script language="javascript" type="text/javascript" src="../../asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="../../filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>过滤条件:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">正在从服务器检索数据...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">正在从服务器检索数据...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="SharedObject.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">flash.net&nbsp;</a><br>
+								<h1 id="classProductName">SharedObject&nbsp; - AS3 </h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="SharedObject.html#propertySummary" style="display:none"> 属性 </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="SharedObject.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> 属性 </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="SharedObject.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> 构造函数 </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="SharedObject.html#methodSummary" style="display:none"> 方法 </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="SharedObject.html#constantSummary" style="display:none"> 全局常量 </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="SharedObject.html#eventSummary" style="display:none"> 事件 </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="SharedObject.html#styleSummary" style="display:none"> 样式 </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="SharedObject.html#SkinPartSummary" style="display:none"> 外观部件 </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="SharedObject.html#SkinStateSummary" style="display:none"> 外观状态 </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="SharedObject.html#effectSummary" style="display:none"> 效果 </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="SharedObject.html#constantSummary" style="display:none"> 常量 </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="SharedObject.html#methodSummary" style="display:none"> 全局函数 </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="SharedObject.html#methodSummary" style="display:none">函数</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="SharedObject.html#interfaceSummary" style="display:none"> 接口 </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="SharedObject.html#classSummary" style="display:none"> 类 </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="SharedObject.html#includeExamplesSummary" style="display:none"> 示例 </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="SharedObject.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								类
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">包</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">flash.net</a></td></tr><tr><td class="classHeaderTableLabel">类</td><td class="classSignature">public  class  SharedObject</td></tr><tr><td class="classHeaderTableLabel">继承</td><td class="inheritanceList">SharedObject  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../Object.html">Object</a></td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p></p>
+ SharedObject 类用于在用户计算机或服务器上读取和存储有限的数据量。使用共享对象，可在永久贮存在本地计算机或远程服务器上的多个客户端 SWF 文件和对象之间实现实时数据共享。本地共享对象类似于浏览器 Cookie，远程共享对象类似于实时数据传输设备。为了使用远程共享对象，您需要 Adobe Flash Media Server。
+ 
+ <p>可使用共享对象执行以下操作：</p>
+ 
+               <ul>
+                  <li>
+                     <b>保持本地永久性</b>。这是使用共享对象的最简单方法，并且无需使用 Flash Media Server。例如，可以调用 <code>SharedObject.getLocal()</code> 以在应用程序中创建共享对象，如带记忆功能的计算器。用户关闭计算器时，Flash Player 将在用户计算机的共享对象中保存最后一个值。计算器下一次运行时，将包含先前所拥有的值。或者，在计算器应用程序关闭之前，如果将共享对象的属性设置为 <code>null</code>，下次运行该应用程序时，它在打开时不包含任何值。维护本地永久性的另一示例就是跟踪用户首选项或复杂网站的其它数据，如用户在新闻网站上所阅读文章的记录。跟踪此信息将允许您以不同方式分别显示已经阅读的文章和新的未读文章。在用户计算机上存储此信息可减小服务器负载。</li>
+                  <li>
+                     <b>在 Flash Media Server 上存储并共享数据</b>。共享对象可以在服务器上存储数据以供其它客户端进行检索。例如，调用 <code>SharedObject.getRemote()</code> 以创建一个在服务器上永久保留的远程共享对象，如电话簿。每次客户端对共享对象进行更改时，修改后的数据可供当前或以后连接到该对象的所有客户端使用。如果还在本地永久保留了该对象，并且客户端在未连接到服务器时更改了数据，下次客户端连接到远程共享对象时，则会将数据复制到该对象。</li>
+                  <li>
+                     <b>实时共享数据</b>。共享对象可以实现多个客户端的实时数据共享。例如，您可以打开一个存储连接到聊天室的用户列表的远程共享对象，连接到该对象的所有客户端都能看到此列表。当用户进入或离开聊天室时，将更新该对象，连接到该对象的所有客户端都能看到修改的聊天室用户列表。</li>
+               </ul>
+ 
+               <p> 要创建本地共享对象，请调用 <code>SharedObject.getLocal()</code>。要创建远程共享对象，请调用 <code>SharedObject.getRemote()</code>。</p> 
+ 
+               <p> 当应用程序关闭时，将会<i>刷新</i>共享对象或将其写入磁盘。也可以调用 <code>flush()</code> 方法以明确地将数据写入磁盘。</p>
+ 
+               <p>
+                  <b>本地磁盘空间注意事项。</b>本地共享对象具有一些限制，这些限制很重要，您在设计应用程序时要予以考虑。有时可能不允许 SWF 文件写入本地共享对象，有时可能会在您不知情的情况下删除在本地共享对象中存储的数据。Flash Player 用户可以管理对单个域或所有域可用的磁盘空间。当用户减少可用磁盘空间时，一些本地共享对象可能会被删除。Flash Player 用户还具有隐私控制能力，它们可防止第三方域（当前浏览器地址栏中域之外的域）读取或写入本地共享对象。另请注意，在 Mac OS 上，从 AIR 3.3 开始，本地共享对象的位置将发生更改，所以如果您升级到 3.3 命名空间，它可能显得对象似乎消失了。</p>
+ 
+               <p>
+                  <b>注意：</b>在本地计算机（而不是远程服务器）上存储和运行的 SWF 文件始终可以将第三方共享对象写入磁盘。有关第三方共享对象的详细信息，请参阅“Flash Player 帮助”中的<a href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager03.html" target="external">“全局存储设置”面板</a>。</p>
+ 
+               <p>最好检查与磁盘空间数量和用户隐私控制有关的故障。在调用 <code>getLocal()</code> 和 <code>flush()</code> 时执行这些检查：
+ 
+ <ul>
+                     <li>
+                        <code>SharedObject.getLocal()</code> -- 调用此方法失败时（如用户禁用了第三方共享对象，并且您的 SWF 文件的域与浏览器地址栏中的域不匹配），Flash Player 将引发异常。</li>
+                     <li>
+                        <code>SharedObject.flush()</code> -- 调用此方法失败时，Flash Player 将引发异常。调用成功时，将返回 <code>SharedObjectFlushStatus.FLUSHED</code>。需要额外存储空间时，将返回 <code>SharedObjectFlushStatus.PENDING</code>。Flash Player 提示用户增加本地保存信息的存储空间。随后，对 <code>netStatus</code> 事件进行调度，同时信息对象将表示刷新是否成功。</li>
+                  </ul>
+               </p>
+ 
+               <p>如果您的 SWF 文件尝试创建或修改本地共享对象，请确保 SWF 文件的宽度至少为 215 像素，高度至少为 138 像素，这是用于显示提示用户增加其本地共享对象存储限制的对话框的最小尺寸。如果您的 SWF 文件小于这些尺寸，且需要增加存储限制，则 <code>SharedObject.flush()</code> 失败，返回 <code>SharedObjectFlushedStatus.PENDING</code>，并调度 <code>netStatus</code> 事件。</p>
+ 
+               <p>
+                  <b>远程共享对象。</b>如果使用 Flash Media Server，您可以创建并使用远程共享对象，这些对象是由连接到应用程序的所有客户端实时共享的。在一个客户端更改远程共享对象的属性时，也会为所有连接的客户端更改此属性。您可以使用远程共享对象同步客户端，例如，在玩多人游戏的用户。
+ </p>
+ 
+               <p>
+ 每个远程共享对象具有一个 <code>data</code> 属性，此对象包含存储数据的属性。可以调用 <code>setProperty()</code> 以更改数据对象的属性。服务器将更新这些属性，调度 <code>sync</code> 事件，并将这些属性发回到连接的客户端。 
+ </p>
+ 
+               <p>
+ 您可以选择将远程共享对象永久保留在客户端和/或服务器上。默认情况下，Flash Player 最多在本地永久保存 100K 的远程共享对象。在尝试保存较大的对象时，Flash Player 将显示一个“本地存储”对话框，用户可以在其中允许或拒绝共享对象的本地存储。请确保舞台大小至少为 215 x 138 像素；这是 Flash 显示该对话框所需的最小大小。
+ </p>
+               <p>
+ 如果用户选择“允许”，服务器将保存共享对象并调度 <code>netStatus</code>事件，<code>code</code> 属性值为 <code>SharedObject.Flush.Success</code>。如果用户选择“拒绝”，服务器不会保存共享对象并调度 <code>netStatus</code> 事件，<code>code</code> 属性值为 <code>SharedObject.Flush.Failed</code>。
+ </p>
+ 
+            <p></p><p><a href="SharedObject.html#includeExamplesSummary">查看示例</a></p><p><span class="classHeaderTableLabel">相关 API 元素</span></p><div class="seeAlso"><a href="SharedObject.html#flush()" target="">flush()</a><br/><a href="SharedObject.html#getLocal()" target="">getLocal()</a><br/><a href="SharedObject.html#event:netStatus" target="">netStatus</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary" id="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">公共属性</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="SharedObject.html#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隐藏继承的公共属性</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="SharedObject.html#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 显示继承的公共属性</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">属性</th><th>由以下参数定义</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="SharedObject.html#client" class="signatureLink">client</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">
+     表示对其调用回调方法的对象。</div></td><td class="summaryTableOwnerCol">SharedObject</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="../../Object.html#constructor" class="signatureLink">constructor</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">
+	 对类对象或给定对象实例的构造函数的引用。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="SharedObject.html#data" class="signatureLink">data</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">[只读] 
+     赋给对象的 data 属性 (property) 的属性 (attribute) 集合；可以共享和存储这些属性 (attribute)。</div></td><td class="summaryTableOwnerCol">SharedObject</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="SharedObject.html#defaultObjectEncoding" class="signatureLink">defaultObjectEncoding</a> : <a href="../../uint.html">uint</a><div class="summaryTableDescription">[静态] 
+     在 SWF 文件中创建的所有本地共享对象的默认对象编码（AMF 版本）。</div></td><td class="summaryTableOwnerCol">SharedObject</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="SharedObject.html#fps" class="signatureLink">fps</a> : <a href="../../Number.html">Number</a><div class="summaryTableDescription">[只写] 
+     指定每秒钟客户端对共享对象所做的更改被发送到服务器的次数。</div></td><td class="summaryTableOwnerCol">SharedObject</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="SharedObject.html#objectEncoding" class="signatureLink">objectEncoding</a> : <a href="../../uint.html">uint</a><div class="summaryTableDescription">
+     此共享对象的对象编码（AMF 版本）。</div></td><td class="summaryTableOwnerCol">SharedObject</td></tr><tr class="" runtime="AIR::3.7##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="SharedObject.html#preventBackup" class="signatureLink">preventBackup</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">[静态] 
+     指定是否将在 iOS 云备份服务上备份本地共享对象。</div></td><td class="summaryTableOwnerCol">SharedObject</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="SharedObject.html#size" class="signatureLink">size</a> : <a href="../../uint.html">uint</a><div class="summaryTableDescription">[只读] 
+     共享对象的当前大小（以字节为单位）。</div></td><td class="summaryTableOwnerCol">SharedObject</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary" id="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">公共方法 </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="SharedObject.html#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隐藏继承的公共方法</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="SharedObject.html#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 显示继承的公共方法</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">方法</th><th>由以下参数定义</th></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#addEventListener()" class="signatureLink">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	使用 EventDispatcher 对象注册事件侦听器对象，以使侦听器能够接收事件通知。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="SharedObject.html#clear()" class="signatureLink">clear</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     对于本地共享对象，清除所有数据并从磁盘删除共享对象。</div></td><td class="summaryTableOwnerCol">SharedObject</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="SharedObject.html#close()" class="signatureLink">close</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     关闭远程共享对象和服务器间的连接。</div></td><td class="summaryTableOwnerCol">SharedObject</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="SharedObject.html#connect()" class="signatureLink">connect</a>(myConnection:<a href="NetConnection.html">NetConnection</a>, params:<a href="../../String.html">String</a> = null):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     通过指定的 NetConnection 对象连接到服务器上的远程共享对象。</div></td><td class="summaryTableOwnerCol">SharedObject</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	将事件调度到事件流中。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="SharedObject.html#flush()" class="signatureLink">flush</a>(minDiskSpace:<a href="../../int.html">int</a> = 0):<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+     将本地永久共享对象立即写入本地文件。</div></td><td class="summaryTableOwnerCol">SharedObject</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="SharedObject.html#getLocal()" class="signatureLink">getLocal</a>(name:<a href="../../String.html">String</a>, localPath:<a href="../../String.html">String</a> = null, secure:<a href="../../Boolean.html">Boolean</a> = false):<a href="SharedObject.html">SharedObject</a></div><div class="summaryTableDescription">[静态] 
+  返回对本地永久保留的共享对象的引用，该对象只能用于当前客户端。</div></td><td class="summaryTableOwnerCol">SharedObject</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="SharedObject.html#getRemote()" class="signatureLink">getRemote</a>(name:<a href="../../String.html">String</a>, remotePath:<a href="../../String.html">String</a> = null, persistence:<a href="../../Object.html">Object</a> = false, secure:<a href="../../Boolean.html">Boolean</a> = false):<a href="SharedObject.html">SharedObject</a></div><div class="summaryTableDescription">[静态] 
+     返回对 Flash Media Server 上可由多个客户端访问的共享对象的引用。</div></td><td class="summaryTableOwnerCol">SharedObject</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	检查 EventDispatcher 对象是否为特定事件类型注册了任何侦听器。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#hasOwnProperty()" class="signatureLink">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 表示对象是否已经定义了指定的属性。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#isPrototypeOf()" class="signatureLink">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 表示 Object 类的实例是否在指定为参数的对象的原型链中。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#propertyIsEnumerable()" class="signatureLink">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 表示指定的属性是否存在、是否可枚举。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#removeEventListener()" class="signatureLink">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	从 EventDispatcher 对象中删除侦听器。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="SharedObject.html#send()" class="signatureLink">send</a>(<a href="../../statements.html#..._(rest)_parameter">...</a> arguments):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     向连接到远程共享对象的所有客户端广播一条消息（包括发送该消息的客户端）。</div></td><td class="summaryTableOwnerCol">SharedObject</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="SharedObject.html#setDirty()" class="signatureLink">setDirty</a>(propertyName:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     通知服务器共享对象中的属性值已更改。</div></td><td class="summaryTableOwnerCol">SharedObject</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="SharedObject.html#setProperty()" class="signatureLink">setProperty</a>(propertyName:<a href="../../String.html">String</a>, value:<a href="../../Object.html">Object</a> = null):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     更新共享对象中某个属性的值，并通知服务器该属性的值已更改。</div></td><td class="summaryTableOwnerCol">SharedObject</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#setPropertyIsEnumerable()" class="signatureLink">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     设置循环操作动态属性的可用性。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toLocaleString()" class="signatureLink">toLocaleString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 返回此对象的字符串表示形式，其格式设置遵守区域设置特定的约定。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toString()" class="signatureLink">toString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 返回指定对象的字符串表示形式。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#valueOf()" class="signatureLink">valueOf</a>():<a href="../../Object.html">Object</a></div><div class="summaryTableDescription">
+	 返回指定对象的原始值。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	检查是否用此 EventDispatcher 对象或其任何祖代为指定事件类型注册了事件侦听器。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary" id="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">事件</div><div class="showHideLinks"><a href="http://help.adobe.com/en_US/Flex/4.6/UsingSDK/WS2db454920e96a9e51e63e3d11c0bf69084-7ee9.html" target="_blank">单击此处了解有关事件的更多信息</a></div><div class="showHideLinks"><div id="hideInheritedEvent" class="hideInheritedEvent"><a class="showHideLink" href="SharedObject.html#eventSummary" onclick="javascript:setInheritedVisible(false,'Event');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隐藏继承的事件</a></div><div id="showInheritedEvent" class="showInheritedEvent"><a class="showHideLink" href="SharedObject.html#eventSummary" onclick="javascript:setInheritedVisible(true,'Event');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 显示继承的事件</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">事件</th><th> 摘要 </th><th>由以下参数定义</th></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[广播事件] Flash Player 或 AIR 应用程序获得操作系统焦点并变为活动状态时将调度此事件。</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="SharedObject.html#event:asyncError" class="signatureLink">asyncError</a></div></td><td class="summaryTableDescription summaryTableCol">在异步引发异常（即来自本机异步代码）时调度。</td><td class="summaryTableOwnerCol">SharedObject</td></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[广播事件] Flash Player 或 AIR 应用程序失去操作系统焦点并变为非活动状态时将调度此事件。</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="SharedObject.html#event:netStatus" class="signatureLink">netStatus</a></div></td><td class="summaryTableDescription summaryTableCol">在 SharedObject 实例报告其状态或错误条件时调度。</td><td class="summaryTableOwnerCol">SharedObject</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="SharedObject.html#event:sync" class="signatureLink">sync</a></div></td><td class="summaryTableDescription summaryTableCol">在服务器更新了远程共享对象后调度。</td><td class="summaryTableOwnerCol">SharedObject</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">属性详细信息</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail" id="propertyDetail"></a><a name="client" id="client"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>client</h3></td><td class="detailHeaderType">属性</td></tr></table><div class="detailBody"><code>client:<a href="../../Object.html">Object</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     表示对其调用回调方法的对象。默认对象为 <code>this</code>。您可以将此客户端属性设置为其它对象，并对此对象调用回调方法。
+     
+     </p><br/><br/><span class="label"> 实现 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get client():<a href="../../Object.html">Object</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set client(value:<a href="../../Object.html">Object</a>):<a href="../../specialTypes.html#void">void</a></code><br/><br/><span class="label"> 引发 </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../TypeError.html">TypeError</a> </code> &mdash; 必须将 <code>client</code> 属性设置为非空对象。
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail" id="propertyDetail"></a><a name="data" id="data"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>data</h3></td><td class="detailHeaderType">属性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>data:<a href="../../Object.html">Object</a></code>&nbsp;&nbsp;[只读] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     赋给对象的 <code>data</code> 属性 (property) 的属性 (attribute) 集合；可以共享和存储这些属性 (attribute)。每个特性都可以是任何 ActionScript 或 JavaScript 类型的对象（数组、数字、布尔值、字节数组、XML，等等）。例如，下面几行将值赋给共享对象的不同方面：
+     
+     <div class="listing"><pre>
+     var items_array:Array = new Array(101, 346, 483);
+     var currentUserIsAdmin:Boolean = true;
+     var currentUserName:String = "Ramona";
+     
+     var my_so:SharedObject = SharedObject.getLocal("superfoo");
+     my_so.data.itemNumbers = items_array;
+     my_so.data.adminPrivileges = currentUserIsAdmin;
+     my_so.data.userName = currentUserName;
+     
+     for (var prop in my_so.data) {
+       trace(prop+": "+my_so.data[prop]);
+     }
+     </pre></div>
+     
+     
+     
+     <p>如果对象是永久的，将保存共享对象的 <code>data</code> 属性 (property) 的所有属性 (attribute)，共享对象包含以下信息：</p>
+     
+     <div class="listing"><pre>
+     userName: Ramona
+     adminPrivileges: true
+     itemNumbers: 101,346,483
+     </pre></div>
+     
+     <p><b>注意：</b>切勿将值直接赋给共享对象的 <code>data</code> 属性，如同在 <code>so.data = someValue</code> 中一样；Flash Player 将忽略这些赋值。</p>
+     
+     <p>要删除本地共享对象的属性，请使用诸如 <code>delete so.data.attributeName</code> 这样的代码；将本地共享对象的属性设置为 <code>null</code> 或 <code>undefined</code> 不会删除该属性。</p>
+     
+     <p>要为共享对象创建<i>私有</i> 值（该对象正在使用时只有客户端实例才可以使用该值，并且该值在对象关闭时不与该对象存储在一起），请创建名称不是 <code>data</code> 的属性来存储它们，如下例所示：</p>
+     
+     <div class="listing"><pre>
+     var my_so:SharedObject = SharedObject.getLocal("superfoo");
+     my_so.favoriteColor = "blue";
+     my_so.favoriteNightClub = "The Bluenote Tavern";
+     my_so.favoriteSong = "My World is Blue";
+     
+     for (var prop in my_so) {
+       trace(prop+": "+my_so[prop]);
+     }
+     </pre></div>
+     
+     
+     
+     <p>共享对象包含以下数据：</p>
+     <div class="listing"><pre>
+     favoriteSong: My World is Blue
+     favoriteNightClub: The Bluenote Tavern
+     favoriteColor: blue
+     data: [object Object]
+     </pre></div>
+     
+     <p>
+     对于用于服务器的远程共享对象，<code>data</code> 属性 (property) 的所有属性 (attribute) 可供连接到共享对象的所有客户端使用；如果永久保留这些对象，则会保存所有属性 (attribute)。如果一个客户端更改了属性的值，所有客户端可以立即看到新的值。
+     </p>
+     
+     </p><br/><br/><span class="label"> 实现 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get data():<a href="../../Object.html">Object</a></code><br/><p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="SharedObject.html#getLocal()" target="">getLocal()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail" id="propertyDetail"></a><a name="defaultObjectEncoding" id="defaultObjectEncoding"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>defaultObjectEncoding</h3></td><td class="detailHeaderType">属性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>defaultObjectEncoding:<a href="../../uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     在 SWF 文件中创建的所有本地共享对象的默认对象编码（AMF 版本）。在将本地共享对象写入磁盘时，<code>SharedObject.defaultObjectEncoding</code> 属性将表示应使用的 Action Message Format 的版本：ActionScript 3.0 格式 (AMF3)、ActionScript 1.0 还是 2.0 格式 (AMF0)。
+     
+     <p>关于对象编码的详细信息（包括本地和远程共享对象编码的差异），请参阅 <code>objectEncoding</code> 属性的描述。</p>
+     
+     <p><code>SharedObject.defaultObjectEncoding</code> 的默认值设置为使用 ActionScript 3.0 格式 (AMF3)。如果要创建 ActionScript 2.0 或 1.0 SWF 文件可以读取的本地共享对象，则应在创建任何本地共享对象之前，在脚本起始处将 <code>SharedObject.defaultObjectEncoding</code> 设置为使用 ActionScript 1.0 或 ActionScript 2.0 格式 (<code>flash.net.ObjectEncoding.AMF0</code>)。随后创建的所有本地共享对象都将使用 AMF0 编码，并可与旧内容交互。本地共享对象创建后，将无法更改现有本地共享对象的 <code>objectEncoding</code> 值，通过设置 <code>SharedObject.defaultObjectEncoding</code>。</p>
+     
+     <p>为了以每个对象为基础设置对象编码，而不是为 SWF 文件创建的所有共享对象设置对象编码，则应设置本地共享对象的 <code>objectEncoding</code> 属性。</p>
+     
+     </p><br/><br/><span class="label"> 实现 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get defaultObjectEncoding():<a href="../../uint.html">uint</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function set defaultObjectEncoding(value:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></code><br/><p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="SharedObject.html#objectEncoding" target="">objectEncoding 属性</a><br/><a href="ObjectEncoding.html" target="">ObjectEncoding 类</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail" id="propertyDetail"></a><a name="fps" id="fps"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>fps</h3></td><td class="detailHeaderType">属性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>fps:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[只写] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     指定每秒钟客户端对共享对象所做的更改被发送到服务器的次数。 
+     
+     <p>如果希望控制客户端与服务器之间的通信量，可以使用此方法。例如，如果客户端与服务器之间的连接相对较慢，可以将 <code>fps</code> 设置为一个相对较小的值。相反，如果客户端连接到一个对时间具有高要求的多用户应用程序，可能需要将 <code>fps</code> 设置为一个相对较大的值。</p>
+     
+     <p>设置 <code>fps</code> 将触发 <code>sync</code> 事件并更新对服务器的所有更改。如果只想手动更新服务器，可将 <code>fps</code> 为 0。</p>
+     
+     <p>在调度 <code>sync</code> 事件之前，不会将更改发送给服务器。也就是说，如果服务器的响应时间较慢，向服务器发送更新的频率则可能小于此属性中的指定值。 </p>
+     
+     </p><br/><br/><span class="label"> 实现 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set fps(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code><br/></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail" id="propertyDetail"></a><a name="objectEncoding" id="objectEncoding"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>objectEncoding</h3></td><td class="detailHeaderType">属性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>objectEncoding:<a href="../../uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     此共享对象的对象编码（AMF 版本）。在将本地共享对象写入磁盘时，<code>objectEncoding</code> 属性将表示应使用的 Action Message Format 的版本：ActionScript 3.0 格式 (AMF3)、ActionScript 1.0 还是 2.0 格式 (AMF0)。 
+     
+     <p>根据共享对象是本地还是远程来执行不同的对象编码操作。</p>
+     <ul><li><b>本地共享对象</b>。您可以为本地共享对象获取或设置 <code>objectEncoding</code> 属性值。<code>objectEncoding</code> 的值影响在<i>写入</i> 此本地共享对象时使用的格式设置。如果此本地共享对象必须能被 ActionScript 2.0 或 1.0 SWF 文件读取，则应将 <code>objectEncoding</code> 设置为 <code>ObjectEncoding.AMF0</code>。即便对象编码设置为写入 AMF3，Flash Player 仍然能够读取 AMF0 本地共享对象。也就是说，如果使用此属性的默认值，即 <code>ObjectEncoding.AMF3</code>，则您的 SWF 文件仍然能够读取由 ActionScript 2.0 或 1.0 SWF 文件创建的共享对象。
+     </li><li><b>远程共享对象</b>。连接到服务器时，远程共享对象从关联的 NetConnection 实例（此实例用于连接到远程共享对象）继承其 <code>objectEncoding</code> 设置。未连接到服务器时，远程共享对象从关联的 NetConnection 实例继承 <code>defaultObjectEncoding</code> 设置。因为远程共享对象的 <code>objectEncoding</code> 属性值由 NetConnection 实例决定，所以此属性对远程共享对象为只读。
+     </li></ul>
+     
+     </p><br/><br/><span class="label"> 实现 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get objectEncoding():<a href="../../uint.html">uint</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set objectEncoding(value:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></code><br/><br/><span class="label"> 引发 </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../ReferenceError.html">ReferenceError</a> </code> &mdash; 您尝试为某个远程共享对象设置 <code>objectEncoding</code> 属性值。对于远程共享对象而言，此属性为只读，因为其值由关联的 NetConnection 实例决定。
+     
+     </td></tr></table><p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="SharedObject.html#defaultObjectEncoding" target="">defaultObjectEncoding</a><br/><a href="ObjectEncoding.html" target="">flash.net.ObjectEncoding</a></div></div></span><span id="pageFilter" runtime="AIR::3.7##"><a name="propertyDetail" id="propertyDetail"></a><a name="preventBackup" id="preventBackup"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="仅在 AIR 运行时中可用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>preventBackup</h3></td><td class="detailHeaderType">属性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>preventBackup:<a href="../../Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 3.7</td></tr></table><p></p><p></p><p>
+     指定是否将在 iOS 云备份服务上备份本地共享对象。 
+     <p>指定 true 或 false：</p>
+     <ul><li><b>true</b> - 不在 iOS 备份云服务上备份任何本地共享对象。</li><li><b>false</b>（默认）- 将在 iOS 备份云服务上备份本地共享对象。</li></ul>
+     <p>此属性仅适用于本地共享对象，且仅针对 iOS。</p>
+     
+     </p><br/><br/><span class="label"> 实现 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get preventBackup():<a href="../../Boolean.html">Boolean</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function set preventBackup(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></code><br/></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail" id="propertyDetail"></a><a name="size" id="size"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>size</h3></td><td class="detailHeaderType">属性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>size:<a href="../../uint.html">uint</a></code>&nbsp;&nbsp;[只读] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     共享对象的当前大小（以字节为单位）。
+     
+     <p>Flash 通过逐一计算共享对象的每个数据属性计算该对象的大小；对象具有的数据属性越多，评估其大小所花的时间就越长。评估对象大小可能要耗费相当长的处理时间，因此，除非您对它具有特定的需要，否则您可能希望避免使用此方法。</p>
+     
+     </p><br/><br/><span class="label"> 实现 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get size():<a href="../../uint.html">uint</a></code><br/><span id="pageFilter"><br/><span class="label"> 示例 &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_cn"> 如何使用本示例 </a></span>)
+            </span><br/><div class="detailBody"> 以下代码使用 ID <code>"thehobbit"</code> 创建 SharedObject 对象。将名为 <code>username</code> 的属性添加到 SharedObject 对象的数据属性中。然后跟踪 <code>size</code> 属性，这将返回表示的值。
+<div class="listing"><pre>
+
+import flash.net.SharedObject;
+
+// if these get copied or not
+var mySo:SharedObject = SharedObject.getLocal("thehobbit");
+mySo.data.username = "bilbobaggins";
+trace(mySo.size); // 55
+</pre></div></div></span></div></span><a name="methodDetail" id="methodDetail"></a><div class="detailSectionHeader">方法详细信息</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="clear()" id="clear()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>clear</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td></tr></table><div class="detailBody"><code> public function clear():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     对于本地共享对象，清除所有数据并从磁盘删除共享对象。对共享对象的引用仍然处于活动状态，但其数据属性被删除。
+     
+     <p>
+     对于用于 Flash Media Server 的远程共享对象，<code>clear()</code> 将断开该对象并清除所有数据。如果在本地永久保留了共享对象，此方法还会从磁盘中删除该共享对象。对共享对象的引用仍然处于活动状态，但其数据属性被删除。
+     </p>
+      
+     
+     </p><span id="pageFilter"><br/><span class="label"> 示例 &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_cn"> 如何使用本示例 </a></span>)
+            </span><br/><br/><div class="detailBody"> 以下代码使用值为 <code>hostName</code> 的 ID 创建（并在后续执行过程中检索）一个 SharedObject 对象。将名为 <code>username</code> 的属性添加到 SharedObject 对象的数据属性中。最后调用 <code>clear()</code> 方法，以清除添加到数据对象的所有信息（在本例中是一个名为 <code>username</code> 属性）。
+<div class="listing"><pre>
+
+package {
+    import flash.net.SharedObject;
+
+    public class SharedObject_clear {
+        private var hostName:String = "yourDomain";
+        private var username:String = "yourUsername";
+
+        public function SharedObject_clear() {
+            var mySo:SharedObject = SharedObject.getLocal(hostName);
+            if(mySo.data.username == null) {
+                mySo.data.username = username;
+                trace("set: " + mySo.data.username); // yourUsername
+            }
+            else {
+                mySo.clear();
+                trace("cleared: " + mySo.data.username); // undefined
+            }
+        }
+    }
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="close()" id="close()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>close</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function close():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     关闭远程共享对象和服务器间的连接。如果一个远程共享对象永久储存在本地，那么在此方法被调用后，用户可以对该对象的本地副本进行更改。对本地对象的任何更改都将在用户下一次连接到远程共享对象时发送给服务器。
+     
+     </p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="connect()" id="connect()"></a><a name="connect(flash.net.NetConnection,String)" id="connect(flash.net.NetConnection,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>connect</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function connect(myConnection:<a href="NetConnection.html">NetConnection</a>, params:<a href="../../String.html">String</a> = null):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     通过指定的 NetConnection 对象连接到服务器上的远程共享对象。应在调用 <code>getRemote()</code> 后使用此方法。在连接成功时，将调度 <code>sync</code> 事件。
+     
+     <p>在尝试使用远程共享对象时，应先使用 <code>try..catch..finally</code> 语句。接着，侦听并处理 <code>sync</code> 事件，然后再对共享对象进行更改。在调度 <code>sync</code> 事件之前，进行的任何本地更改可能会丢失。
+     </p>
+     
+     <p>
+     可以调用 <code>connect()</code> 方法以连接到远程共享对象，例如：
+     </p>
+     
+     <div class="listing"><pre>
+     var myRemoteSO:SharedObject = SharedObject.getRemote("mo", myNC.uri, false);
+     myRemoteSO.connect(myNC);
+     </pre></div>
+     
+     
+     
+     </p><p><span class="label"> 参数 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">myConnection</span>:<a href="NetConnection.html">NetConnection</a></code> &mdash; 使用实时消息传递协议 (RTMP) 的 NetConnection 对象，如用于与 Flash Media Server 进行通信的 NetConnection 对象。
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">params</span>:<a href="../../String.html">String</a></code> (default = <code>null</code>)<code></code> &mdash; 一个字符串，用于定义将传递给服务器上的远程共享对象的消息。不能用于 Flash Media Server。
+     
+     </td></tr></table></p><br/><span class="label">引发</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Error.html">Error</a> </code> &mdash; Flash Player 无法连接到指定的远程共享对象。确认 NetConnection 实例有效并已连接，且已在服务器上成功创建远程共享对象。
+     
+     </td></tr></table><p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="SharedObject.html#getRemote()" target="">getRemote()</a><br/><a href="SharedObject.html#event:sync" target="">sync</a><br/><a href="../../statements.html#try..catch..finally" target="">try..catch..finally</a><br/><a href="NetConnection.html" target="">NetConnection</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="flush()" id="flush()"></a><a name="flush(int)" id="flush(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>flush</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function flush(minDiskSpace:<a href="../../int.html">int</a> = 0):<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     将本地永久共享对象立即写入本地文件。如果不使用此方法，则 Flash Player 会在共享对象会话结束时（也就是说，在 SWF 文件关闭时，在由于不再有对共享对象的任何引用而将其作为垃圾回收时，或者在调用 <code>SharedObject.clear()</code> 或 <code>SharedObject.close()</code> 时），将共享对象写入文件。 
+     
+     <p>如果此方法返回 <code>SharedObjectFlushStatus.PENDING</code>，则 Flash Player 将显示一个对话框，要求用户增加磁盘空间量以供此域中的对象使用。要允许将来保存共享对象时其空间能够增长，从而避免返回值 <code>PENDING</code>，请为 <code>minDiskSpace</code> 传递一个值。当 Flash Player 尝试写入文件时，它将查找传递给 <code>minDiskSpace</code> 的字节数，而不是查找足够的空间以共享对象的当前大小来保存共享对象。 </p>
+     
+     <p>例如，如果预期共享对象增长到最大为 500 个字节，则即使它开始时要小得多，也为 <code>minDiskSpace</code> 传递 500。如果 Flash 要求用户为该共享对象分配磁盘空间，它将要求 500 个字节。在用户分配了请求的空间量之后，当以后尝试对齐该对象时（只要其大小不超过 500 个字节），Flash 将无需要求更多的空间。 </p>
+     
+     <p>在用户响应此对话框后，则会再次调用此方法。将调度 <code>netStatus</code> 事件，<code>code</code> 属性值为 <code>SharedObject.Flush.Success</code> 或 <code>SharedObject.Flush.Failed</code>。
+     </p>
+     
+     </p><p><span class="label"> 参数 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">minDiskSpace</span>:<a href="../../int.html">int</a></code> (default = <code>0</code>)<code></code> &mdash; 必须分配给此对象的最小磁盘空间（以字节为单位）。
+     
+     </td></tr></table></p><p></p><span class="label">返回</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../String.html">String</a></code> &mdash; 下列任一值：
+     <ul><li><code>SharedObjectFlushStatus.PENDING</code>：用户允许来自此域的对象进行本地信息存储，但所分配的空间量不足以存储该对象。Flash Player 将提示用户留出更多空间。要留出空间以满足共享对象在保存时的增长需要，从而避免返回值 <code>SharedObjectFlushStatus.PENDING</code>，请为 <code>minDiskSpace</code> 传递一个值。
+     </li><li><code>SharedObjectFlushStatus.FLUSHED</code>：共享对象已成功写入本地磁盘上的文件。</li></ul>
+     
+     </td></tr></table><br/><span class="label">引发</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Error.html">Error</a> </code> &mdash; Flash Player 不能将共享对象写入磁盘。如果用户已永久禁止对来自该域的对象进行本地信息存储，则可能出现此错误。
+      
+     
+     <p><b>注意</b>：本地内容始终可以将来自第三方域（当前浏览器地址栏中的域以外的域）的共享对象写入磁盘，即使禁止将第三方共享对象写入磁盘。</p>
+     
+     </td></tr></table><p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="SharedObject.html#clear()" target="">clear()</a></div><span id="pageFilter"><br/><span class="label"> 示例 &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_cn"> 如何使用本示例 </a></span>)
+            </span><br/><br/><div class="detailBody"> 以下代码使用值为 <code>hostName</code> 的 ID 创建（并在后续执行过程中检索）一个 SharedObject 对象。将名为 <code>username</code> 的属性添加到 SharedObject 对象的数据属性中。然后调用 <code>flush()</code> 方法，并检查以确定返回的是字符串 <code>pending</code> 还是 <code>true</code> 或 <code>false</code> 的布尔值。务必注意：打开的所有 SharedObject 实例都将在 Flash Player 的当前实例关闭时自动刷新。
+<div class="listing"><pre>
+package {
+    import flash.net.SharedObject;
+
+    public class SharedObject_flush {
+        private var hostName:String = "yourDomain";
+        private var username:String = "yourUsername";
+
+        public function SharedObject_flush() {
+            var mySo:SharedObject = SharedObject.getLocal(hostName);
+            mySo.data.username = username;
+            var flushResult:Object = mySo.flush();
+            trace("flushResult: " + flushResult);
+            trace(mySo.data.username); // yourUsername
+        }
+    }
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="getLocal()" id="getLocal()"></a><a name="getLocal(String,String,Boolean)" id="getLocal(String,String,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>getLocal</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function getLocal(name:<a href="../../String.html">String</a>, localPath:<a href="../../String.html">String</a> = null, secure:<a href="../../Boolean.html">Boolean</a> = false):<a href="SharedObject.html">SharedObject</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+  返回对本地永久保留的共享对象的引用，该对象只能用于当前客户端。如果尚不存在共享对象，则此方法将创建一个共享对象。如果传递给 <code>getLocal()</code> 的任何值均无效，或如果调用失败，Flash Player 将引发异常。
+  
+  <p>以下代码显示如何将返回的共享对象引用赋给变量：</p>
+  <p><code>var so:SharedObject = SharedObject.getLocal("savedData");</code></p>
+  
+  <p><b>注意：</b>如果用户已选择了从不允许此域进行本地存储，则即使指定了 <code>localPath</code> 的值，对象也不会在本地保存。本地内容不遵循此规则。本地内容始终可以将第三方域（当前浏览器地址栏中域之外的域）中的共享对象写入磁盘，即使禁止将第三方共享对象写入磁盘。
+  </p>
+  
+  <p>为了避免名称冲突，Flash 会考虑创建共享对象的 SWF 文件的位置。例如，如果位于 www.myCompany.com/apps/stockwatcher.swf 的 SWF 文件创建了一个名为 <code>portfolio</code> 的共享对象，则该共享对象不会与位于 www.yourCompany.com/photoshoot.swf 的 SWF 文件所创建的另一个名为 <code>portfolio</code> 的对象冲突，这是因为这两个 SWF 文件源于不同的目录。 </p>
+  
+  <p>虽然 <code>localPath</code> 参数是可选的，但是您应该考虑该参数的用途，特别是其它 SWF 文件需要访问共享对象时。如果共享对象中的数据特定于一个不会移动到其它位置的 SWF 文件，则使用默认值将会解决问题。如果其它 SWF 文件需要访问共享对象，或如果创建共享对象的 SWF 文件以后将发生移动，则此参数的值将影响共享对象的可访问性。例如，如果在 <code>localPath</code> 设置为等于 SWF 文件完整路径的默认值时创建一个共享对象，那么其它任何 SWF 文件都将无法访问该共享对象。如果您以后将原始的 SWF 文件移动到另一个位置，那么，即便是该 SWF 文件也将无法访问已经存储在共享对象中的数据。</p>
+  
+  <p>为避免意外限制对共享对象的访问，请使用 <code>localpath</code> 参数。允许级别最高的方法是将 <code>localPath</code> 设置为 <code>/</code>（斜杠），这样做可使域中的所有 SWF 文件都可访问该共享对象，但会增加与域中其它共享对象发生名称冲突的可能性。限制级别较高的方法是向 <code>localPath</code> 追加 SWF 文件完整路径中的文件夹名。例如，对于位于 www.myCompany.com/apps/stockwatcher.swf 的 SWF 文件创建的 <code>portfolio</code> 共享对象，可以将 <code>localPath</code> 参数设置为<code>/</code>、<code>/apps</code> 或 <code>/apps/stockwatcher.swf</code>。您必须确定哪种方法能为您的应用程序提供最佳的灵活性。</p>
+  
+  <p>在使用此方法时，请考虑以下安全模型：
+  
+  <ul><li>无法跨沙箱边界访问共享对象。</li><li>用户可通过使用“Flash Player 设置”对话框或“设置管理器”来限制共享对象访问。默认情况下，应用程序可在每个域创建高达 100 KB 数据的共享对象。管理员和用户还可限制写入文件系统的能力。</li></ul></p>
+  
+  <p>假定您将要播放的 SWF 文件内容发布为本地文件（本地安装的 SWF 文件或 EXE 文件）而且，您需要从多个本地 SWF 文件访问某个特定的共享对象。在这种情况下，请注意：对于本地文件而言，可能会使用两个不同位置来存储共享对象。所用的域取决于为创建该共享对象的本地文件授予的安全权限。本地文件可以具有三种不同级别的权限：
+  
+  <ol><li>仅能访问本地文件系统。</li><li>仅能访问网络。</li><li>既能访问网络，也能访问本地文件系统。</li></ol></p>
+  
+  <p>可以访问本地文件系统（1 级或 3 级）的本地文件将其共享对象存储在一个位置。无法访问本地文件系统（2 级）的本地文件将其共享对象存储在另一位置。</p>
+  
+  <p>可以在包含 SWF 内容的 HTML 页中设置 <code>object</code> 和 <code>embed</code> 标签的 <code>allowNetworking</code> 参数，防止 SWF 文件使用此方法。</p>
+  
+  <p>有关详细信息，请参阅 Flash Player 开发人员中心主题：<a href="http://www.adobe.com/go/devnet_security_cn" target="external">安全性</a>。</p>
+  
+  </p><p><span class="label"> 参数 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">name</span>:<a href="../../String.html">String</a></code> &mdash; 对象的名称。该名称可以包含正斜杠 (<code>/</code>)；例如，<code>work/addresses</code> 是合法名称。共享对象名称中不允许使用空格，也不允许使用以下字符：   
+  <pre>
+  ~ % & \ ; : " ' , &lt; > ? # 
+  </pre>
+  
+  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">localPath</span>:<a href="../../String.html">String</a></code> (default = <code>null</code>)<code></code> &mdash; 创建了共享对象的 SWF 文件的完整路径或部分路径，这将确定共享对象的本地存储位置。如果未指定此参数，则使用完整路径。 
+   
+  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">secure</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; 确定对此共享对象的访问是否只限于通过 HTTPS 连接传递的 SWF 文件。如果 SWF 文件通过 HTTPS 传递，则此参数值具有以下效果：
+  <ul><li>如果此参数设置为 <code>true</code>，则 Flash Player 将创建一个新的安全共享对象或获取一个对现有安全共享对象的引用。只可由通过 HTTPS 传递的 SWF 文件对此安全共享对象进行读取或写入，而该 HTTPS 调用 <code>SharedObject.getLocal()</code> 并将 <code>secure</code> 参数设置为 <code>true</code>。</li><li>如果此参数设置为 <code>false</code>，则 Flash Player 将创建一个新的共享对象或获取一个对现有共享对象的引用，可以通过非 HTTPS 连接传递的 SWF 文件对此共享对象或现有共享对象的引用进行读取或写入。</li></ul>
+  <p>如果您的 SWF 文件是通过非 HTTPS 连接传递的，并且您尝试将此参数设置为 <code>true</code>，将无法创建新的共享对象（或访问以前创建的安全共享对象），并且返回 <code>null</code>。无论此参数为何值，创建的共享对象的数量都接近域所允许的磁盘空间的总量。</p>
+  
+  <p>下面的图示说明了 <code>secure</code> 参数的用途：</p>
+  <p><img src="../../images/secureParam.jpg" alt="安全共享对象图"></img></p>
+  
+  </td></tr></table></p><p></p><span class="label">返回</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="SharedObject.html">SharedObject</a></code> &mdash; 一个对共享对象的引用，该共享对象永久贮存在本地并且只可用于当前客户端。如果 Flash Player 无法创建或找到共享对象（例如，指定了 <code>localPath</code> 但不存在此目录时），此方法将引发异常。
+  
+  </td></tr></table><br/><span class="label">引发</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Error.html">Error</a> </code> &mdash; 不论什么原因，Flash Player 均不能创建共享对象。如果禁止第三方 Flash 内容创建或存储永久共享对象，将出现此错误。用户可以在“设置管理器”的“全局存储设置”面板上禁止第三方永久共享对象，相关设置请参阅 <a href="http://www.adobe.com/support/documentation/cn/flashplayer/help/settings_manager03.html" target="external">http://www.adobe.com/support/documentation/cn/flashplayer/help/settings_manager03.html</a>。
+  
+  </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="getRemote()" id="getRemote()"></a><a name="getRemote(String,String,Object,Boolean)" id="getRemote(String,String,Object,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>getRemote</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function getRemote(name:<a href="../../String.html">String</a>, remotePath:<a href="../../String.html">String</a> = null, persistence:<a href="../../Object.html">Object</a> = false, secure:<a href="../../Boolean.html">Boolean</a> = false):<a href="SharedObject.html">SharedObject</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     返回对 Flash Media Server 上可由多个客户端访问的共享对象的引用。如果远程共享对象尚不存在，此方法将创建一个共享对象。 
+     
+     <p>
+     要创建远程共享对象，请调用 <code>getRemote()</code>，然后调用 <code>connect()</code> 以将远程共享对象连接到服务器，如下所示：</p>
+     
+     <div class="listing"><pre>
+     var nc:NetConnection = new NetConnection();
+     nc.connect("rtmp://somedomain.com/applicationName");
+     var myRemoteSO:SharedObject = SharedObject.getRemote("mo", nc.uri, false);
+     myRemoteSO.connect(nc);
+     </pre></div>
+     
+     
+     
+     <p>
+     要确认共享对象的本地副本和远程副本是否已同步，请侦听并处理 <code>sync</code> 事件。希望共享此对象的所有客户端必须为 <code>name</code> 和 <code>remotePath</code> 参数传递相同的值。 
+     </p> 
+     
+     <p>要创建只能用于当前客户端的共享对象，请使用 <code>SharedObject.getLocal()</code>。
+     </p>
+     
+     </p><p><span class="label"> 参数 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">name</span>:<a href="../../String.html">String</a></code> &mdash; 远程共享对象的名称。该名称可以包含正斜杠 (/)；例如，work/addresses 是合法名称。共享对象名称中不允许使用空格，也不允许使用以下字符：
+     <pre>    ~ % & \ ; :  " ' , > ? ? #</pre>
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">remotePath</span>:<a href="../../String.html">String</a></code> (default = <code>null</code>)<code></code> &mdash; 将存储共享对象的服务器的 URI。此 URI 必须与传递给 <code>connect()</code> 方法的 NetConnection 对象的 URI 相同。 
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">persistence</span>:<a href="../../Object.html">Object</a></code> (default = <code>false</code>)<code></code> &mdash; 指定共享对象的数据属性的特性是本地永久储存还是远程永久储存，或者是同时进行本地永久储存和远程永久储存。此参数还可指定共享对象的本地存储位置。可接受的值包括：
+     <ul><li><code>false</code>，指定客户端或服务器上的共享对象不是永久性的。</li><li><code>true</code>，指定只有服务器上的共享对象是永久性的。</li><li>共享对象的完整路径或部分路径，指定客户端和服务器上的共享对象都是永久性的。客户端的共享对象存储在指定路径中，而服务器中的共享对象则存储在应用程序目录中的子目录内。</li></ul>
+     
+     <p><b>注意：</b>如果用户已选择了从不允许此域的本地存储，则即使将本地路径指定为永久性，对象也不会在本地保存。有关详细信息，请参阅类的描述。</p>
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">secure</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; 确定对此共享对象的访问是否只限于通过 HTTPS 连接传递的 SWF 文件。有关详细信息，请参阅对 <code>secure</code> 参数的描述（<code>getLocal</code> 方法条目中）。
+     
+     </td></tr></table></p><p></p><span class="label">返回</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="SharedObject.html">SharedObject</a></code> &mdash; 对可在多个客户端间共享的对象的引用。
+     
+     </td></tr></table><br/><span class="label">引发</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Error.html">Error</a> </code> &mdash; Flash Player 无法创建或找到共享对象。如果为 <code>remotePath</code> 和 <code>persistence</code> 参数指定不存在的路径，则将出现这种情况。
+     
+     
+     </td></tr></table><p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="SharedObject.html#connect()" target="">connect()</a><br/><a href="SharedObject.html#getLocal()" target="">getLocal()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="send()" id="send()"></a><a name="send(restParam)" id="send(restParam)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>send</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function send(<a href="../../statements.html#..._(rest)_parameter">...</a> arguments):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     向连接到远程共享对象的所有客户端广播一条消息（包括发送该消息的客户端）。要处理并响应该消息，请创建一个附加到共享对象的回调函数。
+     
+     </p><p><span class="label"> 参数 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><a href="../../statements.html#..._(rest)_parameter">...</a> <span class="label">arguments</span></code> &mdash; 一个或多个参数：标识消息的字符串、附加到共享对象的一个或多个处理函数的名称以及任意类型可选参数。处理函数的名称只能为单级形式（即不能是父/子级形式）并相对于共享对象。这些参数已进行序列化处理并通过连接进行发送，而接收处理函数按相同的顺序接收它们。如果某个参数为循环对象（如循环的链接列表），则序列化函数可以正确处理引用。
+     
+     <p><b>注意</b>：函数名称切勿使用保留术语。例如，<code>myRemoteSO.send("close")</code> 将失败。</p>
+     
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="setDirty()" id="setDirty()"></a><a name="setDirty(String)" id="setDirty(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>setDirty</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setDirty(propertyName:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     通知服务器共享对象中的属性值已更改。此方法将属性标记为 <i>dirty</i>，这表明属性已更改。
+     
+     <p>
+     可以调用 <code>SharedObject.setProperty()</code> 为共享对象创建属性。 
+     </p>
+      
+     <p>
+     <code>SharedObject.setProperty()</code> 方法实现了 <code>setDirty()</code>。大多数情况下，例如，当属性的值为 String 或 Number 等原始类型时，您可以调用 <code>setProperty()</code> 而不是调用 <code>setDirty()</code>。然而，如果属性值是一个包含其自己的属性的对象，则调用 <code>setDirty()</code> 以表示该对象中的值的更改时间。
+     </p>
+     
+     </p><p><span class="label"> 参数 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">propertyName</span>:<a href="../../String.html">String</a></code> &mdash; 已更改的属性名称。
+     
+     </td></tr></table></p><p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="SharedObject.html#data" target="">SharedObject.data (client-side property)</a><br/><a href="SharedObject.html#setProperty()" target="">setProperty()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="setProperty()" id="setProperty()"></a><a name="setProperty(String,Object)" id="setProperty(String,Object)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>setProperty</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setProperty(propertyName:<a href="../../String.html">String</a>, value:<a href="../../Object.html">Object</a> = null):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     更新共享对象中某个属性的值，并通知服务器该属性的值已更改。<code>setProperty()</code> 方法明确地将属性标签为已更改或 dirty。
+     
+     <p>有关远程共享对象的详细信息，请参阅 <a href="http://www.adobe.com/go/learn_fms_docs_cn" >Flash Media Server 文档</a>。</p>
+     
+     <p><b>注意：</b><code>SharedObject.setProperty()</code> 方法实现了 <code>setDirty()</code> 方法。大多数情况下，例如当属性的值为 String 或 Number 等原始类型时，应使用 <code>setProperty()</code>，而不使用 <code>setDirty</code>。然而，当某个属性的值是一个包含其自身属性的对象时，则使用 <code>setDirty()</code> 来表示该对象中的值的更改时间。通常，最好调用 <code>setProperty()</code> 而不要调用 <code>setDirty()</code>，因为 <code>setProperty()</code> 只在值被更改的时候更新属性值，而 <code>setDirty()</code> 则强制所有订阅客户端进行同步。</p>
+     
+     </p><p><span class="label"> 参数 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">propertyName</span>:<a href="../../String.html">String</a></code> &mdash; 共享对象中属性的名称。
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../Object.html">Object</a></code> (default = <code>null</code>)<code></code> &mdash; 属性值（一个 ActionScript 对象），如果为 <code>null</code> 则删除属性。 
+     
+     </td></tr></table></p><p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="SharedObject.html#data" target="">SharedObject.data (client-side property)</a></div></div></span><div class="detailSectionHeader"> 事件详细信息 </div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:asyncError" id="event:asyncError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>asyncError</h3></td><td class="detailHeaderType"> 事件 </td></tr></table><div class="detailBody"><span class="label">事件对象类型: </span><a href="../events/AsyncErrorEvent.html"><code>flash.events.AsyncErrorEvent</code></a><br/><span class="label">属性 AsyncErrorEvent.type  =  </span><a href="../events/AsyncErrorEvent.html#ASYNC_ERROR"><code>flash.events.AsyncErrorEvent.ASYNC_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+ 在异步引发异常（即来自本机异步代码）时调度。 
+ 
+ </p>
+	<code>AsyncErrorEvent.ASYNC_ERROR</code> 常数定义 <code>asyncError</code> 事件对象的 <code>type</code> 属性值。 
+	<p>此事件具有以下属性：</p>
+	<table class="innertable" ><tr><th>属性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；没有要取消的默认行为。 </td></tr><tr><td><code>currentTarget</code></td><td>当前正在使用某个事件侦听器处理 Event 对象的对象。 </td></tr><tr><td><code>target</code></td><td>调度事件的对象。</td></tr><tr><td><code>error</code></td><td>触发此事件的错误。</td></tr></table>
+	
+	</div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:netStatus" id="event:netStatus"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>netStatus</h3></td><td class="detailHeaderType"> 事件 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">事件对象类型: </span><a href="../events/NetStatusEvent.html"><code>flash.events.NetStatusEvent</code></a><br/><span class="label">属性 NetStatusEvent.type  =  </span><a href="../events/NetStatusEvent.html#NET_STATUS"><code>flash.events.NetStatusEvent.NET_STATUS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+ 在 SharedObject 实例报告其状态或错误条件时调度。<code>netStatus</code> 事件包含 <code>info</code> 属性，该属性为包含事件特定信息（例如，连接尝试是否成功或共享对象是否被成功写入本地磁盘）的信息对象。 
+ 
+ </p>
+    定义 <code>netStatus</code> 事件对象的 <code>type</code> 属性值。
+    <p>此事件具有以下属性：</p>
+    <table class="innertable" ><tr><th>属性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；没有要取消的默认行为。</td></tr><tr><td><code>currentTarget</code></td><td>当前正在使用某个事件侦听器处理 Event 对象的对象。</td></tr><tr><td><code>info</code></td><td>一个对象，具有描述对象的状态或错误条件的属性。</td></tr><tr><td><code>target</code></td><td>报告其状态的 NetConnection 或 NetStream 对象。 </td></tr></table>
+    
+    <p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="../events/NetStatusEvent.html#info" target="">flash.events.NetStatusEvent.info</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:sync" id="event:sync"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>sync</h3></td><td class="detailHeaderType"> 事件 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">事件对象类型: </span><a href="../events/SyncEvent.html"><code>flash.events.SyncEvent</code></a><br/><span class="label">属性 SyncEvent.type  =  </span><a href="../events/SyncEvent.html#SYNC"><code>flash.events.SyncEvent.SYNC</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+ 在服务器更新了远程共享对象后调度。
+ 
+ </p>
+     定义 <code>sync</code> 事件对象的 <code>type</code> 属性值。
+	 <p>此事件具有以下属性：</p>
+	 <table class="innertable" ><tr><th>属性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；没有要取消的默认行为。</td></tr><tr><td><code>currentTarget</code></td><td>当前正在使用某个事件侦听器处理 Event 对象的对象。</td></tr><tr><td><code>changeList</code></td><td>一个数组，具有描述其状态的属性。</td></tr><tr><td><code>target</code></td><td>已由服务器更新的 SharedObject 实例。</td></tr></table>
+	 
+	 <p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="SharedObject.html#getRemote()" target="">getRemote()</a></div></div></span><a name="includeExamplesSummary" id="includeExamplesSummary"></a><div class="detailSectionHeader">示例<span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_cn"> 如何使用本示例 </a></span></div><span id="pageFilter"><div class="exampleHeader">SharedObjectExample.as</div><br/><div class="detailBody"> 以下代码使用 ID <code>"application-name"</code> 创建（并在后续执行过程中检索）一个共享对象： 单击“保存”按钮时，<code>saveValue()</code> 方法尝试将一个名为 <code>savedValue</code> 的属性保存到 SharedObject 对象的 <code>data</code> 的属性。如果 Flash Player 要求提供保存数据的权限，当用户授予或拒绝授予权限时，将调用 <code>onFlushStatus()</code> 方法。单击“清除”按钮时，<code>clearValue()</code> 方法将删除 <code>savedValue</code> 中保存的值；下次加载 SWF 文件时，所检索的值为 <code>undefined</code>。
+ 
+<div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.events.NetStatusEvent;
+    import flash.net.SharedObject;
+    import flash.net.SharedObjectFlushStatus;
+    import flash.text.TextField;
+    import flash.text.TextFieldAutoSize;
+    import flash.text.TextFieldType;
+    
+    public class SharedObjectExample extends Sprite {
+        
+        private var mySo:SharedObject;
+        
+        public function SharedObjectExample() {
+            buildUI();
+            saveBtn.addEventListener(MouseEvent.CLICK, saveValue);
+            clearBtn.addEventListener(MouseEvent.CLICK, clearValue);
+            
+            mySo = SharedObject.getLocal("application-name");
+            output.appendText("SharedObject loaded...\n");
+            output.appendText("loaded value: " + mySo.data.savedValue + "\n\n");
+        }
+
+         private function saveValue(event:MouseEvent):void {
+            output.appendText("saving value...\n");
+            mySo.data.savedValue = input.text;
+            
+            var flushStatus:String = null;
+            try {
+                flushStatus = mySo.flush(10000);
+            } catch (error:Error) {
+                output.appendText("Error...Could not write SharedObject to disk\n");
+            }
+            if (flushStatus != null) {
+                switch (flushStatus) {
+                    case SharedObjectFlushStatus.PENDING:
+                        output.appendText("Requesting permission to save object...\n");
+                        mySo.addEventListener(NetStatusEvent.NET_STATUS, onFlushStatus);
+                        break;
+                    case SharedObjectFlushStatus.FLUSHED:
+                        output.appendText("Value flushed to disk.\n");
+                        break;
+                }
+            }
+            output.appendText("\n");
+        }
+        
+        private function clearValue(event:MouseEvent):void {
+            output.appendText("Cleared saved value...Reload SWF and the value should be \"undefined\".\n\n");
+            delete mySo.data.savedValue;
+        }
+        
+        private function onFlushStatus(event:NetStatusEvent):void {
+            output.appendText("User closed permission dialog...\n");
+            switch (event.info.code) {
+                case "SharedObject.Flush.Success":
+                    output.appendText("User granted permission -- value saved.\n");
+                    break;
+                case "SharedObject.Flush.Failed":
+                    output.appendText("User denied permission -- value not saved.\n");
+                    break;
+            }
+            output.appendText("\n");
+
+            mySo.removeEventListener(NetStatusEvent.NET_STATUS, onFlushStatus);
+        }
+        
+        // UI elements
+        private var inputLbl:TextField;
+        private var input:TextField;
+        private var output:TextField;
+        private var saveBtn:Sprite;
+        private var clearBtn:Sprite;
+    
+        private function buildUI():void {
+            // input label
+            inputLbl = new TextField();
+            addChild(inputLbl);
+            inputLbl.x = 10;
+            inputLbl.y = 10;
+            inputLbl.text = "Value to save:";
+            
+            // input TextField
+            input = new TextField();
+            addChild(input);
+            input.x = 80;
+            input.y = 10;
+            input.width = 100;
+            input.height = 20;
+            input.border = true;
+            input.background = true;
+            input.type = TextFieldType.INPUT;
+            
+            // output TextField
+            output = new TextField();
+            addChild(output);
+            output.x = 10;
+            output.y = 35;
+            output.width = 250;
+            output.height = 250;
+            output.multiline = true;
+            output.wordWrap = true;
+            output.border = true;
+            output.background = true;
+            
+            // Save button
+            saveBtn = new Sprite();
+            addChild(saveBtn);
+            saveBtn.x = 190;
+            saveBtn.y = 10;
+            saveBtn.useHandCursor = true;
+            saveBtn.graphics.lineStyle(1);
+            saveBtn.graphics.beginFill(0xcccccc);
+            saveBtn.graphics.drawRoundRect(0, 0, 30, 20, 5, 5);
+            var saveLbl:TextField = new TextField();
+            saveBtn.addChild(saveLbl);
+            saveLbl.text = "Save";
+            saveLbl.selectable = false;
+            
+            // Clear button
+            clearBtn = new Sprite();
+            addChild(clearBtn);
+            clearBtn.x = 230;
+            clearBtn.y = 10;
+            clearBtn.useHandCursor = true;
+            clearBtn.graphics.lineStyle(1);
+            clearBtn.graphics.beginFill(0xcccccc);
+            clearBtn.graphics.drawRoundRect(0, 0, 30, 20, 5, 5);
+            var clearLbl:TextField = new TextField();
+            clearBtn.addChild(clearLbl);
+            clearLbl.text = "Clear";
+            clearLbl.selectable = false;
+        }
+    }
+}
+</pre></div></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,true,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script></div><p xmlns:xd="http://www.pnp-software.com/XSLTdoc"></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 11:04 AM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/zh_CN/legalnotices/index.html">法律声明</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">在线隐私策略</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">为什么显示为英语？</span>
+				</div>
+				<div class="white_content_body">
+					<b>《ActionScript 3.0 参考》中的内容以英语显示</b><br><br>
+					《ActionScript 3.0 参考》中的部分内容未翻译成所有语言。当某个语言元素未翻译时，将显示为英语。例如，ga.controls.HelpBox 类未翻译成任何语言。因此在简体中文版的参考中，ga.controls.HelpBox 类显示为英语。
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 11:04 AM Z  -->

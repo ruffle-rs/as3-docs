@@ -1,0 +1,553 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg; Flash&reg; Platform için ActionScript&reg; 3.0 Başvurusu"><meta name="lang" content="tr-tr"><link rel="stylesheet" href="style.css" type="text/css" media="screen"><link rel="stylesheet" href="print.css" type="text/css" media="print"><link rel="stylesheet" href="override.css" type="text/css"><link rel="stylesheet" href="asfilter.css" type="text/css"><link rel="stylesheet" href="ion.css" type="text/css"><title>En Üst Düzey Sabitler ve İşlevler - Ayrıntılar Adobe ActionScript&reg; 3 (AS3) API Başvurusu</title>
+		<link rel="stylesheet" href="filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="filter_new.css" type="text/css">
+			
+		<script src="jquery.js" type="text/javascript"></script>
+		<script src="s_chl_code.js" type="text/javascript"></script>
+		<script src="jquery.zclip.js" type="text/javascript"></script>
+		<script src="jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="cookies.js" type="text/javascript"></script>
+		<script src="asdoc.js" type="text/javascript"></script>
+		<script src="iscroll.js" type="text/javascript"></script>
+		<script src="AC_OETags.js" type="text/javascript"></script>
+		<script src="omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "Çalışma zamanları";
+			var productsLabel = "Ürünler";
+			var noneLabel = "Yok";
+			var qsearchBoxLabel = "Hızlı Arama";
+			var qsearchText = "Terim bulunamadı";
+			var ajaxErrorMsg="Sayfa Yüklenirken Hata Oluştu";
+			var ajaxErrorTryMsg="Yeniden Dene";
+			var ajaxLoadingMsg="Yükleme Devam Ediyor";
+			var cancelMsg = "İptal";
+			var classesText = "Sınıflar";
+			var strJiveReply = "Bu soru aşağıdaki makaleye yanıt olarak gönderilmiştir: "
+			var showFilters = "Filtreleri Göster";
+			var hideFilters = "Filtreleri Gizle";
+			
+		
+			var baseRef = "";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup> Platform için ActionScript<sup>&reg;</sup> 3.0 Başvurusu<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="index.html"> Ana Sayfa </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="package.html#top" style="display:">Paket ve Sınıf Listesini Göster</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="package.html#top" style="display:none">Paket ve Sınıf Listesini Gizle</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="package-summary.html"> Paketler </a>&nbsp;|&nbsp;
+												<a target="_self" href="class-summary.html"> Sınıflar </a>&nbsp;|&nbsp;
+												<a target="_self" href="whatsnew.html"> Yenilikler </a>&nbsp;|&nbsp;
+												<a target="_self" href="all-index-Symbols.html"> Dizin </a>&nbsp;|&nbsp;
+												<a target="_self" href="appendixes.html"> Ekler </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Niçin İngilizce?</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/tr_TR/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="help.js"></script>
+						<script language="javascript" type="text/javascript" src="asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>Filtreler:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">Sunucudan Veri Alınıyor...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">Sunucudan Veri Alınıyor...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="package.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">&nbsp;</a><br>
+								<h1 id="classProductName">Üst Düzey&nbsp;</h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="package.html#propertySummary" style="display:none"> Özellikler </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="package.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Özellikler </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="package.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Yapıcı </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="package.html#methodSummary" style="display:none"> Yöntemler </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="package.html#constantSummary" style="display:none"> Global Sabitler </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="package.html#eventSummary" style="display:none"> Olaylar </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="package.html#styleSummary" style="display:none"> Stiller </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="package.html#SkinPartSummary" style="display:none"> Kaplama Bölümleri </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="package.html#SkinStateSummary" style="display:none"> Kaplama Durumları </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="package.html#effectSummary" style="display:none"> Efektler </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="package.html#constantSummary" style="display:none"> Sabitler </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="package.html#methodSummary" style="display:none"> Global İşlevler </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="package.html#methodSummary" style="display:none">İşlevler</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="package.html#interfaceSummary" style="display:none"> Arabirimler </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="package.html#classSummary" style="display:none"> Sınıflar </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="package.html#includeExamplesSummary" style="display:none"> Örnekler </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="package.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								Sınıflar
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><br><a name="methodSummary"></a>SWF dosyasının ActionScript kullanılan herhangi bir bölümünde veya kullanıcı tanımlı herhangi bir sınıfta üst düzey ya da genel işlevler kullanılabilir. ActionScript 2.0'daki genel işlevlerin çoğu sınıflara taşınmıştır.<div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Global İşlevler </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">İşlev</th><th>Tanımlayan:</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#Array()" class="signatureLink">Array</a>(<a href="statements.html#..._(rest)_parameter">...</a> args):<a href="Array.html">Array</a></div><div class="summaryTableDescription">
+	 Yeni bir dizi oluşturur.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#Boolean()" class="signatureLink">Boolean</a>(expression:<a href="Object.html">Object</a>):<a href="Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 expression parametresini bir Boolean değerine dönüştürür ve değeri döndürür.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#decodeURI()" class="signatureLink">decodeURI</a>(uri:<a href="String.html">String</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 Kodlanmış bir URI'nin kodunu çözerek dizeye çevirir.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#decodeURIComponent()" class="signatureLink">decodeURIComponent</a>(uri:<a href="String.html">String</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 Kodlanmış bir URI bileşeninin kodunu çözerek dizeye çevirir.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#encodeURI()" class="signatureLink">encodeURI</a>(uri:<a href="String.html">String</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 Bir dizeyi geçerli bir URI (Tekdüzen Kaynak Tanımlayıcı) olarak kodlar.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#encodeURIComponent()" class="signatureLink">encodeURIComponent</a>(uri:<a href="String.html">String</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 Bir dizeyi geçerli bir URI bileşeni olarak kodlar.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#escape()" class="signatureLink">escape</a>(str:<a href="String.html">String</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 Parametreyi bir dizeye dönüştürür ve URL kodlu biçimde kodlar; burada alfasayısal olmayan karakterlerin çoğunun yerini % onaltılık sıralar alır.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#int()" class="signatureLink">int</a>(value:<a href="Number.html">Number</a>):<a href="int.html">int</a></div><div class="summaryTableDescription">
+	 Belirli bir sayısal bir değeri bir tam sayı değerine dönüştürür.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#isFinite()" class="signatureLink">isFinite</a>(num:<a href="Number.html">Number</a>):<a href="Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Değer sonlu bir sayıysa true değerini, Infinity veya -Infinity ise false değerini döndürür.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#isNaN()" class="signatureLink">isNaN</a>(num:<a href="Number.html">Number</a>):<a href="Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Değer NaN (sayı değil) ise true değerini döndürür.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#isXMLName()" class="signatureLink">isXMLName</a>(str:<a href="String.html">String</a>):<a href="Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Belirtilen dizenin bir XML öğesi veya niteliği için geçerli bir ad olup olmadığını belirler.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#Number()" class="signatureLink">Number</a>(expression:<a href="Object.html">Object</a>):<a href="Number.html">Number</a></div><div class="summaryTableDescription">
+	 Belirli bir değeri bir Number değerine çevirir.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#Object()" class="signatureLink">Object</a>(value:<a href="Object.html">Object</a>):<a href="Object.html">Object</a></div><div class="summaryTableDescription">
+	 ActionScript 3.0'daki her değer bir nesnedir, başka bir deyişle, bir değer üzerinde Object() öğesinin çağrılması o değeri döndürür.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#parseFloat()" class="signatureLink">parseFloat</a>(str:<a href="String.html">String</a>):<a href="Number.html">Number</a></div><div class="summaryTableDescription">
+	 Bir dizeyi kayan nokta sayısına dönüştürür.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#parseInt()" class="signatureLink">parseInt</a>(str:<a href="String.html">String</a>, radix:<a href="uint.html">uint</a> = 0):<a href="Number.html">Number</a></div><div class="summaryTableDescription">
+	 Bir dizeyi bir tam sayıya çevirir.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#String()" class="signatureLink">String</a>(expression:<a href="Object.html">Object</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 Belirtilen parametrenin dize olarak temsil edilen halini döndürür.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#trace()" class="signatureLink">trace</a>(<a href="statements.html#..._(rest)_parameter">...</a> arguments):<a href="specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 Hata ayıklama sırasında ifadeleri gösterir veya günlük dosyalarına yazar.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#uint()" class="signatureLink">uint</a>(value:<a href="Number.html">Number</a>):<a href="uint.html">uint</a></div><div class="summaryTableDescription">
+	 Belirli bir sayısal bir değeri bir işaretsiz tam sayı değerine çevirir.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#unescape()" class="signatureLink">unescape</a>(str:<a href="String.html">String</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 str parametresini bir dize olarak değerlendirir, URL kodlu biçimdeki dizenin kodunu çözer (tüm onaltılık sıraları ASCII karakterlerine dönüştürerek) ve dizeyi döndürür.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#Vector()" class="signatureLink">Vector</a>(sourceArray:<a href="Object.html">Object</a>):<a href="Vector.html">Vector</a>.&lt;T&gt;</div><div class="summaryTableDescription">
+	 Öğeleri, belirtilen veri türünün örnekleri olan yeni bir Vector örneği oluşturur.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#XML()" class="signatureLink">XML</a>(expression:<a href="Object.html">Object</a>):<a href="XML.html">XML</a></div><div class="summaryTableDescription">
+	 Bir nesneyi bir XML nesnesine dönüştürür.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#XMLList()" class="signatureLink">XMLList</a>(expression:<a href="Object.html">Object</a>):<a href="XMLList.html">XMLList</a></div><div class="summaryTableDescription">
+     Bir nesneyi bir XMLList nesnesine dönüştürür.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr></table></div><br><br><a name="constantSummary"></a>Üst düzey veya genel sabitler her komut dosyasında kullanılabilir ve belgenizdeki her Zaman Çizelgesi ve kapsam için görünebilir durumdadır.<div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Global Sabitler</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Sabit</th><th>Tanımlayan:</th></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="package.html#Infinity" class="signatureLink">Infinity</a> : <a href="Number.html">Number</a><div class="summaryTableDescription">
+ Pozitif Sonsuzluğu temsil eden özel bir değer.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="package.html#-Infinity" class="signatureLink">-Infinity</a> : <a href="Number.html">Number</a><div class="summaryTableDescription">
+ Negatif Sonsuzluğu temsil eden özel bir değer.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="package.html#NaN" class="signatureLink">NaN</a> : <a href="Number.html">Number</a><div class="summaryTableDescription">
+ Number veri türünün, "sayı olmayan bir değeri" (NaN) temsil eden özel bir numarası.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="package.html#undefined" class="signatureLink">undefined</a> : <a href="specialTypes.html#*">*</a><div class="summaryTableDescription">
+ Başlatılmamış türsüz değişkenler veya başlatılmamış dinamik nesne özellikleri için geçerli özel bir değer.</div></td><td class="summaryTableOwnerCol">Üst&nbsp;Düzey</td></tr></table></div><div class="detailSectionHeader"> Sabit Ayrıntısı </div><span id="pageFilter" runtime="Flash::9##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="constantDetail" id="constantDetail"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="-Infinity" id="-Infinity"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>-Infinity</h3></td><td class="detailHeaderType">Sabit</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code>public const -Infinity:<a href="Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9</td></tr></table><p></p><p></p><p>
+ Negatif <code>Infinity</code> öğesini temsil eden özel bir değer. Bu sabitin değeri, <code>Number.NEGATIVE_INFINITY</code> ile aynıdır.
+ </p><p><span class="label">İlgili API Öğeleri</span></p><div class="seeAlso"><a href="Number.html#NEGATIVE_INFINITY" target="">Number.NEGATIVE_INFINITY</a></div><span id="pageFilter"><br/><span class="label"> Örnek &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tr"> Bu örnek nasıl kullanılır? </a></span>)
+            </span><br/><br/><div class="detailBody"> Yalnızca bölen negatif bir sayıysa 0'a bölmenin sonucu <code>-Infinity</code> olur.
+<div class="listing"><pre>
+
+trace(0 / 0);  // NaN
+trace(7 / 0);  // Infinity
+trace(-7 / 0); // -Infinity
+
+
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="constantDetail" id="constantDetail"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Infinity" id="Infinity"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Infinity</h3></td><td class="detailHeaderType">Sabit</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code>public const Infinity:<a href="Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9</td></tr></table><p></p><p></p><p>
+ Pozitif <code>Infinity</code> öğesini temsil eden özel bir değer. Bu sabitin değeri, <code>Number.POSITIVE_INFINITY</code> ile aynıdır.
+ </p><p><span class="label">İlgili API Öğeleri</span></p><div class="seeAlso"><a href="Number.html#POSITIVE_INFINITY" target="">Number.POSITIVE_INFINITY</a></div><span id="pageFilter"><br/><span class="label"> Örnek &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tr"> Bu örnek nasıl kullanılır? </a></span>)
+            </span><br/><br/><div class="detailBody"> Yalnızca bölen pozitif bir sayıysa 0'a bölmenin sonucu <code>Infinity</code> olur.
+<div class="listing"><pre>
+
+trace(0 / 0);  // NaN
+trace(7 / 0);  // Infinity
+trace(-7 / 0); // -Infinity
+
+
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="constantDetail" id="constantDetail"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="NaN" id="NaN"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>NaN</h3></td><td class="detailHeaderType">Sabit</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code>public const NaN:<a href="Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9</td></tr></table><p></p><p></p><p>
+ Number veri türünün, "sayı olmayan" (<code>NaN</code>) bir değeri temsil eden özel bir üyesi. Matematiksel bir ifade, sayı olarak ifade edilemeyen bir değer verirse, sonuç <code>NaN</code> olur. Şu liste, <code>NaN</code> sonucunu veren yaygın ifadeleri açıklar.
+ <ul><li>Yalnızca bölen de 0 olursa, 0'a bölmenin sonucu <code>NaN</code> olur. Bölen 0'dan büyükse, 0'a bölme <code><code>Infinity</code></code> sonucunu verir. Bölen 0'dan küçükse, 0'a bölme <code><code>-Infinity</code></code> verir;</li><li>Negatif bir sayının kare kökü;</li><li>Bir sayının geçerli 0 - 1 aralığı dışındaki arksinüsü;</li><li><code>Infinity</code> değerinden çıkarılan <code>Infinity</code>;</li><li><code>Infinity</code> veya <code>-Infinity</code> değerine bölünen <code>Infinity</code> ya da <code>-Infinity</code>;</li><li>0 ile çarpılan <code>Infinity</code> veya <code>-Infinity</code>;</li></ul>
+ <p><code>NaN</code> değeri, int veya uint veri türlerinin bir üyesi değildir.</p>
+ <p><code>NaN</code> değerinin <code>NaN</code> dahil başka bir değere eşit olduğu düşünülmez, bu da bir ifadenin <code>NaN</code> olup olmadığını test etmek için eşitlik operatörünün kullanılmasını imkansızlaştırır. Bir sayının <code>NaN</code> işlevi olup olmadığını belirlemek için <code>isNaN()</code> öğesini kullanın.</p>
+ 
+ </p><p><span class="label">İlgili API Öğeleri</span></p><div class="seeAlso"><a href="package.html#isNaN()" target="">isNaN()</a><br/><a href="Number.html#NaN" target="">Number.NaN</a></div></div></span><span id="pageFilter" runtime="Flash::9##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="constantDetail" id="constantDetail"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="undefined" id="undefined"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>undefined</h3></td><td class="detailHeaderType">Sabit</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code>public const undefined:<a href="specialTypes.html#*">*</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9</td></tr></table><p></p><p></p><p>
+ İlk değeri atanmamış türsüz değişkenler veya ilk değeri verilmemiş dinamik nesne özellikleri için geçerli özel bir değer. ActionScript 3.0'da yalnızca türsüz değişkenler <code>undefined</code> değerini tutabilirken bu, ActionScript 1.0 ve ActionScript 2.0'da doğru değildir. Örneğin şu değişkenlerin ikisi de türsüz ve başlatılmamış olduğundan <code>undefined</code> olur:
+ <ul><li><code>var foo;</code></li><li><code>var bar:*;</code></li></ul>
+ <p><code>undefined</code> değeri, dinamik nesnelerin başlatılmamış veya tanımsız özellikleri için de geçerlidir. Örneğin, bir nesne Object sınıfı örneğiyse, dinamik olarak eklenen tüm özelliklerin değeri, o özelliğe bir değer atanıncaya kadar <code>undefined</code> olur.
+ </p>
+ <p><code>undefined</code> çeşitli işlevlerle kullanıldıkça sonuçlar değişlik gösterebilir:</p>
+ <ul><li><code>String(undefined)</code> öğesinin döndürdüğü değer <code>"undefined"</code> olur (<code>undefined</code> bir dizeye dönüştürülür).</li><li><code>Number(undefined)</code> öğesinin döndürdüğü değer <code>NaN</code> olur.</li><li><code>int(undefined)</code> ve <code>uint(undefined)</code> öğesinin döndürdüğü değer 0 olur.</li><li><code>Object(undefined)</code> öğesinin döndürdüğü değer yeni bir Object örneğidir.</li><li><code>undefined</code> değeri türlü bir değişkene atandığında, değer, veri türünün varsayılan değerine dönüştürülür.</li></ul>
+ <p><code>undefined</code> ile <code>null</code> öğelerini birbiriyle karıştırmayın. <code>null</code> ve <code>undefined</code> öğeleri eşitlik (<code>==</code>) operatörüyle karşılaştırıldığında, eşit olurlar. Ancak <code>null</code> ve <code>undefined</code> öğeleri katı eşitlik (<code>===</code>) operatörüyle karşılaştırıldığında, eşit olmazlar.</p>
+ </p><p><span class="label">İlgili API Öğeleri</span></p><div class="seeAlso"><a href="statements.html#null" target="">null</a></div><span id="pageFilter"><br/><span class="label"> Örnek &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tr"> Bu örnek nasıl kullanılır? </a></span>)
+            </span><br/><br/><div class="detailBody"> Şu örnekte, türsüz bir değişken olan <code>myVar</code> bildirilmiş ancak başlatılmamıştır. Değişken türsüz olduğundan, <code>myVar</code> değeri <code>undefined</code> olur. Değişkenin tür ek açıklaması olmasa da veya değişken özel (*) türsüz ek açıklaması (<code>var myVar:*;</code>) kullansa da bu doğrudur.
+<div class="listing"><pre>
+
+// trace value of untyped and uninitialized variable
+var myVar;
+trace(myVar); // undefined
+</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody"> Aynı kural dinamik bir nesnenin başlatılmamış özellikleri için de geçerlidir. Örneğin, bir dinamik sınıf (<code>A</code>) örneği (<code>obj</code>) verildiğinde, <code>obj</code> örneğinin başlatılmamış bir özelliği olan <code>obj.propName</code> değeri <code>undefined</code> olur.
+<div class="listing"><pre>
+
+dynamic class A {}
+var obj:A = new A()
+
+// trace undefined property of obj
+trace(obj.propName); // undefined
+
+</pre></div></div></span></div></span><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodDetail" id="methodDetail"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailSectionHeader"> İşlev Ayrıntısı </div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Array()" id="Array()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Array(restParam)" id="Array(restParam)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Array</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function Array(<a href="statements.html#..._(rest)_parameter">...</a> args):<a href="Array.html">Array</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Yeni bir dizi oluşturur. Dizi, sıfır veya daha fazla bir uzunluk değerine sahip olabilir ya da belirtilen tek bir nesne tarafından doldurulan bir dizi olabilir. 
+	 <ul><li>Herhangi bir argüman içermeyen <code>Array()</code> çağrıldığında boş bir dizi döndürülür.</li><li>Tek bir tam sayı argümanı içeren <code>Array()</code> çağrıldığında, belirtilen uzunlukta olan ancak öğeleri tanımlanmamış değerler içeren bir dizi döndürülür.</li><li>Belirtilmiş bir nesneyle <code>Array()</code> nesnesini çağırmak belirtilen nesnenin bir öğesine sahip bir dizi döndürür.</li></ul>
+	 <code>Array()</code> işlevini kullanmak Array sınıfı oluşturucusu ile dizi oluşturmaya <i>benzer</i>, ancak <code>Array()</code> işlevi hiçbir parametre değerine izin vermez veya yalnızca bir parametre değerine izin verir. Yeni diziyi birkaç değerle doldurmak için <code>Array()</code> işlevini kullanamazsınız.
+	 <p><b>Not:</b> <code>Array()</code> işlevini yeni bir dizi oluşturmak için kullanırsanız ve diziyi doldurmak için birkaç değeri parametre olarak iletirseniz derleyici hatasıyla karşılaşırsınız. <code>Array()</code> işlevi yalnızca bir parametreye izin verir. Bunun yerine birkaç değerden oluşan dizi oluşturmak ve doldurmak için Array sınıfı oluşturucusunu kullanın.</p>
+	 <p><code>Array()</code> işlevi nesne türünü bir diziye atamaz. Açık tür dönüştürme için <code>as</code> operatörünü veya argüman temel bir değer olmadığında tür atamasını kullanın. Daha fazla bilgi için bu girişin Örnek bölümüne bakın. Bir nesneyi parametre olarak <code>Array()</code> işlevine iletirseniz nesneyi öğe olarak içeren yeni bir dize oluşturulur.</p>
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><a href="statements.html#..._(rest)_parameter">...</a> <span class="label">args</span></code> &mdash; Belirtilen bir nesneyi içeren dizi oluşturmak üzere boş bir dizi için argüman, belirli bir uzunluktaki bir dizi için ek bir tamsayı argümanı veya tek bir nesne iletemezsiniz.
+	 </td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Array.html">Array</a></code> &mdash; Sıfır veya daha fazla uzunlukta bir dizi.
+	 </td></tr></table><p><span class="label">İlgili API Öğeleri</span></p><div class="seeAlso"><a href="Array.html" target="">Array sınıfı</a><br/><a href="operators.html#as" target="">as operatörü</a></div><span id="pageFilter"><br/><span class="label"> Örnek &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tr"> Bu örnek nasıl kullanılır? </a></span>)
+            </span><br/><br/><div class="detailBody"> Şu örnek, bir argüman temel bir değer olmadığında <code>Array()</code> işlevinin davranışını gösterir. Bir diziye çevrim işleminin yaygın bir kullanım şekli, değerlerini bir dizi biçiminde saklayan Object örneğinin dönüştürülmesidir. <code>Array()</code>, <code>Object</code> türündeki bir argümanla veya temel olmayan başka bir veri türüyle çağrılırsa, nesneye yapılan bir başvuru yeni dizinin öğesinde saklanır. Başka bir deyişle, iletilen tek argüman bir nesneyse, o nesneye yapılan başvuru yeni dizideki birinci öğe olur.
+<div class="listing"><pre>
+var obj:Object = [ "a", "b", "c" ];
+      
+var newArray:Array = Array( obj );
+
+trace(newArray == obj);    // false
+trace(newArray[0] == obj); // true
+trace(newArray[0][0])      // a
+trace(newArray[0][1])      // b
+trace(newArray[0][2])      // c
+</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody"> <code>obj</code> öğesini bir diziye çevirmek için, <code>as</code> operatörünü kullanın; <code>obj</code> geçerli bir diziyse bu bir dize başvurusunu, aksi takdirde <code>null</code> öğesini döndürür:
+<div class="listing"><pre>
+var obj:Object = [ "a", "b", "c" ];
+      
+var newArray:Array = obj as Array;
+
+trace(newArray == obj); // true
+trace(newArray[0]);     // a
+trace(newArray[1]);     // b
+trace(newArray[2]);     // c
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Boolean()" id="Boolean()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Boolean(Object)" id="Boolean(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Boolean</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function Boolean(expression:<a href="Object.html">Object</a>):<a href="Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 <code>expression</code> parametresini bir Boolean değerine dönüştürür ve değeri döndürür. 
+	 <p>Dönüş değeri, şu tabloda açıklandığı gibi argümanın veri türüne ve değerine bağlıdır:</p>
+	 
+	 <table class="innertable" ><tr><th>Girdi Değeri</th><th>Örnek</th><th>Dönüş Değeri</th></tr><tr><td><code>0</code></td><td><code>Boolean(0)</code></td><td><code>false</code></td></tr><tr><td><code>NaN</code></td><td><code>Boolean(NaN)</code></td><td><code>false</code></td></tr><tr><td>Number (<code>0</code> veya <code>NaN</code> değil)</td><td><code>Boolean(4)</code></td><td><code>true</code></td></tr><tr><td>Boş dize</td><td><code>Boolean("")</code></td><td><code>false</code></td></tr><tr><td>Boş olmayan dize</td><td><code>Boolean("6")</code></td><td><code>true</code></td></tr><tr><td><code>null</code></td><td><code>Boolean(null)</code></td><td><code>false</code></td></tr><tr><td><code>undefined</code></td><td><code>Boolean(undefined)</code></td><td><code>false</code></td></tr><tr><td>Object sınıfı örneği</td><td><code>Boolean(new Object())</code></td><td><code>true</code></td></tr><tr><td>Argüman yok</td><td><code>Boolean()</code></td><td><code>false</code></td></tr></table>
+	 <p>Önceki ActionScript sürümlerinden farklı olarak, <code>Boolean()</code> işlevi, Boolean sınıfı yapıcısıyla aynı sonuçları döndürür.</p>
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">expression</span>:<a href="Object.html">Object</a></code> &mdash; Boolean değerine dönüştürülecek bir ifade veya nesne.
+	 </td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Boolean.html">Boolean</a></code> &mdash; Boolean değerine dönüştürme sonucu.
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="decodeURI()" id="decodeURI()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="decodeURI(String)" id="decodeURI(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>decodeURI</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function decodeURI(uri:<a href="String.html">String</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Kodlanmış bir URI'nin kodunu çözerek dizeye çevirir. Önceden <code>encodeURI</code> işleviyle kodlanmış tüm karakterlerin kodlanmamış temsillerine geri yüklendiği bir dize.
+	 <p>Şu tablo, <code>decodeURI</code> işleviyle kodu çözülüp karakterlere <i>çevrilmemiş</i> çıkarma sıraları kümesini gösterir. Bu tablodaki çıkarma sıralarının kodunu çözmek için <code>decodeURIComponent()</code> öğesini kullanın.</p>
+	 <table class="innertable" ><tr><th>Kodu çözülmemiş çıkarma sıraları</th><th>Karakter eşdeğerleri</th></tr><tr><td><code>%23</code></td><td><code>#</code></td></tr><tr><td><code>%24</code></td><td><code>$</code></td></tr><tr><td><code>%26</code></td><td><code>&</code></td></tr><tr><td><code>%2B</code></td><td><code>+</code></td></tr><tr><td><code>%2C</code></td><td><code>,</code></td></tr><tr><td><code>%2F</code></td><td><code>/</code></td></tr><tr><td><code>%3A</code></td><td><code>:</code></td></tr><tr><td><code>%3B</code></td><td><code>;</code></td></tr><tr><td><code>%3D</code></td><td><code>=</code></td></tr><tr><td><code>%3F</code></td><td><code>?</code></td></tr><tr><td><code>%40</code></td><td><code>@</code></td></tr></table>
+	 
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">uri</span>:<a href="String.html">String</a></code> &mdash; <code>encodeURI</code> işleviyle kodlanmış bir dize.
+	 </td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code> &mdash; Önceden <code>encodeURI</code> işleviyle çıkarılmış tüm karakterlerin çıkarılmamış temsillerine geri yüklendiği bir dize.
+	 </td></tr></table><p><span class="label">İlgili API Öğeleri</span></p><div class="seeAlso"><a href="package.html#decodeURIComponent()" target="">decodeURIComponent()</a><br/><a href="package.html#encodeURI()" target="">encodeURI()</a><br/><a href="package.html#encodeURIComponent()" target="">encodeURIComponent()</a></div><span id="pageFilter"><br/><span class="label"> Örnek &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tr"> Bu örnek nasıl kullanılır? </a></span>)
+            </span><br/><br/><div class="detailBody"><div class="listing"><pre>package {
+    import flash.display.Sprite;
+
+    public class DecodeURIExample extends Sprite {
+        public function DecodeURIExample() {
+            var uri:String = "http://www.example.com/application.jsp?user=&lt;user name='some user'&gt;&lt;/user&gt;";
+            var encoded:String = encodeURI(uri);
+            var decoded:String = decodeURI(encoded);
+            trace(uri);        // http://www.example.com/application.jsp?user=&lt;user name='some user'&gt;&lt;/user&gt;
+            trace(encoded);    // http://www.example.com/application.jsp?user=%3Cuser%20name='some%20user'%3E%3C/user%3E
+            trace(decoded);    // http://www.example.com/application.jsp?user=&lt;user name='some user'&gt;&lt;/user&gt;
+        }
+    }
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="decodeURIComponent()" id="decodeURIComponent()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="decodeURIComponent(String)" id="decodeURIComponent(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>decodeURIComponent</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function decodeURIComponent(uri:<a href="String.html">String</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Kodlanmış bir URI bileşeninin kodunu çözerek dizeye çevirir. Önceden <code>encodeURIComponent</code> işleviyle çıkarılmış tüm karakterlerin kodlanmamış temsillerine geri yüklendiği bir dize.
+	 <p>Bu işlev, yalnızca URI bileşeni adı verilen bir URI dizesi bölümüyle kullanılmak üzere tasarlanmasıyla <code>decodeURI()</code> işlevinden ayrılır. URI bileşeni, <i>bileşen ayırıcıları</i> adındaki özel karakterler (<code>: / ; ve ? </code>). URI bileşeninin yaygın örnekleri arasında, "http" ve "www.adobe.com" yer alır.</p>
+	 <p>Bu işlev ile <code>decodeURI()</code> arasındaki başka bir önemli fark da, bu işlev bir URI bileşenini işlediğini varsaydığından, bu işlevin, özel ayırıcı karakterleri (<code>; / ? : @ & = + $ , #</code>) temsil eden çıkarma sıralarını, kodu çözülmesi gereken normal bir metin olarak değerlendirmesidir. </p>
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">uri</span>:<a href="String.html">String</a></code> &mdash; <code>encodeURIComponent</code> işleviyle kodlanmış bir dize.
+	 </td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code> &mdash; Önceden <code>encodeURIComponent</code> işleviyle çıkarılmış tüm karakterlerin çıkarılmamış temsillerine geri yüklendiği bir dize.
+	 </td></tr></table><p><span class="label">İlgili API Öğeleri</span></p><div class="seeAlso"><a href="package.html#decodeURI()" target="">decodeURI()</a><br/><a href="package.html#encodeURI()" target="">encodeURI()</a><br/><a href="package.html#encodeURIComponent()" target="">encodeURIComponent()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="encodeURI()" id="encodeURI()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="encodeURI(String)" id="encodeURI(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>encodeURI</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function encodeURI(uri:<a href="String.html">String</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Bir dizeyi geçerli bir URI (Tekdüzen Kaynak Tanımlayıcı) olarak kodlar. Bir karakter küçük bir temel karakter grubuna ait olmadığı sürece, tam bir URI'yi tüm karakterlerin UTF-8 çıkarma sırası olarak kodlandığı bir dizeye dönüştürür.
+	 <p>Şu tablo, <code>encodeURI</code> işleviyle UTF-8 çıkarma sırasına <i>dönüştürülmemiş</i> tam temel karakter kümesini gösterir.</p>
+	 <table class="innertable" ><tr><th>Kodlanmayan karakterler</th></tr><tr><td><code>0 1 2 3 4 5 6 7 8 9</code></td></tr><tr><td><code>a b c d e f g h i j k l m n o p q r s t u v w x y z</code></td></tr><tr><td><code>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</code></td></tr><tr><td><code>; / ? : @ & = + $ , #</code></td></tr><tr><td><code>- _ . ! ~ * ' ( )</code></td></tr></table>
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">uri</span>:<a href="String.html">String</a></code> &mdash; Tam bir URI'yi temsil eden bir dize.
+	 </td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code> &mdash; Belirli karakterleri UTF-8 çıkarma sırasına kodlanmış bir dize.
+	 </td></tr></table><p><span class="label">İlgili API Öğeleri</span></p><div class="seeAlso"><a href="package.html#decodeURI()" target="">decodeURI()</a><br/><a href="package.html#decodeURIComponent()" target="">decodeURIComponent()</a><br/><a href="package.html#encodeURIComponent()" target="">encodeURIComponent()</a></div><span id="pageFilter"><br/><span class="label"> Örnek &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tr"> Bu örnek nasıl kullanılır? </a></span>)
+            </span><br/><br/><div class="detailBody"><div class="listing"><pre>package {
+    import flash.display.Sprite;
+
+    public class EncodeURIExample extends Sprite {
+        public function EncodeURIExample() {
+            var uri:String = "http://www.example.com/application.jsp?user=&lt;user name='some user'&gt;&lt;/user&gt;";
+            var encoded:String = encodeURI(uri);
+            var decoded:String = decodeURI(encoded);
+            trace(uri);        // http://www.example.com/application.jsp?user=&lt;user name='some user'&gt;&lt;/user&gt;
+            trace(encoded);    // http://www.example.com/application.jsp?user=%3Cuser%20name='some%20user'%3E%3C/user%3E
+            trace(decoded);    // http://www.example.com/application.jsp?user=&lt;user name='some user'&gt;&lt;/user&gt;
+        }
+    }
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="encodeURIComponent()" id="encodeURIComponent()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="encodeURIComponent(String)" id="encodeURIComponent(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>encodeURIComponent</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function encodeURIComponent(uri:<a href="String.html">String</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Bir dizeyi geçerli bir URI bileşeni olarak kodlar. Bir karakter çok küçük bir temel karakter grubuna ait olmadığı sürece, URI'nin bir alt dizesini tüm karakterlerin UTF-8 çıkarma sırası olarak kodlandığı bir dizeye dönüştürür.
+	 <p><code>encodeURIComponent()</code> işlevi, yalnızca URI bileşeni adı verilen bir URI dizesi bölümüyle kullanılmak üzere tasarlanmasıyla <code>encodeURI()</code> işlevinden ayrılır. URI bileşeni, <i>bileşen ayırıcıları</i> adındaki özel karakterler (<code>: / ; ve ? </code>). URI bileşeninin yaygın örnekleri arasında, "http" ve "www.adobe.com" yer alır.</p>
+	 <p>Bu işlev ile <code>encodeURI()</code> arasındaki başka bir önemli fark da, bu işlev bir URI bileşenini işlediğini varsaydığından, bu işlevin, özel ayırıcı karakterleri (<code>; / ? : @ & = + $ , #</code>) kodlanması gereken normal bir metin olarak değerlendirmesidir. </p>
+	 <p>Şu tablo, <code>encodeURIComponent</code> işleviyle UTF-8 çıkarma sıralarına <i>dönüştürülmeyen</i> tüm karakterleri gösterir.</p>
+	 <table class="innertable" ><tr><th>Kodlanmayan karakterler</th></tr><tr><td><code>0 1 2 3 4 5 6 7 8 9</code></td></tr><tr><td><code>a b c d e f g h i j k l m n o p q r s t u v w x y z</code></td></tr><tr><td><code>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</code></td></tr><tr><td><code>- _ . ! ~ * ' ( )</code></td></tr></table>	 
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">uri</span>:<a href="String.html">String</a></code></td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code></td></tr></table><p><span class="label">İlgili API Öğeleri</span></p><div class="seeAlso"><a href="package.html#decodeURI()" target="">decodeURI()</a><br/><a href="package.html#decodeURIComponent()" target="">decodeURIComponent()</a><br/><a href="package.html#encodeURI()" target="">encodeURI()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="escape()" id="escape()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="escape(String)" id="escape(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>escape</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function escape(str:<a href="String.html">String</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Parametreyi bir dizeye dönüştürür ve URL kodlu biçimde kodlar; burada alfasayısal olmayan karakterlerin çoğunun yerini <code>%</code> onaltılık sıralar alır. Yüzde sembolü (<code>%</code>), URL kodu bir dizede kullanıldığında, çıkarma karakterlerini tanıtmak için kullanılır ve modulo operatörüne (<code>%</code>) eşdeğer değildir.
+	 <p>Şu tablo, <code>escape()</code> işleviyle çıkarma sıralarına <i>dönüştürülmeyen</i> tüm karakterleri gösterir.</p>
+	 <table class="innertable" ><tr><th>Kodlanmayan karakterler</th></tr><tr><td><code>0 1 2 3 4 5 6 7 8 9</code></td></tr><tr><td><code>a b c d e f g h i j k l m n o p q r s t u v w x y z</code></td></tr><tr><td><code>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</code></td></tr><tr><td><code>@ - _ . * + /</code></td></tr></table>	 
+	 <p><b>Not:</b> Özel ayırıcı karakterlerini (<code>@ + /</code>) şifrelemek için normal metin olarak işlemek üzere <code>escape()</code> işlevi yerine <code>encodeURIComponent()</code> işlevini kullanın.</p>
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:<a href="String.html">String</a></code> &mdash; Dizeye dönüştürülecek ve URL kodlu biçimde kodlanacak ifade.
+	 </td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code> &mdash; URL kodlu bir dize.
+	 </td></tr></table><p><span class="label">İlgili API Öğeleri</span></p><div class="seeAlso"><a href="package.html#unescape()" target="">unescape()</a><br/><a href="package.html#encodeURIComponent()" target="">encodeURIComponent()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="int()" id="int()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="int(Number)" id="int(Number)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>int</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function int(value:<a href="Number.html">Number</a>):<a href="int.html">int</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Belirli bir sayısal bir değeri bir tam sayı değerine dönüştürür. Ondalık noktadaki ondalık değerler kesilir.
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="Number.html">Number</a></code> &mdash; Bir tam sayıya dönüştürülecek değer.
+	 </td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="int.html">int</a></code> &mdash; Dönüştürülen tam sayı değeri.
+	 </td></tr></table><p><span class="label">İlgili API Öğeleri</span></p><div class="seeAlso"><a href="package.html#uint()" target="">uint()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="isFinite()" id="isFinite()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="isFinite(Number)" id="isFinite(Number)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>isFinite</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function isFinite(num:<a href="Number.html">Number</a>):<a href="Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0.</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Değer sonlu bir sayıysa <code>true</code> değerini, <code>Infinity</code> veya <code>-Infinity</code> ise <code>false</code> değerini döndürür. <code>Infinity</code> veya <code>-Infinity</code> bulunması, 0'a bölme gibi bir matematiksel hata durumunu gösterir.
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">num</span>:<a href="Number.html">Number</a></code> &mdash; Sonlu veya sonsuz olarak değerlendirilecek bir sayı.
+	 </td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Boolean.html">Boolean</a></code> &mdash; Sonlu bir sayıysa <code>true</code>, sonsuz veya negatif sonsuz ise <code>false</code> döndürür
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="isNaN()" id="isNaN()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="isNaN(Number)" id="isNaN(Number)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>isNaN</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function isNaN(num:<a href="Number.html">Number</a>):<a href="Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Değer <code>NaN</code>(sayı değil) ise <code>true</code> değerini döndürür. <code>isNaN()</code> işlevi, matematiksel ifadenin bir sayı şeklinde başarıyla değerlendirilip değerlendirilmeyeceğini kontrol etmede kullanışlıdır. <code>isNaN()</code> öğesinin en yaygın kullanımı, <code>parseInt()</code>ve <code>parseFloat()</code> işlevlerinden döndürülen değerin kontrol edilmesidir. <code>NaN</code> değeri, “Sayı olmayan“ bir değeri temsil eden Number veri türünün özel bir üyesidir. 
+	 <p><b>Not</b>: <code>NaN</code> değeri, int veya uint veri türlerinin bir üyesi değildir.</p>
+	 <p>Aşağıdaki tablo, çeşitli girdi türleri ve değerlerinde <code>isNaN()</code> dönüş değerini açıklar. (Derleyici uyarılarınız Katı Mod'a ayarlanmışsa, aşağıdaki işlemlerden bazıları derleyici uyarıları gösterebilir.)</p>
+	 <table class="innertable" ><tr><th>Girdi Türü/Değeri</th><th>Örnek</th><th>Dönüş Değeri</th></tr><tr><td>0'a bölünmüş 0</td><td><code>isNaN(0/0)</code></td><td><code>true</code></td></tr><tr><td><code>0</code>'a bölünmüş 0 dışında bir sayı</td><td><code>isNaN(5/0)</code></td><td><code>false</code></td></tr><tr><td>Negatif bir sayının kare kökü</td><td><code>isNaN(Math.sqrt(-1))</code></td><td><code>true</code></td></tr><tr><td>1'den büyük veya 0'dan küçük bir sayının arksinüsü</td><td><code>isNaN(Math.asin(2))</code></td><td><code>true</code></td></tr><tr><td>Number değerine dönüştürülebilen dize</td><td><code>isNaN("5")</code></td><td><code>false</code></td></tr><tr><td>Number değerine dönüştürülemeyen dize</td><td><code>isNaN("5a")</code></td><td><code>true</code></td></tr></table>
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">num</span>:<a href="Number.html">Number</a></code> &mdash; Değerlendirilecek sayısal bir değer veya matematiksel ifade.
+	 </td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Boolean.html">Boolean</a></code> &mdash; Değer <code>NaN</code>(sayı değil) ise <code>true</code> değerini, aksi takdirde <code>false</code> değerini döndürür.
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="isXMLName()" id="isXMLName()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="isXMLName(String)" id="isXMLName(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>isXMLName</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function isXMLName(str:<a href="String.html">String</a>):<a href="Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Belirtilen dizenin bir XML öğesi veya niteliği için geçerli bir ad olup olmadığını belirler.
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:<a href="String.html">String</a></code> &mdash; Değerlendirilecek bir dize.
+	 </td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Boolean.html">Boolean</a></code> &mdash; <code>str</code> argümanı geçerli bir XML adıysa <code>true</code>; aksi takdirde <code>false</code> değerini döndürür.
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Number()" id="Number()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Number(Object)" id="Number(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Number</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function Number(expression:<a href="Object.html">Object</a>):<a href="Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Belirli bir değeri bir Number değerine çevirir. Şu tablo, çeşitli girdi türlerinin sonucunu gösterir:
+	 
+	 <table class="innertable" ><tr><th>Girdi Türü/Değeri</th><th>Örnek</th><th>Dönüş Değeri</th></tr><tr><td><code>undefined</code></td><td><code>Number(undefined)</code></td><td><code>NaN</code></td></tr><tr><td><code>null</code></td><td><code>Number(null)</code></td><td><code>0</code></td></tr><tr><td><code>true</code></td><td><code>Number(true)</code></td><td><code>1</code></td></tr><tr><td><code>false</code></td><td><code>Number(false)</code></td><td><code>0</code></td></tr><tr><td><code>NaN</code></td><td><code>Number(NaN)</code></td><td><code>NaN</code></td></tr><tr><td>Boş dize</td><td><code>Number("")</code></td><td><code>0</code></td></tr><tr><td>Number değerine dönüştürülen dize</td><td><code>Number("5")</code></td><td>Sayı (örn. <code>5</code>)</td></tr><tr><td>Number değerine dönüştürülmeyen dize</td><td><code>Number("5a")</code></td><td><code>NaN</code></td></tr></table>
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">expression</span>:<a href="Object.html">Object</a></code> &mdash; Bir sayıya dönüştürülecek değer.
+	 </td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Number.html">Number</a></code> &mdash; Dönüştürülen sayı değeri
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Object()" id="Object()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Object(Object)" id="Object(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Object</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function Object(value:<a href="Object.html">Object</a>):<a href="Object.html">Object</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 ActionScript 3.0'daki her değer bir nesnedir, başka bir deyişle, bir değer üzerinde <code>Object()</code> öğesinin çağrılması o değeri döndürür.
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="Object.html">Object</a></code> &mdash; Dönüştürülecek bir nesne veya sayı, dize ya da Boolean değeri.
+	 </td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Object.html">Object</a></code> &mdash; <code>value</code> parametresinin belirttiği değer.
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="parseFloat()" id="parseFloat()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="parseFloat(String)" id="parseFloat(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>parseFloat</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function parseFloat(str:<a href="String.html">String</a>):<a href="Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Bir dizeyi kayan nokta sayısına dönüştürür. İşlev sayıları okur veya <i>ayrıştırır</i> ve ilk sayının bölümü olmayan bir karaktere ulaşıncaya kadar sayıları bir dizede döndürür. Dize ayrıştırılabilir bir sayıyla başlamıyorsa, <code>parseFloat()</code> <code>NaN</code> değerini döndürür. İzleyen sayısal olmayan karakterler gibi, geçerli tam sayılardan önce gelen beyaz boşluk da yok sayılır.
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:<a href="String.html">String</a></code> &mdash; Okunup bir kayan nokta sayısına dönüştürülecek dize.
+	 </td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Number.html">Number</a></code> &mdash; Bir sayı veya <code>NaN</code> (sayı değil).
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="parseInt()" id="parseInt()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="parseInt(String,uint)" id="parseInt(String,uint)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>parseInt</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function parseInt(str:<a href="String.html">String</a>, radix:<a href="uint.html">uint</a> = 0):<a href="Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Bir dizeyi bir tam sayıya çevirir. Parametrelerdeki belirtilen dize bir sayıya dönüştürülemezse, işlev <code>NaN</code> değerini döndürür. 0x ile başlayan dizeler, onaltılık sayılar olarak yorumlanır. Önceki ActionScript sürümlerinde olduğu gibi, 0 ile başlayan tam sayılar sekizlik sayılar olarak <i>yorumlanmaz</i>. Sekizlik sayılar için bir 8 radix'i belirtmeniz gerekir. İzleyen sayısal olmayan karakterler gibi, geçerli tam sayılardan önce gelen beyaz boşluk ve sıfırlar da yok sayılır.
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:<a href="String.html">String</a></code> &mdash; Bir tam sayıya dönüştürülecek dize.
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">radix</span>:<a href="uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; Ayrıştırılacak sayının radix (taban) öğesini temsil eden bir tam sayı. Geçerli değerler 2- 6 arasındadır.
+	 </td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Number.html">Number</a></code> &mdash; Bir sayı veya <code>NaN</code> (sayı değil).
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="String()" id="String()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="String(Object)" id="String(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>String</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function String(expression:<a href="Object.html">Object</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Belirtilen parametrenin dize olarak temsil edilen halini döndürür.
+	 <p>Şu tablo, çeşitli girdi türlerinin sonucunu gösterir:</p>
+	 <table class="innertable" ><tr><th>Girdi Türü/Değeri</th><th>Dönüş Değeri</th></tr><tr><td><code>undefined</code></td><td><code>undefined</code></td></tr><tr><td><code>null</code></td><td><code>"null"</code></td></tr><tr><td><code>true</code></td><td><code>"true"</code></td></tr><tr><td><code>false</code></td><td><code>"false"</code></td></tr><tr><td><code>NaN</code></td><td><code>"NaN"</code></td></tr><tr><td>String</td><td>String</td></tr><tr><td>Object</td><td>Object.toString()</td></tr><tr><td>Number</td><td>Sayının dize olarak temsil edilen hali</td></tr></table>
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">expression</span>:<a href="Object.html">Object</a></code> &mdash;  Bir dizeye dönüştürülecek ifade.
+	 </td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code> &mdash; <code>expression</code> parametresi için iletilen değerin dize olarak temsil edilen hali.
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##AIR::1.0##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="trace()" id="trace()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="trace(restParam)" id="trace(restParam)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>trace</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function trace(<a href="statements.html#..._(rest)_parameter">...</a> arguments):<a href="specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>Flash Player 9, AIR 1.0, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Hata ayıklama sırasında ifadeleri gösterir veya günlük dosyalarına yazar. Tek bir izleme ifadesi birden çok argümanı destekleyebilir. İzleme ifadesindeki herhangi bir argüman, String dışında bir veri türü içeriyorsa, izleme işlevi o veri türü ile ilişkili <code>toString()</code> yöntemini çağırır. Örneğin, argüman bir Boolean değeriyse, izleme işlevi <code>Boolean.toString()</code> çağırır ve dönüş değerini görüntüler. 
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><a href="statements.html#..._(rest)_parameter">...</a> <span class="label">arguments</span></code> &mdash; Değerlendirilecek bir veya birkaç (virgülle ayrılmış) ifade. Birden çok ifade için, çıktıdaki her bir ifadenin arasına boşluk eklenir.
+     </td></tr></table></p><span id="pageFilter"><br/><span class="label"> Örnek &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tr"> Bu örnek nasıl kullanılır? </a></span>)
+            </span><br/><br/><div class="detailBody"> Şu örnek, basit bir dize yazdırmak üzere <code>trace()</code> yönteminin nasıl kullanılabileceğini göstermek için <code>TraceExample</code> sınıfını kullanır. Genellikle mesaj bir "Debug" konsoluna yazdırılır.
+<div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+
+    public class TraceExample extends Sprite {
+
+        public function TraceExample() {
+            trace("Hello World");
+        }
+    }
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="uint()" id="uint()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="uint(Number)" id="uint(Number)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>uint</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function uint(value:<a href="Number.html">Number</a>):<a href="uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Belirli bir sayısal bir değeri bir işaretsiz tam sayı değerine çevirir. Ondalık noktadaki ondalık değerler kesilir.
+	 <p>Şu tablo, çeşitli girdi türleri ve değerlerinde <code>uint()</code> dönüş değerini açıklar.</p>
+	 <table class="innertable" ><tr><th>Girdi Türü/Değeri</th><th>Örnek</th><th>Dönüş Değeri</th></tr><tr><td><code>undefined</code></td><td><code>uint(undefined)</code></td><td><code>0</code></td></tr><tr><td><code>null</code></td><td><code>uint(null)</code></td><td><code>0</code></td></tr><tr><td><code>0</code></td><td><code>uint(0)</code></td><td><code>0</code></td></tr><tr><td><code>NaN</code></td><td><code>uint(NaN)</code></td><td><code>0</code></td></tr><tr><td>Pozitif kayan nokta sayısı</td><td><code>uint(5.31)</code></td><td>Kesilmiş işaretsiz tam sayı (örn. <code>5</code>)</td></tr><tr><td>Negatif kayan nokta sayısı</td><td><code>uint(-5.78)</code></td><td>Tam sayı olacak şekilde keser ve sonra negatif tam sayı kuralını uygular.</td></tr><tr><td>Negatif tam sayı</td><td><code>uint(-5)</code></td><td><code>uint.MAX_VALUE</code> ve negatif tam sayı toplamı (örneğin, <code>uint.MAX_VALUE + (-5)</code>)</td></tr><tr><td><code>true</code></td><td><code>uint(true)</code></td><td><code>1</code></td></tr><tr><td><code>false</code></td><td><code>uint(false)</code></td><td><code>0</code></td></tr><tr><td>Boş Dize</td><td><code>uint("")</code></td><td><code>0</code></td></tr><tr><td>Number değerine dönüştürülen dize</td><td><code>uint("5")</code></td><td>Sayı</td></tr><tr><td>Number değerine dönüştürülmeyen dize</td><td><code>uint("5a")</code></td><td><code>0</code></td></tr></table>
+
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="Number.html">Number</a></code> &mdash; Bir tam sayıya dönüştürülecek değer.
+	 </td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="uint.html">uint</a></code> &mdash; Dönüştürülen tam sayı değeri.
+	 </td></tr></table><p><span class="label">İlgili API Öğeleri</span></p><div class="seeAlso"><a href="package.html#int()" target="">int()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="unescape()" id="unescape()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="unescape(String)" id="unescape(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>unescape</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function unescape(str:<a href="String.html">String</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 <code>str</code> parametresini bir dize olarak değerlendirir, URL kodlu biçimdeki dizenin kodunu çözer (tüm onaltılık sıraları ASCII karakterlerine dönüştürerek) ve dizeyi döndürür.
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:<a href="String.html">String</a></code> &mdash; Çıkarılacak onaltılık sıraları olan bir dize.
+	 </td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code> &mdash; URL kodlu parametreden kodu çözülen bir dize.
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Vector()" id="Vector()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Vector(Object)" id="Vector(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Vector</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function Vector(sourceArray:<a href="Object.html">Object</a>):<a href="Vector.html">Vector</a>.&lt;T&gt;</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>Flash Player 10, AIR 1.5, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Öğeleri, belirtilen veri türünün örnekleri olan yeni bir Vector örneği oluşturur. Bu işlevi çağırırken, bir type parametresini kullanarak sonuç Vector öğelerinin veri türünü (Vector öğesinin <i>taban türü</i>) belirtirsiniz. Bu işlev, bir Vector örneği bildirilirken veya <code>new Vector.&lt;T&gt;()</code> yapıcısı çağrılırken kullanılan sözdiziminin aynısını kullanır.
+	 
+	 <div class="listing"><pre>var v:Vector.&lt;String&gt; = Vector.&lt;String&gt;(["Hello", "World"]);</pre></div>
+	 
+	 <p>Sonuç Vector, <code>sourceArray</code> argümanının öğelerindeki değerlerle doldurulur. <code>sourceArray</code> argümanı zaten bir Vector ise.&lt;T> örneği; burada <code>T</code> taban türü, yani Vector öğesini döndüren işlevdir. Aksi takdirde sonuç Vector öğesi, <code>sourceArray</code> Array veya Vector örneğinin öğeleriyle doldurulur.</p>
+	 
+	 <p>Her durumda da, <code>sourceArray</code> argümanının tüm öğelerinin veri türü, işlev çağrısında belirtilen <code>T</code> taban türüyle eşleşmelidir.</p>
+	 
+	 <p><code>sourceArray</code> argümanı 0 <code>length</code> değerine sahipse, işlev boş bir Vector döndürür.</p>
+	 
+	 <p>Bir Vector <code>sourceArray</code> argümanı olarak iletilirse ve taban türü <code>T</code> değilse veya bir Array iletilirse ve öğeleri <code>T</code> veri türünün tüm örnekleri değilse, değerleri taban türüne dönüştürmek için bir deneme yapılır. Değerler otomatik olarak dönüştürülebilirse, sonuç Vector öğesi dönüştürülen değerleri içerir. Herhangi bir dönüştürme yapılmazsa, hata oluşmaz.</p>
+	 
+	 <p>Aynı şekilde, <code>sourceArray</code> argümanındaki bir öğe, <code>T</code> taban türünün alt sınıfının bir örneğiyse, çağrı başarılı olur ve öğe, sonuçta ortaya çıkan Vector öğesine eklenir. <code>sourceArray</code> argümanı, taban sınıfı <code>T</code> alt sınıfı olan bir Vector olsa da, bu işe yarar. Aslında, <code>T</code> taban türüne sahip bir Vector öğesini, <code>T</code> üst sınıfı olan bir taban sınıfına sahip Vector öğesine dönüştürmenin tek yolu budur.</p>
+	 
+	 <p>Örneğin şu kod, bir Vector atamaya çalıştığı için katı modda bir derleme hatası; çalışma zamanında ise bir TypeError hatası verir.Vector öğesine &lt;Sprite>.&lt;DisplayObject> değişkeni (Sprite, DisplayObject öğesinin bir alt sınıfıdır):</p>
+	 
+	 <div class="listing"><pre>
+     var v1:Vector.&lt;Sprite&gt; = new Vector.&lt;Sprite&gt;();
+     v1[0] = new Sprite();
+     var v2:Vector.&lt;DisplayObject&gt; = v1;
+     </pre></div>
+	 
+	 <p>Kodun şu alternatif sürümü, Vector örneğinin öğelerini başarıyla kopyalar.Vector öğesine &lt;Sprite> örneği.&lt;DisplayObject> örneği:</p>
+	 
+	 <div class="listing"><pre>
+     var v1:Vector.&lt;Sprite&gt; = new Vector.&lt;Sprite&gt;();
+     v1[0] = new Sprite();
+     var v2:Vector.&lt;DisplayObject&gt; = Vector.&lt;DisplayObject&gt;(v1);
+     </pre></div>
+	 
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">sourceArray</span>:<a href="Object.html">Object</a></code> &mdash; Öğeleri sonuç Vector örneğinin öğesi olan bir Array veya Vector örneği. Argüman, ilişkilendirilmiş veri türü belirtilen veri türüyle aynı olan bir Vector örneğiyse, işlev sonucu olarak bu argüman döndürülür.
+	 
+	 </td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Vector.html">Vector</a>.&lt;T&gt;</code> &mdash; <code>sourceArray</code> dizisinin öğeleriyle doldurulmuş bir Vector örneği.
+	 
+	 </td></tr></table><br/><span class="label">Atar</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="TypeError.html">TypeError</a> </code> &mdash; <code>sourceArray</code> argümanı, belirtilen veri türüne dönüştürülemeyen bir öğe içeriyorsa.
+	 
+	 </td></tr></table><p><span class="label">İlgili API Öğeleri</span></p><div class="seeAlso"><a href="Vector.html" target="">Vector sınıfı</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="XML()" id="XML()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="XML(Object)" id="XML(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>XML</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function XML(expression:<a href="Object.html">Object</a>):<a href="XML.html">XML</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Bir nesneyi bir XML nesnesine dönüştürür. 
+	 <p>Şu tablo, çeşitli girdi türlerinin dönüş değerlerini açıklar.</p>
+	 	<table class="innertable" ><tr><th>Parametre Türü</th><th>Dönüş Değeri</th></tr><tr><td>Boolean</td><td>Değer ilk olarak bir dizeye ve ardından bir XML nesnesine dönüştürülür.</td></tr><tr><td>Null</td><td>Bir çalışma zamanı hatası oluşur (TypeError istisnası).</td></tr><tr><td>Number</td><td>Değer ilk olarak bir dizeye ve ardından bir XML nesnesine dönüştürülür.</td></tr><tr><td>Object</td><td>Yalnızca değer bir String, Number veya Boolean değeriyse, XML'e dönüştürür. Aksi takdirde bir çalışma zamanı hatası oluşur (TypeError istisnası).</td></tr><tr><td>String</td><td>Değer XML'e dönüştürülür.</td></tr><tr><td>Undefined</td><td>Bir çalışma zamanı hatası oluşur (TypeError istisnası).</td></tr><tr><td>XML</td><td>Girdi değeri değiştirilmeden döndürülür.</td></tr><tr><td>XMLList</td><td>Ancak XMLList nesnesi XML türünde bir özellik içerirse bir XML nesnesi döndürür. Aksi takdirde bir çalışma zamanı hatası oluşur (TypeError istisnası).</td></tr></table>
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">expression</span>:<a href="Object.html">Object</a></code> &mdash; XML'e dönüştürülecek nesne.
+	 </td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="XML.html">XML</a></code> &mdash; Dönüştürülen nesne için tutulan değerleri içeren bir XML nesnesi.
+	 </td></tr></table><p><span class="label">İlgili API Öğeleri</span></p><div class="seeAlso"><a href="package.html#XMLList()" target="">XMLList()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="XMLList()" id="XMLList()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="XMLList(Object)" id="XMLList(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>XMLList</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">işlev</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function XMLList(expression:<a href="Object.html">Object</a>):<a href="XMLList.html">XMLList</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Dil Sürümü:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Çalışma Zamanı Sürümleri:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     Bir nesneyi bir XMLList nesnesine dönüştürür.
+     <p>Şu tablo, çeşitli girdi türlerinin dönüş değerlerini açıklar.</p>
+	 <table class="innertable" ><tr><th>Parametre Türü</th><th>Dönüş Değeri</th></tr><tr><td>Boolean</td><td>Değer ilk olarak bir dizeye ve ardından bir XMLList nesnesine dönüştürülür.</td></tr><tr><td>Null</td><td>Bir çalışma zamanı hatası oluşur (TypeError istisnası).</td></tr><tr><td>Number</td><td>Değer ilk olarak bir dizeye ve ardından bir XMLList nesnesine dönüştürülür.</td></tr><tr><td>Object</td><td>Yalnızca değer bir String, Number veya Boolean değeriyse, XMLList'e dönüştürür. Aksi takdirde bir çalışma zamanı hatası oluşur (TypeError istisnası).</td></tr><tr><td>String</td><td>Değer bir XMLList nesnesine dönüştürülür.</td></tr><tr><td>Undefined</td><td>Bir çalışma zamanı hatası oluşur (TypeError istisnası).</td></tr><tr><td>XML</td><td>Değer bir XMLList nesnesine dönüştürülür.</td></tr><tr><td>XMLList</td><td>Girdi değeri değiştirilmeden döndürülür.</td></tr></table>
+	 </p><p><span class="label"> Parametreler </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">expression</span>:<a href="Object.html">Object</a></code> &mdash; XMLList nesnesine dönüştürülecek nesne.
+	 </td></tr></table></p><p></p><span class="label">Döndürür</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="XMLList.html">XMLList</a></code> &mdash; Dönüştürülen nesnede tutulan değerleri içeren bir XMLList nesnesi.
+	 </td></tr></table><p><span class="label">İlgili API Öğeleri</span></p><div class="seeAlso"><a href="package.html#XML()" target="">XML()</a></div></div></span><p></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 01:25 PM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/tr_TR/legalnotices/index.html">Yasal Uyarılar</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Çevrimiçi Gizlilik İlkesi</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">Niçin İngilizce?</span>
+				</div>
+				<div class="white_content_body">
+					<b>ActionScript 3.0 Başvurusu'ndaki içerik İngilizce görünür</b><br><br>
+					ActionScript 3.0 Başvurusu'nun tüm bölümleri tüm dillere çevrilmemiştir. Bir dil öğesi çevrilmediğinde İngilizce görünür. Örneğin, ga.controls.HelpBox sınıfı hiçbir dile çevrilmez. Bu nedenle, başvurunun Türkçe versiyonunda ga.controls.HelpBox sınıfı İngilizce görünür.
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 01:25 PM Z  -->

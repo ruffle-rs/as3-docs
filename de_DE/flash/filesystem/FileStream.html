@@ -1,0 +1,900 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="ActionScript&reg; 3.0 Referenzhandbuch für die Adobe&reg; Flash&reg;-Plattform"><meta name="lang" content="de-de"><meta name="runtime" content="air"><meta name="runtimever" content="air:1.0"><meta name="product" content="air"><meta name="productver" content="air:1.0"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../asfilter.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="FileStream,flash.filesystem.FileStream,bytesAvailable,endian,objectEncoding,position,readAhead,close,open,openAsync,readBoolean,readByte,readBytes,readDouble,readFloat,readInt,readMultiByte,readObject,readShort,readUTF,readUTFBytes,readUnsignedByte,readUnsignedInt,readUnsignedShort,truncate,writeBoolean,writeByte,writeBytes,writeDouble,writeFloat,writeInt,writeMultiByte,writeObject,writeShort,writeUTF,writeUTFBytes,writeUnsignedInt"><title>FileStream - Adobe ActionScript&reg; 3 (AS3 ) API-Referenz</title>
+		<link rel="stylesheet" href="../../filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="../../filter_new.css" type="text/css">
+			
+		<script src="../../jquery.js" type="text/javascript"></script>
+		<script src="../../s_chl_code.js" type="text/javascript"></script>
+		<script src="../../jquery.zclip.js" type="text/javascript"></script>
+		<script src="../../jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="../../cookies.js" type="text/javascript"></script>
+		<script src="../../asdoc.js" type="text/javascript"></script>
+		<script src="../../iscroll.js" type="text/javascript"></script>
+		<script src="../../AC_OETags.js" type="text/javascript"></script>
+		<script src="../../omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "Laufzeitumgebungen";
+			var productsLabel = "Produkte";
+			var noneLabel = "Keine";
+			var qsearchBoxLabel = "Schnellsuche";
+			var qsearchText = "Begriff nicht gefunden";
+			var ajaxErrorMsg="Fehler beim Laden der Seite";
+			var ajaxErrorTryMsg="Wiederholen";
+			var ajaxLoadingMsg="Ladevorgang läuft noch";
+			var cancelMsg = "Abbrechen";
+			var classesText = "Klassen";
+			var strJiveReply = "Diese Frage wurde zu folgendem Artikel gestellt: "
+			var showFilters = "Filter anzeigen";
+			var hideFilters = "Filter ausblenden";
+			
+		
+			var baseRef = "../../";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											ActionScript<sup>&reg;</sup> 3.0 Referenzhandbuch für die Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup>-Plattform<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="../../index.html"> Home </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="FileStream.html#top" style="display:">Liste der Pakete und Klassen einblenden</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="FileStream.html#top" style="display:none">Liste der Pakete und Klassen ausblenden</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="../../package-summary.html"> Pakete </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../class-summary.html"> Klassen </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../whatsnew.html"> Neue Funktionen </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../all-index-Symbols.html"> Stichwortverzeichnis </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../appendixes.html"> Anhänge </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Warum auf Englisch?</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/de_DE/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('../../')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('../../')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="../../help.js"></script>
+						<script language="javascript" type="text/javascript" src="../../asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="../../filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>Filter:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">Daten werden vom Server abgerufen...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">Daten werden vom Server abgerufen...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="FileStream.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">flash.filesystem&nbsp;</a><br>
+								<h1 id="classProductName">FileStream&nbsp; - AS3 </h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="FileStream.html#propertySummary" style="display:none"> Eigenschaften </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="FileStream.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Eigenschaften </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="FileStream.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Konstruktor </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="FileStream.html#methodSummary" style="display:none"> Methoden </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="FileStream.html#constantSummary" style="display:none"> Globale Konstanten </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="FileStream.html#eventSummary" style="display:none"> Ereignisse </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="FileStream.html#styleSummary" style="display:none"> Stile </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="FileStream.html#SkinPartSummary" style="display:none"> Skinteile </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="FileStream.html#SkinStateSummary" style="display:none"> Skinstatus </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="FileStream.html#effectSummary" style="display:none"> Effekte </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="FileStream.html#constantSummary" style="display:none"> Konstanten </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="FileStream.html#methodSummary" style="display:none"> Globale Funktionen </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="FileStream.html#methodSummary" style="display:none">Funktionen</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="FileStream.html#interfaceSummary" style="display:none"> Schnittstellen </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="FileStream.html#classSummary" style="display:none"> Klassen </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="FileStream.html#includeExamplesSummary" style="display:none"> Beispiele </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="FileStream.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								Klassen
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Paket</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">flash.filesystem</a></td></tr><tr><td class="classHeaderTableLabel">Klasse</td><td class="classSignature">public  class  FileStream</td></tr><tr><td class="classHeaderTableLabel">Vererbung</td><td class="inheritanceList">FileStream  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../Object.html">Object</a></td></tr><tr><td class="classHeaderTableLabel">Implementiert</td><td> <a href="../utils/IDataInput.html">IDataInput</a>,  <a href="../utils/IDataOutput.html">IDataOutput</a></td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p></p>
+ Ein FileStream-Objekt wird zum Lesen und Schreiben von Dateien verwendet. Dateien können durch einen Aufruf der <code>open()</code>-Methode synchron geöffnet werden oder asynchron durch einen Aufruf der <code>openAsync()</code>-Methode.
+ 
+ <p>Der Vorteil beim asynchronen Öffnen liegt darin, dass anderer Code ausgeführt werden kann, während Adobe AIR Lese- und Schreibvorgänge im Hintergrund ausführt. Beim asynchronen Öffnen werden <code>progress</code>-Ereignisse ausgelöst, während die Vorgänge fortschreiten.</p>
+ 
+               <p>Ein synchron geöffnetes File-Objekt verhält sich in vielem wie ein ByteArray-Objekt; eine asynchron geöffnetes File-Objekt verhält sich dagegen eher wie ein Socket- oder URLStream-Objekt. Wenn ein File-Objekt synchron geöffnet wird, hält der Aufrufer an, während die angeforderten Daten aus der zugrundeliegenden Datei gelesen bzw. in die Datei geschrieben werden. Wurde die Datei asynchron geöffnet, werden in den Stream geschriebene Daten sofort gepuffert und später in die Datei geschrieben.</p>
+ 
+               <p>Sowohl beim synchronen als auch beim asynchronen Lesen aus einer Datei ist die tatsächliche Lesemethode synchron. In beiden Fällen wird aus Daten gelesen, die zurzeit „verfügbar“ sind. Der Unterschied ist, dass beim synchronen Lesen alle Daten jederzeit verfügbar sind, wohingegen beim asynchronen Lesen Daten nach und nach verfügbar sind, während die Daten in den Lesepuffer gestreamt werden. In beiden Fällen werden die Daten, die derzeit synchron gelesen werden können, durch die <code>bytesAvailable</code>-Eigenschaft repräsentiert.</p>
+ 
+               <p>Eine Anwendung, die asynchrone Eingaben verarbeitet, registriert sich normalerweise für <code>progress</code>-Ereignisse und nimmt die Daten auf, wenn sie verfügbar sind, indem sie Lesemethoden aufruft. Alternativ dazu kann eine Anwendung auch einfach warten, bis alle Daten verfügbar sind, indem sie sich für das <code>complete</code>-Ereignis registriert, und die gesamten Daten verarbeiten, wenn das <code>complete</code>-Ereignis ausgelöst wird. </p>
+ 
+            <p></p><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary" id="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Öffentliche Eigenschaften</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="FileStream.html#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Vererbte öffentliche Eigenschaften ausblenden</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="FileStream.html#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Vererbte öffentliche Eigenschaften anzeigen</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Eigenschaft</th><th>Definiert von</th></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#bytesAvailable" class="signatureLink">bytesAvailable</a> : <a href="../../uint.html">uint</a><div class="summaryTableDescription">[schreibgeschützt] 
+	
+     Gibt für die zum Lesen verfügbaren Daten im Eingabepuffer die Anzahl der Byte an.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="../../Object.html#constructor" class="signatureLink">constructor</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">
+	 Ein Verweis auf das Klassenobjekt oder die Konstruktorfunktion für eine angegebene Objektinstanz.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#endian" class="signatureLink">endian</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">
+	
+     Die Bytereihenfolge der Daten. Entweder die Konstante BIG_ENDIAN oder LITTLE_ENDIAN der Endian-Klasse.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#objectEncoding" class="signatureLink">objectEncoding</a> : <a href="../../uint.html">uint</a><div class="summaryTableDescription">
+     Gibt an, ob das Format AMF3 oder AMF0 verwendet wird, wenn binäre Daten mit der readObject()-Methode gelesen oder mit der writeObject()-Methode geschrieben werden.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#position" class="signatureLink">position</a> : <a href="../../Number.html">Number</a><div class="summaryTableDescription">
+	 Die aktuelle Position in der Datei. </div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readAhead" class="signatureLink">readAhead</a> : <a href="../../Number.html">Number</a><div class="summaryTableDescription">
+	 Die Mindestmenge Daten, die beim asynchronen Lesen von Dateien von der Festplatte gelesen werden.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary" id="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Öffentliche Methoden </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="FileStream.html#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Vererbte öffentliche Methoden ausblenden</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="FileStream.html#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Vererbte öffentliche Methoden anzeigen</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Methode</th><th>Definiert von</th></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#FileStream()" class="signatureLink">FileStream</a>()</div><div class="summaryTableDescription">
+	 Erstellt ein FileStream-Objekt.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#addEventListener()" class="signatureLink">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	Registriert ein Ereignis-Listener-Objekt bei einem EventDispatcher-Objekt, sodass der Listener über ein Ereignis benachrichtigt wird.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#close()" class="signatureLink">close</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 Schließt das FileStream-Objekt.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	Sendet ein Ereignis in den Ereignisablauf.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	Überprüft, ob das EventDispatcher-Objekt Listener für einen bestimmten Ereignistyp registriert hat.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#hasOwnProperty()" class="signatureLink">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Gibt an, ob für ein Objekt eine bestimmte Eigenschaft definiert wurde.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#isPrototypeOf()" class="signatureLink">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Gibt an, ob eine Instanz der Object-Klasse in der Prototypkette des Objekts vorhanden ist, das als Parameter angegeben wurde.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#open()" class="signatureLink">open</a>(file:<a href="File.html">File</a>, fileMode:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 Öffnet das FileStream-Objekt synchron, wobei auf die im file-Parameter festgelegte Datei verwiesen wird.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#openAsync()" class="signatureLink">openAsync</a>(file:<a href="File.html">File</a>, fileMode:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 Öffnet das FileStream-Objekt asynchron, wobei auf die im file-Parameter festgelegte Datei verwiesen wird.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#propertyIsEnumerable()" class="signatureLink">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Gibt an, ob die angegebene Eigenschaft vorhanden ist und durchlaufen werden kann.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readBoolean()" class="signatureLink">readBoolean</a>():<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	
+     Liest einen booleschen Wert vom Dateistream, Bytestream oder Bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readByte()" class="signatureLink">readByte</a>():<a href="../../int.html">int</a></div><div class="summaryTableDescription">
+	
+     Liest ein vorzeichenbehaftetes Byte vom Dateistream, Bytestream oder Bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readBytes()" class="signatureLink">readBytes</a>(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:<a href="../../uint.html">uint</a> = 0, length:<a href="../../uint.html">uint</a> = 0):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Liest die Anzahl der vom length-Parameter angegebenen Datenbyte aus dem Dateistream, Bytestream oder Bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readDouble()" class="signatureLink">readDouble</a>():<a href="../../Number.html">Number</a></div><div class="summaryTableDescription">
+	
+     Liest eine IEEE 754-Gleitkommazahl mit doppelter Genauigkeit vom Dateistream, Bytestream oder Bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readFloat()" class="signatureLink">readFloat</a>():<a href="../../Number.html">Number</a></div><div class="summaryTableDescription">
+	
+     Liest eine IEEE 754-Gleitkommazahl mit einfacher Genauigkeit vom Dateistream, Bytestream oder Bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readInt()" class="signatureLink">readInt</a>():<a href="../../int.html">int</a></div><div class="summaryTableDescription">
+	
+     Liest eine vorzeichenbehaftete 32-Bit-Ganzzahl vom Dateistream, Bytestream oder Bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readMultiByte()" class="signatureLink">readMultiByte</a>(length:<a href="../../uint.html">uint</a>, charSet:<a href="../../String.html">String</a>):<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	
+     Liest einen Multibyte-String der angegebenen Länge unter Verwendung des angegebenen Zeichensatzes vom Dateistream, Bytestream oder Bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readObject()" class="signatureLink">readObject</a>():<a href="../../specialTypes.html#*">*</a></div><div class="summaryTableDescription">
+	
+     Liest ein Objekt vom Dateistream, Bytestream oder Bytearray, das im serialisierten AMF-Format kodiert ist.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readShort()" class="signatureLink">readShort</a>():<a href="../../int.html">int</a></div><div class="summaryTableDescription">
+	
+     Liest eine vorzeichenbehaftete 16-Bit-Ganzzahl vom Dateistream, Bytestream oder Bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readUnsignedByte()" class="signatureLink">readUnsignedByte</a>():<a href="../../uint.html">uint</a></div><div class="summaryTableDescription">
+	
+     Liest ein vorzeichenloses Byte vom Dateistream, Bytestream oder Bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readUnsignedInt()" class="signatureLink">readUnsignedInt</a>():<a href="../../uint.html">uint</a></div><div class="summaryTableDescription">
+	
+     Liest eine vorzeichenlose 32-Bit-Ganzzahl vom Dateistream, Bytestream oder Bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readUnsignedShort()" class="signatureLink">readUnsignedShort</a>():<a href="../../uint.html">uint</a></div><div class="summaryTableDescription">
+	
+     Liest eine vorzeichenlose 16-Bit-Ganzzahl vom Dateistream, Bytestream oder Bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readUTF()" class="signatureLink">readUTF</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	
+     Liest einen UTF-8-String vom Dateistream, Bytestream oder Bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#readUTFBytes()" class="signatureLink">readUTFBytes</a>(length:<a href="../../uint.html">uint</a>):<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	
+     Liest eine Folge von UTF-8-Byte der Anzahl vom Byte-Datenstrom oder Bytearray und gibt einen String zurück.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#removeEventListener()" class="signatureLink">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	Entfernt einen Listener aus dem EventDispatcher-Objekt.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#setPropertyIsEnumerable()" class="signatureLink">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     Legt die Verfügbarkeit einer dynamischen Eigenschaft für Schleifenoperationen fest.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toLocaleString()" class="signatureLink">toLocaleString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 Gibt die Stringdarstellung dieses Objekts zurück, formatiert entsprechend den Konventionen des Gebietsschemas.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toString()" class="signatureLink">toString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 Gibt das angegebene Objekt als String zurück.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#truncate()" class="signatureLink">truncate</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 Schneidet die Datei an der Stelle ab, die durch die position-Eigenschaft des FileStream-Objekts angegeben wird.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#valueOf()" class="signatureLink">valueOf</a>():<a href="../../Object.html">Object</a></div><div class="summaryTableDescription">
+	 Gibt den Grundwert des angegebenen Objekts zurück.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	Überprüft, ob bei diesem EventDispatcher-Objekt oder bei einem seiner Vorgänger ein Ereignis-Listener für einen bestimmten Ereignistyp registriert ist.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeBoolean()" class="signatureLink">writeBoolean</a>(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schreibt einen booleschen Wert.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeByte()" class="signatureLink">writeByte</a>(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schreibt ein Byte.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeBytes()" class="signatureLink">writeBytes</a>(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:<a href="../../uint.html">uint</a> = 0, length:<a href="../../uint.html">uint</a> = 0):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schreibt eine Bytesequenz vom angegebenen Byte-Array in den Dateistream, Bytestream oder das Byte-Array, beginnend mit dem durch „offset“ festgelegten Byte (unter Verwendung einer auf null basierenden Indexposition) mit einer durch „length“ festgelegten Länge.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeDouble()" class="signatureLink">writeDouble</a>(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schreibt eine Gleitkommazahl nach IEEE 754 mit doppelter Genauigkeit (64 Bit).</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeFloat()" class="signatureLink">writeFloat</a>(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schreibt eine Gleitkommazahl nach IEEE 754 mit einfacher Genauigkeit (32 Bit).</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeInt()" class="signatureLink">writeInt</a>(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schreibt eine vorzeichenbehaftete 32-Bit-Ganzzahl.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeMultiByte()" class="signatureLink">writeMultiByte</a>(value:<a href="../../String.html">String</a>, charSet:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schreibt einen Multibyte-String unter Verwendung des angegebenen Zeichensatzes in den Dateistream, Bytestream oder Bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeObject()" class="signatureLink">writeObject</a>(object:<a href="../../specialTypes.html#*">*</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schreibt ein Objekt im serialisierten AMF-Format in den Dateistream, Bytestream oder Bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeShort()" class="signatureLink">writeShort</a>(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schreibt eine 16-Bit-Ganzzahl.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeUnsignedInt()" class="signatureLink">writeUnsignedInt</a>(value:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schreibt eine vorzeichenlose 32-Bit-Ganzzahl.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeUTF()" class="signatureLink">writeUTF</a>(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schreibt einen UTF-8-String in den Dateistream, Bytestream oder Bytearray.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#writeUTFBytes()" class="signatureLink">writeUTFBytes</a>(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	
+     Schreibt einen UTF-8-String.</div></td><td class="summaryTableOwnerCol">FileStream</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary" id="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Ereignisse</div><div class="showHideLinks"><a href="http://help.adobe.com/de_DE/Flex/4.6/UsingSDK/WS2db454920e96a9e51e63e3d11c0bf69084-7ee9.html" target="_blank">Klicken Sie, um weitere Informationen zu Ereignissen zu erhalten.</a></div><div class="showHideLinks"><div id="hideInheritedEvent" class="hideInheritedEvent"><a class="showHideLink" href="FileStream.html#eventSummary" onclick="javascript:setInheritedVisible(false,'Event');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Vererbte Ereignisse ausblenden</a></div><div id="showInheritedEvent" class="showInheritedEvent"><a class="showHideLink" href="FileStream.html#eventSummary" onclick="javascript:setInheritedVisible(true,'Event');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Vererbte Ereignisse anzeigen</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Ereignis</th><th> Übersicht </th><th>Definiert von</th></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[broadcast event] Wird ausgelöst, wenn Flash Player oder eine AIR-Anwendung den Betriebssystemfokus erhält und aktiv wird.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#event:close" class="signatureLink">close</a></div></td><td class="summaryTableDescription summaryTableCol">Gibt an, dass der Stream durch einen ausdrücklichen Aufruf der close()-Methode geschlossen wurde.</td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#event:complete" class="signatureLink">complete</a></div></td><td class="summaryTableDescription summaryTableCol">Gibt an, dass das Ende des Streams erreicht wurde.</td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[broadcast event] Wird ausgelöst, wenn Flash Player- oder die AIR-Anwendung den Fokus verliert und inaktiv wird.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#event:ioError" class="signatureLink">ioError</a></div></td><td class="summaryTableDescription summaryTableCol">Gibt an, dass bei einem asynchronen Datei-E/A-Vorgang ein Fehler aufgetreten ist.</td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#event:outputProgress" class="signatureLink">outputProgress</a></div></td><td class="summaryTableDescription summaryTableCol">Gibt an, dass gepufferte Daten in die Datei geschrieben wurden.</td><td class="summaryTableOwnerCol">FileStream</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="FileStream.html#event:progress" class="signatureLink">progress</a></div></td><td class="summaryTableDescription summaryTableCol">Gibt an, dass neue Daten im Stream verfügbar sind.</td><td class="summaryTableOwnerCol">FileStream</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Eigenschaftendetails</div><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="bytesAvailable" id="bytesAvailable"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>bytesAvailable</h3></td><td class="detailHeaderType">Eigenschaft</td></tr></table><div class="detailBody"><code>bytesAvailable:<a href="../../uint.html">uint</a></code>&nbsp;&nbsp;[schreibgeschützt] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Gibt für die zum Lesen verfügbaren Daten im Eingabepuffer die Anzahl der Byte an. Aus dem Programmcode der Benutzer muss <code>bytesAvailable</code> aufgerufen werden, um sicherzustellen, dass genügend Daten verfügbar sind, bevor diese mit einer der Lesemethoden gelesen werden.
+     </p><br/><br/><span class="label"> Implementierung </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get bytesAvailable():<a href="../../uint.html">uint</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="endian" id="endian"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>endian</h3></td><td class="detailHeaderType">Eigenschaft</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>endian:<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Die Bytereihenfolge der Daten. Entweder die Konstante <code>BIG_ENDIAN</code> oder <code>LITTLE_ENDIAN</code> der Endian-Klasse.
+     
+     </p><br/><br/><span class="label"> Implementierung </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get endian():<a href="../../String.html">String</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set endian(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="objectEncoding" id="objectEncoding"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>objectEncoding</h3></td><td class="detailHeaderType">Eigenschaft</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>objectEncoding:<a href="../../uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+     Gibt an, ob das Format AMF3 oder AMF0 verwendet wird, wenn binäre Daten mit der <code>readObject()</code>-Methode gelesen oder der <code>writeObject()</code>-Methode geschrieben werden.
+	 
+	 <p>Der Wert ist eine Konstante der ObjectEncoding-Klasse. Standardmäßig wird das Format AMF3 verwendet.</p>
+	 
+	 </p><br/><br/><span class="label"> Implementierung </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get objectEncoding():<a href="../../uint.html">uint</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set objectEncoding(value:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></code><br/><p><span class="label">Verwandte API-Elemente</span></p><div class="seeAlso"><a href="../net/ObjectEncoding.html" target="">ObjectEncoding</a><br/><a href="FileStream.html#readObject()" target="">readObject()</a><br/><a href="FileStream.html#writeObject()" target="">writeObject()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="position" id="position"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>position</h3></td><td class="detailHeaderType">Eigenschaft</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>position:<a href="../../Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 Die aktuelle Position in der Datei.  
+	 
+	 <p>Dieser Wert wird auf eine der folgenden Weise geändert:</p>
+	 
+	 <ul><li>Wenn Sie die Eigenschaft ausdrücklich festlegen</li><li>Wenn aus dem FileStream-Objekt gelesen wird (mit einer der Lesemethoden)</li><li>Wenn in das FileStream-Objekt geschrieben wird</li></ul>
+	 
+	 <p>Die Position wird als Number (nicht als uint) definiert, um Dateien mit einer Länge von mehr als 2<sup>32</sup> Byte zu unterstützen. Der Wert dieser Eigenschaft ist immer eine ganze Zahl unter 2<sup>53</sup>. Wenn Sie diesen Wert auf eine Zahl mit Dezimalstellen einstellen, wird der Wert auf die nächste ganze Zahl abgerundet.</p>
+	 
+	 <p>Wenn die <code>position</code>-Eigenschaft beim asynchronen Lesen einer Datei festgelegt wird, beginnt die Anwendung, den Lesepuffer mit den Daten ab der angegebenen Position zu füllen und die <code>bytesAvailable</code>-Eigenschaft kann auf 0 gesetzt werden. Warten Sie auf ein <code>complete</code>-Ereignis, bevor Sie eine read-Methode zum Lesen der Daten verwenden oder warten Sie auf ein <code>progress</code>-Ereignis und überprüfen Sie die <code>bytesAvailable</code>-Eigenschaft, bevor Sie eine read-Methode verwenden.</p>
+	  
+	 </p><br/><br/><span class="label"> Implementierung </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get position():<a href="../../Number.html">Number</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set position(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code><br/><span id="pageFilter"><br/><span class="label"> Beispiel &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_de"> Verwendung dieses Beispiels </a></span>)
+            </span><br/><div class="detailBody"> Im folgenden Beispiel wird die <code>position</code>-Eigenschaft des FileStream-Objekts aktualisiert, während die Anwendung Daten aus einer Datei liest.
+<div class="listing"><pre>
+import flash.fileSystem.*;
+import flash.utils.ByteArray;
+import flash.events.Event;
+
+var sourceFile:File = File.documentsDirectory.resolvePath("Apollo Test/test.txt");
+var stream:FileStream = new FileStream();
+stream.addEventListener(Event.COMPLETE, readBytes);
+stream.openAsync(sourceFile, FileMode.READ);
+
+function readBytes(e:Event):void {
+    var bytes:ByteArray = new ByteArray();
+    trace("position 0:", stream.position); // 0
+    bytes[0] = stream.readByte();
+    trace("position 1:", stream.position); // 1
+    fileStream.readBytes(bytes, stream.position, 4); 
+    trace("position 2:", stream.position); // 5
+    stream.close();
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail" id="propertyDetail"></a><a name="readAhead" id="readAhead"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>readAhead</h3></td><td class="detailHeaderType">Eigenschaft</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>readAhead:<a href="../../Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 Die Mindestmenge Daten, die beim asynchronen Lesen von Dateien von der Festplatte gelesen werden.
+	 
+	 <p>Diese Eigenschaft legt fest, wie viele Daten ein asynchroner Stream hinter der aktuellen Position zu lesen versucht. Daten werden in Blöcken gelesen, die auf der Seitengröße des Dateisystems basieren. Wenn Sie also <code>readAhead</code> auf einem Computersystem mit einer Seitengröße von 8KB (8192 Byte) auf 9.000 setzen, liest die Laufzeitumgebung jeweils 2 Blöcke, oder 16384 Bytes, voraus. Der Standardwert dieser Eigenschaft ist unendlich; standardmäßig wird eine zum asynchronen Lesen geöffnete Datei bis zum Ende der Datei gelesen.</p>
+	 
+	 <p>Das Lesen der Daten aus dem Lesepuffer ändert nicht den Wert der <code>readAhead</code>-Eigenschaft. Wenn Sie Daten aus dem Puffer lesen, werden neue Daten eingelesen, um den Lesepuffer zu füllen. 
+	  </p>
+	 
+	 <p>Die <code>readAhead</code>-Eigenschaft hat keine Auswirkung auf eine synchron geöffnete Datei.</p>
+	 
+	 <p>Während Daten asynchron eingelesen werden, löst das FileStream-Objekt <code>progress</code>-Ereignisse aus. Überprüfen Sie in der Ereignisprozedurmethode des <code>progress</code>-Ereignisses, ob die erforderliche Anzahl an Bytes verfügbar ist (indem Sie die <code>bytesAvailable</code>-Eigenschaft überprüfen) und lesen Sie die Daten dann mit einer Lesemethode aus dem Lesepuffer.</p>
+	 
+	 </p><br/><br/><span class="label"> Implementierung </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get readAhead():<a href="../../Number.html">Number</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set readAhead(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code><br/><span id="pageFilter"><br/><span class="label"> Beispiel &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_de"> Verwendung dieses Beispiels </a></span>)
+            </span><br/><div class="detailBody">     Im folgenden Beispiel wird mit der <code>readAhead</code>-Eigenschaft die Datenmenge, die in eine Datei gelesen wird, auf 100 Byte begrenzt:
+<div class="listing"><pre>
+import flash.filesystem.*;
+
+var file:File = File.desktopDirectory.resolvePath("test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.readAhead = 100;
+fileStream.addEventListener(ProgressEvent.PROGRESS, readProgressHandler)
+fileStream.openAsync(file, FileMode.READ);
+var results:ByteArray;
+
+function readProgressHandler(event:ProgressEvent):void {
+    if (fileStream.bytesAvailable &gt;= 100) {
+        fileStream.readBytes(results, 0, 100);
+    }
+}
+</pre></div></div></span></div></span><a name="constructorDetail" id="constructorDetail"></a><div class="detailSectionHeader">Konstruktordetails</div><span id="pageFilter" runtime="AIR::1.0##"><a name="FileStream()" id="FileStream()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>FileStream</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Konstruktor</td></tr></table><div class="detailBody"><code>public function FileStream()</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p>
+	 Erstellt ein FileStream-Objekt. Verwenden Sie die <code>open()</code>- oder <code>openAsync()</code>-Methode, um eine Datei zu öffnen.
+	 
+	 </p><p><span class="label">Verwandte API-Elemente</span></p><div class="seeAlso"><a href="FileStream.html#open()" target="">open()</a><br/><a href="FileStream.html#openAsync()" target="">openAsync()</a></div></div></span><a name="methodDetail" id="methodDetail"></a><div class="detailSectionHeader">Methodendetails</div><span id="pageFilter" runtime="AIR::1.0##"><a name="close()" id="close()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;close</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td></tr></table><div class="detailBody"><code> public function close():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 Schließt das FileStream-Objekt. 
+	 
+	 <p>Nach dem Aufrufen der <code>close()</code>-Methode können Sie keine Daten mehr lesen oder schreiben. Wenn die Datei asynchron geöffnet wurde (das FileStream-Objekt hat die Datei mit der <code>openAsync()</code>-Methode geöffnet), löst das Objekt nach dem Aufruf der <code>close()</code>-Methode ein <code>close</code>-Ereignis aus. </p>
+	 
+	 <p>Beim Schließen der Anwendung werden automatisch alle Dateien, die mit FileStream-Objekten in der Anwendung verknüpft sind, geschlossen. Am besten registrieren Sie ein <code>closed</code>-Ereignis für alle asynchron geöffneten FileStream-Objekte, in die noch Daten geschrieben werden müssen, bevor die Anwendung geschlossen wird (um sicherzustellen, dass die Daten geschrieben werden).</p>
+	 
+	 <p>Sie können das FileStream-Objekt erneut verwenden, indem Sie die <code>open()</code>- oder <code>openAsync()</code>-Methode aufrufen. Damit werden alle Dateien geschlossen, die dem FileStream-Objekt zugewiesen sind, das Objekt löst jedoch nicht das <code>close</code>-Ereignis aus.</p>
+	 
+	 <p>Wenn ein FileStream-Objekt asynchron geöffnet wurde (mit der <code>openAsync()</code>-Methode), wird es nicht (durch den Garbagekollektor) aus dem Speichermanagement entfernt, solange noch ausstehende Vorgänge vorliegen und für deren Abschluss Ereignisprozeduren registriert sind. Dies gilt auch dann, wenn Sie das <code>close()</code>-Ereignis für ein FileStream-Objekt aufrufen und Eigenschaften und Variablen löschen, die auf das Objekt verweisen. Ein sonst nicht referenziertes FileStream-Objekt bleibt bestehen, solange eine der folgenden Situationen eintreten kann: </p>
+	 
+	 <ul><li>Bei Lesevorgängen wurde das Ende der Datei nicht erreicht (und das <code>complete</code>-Ereignis wurde nicht ausgelöst). </li><li>Es stehen noch zu schreibende Ausgabedaten zur Verfügung und ausgabebezogene Ereignisse (zum Beispiel das <code>outputProgress</code>-Ereignis oder das <code>ioError</code>-Ereignis) haben Ereignis-Listener registriert. </li></ul>
+	 
+	 </p><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>close</b>:<a href="../events/Event.html"><code>Event</code></a></code> &mdash; Die Datei, die asynchron geöffnet wurde, wird geschlossen.
+	 
+	 </td></tr></table><p><span class="label">Verwandte API-Elemente</span></p><div class="seeAlso"><a href="FileStream.html#open()" target="">open()</a><br/><a href="FileStream.html#event:close" target="">close-Ereignis</a></div><span id="pageFilter"><br/><span class="label"> Beispiel &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_de"> Verwendung dieses Beispiels </a></span>)
+            </span><br/><br/><div class="detailBody">     Im folgenden Beispiel wird ein FileStream-Objekt <i>asynchron</i> geöffnet und eine Textdatei mit dem Namen „test.txt“ in den Unterordner „Apollo Test“ in den Dokumentordner des Benutzers geschrieben. Ein Aufruf der <code>close()</code>-Methode des FileStream-Objekts schließt die Datei, wenn die Daten geschrieben wurden. 
+<div class="listing"><pre>
+import flash.filesystem.*;
+import flash.events.Event;
+            
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.openAsync(file, FileMode.WRITE);
+fileStream.writeUTFBytes("Hello");
+fileStream.addEventListener(Event.CLOSE, fileClosed);
+fileStream.close();
+
+function fileClosed(event:Event):void {
+    trace("closed");
+}            
+</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody">     Im folgenden Beispiel wird ein FileStream-Objekt <i>synchron</i> geöffnet und eine Textdatei mit dem Namen „test.txt“ in den Unterordner „Apollo Test“ in den Dokumentordner des Benutzers geschrieben. Ein Aufruf der <code>close()</code>-Methode des FileStream-Objekts schließt die Datei, wenn die Daten geschrieben wurden.
+<div class="listing"><pre>
+import flash.filesystem.*;
+            
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.open(file, FileMode.WRITE);
+fileStream.writeUTF("Hello");
+fileStream.close();
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="open()" id="open()"></a><a name="open(flash.filesystem.File,String)" id="open(flash.filesystem.File,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;open</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function open(file:<a href="File.html">File</a>, fileMode:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 Öffnet das FileStream-Objekt synchron, wobei auf die im <code>file</code>-Parameter festgelegte Datei verwiesen wird. 
+	 
+	 <p>Wenn das FileStream-Objekt bereits geöffnet ist, wird die Datei durch den Aufruf dieser Methode vor dem Öffnen geschlossen und es werden keine weiteren Ereignisse (einschließlich <code>close</code>) für die zuvor geöffnete Datei übergegeben.</p>
+	 
+	 <p>Auf Systemen, die Dateisperren unterstützen, ist eine Datei, die im Modus „schreiben“ (<code>FileMode.WRITE</code> oder „aktualisieren“ <code>FileMode.UPDATE</code>) geöffnet wurde, erst lesbar, wenn sie geschlossen ist.</p>
+	 
+	 <p>Sobald Sie mit den Dateivorgängen fertig sind, rufen Sie die <code>close()</code>-Methode des FileStream-Objekts auf. Manche Betriebssysteme beschränken die Anzahl der gleichzeitig geöffneten Dateien.</p>
+	 
+	 </p><p><span class="label"> Parameter </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">file</span>:<a href="File.html">File</a></code> &mdash; Das File-Objekt, das die zu öffnende Datei angibt.
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">fileMode</span>:<a href="../../String.html">String</a></code> &mdash; Ein String der FileMode-Klasse, der die Fähigkeiten des FileStreams definiert, zum Beispiel die Fähigkeit, aus der Datei zu lesen oder in die Datei zu schreiben.
+	 
+	 </td></tr></table></p><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei ist nicht vorhanden; Sie haben keine entsprechende Berechtigung zum Öffnen der Datei; Sie öffnen eine Datei für den Lesezugriff, verfügen aber nicht über die Leseberechtigung; oder Sie öffnen eine Datei für den Schreibzugriff, verfügen aber nicht über die Schreibberechtigung. 
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; Der Dateispeicherort befindet sich im Anwendungsordner und der <code>fileMode</code>-Parameter ist auf den Modus „anhängen“, „aktualisieren“ oder „schreiben“ gesetzt. 
+	 
+	 </td></tr></table><p><span class="label">Verwandte API-Elemente</span></p><div class="seeAlso"><a href="FileStream.html#close()" target="">close()</a><br/><a href="File.html" target="">File</a><br/><a href="FileMode.html" target="">FileMode</a></div><span id="pageFilter"><br/><span class="label"> Beispiel &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_de"> Verwendung dieses Beispiels </a></span>)
+            </span><br/><br/><div class="detailBody"> Im folgenden Beispiel wird die Datei „test.txt“ im Unterordner „Apollo Test“ des Dokumentordners des Benutzers synchron geöffnet. Dann wird die Datei in einen String gelesen, wobei für die Textkodierung der Systemzeichensatz verwendet wird.
+<div class="listing"><pre>
+import flash.filesystem.*;
+
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.open(file, FileMode.READ);
+var str:String = fileStream.readMultiByte(file.size, File.systemCharset);
+trace(str);
+fileStream.close();
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="openAsync()" id="openAsync()"></a><a name="openAsync(flash.filesystem.File,String)" id="openAsync(flash.filesystem.File,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;openAsync</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function openAsync(file:<a href="File.html">File</a>, fileMode:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 Öffnet das FileStream-Objekt asynchron, wobei auf die im <code>file</code>-Parameter festgelegte Datei verwiesen wird. 
+	 
+	 <p>Wenn das FileStream-Objekt bereits geöffnet ist, wird die Datei durch den Aufruf dieser Methode vor dem Öffnen geschlossen und es werden keine weiteren Ereignisse (einschließlich <code>close</code>) für die zuvor geöffnete Datei übergegeben.</p>
+	 
+	 <p>Wenn der <code>fileMode</code>-Parameter den Wert <code>FileMode.READ</code> oder <code>FileMode.UPDATE</code> aufweist, liest AIR Daten in den Eingabepuffer, sowie die Datei geöffnet wird, und <code>progress</code>- und <code>open</code>-Ereignisse werden ausgelöst, während die Daten in den Eingabepuffer gelesen werden.</p>
+	 
+	 <p>Auf Systemen, die Dateisperren unterstützen, ist eine Datei, die im Modus „schreiben“ (<code>FileMode.WRITE</code> oder „aktualisieren“ <code>FileMode.UPDATE</code>) geöffnet wurde, erst lesbar, wenn sie geschlossen ist.</p>
+	 
+	 <p>Sobald Sie mit den Dateivorgängen fertig sind, rufen Sie die <code>close()</code>-Methode des FileStream-Objekts auf. Manche Betriebssysteme beschränken die Anzahl der gleichzeitig geöffneten Dateien.</p>
+	 
+	 </p><p><span class="label"> Parameter </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">file</span>:<a href="File.html">File</a></code> &mdash; Das File-Objekt, das die zu öffnende Datei angibt.
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">fileMode</span>:<a href="../../String.html">String</a></code> &mdash; Ein String der FileMode-Klasse, der die Fähigkeiten des FileStreams definiert, zum Beispiel die Fähigkeit, aus der Datei zu lesen oder in die Datei zu schreiben.
+	 
+	 </td></tr></table></p><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Die Datei ist nicht vorhanden; Sie haben keine entsprechende Berechtigung zum Öffnen der Datei; Sie öffnen eine Datei für den Lesezugriff, verfügen aber nicht über die Leseberechtigung; oder Sie öffnen eine Datei für den Schreibzugriff, verfügen aber nicht über die Schreibberechtigung. 
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>progress</b>:<a href="../events/ProgressEvent.html"><code>ProgressEvent</code></a></code> &mdash; Wird ausgelöst, wenn Daten in den Eingabepuffer gelesen werden. (Beim Öffnen der Datei muss der <code>fileMode</code>-Parameter den Wert <code>FileMode.READ</code> oder <code>FileMode.UPDATE</code> aufweisen.)
+	 
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>complete</b>:<a href="../events/Event.html"><code>Event</code></a></code> &mdash; Die Dateidaten wurden in den Eingabepuffer gelesen. (Beim Öffnen der Datei muss der <code>fileMode</code>-Parameter den Wert <code>FileMode.READ</code> oder <code>FileMode.UPDATE</code> aufweisen.)
+	 
+	 </td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; Der Dateispeicherort befindet sich im Anwendungsordner und der <code>fileMode</code>-Parameter ist auf den Modus „anhängen“, „aktualisieren“ oder „schreiben“ gesetzt. 
+	 
+	 </td></tr></table><p><span class="label">Verwandte API-Elemente</span></p><div class="seeAlso"><a href="FileStream.html#close()" target="">close()</a><br/><a href="FileStream.html#event:complete" target="">complete-Ereignis</a><br/><a href="FileStream.html#event:ioError" target="">ioError event</a><br/><a href="FileStream.html#event:progress" target="">progress-Ereignis</a><br/><a href="FileMode.html" target="">FileMode</a></div><span id="pageFilter"><br/><span class="label"> Beispiel &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_de"> Verwendung dieses Beispiels </a></span>)
+            </span><br/><br/><div class="detailBody"> Im folgenden Beispiel wird die Datei „test.txt“ im Unterordner „Apollo Test“ des Dokumentordners des Benutzers asynchron geöffnet. Dann wird die Datei in einen String gelesen, wobei für die Textkodierung der Systemzeichensatz verwendet wird.
+<div class="listing"><pre>
+import flash.filesystem.*;
+import flash.events.Event;
+
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.addEventListener(Event.COMPLETE, fileCompleteHandler)
+fileStream.openAsync(file, FileMode.READ);
+
+function fileCompleteHandler(event:Event):void {
+    var str:String = fileStream.readMultiByte(fileStream.bytesAvailable, File.systemCharset);
+    trace(str);
+    fileStream.close();
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readBoolean()" id="readBoolean()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;readBoolean</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readBoolean():<a href="../../Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Liest einen booleschen Wert vom Dateistream, Bytestream oder Bytearray. Es wird ein einzelnes Byte gelesen und <code>true</code> zurückgegeben, wenn das Byte ungleich 0 ist; andernfalls wird <code>false</code> zurückgegeben.
+     </p><p></p><span class="label">Rückgabewerte</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Boolean.html">Boolean</a></code> &mdash; Ein boolescher Wert. Der Wert ist <code>true</code>, wenn das Byte ungleich 0 ist, oder andernfalls <code>false</code>.
+     </td></tr></table><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Die Datei kann nicht gelesen werden oder die Datei ist nicht geöffnet. Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Lesefunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Die Position, die zum Lesen der Daten angegeben wurde, übersteigt die Anzahl der verfügbaren Byte (angegeben durch die <code>bytesAvailable</code>-Eigenschaft).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readByte()" id="readByte()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;readByte</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readByte():<a href="../../int.html">int</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Liest ein vorzeichenbehaftetes Byte vom Dateistream, Bytestream oder Bytearray.
+     </p><p></p><span class="label">Rückgabewerte</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../int.html">int</a></code> &mdash; Der Rückgabewert liegt im Bereich von -128 bis 127.
+     </td></tr></table><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Die Datei kann nicht gelesen werden oder die Datei ist nicht geöffnet. Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Lesefunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Die Position, die zum Lesen der Daten angegeben wurde, übersteigt die Anzahl der verfügbaren Byte (angegeben durch die <code>bytesAvailable</code>-Eigenschaft).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readBytes()" id="readBytes()"></a><a name="readBytes(flash.utils.ByteArray,uint,uint)" id="readBytes(flash.utils.ByteArray,uint,uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;readBytes</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readBytes(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:<a href="../../uint.html">uint</a> = 0, length:<a href="../../uint.html">uint</a> = 0):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Liest die Anzahl der vom <code>length</code>-Parameter angegebenen Datenbyte aus dem Dateistream, Bytestream oder Bytearray. Die Bytedaten werden ab der im Parameter <code>bytes</code> festgelegten Position in das im Parameter <code>offset</code> angegebenen ByteArray-Objekt gelesen.
+     </p><p><span class="label"> Parameter </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">bytes</span>:<a href="../utils/ByteArray.html">ByteArray</a></code> &mdash; Das <code>ByteArray</code>-Objekt, in das die Daten eingelesen werden.
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">offset</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; Der Offset innerhalb des mit dem Parameter <code>bytes</code> angegebenen Bereichs, ab dem das Lesen der Daten beginnt.
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">length</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; Die Anzahl der zu lesenden Byte. Der Standardwert 0 bewirkt, dass alle verfügbaren Daten gelesen werden.
+     </td></tr></table></p><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Die Datei kann nicht gelesen werden oder die Datei ist nicht geöffnet. Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Lesefunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Die Position, die zum Lesen der Daten angegeben wurde, übersteigt die Anzahl der verfügbaren Byte (angegeben durch die <code>bytesAvailable</code>-Eigenschaft).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readDouble()" id="readDouble()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;readDouble</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readDouble():<a href="../../Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Liest eine IEEE 754-Gleitkommazahl mit doppelter Genauigkeit vom Dateistream, Bytestream oder Bytearray.
+     </p><p></p><span class="label">Rückgabewerte</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Number.html">Number</a></code> &mdash; Eine Gleitkommazahl nach IEEE 754 mit doppelter Genauigkeit.
+     </td></tr></table><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Die Datei kann nicht gelesen werden oder die Datei ist nicht geöffnet. Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Lesefunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Die Position, die zum Lesen der Daten angegeben wurde, übersteigt die Anzahl der verfügbaren Byte (angegeben durch die <code>bytesAvailable</code>-Eigenschaft).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readFloat()" id="readFloat()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;readFloat</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readFloat():<a href="../../Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Liest eine IEEE 754-Gleitkommazahl mit einfacher Genauigkeit vom Dateistream, Bytestream oder Bytearray.
+     </p><p></p><span class="label">Rückgabewerte</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Number.html">Number</a></code> &mdash; Eine Gleitkommazahl nach IEEE 754 mit einfacher Genauigkeit.
+     </td></tr></table><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Die Datei kann nicht gelesen werden oder die Datei ist nicht geöffnet. Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Lesefunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Die Position, die zum Lesen der Daten angegeben wurde, übersteigt die Anzahl der verfügbaren Byte (angegeben durch die <code>bytesAvailable</code>-Eigenschaft).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readInt()" id="readInt()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;readInt</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readInt():<a href="../../int.html">int</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Liest eine vorzeichenbehaftete 32-Bit-Ganzzahl vom Dateistream, Bytestream oder Bytearray.
+     </p><p></p><span class="label">Rückgabewerte</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../int.html">int</a></code> &mdash; Der Rückgabewert liegt im Bereich von -2147483648 bis 2147483647.
+     </td></tr></table><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Die Datei kann nicht gelesen werden oder die Datei ist nicht geöffnet. Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Lesefunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Die Position, die zum Lesen der Daten angegeben wurde, übersteigt die Anzahl der verfügbaren Byte (angegeben durch die <code>bytesAvailable</code>-Eigenschaft).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readMultiByte()" id="readMultiByte()"></a><a name="readMultiByte(uint,String)" id="readMultiByte(uint,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;readMultiByte</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readMultiByte(length:<a href="../../uint.html">uint</a>, charSet:<a href="../../String.html">String</a>):<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Liest einen Multibyte-String der angegebenen Länge unter Verwendung des angegebenen Zeichensatzes vom Dateistream, Bytestream oder Bytearray.
+     
+     
+     </p><p><span class="label"> Parameter </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">length</span>:<a href="../../uint.html">uint</a></code> &mdash; Die Anzahl der aus dem Bytestream zu lesenden Byte.
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">charSet</span>:<a href="../../String.html">String</a></code> &mdash; Der String, der den zum Interpretieren der Byte zu verwendenden Zeichensatz angibt. Mögliche Zeichensatz-Strings sind unter anderem <code>"shift-jis"</code>, <code>"cn-gb"</code> und <code>"iso-8859-1"</code>. Eine vollständige Liste finden Sie unter <a href="../../charset-codes.html" >Unterstützte Zeichensätze</a>.
+     
+     <p><b>Hinweis:</b> Wird der Wert des <code>charSet</code>-Parameters vom aktuellen System nicht erkannt, verwenden <span>Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup> Player oder</span> Adobe<sup>&reg;</sup> AIR<sup>&reg;</sup> die Standard-Codepage des Systems als Zeichensatz. Beispielsweise kann ein Wert des Parameters <code>charSet</code> wie bei <code>myTest.readMultiByte(22, "iso-8859-01")</code>, wo <code>01</code> anstelle von <code>1</code> eingesetzt wird, auf Ihrem Entwicklungssystem funktionieren, aber auf keinem anderen System. Auf dem anderen System verwendet<span> Flash Player oder</span> die AIR-Laufzeitumgebung die Standard-Codepage des Systems.</p>
+     
+     </td></tr></table></p><p></p><span class="label">Rückgabewerte</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../String.html">String</a></code> &mdash; Ein UTF-8-kodierter String.
+     </td></tr></table><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Die Datei kann nicht gelesen werden oder die Datei ist nicht geöffnet. Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Lesefunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Die Position, die zum Lesen der Daten angegeben wurde, übersteigt die Anzahl der verfügbaren Byte (angegeben durch die <code>bytesAvailable</code>-Eigenschaft).
+	
+	</td></tr></table><p><span class="label">Verwandte API-Elemente</span></p><div class="seeAlso"><a href="File.html#systemCharset" target="">File.systemCharset</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readObject()" id="readObject()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;readObject</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readObject():<a href="../../specialTypes.html#*">*</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Liest ein Objekt vom Dateistream, Bytestream oder Bytearray, das im serialisierten AMF-Format kodiert ist.
+     </p><p></p><span class="label">Rückgabewerte</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../specialTypes.html#*">*</a></code> &mdash; Das deserialisierte Objekt.
+     
+     </td></tr></table><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Die Datei kann nicht gelesen werden oder die Datei ist nicht geöffnet. Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Lesefunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Die Position, die zum Lesen der Daten angegeben wurde, übersteigt die Anzahl der verfügbaren Byte (angegeben durch die <code>bytesAvailable</code>-Eigenschaft).
+	
+	</td></tr></table><p><span class="label">Verwandte API-Elemente</span></p><div class="seeAlso"><a href="../net/package.html#registerClassAlias()" target="">flash.net.registerClassAlias()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readShort()" id="readShort()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;readShort</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readShort():<a href="../../int.html">int</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Liest eine vorzeichenbehaftete 16-Bit-Ganzzahl vom Dateistream, Bytestream oder Bytearray.
+     </p><p></p><span class="label">Rückgabewerte</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../int.html">int</a></code> &mdash; Der Rückgabewert liegt im Bereich von -32768 bis 32767.
+     </td></tr></table><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Die Datei kann nicht gelesen werden oder die Datei ist nicht geöffnet. Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Lesefunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Die Position, die zum Lesen der Daten angegeben wurde, übersteigt die Anzahl der verfügbaren Byte (angegeben durch die <code>bytesAvailable</code>-Eigenschaft).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readUnsignedByte()" id="readUnsignedByte()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;readUnsignedByte</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedByte():<a href="../../uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Liest ein vorzeichenloses Byte vom Dateistream, Bytestream oder Bytearray.
+     </p><p></p><span class="label">Rückgabewerte</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../uint.html">uint</a></code> &mdash; Der Rückgabewert liegt im Bereich von 0 bis 255.
+     </td></tr></table><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Die Datei kann nicht gelesen werden oder die Datei ist nicht geöffnet. Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Lesefunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Die Position, die zum Lesen der Daten angegeben wurde, übersteigt die Anzahl der verfügbaren Byte (angegeben durch die <code>bytesAvailable</code>-Eigenschaft).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readUnsignedInt()" id="readUnsignedInt()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;readUnsignedInt</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedInt():<a href="../../uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Liest eine vorzeichenlose 32-Bit-Ganzzahl vom Dateistream, Bytestream oder Bytearray.
+     </p><p></p><span class="label">Rückgabewerte</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../uint.html">uint</a></code> &mdash; Der Rückgabewert liegt im Bereich von 0 bis 4294967295.
+     </td></tr></table><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Die Datei kann nicht gelesen werden oder die Datei ist nicht geöffnet. Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Lesefunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Die Position, die zum Lesen der Daten angegeben wurde, übersteigt die Anzahl der verfügbaren Byte (angegeben durch die <code>bytesAvailable</code>-Eigenschaft).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readUnsignedShort()" id="readUnsignedShort()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;readUnsignedShort</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedShort():<a href="../../uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Liest eine vorzeichenlose 16-Bit-Ganzzahl vom Dateistream, Bytestream oder Bytearray.
+     </p><p></p><span class="label">Rückgabewerte</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../uint.html">uint</a></code> &mdash; Der Rückgabewert liegt im Bereich von 0 bis 65535.
+     </td></tr></table><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Die Datei kann nicht gelesen werden oder die Datei ist nicht geöffnet. Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Lesefunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Die Position, die zum Lesen der Daten angegeben wurde, übersteigt die Anzahl der verfügbaren Byte (angegeben durch die <code>bytesAvailable</code>-Eigenschaft).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readUTF()" id="readUTF()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;readUTF</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUTF():<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Liest einen UTF-8-String vom Dateistream, Bytestream oder Bytearray. Es wird davon ausgegangen, dass dem String eine short-Ganzzahl ohne Vorzeichen mit der Länge in Byte vorangestellt ist.
+     
+     <p>Diese Methode entspricht der <code>readUTF()</code>-Methode der Java<sup>&reg;</sup>-Schnittstelle „IDataInput“.</p>
+     </p><p></p><span class="label">Rückgabewerte</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../String.html">String</a></code> &mdash; Ein durch die Bytedarstellung von Zeichen erstellter UTF-8-String.
+     
+     </td></tr></table><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Die Datei kann nicht gelesen werden oder die Datei ist nicht geöffnet. Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Lesefunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Die Position, die zum Lesen der Daten angegeben wurde, übersteigt die Anzahl der verfügbaren Byte (angegeben durch die <code>bytesAvailable</code>-Eigenschaft).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="readUTFBytes()" id="readUTFBytes()"></a><a name="readUTFBytes(uint)" id="readUTFBytes(uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;readUTFBytes</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUTFBytes(length:<a href="../../uint.html">uint</a>):<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Liest eine Folge von UTF-8-Byte der Anzahl vom Byte-Datenstrom oder Bytearray und gibt einen String zurück.
+     </p><p><span class="label"> Parameter </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">length</span>:<a href="../../uint.html">uint</a></code> &mdash; Die Anzahl der zu lesenden Byte.
+     </td></tr></table></p><p></p><span class="label">Rückgabewerte</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../String.html">String</a></code> &mdash; Ein durch die Bytedarstellung von Zeichen erstellter UTF-8-String der angegebenen Länge.
+     </td></tr></table><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Die Datei kann nicht gelesen werden oder die Datei ist nicht geöffnet. Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Lesefunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/EOFError.html">EOFError</a> </code> &mdash; Die Position, die zum Lesen der Daten angegeben wurde, übersteigt die Anzahl der verfügbaren Byte (angegeben durch die <code>bytesAvailable</code>-Eigenschaft).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="truncate()" id="truncate()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;truncate</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function truncate():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	 Schneidet die Datei an der Stelle ab, die durch die <code>position</code>-Eigenschaft des FileStream-Objekts angegeben wird.  
+	 
+	 <p>Byte von der Stelle, die durch die <code>position</code>-Eigenschaft angegeben wird, bis zum Ende der Datei werden gelöscht. Die Datei muss zum Schreiben geöffnet sein.</p>
+	 
+	 </p><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; Die Datei ist nicht zum Schreiben geöffnet.
+	 
+	 </td></tr></table><p><span class="label">Verwandte API-Elemente</span></p><div class="seeAlso"><a href="FileStream.html#position" target="">position</a></div><span id="pageFilter"><br/><span class="label"> Beispiel &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_de"> Verwendung dieses Beispiels </a></span>)
+            </span><br/><br/><div class="detailBody"> Im folgenden Beispiel wird die Datei „test.txt“ im Unterordner „Apollo Test“ des Dokumentordners des Benutzers synchron geöffnet. Die Datei wird dann auf eine Länge von 100 Zeichen gekürzt, falls sie länger ist.
+<div class="listing"><pre>
+import flash.filesystem.*;
+
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.open(file, FileMode.UPDATE);
+if (file.size &gt; 100) {
+    fileStream.position = 100;
+    fileStream.truncate();
+}
+fileStream.close();
+</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody"> Im folgenden Beispiel wird die Datei „test.txt“ im Unterordner „Apollo Test“ des Dokumentordners des Benutzers <i>asynchron </i> geöffnet. Die Datei wird dann auf eine Länge von 100 Zeichen gekürzt, falls sie länger ist.
+<div class="listing"><pre>
+var file:File = File.documentsDirectory;
+file = file.resolvePath("Apollo Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.openAsync(file, FileMode.UPDATE);
+trace("start", file.size)
+if (file.size &gt; 100) {
+    fileStream.position = 100;
+    fileStream.truncate();
+}
+fileStream.addEventListener(Event.CLOSE, fileClosed);
+fileStream.close();
+function fileClosed(event:Event):void {
+    trace("closed", file.size); 
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeBoolean()" id="writeBoolean()"></a><a name="writeBoolean(Boolean)" id="writeBoolean(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeBoolean</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeBoolean(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schreibt einen booleschen Wert. Entsprechend dem Parameter <code>value</code> wird ein einzelnes Byte geschrieben: 1, wenn der Wert <code>true</code> ist oder 0, wenn der Wert <code>false</code> ist.
+     
+     </p><p><span class="label"> Parameter </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../Boolean.html">Boolean</a></code> &mdash; Ein boolescher Wert, der angibt, welches Byte geschrieben wird. Hat der Parameter den Wert <code>true</code>, wird 1 geschrieben; bei <code>false</code> wird 0 geschrieben.
+     
+     </td></tr></table></p><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Sie können nicht in die Datei schreiben (zum Beispiel, weil die Datei nicht vorhanden ist). Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Schreibfunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeByte()" id="writeByte()"></a><a name="writeByte(int)" id="writeByte(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeByte</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeByte(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schreibt ein Byte. Die unteren 8 Bit des Parameters werden verwendet, die oberen 24 Bit werden ignoriert.
+     </p><p><span class="label"> Parameter </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../int.html">int</a></code> &mdash; Ein Byte-Wert als Ganzzahl.
+     
+     </td></tr></table></p><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Sie können nicht in die Datei schreiben (zum Beispiel, weil die Datei nicht vorhanden ist). Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Schreibfunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeBytes()" id="writeBytes()"></a><a name="writeBytes(flash.utils.ByteArray,uint,uint)" id="writeBytes(flash.utils.ByteArray,uint,uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeBytes</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeBytes(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:<a href="../../uint.html">uint</a> = 0, length:<a href="../../uint.html">uint</a> = 0):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schreibt eine <code>Byte</code>-Sequenz vom angegebenen Bytearray in den Dateistream, Bytestream oder das Bytearray, beginnend mit dem durch <code>offset</code> festgelegten Byte (unter Verwendung einer auf null basierenden Indexposition) mit einer durch <code>length</code> festgelegten Länge.
+     
+     <p>Wird der Parameter <code>length</code> weggelassen, wird die Standardlänge 0 verwendet und der gesamte Puffer wird ab der Position <code>offset</code> geschrieben. Wird auch der Parameter <code>offset</code> weggelassen, so wird der gesamte Pufferinhalt geschrieben. </p>
+     
+     <p>Wenn sich die Parameter <code>offset</code> bzw. <code>length</code> außerhalb des gültigen Bereichs befinden, werden sie auf den Anfang bzw. auf das Ende des <code>bytes</code>-Array gesetzt.</p>
+     </p><p><span class="label"> Parameter </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">bytes</span>:<a href="../utils/ByteArray.html">ByteArray</a></code> &mdash; Das zu schreibende Byte-Array.
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">offset</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; Eine auf null basierende Indexposition, welche die Array-Position festlegt, ab der geschrieben werden soll.
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">length</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; Eine vorzeichenlose Ganzzahl, die festlegt, wie viele Byte des Puffers geschrieben werden sollen.
+     
+     </td></tr></table></p><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Sie können nicht in die Datei schreiben (zum Beispiel, weil die Datei nicht vorhanden ist). Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Schreibfunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeDouble()" id="writeDouble()"></a><a name="writeDouble(Number)" id="writeDouble(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeDouble</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeDouble(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schreibt eine Gleitkommazahl nach IEEE 754 mit doppelter Genauigkeit (64 Bit).
+     </p><p><span class="label"> Parameter </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../Number.html">Number</a></code> &mdash; Eine Gleitkommazahl mit doppelter Genauigkeit (64 Bit).
+     
+     </td></tr></table></p><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Sie können nicht in die Datei schreiben (zum Beispiel, weil die Datei nicht vorhanden ist). Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Schreibfunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeFloat()" id="writeFloat()"></a><a name="writeFloat(Number)" id="writeFloat(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeFloat</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeFloat(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schreibt eine Gleitkommazahl nach IEEE 754 mit einfacher Genauigkeit (32 Bit).
+     </p><p><span class="label"> Parameter </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../Number.html">Number</a></code> &mdash; Eine Gleitkommazahl mit einfacher Genauigkeit (32 Bit).
+     
+     </td></tr></table></p><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Sie können nicht in die Datei schreiben (zum Beispiel, weil die Datei nicht vorhanden ist). Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Schreibfunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeInt()" id="writeInt()"></a><a name="writeInt(int)" id="writeInt(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeInt</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeInt(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schreibt eine vorzeichenbehaftete 32-Bit-Ganzzahl.
+     </p><p><span class="label"> Parameter </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../int.html">int</a></code> &mdash; Ein Byte-Wert als vorzeichenbehaftete Ganzzahl.
+     
+     </td></tr></table></p><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Sie können nicht in die Datei schreiben (zum Beispiel, weil die Datei nicht vorhanden ist). Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Schreibfunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeMultiByte()" id="writeMultiByte()"></a><a name="writeMultiByte(String,String)" id="writeMultiByte(String,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeMultiByte</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeMultiByte(value:<a href="../../String.html">String</a>, charSet:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schreibt einen Multibyte-String unter Verwendung des angegebenen Zeichensatzes in den Dateistream, Bytestream oder Bytearray.
+     
+     </p><p><span class="label"> Parameter </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../String.html">String</a></code> &mdash; Der String-Wert, der geschrieben werden soll.
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">charSet</span>:<a href="../../String.html">String</a></code> &mdash; Der String, der den zu verwendenden Zeichensatz angibt. Mögliche Zeichensatz-Strings sind unter anderem <code>"shift-jis"</code>, <code>"cn-gb"</code> und <code>"iso-8859-1"</code>. Eine vollständige Liste finden Sie unter <a href="../../charset-codes.html" >Unterstützte Zeichensätze</a>.
+     </td></tr></table></p><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Sie können nicht in die Datei schreiben (zum Beispiel, weil die Datei nicht vorhanden ist). Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Schreibfunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr></table><p><span class="label">Verwandte API-Elemente</span></p><div class="seeAlso"><a href="File.html#systemCharset" target="">File.systemCharset</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeObject()" id="writeObject()"></a><a name="writeObject(any)" id="writeObject(any)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeObject</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeObject(object:<a href="../../specialTypes.html#*">*</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schreibt ein Objekt im serialisierten AMF-Format in den Dateistream, Bytestream oder Bytearray.
+     </p><p><span class="label"> Parameter </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">object</span>:<a href="../../specialTypes.html#*">*</a></code> &mdash; Das zu serialisierende Objekt
+     
+     </td></tr></table></p><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Sie können nicht in die Datei schreiben (zum Beispiel, weil die Datei nicht vorhanden ist). Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Schreibfunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr></table><p><span class="label">Verwandte API-Elemente</span></p><div class="seeAlso"><a href="../net/package.html#registerClassAlias()" target="">flash.net.registerClassAlias()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeShort()" id="writeShort()"></a><a name="writeShort(int)" id="writeShort(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeShort</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeShort(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schreibt eine 16-Bit-Ganzzahl. Die unteren 16 Bit des Parameters werden verwendet, die oberen 16 Bit werden ignoriert.
+     </p><p><span class="label"> Parameter </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../int.html">int</a></code> &mdash; Ein Byte-Wert als Ganzzahl.
+     
+     </td></tr></table></p><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Sie können nicht in die Datei schreiben (zum Beispiel, weil die Datei nicht vorhanden ist). Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Schreibfunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeUnsignedInt()" id="writeUnsignedInt()"></a><a name="writeUnsignedInt(uint)" id="writeUnsignedInt(uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeUnsignedInt</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUnsignedInt(value:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schreibt eine vorzeichenlose 32-Bit-Ganzzahl.
+     </p><p><span class="label"> Parameter </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../uint.html">uint</a></code> &mdash; Ein Byte-Wert als vorzeichenlose Ganzzahl.
+     
+     </td></tr></table></p><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Sie können nicht in die Datei schreiben (zum Beispiel, weil die Datei nicht vorhanden ist). Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Schreibfunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeUTF()" id="writeUTF()"></a><a name="writeUTF(String)" id="writeUTF(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeUTF</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUTF(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schreibt einen UTF-8-String in den Dateistream, Bytestream oder Bytearray. Die Länge des UTF-8-Strings in Byte als 16-Bit-Ganzzahl wird zuerst geschrieben, gefolgt von den Byte für die Zeichen des Strings.
+     </p><p><span class="label"> Parameter </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../String.html">String</a></code> &mdash; Der String-Wert, der geschrieben werden soll.
+     
+     </td></tr></table></p><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Sie können nicht in die Datei schreiben (zum Beispiel, weil die Datei nicht vorhanden ist). Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../RangeError.html">RangeError</a> </code> &mdash; Wenn die Länge des Strings größer als 65535 ist.
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Schreibfunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="writeUTFBytes()" id="writeUTFBytes()"></a><a name="writeUTFBytes(String)" id="writeUTFBytes(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;writeUTFBytes</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Methode</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUTFBytes(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+	
+     Schreibt einen UTF-8-String. Entspricht <code>writeUTF()</code>, doch dem String wird kein 16-Bit-Wort mit der Längenangabe vorangestellt.
+     </p><p><span class="label"> Parameter </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../String.html">String</a></code> &mdash; Der String-Wert, der geschrieben werden soll.
+     
+     </td></tr></table></p><br/><span class="label">Ereignisse</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Sie können nicht in die Datei schreiben (zum Beispiel, weil die Datei nicht vorhanden ist). Dieses Ereignis wird nur für Dateien ausgelöst, die für asynchrone Vorgänge geöffnet wurden (mit der <code>openAsync()</code>-Methode).
+	
+	</td></tr></table><br/><span class="label">Auslöser</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IOError.html">IOError</a> </code> &mdash; Die Datei wurde nicht geöffnet; die Datei wurde geöffnet, jedoch nicht mit Schreibfunktionen; oder bei einer Datei, die für synchrone Vorgänge geöffnet wurde (mit der <code>open()</code>-Methode), kann die Datei nicht gelesen werden (weil sie zum Beispiel nicht vorhanden ist).
+	
+	</td></tr></table></div></span><div class="detailSectionHeader"> Ereignisdetails </div><span id="pageFilter" runtime="AIR::1.0##"><a name="event:close" id="event:close"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>close</h3></td><td class="detailHeaderType"> Ereignis </td></tr></table><div class="detailBody"><span class="label">Ereignisobjekttyp: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">Eigenschaft Event.type  =  </span><a href="../events/Event.html#CLOSE"><code>flash.events.Event.CLOSE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ Gibt an, dass der Stream durch einen ausdrücklichen Aufruf der <code>close()</code>-Methode geschlossen wurde.
+ 
+ </p>
+	Die <code>Event.CLOSE</code>-Konstante definiert den Wert der <code>type</code>-Eigenschaft eines <code>close</code>-Ereignisobjekts. 
+	
+	<p>Dieses Ereignis verfügt über die folgenden Eigenschaften:</p>
+	
+	<table class="innertable" ><tr><th>Eigenschaft</th><th>Wert</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>. Es gibt kein Standardverhalten, das abgebrochen werden kann.</td></tr><tr><td><code>currentTarget</code></td><td>Das Objekt, welches das Ereignisobjekt aktiv mit einem Ereignis-Listener verarbeitet.</td></tr><tr><td><code>target</code></td><td>Das Objekt, dessen Verbindung geschlossen wurde.</td></tr></table>
+	
+	<p><span class="label">Verwandte API-Elemente</span></p><div class="seeAlso"><a href="FileStream.html#close()" target="">close()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:complete" id="event:complete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>complete</h3></td><td class="detailHeaderType"> Ereignis </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Ereignisobjekttyp: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">Eigenschaft Event.type  =  </span><a href="../events/Event.html#COMPLETE"><code>flash.events.Event.COMPLETE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ Gibt an, dass das Ende des Streams erreicht wurde.
+ 
+ </p>
+	Die <code>Event.COMPLETE</code>-Konstante definiert den Wert der <code>type</code>-Eigenschaft eines <code>complete</code>-Ereignisobjekts. 
+	
+	<p>Dieses Ereignis verfügt über die folgenden Eigenschaften:</p>
+	<table class="innertable" ><tr><th>Eigenschaft</th><th>Wert</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>. Es gibt kein Standardverhalten, das abgebrochen werden kann.</td></tr><tr><td><code>currentTarget</code></td><td>Das Objekt, welches das Ereignisobjekt aktiv mit einem Ereignis-Listener verarbeitet.</td></tr><tr><td><code>target</code></td><td>Das Netzwerkobjekt, dessen Ladevorgang beendet ist. 
+	    </td></tr></table>
+	
+	<p><span class="label">Verwandte API-Elemente</span></p><div class="seeAlso"><a href="FileStream.html#position" target="">position</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:ioError" id="event:ioError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>ioError</h3></td><td class="detailHeaderType"> Ereignis </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Ereignisobjekttyp: </span><a href="../events/IOErrorEvent.html"><code>flash.events.IOErrorEvent</code></a><br/><span class="label">Eigenschaft IOErrorEvent.type  =  </span><a href="../events/IOErrorEvent.html#IO_ERROR"><code>flash.events.IOErrorEvent.IO_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ Gibt an, dass bei einem asynchronen Datei-E/A-Vorgang ein Fehler aufgetreten ist.
+ 
+ </p>
+	Definiert den Wert der Eigenschaft <code>type</code> eines <code>ioError</code>-Ereignisobjekts.
+	<p>Dieses Ereignis verfügt über die folgenden Eigenschaften:</p>
+	<table class="innertable" ><tr><th>Eigenschaft</th><th>Wert</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>. Es gibt kein Standardverhalten, das abgebrochen werden kann.</td></tr><tr><td><code>currentTarget</code></td><td>Das Objekt, welches das Ereignisobjekt aktiv mit einem Ereignis-Listener verarbeitet.</td></tr><tr><td><code>errorID</code></td><td>Die Referenznummer des spezifischen Fehlers (nur AIR).</td></tr><tr><td><code>target</code></td><td>Das Netzwerkobjekt, bei dem der Eingabe/Ausgabe-Fehler auftritt.</td></tr><tr><td><code>text</code></td><td>Der als Fehlermeldung anzuzeigende Text.</td></tr></table>
+	
+	</div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:outputProgress" id="event:outputProgress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>outputProgress</h3></td><td class="detailHeaderType"> Ereignis </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Ereignisobjekttyp: </span><a href="../events/OutputProgressEvent.html"><code>flash.events.OutputProgressEvent</code></a><br/><span class="label">Eigenschaft OutputProgressEvent.type  =  </span><a href="../events/OutputProgressEvent.html#OUTPUT_PROGRESS"><code>flash.events.OutputProgressEvent.OUTPUT_PROGRESS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ Gibt an, dass gepufferte Daten in die Datei geschrieben wurden.
+ 
+ </p>
+    Definiert den Wert der <code>type</code>-Eigenschaft eines <code>outputProgress</code>-Ereignisobjekts.
+    
+    <p>Dieses Ereignis verfügt über die folgenden Eigenschaften:</p>
+    
+    <table class="innertable" ><tr><th>Eigenschaft</th><th>Wert</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>bytesPending</code></td><td>Die Anzahl der verbleibenden Byte, die noch geschrieben werden müssen, zum Zeitpunkt der Verarbeitung des Ereignisses durch den Listener.</td></tr><tr><td><code>bytesTotal</code></td><td>Die Gesamtanzahl der Byte, die bei einem erfolgreichen Schreibvorgang schließlich geschrieben werden.</td></tr><tr><td><code>cancelable</code></td><td><code>false</code>. Es gibt kein Standardverhalten, das abgebrochen werden kann.</td></tr><tr><td><code>currentTarget</code></td><td>Das Objekt, welches das Ereignisobjekt aktiv mit einem Ereignis-Listener verarbeitet.</td></tr><tr><td><code>target</code></td><td>Der Protokollierungsstatus des FileStream-Objekts. </td></tr></table>
+    
+    </div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:progress" id="event:progress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="Nur verfügbar in der AIR-Laufzeitumgebung">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>progress</h3></td><td class="detailHeaderType"> Ereignis </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Ereignisobjekttyp: </span><a href="../events/ProgressEvent.html"><code>flash.events.ProgressEvent</code></a><br/><span class="label">Eigenschaft ProgressEvent.type  =  </span><a href="../events/ProgressEvent.html#PROGRESS"><code>flash.events.ProgressEvent.PROGRESS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Laufzeitversionen:&nbsp;</b></td><td>AIR 1.0</td></tr></table><p></p><p></p><p>
+ Gibt an, dass neue Daten im Stream verfügbar sind.
+ 
+ </p>
+	Definiert den Wert der Eigenschaft <code>type</code> eines <code>progress</code>-Ereignisobjekts.
+	
+	<p>Dieses Ereignis verfügt über die folgenden Eigenschaften:</p>
+	
+	<table class="innertable" ><tr><th>Eigenschaft</th><th>Wert</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>bytesLoaded</code></td><td>Die Anzahl der geladenen Elemente oder Byte zu dem Zeitpunkt, zu dem der Listener das Ereignis verarbeitet.</td></tr><tr><td><code>bytesTotal</code></td><td>Die Gesamtanzahl der Elemente oder Byte, die bei einem erfolgreichen Ladevorgang schließlich geladen werden.</td></tr><tr><td><code>cancelable</code></td><td><code>false</code>. Es gibt kein Standardverhalten, das abgebrochen werden kann.</td></tr><tr><td><code>currentTarget</code></td><td>Das Objekt, welches das Ereignisobjekt aktiv mit einem Ereignis-Listener verarbeitet.</td></tr><tr><td><code>target</code></td><td>Das Objekt, dessen Fortschritt protokolliert wird. </td></tr></table>
+	
+	</div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script></div><p xmlns:xd="http://www.pnp-software.com/XSLTdoc"></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 10:04 AM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/de_DE/legalnotices/index.html">Rechtliche Hinweise</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Onlinedatenschutzerklärung</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">Warum auf Englisch?</span>
+				</div>
+				<div class="white_content_body">
+					<b>Inhalt des ActionScript 3.0-Referenzhandbuchs wird in englischer Sprache angezeigt</b><br><br>
+					Nicht alle Teile des ActionScript 3.0-Referenzhandbuchs wurden in alle Sprachen übersetzt. Wenn der Text zu einem Sprachelement nicht übersetzt wurde, wird er auf Englisch angezeigt. Zum Beispiel wurden die Informationen zur ga.controls.HelpBox-Klasse nicht in andere Sprachen übersetzt. In der deutschen Version des Referenzhandbuchs erscheint der Abschnitt zur ga.controls.HelpBox-Klasse deshalb auf Englisch.
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 10:04 AM Z  -->

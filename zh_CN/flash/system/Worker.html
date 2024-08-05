@@ -1,0 +1,1001 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="用于 Adobe&reg; Flash&reg; Platform 的 ActionScript&reg; 3.0 参考"><meta name="lang" content="zh-cn"><meta name="runtime" content="flash player"><meta name="runtimever" content="flash player:11.4"><meta name="runtime" content="air"><meta name="runtimever" content="air:3.4"><meta name="product" content="flash player"><meta name="productver" content="flash player:11.4"><meta name="product" content="air"><meta name="productver" content="air:3.4"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../asfilter.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="Worker,flash.system.Worker,current,isPrimordial,isSupported,state,addEventListener,createMessageChannel,getSharedProperty,removeEventListener,setSharedProperty,start,terminate"><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" src="../../AC_OETags.js" type="text/javascript"></script><title>Worker - Adobe ActionScript&reg; 3 (AS3  ) API 参考</title>
+		<link rel="stylesheet" href="../../filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="../../filter_new.css" type="text/css">
+			
+		<script src="../../jquery.js" type="text/javascript"></script>
+		<script src="../../s_chl_code.js" type="text/javascript"></script>
+		<script src="../../jquery.zclip.js" type="text/javascript"></script>
+		<script src="../../jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="../../cookies.js" type="text/javascript"></script>
+		<script src="../../asdoc.js" type="text/javascript"></script>
+		<script src="../../iscroll.js" type="text/javascript"></script>
+		<script src="../../AC_OETags.js" type="text/javascript"></script>
+		<script src="../../omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "运行时";
+			var productsLabel = "产品";
+			var noneLabel = "无";
+			var qsearchBoxLabel = "快速搜索";
+			var qsearchText = "未找到所搜索的词";
+			var ajaxErrorMsg="加载页面时出错";
+			var ajaxErrorTryMsg="重试";
+			var ajaxLoadingMsg="仍在加载中";
+			var cancelMsg = "取消";
+			var classesText = "类";
+			var strJiveReply = "此问题针对以下文章提出： "
+			var showFilters = "显示过滤条件";
+			var hideFilters = "隐藏过滤条件";
+			
+		
+			var baseRef = "../../";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											用于 Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup> Platform 的 ActionScript<sup>&reg;</sup> 3.0 参考<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="../../index.html"> 主页 </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="Worker.html#top" style="display:">显示包列表和类列表</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="Worker.html#top" style="display:none">隐藏包列表和类列表</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="../../package-summary.html"> 包 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../class-summary.html"> 类 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../whatsnew.html"> 新增内容 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../all-index-Symbols.html"> 索引 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../appendixes.html"> 附录 </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">为什么显示为英语？</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/zh_CN/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('../../')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('../../')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="../../help.js"></script>
+						<script language="javascript" type="text/javascript" src="../../asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="../../filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>过滤条件:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">正在从服务器检索数据...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">正在从服务器检索数据...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="Worker.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">flash.system&nbsp;</a><br>
+								<h1 id="classProductName">Worker&nbsp; - AS3 </h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="Worker.html#propertySummary" style="display:none"> 属性 </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="Worker.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> 属性 </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="Worker.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> 构造函数 </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="Worker.html#methodSummary" style="display:none"> 方法 </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="Worker.html#constantSummary" style="display:none"> 全局常量 </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="Worker.html#eventSummary" style="display:none"> 事件 </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="Worker.html#styleSummary" style="display:none"> 样式 </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="Worker.html#SkinPartSummary" style="display:none"> 外观部件 </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="Worker.html#SkinStateSummary" style="display:none"> 外观状态 </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="Worker.html#effectSummary" style="display:none"> 效果 </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="Worker.html#constantSummary" style="display:none"> 常量 </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="Worker.html#methodSummary" style="display:none"> 全局函数 </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="Worker.html#methodSummary" style="display:none">函数</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="Worker.html#interfaceSummary" style="display:none"> 接口 </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="Worker.html#classSummary" style="display:none"> 类 </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="Worker.html#includeExamplesSummary" style="display:none"> 示例 </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="Worker.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								类
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">包</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">flash.system</a></td></tr><tr><td class="classHeaderTableLabel">类</td><td class="classSignature">public final   class  Worker</td></tr><tr><td class="classHeaderTableLabel">继承</td><td class="inheritanceList">Worker  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../Object.html">Object</a></td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>Flash Player 11.4, AIR 3.4</td></tr></table><p></p><p></p><p></p>
+ Worker 对象代表一个 <i>worker</i>，这是 Flash 运行时的虚拟实例。每个 Worker 实例控制并提供对单个 worker 的生命周期和共享数据的访问。
+ 
+ <p>worker 允许您在另一个 worker（包括主 swf 的 worker）正在运行其他操作的同时“在后台”执行代码。在非 worker 上下文中，某些操作（例如循环处理一大组数据）要花费很长时间来执行，因此它们会妨碍主应用程序线程足够快地更新屏幕。这可能会导致屏幕延迟或冻结。</p>
+ 
+               <p>使用 worker 可允许您在后台执行长时间运行的或慢速的操作。每个 worker 都在独立于其他 worker 的一个单独的执行线程中运行自己的代码。一个 worker 中的长时间运行代码不会阻止另一个 worker 中的代码执行。相反，两组代码可以并行运行。因此，可以使用一个 worker 在后台执行代码，同时主应用程序线程仍然能够自由地继续更新屏幕。</p>
+ 
+               <p>同时执行多组代码指令的这一功能称为<i>并发</i>。</p>
+ 
+               <p>
+                  <b>注意：</b>在桌面平台上，Flash Player 和 AIR 均支持使用 worker 实现并发。对于移动平台，AIR Android 和 iOS 均支持并发。在尝试使用并发之前，您可以使用 isSupported 静态属性来检查是否支持并发。 
+ </p>
+ 
+               <p>不要通过调用 <code>Worker()</code> 构造函数来直接创建 Worker 实例。在支持使用 worker 实现并发的上下文中，在启动时运行时会自动创建与主 SWF 关联的 Worker（称为<i>原始 worker</i>）。</p>
+ 
+               <p>每个额外的 worker 都是基于一个单独的 swf 创建的。要创建 Worker 类的新实例，请将一个 ByteArray（其中包含后台 worker 的 swf 的字节）作为参数传递给 WorkerDomain 类的 <code>createWorker()</code>方法。针对此目的，有三种常用方式可用来访问 swf 的字节：</p>
+ 
+               <ul>
+                  <li>
+                     <p>使用 [Embed] 元标记将 .swf 文件作为 ByteArray 嵌入在应用程序中：</p>
+                     <div class="listing"><pre>
+ // Embed the SWF file
+ [Embed(source="../swfs/BgWorker.swf", mimeType="application/octet-stream")]
+ private static var BgWorker_ByteClass:Class;
+ 
+ private function createWorker():void
+ {
+   // create the background worker
+   var workerBytes:ByteArray = new BgWorker_ByteClass();
+   var bgWorker:Worker = WorkerDomain.current.createWorker(workerBytes);
+   
+   // listen for worker state changes to know when the worker is running
+   bgWorker.addEventListener(Event.WORKER_STATE, workerStateHandler);
+   
+   // set up communication between workers using 
+   // setSharedProperty(), createMessageChannel(), etc.
+   // ... (not shown)
+   
+   bgWorker.start();
+ }</pre></div>
+                  </li>
+                  <li>
+                     <p>使用 URLLoader 加载外部 SWF 文件：</p>
+                     <div class="listing"><pre>
+ // load the SWF file
+ var workerLoader:URLLoader = new URLLoader();
+ workerLoader.dataFormat = URLLoaderDataFormat.BINARY;
+ workerLoader.addEventListener(Event.COMPLETE, loadComplete);
+ workerLoader.load(new URLRequest("BgWorker.swf"));
+ 
+ private function loadComplete(event:Event):void
+ {
+   // create the background worker
+   var workerBytes:ByteArray = event.target.data as ByteArray;
+   var bgWorker:Worker = WorkerDomain.current.createWorker(workerBytes);
+   
+   // listen for worker state changes to know when the worker is running
+   bgWorker.addEventListener(Event.WORKER_STATE, workerStateHandler);
+   
+   // set up communication between workers using 
+   // setSharedProperty(), createMessageChannel(), etc.
+   // ... (not shown)
+   
+   bgWorker.start();
+ }</pre></div>
+                  </li>
+                  <li>
+                     <p>将单个 swf 同时用作原始 worker 和后台 worker：</p>
+                     <div class="listing"><pre>
+ // The primordial worker's main class constructor
+ public function PrimordialWorkerClass()
+ {
+   init();
+ }
+ 
+ private function init():void
+ {
+   var swfBytes:ByteArray = this.loaderInfo.bytes;
+   
+   // Check to see if this is the primordial worker
+   if (Worker.current.isPrimordial)    
+   {
+     // create a background worker
+     var bgWorker:Worker = WorkerDomain.current.createWorker(swfBytes);
+     
+     // listen for worker state changes to know when the worker is running
+     bgWorker.addEventListener(Event.WORKER_STATE, workerStateHandler);
+     
+     // set up communication between workers using 
+     // setSharedProperty(), createMessageChannel(), etc.
+     // ... (not shown)
+     
+     bgWorker.start();
+   }
+   else // entry point for the background worker
+   {
+     // set up communication between workers using getSharedProperty()
+     // ... (not shown)
+     
+     // start the background work
+   }
+ }</pre></div>
+                  </li>
+               </ul>
+ 
+               <p>Worker 彼此独立地执行并且不访问相同的内存、变量和代码。不过，有三种机制可用来在 Worker 实例之间传递消息和数据：</p>
+ 
+               <ul>
+                  <li>共享属性：每个 worker 都有可以从该 worker 自身及其他 worker 设置和读取的一组内部命名值。您可以使用 <code>setSharedProperty()</code> 方法来设置值并使用 <code>getSharedProperty()</code> 方法来读取值。</li>
+                  <li>MessageChannel：MessageChannel 对象允许您将单向消息和数据从一个 worker 发送到另一个 worker。接收 worker 中的代码可以侦听当有消息到达时要通知的事件。要创建 MessageChannel 对象，请使用 <code>createMessageChannel()</code> 方法。</li>
+                  <li>可共享 ByteArray：如果 ByteArray 对象的 <code>shareable</code> 属性为 <code>true</code>，则所有 worker 中该 ByteArray 的实例都使用相同的底层内存。由于多个 worker 中的代码可以同时访问共享内存，因此您的代码应使用 <code>ByteArray.shareable</code> 属性说明中描述的机制，以避免发生数据意外更改问题。</li>
+               </ul>
+ 
+               <p>在后台 worker 中运行的代码中，有多个运行时 API 不可用。这主要包括与用户输入和输出机制相关的 API，或者与操作系统元素（例如窗口和拖拽）相关的 API。作为一个规则，对于不是在所有上下文中都受支持的任何 API，在尝试使用该 API 之前，请使用 <code>isSupported</code>、<code>available</code> 和类似属性来检查该 API 在后台 worker 上下文中是否可用。</p>
+ 
+               <p>
+                  <b>注意:</b>本机扩展不支持背景和辅助 worker。</p>
+ 
+               <p>Worker 非常有用，因为它们可以减少由于主渲染线程受其他代码阻止而使帧速率下降的可能。但是，worker 需要使用额外系统内存和 CPU，这可能使整体应用程序性能代价昂贵。由于每个 worker 均使用其自身的运行时虚拟机实例，因此即使不重要的 worker 开销也可能很大。当使用 worker 时，请在所有目标平台测试代码，以确保对系统的需求不是太大。Adobe 建议在典型情境下请勿使用超过一个或两个后台 worker。</p>
+ 
+            <p></p><p><a href="Worker.html#includeExamplesSummary">查看示例</a></p><p id="learnMore"><span class="classHeaderTableLabel">了解详细信息</span></p><div class="seeAlso"><a href="http://gotoandlearn.com/play.php?id=162" target="_blank">使用 Lee Brimelow 开发的 ActionScript Worker</a><br/><a href="http://esdot.ca/site/2012/intro-to-as3-workers-part-2-image-processing" target="_blank">AS3 Worker 介绍：Shawn Blais 开发的图像处理功能</a><br/><a href="http://esdot.ca/site/2012/intro-to-as3-workers-part-3-nape-physics-starling" target="_blank">多线程物理：将 AS3 Worker 用于 Shawn Blaiss 开发的物理引擎</a></div><p><span class="classHeaderTableLabel">相关 API 元素</span></p><div class="seeAlso"><a href="WorkerDomain.html" target="">WorkerDomain 类</a><br/><a href="WorkerDomain.html#createWorker()" target="">WorkerDomain.createWorker() 方法</a><br/><a href="MessageChannel.html" target="">MessageChannel 类</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary" id="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">公共属性</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="Worker.html#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隐藏继承的公共属性</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="Worker.html#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 显示继承的公共属性</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">属性</th><th>由以下参数定义</th></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="../../Object.html#constructor" class="signatureLink">constructor</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">
+	 对类对象或给定对象实例的构造函数的引用。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="Flash::11.4##AIR::3.4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="Worker.html#current" class="signatureLink">current</a> : <a href="Worker.html">Worker</a><div class="summaryTableDescription">[静态] [只读] 
+    提供对包含当前代码的 worker 的访问
+    
+    </div></td><td class="summaryTableOwnerCol">Worker</td></tr><tr class="" runtime="Flash::11.4##AIR::3.4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="Worker.html#isPrimordial" class="signatureLink">isPrimordial</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">[只读] 
+    指示此 worker 是否为原始 worker。</div></td><td class="summaryTableOwnerCol">Worker</td></tr><tr class="" runtime="Flash::11.4##AIR::3.4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="Worker.html#isSupported" class="signatureLink">isSupported</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">[静态] [只读] 
+    指示当前运行时上下文是否支持将 Worker 对象用于并行代码执行。</div></td><td class="summaryTableOwnerCol">Worker</td></tr><tr class="" runtime="Flash::11.4##AIR::3.4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="Worker.html#state" class="signatureLink">state</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">[只读] 
+    worker 在其生命周期中的当前状态。</div></td><td class="summaryTableOwnerCol">Worker</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary" id="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">公共方法 </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="Worker.html#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隐藏继承的公共方法</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="Worker.html#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 显示继承的公共方法</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">方法</th><th>由以下参数定义</th></tr><tr class="" runtime="Flash::11.4##AIR::3.4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Worker.html#addEventListener()" class="signatureLink">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">[覆盖] 
+    
+	使用 EventDispatcher 对象注册事件侦听器对象，以使侦听器能够接收事件通知。</div></td><td class="summaryTableOwnerCol">Worker</td></tr><tr class="" runtime="Flash::11.4##AIR::3.4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Worker.html#createMessageChannel()" class="signatureLink">createMessageChannel</a>(receiver:<a href="Worker.html">Worker</a>):<a href="MessageChannel.html">MessageChannel</a></div><div class="summaryTableDescription">
+    创建一个新的 MessageChannel 实例来将消息从调用此方法的 worker 发送到另一个接收方 worker。</div></td><td class="summaryTableOwnerCol">Worker</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	将事件调度到事件流中。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::11.4##AIR::3.4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Worker.html#getSharedProperty()" class="signatureLink">getSharedProperty</a>(key:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#*">*</a></div><div class="summaryTableDescription">
+    通过指定的键检索存储在此 worker 中的值。</div></td><td class="summaryTableOwnerCol">Worker</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	检查 EventDispatcher 对象是否为特定事件类型注册了任何侦听器。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#hasOwnProperty()" class="signatureLink">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 表示对象是否已经定义了指定的属性。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#isPrototypeOf()" class="signatureLink">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 表示 Object 类的实例是否在指定为参数的对象的原型链中。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#propertyIsEnumerable()" class="signatureLink">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 表示指定的属性是否存在、是否可枚举。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="Flash::11.4##AIR::3.4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Worker.html#removeEventListener()" class="signatureLink">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">[覆盖] 
+    
+	从 EventDispatcher 对象中删除侦听器。</div></td><td class="summaryTableOwnerCol">Worker</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#setPropertyIsEnumerable()" class="signatureLink">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     设置循环操作动态属性的可用性。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="Flash::11.4##AIR::3.4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Worker.html#setSharedProperty()" class="signatureLink">setSharedProperty</a>(key:<a href="../../String.html">String</a>, value:<a href="../../specialTypes.html#*">*</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+    提供可供在 worker 的 swf 中运行的代码使用的具名值。</div></td><td class="summaryTableOwnerCol">Worker</td></tr><tr class="" runtime="Flash::11.4##AIR::3.4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Worker.html#start()" class="signatureLink">start</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+    启动 worker 的执行。</div></td><td class="summaryTableOwnerCol">Worker</td></tr><tr class="" runtime="Flash::11.4##AIR::3.4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Worker.html#terminate()" class="signatureLink">terminate</a>():<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+    停止 worker 的代码执行。</div></td><td class="summaryTableOwnerCol">Worker</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toLocaleString()" class="signatureLink">toLocaleString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 返回此对象的字符串表示形式，其格式设置遵守区域设置特定的约定。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toString()" class="signatureLink">toString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 返回指定对象的字符串表示形式。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#valueOf()" class="signatureLink">valueOf</a>():<a href="../../Object.html">Object</a></div><div class="summaryTableDescription">
+	 返回指定对象的原始值。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	检查是否用此 EventDispatcher 对象或其任何祖代为指定事件类型注册了事件侦听器。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary" id="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">事件</div><div class="showHideLinks"><a href="http://help.adobe.com/en_US/Flex/4.6/UsingSDK/WS2db454920e96a9e51e63e3d11c0bf69084-7ee9.html" target="_blank">单击此处了解有关事件的更多信息</a></div><div class="showHideLinks"><div id="hideInheritedEvent" class="hideInheritedEvent"><a class="showHideLink" href="Worker.html#eventSummary" onclick="javascript:setInheritedVisible(false,'Event');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隐藏继承的事件</a></div><div id="showInheritedEvent" class="showInheritedEvent"><a class="showHideLink" href="Worker.html#eventSummary" onclick="javascript:setInheritedVisible(true,'Event');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 显示继承的事件</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">事件</th><th> 摘要 </th><th>由以下参数定义</th></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[广播事件] Flash Player 或 AIR 应用程序获得操作系统焦点并变为活动状态时将调度此事件。</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[广播事件] Flash Player 或 AIR 应用程序失去操作系统焦点并变为非活动状态时将调度此事件。</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::11.4##AIR::3.4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Worker.html#event:workerState" class="signatureLink">workerState</a></div></td><td class="summaryTableDescription summaryTableCol">当 worker 的 state 属性改变时将调度此事件。</td><td class="summaryTableOwnerCol">Worker</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">属性详细信息</div><span id="pageFilter" runtime="Flash::11.4##AIR::3.4##"><a name="propertyDetail" id="propertyDetail"></a><a name="current" id="current"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>current</h3></td><td class="detailHeaderType">属性</td></tr></table><div class="detailBody"><code>current:<a href="Worker.html">Worker</a></code>&nbsp;&nbsp;[只读] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>Flash Player 11.4, AIR 3.4</td></tr></table><p></p><p></p><p>
+    提供对包含当前代码的 worker 的访问
+    
+    </p><br/><br/><span class="label"> 实现 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get current():<a href="Worker.html">Worker</a></code><br/></div></span><span id="pageFilter" runtime="Flash::11.4##AIR::3.4##"><a name="propertyDetail" id="propertyDetail"></a><a name="isPrimordial" id="isPrimordial"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>isPrimordial</h3></td><td class="detailHeaderType">属性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isPrimordial:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[只读] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>Flash Player 11.4, AIR 3.4</td></tr></table><p></p><p></p><p>
+    指示此 worker 是否为原始 worker。
+    
+    <p><i>原始 worker</i> 是运行初始 swf 的 worker。此 worker 控制对屏幕的渲染。</p>
+    
+    <p>可以使用此属性构建一个应用程序，使其中的原始 worker 和后台 worker 是同一 swf 文件的两个实例。替代方法是相应地构造您的代码，让后台 worker 使用编译为与原始 worker 不同的 swf 的代码。</p>
+    
+    </p><br/><br/><span class="label"> 实现 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isPrimordial():<a href="../../Boolean.html">Boolean</a></code><br/></div></span><span id="pageFilter" runtime="Flash::11.4##AIR::3.4##"><a name="propertyDetail" id="propertyDetail"></a><a name="isSupported" id="isSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>isSupported</h3></td><td class="detailHeaderType">属性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isSupported:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[只读] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>Flash Player 11.4, AIR 3.4</td></tr></table><p></p><p></p><p>
+    指示当前运行时上下文是否支持将 Worker 对象用于并行代码执行。
+    
+    <p>如果并行可用，则此属性的值为 <code>true</code>。</p>
+    
+    </p><br/><br/><span class="label"> 实现 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get isSupported():<a href="../../Boolean.html">Boolean</a></code><br/></div></span><span id="pageFilter" runtime="Flash::11.4##AIR::3.4##"><a name="propertyDetail" id="propertyDetail"></a><a name="state" id="state"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>state</h3></td><td class="detailHeaderType">属性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>state:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[只读] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>Flash Player 11.4, AIR 3.4</td></tr></table><p></p><p></p><p>
+    worker 在其生命周期中的当前状态。WorkerState 类中定义了此属性的可能值。
+    
+    </p><br/><br/><span class="label"> 实现 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get state():<a href="../../String.html">String</a></code><br/><p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="WorkerState.html" target="">flash.system.WorkerState</a></div></div></span><a name="methodDetail" id="methodDetail"></a><div class="detailSectionHeader">方法详细信息</div><span id="pageFilter" runtime="Flash::11.4##AIR::3.4##"><a name="addEventListener()" id="addEventListener()"></a><a name="addEventListener(String,Function,Boolean,int,Boolean)" id="addEventListener(String,Function,Boolean,int,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>addEventListener</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td></tr></table><div class="detailBody"><code>override public function addEventListener(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>Flash Player 11.4, AIR 3.4</td></tr></table><p></p><p></p><p>
+    
+	使用 EventDispatcher 对象注册事件侦听器对象，以使侦听器能够接收事件通知。<span>可以为特定类型的事件、阶段和优先级在显示列表中的所有节点上注册事件侦听器。</span>
+	
+	
+	
+	<p>成功注册一个事件侦听器后，无法通过额外调用 <code>addEventListener()</code> 来更改其优先级。要更改侦听器的优先级，必须首先调用 <code>removeListener()</code>。然后，可以使用新的优先级再次注册该侦听器。 </p>
+	
+	<p>请记住，注册该侦听器后，如果继续调用具有不同 <code>type</code> 或 <code>useCapture</code> 值的 <code>addEventListener()</code>，则会创建单独的侦听器注册。<span>例如，如果首先注册 <code>useCapture</code> 设置为 <code>true</code> 的侦听器，则该侦听器只在捕获阶段进行侦听。如果使用同一个侦听器对象再次调用 <code>addEventListener()</code>，并将 <code>useCapture</code> 设置为 <code>false</code>，那么便会拥有两个单独的侦听器：一个在捕获阶段进行侦听，另一个在目标和冒泡阶段进行侦听。</span>
+	</p>
+	
+	<p>不能只为目标阶段或冒泡阶段注册事件侦听器。这些阶段在注册期间是成对出现的，因为冒泡阶段只适用于目标节点的祖代。</p>
+	
+	<p>如果不再需要某个事件侦听器，可调用 <code>removeEventListener()</code> 删除它，否则会产生内存问题。事件侦听器不会自动从内存中删除，因为只要调度对象存在，垃圾回收器就不会删除侦听器（除非 <code>useWeakReference</code> 参数设置为 <code>true</code>）。</p>
+		
+	<p>复制 EventDispatcher 实例时并不复制其中附加的事件侦听器。（如果新近创建的节点需要一个事件侦听器，必须在创建该节点后附加该侦听器。）但是，如果移动 EventDispatcher 实例，则其中附加的事件侦听器也会随之移动。</p>
+	
+	
+	<p>如果在正在处理事件的节点上注册事件侦听器，则不会在当前阶段触发事件侦听器，但会在事件流的稍后阶段触发，如冒泡阶段。</p>
+	
+	<p>如果从正在处理事件的节点中删除事件侦听器，则该事件侦听器仍由当前操作触发。删除事件侦听器后，决不会再次调用该事件侦听器（除非再次注册以备将来处理）。 </p>
+	
+	</p><p><span class="label"> 参数 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:<a href="../../String.html">String</a></code> &mdash; 事件的类型。
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">listener</span>:<a href="../../Function.html">Function</a></code> &mdash; 处理事件的侦听器函数。此函数必须接受 Event 对象作为其唯一的参数，并且不能返回任何结果<span>，如下面的示例所示：</span>
+	
+	
+    <div class="listing"><pre>function(evt:Event):void</pre></div>
+	
+	<p>函数可以有任何名称。</p>
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useCapture</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; 
+	
+	<span>确定侦听器是运行于捕获阶段还是运行于目标和冒泡阶段。如果将 <code>useCapture</code> 设置为 <code>true</code>，则侦听器只在捕获阶段处理事件，而不在目标或冒泡阶段处理事件。如果 <code>useCapture</code> 为 <code>false</code>，则侦听器只在目标或冒泡阶段处理事件。要在所有三个阶段都侦听事件，请调用 <code>addEventListener</code> 两次：一次将 <code>useCapture</code> 设置为 <code>true</code>，一次将 <code>useCapture</code> 设置为 <code>false</code>。</span>
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">priority</span>:<a href="../../int.html">int</a></code> (default = <code>0</code>)<code></code> &mdash; 事件侦听器的优先级。优先级由一个带符号的 32 位整数指定。数字越大，优先级越高。优先级为 <i>n</i> 的所有侦听器会在优先级为 <i>n</i> -1 的侦听器之前得到处理。如果两个或更多个侦听器共享相同的优先级，则按照它们的添加顺序进行处理。默认优先级为 0。
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useWeakReference</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; 确定对侦听器的引用是强引用，还是弱引用。强引用（默认值）可防止您的侦听器被当作垃圾回收。弱引用则没有此作用。 <p>类级别成员函数不属于垃圾回收的对象，因此可以对类级别成员函数将 <code>useWeakReference</code> 设置为 <code>true</code> 而不会使它们受垃圾回收的影响。如果对作为嵌套内部函数的侦听器将 <code>useWeakReference</code> 设置为 <code>true</code>，则该函数将作为垃圾回收并且不再是永久函数。如果创建对该内部函数的引用（将该函数保存到另一个变量中），则该函数将不作为垃圾回收并仍将保持永久。</p>
+	
+	</td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::11.4##AIR::3.4##"><a name="createMessageChannel()" id="createMessageChannel()"></a><a name="createMessageChannel(flash.system.Worker)" id="createMessageChannel(flash.system.Worker)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>createMessageChannel</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function createMessageChannel(receiver:<a href="Worker.html">Worker</a>):<a href="MessageChannel.html">MessageChannel</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>Flash Player 11.4, AIR 3.4</td></tr></table><p></p><p></p><p>
+    创建一个新的 MessageChannel 实例来将消息从调用此方法的 worker 发送到另一个接收方 worker。创建 MessageChannel 对象的 worker 中的代码可以使用它将单向消息发送到作为 <code>receiver</code> 参数指定的 Worker 对象。
+    
+    <p>虽然可以使用 MessageChannel 实例来将消息和数据从一个 Worker 实例发送到另一个，但是至少需要通过调用 Worker 对象的 <code>setSharedProperty()</code> 方法将一个 MessageChannel 实例作为共享属性传递给一个子 Worker。</p>
+    
+    <div class="listing"><pre>
+    outgoingChannel = Worker.current.createMessageChannel(bgWorker);
+    incomingChannel = bgWorker.createMessageChannel(Worker.current);
+    
+    bgWorker.setSharedProperty("incoming", outgoingChannel);
+    bgWorker.setSharedProperty("outgoing", incomingChannel);
+    
+    // listen for messages from the receiving MessageChannel
+    // This event is triggered when the background sends a message to this worker
+    incomingChannel.addEventListener(Event.CHANNEL_MESSAGE, incomingMessageHandler);</pre></div>
+    
+    </p><p><span class="label"> 参数 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">receiver</span>:<a href="Worker.html">Worker</a></code> &mdash; 将接收通过所创建的消息通道传送的消息的 worker
+    
+    </td></tr></table></p><p></p><span class="label">返回</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="MessageChannel.html">MessageChannel</a></code> &mdash; 操作所创建的 MessageChannel 对象
+    
+    </td></tr></table></div></span><span id="pageFilter" runtime="Flash::11.4##AIR::3.4##"><a name="getSharedProperty()" id="getSharedProperty()"></a><a name="getSharedProperty(String)" id="getSharedProperty(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>getSharedProperty</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getSharedProperty(key:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#*">*</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>Flash Player 11.4, AIR 3.4</td></tr></table><p></p><p></p><p>
+    通过指定的键检索存储在此 worker 中的值。
+    
+    <p>子 worker 中的代码可以调用此方法尽早检索某个值，就像在 worker swf 的主类的构造函数中一样。</p>
+    
+    </p><p><span class="label"> 参数 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">key</span>:<a href="../../String.html">String</a></code> &mdash; 要检索的共享属性的名称
+    
+    </td></tr></table></p><p></p><span class="label">返回</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../specialTypes.html#*">*</a></code> &mdash; 以指定的键存储的共享属性值，或者 <code>null</code>（如果没有为指定的键存储值）
+    
+    </td></tr></table></div></span><span id="pageFilter" runtime="Flash::11.4##AIR::3.4##"><a name="removeEventListener()" id="removeEventListener()"></a><a name="removeEventListener(String,Function,Boolean)" id="removeEventListener(String,Function,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>removeEventListener</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>override public function removeEventListener(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>Flash Player 11.4, AIR 3.4</td></tr></table><p></p><p></p><p>
+    
+	从 EventDispatcher 对象中删除侦听器。如果没有向 EventDispatcher 对象注册任何匹配的侦听器，则对此方法的调用没有任何效果。
+	
+	</p><p><span class="label"> 参数 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:<a href="../../String.html">String</a></code> &mdash; 事件的类型。
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">listener</span>:<a href="../../Function.html">Function</a></code> &mdash; 要删除的侦听器对象。
+	
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useCapture</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; 
+	
+	<span>指出是为捕获阶段还是为目标和冒泡阶段注册了侦听器。如果为捕获阶段以及目标和冒泡阶段注册了侦听器，则需要对 <code>removeEventListener()</code> 进行两次调用才能将这两个侦听器删除，一次调用将 <code>useCapture()</code> 设置为 <code>true</code>，另一次调用将 <code>useCapture()</code> 设置为 <code>false</code>。</span>
+	
+	</td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::11.4##AIR::3.4##"><a name="setSharedProperty()" id="setSharedProperty()"></a><a name="setSharedProperty(String,any)" id="setSharedProperty(String,any)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>setSharedProperty</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setSharedProperty(key:<a href="../../String.html">String</a>, value:<a href="../../specialTypes.html#*">*</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>Flash Player 11.4, AIR 3.4</td></tr></table><p></p><p></p><p>
+    提供可供在 worker 的 swf 中运行的代码使用的具名值。
+    
+    <p>您可以在调用 worker 的 <code>start()</code> 方法之前调用此方法。在这种情况下，在构造时共享属性可供 worker 的 swf 中的代码使用。</p>
+    
+    <p>传递到 <code>value</code> 参数的值几乎可以是任何对象。除了下面指出的例外，传递到 <code>value</code> 参数的任何对象都不是按引用传递的。在调用 <code>setSharedProperty()</code> 后对一个 worker 中的对象所做的更改不会保留到另一个 worker。对象是通过序列化为 AMF3 格式以及反序列化为接收 worker 中的一个新对象进行复制的。因此，无法以 AMF3 格式进行序列化的任何对象（包括显示对象）都不能传递给 <code>value</code> 参数。为了使自定义类能够被正确传递，必须使用 <code>flash.net.registerClassAlias()</code> 函数或 <code>[RemoteClass]</code> 元数据来注册类定义。无论使用哪种方法，都必须为类的两个 worker 版本使用相同的别名。</p>
+    
+    <p>有五种对象例外，对它们不适用对象不在 worker 之间共享的规则：</p>
+    
+    <ul><li>Worker</li><li>MessageChannel</li><li>可共享 ByteArray（其 <code>shareable</code> 属性设为 <code>true</code> 的 ByteArray 对象）</li><li>Mutex</li><li>Condition</li></ul>
+    
+    <p>如果您将这些对象的一个实例传递给 <code>value</code> 参数，则每个 worker 都将引用同一个底层对象。在一个 worker 中对实例所做的更改可立即用于另一 worker 中。此外，如果您多次使用 <code>setSharedProperty()</code> 传递了这些对象的同一实例，则运行时不会在接收 worker 中创建对象的新副本。相反，它将重用同一引用，这降低了对系统内存的使用。</p>
+    
+    <p>以 <code>null</code> 或 <code>undefined</code> 作为 <code>value</code> 参数调用此方法将清除指定 <code>key</code> 参数的任何以前任何值。以这种方式清除某个值将删除对该值的引用，从而允许对该值进行垃圾回收。</p>
+    
+    <p>您可以在 key 参数中使用任何 String 值。这些共享属性可供对 worker 具有访问权限的任何代码使用。为避免意外覆盖某个值，请考虑使用前缀、后缀或类似机制来尝试使您的键名称成为唯一的。</p>
+    
+    </p><p><span class="label"> 参数 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">key</span>:<a href="../../String.html">String</a></code> &mdash; 存储共享属性时使用的名称。
+    </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="../../specialTypes.html#*">*</a></code> &mdash; 共享属性的值。
+    
+    </td></tr></table></p><p><span class="label">相关 API 元素</span></p><div class="seeAlso"><a href="MessageChannel.html" target="">MessageChannel 类</a><br/><a href="../utils/ByteArray.html#shareable" target="">ByteArray.shareable 属性</a><br/><a href="../concurrent/Mutex.html" target="">Mutex 类</a><br/><a href="../concurrent/Condition.html" target="">Condition 类</a></div></div></span><span id="pageFilter" runtime="Flash::11.4##AIR::3.4##"><a name="start()" id="start()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>start</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function start():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>Flash Player 11.4, AIR 3.4</td></tr></table><p></p><p></p><p>
+    启动 worker 的执行。运行时创建 worker 线程并调用 worker swf 的主类的构造函数。
+    
+    <p>此操作是异步的。一旦 worker 启动完成，它会将其 <code>state</code> 属性更改为 <code>WorkerState.RUNNING</code> 并调度一个 <code>workerState</code> 事件。</p>
+    
+    
+    </p></div></span><span id="pageFilter" runtime="Flash::11.4##AIR::3.4##"><a name="terminate()" id="terminate()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>terminate</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function terminate():<a href="../../Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>Flash Player 11.4, AIR 3.4</td></tr></table><p></p><p></p><p>
+    停止 worker 的代码执行。调用此方法会中止 worker 的 swf 中的任何当前 ActionScript。
+    
+    </p><p></p><span class="label">返回</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Boolean.html">Boolean</a></code> &mdash; <code>true</code>，如果 worker 中的代码曾在运行且被中断；或者 <code>false</code>，如果 worker 从未启动过
+    
+    </td></tr></table></div></span><div class="detailSectionHeader"> 事件详细信息 </div><span id="pageFilter" runtime="Flash::11.4##AIR::3.4##"><a name="event:workerState" id="event:workerState"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>workerState</h3></td><td class="detailHeaderType"> 事件 </td></tr></table><div class="detailBody"><span class="label">事件对象类型: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">属性 Event.type  =  </span><a href="../events/Event.html#WORKER_STATE"><code>flash.events.Event.WORKER_STATE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>Flash Player 11.4, AIR 3.4</td></tr></table><p></p><p></p><p>
+当 worker 的 <code>state</code> 属性改变时将调度此事件。  
+
+</p>
+	<code>Event.WORKER_STATE</code> 常量定义 <code>workerState</code> 事件对象的 <code>type</code> 属性的值。
+ 	
+ 	<p>此事件具有以下属性：</p>
+ 	
+ 	<table class="innertable" ><tr><th>属性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；没有要取消的默认行为。</td></tr><tr><td><code>currentTarget</code></td><td>当前正在使用某个事件侦听器处理 Event 对象的对象。</td></tr><tr><td><code>target</code></td><td>调度此事件的对象。</td></tr></table>
+ 	
+	</div></span><a name="includeExamplesSummary" id="includeExamplesSummary"></a><div class="detailSectionHeader">示例<span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_cn"> 如何使用本示例 </a></span></div><span id="pageFilter"><div class="exampleHeader">WorkerExample.as</div><br/><div class="detailBody"> 以下示例演示了如何使用 Worker 对象在后台执行任务。它还显示了在父 worker 与后台 worker 之间的通信，包括在 worker 之间传递自定义类对象。
+ 
+ <p>此示例包括三个 ActionScript 类：WorkerExample 是主类和父 worker。BackgroundWorker 是执行后台工作的类。它被编译为后台 worker swf 的主类。CountResult 是一个自定义类，用来将数据作为单个对象而不是作为多个值在两个 worker 之间传递。</p>
+ 
+ <p>在此示例中，后台 worker 在一个循环中进行计数，直至达到父 worker 指定的数目。随着其工作的进展，它会向父 worker 发送进度消息。最后，当计数完成时，后台 worker 会向父 worker 发送一条消息来通知它已完成以及它花费了多长时间来计数。</p>
+ 
+ <p>WorkerExample 类是 swf 的主类，因此它是原始 worker 的主类。在 <code>initialize()</code> 方法中，代码使用 BackgroundWorker 类的字节（它们是使用 <code>[Embed]</code> 标记嵌入的）创建后台 worker 对象。</p>
+ 
+ <p>在通过调用 <code>WorkerDomain.createWorker()</code> 创建后台 worker 后，代码将设置 worker 之间的通信。首先，代码创建一组 MessageChannel 对象。它通过调用后台 worker 的 <code>setSharedProperty()</code> 方法将这些对象传递给后台 worker。最后，它注册后台 Worker 对象的 <code>workerState</code> 事件并通过调用其 <code>start()</code> 方法启动该 worker。</p>
+ 
+ <p>随着后台 worker 执行其工作，它会将进度（以及最终结果）消息发送到父 worker。父 worker 使用该信息来更新进度栏和文本指示器。</p>
+<div class="listing"><pre>
+package
+{
+    import com.adobe.example.vo.CountResult;
+    
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.display.StageAlign;
+    import flash.display.StageScaleMode;
+    import flash.events.Event;
+    import flash.net.registerClassAlias;
+    import flash.system.MessageChannel;
+    import flash.system.Worker;
+    import flash.system.WorkerDomain;
+    import flash.system.WorkerState;
+    import flash.text.TextField;
+    import flash.text.TextFormat;
+    import flash.text.TextFormatAlign;
+    import flash.utils.ByteArray;
+    
+    public class WorkerExample extends Sprite
+    {
+        // ------- Embed the background worker swf as a ByteArray -------
+        [Embed(source="../workerswfs/BackgroundWorker.swf", mimeType="application/octet-stream")]
+        private static var BackgroundWorker_ByteClass:Class;
+        public static function get BackgroundWorker():ByteArray
+        {
+            return new BackgroundWorker_ByteClass();
+        }
+        
+        
+        private var bgWorker:Worker;
+        private var bgWorkerCommandChannel:MessageChannel;
+        private var progressChannel:MessageChannel;
+        private var resultChannel:MessageChannel;
+        
+        
+        public function WorkerExample()
+        {
+            initialize();
+        }
+        
+        
+        private function initialize():void
+        {
+            // create the user interface
+            setupStage();
+            createStatusText();
+            createProgressBar();
+            
+            // Register the alias so we can pass CountResult objects between workers
+            registerClassAlias("com.adobe.test.vo.CountResult", CountResult);
+            
+            // Create the background worker
+            bgWorker = WorkerDomain.current.createWorker(BackgroundWorker);
+            
+            // Set up the MessageChannels for communication between workers
+            bgWorkerCommandChannel = Worker.current.createMessageChannel(bgWorker);
+            bgWorker.setSharedProperty("incomingCommandChannel", bgWorkerCommandChannel);
+            
+            progressChannel = bgWorker.createMessageChannel(Worker.current);
+            progressChannel.addEventListener(Event.CHANNEL_MESSAGE, handleProgressMessage)
+            bgWorker.setSharedProperty("progressChannel", progressChannel);
+            
+            resultChannel = bgWorker.createMessageChannel(Worker.current);
+            resultChannel.addEventListener(Event.CHANNEL_MESSAGE, handleResultMessage);
+            bgWorker.setSharedProperty("resultChannel", resultChannel);
+            
+            // Start the worker
+            bgWorker.addEventListener(Event.WORKER_STATE, handleBGWorkerStateChange);
+            bgWorker.start();
+        }
+        
+        
+        private function handleBGWorkerStateChange(event:Event):void
+        {
+            if (bgWorker.state == WorkerState.RUNNING) 
+            {
+                _statusText.text = "Background worker started";
+                bgWorkerCommandChannel.send(["startCount", 100000000]);
+            }
+        }
+        
+        
+        private function handleProgressMessage(event:Event):void
+        {
+            var percentComplete:Number = progressChannel.receive();
+            setPercentComplete(percentComplete);
+            _statusText.text = Math.round(percentComplete).toString() + "% complete";
+        }
+        
+        
+        private function handleResultMessage(event:Event):void
+        {
+            var result:CountResult = resultChannel.receive() as CountResult;
+            setPercentComplete(100);
+            _statusText.text = "Counted to " + result.countTarget + " in " + (Math.round(result.countDurationSeconds * 10) / 10) + " seconds";
+        }
+        
+        
+        // ------- Create UI -------
+        
+        private var _currentPercentComplete:int = 0;
+        private var _needsValidation:Boolean = false;
+        private var _statusText:TextField;
+        private var _progressBarRect:Shape;
+        private var _progressBar:Shape;
+        
+        private function setupStage():void
+        {
+            stage.align = StageAlign.TOP_LEFT;
+            stage.scaleMode = StageScaleMode.NO_SCALE;
+            stage.stageWidth = 800;
+            stage.stageHeight = 600;
+            stage.color = 0xffffff;
+        }
+        
+        
+        private function createStatusText():void
+        {
+            _statusText = new TextField();
+            _statusText.width = 400;
+            _statusText.height = 25;
+            _statusText.x = (stage.stageWidth - _statusText.width) / 2;
+            _statusText.y = 150;
+            
+            var statusTextFormat:TextFormat = new TextFormat();
+            statusTextFormat.color = 0xeeeeee;
+            statusTextFormat.font = "Verdana";
+            statusTextFormat.align = TextFormatAlign.CENTER;
+            statusTextFormat.size = 16;
+            _statusText.defaultTextFormat = statusTextFormat;
+            _statusText.wordWrap = false;
+            _statusText.opaqueBackground = 0x999999;
+            _statusText.selectable = false;
+            
+            _statusText.text = "Initializing...";
+            
+            addChild(_statusText);
+        }
+        
+        
+        private function createProgressBar():void
+        {
+            _progressBarRect = new Shape();
+            _progressBarRect.graphics.beginFill(0x000000, 0);
+            _progressBarRect.graphics.lineStyle(2, 0x000000);
+            _progressBarRect.graphics.drawRect(0, 0, 400, 30);
+            _progressBarRect.graphics.endFill();
+            
+            _progressBarRect.x = (stage.stageWidth - _progressBarRect.width) / 2;
+            _progressBarRect.y = 100;
+            
+            addChild(_progressBarRect);
+            
+            _progressBar = new Shape();
+            _progressBar.graphics.beginFill(0x0000ee);
+            _progressBar.graphics.drawRect(0, 0, 391, 21);
+            _progressBar.x = _progressBarRect.x + 4;
+            _progressBar.y = _progressBarRect.y + 4;
+            
+            addChild(_progressBar);
+            
+            _progressBar.scaleX = 0;
+        }
+        
+        private function setPercentComplete(percentComplete:int):void
+        {
+            if (_currentPercentComplete == percentComplete)
+                return;
+            
+            _currentPercentComplete = percentComplete;
+            invalidateValue();
+        }
+        
+        
+        private function invalidateValue():void
+        {
+            if (_needsValidation)
+                return;
+            
+            _needsValidation = true;
+            addEventListener(Event.EXIT_FRAME, validate);
+        }
+        
+        private function validate(event:Event):void
+        {
+            removeEventListener(Event.EXIT_FRAME, validate);
+            _needsValidation = false;
+            
+            _redrawProgressBar();
+        }
+        
+        private function _redrawProgressBar():void
+        {
+            _progressBar.scaleX = _currentPercentComplete / 100;
+        }
+    }
+}
+</pre></div></div></span><span id="pageFilter"><div class="exampleHeader">WorkerExample.BackgroundWorker.as</div><br/><div class="detailBody"> 此类包含后台 worker 的代码。此类编译为其自己的 swf 文件。该 swf 文件然后嵌入到主 swf 中。
+ 
+ <p>在 <code>initialize()</code> 方法中，它接收父 worker 传递的 MessageChannel 对象。它们用于两个 worker 之间的通信。</p>
+ 
+ <p>父 worker 在 <code>commandChannel</code> 消息通道上调用 <code>send()</code> 方法来发送消息。在后台 worker 内，运行时然后通过调用 <code>handleCommandMessage()</code> 方法来调度 <code>channelMessage</code> 事件。</p>
+ 
+ <p>后台 worker 的实际工作发生在 <code>count()</code> 方法中。随着后台 worker 执行其计数，它会通过在 <code>progressChannel</code> MessageChannel 对象上调用 <code>send()</code> 方法将进度消息发送到父 worker。当它完成计数时，它将在 <code>resultChannel</code> MessageChannel 对象上调用 <code>send()</code> 方法。</p>
+<div class="listing"><pre>
+package com.adobe.example.workers
+{
+    import com.adobe.example.vo.CountResult;
+    
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.net.registerClassAlias;
+    import flash.system.MessageChannel;
+    import flash.system.Worker;
+    import flash.utils.getTimer;
+    
+    public class BackgroundWorker extends Sprite
+    {
+        private var commandChannel:MessageChannel;
+        private var progressChannel:MessageChannel;
+        private var resultChannel:MessageChannel;
+        
+        
+        public function BackgroundWorker()
+        {
+            initialize();
+        }
+        
+        
+        private function initialize():void
+        {
+            registerClassAlias("com.adobe.test.vo.CountResult", CountResult);
+            
+            // Get the MessageChannel objects to use for communicating between workers
+            // This one is for receiving messages from the parent worker
+            commandChannel = Worker.current.getSharedProperty("incomingCommandChannel") as MessageChannel;
+            commandChannel.addEventListener(Event.CHANNEL_MESSAGE, handleCommandMessage);
+            // These are for sending messages to the parent worker
+            progressChannel = Worker.current.getSharedProperty("progressChannel") as MessageChannel;
+            resultChannel = Worker.current.getSharedProperty("resultChannel") as MessageChannel;
+        }        
+        
+        
+        private function handleCommandMessage(event:Event):void
+        {
+            if (!commandChannel.messageAvailable)
+                return;
+            
+            var message:Array = commandChannel.receive() as Array;
+            
+            if (message != null && message[0] == "startCount")
+            {
+                count(uint(message[1]));
+            }
+        }
+        
+        
+        private function count(targetValue:uint):void
+        {
+            var startTime:int = getTimer();
+            var onePercent:uint = uint(Math.ceil(targetValue / 100));
+            var oneHalfPercent:Number = onePercent / 2;
+            
+            var i:uint = 0;
+            while (i &lt; targetValue)
+            {
+                i++;
+                // only send progress messages every one-half-percent milestone
+                // to avoid flooding the message channel
+                if (i % oneHalfPercent == 0)
+                {
+                    progressChannel.send(i / onePercent);
+                }
+            }
+            
+            var elapsedTime:int = getTimer() - startTime;
+            var result:CountResult = new CountResult(targetValue, elapsedTime / 1000);
+            resultChannel.send(result);
+            
+            trace("counted to", targetValue.toString(), "in", elapsedTime, "milliseconds");
+        }
+    }
+}
+</pre></div></div></span><span id="pageFilter"><div class="exampleHeader">WorkerExample.CountResult.as</div><br/><div class="detailBody"> 此类定义了 CountResult 值对象。这是一个在两个 worker 之间传递的自定义类。为了在 worker 之间传递自定义类，每个 worker 使用相同的别名调用 <code>registerClassAlias()</code> 方法。
+<div class="listing"><pre>
+package com.adobe.example.vo
+{
+    public class CountResult
+    {
+        public function CountResult(countTarget:uint=0, countTime:Number=0)
+        {
+            this.countTarget = countTarget;
+            this.countDurationSeconds = countTime;
+        }
+        
+        public var countTarget:uint;
+        public var countDurationSeconds:Number;
+    }
+}
+</pre></div></div></span><span id="pageFilter"><div class="exampleHeader">IOSWorkerExample.as</div><br/><div class="detailBody"> 从 AIR 19 起已增加对于 iOS 的并发支持。除了在 SWF 的加载和将字节数组传递给 worker 两方面有所不同外，其他所有方面都与 Flash/AIR Android 相同。
+ <p>1. 由于动态加载包含 ActionScript 代码的远程 SWF 不起作用，因此必须将远程 SWF 作为去除内容的 SWF 传递给 worker。2. 使用 [Embed] 标记嵌入 SWF（具有 ABC 代码）在 iOS 中无效。每个额外的 worker 都是基于一个单独的 swf 创建的。要创建 Worker 类的新实例，请将一个 ByteArray（其中包含后台 worker 的 SWF 的字节）作为参数传递给 WorkerDomain 类的 <code>createWorker()</code>方法。</p>
+ <p>在 iOS 上实现此目的时，有两种常用方式可用来访问 SWF 的字节：第一种方法是使用 <code>Loader</code> 加载一个外部 SWF 文件，第二种方法是使用 <code>URLLoader</code> 加载 SWF 文件。</p>
+ <p>下例使用 <code>Loader</code> API 加载 SWF 文件。</p>
+<div class="listing"><pre>
+package
+{
+    import flash.display.Loader;
+    import flash.display.Sprite;
+    import flash.display.StageAlign;
+    import flash.display.StageScaleMode;
+    import flash.events.Event;
+    import flash.events.IOErrorEvent;
+    import flash.net.URLRequest;
+    import flash.system.ApplicationDomain;
+    import flash.system.LoaderContext;
+    import flash.system.MessageChannel;
+    import flash.system.Worker;
+    import flash.system.WorkerDomain;
+    import flash.text.TextField;
+    import flash.text.TextFormat;
+
+    
+    public class IOSWorkerExample extends Sprite
+    {
+        public var worker:Worker;
+        public var bm:MessageChannel;
+        public var mb:MessageChannel;
+        public var tf:TextField;
+        public var tfrmt:TextFormat;
+        
+        public function IOSWorkerExample()
+        {
+            super();
+            
+            
+            stage.align = StageAlign.TOP_LEFT;
+            stage.scaleMode = StageScaleMode.NO_SCALE;
+            
+            tf=new TextField();
+            tfrmt= new TextFormat()
+            tfrmt.size=80;
+            tf.textColor = 0xFFFFF; 
+            tf.defaultTextFormat=tfrmt;
+        
+            addChild(tf);        
+            //creating the urlRequest object that references the background worker.
+            var _urlRequest:URLRequest = new URLRequest("IOSBackWorker.swf");
+            var _loader:Loader = new Loader();
+            var _lc:LoaderContext = new LoaderContext(false, ApplicationDomain.currentDomain, null);
+            
+            _loader.contentLoaderInfo.addEventListener(Event.COMPLETE,completeHandler);
+            _loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR,errorHandler);
+            _loader.load(_urlRequest, _lc);
+            
+        }
+        // This function is called once the swf loading is completed
+        public function completeHandler(e:Event):void
+        { 
+            
+            worker = WorkerDomain.current.createWorker(e.target.bytes);
+            bm = worker.createMessageChannel(Worker.current);
+            mb = Worker.current.createMessageChannel(worker);
+            
+            worker.setSharedProperty("btm", bm);
+            worker.setSharedProperty("mtb", mb);
+            //adding event handler on message receive from background
+            bm.addEventListener(Event.CHANNEL_MESSAGE, onBackToMain);
+            
+            worker.start();  
+            bm.receive(true);
+            
+        }
+        
+        public function errorHandler(e:IOErrorEvent):void
+        {
+            
+            trace("In IO ErrorEvent Handler  "+e.text);
+        }
+        
+        //This function is called when the main thread receives the message from the background worker.
+        public function onBackToMain(event:Event):void
+        {
+            
+            if(bm.messageAvailable)
+            {
+                // displaying the percentages based on the message received from the background.
+                var progress:Number = bm.receive();
+                trace("progress   "+progress);
+                
+                tf.text= progress.toString();
+            }
+        }
+        
+    }
+}
+</pre></div></div></span><span id="pageFilter"><div class="exampleHeader">IOSBackWorker.as</div><br/><div class="detailBody"> 如此例所示，在调用 <code>Loader</code> 的加载功能时，如果正在执行此代码，我们需要在后台 worker 中放置一个 <code>isPrimordial</code> 属性检查语句。
+<div class="listing"><pre>
+package
+{
+    import flash.display.Sprite;
+    import flash.system.MessageChannel;
+    import flash.system.Worker;
+    import flash.utils.ByteArray;
+    import flash.utils.getTimer;
+    
+    public class IOSBackWorker extends Sprite
+    {
+        private var memory:ByteArray = new ByteArray();
+        private var bm:MessageChannel;
+        private var mb:MessageChannel;
+        
+        public function IOSBackWorker()
+        {
+            if(!Worker.current.isPrimordial)
+            {
+                memory.shareable = true;
+                // creating objects of message channels
+                bm = Worker.current.getSharedProperty("btm");
+                mb = Worker.current.getSharedProperty("mtb");
+                
+                // calculating the percentage
+                trace("message came");
+                var j:Number =1;
+                while (j&lt;1000)
+                {
+                    for(var i=0;i&lt;100;i++){}
+                    var startTime=getTimer();
+                    // adding delay
+                    while (getTimer()-startTime &lt;100);
+                    
+                    trace(j, (100*j)/1000);
+                    var progress:Number=(100*j)/1000;
+                    // sending the percentage to the main thread
+                    bm.send(progress);                
+                    
+                    j++;
+                }            
+            }
+        }        
+    }
+}
+</pre></div></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,true,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script></div><p xmlns:xd="http://www.pnp-software.com/XSLTdoc"></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 11:04 AM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/zh_CN/legalnotices/index.html">法律声明</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">在线隐私策略</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">为什么显示为英语？</span>
+				</div>
+				<div class="white_content_body">
+					<b>《ActionScript 3.0 参考》中的内容以英语显示</b><br><br>
+					《ActionScript 3.0 参考》中的部分内容未翻译成所有语言。当某个语言元素未翻译时，将显示为英语。例如，ga.controls.HelpBox 类未翻译成任何语言。因此在简体中文版的参考中，ga.controls.HelpBox 类显示为英语。
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 11:04 AM Z  -->

@@ -1,0 +1,632 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="適用於 Adobe&reg; Flash&reg; Platform 的 ActionScript&reg; 3.0 參考"><meta name="lang" content="zh-tw"><meta name="runtime" content="air"><meta name="runtimever" content="air:1.5"><meta name="product" content="air"><meta name="productver" content="air:1.5"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../asfilter.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="ApplicationUpdater,air.update.ApplicationUpdater,configurationFile,currentState,currentVersion,delay,isFirstRun,isNewerVersionFunction,previousApplicationStorageDirectory,previousVersion,updateDescriptor,updateURL,wasPendingUpdate,cancelUpdate,checkForUpdate,checkNow,downloadUpdate,initialize,installFromAIRFile,installUpdate"><title>ApplicationUpdater - Adobe ActionScript&reg; 3 (AS3  ) API 參考</title>
+		<link rel="stylesheet" href="../../filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="../../filter_new.css" type="text/css">
+			
+		<script src="../../jquery.js" type="text/javascript"></script>
+		<script src="../../s_chl_code.js" type="text/javascript"></script>
+		<script src="../../jquery.zclip.js" type="text/javascript"></script>
+		<script src="../../jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="../../cookies.js" type="text/javascript"></script>
+		<script src="../../asdoc.js" type="text/javascript"></script>
+		<script src="../../iscroll.js" type="text/javascript"></script>
+		<script src="../../AC_OETags.js" type="text/javascript"></script>
+		<script src="../../omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "執行階段";
+			var productsLabel = "產品";
+			var noneLabel = "無";
+			var qsearchBoxLabel = "快速搜尋";
+			var qsearchText = "找不到字詞";
+			var ajaxErrorMsg="載入頁面時發生錯誤";
+			var ajaxErrorTryMsg="再試一次";
+			var ajaxLoadingMsg="仍在載入";
+			var cancelMsg = "取消";
+			var classesText = "類別";
+			var strJiveReply = "張貼此問題是為回應下列文章： "
+			var showFilters = "顯示篩選";
+			var hideFilters = "隱藏篩選";
+			
+		
+			var baseRef = "../../";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											適用於 Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup> Platform 的 ActionScript<sup>&reg;</sup> 3.0 參考<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="../../index.html"> 首頁 </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="ApplicationUpdater.html#top" style="display:">顯示套件和類別清單</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="ApplicationUpdater.html#top" style="display:none">隱藏套件和類別清單</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="../../package-summary.html"> 套件 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../class-summary.html"> 類別 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../whatsnew.html"> 新增內容 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../all-index-Symbols.html"> 索引 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../appendixes.html"> 附錄 </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">為什麼顯示英文？</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/zh_TW/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('../../')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('../../')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="../../help.js"></script>
+						<script language="javascript" type="text/javascript" src="../../asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="../../filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>篩選：</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">從伺服器擷取資料...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">從伺服器擷取資料...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="ApplicationUpdater.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">air.update&nbsp;</a><br>
+								<h1 id="classProductName">ApplicationUpdater&nbsp; - AS3 </h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="ApplicationUpdater.html#propertySummary" style="display:none"> 屬性 </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="ApplicationUpdater.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> 屬性 </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="ApplicationUpdater.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> 建構函式 </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="ApplicationUpdater.html#methodSummary" style="display:none"> 方法 </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="ApplicationUpdater.html#constantSummary" style="display:none"> 全域常數 </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="ApplicationUpdater.html#eventSummary" style="display:none"> 事件 </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="ApplicationUpdater.html#styleSummary" style="display:none"> 樣式 </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="ApplicationUpdater.html#SkinPartSummary" style="display:none"> 外觀部件 </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="ApplicationUpdater.html#SkinStateSummary" style="display:none"> 外觀狀態 </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="ApplicationUpdater.html#effectSummary" style="display:none"> 特效 </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="ApplicationUpdater.html#constantSummary" style="display:none"> 常數 </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="ApplicationUpdater.html#methodSummary" style="display:none"> 全域函數 </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="ApplicationUpdater.html#methodSummary" style="display:none">函數</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="ApplicationUpdater.html#interfaceSummary" style="display:none"> 介面 </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="ApplicationUpdater.html#classSummary" style="display:none"> 類別 </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="ApplicationUpdater.html#includeExamplesSummary" style="display:none"> 範例 </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="ApplicationUpdater.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								類別
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">套件</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">air.update</a></td></tr><tr><td class="classHeaderTableLabel">類別</td><td class="classSignature">public  class  ApplicationUpdater</td></tr><tr><td class="classHeaderTableLabel">繼承</td><td class="inheritanceList">ApplicationUpdater  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../flash/events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../Object.html">Object</a></td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p></p>
+	ApplicationUpdater 類別可在不提供任何預設使用者介面的情況下，為 Adobe<sup>&reg;</sup> AIR<sup>&reg;</sup> 應用程式定義更新架構的基本功能。(ApplicationUpdaterUI 類別則包含了更新功能和預設使用者介面)。<i></i> 
+		
+	              <p>此類別已包含在 Adobe AIR SDK 隨附的 applicationupdater_ui.swc 檔案中。applicationupdater_ui.swc 檔案是在 AIR SDK 的 frameworks/libs/air 目錄中。</p>
+	
+	              <p>Adobe<sup>&reg;</sup> Flex&trade; Builder&trade; 會在您建立 Adobe AIR 的專案時，自動載入這個類別。使用 Adobe<sup>&reg;</sup> Flex&trade; SDK 編譯應用程式時，應該包括 SWC 檔案。</p>
+	
+	
+	
+	
+		
+	              <p>管理應用程式的更新可能會很複雜。AIR 更新架構所提供的 API 可協助開發人員為 AIR 應用程式提供完善的更新功能。AIR 更新架構中的功能讓開發人員得以執行下列作業：</p>
+	
+	              <ul>
+                  <li>
+	                    <p>根據特定間隔或使用者的要求，定期檢查更新</p>
+	                 </li>
+                  <li>
+	                    <p>從網路來源下載 AIR 檔 (更新項目)</p>
+	                 </li>
+                  <li>
+	                    <p>在使用者初次執行新安裝的版本時提出警示</p>
+	                 </li>
+                  <li>
+	                    <p>確認使用者是否要檢查更新</p>
+	                 </li>
+                  <li>
+	                    <p>向使用者顯示新的更新版本相關資訊</p>
+	                 </li>
+                  <li>
+	                    <p>向使用者顯示下載進度和錯誤資訊</p>
+	                 </li>
+               </ul>
+	
+	              <p>AIR 更新架構可讓您將 AIR 應用程式更新版本的相關資訊儲存在單純的 XML 組態設定檔中。對大部分應用程式而言，僅需設定這些組態設定檔並加入若干基本程式碼，便能為使用者提供完善的更新功能。</p>
+	
+	              <p>若您想要自行定義使用者介面與 AIR 更新架構搭配使用，請使用 AIRUpdater 類別。</p>
+	
+	              <p>更新程序包括一連串的狀態。更新程式物件的 <code>currentState</code> 屬性反映了更新程式目前的狀態：</p>
+	
+	              <p>
+                  <table class="innertable" ><tr><th>
+	currentState 值
+	</th><th>
+	說明
+	</th></tr><tr><td>"UNINITIALIZED"</td><td>更新程式尚未初始化。</td></tr><tr><td>"INITIALIZING"</td><td>更新程式正在初始化。</td></tr><tr><td>"READY"</td><td>更新程式已完成初始化。</td></tr><tr><td>"BEFORE_CHECKING"</td><td>更新程式尚未檢查更新描述器檔案。</td></tr><tr><td>"CHECKING"</td><td>更新程式正在檢查更新描述器檔案。</td></tr><tr><td>"AVAILABLE"</td><td>已有可用的更新描述器檔案。</td></tr><tr><td>"DOWNLOADING"</td><td>更新程式正在下載 AIR 檔。</td></tr><tr><td>"DOWNLOADED"</td><td>更新程式已經下載 AIR 檔。</td></tr><tr><td>"INSTALLING"</td><td>更新程式正在安裝 AIR 檔。</td></tr><tr><td>"PENDING_INSTALLING"</td><td>更新程式已完成初始化，且目前尚有擱置的更新。</td></tr></table>
+               </p>
+	
+	              <p>若是使用 AIR Debug Launcher (ADL) 應用程式來測試應用程式，試圖更新應用程式就會產生 IllegalOperationError 例外。</p>
+	
+	              <p>只有桌面描述檔才支援 AIR 更新架構。延伸的桌面應用程式 (利用原生安裝程式安裝的應用程式) 並不支援，而且行動描述檔 (利用 ActionScript 3.0 編寫的 iPhone 應用程式) 也不支援。在執行階段檢查 <code>Updater.isSupported</code> 屬性，暸解是否支援更新架構。</p>
+	
+	              <p>如需有關使用 AIR 更新架構的詳細資訊，請參閱<a href="http://help.adobe.com/zh_TW/air/build/index.html" target="external">建立 Adobe AIR 應用程式</a>的「更新 AIR 應用程式」一章。</p> 
+	
+	           <p></p><p><span class="classHeaderTableLabel">相關 API 元素</span></p><div class="seeAlso"><a href="ApplicationUpdaterUI.html" target="">ApplicationUpdaterUI</a><br/><a href="../../flash/desktop/Updater.html" target="">flash.desktop.Updater</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary" id="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">公用屬性</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="ApplicationUpdater.html#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隱藏繼承公用屬性</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="ApplicationUpdater.html#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 顯示繼承公用屬性</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">屬性</th><th>定義自</th></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#configurationFile" class="signatureLink">configurationFile</a> : <a href="../../flash/filesystem/File.html">File</a><div class="summaryTableDescription">
+		設定 delay 和 updateURL 屬性值的組態設定檔所在位置。</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="../../Object.html#constructor" class="signatureLink">constructor</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">
+	 類別物件的參照或是特定物件實體的建構函數。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#currentState" class="signatureLink">currentState</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">[唯讀] 
+		更新程式的內部狀態。</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#currentVersion" class="signatureLink">currentVersion</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">[唯讀] 
+		應用程式的目前版本。</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#delay" class="signatureLink">delay</a> : <a href="../../Number.html">Number</a><div class="summaryTableDescription">
+		定期檢查新的更新之天數間隔。</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#isFirstRun" class="signatureLink">isFirstRun</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">[唯讀] 
+		是否為成功更新後第一次執行 (true = 是，false = 否)。</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#isNewerVersionFunction" class="signatureLink">isNewerVersionFunction</a> : <a href="../../Function.html">Function</a><div class="summaryTableDescription">
+		更新程式用來執行版本比較的函數。</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#previousApplicationStorageDirectory" class="signatureLink">previousApplicationStorageDirectory</a> : <a href="../../flash/filesystem/File.html">File</a><div class="summaryTableDescription">[唯讀] 
+		應用程式儲存目錄先前的位置 (若該位置於更新後有所變更)。</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#previousVersion" class="signatureLink">previousVersion</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">[唯讀] 
+		應用程式的上一個版本。</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#updateDescriptor" class="signatureLink">updateDescriptor</a> : <a href="../../XML.html">XML</a><div class="summaryTableDescription">[唯讀] 
+		從更新 URL 下載之更新描述器檔案的內容。</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#updateURL" class="signatureLink">updateURL</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">
+		更新描述器檔案的位置。</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#wasPendingUpdate" class="signatureLink">wasPendingUpdate</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">[唯讀] 
+		是否有延緩 (包括安裝失敗) 的更新 (true = 是，false = 否)。</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary" id="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">公用方法 </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="ApplicationUpdater.html#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隱藏繼承公用方法</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="ApplicationUpdater.html#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 顯示繼承公用方法</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">方法</th><th>定義自</th></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#ApplicationUpdater()" class="signatureLink">ApplicationUpdater</a>()</div><div class="summaryTableDescription">
+		建構函數。</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#addEventListener()" class="signatureLink">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	會在 EventDispatcher 物件註冊事件偵聽程式，以便讓偵聽程式收到事件的通知。</div></td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#cancelUpdate()" class="signatureLink">cancelUpdate</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+		取消更新程序。</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#checkForUpdate()" class="signatureLink">checkForUpdate</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+		非同步下載和解譯更新描述器檔案。</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#checkNow()" class="signatureLink">checkNow</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+		啟動更新程序。</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../../flash/events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	會將事件傳送到事件流程。</div></td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#downloadUpdate()" class="signatureLink">downloadUpdate</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+		非同步下載更新檔案。</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	會檢查 EventDispatcher 物件是否有對特定的事件類型註冊偵聽程式。</div></td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#hasOwnProperty()" class="signatureLink">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 指出物件是否有已定義的指定屬性。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#initialize()" class="signatureLink">initialize</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+		 初始化更新程式。</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#installFromAIRFile()" class="signatureLink">installFromAIRFile</a>(file:<a href="../../flash/filesystem/File.html">File</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+		使用本機 AIR 檔啟動更新程序。</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#installUpdate()" class="signatureLink">installUpdate</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+		安裝更新檔案。</div></td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#isPrototypeOf()" class="signatureLink">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 指出 Object 類別的實體是否位於指定為參數的物件原型鏈中。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#propertyIsEnumerable()" class="signatureLink">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 指出指定的屬性是否存在，以及是否可列舉。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#removeEventListener()" class="signatureLink">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	會從 EventDispatcher 物件移除偵聽程式。</div></td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#setPropertyIsEnumerable()" class="signatureLink">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     為迴圈作業設定動態屬性的可用性。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toLocaleString()" class="signatureLink">toLocaleString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 傳回代表此物件的字串，根據地區特定慣例進行格式化。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toString()" class="signatureLink">toString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 會傳回指定之物件的字串形式。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#valueOf()" class="signatureLink">valueOf</a>():<a href="../../Object.html">Object</a></div><div class="summaryTableDescription">
+	 會傳回指定之物件的基本值。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	檢查此 EventDispatcher 物件是否已註冊事件偵聽程式，或者此物件的任何祖系已為特定事件類型註冊事件偵聽程式。</div></td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary" id="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">事件</div><div class="showHideLinks"><a href="http://help.adobe.com/en_US/Flex/4.6/UsingSDK/WS2db454920e96a9e51e63e3d11c0bf69084-7ee9.html" target="_blank">按一下以瞭解事件的詳細資訊</a></div><div class="showHideLinks"><div id="hideInheritedEvent" class="hideInheritedEvent"><a class="showHideLink" href="ApplicationUpdater.html#eventSummary" onclick="javascript:setInheritedVisible(false,'Event');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隱藏繼承事件</a></div><div id="showInheritedEvent" class="showInheritedEvent"><a class="showHideLink" href="ApplicationUpdater.html#eventSummary" onclick="javascript:setInheritedVisible(true,'Event');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 顯示繼承事件</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">事件</th><th> 摘要 </th><th>定義自</th></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[廣播事件] 當 Flash Player 或 AIR 應用程式取得作業系統焦點並成為作用中時傳送。</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:beforeInstall" class="signatureLink">beforeInstall</a></div></td><td class="summaryTableDescription summaryTableCol">在呼叫 installUpdate() 方法後，將要安裝更新之前傳送。</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:checkForUpdate" class="signatureLink">checkForUpdate</a></div></td><td class="summaryTableDescription summaryTableCol">在更新程式嘗試下載更新描述器檔案 (更新程序將要開始) 之前傳送。</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[廣播事件] 當 Flash Player 或 AIR 應用程式失去作業系統焦點並成為非作用中時傳送。</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:downloadComplete" class="signatureLink">downloadComplete</a></div></td><td class="summaryTableDescription summaryTableCol">當更新檔案下載完成時傳送。</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:downloadError" class="signatureLink">downloadError</a></div></td><td class="summaryTableDescription summaryTableCol">若在連線或下載更新檔案時發生錯誤，便會傳送。</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:downloadStart" class="signatureLink">downloadStart</a></div></td><td class="summaryTableDescription summaryTableCol">在呼叫 downloadUpdate() 方法及建立伺服器連線之後傳送。</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:error" class="signatureLink">error</a></div></td><td class="summaryTableDescription summaryTableCol">若在初始化或更新程序期間發生錯誤 (發生未預期的事件)，便會傳送。</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:fileUpdateError" class="signatureLink">fileUpdateError</a></div></td><td class="summaryTableDescription summaryTableCol">若在驗證 installFromAIRFile() 方法呼叫中的 airFile 參數所傳遞的檔案時發生錯誤，便會傳送。</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:fileUpdateStatus" class="signatureLink">fileUpdateStatus</a></div></td><td class="summaryTableDescription summaryTableCol">在更新程式成功驗證 installFromAIRFile() 方法呼叫中的檔案之後傳送。</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:initialized" class="signatureLink">initialized</a></div></td><td class="summaryTableDescription summaryTableCol">在初始化完成後傳送。</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:progress" class="signatureLink">progress</a></div></td><td class="summaryTableDescription summaryTableCol">下載更新檔案時傳送。</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:updateError" class="signatureLink">updateError</a></div></td><td class="summaryTableDescription summaryTableCol">若在嘗試下載或剖析更新描述器檔案時發生錯誤，便會傳送。</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdater.html#event:updateStatus" class="signatureLink">updateStatus</a></div></td><td class="summaryTableDescription summaryTableCol">在更新程式成功下載並解譯更新描述器檔案之後傳送。</td><td class="summaryTableOwnerCol">ApplicationUpdater</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">屬性詳細資訊</div><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="configurationFile" id="configurationFile"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>configurationFile</h3></td><td class="detailHeaderType">屬性</td></tr></table><div class="detailBody"><code>configurationFile:<a href="../../flash/filesystem/File.html">File</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		設定 <code>delay</code> 和 <code>updateURL</code> 屬性值的組態設定檔所在位置。如果這個屬性指向不存在的檔案，呼叫 <code>initialize()</code> 方法將導致擲出錯誤。
+		
+		<p>以下是組態設定檔的樣本：</p>
+		
+		<div class="listing"><pre> &lt;?xml version="1.0" encoding="utf-8"?&gt; 
+         &lt;configuration xmlns="http://ns.adobe.com/air/framework/update/configuration/1.0" &gt;
+           &lt;url&gt;app:/server/update.xml&lt;/url&gt;
+           &lt;delay&gt;1&lt;/delay&gt;
+        &lt;/configuration&gt;</pre></div>
+		
+		<p>除了載入組態設定檔，您也可以使用 <span>ActionScript</span> 程式碼，設定 <code>delay</code> 和 <code>updateURL</code> 屬性。</p> 
+		
+		</p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get configurationFile():<a href="../../flash/filesystem/File.html">File</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set configurationFile(value:<a href="../../flash/filesystem/File.html">File</a>):<a href="../../specialTypes.html#void">void</a></code><br/><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="ApplicationUpdater.html#delay" target="">delay</a><br/><a href="ApplicationUpdater.html#updateURL" target="">updateURL</a></div></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="currentState" id="currentState"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>currentState</h3></td><td class="detailHeaderType">屬性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>currentState:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[唯讀] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		更新程式的內部狀態。這個屬性可以設定成下列的值：
+		
+		<p><ul><li>
+		<p><code>"UNINITIALIZED"</code> - 更新程式尚未初始化。</p>
+		</li><li>
+		<p><code>"INITIALIZING"</code> - 更新程式正在初始化。</p>
+		</li><li>
+		<p><code>"READY"</code> - 更新程式已完成初始化。</p>
+		</li><li>
+		<p><code>"BEFORE_CHECKING"</code> - 更新程式尚未檢查更新描述器檔案。</p>
+		</li><li>
+		<p><code>"CHECKING"</code> - 更新程式正在檢查更新描述器檔案。</p>
+		</li><li>
+		<p><code>"AVAILABLE"</code> - 已有可用的更新描述器檔案。</p>
+		</li><li>
+		<p><code>"DOWNLOADING"</code> - 更新程式正在下載 AIR 檔。</p>
+		</li><li>
+		<p><code>"DOWNLOADED"</code> - 更新程式已經下載 AIR 檔。</p>
+		</li><li>
+		<p><code>"INSTALLING"</code> - 更新程式正在安裝 AIR 檔。</p>
+		</li><li>
+		<p><code>"PENDING_INSTALLING"</code> - 更新程式已完成初始化，且目前尚有擱置的更新。</p>
+		</li></ul></p>
+		
+		</p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get currentState():<a href="../../String.html">String</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="currentVersion" id="currentVersion"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>currentVersion</h3></td><td class="detailHeaderType">屬性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>currentVersion:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[唯讀] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		應用程式的目前版本。這個屬性是在 <code>initialize()</code> 方法呼叫期間所設定。其值設定為應用程式描述器檔案提供的版本。
+		
+		</p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get currentVersion():<a href="../../String.html">String</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="delay" id="delay"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>delay</h3></td><td class="detailHeaderType">屬性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>delay:<a href="../../Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		定期檢查新的更新之天數間隔。
+		
+		<p>值為 0 (預設值) 代表計時器非作用中，因而不會執行定期檢查。您可以透過這個屬性或是組態設定檔來設定其值。如果同時透過這兩種方式設定其值，將使用以此屬性設定的值。</p>
+		
+		</p><p> 預設值為 <code>0。</code></p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get delay():<a href="../../Number.html">Number</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set delay(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="isFirstRun" id="isFirstRun"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>isFirstRun</h3></td><td class="detailHeaderType">屬性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isFirstRun:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[唯讀] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		是否為成功更新後第一次執行 (<code>true</code> = 是，<code>false</code> = 否)。更新程式會在 <code>initialize()</code> 方法呼叫期間設定此值。若因版本變更而需要移轉資料，開發人員即應檢查 <code>isFirstRun</code> 是否已設定為 <code>true</code>。
+		
+		</p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isFirstRun():<a href="../../Boolean.html">Boolean</a></code><br/><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="ApplicationUpdater.html#wasPendingUpdate" target="">wasPendingUpdate</a></div></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="isNewerVersionFunction" id="isNewerVersionFunction"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>isNewerVersionFunction</h3></td><td class="detailHeaderType">屬性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isNewerVersionFunction:<a href="../../Function.html">Function</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		更新程式用來執行版本比較的函數。根據預設，更新架構會進行版本比較，以偵測來自遠端網站的版本是否比已安裝應用程式的版本新。但是，預設的比較方式有時並不符合開發人員的版本設定配置。設定這個屬性可提供另一函數以進行比較。 
+		
+		<p>預設的比較函數接受 <i>x.y.z</i> 之類的版本，其中 x、y 和 z 可包含字母及數字。預設的比較函數也能辨識某些特殊狀況。如果測試函數在版本字串中發現 <code>"alpha"</code>、<code>"beta"</code> 或 <code>"rc"</code>，其順序即為 <code>alpha</code> &lt; <code>beta</code> &lt; <code>rc</code>。</p>
+		
+		</p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isNewerVersionFunction():<a href="../../Function.html">Function</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set isNewerVersionFunction(value:<a href="../../Function.html">Function</a>):<a href="../../specialTypes.html#void">void</a></code><br/><span id="pageFilter"><br/><span class="label"> 範例 &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span>)
+            </span><br/><div class="detailBody"> 下列程式碼定義了自訂函數 <code>customFn</code> 供 <code>appUpdate</code> 更新程式物件使用。此範例函數刻意單純化。您的自訂函數應該根據版本設定配置的規則傳回 Boolean 值。
+<div class="listing"><pre>
+appUpdate.isNewerVersionFunction = customFn; 
+
+function customFn (currentVersion:String, updateVersion:String):Boolean 
+{
+    return updateVersion &gt; currentVersion;
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="previousApplicationStorageDirectory" id="previousApplicationStorageDirectory"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>previousApplicationStorageDirectory</h3></td><td class="detailHeaderType">屬性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>previousApplicationStorageDirectory:<a href="../../flash/filesystem/File.html">File</a></code>&nbsp;&nbsp;[唯讀] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		應用程式儲存目錄先前的位置 (若該位置於更新後有所變更)。經由憑證移轉方式進行升級後，應用程式儲存目錄的位置就會變更。如果未經憑證移轉，使用者更新應用程式將不會造成應用程式儲存目錄變更，此時這個屬性即設定為 <code>null</code>。這個屬性是在 <code>initialize()</code> 方法呼叫期間所設定。 
+		
+		<p>如果開發人員使用 ADT 搭配 <code>-migrate</code> 選項封裝 AIR 檔，即可使用新的憑證來簽署新版本的 AIR 應用程式。新版本的 AIR 應用程式若是使用新的簽署憑證，應用程式的本機儲存目錄將隨著使用者安裝新版本而變更。利用這個屬性可將舊的應用程式儲存目錄中的資料傳輸到新的應用程式儲存目錄 (<code>File.applicationStorageDirectory</code>)。如需詳細資訊，請參閱「Adobe AIR 開發人員指南」中，「使用命令列工具建立 AIR 應用程式」一章的「簽署 AIR 檔以變更應用程式憑證」。</p>
+		
+		</p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get previousApplicationStorageDirectory():<a href="../../flash/filesystem/File.html">File</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="previousVersion" id="previousVersion"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>previousVersion</h3></td><td class="detailHeaderType">屬性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>previousVersion:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[唯讀] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		應用程式的上一個版本。這個屬性是在 <code>initialize()</code> 方法呼叫期間所設定。傳回應用程式升級前的「上一個版本」<i></i>(只有在 <code>isfirstRun</code> 為 <code>true</code> 時才會設定)；否則將設定為 <code>null</code>。
+		
+		</p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get previousVersion():<a href="../../String.html">String</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="updateDescriptor" id="updateDescriptor"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>updateDescriptor</h3></td><td class="detailHeaderType">屬性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>updateDescriptor:<a href="../../XML.html">XML</a></code>&nbsp;&nbsp;[唯讀] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		從更新 URL 下載之更新描述器檔案的內容。當更新程式物件傳送 <code>updateStatus</code> 事件後，這個屬性才為非 null。
+		
+		</p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get updateDescriptor():<a href="../../XML.html">XML</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="updateURL" id="updateURL"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>updateURL</h3></td><td class="detailHeaderType">屬性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>updateURL:<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		更新描述器檔案的位置。接受任何有效的 URLRequest 路徑位置。更新程式必要的強制性設定惟獨此項。您可以透過這個屬性或是組態設定檔來設定更新 URL。如果同時透過這兩種方式設定其值，更新程式會使用以此屬性設定的值。
+		
+		</p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get updateURL():<a href="../../String.html">String</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set updateURL(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="wasPendingUpdate" id="wasPendingUpdate"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>wasPendingUpdate</h3></td><td class="detailHeaderType">屬性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>wasPendingUpdate:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[唯讀] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		是否有延緩 (包括安裝失敗) 的更新 (<code>true</code> = 是，<code>false</code> = 否)。更新程式會在 <code>initialize()</code> 方法呼叫期間設定這個屬性。使用 <code>wasPendingUpdate</code> 和 <code>isFirstRun</code> 屬性可檢查是否有任何更新安裝失敗 (若 <code>wasPendingUpdate</code> 設定為 <code>true</code> 且 <code>isFirstRun</code> 設定為 <code>false</code> 即表示有此情況)。
+		
+		</p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get wasPendingUpdate():<a href="../../Boolean.html">Boolean</a></code><br/><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="ApplicationUpdater.html#isFirstRun" target="">isFirstRun</a></div></div></span><a name="constructorDetail" id="constructorDetail"></a><div class="detailSectionHeader">建構函式詳細資料</div><span id="pageFilter" runtime="AIR::1.5##"><a name="ApplicationUpdater()" id="ApplicationUpdater()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>ApplicationUpdater</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">建構函式</td></tr></table><div class="detailBody"><code>public function ApplicationUpdater()</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p>
+		建構函數。 
+		
+		</p></div></span><a name="methodDetail" id="methodDetail"></a><div class="detailSectionHeader">方法詳細資訊</div><span id="pageFilter" runtime="AIR::1.5##"><a name="cancelUpdate()" id="cancelUpdate()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;cancelUpdate</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td></tr></table><div class="detailBody"><code> public function cancelUpdate():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		取消更新程序。呼叫此方法將會取消任何等候中的下載、刪除任何下載不完全的檔案，並重新啟動定期檢查計時器。
+		
+		<p>只要更新程式不是處於 "UNINITIALIZED" 或 "INITIALIZING" 狀態，隨時皆可取消更新程序。若為 "UNINITIALIZED" 或 "INITIALIZING" 狀態，呼叫後不會執行任何動作。</p>
+		
+		</p></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="checkForUpdate()" id="checkForUpdate()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;checkForUpdate</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function checkForUpdate():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		非同步下載和解譯更新描述器檔案。呼叫此方法會使更新程式進入 "CHECKING" 狀態。應僅在 <code>checkForUpdate</code> 事件已取消的情況下才呼叫此方法。
+		
+		<p>此方法只會在更新程式處於 "BEFORE_CHECKING" 狀態時執行。 </p>
+		
+		</p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>updateStatus</b>:<a href="events/StatusUpdateEvent.html"><code>StatusUpdateEvent</code></a></code> &mdash; 更新程式已成功下載並解譯更新描述器檔案。
+		
+		</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>updateError</b>:<a href="events/StatusUpdateErrorEvent.html"><code>StatusUpdateErrorEvent</code></a></code> &mdash; 嘗試下載或剖析更新描述器檔案時發生錯誤。
+		
+		</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="checkNow()" id="checkNow()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;checkNow</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function checkNow():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		啟動更新程序。呼叫此方法並不會停止定期計時器，但此方法會偵測是否有更新程序正在執行，並將略過目前的程序循環。
+		
+		<p>此方法只會在目前狀態為 "READY" 時執行。 </p>
+		
+		<p>此方法可能導致更新程式物件傳送下列事件：</p>
+		
+		</p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>checkForUpdate</b>:<a href="events/UpdateEvent.html"><code>UpdateEvent</code></a></code> &mdash; 更新程序將要開始之前傳送。
+		
+		</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="downloadUpdate()" id="downloadUpdate()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;downloadUpdate</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function downloadUpdate():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		非同步下載更新檔案。呼叫此方法會使更新程式進入 "DOWNLOADING" 狀態。當 StatusUpdateEvent.UPDATE_STATUS 事件已取消且該事件的 available 屬性設定為 true 時，才需要呼叫此方法。
+		
+		<p>此方法只會在目前狀態為 "AVAILABLE" 時執行。</p>
+		
+		</p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>downloadStart</b>:<a href="events/UpdateEvent.html"><code>UpdateEvent</code></a></code> &mdash; 在建立伺服器連線之後傳送。 
+		
+		</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>progress</b>:<a href="../../flash/events/ProgressEvent.html"><code>ProgressEvent</code></a></code> &mdash; 在初始化完成後傳送。
+		
+		</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>downloadError</b>:<a href="events/DownloadErrorEvent.html"><code>DownloadErrorEvent</code></a></code> &mdash; 若在連線或下載更新檔案時發生錯誤，便會傳送。若為無效的 HTTP 狀態 (例如「404 - 找不到檔案」)，也將傳送此事件。
+		
+		</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="initialize()" id="initialize()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;initialize</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function initialize():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		 初始化更新程式。呼叫此方法將會執行下列動作： 
+		
+		<p><ol><li>
+		<p>初始化更新架構，以無訊息方式同步安裝任何擱置的更新。在應用程式啟動時即應呼叫此方法，因為這可能會重新啟動應用程式。</p>
+		</li><li>
+		
+		<p>檢查是否有延緩的更新並加以安裝。</p>
+		</li><li>
+		<p>如果先前的更新曾發生錯誤，即清除儲存區內的更新檔案和版本資訊。</p>
+		</li><li>
+		<p>如果定期計時器延遲已到期，即啟動更新程序；否則將啟動定期計時器。然而，若是使用 AIR Debug Launcher (ADL) 應用程式來測試應用程式，試圖更新應用程式就會產生 IllegalOperationError 例外。</p>
+		</li></ol></p>
+		
+		</p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>initialized</b>:<a href="events/UpdateEvent.html"><code>UpdateEvent</code></a></code> &mdash; 初始化完成。 
+		
+		</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>error</b>:<a href="../../flash/events/ErrorEvent.html"><code>ErrorEvent</code></a></code> &mdash; 初始化期間發生錯誤。
+		
+		</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="installFromAIRFile()" id="installFromAIRFile()"></a><a name="installFromAIRFile(flash.filesystem.File)" id="installFromAIRFile(flash.filesystem.File)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;installFromAIRFile</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function installFromAIRFile(file:<a href="../../flash/filesystem/File.html">File</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		使用本機 AIR 檔啟動更新程序。 
+		
+		<p>若有更新程序正在執行 (處於 <code>"DOWNLOADED"</code> 以外的狀態)，呼叫此方法將毫無作用。</p>
+		
+		<p>這項功能對於已將應用程式描述器檔案中的 <code>customUpdateUI</code> 元素設定為 <code>true</code> 的應用程式來說很有用。</p>
+		
+		<p>使用 AIR Debug Launcher (ADL) 應用程式測試應用程式時，呼叫此方法會產生 IllegalOperationError 例外。</p>
+		
+		</p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">file</span>:<a href="../../flash/filesystem/File.html">File</a></code> &mdash; 即將安裝的本機 AIR 檔。
+		
+		</td></tr></table></p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>fileUpdateStatus</b>:<a href="events/StatusFileUpdateEvent.html"><code>StatusFileUpdateEvent</code></a></code> &mdash; 在更新程式成功驗證 AIR 檔之後傳送。
+		
+		</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>updateError</b>:<a href="events/StatusFileUpdateErrorEvent.html"><code>StatusFileUpdateErrorEvent</code></a></code> &mdash; 若在嘗試剖析更新描述器檔案時發生錯誤，便會傳送。
+		
+		</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="installUpdate()" id="installUpdate()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;installUpdate</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function installUpdate():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		安裝更新檔案。呼叫此方法會使更新程式進入 "INSTALLING" 狀態，且唯有在 <code>downLoadComplete</code> 事件已取消的情況下才需要呼叫此方法。
+		
+		<p>待更新程式處於 "DOWNLOADED" 狀態時，再呼叫此方法。若為任何其他狀態，呼叫後不會執行任何動作。</p>
+		
+		<p>使用 AIR Debug Launcher (ADL) 應用程式測試應用程式時，呼叫此方法會產生 IllegalOperationError 例外。</p>
+		
+		</p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>beforeInstall</b>:<a href="events/UpdateEvent.html"><code>UpdateEvent</code></a></code> &mdash; 將要安裝更新之前傳送。有時候，此時暫且不要安裝更新會比較妥當，因為執行階段若結束應用程式準備安裝更新，可能導致使用者遺失所有目前的工作成果。
+		 
+		</td></tr></table></div></span><div class="detailSectionHeader"> 事件詳細資訊 </div><span id="pageFilter" runtime="AIR::1.5##"><a name="event:beforeInstall" id="event:beforeInstall"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>beforeInstall</h3></td><td class="detailHeaderType"> 事件 </td></tr></table><div class="detailBody"><span class="label">事件物件類型: </span><a href="events/UpdateEvent.html"><code>air.update.events.UpdateEvent</code></a><br/><span class="label">屬性 UpdateEvent.type  =  </span><a href="events/UpdateEvent.html#BEFORE_INSTALL"><code>air.update.events.UpdateEvent.BEFORE_INSTALL</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	 在呼叫 <code>installUpdate()</code> 方法後，將要安裝更新之前傳送。有時候，此時暫且不要安裝更新會比較妥當，因為執行階段若結束應用程式準備安裝更新，可能導致使用者遺失所有目前的工作成果。 
+	 
+	 <p>呼叫此事件的 <code>preventDefault()</code> 方法便能延緩到下次重新啟動才安裝。如果您呼叫了 <code>preventDefault()</code> 方法，則此應用程式工作階段期間將無法再啟動其他更新程序 (藉由呼叫 <code>installUpdate()</code> 方法或因定期檢查而引發)。 </p>
+	 
+	 <p>ApplicationUpdater 元件庫預設的行為是下載更新描述器檔案。您可以呼叫 <code>preventDefault()</code> 方法取消這項行為。</p>
+	
+	</p>
+		 <code>UpdateEvent.BEFORE_INSTALL</code> 常數定義了代表 <code>beforeInstall</code> 事件之事件物件的 <code>type</code> 屬性值。
+		 
+		<p>這個事件具有下列屬性：</p>
+		
+		<table class="innertable" ><tr><th>屬性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；沒有要取消的預設行為指令。</td></tr><tr><td><code>currentTarget</code></td><td>正主動使用事件偵聽程式處理 Event 物件的物件。</td></tr><tr><td><code>target</code></td><td>更新程式物件。 </td></tr></table>
+		
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:checkForUpdate" id="event:checkForUpdate"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>checkForUpdate</h3></td><td class="detailHeaderType"> 事件 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">事件物件類型: </span><a href="events/UpdateEvent.html"><code>air.update.events.UpdateEvent</code></a><br/><span class="label">屬性 UpdateEvent.type  =  </span><a href="events/UpdateEvent.html#CHECK_FOR_UPDATE"><code>air.update.events.UpdateEvent.CHECK_FOR_UPDATE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	在更新程式嘗試下載更新描述器檔案 (更新程序將要開始) 之前傳送。直接呼叫 <code>checkNow()</code> 方法或定期檢查計時器已到期時，更新程式便會傳送此事件。 
+	
+	</p>
+		 <code>UpdateEvent.CHECK_FOR_UPDATE</code> 常數定義了代表 <code>checkForUpdate</code> 事件之事件物件的 <code>type</code> 屬性值。
+		 
+		<p>這個事件具有下列屬性：</p>
+		
+		<table class="innertable" ><tr><th>屬性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；沒有要取消的預設行為指令。</td></tr><tr><td><code>currentTarget</code></td><td>正主動使用事件偵聽程式處理 Event 物件的物件。</td></tr><tr><td><code>target</code></td><td>更新程式物件。 </td></tr></table>
+		
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:downloadComplete" id="event:downloadComplete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>downloadComplete</h3></td><td class="detailHeaderType"> 事件 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">事件物件類型: </span><a href="events/UpdateEvent.html"><code>air.update.events.UpdateEvent</code></a><br/><span class="label">屬性 UpdateEvent.type  =  </span><a href="events/UpdateEvent.html#DOWNLOAD_COMPLETE"><code>air.update.events.UpdateEvent.DOWNLOAD_COMPLETE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	當更新檔案下載完成時傳送。
+	
+	<p>此事件通常是用來顯示訊息，以詢問使用者是否要繼續安裝更新。 </p>
+	
+	<p>ApplicationUpdater 元件庫預設的行為是自動呼叫 <code>installUpdate()</code> 方法。</p>
+	
+	</p>
+		 <code>UpdateEvent.DOWNLOAD_COMPLETE</code> 常數定義了代表 <code>downloadComplete</code> 事件之事件物件的 <code>type</code> 屬性值。
+		 
+		<p>這個事件具有下列屬性：</p>
+		
+		<table class="innertable" ><tr><th>屬性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；沒有要取消的預設行為指令。</td></tr><tr><td><code>currentTarget</code></td><td>正主動使用事件偵聽程式處理 Event 物件的物件。</td></tr><tr><td><code>target</code></td><td>更新程式物件。 </td></tr></table>
+		 
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:downloadError" id="event:downloadError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>downloadError</h3></td><td class="detailHeaderType"> 事件 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">事件物件類型: </span><a href="events/DownloadErrorEvent.html"><code>air.update.events.DownloadErrorEvent</code></a><br/><span class="label">屬性 DownloadErrorEvent.type  =  </span><a href="events/DownloadErrorEvent.html#DOWNLOAD_ERROR"><code>air.update.events.DownloadErrorEvent.DOWNLOAD_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	若在連線或下載更新檔案時發生錯誤，便會傳送。若為無效的 HTTP 狀態 (例如「404 - 找不到檔案」)，也將傳送此事件。
+	
+	<p>一旦傳送此事件，即自動重新啟動定期計時器 (如果延遲值大於 0)。 </p>
+	
+	</p>
+		 <code>DownloadErrorEvent.DOWNLOAD_ERROR</code> 常數定義了代表 <code>downloadError</code> 事件之事件物件的 <code>type</code> 屬性值。
+		 
+		<p>DownloadErrorEvent 物件的 <code>errorID</code> 屬性為整數，用以定義錯誤資訊 (請參閱下表)。另外可能還有 <code>subErrorID</code> 屬性包含了更多的錯誤資訊。</p>
+		
+		<table class="innertable" ><tr><th>errorID 錯誤碼</th><th>說明</th></tr><tr><td>16800</td><td>驗證已下載的更新檔案時所發生。<code>subErrorID</code> 屬性可能包含額外資訊。</td></tr><tr><td>16801</td><td>Adobe AIR 檔無效 (遺漏 application.xml)。</td></tr><tr><td>16802</td><td>Adobe AIR 檔無效 (遺漏 MIME 類型)。</td></tr><tr><td>16803</td><td>Adobe AIR 檔 (格式) 無效。</td></tr><tr><td>16804</td><td>Adobe AIR 檔 (旗標) 無效。</td></tr><tr><td>16805</td><td>Adobe AIR 檔無效 (壓縮方式不明)。</td></tr><tr><td>16806</td><td>Adobe AIR 檔 (檔案名稱) 無效。</td></tr><tr><td>16807</td><td>Adobe AIR 檔無效 (損毀)。</td></tr><tr><td>16808</td><td>組態設定檔不存在。</td></tr><tr><td>16809</td><td><code>updateURL</code> 屬性未設定。</td></tr><tr><td>16810</td><td>保留。</td></tr><tr><td>16811</td><td>組態設定檔無效 (組態版本不明)。</td></tr><tr><td>16812</td><td>組態設定檔無效 (遺漏 URL)。</td></tr><tr><td>16813</td><td>組態設定檔無效 (延遲格式)。</td></tr><tr><td>16814</td><td>組態設定檔 (defaultUI 值) 無效。</td></tr><tr><td>16815</td><td>更新描述器無效 (描述器版本不明)。</td></tr><tr><td>16816</td><td>更新描述器無效 (遺漏描述器版本)。</td></tr><tr><td>16817</td><td>更新描述器 (描述本身) 無效。</td></tr><tr><td>16818</td><td>儲存資料至磁碟時發生 IO 錯誤。<code>subErrorID</code> 屬性可能提供更多資訊。</td></tr><tr><td>16819</td><td>下載時發生安全性錯誤。<code>subErrorID</code> 屬性可能提供更多資訊。</td></tr><tr><td>16820</td><td>HTTP 狀態碼無效。<code>subErrorID</code> 屬性可能包含了無效的狀態碼。</td></tr><tr><td>16821</td><td>保留。</td></tr><tr><td>16822</td><td>下載時發生 I/O 錯誤。<code>subErrorID</code> 屬性可能提供更多資訊。</td></tr><tr><td>16823</td><td>儲存資料至磁碟時發生檔案結尾錯誤。<code>subErrorID</code> 屬性可能提供更多資訊。</td></tr><tr><td>16824</td><td>更新描述器無效。<code>subErrorID</code> 屬性可能提供更多資訊。</td></tr><tr><td>16825</td><td>更新檔案所包含的應用程式具有不同的應用程式 ID。</td></tr><tr><td>16826</td><td>更新檔案並未包含版本較新的應用程式。</td></tr><tr><td>16827</td><td>更新檔案所包含的版本與更新描述器提供的版本不符。</td></tr><tr><td>16828</td><td>無法更新應用程式，通常是因為應用程式在 AIR Debug Launcher (ADL) 中執行所致。</td></tr><tr><td>16829</td><td>安裝過程中遺失更新檔案。</td></tr></table>
+		
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:downloadStart" id="event:downloadStart"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>downloadStart</h3></td><td class="detailHeaderType"> 事件 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">事件物件類型: </span><a href="events/UpdateEvent.html"><code>air.update.events.UpdateEvent</code></a><br/><span class="label">屬性 UpdateEvent.type  =  </span><a href="events/UpdateEvent.html#DOWNLOAD_START"><code>air.update.events.UpdateEvent.DOWNLOAD_START</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	 在呼叫 <code>downloadUpdate()</code> 方法及建立伺服器連線之後傳送。使用 ApplicationUpdater 元件庫時，您可以透過此事件的事件處理常式，顯示進度列向使用者報告下載進度。 
+	
+	</p>
+		 <code>UpdateEvent.DOWNLOAD_START</code> 常數定義了代表 <code>downloadStart</code> 事件之事件物件的 <code>type</code> 屬性值。
+		 
+		<p>這個事件具有下列屬性：</p>
+		
+		<table class="innertable" ><tr><th>屬性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；沒有要取消的預設行為指令。</td></tr><tr><td><code>currentTarget</code></td><td>正主動使用事件偵聽程式處理 Event 物件的物件。</td></tr><tr><td><code>target</code></td><td>更新程式物件。 </td></tr></table>
+		 
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:error" id="event:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>error</h3></td><td class="detailHeaderType"> 事件 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">事件物件類型: </span><a href="../../flash/events/ErrorEvent.html"><code>flash.events.ErrorEvent</code></a><br/><span class="label">屬性 ErrorEvent.type  =  </span><a href="../../flash/events/ErrorEvent.html#ERROR"><code>flash.events.ErrorEvent.ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	若在初始化或更新程序期間發生錯誤 (發生未預期的事件)，便會傳送。
+	
+	</p>
+	定義 <code>error</code> 事件物件的 <code>type</code> 屬性值。 
+	<p>這個事件具有下列屬性：</p>
+	<table class="innertable" ><tr><th>屬性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；沒有要取消的預設行為指令。</td></tr><tr><td><code>currentTarget</code></td><td>正主動使用事件偵聽程式處理 Event 物件的物件。</td></tr><tr><td><code>target</code></td><td>遇到網路作業失敗的物件。</td></tr><tr><td><code>text</code></td><td>要顯示為錯誤訊息的文字。</td></tr></table>
+	
+	</div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:fileUpdateError" id="event:fileUpdateError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>fileUpdateError</h3></td><td class="detailHeaderType"> 事件 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">事件物件類型: </span><a href="events/StatusFileUpdateErrorEvent.html"><code>air.update.events.StatusFileUpdateErrorEvent</code></a><br/><span class="label">屬性 StatusFileUpdateErrorEvent.type  =  </span><a href="events/StatusFileUpdateErrorEvent.html#FILE_UPDATE_ERROR"><code>air.update.events.StatusFileUpdateErrorEvent.FILE_UPDATE_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	 若在驗證 <code>installFromAIRFile()</code> 方法呼叫中的 <code>airFile</code> 參數所傳遞的檔案時發生錯誤，便會傳送。
+	
+	</p>
+		 <code>StatusUpdateErrorEvent.UPDATE_ERROR</code> 常數定義了代表 <code>statusUpdateError</code> 事件之事件物件的 <code>type</code> 屬性值。
+		 
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:fileUpdateStatus" id="event:fileUpdateStatus"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>fileUpdateStatus</h3></td><td class="detailHeaderType"> 事件 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">事件物件類型: </span><a href="events/StatusFileUpdateEvent.html"><code>air.update.events.StatusFileUpdateEvent</code></a><br/><span class="label">屬性 StatusFileUpdateEvent.type  =  </span><a href="events/StatusFileUpdateEvent.html#FILE_UPDATE_STATUS"><code>air.update.events.StatusFileUpdateEvent.FILE_UPDATE_STATUS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	在更新程式成功驗證 <code>installFromAIRFile()</code> 方法呼叫中的檔案之後傳送。
+	
+	</p>
+		 <code>StatusUpdateEvent.UPDATE_STATUS</code> 常數定義了代表 <code>updateStatus</code> 事件之事件物件的 <code>type</code> 屬性值。
+		 
+		<p>這個事件具有下列屬性：</p>
+		
+		<p><table class="innertable" ><tr><th>屬性</th><th>值</th></tr><tr><td><code>available</code></td><td>指出除了目前的應用程式外，是否有其他版本可用；若有即為 <code>true</code>，否則為 <code>false</code> (相同版本)。</td></tr><tr><td><code>path</code></td><td>更新 File 物件的 <code>nativePath</code> 屬性，由 <code>installFromAIRFile()</code> 方法呼叫中的 <code>airFile</code> 參數所指定。</td></tr><tr><td><code>version</code></td><td>指出新更新的版本。</td></tr></table></p>
+		
+		</div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:initialized" id="event:initialized"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>initialized</h3></td><td class="detailHeaderType"> 事件 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">事件物件類型: </span><a href="events/UpdateEvent.html"><code>air.update.events.UpdateEvent</code></a><br/><span class="label">屬性 UpdateEvent.type  =  </span><a href="events/UpdateEvent.html#INITIALIZED"><code>air.update.events.UpdateEvent.INITIALIZED</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	在初始化完成後傳送。 
+	
+	</p>
+		 <code>UpdateEvent.INITIALIZED</code> 常數定義了代表 <code>initialized</code> 事件之事件物件的 <code>type</code> 屬性值。
+		 
+		<p>這個事件具有下列屬性：</p>
+		
+		<table class="innertable" ><tr><th>屬性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；沒有要取消的預設行為指令。</td></tr><tr><td><code>currentTarget</code></td><td>正主動使用事件偵聽程式處理 Event 物件的物件。</td></tr><tr><td><code>target</code></td><td>更新程式物件。 </td></tr></table>
+		
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:progress" id="event:progress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>progress</h3></td><td class="detailHeaderType"> 事件 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">事件物件類型: </span><a href="../../flash/events/ProgressEvent.html"><code>flash.events.ProgressEvent</code></a><br/><span class="label">屬性 ProgressEvent.type  =  </span><a href="../../flash/events/ProgressEvent.html#PROGRESS"><code>flash.events.ProgressEvent.PROGRESS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	下載更新檔案時傳送。 
+	
+	</p>
+	定義 <code>progress</code> 事件物件的 <code>type</code> 屬性值。
+	
+	<p>這個事件具有下列屬性：</p>
+	
+	<table class="innertable" ><tr><th>屬性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>bytesLoaded</code></td><td>在偵聽程式處理事件時，載入的項目或位元組數目。</td></tr><tr><td><code>bytesTotal</code></td><td>如果載入程序成功時，最終將載入的項目或位元組總數。</td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；沒有要取消的預設行為指令。</td></tr><tr><td><code>currentTarget</code></td><td>正主動使用事件偵聽程式處理 Event 物件的物件。</td></tr><tr><td><code>target</code></td><td>回報進度的物件。 </td></tr></table>
+	
+	</div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:updateError" id="event:updateError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>updateError</h3></td><td class="detailHeaderType"> 事件 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">事件物件類型: </span><a href="events/StatusUpdateErrorEvent.html"><code>air.update.events.StatusUpdateErrorEvent</code></a><br/><span class="label">屬性 StatusUpdateErrorEvent.type  =  </span><a href="events/StatusUpdateErrorEvent.html#UPDATE_ERROR"><code>air.update.events.StatusUpdateErrorEvent.UPDATE_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	若在嘗試下載或剖析更新描述器檔案時發生錯誤，便會傳送。
+	
+	<p>更新程式一旦傳送此事件，即自動重新啟動定期計時器 (如果延遲設定大於 0)。應用程式最好在更新程式傳送新的 <code>checkForUpdate</code> 事件時，隱藏任何錯誤對話方塊。 </p>
+	
+	</p>
+		 <code>StatusUpdateErrorEvent.UPDATE_ERROR</code> 常數定義了代表 <code>statusUpdateError</code> 事件之事件物件的 <code>type</code> 屬性值。
+		 
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:updateStatus" id="event:updateStatus"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="只能在 AIR 執行階段中使用">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>updateStatus</h3></td><td class="detailHeaderType"> 事件 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">事件物件類型: </span><a href="events/StatusUpdateEvent.html"><code>air.update.events.StatusUpdateEvent</code></a><br/><span class="label">屬性 StatusUpdateEvent.type  =  </span><a href="events/StatusUpdateEvent.html#UPDATE_STATUS"><code>air.update.events.StatusUpdateEvent.UPDATE_STATUS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	在更新程式成功下載並解譯更新描述器檔案之後傳送。 
+	
+	<p>預設的行為是在 StatusUpdateEvent 物件的 available 屬性設定為 <code>true</code> 時，開始下載更新。唯有使用 ApplicationUpdater 類別的情況下才能制止預設的行為，若是使用 ApplicationUpdatorUI 類別則不可行。</p>
+	
+	</p>
+		 <code>StatusUpdateEvent.UPDATE_STATUS</code> 常數定義了代表 <code>updateStatus</code> 事件之事件物件的 <code>type</code> 屬性值。
+		 
+		<p>這個事件具有下列屬性：</p>
+		
+		<table class="innertable" ><tr><th>屬性</th><th>值</th></tr><tr><td><code>available</code></td><td>設定為 <code>true</code> 表示更新描述器檔案指定的版本與目前的應用程式版本不同，否則為 <code>false</code> (兩者的版本相同)。</td></tr><tr><td><code>version</code></td><td>字串，代表可用的新版本.</td></tr><tr><td><code>details</code></td><td>陣列，定義每一種支援語言的 <code>details</code> 字串。如果沒有當地語系化描述，此陣列將定義成第一個元素為空字串 (<code>""</code>)，第二個元素為 details 字串。若有當地語系化描述，則陣列中的每個元素本身都是包含兩個元素的陣列。第一個元素是地區碼，第二個元素是描述文字。例如，此陣列包含了代表兩種語言 (美式英文和法文) 的子陣列：<code>["en-US", "Hello World"], ["fr", "Bonjour monde"]</code>。語言的列示順序與更新描述器中的順序相同。詳細資訊屬性的文字會在更新描述器檔案中指定。</td></tr><tr><td><code>versionLabel</code></td><td>(AIR 2.5+) 來自更新應用程式描述器的版本標籤。應該向使用者顯示版本標籤，而非顯示版本。若未指定版本標籤，此屬性將為空白字串。</td></tr></table>
+		
+		 </div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script></div><p xmlns:xd="http://www.pnp-software.com/XSLTdoc"></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 03:47 PM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/zh_TW/legalnotices/index.html">法律聲明</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">線上隱私權政策</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">為什麼顯示英文？</span>
+				</div>
+				<div class="white_content_body">
+					<b>「ActionScript 3.0 參考」的內容是以英文顯示</b><br><br>
+					並非所有「ActionScript 3.0 參考」的內容都翻譯為所有語言。當語言元素未翻譯時，就會以英文顯示。例如，ga.controls.HelpBox 類別並沒有翻譯為任何語言。因此在參考的繁體中文版本中，ga.controls.HelpBox 類別就會以英文顯示。
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 03:47 PM Z  -->

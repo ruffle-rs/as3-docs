@@ -1,0 +1,653 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg; Flash&reg; Platform용 ActionScript&reg; 3.0 참조 설명서"><meta name="lang" content="ko-kr"><meta name="runtime" content="air"><meta name="runtimever" content="air:1.5"><meta name="product" content="air"><meta name="productver" content="air:1.5"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../asfilter.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="ApplicationUpdaterUI,air.update.ApplicationUpdaterUI,configurationFile,currentVersion,delay,isCheckForUpdateVisible,isDownloadProgressVisible,isDownloadUpdateVisible,isFileUpdateVisible,isFirstRun,isInstallUpdateVisible,isNewerVersionFunction,isUnexpectedErrorVisible,isUpdateInProgress,localeChain,previousApplicationStorageDirectory,previousVersion,updateDescriptor,updateURL,wasPendingUpdate,addResources,cancelUpdate,checkNow,initialize,installFromAIRFile"><title>ApplicationUpdaterUI - Adobe ActionScript&reg; 3 (AS3  ) API 참조 설명서</title>
+		<link rel="stylesheet" href="../../filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="../../filter_new.css" type="text/css">
+			
+		<script src="../../jquery.js" type="text/javascript"></script>
+		<script src="../../s_chl_code.js" type="text/javascript"></script>
+		<script src="../../jquery.zclip.js" type="text/javascript"></script>
+		<script src="../../jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="../../cookies.js" type="text/javascript"></script>
+		<script src="../../asdoc.js" type="text/javascript"></script>
+		<script src="../../iscroll.js" type="text/javascript"></script>
+		<script src="../../AC_OETags.js" type="text/javascript"></script>
+		<script src="../../omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "런타임";
+			var productsLabel = "제품";
+			var noneLabel = "없음";
+			var qsearchBoxLabel = "빠른 검색";
+			var qsearchText = "찾을 수 없는 용어";
+			var ajaxErrorMsg="페이지 불러오기 오류";
+			var ajaxErrorTryMsg="다시 시도";
+			var ajaxLoadingMsg="불러오는 중";
+			var cancelMsg = "취소";
+			var classesText = "클래스";
+			var strJiveReply = "이 질문은 다음 문서에 대응하여 제출되었습니다. "
+			var showFilters = "필터 표시";
+			var hideFilters = "필터 숨기기";
+			
+		
+			var baseRef = "../../";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup> Platform용 ActionScript<sup>&reg;</sup> 3.0 참조 설명서<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="../../index.html"> 홈 </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="ApplicationUpdaterUI.html#top" style="display:">패키지 및 클래스 목록 표시</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="ApplicationUpdaterUI.html#top" style="display:none">패키지 및 클래스 목록 숨기기</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="../../package-summary.html"> 패키지 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../class-summary.html"> 클래스 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../whatsnew.html"> 새로운 내용 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../all-index-Symbols.html"> 색인 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../appendixes.html"> 부록 </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">영어로 표시되는 이유</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/ko_KR/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('../../')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('../../')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="../../help.js"></script>
+						<script language="javascript" type="text/javascript" src="../../asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="../../filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>필터:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">서버에서 데이터를 검색하는 중...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">서버에서 데이터를 검색하는 중...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="ApplicationUpdaterUI.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">air.update&nbsp;</a><br>
+								<h1 id="classProductName">ApplicationUpdaterUI&nbsp; - AS3 </h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="ApplicationUpdaterUI.html#propertySummary" style="display:none"> 속성 </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="ApplicationUpdaterUI.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> 속성 </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="ApplicationUpdaterUI.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> 생성자 </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="ApplicationUpdaterUI.html#methodSummary" style="display:none"> 메서드 </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="ApplicationUpdaterUI.html#constantSummary" style="display:none"> 전역 상수 </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="ApplicationUpdaterUI.html#eventSummary" style="display:none"> 이벤트 </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="ApplicationUpdaterUI.html#styleSummary" style="display:none"> 스타일 </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="ApplicationUpdaterUI.html#SkinPartSummary" style="display:none"> 스킨 파트 </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="ApplicationUpdaterUI.html#SkinStateSummary" style="display:none"> 스킨 상태 </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="ApplicationUpdaterUI.html#effectSummary" style="display:none"> 효과 </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="ApplicationUpdaterUI.html#constantSummary" style="display:none"> 상수 </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="ApplicationUpdaterUI.html#methodSummary" style="display:none"> 전역 함수 </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="ApplicationUpdaterUI.html#methodSummary" style="display:none">함수</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="ApplicationUpdaterUI.html#interfaceSummary" style="display:none"> 인터페이스 </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="ApplicationUpdaterUI.html#classSummary" style="display:none"> 클래스 </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="ApplicationUpdaterUI.html#includeExamplesSummary" style="display:none"> 예제 </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="ApplicationUpdaterUI.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								클래스
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">패키지</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">air.update</a></td></tr><tr><td class="classHeaderTableLabel">클래스</td><td class="classSignature">public  class  ApplicationUpdaterUI</td></tr><tr><td class="classHeaderTableLabel">상속</td><td class="inheritanceList">ApplicationUpdaterUI  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../flash/events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../Object.html">Object</a></td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p></p>
+	ApplicationUpdaterUI 클래스는 Adobe<sup>&reg;</sup> AIR<sup>&reg;</sup> 응용 프로그램에 대한 업데이트 프레임워크의 기본 기능을 정의하고 기본 사용자 인터페이스를 제공합니다. ApplicationUpdater 클래스는 기본 사용자 인터페이스를 구현하지 <i>않고</i> 업데이트 기능을 정의합니다. 
+	
+	<p>이 클래스는 Adobe AIR SDK에 포함된 applicationupdater_ui.swc 파일에 포함되어 있습니다. applicationupdater_ui.swc 파일은 AIR SDK의 frameworks/libs/air 디렉토리에 있습니다. AIR 2 SDK의 frameworks/libs/air 디렉토리에 있는 버전은 Flex 4 개발용입니다. Flex 3을 사용하는 경우에는 frameworks/libs/air/flex3 하위 디렉토리의 버전을 사용하십시오. </p>
+	
+	              <p>Adobe<sup>&reg;</sup> Flex&trade; Builder&trade;에서는 Adobe AIR용 프로젝트를 만들 때 이 클래스를 자동으로 로드합니다. Adobe<sup>&reg;</sup> Flex&trade; SDK를 사용하여 응용 프로그램을 컴파일할 때는 SWC 파일을 포함해야 합니다.</p>
+	
+	
+	
+	
+		
+	              <p>응용 프로그램 업데이트 관리는 간단하지 않습니다. AIR 업데이트 프레임워크에서 제공하는 API를 사용하면 개발자가 AIR 응용 프로그램에 뛰어난 업데이트 기능을 제공할 수 있습니다. 개발자는 AIR 업데이트 프레임워크의 기능을 사용하여 다음을 수행할 수 있습니다.</p>
+	
+	              <ul>
+                  <li>
+	                    <p>정해진 간격 또는 사용자의 요청에 따라 주기적 업데이트 확인</p>
+	                 </li>
+                  <li>
+	                    <p>웹 소스에서 AIR 파일(업데이트) 다운로드</p>
+	                 </li>
+                  <li>
+	                    <p>새로 설치한 버전을 처음 실행할 때 사용자에게 경고</p>
+	                 </li>
+                  <li>
+	                    <p>사용자가 업데이트 확인을 원하는지 확인</p>
+	                 </li>
+                  <li>
+	                    <p>사용자에게 새 업데이트 버전에 대한 정보 표시</p>
+	                 </li>
+                  <li>
+	                    <p>사용자에게 다운로드 진행률 및 오류 정보 표시</p>
+	                 </li>
+               </ul>
+	
+	              <p>AIR 업데이트 프레임워크를 사용하면 AIR 응용 프로그램의 업데이트 버전 정보를 간단한 XML 구성 파일에 저장할 수 있습니다. 대부분의 응용 프로그램에서는 이러한 구성 파일을 설정하고 일부 기본 코드를 포함하여 최종 사용자가 쉽게 업데이트 작업을 수행하도록 할 수 있습니다.</p>
+	
+	              <p>AIRUpdateUI 클래스는 응용 프로그램에서 사용할 수 있는 기본 사용자 인터페이스를 구현합니다. 사용자에게 응용 프로그램 업데이트에 대한 기본 정보와 옵션을 제공합니다.</p>
+	
+	              <p>업데이트 프로세스는 일련의 단계로 이루어집니다.</p>
+	
+	              <p>
+                  <table class="innertable" ><tr><th>
+	상태
+	</th><th>
+	설명
+	</th></tr><tr><td>Uninitialized</td><td>업데이트 프로그램이 초기화되지 않았습니다.</td></tr><tr><td>Initializing</td><td>업데이트 프로그램이 초기화하는 중입니다.</td></tr><tr><td>Ready</td><td>업데이트 프로그램이 초기화되었습니다.</td></tr><tr><td>Before checking</td><td>업데이트 프로그램이 업데이트 설명자 파일을 아직 확인하지 않았습니다.</td></tr><tr><td>Checking</td><td>업데이트 프로그램이 업데이트 설명자 파일을 확인하는 중입니다.</td></tr><tr><td>Available</td><td>업데이트 설명자 파일을 사용할 수 있습니다.</td></tr><tr><td>Downloading</td><td>업데이트 프로그램이 AIR 파일을 다운로드하는 중입니다.</td></tr><tr><td>Downloaded</td><td>업데이트 프로그램이 AIR 파일을 다운로드했습니다.</td></tr><tr><td>Installing</td><td>업데이트 프로그램이 AIR 파일을 설치하는 중입니다.</td></tr><tr><td>Pending install</td><td>업데이트 프로그램이 초기화되었고 대기 중인 업데이트가 있습니다.</td></tr></table>
+               </p>
+	
+	              <p>ADL(AIR Debug Launcher) 응용 프로그램을 사용하여 응용 프로그램을 테스트할 때 응용 프로그램을 업데이트하면 IllegalOperationError 예외가 발생합니다.</p>
+	
+	              <p>AIR 업데이트 프레임워크는 데스크톱 프로파일에서만 지원되며, 확장 데스크톱 응용 프로그램(기본 설치 프로그램을 사용하여 설치한 응용 프로그램)과 모바일 프로파일(ActionScript 3.0으로 작성한 iPhone 응용 프로그램)에서는 지원되지 않습니다. 업데이트 프레임워크가 지원되는지 보려면 런타임에 <code>Updater.isSupported</code> 속성을 확인하십시오.</p>
+	
+	              <p>AIR 업데이트 프레임워크를 사용하는 방법에 대한 자세한 내용은 <a href="http://help.adobe.com/ko_KR/air/build/index.html" target="external">Adobe AIR 응용 프로그램 만들기</a>의 "AIR 응용 프로그램 업데이트" 장을 참조하십시오.</p> 
+	
+	
+	           <p></p><p><span class="classHeaderTableLabel">관련 API 요소</span></p><div class="seeAlso"><a href="ApplicationUpdater.html" target="">ApplicationUpdater</a><br/><a href="../../flash/desktop/Updater.html" target="">flash.desktop.Updater</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary" id="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">공용 속성</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="ApplicationUpdaterUI.html#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 상속되는 공용 속성 숨기기</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="ApplicationUpdaterUI.html#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 상속되는 공용 속성 표시</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">속성</th><th>정의 주체</th></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#configurationFile" class="signatureLink">configurationFile</a> : <a href="../../flash/filesystem/File.html">File</a><div class="summaryTableDescription">
+		delay 및 updateURL 속성에 대한 값을 설정하는 구성 파일의 위치입니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="../../Object.html#constructor" class="signatureLink">constructor</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">
+	 지정된 객체 인스턴스의 클래스 객체 또는 생성자 함수에 대한 참조입니다.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#currentVersion" class="signatureLink">currentVersion</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">[읽기 전용] 
+		응용 프로그램의 현재 버전입니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#delay" class="signatureLink">delay</a> : <a href="../../Number.html">Number</a><div class="summaryTableDescription">
+		새 업데이트의 주기적 검사 간격(일)입니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#isCheckForUpdateVisible" class="signatureLink">isCheckForUpdateVisible</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">
+		[업데이트 확인], [업데이트 없음] 및 [업데이트 오류] 대화 상자의 가시성을 활성화합니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#isDownloadProgressVisible" class="signatureLink">isDownloadProgressVisible</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">
+		
+		[다운로드 업데이트] 대화 상자의 가시성을 활성화합니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#isDownloadUpdateVisible" class="signatureLink">isDownloadUpdateVisible</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">
+		[다운로드 업데이트] 대화 상자의 가시성을 활성화합니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#isFileUpdateVisible" class="signatureLink">isFileUpdateVisible</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">
+		
+		[파일 업데이트], [파일 업데이트 없음] 및 [파일 오류] 대화 상자의 가시성을 활성화합니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#isFirstRun" class="signatureLink">isFirstRun</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">[읽기 전용] 
+		업데이트 성공 후 처음 실행하는 것인지(true) 아닌지(false)를 나타냅니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#isInstallUpdateVisible" class="signatureLink">isInstallUpdateVisible</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">
+		[업데이트 설치] 대화 상자의 가시성을 활성화합니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#isNewerVersionFunction" class="signatureLink">isNewerVersionFunction</a> : <a href="../../Function.html">Function</a><div class="summaryTableDescription">
+		업데이트 프로그램이 버전 비교를 수행할 때 사용하는 기능입니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#isUnexpectedErrorVisible" class="signatureLink">isUnexpectedErrorVisible</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">
+		[예기치 않은 오류] 대화 상자의 가시성을 활성화합니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#isUpdateInProgress" class="signatureLink">isUpdateInProgress</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">[읽기 전용] 
+		업데이트가 실행 중이면 true이고 그렇지 않으면 false인 부울 속성입니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#localeChain" class="signatureLink">localeChain</a> : <a href="../../Array.html">Array</a><div class="summaryTableDescription">
+		사용자 인터페이스에서 사용하는 로캘 체인을 정의하는 배열입니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#previousApplicationStorageDirectory" class="signatureLink">previousApplicationStorageDirectory</a> : <a href="../../flash/filesystem/File.html">File</a><div class="summaryTableDescription">[읽기 전용] 
+		업데이트 후 변경된 경우 응용 프로그램 저장소 디렉토리의 이전 위치입니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#previousVersion" class="signatureLink">previousVersion</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">[읽기 전용] 
+		응용 프로그램의 이전 버전입니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#updateDescriptor" class="signatureLink">updateDescriptor</a> : <a href="../../XML.html">XML</a><div class="summaryTableDescription">[읽기 전용] 
+		업데이트 URL에서 다운로드된 업데이트 설명자 파일의 내용입니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#updateURL" class="signatureLink">updateURL</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">
+		업데이트 설명자 파일의 위치입니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#wasPendingUpdate" class="signatureLink">wasPendingUpdate</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">[읽기 전용] 
+		연기된 업데이트가 있는 경우 설치에 실패했더라도 true로 설정되고, 그렇지 않으면 false로 설정됩니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary" id="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">공용 메서드 </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="ApplicationUpdaterUI.html#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 상속되는 공용 메서드 숨기기</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="ApplicationUpdaterUI.html#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 상속되는 공용 메서드 표시</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">메서드</th><th>정의 주체</th></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#ApplicationUpdaterUI()" class="signatureLink">ApplicationUpdaterUI</a>()</div><div class="summaryTableDescription">
+		생성자 함수입니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#addEventListener()" class="signatureLink">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	리스너에서 이벤트 알림을 받을 수 있도록 EventDispatcher 객체에 이벤트 리스너 객체를 등록합니다.</div></td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#addResources()" class="signatureLink">addResources</a>(lang:<a href="../../String.html">String</a>, res:<a href="../../Object.html">Object</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription"> 
+		 지정된 언어에 대한 새 리소스 번들을 동적으로 추가합니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#cancelUpdate()" class="signatureLink">cancelUpdate</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+		업데이트 프로세스를 취소합니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#checkNow()" class="signatureLink">checkNow</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+		업데이트 프로세스를 시작합니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../../flash/events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	이벤트를 이벤트 흐름으로 전달합니다.</div></td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	EventDispatcher 객체에 특정 유형의 이벤트에 대한 리스너가 등록되어 있는지 여부를 확인합니다.</div></td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#hasOwnProperty()" class="signatureLink">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 지정된 속성이 객체에 정의되어 있는지 여부를 나타냅니다.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#initialize()" class="signatureLink">initialize</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+		 업데이트 프로그램을 초기화합니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#installFromAIRFile()" class="signatureLink">installFromAIRFile</a>(file:<a href="../../flash/filesystem/File.html">File</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+		로컬 AIR 파일을 사용하여 업데이트 프로세스를 시작합니다.</div></td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#isPrototypeOf()" class="signatureLink">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Object 클래스의 인스턴스가 매개 변수로 지정된 객체의 프로토타입 체인에 있는지 여부를 나타냅니다.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#propertyIsEnumerable()" class="signatureLink">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 지정된 속성이 존재하고 열거 가능한지 여부를 나타냅니다.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#removeEventListener()" class="signatureLink">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	EventDispatcher 객체에서 리스너를 제거합니다.</div></td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#setPropertyIsEnumerable()" class="signatureLink">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     루프 작업에서 동적 속성을 사용할 수 있는지 여부를 설정합니다.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toLocaleString()" class="signatureLink">toLocaleString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 로캘별 규칙에 따라 서식이 지정된 이 객체의 문자열 표현을 반환합니다.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toString()" class="signatureLink">toString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 지정된 객체의 문자열 표현을 반환합니다.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#valueOf()" class="signatureLink">valueOf</a>():<a href="../../Object.html">Object</a></div><div class="summaryTableDescription">
+	 지정된 객체의 프리미티브 값을 반환합니다.</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	이 EventDispatcher 객체 또는 조상 객체에 지정한 이벤트 유형에 대한 이벤트 리스너가 등록되어 있는지 여부를 확인합니다.</div></td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary" id="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">이벤트</div><div class="showHideLinks"><a href="http://help.adobe.com/en_US/Flex/4.6/UsingSDK/WS2db454920e96a9e51e63e3d11c0bf69084-7ee9.html" target="_blank">이벤트에 대한 자세한 내용을 보려면 클릭하십시오.</a></div><div class="showHideLinks"><div id="hideInheritedEvent" class="hideInheritedEvent"><a class="showHideLink" href="ApplicationUpdaterUI.html#eventSummary" onclick="javascript:setInheritedVisible(false,'Event');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 상속되는 이벤트 숨기기</a></div><div id="showInheritedEvent" class="showInheritedEvent"><a class="showHideLink" href="ApplicationUpdaterUI.html#eventSummary" onclick="javascript:setInheritedVisible(true,'Event');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 상속되는 이벤트 표시</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">이벤트</th><th> 요약 </th><th>정의 주체</th></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[브로드캐스트 이벤트] Flash Player 또는 AIR 응용 프로그램이 운영 체제 포커스를 얻어 활성화될 때 전달됩니다.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#event:beforeInstall" class="signatureLink">beforeInstall</a></div></td><td class="summaryTableDescription summaryTableCol">업데이트를 설치하기 전 installUpdate() 메서드가 호출된 후에 전달됩니다.</td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#event:checkForUpdate" class="signatureLink">checkForUpdate</a></div></td><td class="summaryTableDescription summaryTableCol">업데이트 프로세스가 시작되기 전, 업데이트 설명자 파일을 다운로드하기 직전에 전달됩니다.</td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[브로드캐스트 이벤트] Flash Player 또는 AIR 응용 프로그램이 운영 체제 포커스를 잃고 비활성화될 때 전달됩니다.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#event:downloadComplete" class="signatureLink">downloadComplete</a></div></td><td class="summaryTableDescription summaryTableCol">업데이트 파일 다운로드가 완료되면 전달됩니다.</td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#event:downloadError" class="signatureLink">downloadError</a></div></td><td class="summaryTableDescription summaryTableCol">업데이트 파일을 연결하거나 다운로드하는 동안 오류가 발생하면 전달됩니다.</td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#event:downloadStart" class="signatureLink">downloadStart</a></div></td><td class="summaryTableDescription summaryTableCol">downloadUpdate() 메서드가 호출되고 서버에 대한 연결이 설정된 후 전달됩니다.</td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#event:error" class="signatureLink">error</a></div></td><td class="summaryTableDescription summaryTableCol">초기화 또는 업데이트 프로세스 중 예기치 못한 오류가 발생하면 전달됩니다.</td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#event:fileUpdateError" class="signatureLink">fileUpdateError</a></div></td><td class="summaryTableDescription summaryTableCol">installFromAIRFile() 메서드에 대한 호출에서 airFile 매개 변수로 전달된 파일의 유효성을 검사하는 동안 오류가 발생하면 전달됩니다.</td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#event:fileUpdateStatus" class="signatureLink">fileUpdateStatus</a></div></td><td class="summaryTableDescription summaryTableCol">업데이트 프로그램이 installFromAIRFile() 메서드에 대한 호출에서 파일의 유효성을 성공적으로 검사한 후 전달됩니다.</td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#event:initialized" class="signatureLink">initialized</a></div></td><td class="summaryTableDescription summaryTableCol">초기화가 완료된 후 전달됩니다.</td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#event:progress" class="signatureLink">progress</a></div></td><td class="summaryTableDescription summaryTableCol">업데이트 파일이 다운로드되는 동안 전달됩니다.</td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#event:updateError" class="signatureLink">updateError</a></div></td><td class="summaryTableDescription summaryTableCol">업데이트 설명자 파일을 다운로드하거나 파싱하는 동안 오류가 발생하면 전달됩니다.</td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<a href="ApplicationUpdaterUI.html#event:updateStatus" class="signatureLink">updateStatus</a></div></td><td class="summaryTableDescription summaryTableCol">업데이트 프로그램이 업데이트 설명자 파일을 성공적으로 다운로드하고 해석한 후 전달됩니다.</td><td class="summaryTableOwnerCol">ApplicationUpdaterUI</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">속성 세부 정보</div><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="configurationFile" id="configurationFile"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>configurationFile</h3></td><td class="detailHeaderType">속성</td></tr></table><div class="detailBody"><code>configurationFile:<a href="../../flash/filesystem/File.html">File</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		<code>delay</code> 및 <code>updateURL</code> 속성에 대한 값을 설정하는 구성 파일의 위치입니다. 또한 응용 프로그램에서 업데이트 프로세스 중 다양한 확인 대화 상자를 표시하는지 여부를 확인하는 설정도 있습니다. 이 속성이 존재하지 않는 파일을 가리킬 때 <code>initialize()</code> 메서드를 호출하면 오류가 발생합니다.
+		
+		<p>다음 예제 구성 파일을 참조하십시오.</p>
+		
+		<div class="listing"><pre> &lt;?xml version="1.0" encoding="utf-8"?&gt; 
+         &lt;configuration xmlns="http://ns.adobe.com/air/framework/update/configuration/1.0" &gt;
+           &lt;url&gt;app:/server/update.xml&lt;/url&gt;
+           &lt;delay&gt;1&lt;/delay&gt;
+           &lt;defaultUI&gt;
+              &lt;dialog name="checkForUpdate" visible="true" /&gt;
+               &lt;dialog name="downloadUpdate" visible="false" /&gt;
+               &lt;dialog name="downloadProgress" visible="true" /&gt;
+               &lt;dialog name="installUpdate" visible="true" /&gt;    
+           &lt;/defaultUI&gt;
+        &lt;/configuration&gt;</pre></div>
+		
+		<p>구성 파일을 로드하는 대신 <span>ActionScript</span> 코드를 사용하여 ApplicationUpdaterUI 객체의 <code>delay</code>, <code>isCheckForUpdateVisible</code>, <code>isDownloadProgressVisible</code>, <code>isDownloadUpdateVisible</code>, <code>isFileUpdateVisible</code>, <code>isInstallUpdateVisible</code> 및 <code>updateURL</code> 속성을 설정할 수 있습니다.</p>
+		
+		</p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get configurationFile():<a href="../../flash/filesystem/File.html">File</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set configurationFile(value:<a href="../../flash/filesystem/File.html">File</a>):<a href="../../specialTypes.html#void">void</a></code><br/><p><span class="label">관련 API 요소</span></p><div class="seeAlso"><a href="ApplicationUpdaterUI.html#delay" target="">delay</a><br/><a href="ApplicationUpdaterUI.html#updateURL" target="">updateURL</a></div></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="currentVersion" id="currentVersion"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>currentVersion</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>currentVersion:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[읽기 전용] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		응용 프로그램의 현재 버전입니다. 이 속성은 <code>initialize()</code> 메서드를 호출하는 동안 설정됩니다. 응용 프로그램 설명자 파일의 버전으로 설정됩니다.
+		
+		</p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get currentVersion():<a href="../../String.html">String</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="delay" id="delay"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>delay</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>delay:<a href="../../Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		새 업데이트의 주기적 검사 간격(일)입니다.
+		
+		<p>값을 0(기본값)으로 지정하면 타이머가 활성화되지 않으므로 주기적 검사가 수행되지 않습니다. 이 속성 또는 구성 파일을 통해 지연을 설정할 수 있습니다. 두 메서드를 사용하여 값을 설정하면 이 속성을 사용하는 값 설정이 사용됩니다.</p>
+		
+		</p><p> 기본값: <code>0.</code></p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get delay():<a href="../../Number.html">Number</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set delay(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code><br/><p><span class="label">관련 API 요소</span></p><div class="seeAlso"><a href="ApplicationUpdaterUI.html#configurationFile" target="">configurationFile</a></div></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="isCheckForUpdateVisible" id="isCheckForUpdateVisible"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>isCheckForUpdateVisible</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isCheckForUpdateVisible:<a href="../../Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		[업데이트 확인], [업데이트 없음] 및 [업데이트 오류] 대화 상자의 가시성을 활성화합니다. <code>true</code>로 설정하면 업데이트 프로그램에서 업데이트 프로세스의 일부로 이러한 대화 상자를 표시합니다. 업데이트 구성 파일에서도 설정할 수 있습니다. 이 속성을 사용하여 설정한 값은 업데이트 구성 파일의 설정보다 우선합니다. 
+		
+		</p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isCheckForUpdateVisible():<a href="../../Boolean.html">Boolean</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set isCheckForUpdateVisible(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="isDownloadProgressVisible" id="isDownloadProgressVisible"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>isDownloadProgressVisible</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isDownloadProgressVisible:<a href="../../Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		
+		[다운로드 업데이트] 대화 상자의 가시성을 활성화합니다. <code>true</code>로 설정하면 업데이트 프로그램에서 업데이트 프로세스의 일부로 이 대화 상자를 표시합니다. 업데이트 구성 파일에서도 설정할 수 있습니다. 이 속성을 사용하여 설정한 값은 업데이트 구성 파일의 설정보다 우선합니다.
+		
+		</p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isDownloadProgressVisible():<a href="../../Boolean.html">Boolean</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set isDownloadProgressVisible(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="isDownloadUpdateVisible" id="isDownloadUpdateVisible"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>isDownloadUpdateVisible</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isDownloadUpdateVisible:<a href="../../Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		[다운로드 업데이트] 대화 상자의 가시성을 활성화합니다. <code>true</code>로 설정하면 업데이트 프로그램에서 업데이트 프로세스의 일부로 이러한 대화 상자를 표시합니다. 업데이트 구성 파일에서도 설정할 수 있습니다. 이 속성을 사용하여 설정한 값은 업데이트 구성 파일의 설정보다 우선합니다.
+		
+		</p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isDownloadUpdateVisible():<a href="../../Boolean.html">Boolean</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set isDownloadUpdateVisible(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="isFileUpdateVisible" id="isFileUpdateVisible"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>isFileUpdateVisible</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isFileUpdateVisible:<a href="../../Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		
+		[파일 업데이트], [파일 업데이트 없음] 및 [파일 오류] 대화 상자의 가시성을 활성화합니다. <code>true</code>로 설정하면 업데이트 프로그램에서 업데이트 프로세스의 일부로 이러한 대화 상자를 표시합니다. 업데이트 구성 파일에서도 설정할 수 있습니다. 이 속성을 사용하여 설정한 값은 업데이트 구성 파일의 설정보다 우선합니다.
+		
+		</p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isFileUpdateVisible():<a href="../../Boolean.html">Boolean</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set isFileUpdateVisible(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="isFirstRun" id="isFirstRun"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>isFirstRun</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isFirstRun:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[읽기 전용] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		업데이트 성공 후 처음 실행하는 것인지(<code>true</code>) 아닌지(<code>false</code>)를 나타냅니다. 업데이트 프로그램에서 <code>initialize()</code> 메서드를 호출하는 동안 이 값을 설정합니다. 데이터를 한 버전에서 다른 버전으로 마이그레이션해야 할 경우 개발자는 <code>isFirstRun</code>이 <code>true</code>로 설정되었는지 확인해야 합니다.
+		
+		</p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isFirstRun():<a href="../../Boolean.html">Boolean</a></code><br/><p><span class="label">관련 API 요소</span></p><div class="seeAlso"><a href="ApplicationUpdaterUI.html#wasPendingUpdate" target="">wasPendingUpdate</a></div></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="isInstallUpdateVisible" id="isInstallUpdateVisible"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>isInstallUpdateVisible</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isInstallUpdateVisible:<a href="../../Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		[업데이트 설치] 대화 상자의 가시성을 활성화합니다. <code>true</code>로 설정하면 업데이트 프로그램에서 업데이트 프로세스의 일부로 이 대화 상자를 표시합니다. 업데이트 구성 파일에서도 설정할 수 있습니다. 이 속성을 사용하여 설정한 값은 업데이트 구성 파일의 설정보다 우선합니다.
+		
+		</p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isInstallUpdateVisible():<a href="../../Boolean.html">Boolean</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set isInstallUpdateVisible(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="isNewerVersionFunction" id="isNewerVersionFunction"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>isNewerVersionFunction</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isNewerVersionFunction:<a href="../../Function.html">Function</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		업데이트 프로그램이 버전 비교를 수행할 때 사용하는 기능입니다. 기본적으로 업데이트 프레임워크는 설치된 응용 프로그램의 버전보다 원격 사이트의 버전이 최신인지 확인하기 위해 버전 비교를 수행합니다. 그러나 기본 비교 방법이 개발자의 버전 지정 방법과 맞지 않을 수 있습니다. 비교를 수행하는 새 함수를 제공하려면 이 속성을 설정합니다. 
+		
+		<p>기본 비교 함수는 <i>x.y.z</i> 등의 버전을 사용합니다. 여기서 x, y 및 z에는 문자와 숫자가 포함될 수 있습니다. 기본 비교 함수에서 인식하는 몇 가지 특수 조건이 있습니다. test 함수가 버전 문자열에서 <code>"alpha"</code>, <code>"beta"</code> 또는 <code>"rc"</code>를 찾으면 순서가 <code>alpha</code> &lt; <code>beta</code> &lt; <code>rc</code>가 됩니다.</p>
+		
+		</p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isNewerVersionFunction():<a href="../../Function.html">Function</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set isNewerVersionFunction(value:<a href="../../Function.html">Function</a>):<a href="../../specialTypes.html#void">void</a></code><br/><span id="pageFilter"><br/><span class="label"> 예제 &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_kr"> 예제 사용 방법 </a></span>)
+            </span><br/><div class="detailBody"> 다음 코드는 <code>appUpdate</code> 업데이트 프로그램 객체에 대해 사용자 정의 함수 <code>customFn</code>을 정의합니다. 예제 함수는 간단합니다. 사용자 정의 함수는 버전 지정 규칙에 따라 부울 값을 반환합니다.
+<div class="listing"><pre>
+appUpdate.isNewerVersionFunction = customFn; 
+
+function customFn (currentVersion:String, updateVersion:String):Boolean 
+{
+    return updateVersion &gt; currentVersion;
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="isUnexpectedErrorVisible" id="isUnexpectedErrorVisible"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>isUnexpectedErrorVisible</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isUnexpectedErrorVisible:<a href="../../Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		[예기치 않은 오류] 대화 상자의 가시성을 활성화합니다. <code>true</code>로 설정하면 응용 프로그램 업데이트 프로그램에서 업데이트 프로세스의 일부로 이 대화 상자를 표시합니다. 업데이트 구성 파일에서도 설정할 수 있습니다. 이 속성을 사용하여 설정한 값은 업데이트 구성 파일의 설정보다 우선합니다. 
+		
+		</p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isUnexpectedErrorVisible():<a href="../../Boolean.html">Boolean</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set isUnexpectedErrorVisible(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="isUpdateInProgress" id="isUpdateInProgress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>isUpdateInProgress</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isUpdateInProgress:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[읽기 전용] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		업데이트가 실행 중이면 <code>true</code>이고 그렇지 않으면 <code>false</code>인 부울 속성입니다.
+		
+		</p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isUpdateInProgress():<a href="../../Boolean.html">Boolean</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="localeChain" id="localeChain"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>localeChain</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>localeChain:<a href="../../Array.html">Array</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		사용자 인터페이스에서 사용하는 로캘 체인을 정의하는 배열입니다. 일반적으로 JavaScript(HTML) 개발자만 이 속성을 사용합니다. 
+		
+		<p>Flex 개발자들은 ResourceManager를 사용하여 로캘 체인을 처리합니다. </p>
+		
+		<p>기본적으로 HTML 기반의 응용 프로그램에서는 언어가 <code>Capabilities.languages</code> 배열의 언어 및 사용자 인터페이스에서 지원하는 10가지 언어 중 하나로 저장됩니다. 일치하는 언어를 찾을 수 없으면 사용자 인터페이스에서 영어를 사용합니다. </p>
+		
+		<p>이 JavaScript 예제에서는 AIR SDK에 포함된 AIR HTML 지역화 프레임워크를 사용합니다. 언어 목록에 따라 언어를 정렬한 다음 영어를 기본 폴백 언어로 설정합니다.</p>
+		
+		<div class="listing"><pre> appUpdater.addResources("ro_RO", {titleCheck: "Titlu", msgCheck: "Mesaj", btnCheck: "Buton"});
+        appUpdater.addResources("hu", {titleCheck: "Cím", msgCheck: "Üzenet"}); 
+        var languages = ["ro", "hu"];
+        languages = languages.concat(air.Capabilities.languages);
+        var sortedLanguages = air.Localizer.sortLanguagesByPreference(languages, air.Capabilities.language, "en-US");  
+        sortedLanguages.push("en-US");
+        appUpdater.localeChain = sortedLanguages;</pre></div>
+		
+		</p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get localeChain():<a href="../../Array.html">Array</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set localeChain(value:<a href="../../Array.html">Array</a>):<a href="../../specialTypes.html#void">void</a></code><br/><p><span class="label">관련 API 요소</span></p><div class="seeAlso"><a href="ApplicationUpdaterUI.html#addResources()" target="">addResources()</a></div></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="previousApplicationStorageDirectory" id="previousApplicationStorageDirectory"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>previousApplicationStorageDirectory</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>previousApplicationStorageDirectory:<a href="../../flash/filesystem/File.html">File</a></code>&nbsp;&nbsp;[읽기 전용] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		업데이트 후 변경된 경우 응용 프로그램 저장소 디렉토리의 이전 위치입니다. 인증서 마이그레이션이 포함된 업그레이드 후에는 응용 프로그램 저장소 디렉토리 위치가 변경됩니다. 인증서 마이그레이션이 없는 경우 사용자가 응용 프로그램을 업데이트할 때 응용 프로그램 저장소 디렉토리가 변경되지 않습니다. 또한 이 속성이 <code>null</code>로 설정됩니다. 이 속성은 <code>initialize()</code> 메서드를 호출하는 동안 설정됩니다. 
+		
+		<p>개발자가 ADT를 사용하여 AIR 파일을 패키지화할 때 <code>-migrate</code> 옵션을 사용할 경우 새 버전의 AIR 응용 프로그램에 새로운 인증서로 서명할 수 있습니다. 새 버전의 AIR 응용 프로그램에서 새 서명 인증서를 사용하는 경우 사용자가 새 버전을 설치하면 응용 프로그램의 로컬 저장소 디렉토리가 변경됩니다. 이 속성을 사용하여 이전 응용 프로그램 저장소 디렉토리에서 새 응용 프로그램 저장소 디렉토리(<code>File.applicationStorageDirectory</code>)로 데이터를 전송합니다. 자세한 내용은 Adobe AIR 개발자 안내서의 "명령줄 도구를 사용하여 AIR 응용 프로그램 만들기" 장에서 "AIR 파일에 서명하여 응용 프로그램 인증서 변경"을 참조하십시오.</p>
+		
+		 </p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get previousApplicationStorageDirectory():<a href="../../flash/filesystem/File.html">File</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="previousVersion" id="previousVersion"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>previousVersion</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>previousVersion:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[읽기 전용] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		응용 프로그램의 이전 버전입니다. 이 속성은 <code>initialize()</code> 메서드를 호출하는 동안 설정됩니다. 업그레이드 전 응용 프로그램의 <i>이전 버전</i>을 반환합니다. <code>isfirstRun</code>이 <code>true</code>인 경우에만 설정되고 그렇지 않은 경우 <code>null</code>로 설정됩니다.
+		
+		</p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get previousVersion():<a href="../../String.html">String</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="updateDescriptor" id="updateDescriptor"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>updateDescriptor</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>updateDescriptor:<a href="../../XML.html">XML</a></code>&nbsp;&nbsp;[읽기 전용] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		업데이트 URL에서 다운로드된 업데이트 설명자 파일의 내용입니다. 이 속성은 업데이트 프로그램 객체가 <code>updateStatus</code> 이벤트를 전달한 후에만 null이 아닙니다.
+		
+		</p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get updateDescriptor():<a href="../../XML.html">XML</a></code><br/></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="updateURL" id="updateURL"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>updateURL</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>updateURL:<a href="../../String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		업데이트 설명자 파일의 위치입니다. URLRequest 경로에 유효한 위치가 사용됩니다. 업데이트 프로그램에서 필요로 하는 유일한 필수 설정입니다. 이 속성 또는 구성 파일을 통해 업데이트 URL을 설정할 수 있습니다. 두 메서드를 사용하여 값을 설정하면 업데이트 프로그램에서 이 속성을 사용하는 값 설정을 사용합니다.
+		
+		</p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get updateURL():<a href="../../String.html">String</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set updateURL(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><br/><p><span class="label">관련 API 요소</span></p><div class="seeAlso"><a href="ApplicationUpdaterUI.html#configurationFile" target="">configurationFile</a></div></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail" id="propertyDetail"></a><a name="wasPendingUpdate" id="wasPendingUpdate"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>wasPendingUpdate</h3></td><td class="detailHeaderType">속성</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>wasPendingUpdate:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[읽기 전용] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		연기된 업데이트가 있는 경우 설치에 실패했더라도 <code>true</code>로 설정되고, 그렇지 않으면 <code>false</code>로 설정됩니다. 업데이트 프로그램에서 <code>initialize()</code> 메서드를 호출하는 동안 이 속성을 설정합니다. <code>wasPendingUpdate</code> 및 <code>isFirstRun</code> 속성을 사용하여 업데이트를 설치하지 못했는지를 확인합니다. 설치하지 못한 경우 <code>wasPendingUpdate</code>가 <code>true</code>, <code>isFirstRun</code>이 <code>false</code>로 설정됩니다.
+		
+		</p><br/><br/><span class="label"> 구현 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get wasPendingUpdate():<a href="../../Boolean.html">Boolean</a></code><br/><p><span class="label">관련 API 요소</span></p><div class="seeAlso"><a href="ApplicationUpdaterUI.html#isFirstRun" target="">isFirstRun</a></div></div></span><a name="constructorDetail" id="constructorDetail"></a><div class="detailSectionHeader">생성자 세부 정보</div><span id="pageFilter" runtime="AIR::1.5##"><a name="ApplicationUpdaterUI()" id="ApplicationUpdaterUI()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>ApplicationUpdaterUI</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">생성자</td></tr></table><div class="detailBody"><code>public function ApplicationUpdaterUI()</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p>
+		생성자 함수입니다. 
+		
+		</p></div></span><a name="methodDetail" id="methodDetail"></a><div class="detailSectionHeader">메서드 세부 정보</div><span id="pageFilter" runtime="AIR::1.5##"><a name="addResources()" id="addResources()"></a><a name="addResources(String,Object)" id="addResources(String,Object)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;addResources</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">메서드</td></tr></table><div class="detailBody"><code> public function addResources(lang:<a href="../../String.html">String</a>, res:<a href="../../Object.html">Object</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+		 지정된 언어에 대한 새 리소스 번들을 동적으로 추가합니다. JavaScript 개발자는 이 메서드를 사용하여 응용 프로그램 업데이트 프로그램 UI에 표시되는 새 언어를 동적으로 추가합니다. Flex 개발자는 "ApplicationUpdaterDialogs" 리소스 번들에 새 언어를 직접 추가할 수 있습니다.
+		 
+		 </p><p><span class="label"> 매개 변수 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">lang</span>:<a href="../../String.html">String</a></code> &mdash; 언어 코드입니다(예: 루마니아어의 경우 <code>"ro"</code>).
+		 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">res</span>:<a href="../../Object.html">Object</a></code> &mdash; 객체에는 키와 변환 값이 포함되어 있습니다. 키는 언어 속성 파일에서 가져온 것입니다. 다음 테이블에는 가능한 키(속성 이름)가 나열됩니다.
+		 
+		 <p>
+		 <table class="innertable" ><tr><th> 키  </th><th> 영어 값  </th><th> 대화 상자 </th><th> 설명  </th></tr><tr><td> <code>appWidth</code> </td><td> 530  </td><td> 전체  </td><td> 대화 상자의 폭입니다. </td></tr><tr><td> <code>titleWindow</code> </td><td> 업데이트 중:  </td><td> 전체  </td><td> 기본 윈도우의 제목 표시줄에서 응용 프로그램 이름 앞에 표시됩니다. </td></tr><tr><td> <code>titleCheck</code> </td><td> 업데이트 확인  </td><td> 업데이트 확인  </td><td> 대화 상자 제목입니다.  </td></tr><tr><td> <code>msgCheck</code> </td><td> 응용 프로그램에서 업데이트를 확인하도록 허용하시겠습니까?  </td><td> 업데이트 확인  </td><td> 대화 상자 메시지입니다.  </td></tr><tr><td> <code>btnCheck</code> </td><td> 업데이트 확인  </td><td> 업데이트 확인  </td><td> 업데이트 버튼 레이블을 확인합니다.  </td></tr><tr><td> <code>btnCancel</code> </td><td> 취소  </td><td> 취소 버튼이 있는 모든 대화 상자  </td><td> 취소 버튼 레이블입니다. </td></tr><tr><td> <code>titleCheckNoUpdates</code> </td><td> 업데이트를 사용할 수 없음  </td><td> CheckForUpdates - 업데이트를 사용할 수 없음  </td><td> 대화 상자 제목입니다. </td></tr><tr><td> <code>msgCheckNoUpdates</code> </td><td> 해당 응용 프로그램에 사용할 수 있는 업데이트가 없습니다.  </td><td> 업데이트 확인 - 업데이트를 사용할 수 없음  </td><td> 대화 상자 메시지입니다.  </td></tr><tr><td> <code>btnClose</code> </td><td> 닫기  </td><td> 닫기 버튼이 있는 모든 대화 상자  </td><td> 닫기 버튼 레이블입니다. </td></tr><tr><td> <code>titleCheckError</code> </td><td> 업데이트 오류  </td><td> 업데이트 확인 - 연결 오류  </td><td> 대화 상자 제목입니다.  </td></tr><tr><td> <code>msgCheckError</code> </td><td> 업데이트 확인 중 오류가 발생했습니다. 오류# {0}:  </td><td> 업데이트 확인 - 연결 오류  </td><td> 대화 상자 메시지입니다. {0}에는 오류 ID가 표시됩니다. </td></tr><tr><td> <code>titleUpdate</code> </td><td> 업데이트를 사용할 수 있음  </td><td> 업데이트를 사용할 수 있음  </td><td> 대화 상자 제목입니다. </td></tr><tr><td> <code>msgUpdate</code> </td><td> 응용 프로그램의 업데이트 버전을 다운로드할 수 있습니다.  </td><td> 업데이트를 사용할 수 있음  </td><td> 대화 상자 메시지입니다. </td></tr><tr><td> <code>lblApplication</code> </td><td> 응용 프로그램:  </td><td> 업데이트를 사용할 수 있음  </td><td> 응용 프로그램 이름 앞에 표시되는 레이블입니다. </td></tr><tr><td> <code>lblInstalledVersion</code> </td><td> 설치된 버전:  </td><td> 업데이트를 사용할 수 있음  </td><td> 설치된 버전 앞에 표시되는 레이블입니다. </td></tr><tr><td> <code>lblAvailableVersion</code> </td><td> 업데이트 버전:  </td><td> 업데이트를 사용할 수 있음  </td><td> 업데이트 버전 앞에 표시되는 레이블입니다. </td></tr><tr><td> <code>btnDownload</code> </td><td> 지금 다운로드  </td><td> 업데이트를 사용할 수 있음  </td><td> 지금 다운로드 버튼 레이블입니다.  </td></tr><tr><td> <code>btnDownloadLater</code> </td><td> 나중에 다운로드  </td><td> 업데이트를 사용할 수 있음  </td><td> 나중에 다운로드 버튼 레이블입니다.  </td></tr><tr><td> <code>lnkReleaseNotes</code> </td><td> 릴리스 정보  </td><td> 릴리스 정보에 대한 모든 링크  </td><td> "릴리스 정보" 링크 이름입니다.  </td></tr><tr><td> <code>titleProgress</code> </td><td> 다운로드 진행률...  </td><td> 다운로드 진행률  </td><td> 대화 상자 제목입니다. </td></tr><tr><td> <code>msgProgress</code> </td><td> 업데이트 다운로드 중  </td><td> 다운로드 진행률  </td><td> 대화 상자 메시지입니다. </td></tr><tr><td> <code>titleDownloadError</code> </td><td> 다운로드 실패  </td><td> 다운로드 오류  </td><td> 대화 상자 제목입니다. </td></tr><tr><td> <code>msgDownloadError</code> </td><td> 업데이트를 다운로드할 때 오류가 발생했습니다. 오류# {0}:  </td><td> 다운로드 오류  </td><td> 대화 상자 메시지입니다. {0}에는 오류 ID가 표시됩니다.  </td></tr><tr><td> <code>titleInstall</code> </td><td> 업데이트 설치  </td><td> 업데이트 설치  </td><td> 대화 상자 제목입니다. </td></tr><tr><td> <code>msgInstall</code> </td><td> 응용 프로그램 업데이트를 다운로드하여 설치할 준비가 되었습니다.  </td><td> 업데이트 설치  </td><td> 대화 상자 메시지입니다. </td></tr><tr><td> <code>btnInstall</code> </td><td> 지금 설치  </td><td> 업데이트 설치  </td><td> "설치" 버튼 레이블  </td></tr><tr><td> <code>btnInstallLater</code> </td><td> 재시작할 때까지 연기  </td><td> 업데이트 설치  </td><td> "재시작할 때까지 연기" 버튼 레이블  </td></tr><tr><td> <code>titleFileUpdate</code> </td><td> 업데이트를 사용할 수 있음  </td><td> 파일 - 업데이트를 사용할 수 있음  </td><td> 대화 상자 제목입니다.  </td></tr><tr><td> <code>msgFileUpdate</code> </td><td> 파일에 응용 프로그램의 업데이트 버전이 포함되어 있습니다. 설치하시겠습니까?  </td><td> 파일 - 업데이트를 사용할 수 있음  </td><td> 대화 상자 메시지입니다. </td></tr><tr><td> <code>lblFile</code> </td><td> 파일:  </td><td> 파일 - 업데이트를 사용할 수 있음  </td><td> 파일 이름 앞에 표시되는 레이블입니다.  </td></tr><tr><td> <code>titleFileNoUpdate</code> </td><td> 업데이트를 사용할 수 없음  </td><td> File - 업데이트를 사용할 수 없음  </td><td> 대화 상자 제목입니다. </td></tr><tr><td> <code>msgFileNoUpdate</code> </td><td> 파일에 새로운 버전의 응용 프로그램이 없습니다.  </td><td> File - 업데이트를 사용할 수 없음  </td><td> 대화 상자 메시지입니다. </td></tr><tr><td> <code>titleFileError</code> </td><td> 파일 오류  </td><td> 파일 - 오류  </td><td> 대화 상자 제목입니다.  </td></tr><tr><td> <code>msgFileError</code> </td><td> 업데이트 파일의 유효성을 검사하는 동안 오류가 발생했습니다. 오류# {0}:  </td><td> 파일 - 오류  </td><td> 대화 상자 메시지입니다. {0}에는 오류 ID가 표시됩니다. </td></tr><tr><td> <code>titleUnexpectedError</code> </td><td> 예기치 않은 오류  </td><td> 예기치 않은 오류  </td><td> 대화 상자 제목입니다. </td></tr><tr><td> <code>msgUnexpectedError</code> </td><td> 예기치 않은 오류가 발생했습니다. 오류# {0}:  </td><td> 예기치 않은 오류  </td><td> 대화 상자 메시지입니다. {0}에는 오류 ID가 표시됩니다.  </td></tr></table>
+		 
+		 </p>
+		 
+		 </td></tr></table></p><p><span class="label">관련 API 요소</span></p><div class="seeAlso"><a href="ApplicationUpdaterUI.html#localeChain" target="">localeChain</a></div></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="cancelUpdate()" id="cancelUpdate()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;cancelUpdate</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">메서드</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function cancelUpdate():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		업데이트 프로세스를 취소합니다. 이 메서드를 호출하면 대기 중인 다운로드가 취소되고 완료되지 않은 다운로드 파일이 모두 삭제되며 주기적 검사 타이머가 재시작됩니다.
+		
+		<p>시스템 상태가 "uninitialized" 또는 "initializing"인 경우를 제외하면 언제든지 업데이트 프로세스를 취소할 수 있습니다. "uninitialized" 또는 "initializing" 상태일 때 호출하면 아무런 동작도 일어나지 않습니다.</p>
+		
+		</p></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="checkNow()" id="checkNow()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;checkNow</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">메서드</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function checkNow():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		업데이트 프로세스를 시작합니다. 이 메서드를 호출해도 주기적 타이머가 중지되지 않습니다. 그러나 업데이트 프로세스가 실행 중인지 확인하여 현재 반복을 생략합니다.
+		
+		<p>이 메서드는 현재 상태가 "Ready"인 경우에만 실행됩니다. </p>
+		
+		<p>이 메서드를 실행하면 업데이트 프로그램 객체에서 다음 이벤트를 전달합니다.</p>
+		
+		</p><br/><span class="label">이벤트</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>checkForUpdate</b>:<a href="events/UpdateEvent.html"><code>UpdateEvent</code></a></code> &mdash; 업데이트 프로세스가 시작되기 직전에 전달됩니다.
+		
+		</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="initialize()" id="initialize()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;initialize</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">메서드</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function initialize():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		 업데이트 프로그램을 초기화합니다. 이 메서드를 호출하면 다음 동작이 일어납니다. 
+		
+		<p><ol><li>
+		<p>업데이트 프레임워크를 초기화하고 대기 중인 업데이트를 자동으로 그리고 동기적으로 설치합니다. 이 메서드를 호출하면 응용 프로그램이 재시작될 수 있으므로 응용 프로그램 설치 전에 호출해야 합니다.</p>
+		</li><li>
+		
+		<p>연기된 업데이트가 있는지 확인한 다음 설치합니다.</p>
+		</li><li>
+		<p>이전 업데이트 시 오류가 발생한 경우 저장 영역에서 해당 업데이트 파일과 버전 정보를 지웁니다.</p>
+		</li><li>
+		<p>주기적 타이머 지연이 만료된 경우 업데이트 프로세스를 시작하고 그렇지 않은 경우 주기적 타이머를 시작합니다. 그러나 ADL(AIR Debug Launcher) 응용 프로그램을 사용하여 응용 프로그램을 테스트할 때 응용 프로그램을 업데이트하면 IllegalOperationError 예외가 발생합니다.</p>
+		</li></ol></p>
+		
+		</p><br/><span class="label">이벤트</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>initialized</b>:<a href="events/UpdateEvent.html"><code>UpdateEvent</code></a></code> &mdash; 설치가 완료되었습니다. 
+		
+		</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>error</b>:<a href="../../flash/events/ErrorEvent.html"><code>ErrorEvent</code></a></code> &mdash; 초기화 중 오류가 발생합니다.
+		
+		</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="installFromAIRFile()" id="installFromAIRFile()"></a><a name="installFromAIRFile(flash.filesystem.File)" id="installFromAIRFile(flash.filesystem.File)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;installFromAIRFile</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">메서드</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function installFromAIRFile(file:<a href="../../flash/filesystem/File.html">File</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p>
+		로컬 AIR 파일을 사용하여 업데이트 프로세스를 시작합니다. 
+		
+		<p>업데이트 프로세스가 실행 중일 때, 즉 <code>"Downloaded"</code> 상태가 아닌 경우 이 메서드를 호출하면 아무런 동작도 일어나지 않습니다.</p>
+		
+		<p>이 함수는 응용 프로그램 설명자 파일에서 <code>customUpdateUI</code> 요소가 <code>true</code>로 설정된 응용 프로그램에 유용합니다.</p>
+		
+		<p>ADL(AIR Debug Launcher) 응용 프로그램을 사용하여 응용 프로그램을 테스트할 때 이 메서드를 호출하면 IllegalOperationError 예외가 발생합니다.</p>
+		
+		</p><p><span class="label"> 매개 변수 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">file</span>:<a href="../../flash/filesystem/File.html">File</a></code> &mdash; 설치할 로컬 AIR 파일입니다.
+		
+		</td></tr></table></p><br/><span class="label">이벤트</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>fileUpdateStatus</b>:<a href="events/StatusFileUpdateEvent.html"><code>StatusFileUpdateEvent</code></a></code> &mdash; 업데이트 프로그램에서 AIR 파일의 유효성을 성공적으로 검사한 후 전달됩니다.
+		
+		</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>updateError</b>:<a href="events/StatusFileUpdateErrorEvent.html"><code>StatusFileUpdateErrorEvent</code></a></code> &mdash; 업데이트 설명자 파일을 파싱하는 동안 오류가 발생하면 전달됩니다.
+		 
+		</td></tr></table></div></span><div class="detailSectionHeader"> 이벤트 세부 정보 </div><span id="pageFilter" runtime="AIR::1.5##"><a name="event:beforeInstall" id="event:beforeInstall"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>beforeInstall</h3></td><td class="detailHeaderType"> 이벤트 </td></tr></table><div class="detailBody"><span class="label">이벤트 객체 유형: </span><a href="events/UpdateEvent.html"><code>air.update.events.UpdateEvent</code></a><br/><span class="label">속성 UpdateEvent.type  =  </span><a href="events/UpdateEvent.html#BEFORE_INSTALL"><code>air.update.events.UpdateEvent.BEFORE_INSTALL</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	 업데이트를 설치하기 전 <code>installUpdate()</code> 메서드가 호출된 후에 전달됩니다. 사용자가 업데이트를 설치하기 위해 런타임으로 응용 프로그램을 종료하면 현재 작업을 잃을 수 있으므로 업데이트 설치를 나중으로 미뤄야 할 때가 있습니다. 
+	 
+	 <p>이 이벤트의 <code>preventDefault()</code> 메서드를 호출하면 다음에 재시작할 때까지 설치가 연기됩니다. <code>preventDefault()</code> 메서드를 호출하면 <code>installUpdate()</code> 메서드 호출 또는 주기적 검사로 인해 이 응용 프로그램 세션 동안 추가 업데이트 프로세스를 시작할 수 없습니다. </p>
+	
+	</p>
+		 <code>UpdateEvent.BEFORE_INSTALL</code> 상수는 <code>beforeInstall</code> 이벤트에 대한 이벤트 객체의 <code>type</code> 속성 값을 정의합니다.
+		 
+		<p>이 이벤트에는 다음과 같은 속성이 있습니다.</p>
+		
+		<table class="innertable" ><tr><th>속성</th><th>값</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>. 취소할 기본 비헤이비어가 없습니다.</td></tr><tr><td><code>currentTarget</code></td><td>이벤트 리스너를 통해 Event 객체를 처리하고 있는 객체입니다.</td></tr><tr><td><code>target</code></td><td>업데이트 프로그램 객체입니다. </td></tr></table>
+		
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:checkForUpdate" id="event:checkForUpdate"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>checkForUpdate</h3></td><td class="detailHeaderType"> 이벤트 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">이벤트 객체 유형: </span><a href="events/UpdateEvent.html"><code>air.update.events.UpdateEvent</code></a><br/><span class="label">속성 UpdateEvent.type  =  </span><a href="events/UpdateEvent.html#CHECK_FOR_UPDATE"><code>air.update.events.UpdateEvent.CHECK_FOR_UPDATE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	업데이트 프로세스가 시작되기 전, 업데이트 설명자 파일을 다운로드하기 직전에 전달됩니다. <code>checkNow()</code> 메서드를 직접 호출하거나 주기적 검사 타이머가 만료된 경우 업데이트 프로그램에서 이 이벤트를 전달합니다. 
+	
+	</p>
+		 <code>UpdateEvent.CHECK_FOR_UPDATE</code> 상수는 <code>checkForUpdate</code> 이벤트에 대한 이벤트 객체의 <code>type</code> 속성 값을 정의합니다.
+		 
+		<p>이 이벤트에는 다음과 같은 속성이 있습니다.</p>
+		
+		<table class="innertable" ><tr><th>속성</th><th>값</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>. 취소할 기본 비헤이비어가 없습니다.</td></tr><tr><td><code>currentTarget</code></td><td>이벤트 리스너를 통해 Event 객체를 처리하고 있는 객체입니다.</td></tr><tr><td><code>target</code></td><td>업데이트 프로그램 객체입니다. </td></tr></table>
+		
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:downloadComplete" id="event:downloadComplete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>downloadComplete</h3></td><td class="detailHeaderType"> 이벤트 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">이벤트 객체 유형: </span><a href="events/UpdateEvent.html"><code>air.update.events.UpdateEvent</code></a><br/><span class="label">속성 UpdateEvent.type  =  </span><a href="events/UpdateEvent.html#DOWNLOAD_COMPLETE"><code>air.update.events.UpdateEvent.DOWNLOAD_COMPLETE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	
+	업데이트 파일 다운로드가 완료되면 전달됩니다.
+	
+	</p>
+		 <code>UpdateEvent.DOWNLOAD_COMPLETE</code> 상수는 <code>downloadComplete</code> 이벤트에 대한 이벤트 객체의 <code>type</code> 속성 값을 정의합니다.
+		 
+		<p>이 이벤트에는 다음과 같은 속성이 있습니다.</p>
+		
+		<table class="innertable" ><tr><th>속성</th><th>값</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>. 취소할 기본 비헤이비어가 없습니다.</td></tr><tr><td><code>currentTarget</code></td><td>이벤트 리스너를 통해 Event 객체를 처리하고 있는 객체입니다.</td></tr><tr><td><code>target</code></td><td>업데이트 프로그램 객체입니다. </td></tr></table>
+		 
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:downloadError" id="event:downloadError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>downloadError</h3></td><td class="detailHeaderType"> 이벤트 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">이벤트 객체 유형: </span><a href="events/DownloadErrorEvent.html"><code>air.update.events.DownloadErrorEvent</code></a><br/><span class="label">속성 DownloadErrorEvent.type  =  </span><a href="events/DownloadErrorEvent.html#DOWNLOAD_ERROR"><code>air.update.events.DownloadErrorEvent.DOWNLOAD_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	업데이트 파일을 연결하거나 다운로드하는 동안 오류가 발생하면 전달됩니다. HTTP 상태가 잘못된 경우(예: 404 - 파일을 찾을 수 없습니다.)에도 전달됩니다.
+	
+	<p>이 이벤트가 전달되면 주기적 타이머가 0보다 큰 경우 자동으로 재시작됩니다. </p>
+	
+	
+	</p>
+		 <code>DownloadErrorEvent.DOWNLOAD_ERROR</code> 상수는 <code>downloadError</code> 이벤트에 대한 이벤트 객체의 <code>type</code> 속성 값을 정의합니다.
+		 
+		<p>DownloadErrorEvent 객체의 <code>errorID</code> 속성은 오류 정보를 정의하는 정수입니다(다음 표 참조). 추가 <code>subErrorID</code> 속성은 더 많은 오류 정보를 포함할 수 있습니다.</p>
+		
+		<table class="innertable" ><tr><th>errorID 오류 코드</th><th>설명</th></tr><tr><td>16800</td><td>다운로드한 업데이트 파일의 유효성을 검사하는 동안 발생합니다. <code>subErrorID</code> 속성은 추가 정보를 포함할 수 있습니다.</td></tr><tr><td>16801</td><td>잘못된 Adobe AIR 파일입니다(application.xml 없음).</td></tr><tr><td>16802</td><td>잘못된 Adobe AIR 파일입니다(MIME 유형 없음).</td></tr><tr><td>16803</td><td>잘못된 Adobe AIR 파일입니다(형식).</td></tr><tr><td>16804</td><td>잘못된 Adobe AIR 파일입니다(잘못된 플래그).</td></tr><tr><td>16805</td><td>잘못된 Adobe AIR 파일입니다(알 수 없는 압축).</td></tr><tr><td>16806</td><td>잘못된 Adobe AIR 파일입니다(잘못된 파일 이름).</td></tr><tr><td>16807</td><td>잘못된 Adobe AIR 파일입니다(손상).</td></tr><tr><td>16808</td><td>구성 파일이 없습니다.</td></tr><tr><td>16809</td><td><code>updateURL</code> 속성이 설정되지 않았습니다.</td></tr><tr><td>16810</td><td>예약된 값입니다.</td></tr><tr><td>16811</td><td>잘못된 구성 파일입니다(알 수 없는 구성 버전).</td></tr><tr><td>16812</td><td>잘못된 구성 파일입니다(URL 없음).</td></tr><tr><td>16813</td><td>잘못된 구성 파일입니다(지연 형식).</td></tr><tr><td>16814</td><td>잘못된 구성 파일입니다(잘못된 defaultUI 값).</td></tr><tr><td>16815</td><td>잘못된 업데이트 설명자입니다(알 수 없는 설명자 버전).</td></tr><tr><td>16816</td><td>잘못된 업데이트 설명자입니다(업데이트 버전 없음).</td></tr><tr><td>16817</td><td>잘못된 업데이트 설명자입니다(잘못된 설명).</td></tr><tr><td>16818</td><td>디스크에 데이터를 저장하는 동안 발생하는 IO 오류입니다. <code>subErrorID</code> 속성은 추가 정보를 제공할 수 있습니다.</td></tr><tr><td>16819</td><td>다운로드하는 동안 발생하는 보안 오류입니다. <code>subErrorID</code> 속성은 추가 정보를 제공할 수 있습니다.</td></tr><tr><td>16820</td><td>잘못된 HTTP 상태 코드입니다. <code>subErrorID</code> 속성은 잘못된 상태 코드를 포함할 수 있습니다.</td></tr><tr><td>16821</td><td>예약된 값입니다.</td></tr><tr><td>16822</td><td>다운로드하는 동안 발생하는 I/O 오류입니다. <code>subErrorID</code> 속성은 추가 정보를 제공할 수 있습니다.</td></tr><tr><td>16823</td><td>디스크에 데이터를 저장하는 동안 발생하는 파일 끝 오류입니다. <code>subErrorID</code> 속성은 추가 정보를 제공할 수 있습니다.</td></tr><tr><td>16824</td><td>잘못된 업데이트 설명자입니다. <code>subErrorID</code> 속성은 추가 정보를 제공할 수 있습니다.</td></tr><tr><td>16825</td><td>업데이트 파일에 응용 프로그램 ID가 다른 응용 프로그램이 포함되어 있습니다.</td></tr><tr><td>16826</td><td>업데이트 파일에 새로운 버전의 응용 프로그램이 포함되어 있지 않습니다.</td></tr><tr><td>16827</td><td>업데이트 파일에 포함되어 있는 버전이 업데이트 설명자의 버전과 일치하지 않습니다.</td></tr><tr><td>16828</td><td>일반적으로 응용 프로그램이 ADL(AIR Debug Launcher)에서 실행하기 때문에 응용 프로그램을 업데이트할 수 없습니다.</td></tr><tr><td>16829</td><td>설치할 때 업데이트 파일이 없습니다.</td></tr></table>
+		
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:downloadStart" id="event:downloadStart"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>downloadStart</h3></td><td class="detailHeaderType"> 이벤트 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">이벤트 객체 유형: </span><a href="events/UpdateEvent.html"><code>air.update.events.UpdateEvent</code></a><br/><span class="label">속성 UpdateEvent.type  =  </span><a href="events/UpdateEvent.html#DOWNLOAD_START"><code>air.update.events.UpdateEvent.DOWNLOAD_START</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	
+	 <code>downloadUpdate()</code> 메서드가 호출되고 서버에 대한 연결이 설정된 후 전달됩니다. ApplicationUpdater 라이브러리를 사용할 때 이 이벤트에 대한 이벤트 핸들러를 사용하여 사용자가 다운로드 진행률을 알 수 있도록 진행률 막대를 표시할 수 있습니다. 
+	
+	</p>
+		 <code>UpdateEvent.DOWNLOAD_START</code> 상수는 <code>downloadStart</code> 이벤트에 대한 이벤트 객체의 <code>type</code> 속성 값을 정의합니다.
+		 
+		<p>이 이벤트에는 다음과 같은 속성이 있습니다.</p>
+		
+		<table class="innertable" ><tr><th>속성</th><th>값</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>. 취소할 기본 비헤이비어가 없습니다.</td></tr><tr><td><code>currentTarget</code></td><td>이벤트 리스너를 통해 Event 객체를 처리하고 있는 객체입니다.</td></tr><tr><td><code>target</code></td><td>업데이트 프로그램 객체입니다. </td></tr></table>
+		 
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:error" id="event:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>error</h3></td><td class="detailHeaderType"> 이벤트 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">이벤트 객체 유형: </span><a href="../../flash/events/ErrorEvent.html"><code>flash.events.ErrorEvent</code></a><br/><span class="label">속성 ErrorEvent.type  =  </span><a href="../../flash/events/ErrorEvent.html#ERROR"><code>flash.events.ErrorEvent.ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	초기화 또는 업데이트 프로세스 중 예기치 못한 오류가 발생하면 전달됩니다.
+	
+	</p>
+	<code>error</code> 이벤트 객체의 <code>type</code> 속성 값을 정의합니다. 
+	<p>이 이벤트에는 다음과 같은 속성이 있습니다.</p>
+	<table class="innertable" ><tr><th>속성</th><th>값</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>. 취소할 기본 비헤이비어가 없습니다.</td></tr><tr><td><code>currentTarget</code></td><td>이벤트 리스너를 통해 Event 객체를 처리하고 있는 객체입니다.</td></tr><tr><td><code>target</code></td><td>네트워크 작업에 실패한 객체입니다.</td></tr><tr><td><code>text</code></td><td>오류 메시지로 표시될 텍스트입니다. </td></tr></table>
+	
+	</div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:fileUpdateError" id="event:fileUpdateError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>fileUpdateError</h3></td><td class="detailHeaderType"> 이벤트 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">이벤트 객체 유형: </span><a href="events/StatusFileUpdateErrorEvent.html"><code>air.update.events.StatusFileUpdateErrorEvent</code></a><br/><span class="label">속성 StatusFileUpdateErrorEvent.type  =  </span><a href="events/StatusFileUpdateErrorEvent.html#FILE_UPDATE_ERROR"><code>air.update.events.StatusFileUpdateErrorEvent.FILE_UPDATE_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	 <code>installFromAIRFile()</code> 메서드에 대한 호출에서 <code>airFile</code> 매개 변수로 전달된 파일의 유효성을 검사하는 동안 오류가 발생하면 전달됩니다.
+	
+	</p>
+		 <code>StatusUpdateErrorEvent.UPDATE_ERROR</code> 상수는 <code>statusUpdateError</code> 이벤트에 대한 이벤트 객체의 <code>type</code> 속성 값을 정의합니다.
+		 
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:fileUpdateStatus" id="event:fileUpdateStatus"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>fileUpdateStatus</h3></td><td class="detailHeaderType"> 이벤트 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">이벤트 객체 유형: </span><a href="events/StatusFileUpdateEvent.html"><code>air.update.events.StatusFileUpdateEvent</code></a><br/><span class="label">속성 StatusFileUpdateEvent.type  =  </span><a href="events/StatusFileUpdateEvent.html#FILE_UPDATE_STATUS"><code>air.update.events.StatusFileUpdateEvent.FILE_UPDATE_STATUS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	
+	업데이트 프로그램이 <code>installFromAIRFile()</code> 메서드에 대한 호출에서 파일의 유효성을 성공적으로 검사한 후 전달됩니다.
+	
+	
+	</p>
+		 <code>StatusUpdateEvent.UPDATE_STATUS</code> 상수는 <code>updateStatus</code> 이벤트에 대한 이벤트 객체의 <code>type</code> 속성 값을 정의합니다.
+		 
+		<p>이 이벤트에는 다음과 같은 속성이 있습니다.</p>
+		
+		<p><table class="innertable" ><tr><th>속성</th><th>값</th></tr><tr><td><code>available</code></td><td>현재 응용 프로그램 중 하나와 다른 버전을 사용할 수 있으면 <code>true</code>이고 동일한 버전만 사용할 수 있으면 <code>false</code>입니다.</td></tr><tr><td><code>path</code></td><td><code>installFromAIRFile()</code> 메서드에 대한 호출에서 <code>airFile</code> 매개 변수에 의해 지정된 업데이트 File 객체의 <code>nativePath</code> 속성입니다.</td></tr><tr><td><code>version</code></td><td>새 업데이트의 버전을 나타냅니다.</td></tr></table></p>
+		
+		</div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:initialized" id="event:initialized"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>initialized</h3></td><td class="detailHeaderType"> 이벤트 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">이벤트 객체 유형: </span><a href="events/UpdateEvent.html"><code>air.update.events.UpdateEvent</code></a><br/><span class="label">속성 UpdateEvent.type  =  </span><a href="events/UpdateEvent.html#INITIALIZED"><code>air.update.events.UpdateEvent.INITIALIZED</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	
+	초기화가 완료된 후 전달됩니다. 
+	 
+	 <p>이 이벤트에는 다음과 같은 읽기 전용 속성이 있습니다. </p>
+	 <ul><li>
+	 <p>	<code>isFirstRun</code>(Boolean). 업데이트 성공 후 처음 실행하는 경우 <code>true</code>이고 그렇지 않으면 <code>false</code>입니다.</p>
+	 </li><li>
+	 <p>	<code>previousVersion</code>(String). 업그레이드하기 전의 응용 프로그램 이전 버전입니다(<code>isfirstRun</code>이 <code>true</code>인 경우에만 설정됨). </p>
+	 </li><li>
+	 <p>	<code>currentVersion</code>(String). 현재 설치된 버전의 응용 프로그램 설명자 파일의 버전입니다.</p>
+	 </li></ul>
+	
+	</p>
+		 <code>UpdateEvent.INITIALIZED</code> 상수는 <code>initialized</code> 이벤트에 대한 이벤트 객체의 <code>type</code> 속성 값을 정의합니다.
+		 
+		<p>이 이벤트에는 다음과 같은 속성이 있습니다.</p>
+		
+		<table class="innertable" ><tr><th>속성</th><th>값</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>. 취소할 기본 비헤이비어가 없습니다.</td></tr><tr><td><code>currentTarget</code></td><td>이벤트 리스너를 통해 Event 객체를 처리하고 있는 객체입니다.</td></tr><tr><td><code>target</code></td><td>업데이트 프로그램 객체입니다. </td></tr></table>
+		
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:progress" id="event:progress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>progress</h3></td><td class="detailHeaderType"> 이벤트 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">이벤트 객체 유형: </span><a href="../../flash/events/ProgressEvent.html"><code>flash.events.ProgressEvent</code></a><br/><span class="label">속성 ProgressEvent.type  =  </span><a href="../../flash/events/ProgressEvent.html#PROGRESS"><code>flash.events.ProgressEvent.PROGRESS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	업데이트 파일이 다운로드되는 동안 전달됩니다. 
+	
+	</p>
+	<code>progress</code> 이벤트 객체의 <code>type</code> 속성 값을 정의합니다.
+	
+	<p>이 이벤트에는 다음과 같은 속성이 있습니다.</p>
+	
+	<table class="innertable" ><tr><th>속성</th><th>값</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>bytesLoaded</code></td><td>리스너가 이벤트를 처리할 때 로드된 항목 수 또는 바이트 수입니다.</td></tr><tr><td><code>bytesTotal</code></td><td>로드 프로세스가 완료되면 최종적으로 로드될 총 바이트 수 또는 항목 수입니다.</td></tr><tr><td><code>cancelable</code></td><td><code>false</code>. 취소할 기본 비헤이비어가 없습니다.</td></tr><tr><td><code>currentTarget</code></td><td>이벤트 리스너를 통해 Event 객체를 처리하고 있는 객체입니다.</td></tr><tr><td><code>target</code></td><td>진행률을 보고하는 객체입니다. </td></tr></table>
+	
+	</div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:updateError" id="event:updateError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>updateError</h3></td><td class="detailHeaderType"> 이벤트 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">이벤트 객체 유형: </span><a href="events/StatusUpdateErrorEvent.html"><code>air.update.events.StatusUpdateErrorEvent</code></a><br/><span class="label">속성 StatusUpdateErrorEvent.type  =  </span><a href="events/StatusUpdateErrorEvent.html#UPDATE_ERROR"><code>air.update.events.StatusUpdateErrorEvent.UPDATE_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	
+	업데이트 설명자 파일을 다운로드하거나 파싱하는 동안 오류가 발생하면 전달됩니다.
+	
+	<p>업데이트 프로그램에서 이 이벤트를 전달하면 주기적 타이머가 0보다 큰 경우 자동으로 재시작됩니다. 응용 프로그램에서는 업데이트 프로그램이 새 <code>checkForUpdate</code> 이벤트를 전달할 때 오류 대화 상자를 숨깁니다. </p>
+	
+	</p>
+		 <code>StatusUpdateErrorEvent.UPDATE_ERROR</code> 상수는 <code>statusUpdateError</code> 이벤트에 대한 이벤트 객체의 <code>type</code> 속성 값을 정의합니다.
+		 
+		 </div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="event:updateStatus" id="event:updateStatus"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="sprite AirIcon12x12" alt="AIR-only" title="AIR 런타임에서만 사용 가능">&nbsp;&nbsp;&nbsp;</span>&nbsp;<h3>updateStatus</h3></td><td class="detailHeaderType"> 이벤트 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">이벤트 객체 유형: </span><a href="events/StatusUpdateEvent.html"><code>air.update.events.StatusUpdateEvent</code></a><br/><span class="label">속성 StatusUpdateEvent.type  =  </span><a href="events/StatusUpdateEvent.html#UPDATE_STATUS"><code>air.update.events.StatusUpdateEvent.UPDATE_STATUS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>언어 버전:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>런타임 버전:&nbsp;</b></td><td>AIR 1.5</td></tr></table><p></p><p></p><p> 
+	
+	업데이트 프로그램이 업데이트 설명자 파일을 성공적으로 다운로드하고 해석한 후 전달됩니다. 
+	
+	</p>
+		 <code>StatusUpdateEvent.UPDATE_STATUS</code> 상수는 <code>updateStatus</code> 이벤트에 대한 이벤트 객체의 <code>type</code> 속성 값을 정의합니다.
+		 
+		<p>이 이벤트에는 다음과 같은 속성이 있습니다.</p>
+		
+		<table class="innertable" ><tr><th>속성</th><th>값</th></tr><tr><td><code>available</code></td><td>업데이트 설명자 파일에서 현재 응용 프로그램의 버전과 다른 버전을 지정하면 <code>true</code>로 설정하고 동일한 버전만 지정하면 <code>false</code>로 설정합니다.</td></tr><tr><td><code>version</code></td><td>사용할 수 있는 새 버전을 나타내는 문자열입니다.</td></tr><tr><td><code>details</code></td><td>지원되는 각 언어의 <code>details</code> 문자열을 정의하는 배열입니다. 지역화된 설명이 없는 경우 이는 첫 번째 요소가 빈 문자열(<code>""</code>)이고 두 번째 요소가 details 문자열인 배열로 정의됩니다. 지역화된 설명이 있는 경우 배열의 각 요소는 두 개의 요소를 포함하는 배열 자체입니다. 첫 번째 요소는 로캘 코드이고 두 번째 요소는 설명입니다. 예를 들어 다음 배열에는 두 언어(미국 영어 및 프랑스어)에 대한 하위 배열이 있습니다. <code>["en-US", "Hello World"], ["fr", "Bonjour monde"]</code> 언어는 업데이트 설명자와 동일한 순서로 나열됩니다. 세부 사항 속성의 텍스트는 업데이트 설명자 파일에 지정되어 있습니다.</td></tr><tr><td><code>versionLabel</code></td><td>(AIR 2.5 이상) 업데이트의 응용 프로그램 설명자에서 가져온 버전 레이블입니다. 버전 대신 버전 레이블이 사용자에게 표시되어야 합니다. 버전 레이블이 지정되어 있지 않은 경우 이 속성은 빈 문자열입니다.</td></tr></table>
+		
+		 </div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script></div><p xmlns:xd="http://www.pnp-software.com/XSLTdoc"></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 03:17 PM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/ko_KR/legalnotices/index.html">법적 고지 사항</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">온라인 개인 정보 보호 정책</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">영어로 표시되는 이유</span>
+				</div>
+				<div class="white_content_body">
+					<b>ActionScript 3.0 참조 설명서의 내용이 영어로 나타납니다.</b><br><br>
+					ActionScript 3.0 참조 설명서 중 일부는 전체 언어로 번역되지 않았습니다. 언어 요소가 번역되지 않은 경우 영어로 나타납니다. 예를 들어 ga.controls.HelpBox 클래스는 어떤 언어로도 번역되지 않았습니다. 그러므로 한국어 버전의 참조 설명서에서 ga.controls.HelpBox 클래스는 영어로 나타납니다.
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 03:17 PM Z  -->

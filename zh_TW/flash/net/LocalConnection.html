@@ -1,0 +1,694 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="適用於 Adobe&reg; Flash&reg; Platform 的 ActionScript&reg; 3.0 參考"><meta name="lang" content="zh-tw"><meta name="runtime" content="flash player"><meta name="runtimever" content="flash player:9"><meta name="runtime" content="lite"><meta name="runtimever" content="lite:4"><meta name="product" content="flash player"><meta name="productver" content="flash player:9"><meta name="product" content="lite"><meta name="productver" content="lite:4"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../asfilter.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="LocalConnection,flash.net.LocalConnection,client,domain,isPerUser,isSupported,allowDomain,allowInsecureDomain,close,connect,send"><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" src="../../AC_OETags.js" type="text/javascript"></script><title>LocalConnection - Adobe ActionScript&reg; 3 (AS3  ) API 參考</title>
+		<link rel="stylesheet" href="../../filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="../../filter_new.css" type="text/css">
+			
+		<script src="../../jquery.js" type="text/javascript"></script>
+		<script src="../../s_chl_code.js" type="text/javascript"></script>
+		<script src="../../jquery.zclip.js" type="text/javascript"></script>
+		<script src="../../jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="../../cookies.js" type="text/javascript"></script>
+		<script src="../../asdoc.js" type="text/javascript"></script>
+		<script src="../../iscroll.js" type="text/javascript"></script>
+		<script src="../../AC_OETags.js" type="text/javascript"></script>
+		<script src="../../omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "執行階段";
+			var productsLabel = "產品";
+			var noneLabel = "無";
+			var qsearchBoxLabel = "快速搜尋";
+			var qsearchText = "找不到字詞";
+			var ajaxErrorMsg="載入頁面時發生錯誤";
+			var ajaxErrorTryMsg="再試一次";
+			var ajaxLoadingMsg="仍在載入";
+			var cancelMsg = "取消";
+			var classesText = "類別";
+			var strJiveReply = "張貼此問題是為回應下列文章： "
+			var showFilters = "顯示篩選";
+			var hideFilters = "隱藏篩選";
+			
+		
+			var baseRef = "../../";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											適用於 Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup> Platform 的 ActionScript<sup>&reg;</sup> 3.0 參考<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="../../index.html"> 首頁 </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="LocalConnection.html#top" style="display:">顯示套件和類別清單</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="LocalConnection.html#top" style="display:none">隱藏套件和類別清單</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="../../package-summary.html"> 套件 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../class-summary.html"> 類別 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../whatsnew.html"> 新增內容 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../all-index-Symbols.html"> 索引 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../appendixes.html"> 附錄 </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">為什麼顯示英文？</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/zh_TW/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('../../')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('../../')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="../../help.js"></script>
+						<script language="javascript" type="text/javascript" src="../../asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="../../filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>篩選：</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">從伺服器擷取資料...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">從伺服器擷取資料...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="LocalConnection.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">flash.net&nbsp;</a><br>
+								<h1 id="classProductName">LocalConnection&nbsp; - AS3 </h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="LocalConnection.html#propertySummary" style="display:none"> 屬性 </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="LocalConnection.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> 屬性 </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="LocalConnection.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> 建構函式 </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="LocalConnection.html#methodSummary" style="display:none"> 方法 </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="LocalConnection.html#constantSummary" style="display:none"> 全域常數 </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="LocalConnection.html#eventSummary" style="display:none"> 事件 </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="LocalConnection.html#styleSummary" style="display:none"> 樣式 </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="LocalConnection.html#SkinPartSummary" style="display:none"> 外觀部件 </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="LocalConnection.html#SkinStateSummary" style="display:none"> 外觀狀態 </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="LocalConnection.html#effectSummary" style="display:none"> 特效 </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="LocalConnection.html#constantSummary" style="display:none"> 常數 </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="LocalConnection.html#methodSummary" style="display:none"> 全域函數 </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="LocalConnection.html#methodSummary" style="display:none">函數</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="LocalConnection.html#interfaceSummary" style="display:none"> 介面 </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="LocalConnection.html#classSummary" style="display:none"> 類別 </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="LocalConnection.html#includeExamplesSummary" style="display:none"> 範例 </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="LocalConnection.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								類別
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">套件</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">flash.net</a></td></tr><tr><td class="classHeaderTableLabel">類別</td><td class="classSignature">public  class  LocalConnection</td></tr><tr><td class="classHeaderTableLabel">繼承</td><td class="inheritanceList">LocalConnection  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../Object.html">Object</a></td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p></p>
+ LocalConnection 類別可讓您建立一個 LocalConnection 物件，以在另一個 LocalConnection 物件中叫用方法。通訊可以是：
+ 
+ <ul>
+                  <li>在單一 SWF 檔中</li>
+                  <li>在多個 SWF 檔之間</li>
+                  <li>在 AIR 應用程式的內容 (SWF 類型或 HTML 類型) 之間</li>
+                  <li>在 AIR 應用程式中的內容 (SWF 類型或 HTML 類型) 和在瀏覽器中執行的 SWF 內容之間</li>
+               </ul>
+ 
+               <p>AIR 描述檔支援：所有桌上型電腦作業系統與所有 AIR for TV 裝置都支援此項功能，但行動裝置不支援。<i></i>您可以使用 <code>LocalConnection.isSupported</code> 屬性測試執行階段的支援狀況。如需有關跨多個描述檔之 API 支援的詳細資訊，請參閱 <a href="http://help.adobe.com/en_US/air/build/WS144092a96ffef7cc16ddeea2126bb46b82f-8000.html" >AIR 描述檔支援</a>。</p>
+ 
+               <p>
+                  <b>注意：</b>AIR for TV 裝置僅支援 AIR 應用程式中 SWF 內容之間的通訊。</p>
+ 
+               <p>本機連線會在 SWF 檔之間啟用這種通訊類型，而不使用 <code>fscommand()</code> 或 JavaScript。 LocalConnection 物件只能讓在相同用戶端電腦上執行的檔案彼此通訊，但它們可以在不同的應用程式中執行，例如，在瀏覽器中執行的檔案和在 Adobe AIR 中執行的 SWF 檔。 </p>
+ 
+               <p>ActionScript 3.0 中建立的 LocalConnection 物件可以與 ActionScript 1.0 或 2.0 中建立的 LocalConnection 物件通訊。 反之亦然： ActionScript 1.0 或 2.0 中建立的 LocalConnection 物件可以與 ActionScript 3.0 中建立的 LocalConnection 物件通訊。 Flash Player 會在不同版本的 LocalConnection 物件之間，自動處理這項通訊。</p>
+ 
+               <p>有三種方式可將回呼方法加入 LocalConnection 物件：</p>
+ 
+               <ul>
+                  <li>讓 LocalConnection 類別成為子類別，再加入方法。</li>
+                  <li>將 <code>LocalConnection.client</code> 屬性設成實作這些方法的物件。</li>
+                  <li>建立會擴充 LocalConnection 的動態類別，再以動態方式加入方法。</li>
+               </ul>
+ 
+               <p>若要了解如何使用 LocalConnection 物件實作兩個 檔之間的通訊，識別每個檔案中使用的命令會很有用。 其中一個檔稱為「接收端」檔，是包含要叫用之方法的檔案。<i></i>接收端檔必須包含 LocalConnection 物件並呼叫 <code>connect()</code> 方法。另一個檔稱為「傳送端」檔，是會叫用方法的檔案。<i></i>傳送端檔必須包含另一個 LocalConnection 物件以及 <code>send()</code> 方法的呼叫。</p>
+ 
+               <p>
+                  <code>send()</code> 和 <code>connect()</code> 的使用方式會因這些 檔位於相同網域中、位於可預測網域名稱的不同網域中，或位於不可預測或動態網域名稱的不同網域中而不同。 以下段落將說明這三種不同的情況，並針對每種情況提供程式碼樣本。</p>
+ 
+               <p>
+                  <b>相同網域</b>： 這是使用 LocalConnection 物件最簡單的方式 (僅允許位於相同網域中的 LocalConnection 物件之間進行通訊)，因為預設就會允許相同網域的通訊。當相同網域的兩個 檔進行通訊時，您不需要實作任何特殊安全性措施，而且您只要將相同的 <code>connectionName</code> 參數值同時傳遞給 <code>connect()</code> 和 <code>send()</code> 方法即可：</p>
+ 
+               <p>
+                  <img src="../../images/localconnection_samedomains.gif" alt="從相同網域載入"></img>
+               </p>
+ 
+               <div class="listing"><pre>
+// receivingLC is in http://www.domain.com/receiving.swf
+receivingLC.connect('myConnection');
+
+// sendingLC is in http://www.domain.com/sending.swf
+// myMethod() is defined in sending.swf
+sendingLC.send('myConnection', 'myMethod');
+</pre></div>
+               <p>
+                  <b>可預測網域名稱的不同網域</b>： 當不同網域的兩個 SWF 檔進行通訊時，您必須呼叫 <code>allowDomain()</code> 方法，允許兩個網域之間的通訊。 此外，您也必須使用接收端 LocalConnection 物件的網域名稱，在 <code>send()</code> 方法中限定連線名稱：</p>
+ 
+               <p>
+                  <img src="../../images/localconnection_differentdomains.gif" alt="從不同網域載入"></img>
+               </p>
+ 
+               <div class="listing"><pre>
+// receivingLC is in http://www.domain.com/receiving.swf
+receivingLC.allowDomain('www.anotherdomain.com');
+receivingLC.connect('myConnection');
+
+// sendingLC is in http://www.anotherdomain.com/sending.swf
+sendingLC.send('www.domain.com:myConnection', 'myMethod');
+</pre></div>
+ 
+               <p>
+                  <b>不可預測網域名稱的不同網域</b>： 有時候，您會希望讓具有接收端 LocalConnection 物件的 檔更容易在不同網域之間傳送。 若要避免在 <code>send()</code> 方法中指定網域名稱，但又要指示接收端和傳送端 LocalConnection 物件分別位於不同的網域中，請在 <code>connect()</code> 和 <code>send()</code> 呼叫的連線名稱前面都加上底線 (_)。若要允許兩個網域之間的通訊，請呼叫 <code>allowDomain()</code> 方法，並傳遞您想要允許 LocalConnection 呼叫的網域。 或者，您也可以傳遞萬用字元 (*) 引數，允許來自所有網域的呼叫：</p>
+ 
+               <p>
+                  <img src="../../images/localconnection_unknowndomains.gif" alt="從未知的網域名稱載入"></img>
+               </p>
+               <div class="listing"><pre>
+// receivingLC is in http://www.domain.com/receiving.swf
+receivingLC.allowDomain('*');
+receivingLC.connect('_myConnection');
+
+// sendingLC is in http://www.anotherdomain.com/sending.swf
+sendingLC.send('_myConnection', 'myMethod');
+</pre></div>
+ 
+               <p>
+                  <b>從 Flash Player 到 AIR 應用程式</b>。在 AIR 應用程式安全執行程序中建立的 LocalConnection 物件使用特殊的字串，而非網域名稱做為其連線前置詞。這個字串具有 <code>app#appID.pubID</code> 的格式，其中 appID 是應用程式 ID，而 pubID 則是應用程式的發行者 ID。(如果 AIR 應用程式使用發行者 ID，則只會包括該發行者 ID)。例如，如果 AIR 應用程式具有 "com.example" 的應用程式 ID，但沒有發行者 ID，則可以使用：<code>app#com.example:myConnection</code> 做為本機連線字串。AIR 應用程式也必須呼叫 <code>allowDomain()</code> 方法，以傳入呼叫 SWF 檔案的來源網域： </p>
+ 
+               <p>
+                  <img src="../../images/localconnection_flash2AIR.gif" alt="Flash Player 到 AIR連線"></img>
+               </p>
+ 
+               <div class="listing"><pre>
+// receivingLC is an AIR application with app ID = com.example (and no publisher ID)
+receivingLC.allowDomain('www.domain.com');
+receivingLC.connect('myConnection');
+
+// sendingLC is in http://www.domain.com/sending.swf
+sendingLC.send('app#com.example:myConnection', 'myMethod');
+</pre></div>
+ 
+               <p>
+                  <b>注意：</b>如果 AIR 應用程式在 AIR 應用程式安全執行程序的外面載入 SWF，則與 SWF 建立本機連線的規則，和在 Flash Player 中執行的 SWF 建立連線的規則相同。</p>
+ 
+               <p>
+                  <b>從 AIR 應用程式到 Flash Player</b>。當 AIR 應用程式與在 Flash Player 執行階段中執行的 SWF 通訊時，您需要呼叫 <code>allowDomain()</code> 方法，並傳入 AIR 應用程式的連線前置詞，以允許這兩者之間的通訊。例如，如果 AIR 應用程式具有 "com.example" 的應用程式 ID，但沒有發行者 ID，則可以將 <code>app#com.example</code> 字串傳遞至 <code>allowDomain()</code> 方法。此外，您也必須使用接收 LocalConnection 物件的網域名稱，在 <code>send()</code> 方法中限定連線名稱 (使用 "localhost" 做為從本機檔案系統載入 SWF 檔案的網域)：</p>
+ 
+               <p>
+                  <img src="../../images/localconnection_AIR2flash.gif" alt="AIR 到 Flash Player 通訊"></img>
+               </p>
+ 
+               <div class="listing"><pre>
+// receivingLC is in http://www.domain.com/receiving.swf
+receivingLC.allowDomain('app#com.example');
+receivingLC.connect('myConnection');
+
+// sendingLC is an AIR application with app ID = com.example (and no publisher ID)
+sendingLC.send('www.domain.com:myConnection', 'myMethod');
+</pre></div>
+ 
+               <p>
+                  <b>從 AIR 應用程式到其他 AIR 應用程式</b>。若要在兩個 AIR 應用程式之間通訊，您需要呼叫 <code>allowDomain()</code> 方法，並傳入傳送 AIR 應用程式的連線前置詞，以允許這兩者之間的通訊。例如，如果傳送應用程式具有 "com.example" 的應用程式 ID，但沒有發行者 ID，則可以將 <code>app#com.example</code> 字串傳遞至接收應用程式的 <code>allowDomain()</code> 方法。此外，您也必須使用接收 LocalConnection 物件的連線前置詞，在 <code>send()</code> 方法中限定連線名稱：</p>
+ 
+               <p>
+                  <img src="../../images/localconnection_AIR2AIR.gif" alt="AIR 至 AIR 的通訊"></img>
+               </p>
+ 
+               <div class="listing"><pre>
+// receivingLC is an AIR application with app ID = com.sample (and no publisher ID)
+receivingLC.allowDomain('app#com.example');
+receivingLC.connect('myConnection');
+
+// sendingLC is an AIR application with app ID = com.example (and no publisher ID)
+sendingLC.send('app#com.sample:myConnection', 'myMethod');
+</pre></div>
+ 
+               <p>您可以使用 LocalConnection 物件，傳送和接收單一 檔中的資料，不過這並非一般的實作方式。</p>
+ 
+               <p>如需 <code>send()</code> 和 <code>connect()</code> 方法的詳細資訊，請參閱 <code>LocalConnection.send()</code> 和 <code>LocalConnection.connect()</code> 項目中有關 <code>connectionName</code> 參數的討論， 以及 <code>allowDomain()</code> 和 <code>domain</code> 項目。</p>
+ 
+            <p></p><p><a href="LocalConnection.html#includeExamplesSummary">檢視範例</a></p><p><span class="classHeaderTableLabel">相關 API 元素</span></p><div class="seeAlso"><a href="LocalConnection.html#send()" target="">flash.net.LocalConnection.send()</a><br/><a href="LocalConnection.html#allowDomain()" target="">flash.net.LocalConnection.allowDomain()</a><br/><a href="LocalConnection.html#domain" target="">flash.net.LocalConnection.domain</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary" id="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">公用屬性</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="LocalConnection.html#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隱藏繼承公用屬性</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="LocalConnection.html#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 顯示繼承公用屬性</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">屬性</th><th>定義自</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="LocalConnection.html#client" class="signatureLink">client</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">
+     指出要針對其叫用回呼方法的物件。</div></td><td class="summaryTableOwnerCol">LocalConnection</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="../../Object.html#constructor" class="signatureLink">constructor</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">
+	 類別物件的參照或是特定物件實體的建構函數。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="LocalConnection.html#domain" class="signatureLink">domain</a> : <a href="../../String.html">String</a><div class="summaryTableDescription">[唯讀] 
+     字串，代表目前 檔所在位置的網域。</div></td><td class="summaryTableOwnerCol">LocalConnection</td></tr><tr class="" runtime="Flash::10.0.32##AIR::1.5.2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="LocalConnection.html#isPerUser" class="signatureLink">isPerUser</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">
+     表示 LocalConnection 物件僅限為目前使用者 (true)，或電腦上所有使用者都能存取 (false)。</div></td><td class="summaryTableOwnerCol">LocalConnection</td></tr><tr class="" runtime="Flash::10.1##AIR::2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="LocalConnection.html#isSupported" class="signatureLink">isSupported</a> : <a href="../../Boolean.html">Boolean</a><div class="summaryTableDescription">[靜態] [唯讀] 
+    如果目前的平台支援 LocalConnection 類別，則 isSupported 屬性會設定為 true，否則會設定為 false。</div></td><td class="summaryTableOwnerCol">LocalConnection</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary" id="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">公用方法 </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="LocalConnection.html#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隱藏繼承公用方法</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="LocalConnection.html#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 顯示繼承公用方法</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">方法</th><th>定義自</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="LocalConnection.html#LocalConnection()" class="signatureLink">LocalConnection</a>()</div><div class="summaryTableDescription">
+     建立 LocalConnection 物件。</div></td><td class="summaryTableOwnerCol">LocalConnection</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#addEventListener()" class="signatureLink">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	會在 EventDispatcher 物件註冊事件偵聽程式，以便讓偵聽程式收到事件的通知。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="LocalConnection.html#allowDomain()" class="signatureLink">allowDomain</a>(<a href="../../statements.html#..._(rest)_parameter">...</a> domains):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     會指定一個或多個可傳送 LocalConnection 呼叫至此 LocalConnection 實體的網域。</div></td><td class="summaryTableOwnerCol">LocalConnection</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="LocalConnection.html#allowInsecureDomain()" class="signatureLink">allowInsecureDomain</a>(<a href="../../statements.html#..._(rest)_parameter">...</a> domains):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     會指定一個或多個可傳送 LocalConnection 呼叫至此 LocalConnection 物件的網域。</div></td><td class="summaryTableOwnerCol">LocalConnection</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="LocalConnection.html#close()" class="signatureLink">close</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     關閉 (離線) LocalConnection 物件。</div></td><td class="summaryTableOwnerCol">LocalConnection</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="LocalConnection.html#connect()" class="signatureLink">connect</a>(connectionName:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     準備 LocalConnection 物件，以便接收從 send() 命令 (從「傳送端 LocalConnection 物件」) 傳送的命令。</div></td><td class="summaryTableOwnerCol">LocalConnection</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	會將事件傳送到事件流程。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	會檢查 EventDispatcher 物件是否有對特定的事件類型註冊偵聽程式。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#hasOwnProperty()" class="signatureLink">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 指出物件是否有已定義的指定屬性。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#isPrototypeOf()" class="signatureLink">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 指出 Object 類別的實體是否位於指定為參數的物件原型鏈中。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#propertyIsEnumerable()" class="signatureLink">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 指出指定的屬性是否存在，以及是否可列舉。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#removeEventListener()" class="signatureLink">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	會從 EventDispatcher 物件移除偵聽程式。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="LocalConnection.html#send()" class="signatureLink">send</a>(connectionName:<a href="../../String.html">String</a>, methodName:<a href="../../String.html">String</a>, <a href="../../statements.html#..._(rest)_parameter">...</a> arguments):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     會針對使用 connect( connectionName ) 方法 (在接收端 LocalConnection 物件中) 開啟的連線叫用名為 methodName 的方法。 </div></td><td class="summaryTableOwnerCol">LocalConnection</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#setPropertyIsEnumerable()" class="signatureLink">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     為迴圈作業設定動態屬性的可用性。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toLocaleString()" class="signatureLink">toLocaleString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 傳回代表此物件的字串，根據地區特定慣例進行格式化。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toString()" class="signatureLink">toString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 會傳回指定之物件的字串形式。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#valueOf()" class="signatureLink">valueOf</a>():<a href="../../Object.html">Object</a></div><div class="summaryTableDescription">
+	 會傳回指定之物件的基本值。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	檢查此 EventDispatcher 物件是否已註冊事件偵聽程式，或者此物件的任何祖系已為特定事件類型註冊事件偵聽程式。</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary" id="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">事件</div><div class="showHideLinks"><a href="http://help.adobe.com/en_US/Flex/4.6/UsingSDK/WS2db454920e96a9e51e63e3d11c0bf69084-7ee9.html" target="_blank">按一下以瞭解事件的詳細資訊</a></div><div class="showHideLinks"><div id="hideInheritedEvent" class="hideInheritedEvent"><a class="showHideLink" href="LocalConnection.html#eventSummary" onclick="javascript:setInheritedVisible(false,'Event');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隱藏繼承事件</a></div><div id="showInheritedEvent" class="showInheritedEvent"><a class="showHideLink" href="LocalConnection.html#eventSummary" onclick="javascript:setInheritedVisible(true,'Event');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 顯示繼承事件</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">事件</th><th> 摘要 </th><th>定義自</th></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[廣播事件] 當 Flash Player 或 AIR 應用程式取得作業系統焦點並成為作用中時傳送。</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="LocalConnection.html#event:asyncError" class="signatureLink">asyncError</a></div></td><td class="summaryTableDescription summaryTableCol">會在以非同步方式 (亦即，從原生非同步程式碼) 擲出例外時傳送。</td><td class="summaryTableOwnerCol">LocalConnection</td></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[廣播事件] 當 Flash Player 或 AIR 應用程式失去作業系統焦點並成為非作用中時傳送。</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="LocalConnection.html#event:securityError" class="signatureLink">securityError</a></div></td><td class="summaryTableDescription summaryTableCol">在 LocalConnection.send() 的呼叫嘗試將資料傳送至不同的安全執行程序時傳送。</td><td class="summaryTableOwnerCol">LocalConnection</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="LocalConnection.html#event:status" class="signatureLink">status</a></div></td><td class="summaryTableDescription summaryTableCol">在 LocalConnection 物件回報其狀態時傳送。</td><td class="summaryTableOwnerCol">LocalConnection</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">屬性詳細資訊</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail" id="propertyDetail"></a><a name="client" id="client"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>client</h3></td><td class="detailHeaderType">屬性</td></tr></table><div class="detailBody"><code>client:<a href="../../Object.html">Object</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     指出要針對其叫用回呼方法的物件。 預設物件為 <code>this</code>，也就是所建立的本機連線。 您可以將 <code>client</code> 屬性設定為其他物件，然後就會在該物件上叫用回呼方法。
+     </p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get client():<a href="../../Object.html">Object</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set client(value:<a href="../../Object.html">Object</a>):<a href="../../specialTypes.html#void">void</a></code><br/><br/><span class="label"> 擲回值 </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../TypeError.html">TypeError</a> </code> &mdash; <code>client</code> 屬性必須設定為非 null 物件。
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail" id="propertyDetail"></a><a name="domain" id="domain"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>domain</h3></td><td class="detailHeaderType">屬性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>domain:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[唯讀] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     字串，代表目前 檔所在位置的網域。
+     
+     <p>在 Adobe AIR 的 <code>application</code> 安全執行程序中執行的內容中 (使用 AIR 應用程式所安裝的內容)，執行階段會使用字串 <code>app#</code>，後面跟著 AIR 應用程式的應用程式 ID (在應用程式描述器檔案中定義)，以取代父網域。例如，對於具有應用程式 ID <code>com.example.air.MyApp</code> 之應用程式的 <code>connectionName</code>，<code>connectionName</code> 會解析為 <code>"app#com.example.air.MyApp:connectionName"</code>。</p>
+     
+     <p>在發佈為 Flash Player 9 或更新版本的 SWF 檔中，傳回的字串就是檔案的確切網域 (包括子網域)。例如，假設該 檔位於 www.adobe.com，則這個命令將會傳回 <code>"www.adobe.com"</code>。 </p>
+     
+     <p>如果目前的檔案是用戶端電腦上 Flash Player 中執行的本機檔案，則這個命令將會傳回 <code>"localhost"</code>。</p>
+     
+     <p>使用這個屬性最常見的方式，就是包含傳送端 LocalConnection 物件的網域名稱，將它做為您打算在接收端 LocalConnection 物件中叫用之方法的參數，或搭配 <code>LocalConnection.allowDomain()</code> 以接受指定網域的命令。 如果您只要啟用位於相同網域之 LocalConnection 物件之間的通訊，可能就不需要使用這個屬性。</p>
+     
+     </p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get domain():<a href="../../String.html">String</a></code><br/><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="LocalConnection.html#allowDomain()" target="">flash.net.LocalConnection.allowDomain()</a><br/><a href="LocalConnection.html#connect()" target="">flash.net.LocalConnection.connect()</a></div></div></span><span id="pageFilter" runtime="Flash::10.0.32##AIR::1.5.2##"><a name="propertyDetail" id="propertyDetail"></a><a name="isPerUser" id="isPerUser"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>isPerUser</h3></td><td class="detailHeaderType">屬性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isPerUser:<a href="../../Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>Flash Player 10.0.32, AIR 1.5.2</td></tr></table><p></p><p></p><p>
+     表示 LocalConnection 物件僅限為目前使用者 (<code>true</code>)，或電腦上所有使用者都能存取 (<code>false</code>)。這個屬性只影響在 Mac OS X 上執行的內容；其他平台會忽略這個參數。在 Windows 及 Linux 作業系統上的連線一律都是以個別使用者而定。
+     <p>在 Flash Player 10.0.22 及其更早版本，和在 AIR 1.5.1 及其更早版本中，所有在 Mac OS X 上的 LocalConnection 物件具有全域範圍。一律設定這個屬性為 <code>true</code>，除非您需要保有與舊版的相容性。在未來版本中，這個屬性的預設值可能變更為 <code>true</code>。</p>
+     
+     </p><p> 預設值為 <code>false。</code></p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isPerUser():<a href="../../Boolean.html">Boolean</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set isPerUser(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></code><br/></div></span><span id="pageFilter" runtime="Flash::10.1##AIR::2##"><a name="propertyDetail" id="propertyDetail"></a><a name="isSupported" id="isSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>isSupported</h3></td><td class="detailHeaderType">屬性</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isSupported:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[唯讀] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>Flash Player 10.1, AIR 2</td></tr></table><p></p><p></p><p>
+    如果目前的平台支援 LocalConnection 類別，則 <code>isSupported</code> 屬性會設定為 <code>true</code>，否則會設定為 <code>false</code>。
+    
+    </p><br/><br/><span class="label"> 實作 </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get isSupported():<a href="../../Boolean.html">Boolean</a></code><br/></div></span><a name="constructorDetail" id="constructorDetail"></a><div class="detailSectionHeader">建構函式詳細資料</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="LocalConnection()" id="LocalConnection()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>LocalConnection</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">建構函式</td></tr></table><div class="detailBody"><code>public function LocalConnection()</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p>
+     建立 LocalConnection 物件。 您可以使用 LocalConnection 物件，啟用在相同用戶端電腦上執行之不同 檔之間的通訊。
+     
+     </p><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="LocalConnection.html#connect()" target="">flash.net.LocalConnection.connect()</a><br/><a href="LocalConnection.html#send()" target="">flash.net.LocalConnection.send()</a></div></div></span><a name="methodDetail" id="methodDetail"></a><div class="detailSectionHeader">方法詳細資訊</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="allowDomain()" id="allowDomain()"></a><a name="allowDomain(restParam)" id="allowDomain(restParam)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>allowDomain</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td></tr></table><div class="detailBody"><code> public function allowDomain(<a href="../../statements.html#..._(rest)_parameter">...</a> domains):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     會指定一個或多個可傳送 LocalConnection 呼叫至此 LocalConnection 實體的網域。
+     
+     <p>您無法使用此方法讓安全通訊協定 (HTTPS) 裝載的 檔允許由非安全通訊協定裝載的 檔來存取，而是必須改用 <code>allowInsecureDomain()</code> 方法。</p>
+     
+     <p>為了讓不同網域中的子系 檔可以對父輩 檔進行 LocalConnection 呼叫，而不需知道子系 檔實際來自哪一個網域，您就可以使用這個方法。 例如，當您使用負載平衡重新導向或協力廠商伺服器時，就可能會發生這種情況。 在這種情況下，您可以使用處理該負載所用之 LoaderInfo 物件的 <code>url</code> 屬性，來取得要在 <code>allowDomain()</code> 方法中使用的網域。 例如，如果您使用 Loader 物件載入子系 檔，則在檔案載入之後，即可檢查 Loader 物件的 <code>contentLoaderInfo.url</code> 屬性，並從完整的 URL 字串中剖析出網域。 如果您要這麼做，請確定 檔已載入後再進行，因為 <code>contentLoaderInfo.url</code> 屬性必須等到檔案完全載入後才會取得其最終的正確值。 </p>
+     
+     <p>此外，相反地情況也可能發生：您可以建立子系 檔接受來自其父輩的 LocalConnection 呼叫，但是卻不知道父輩的網域。 在這種情況下，請檢查網域引數是否與所載入 檔中 <code>loaderInfo.url</code> 屬性的網域相符，以實作此方法。 在這裡，您同樣必須從 <code>loaderInfo.url</code> 包含的完整 URL 中剖析出網域。 在這種情況下，您不需等候父輩 檔載入；在載入子系檔案之前，就已經載入父輩檔案。</p>
+     
+     <p>使用此方法時，必須顧及 Flash Player 安全性模型。 根據預設， 檔所建立的 LocalConnection 物件會與該 檔的安全執行程序產生關聯，因此除非您呼叫 <code>LocalConnection.allowDomain()</code> 方法，否則不允許跨網域呼叫 LocalConnection 物件。但在 Adobe AIR 中，<code>application</code> 安全執行程序中的內容 (使用 AIR 應用程式所安裝的內容) 沒有這些安全性限制。</p>
+     
+     <p>如需安全性詳細資訊，請參閱「Flash Player 開發人員中心」主題：<a href="http://www.adobe.com/go/devnet_security_tw" target="external">安全性</a>。</p>
+     
+     <p><b>注意</b>：<code>allowDomain()</code> 方法的格式已變更，與 ActionScript 1.0 和 2.0 中的格式不同。在這些舊版本中，<code>allowDomain</code> 是您所實作的回呼方法。 在 ActionScript 3.0 中，<code>allowDomain()</code> 則是您呼叫之 LocalConnection 的內建方法。 透過這項變更，<code>allowDomain()</code> 的運作方式與 <code>flash.system.Security.allowDomain()</code> 便很相似。</p>
+     
+     </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><a href="../../statements.html#..._(rest)_parameter">...</a> <span class="label">domains</span></code> &mdash; 一個或多個字串，為您想要允許 LocalConnection 呼叫的網域加以命名。 這個參數具有兩種特殊案例：
+     
+     <ul><li>您可以指定萬用字元 "*"，允許來自所有網域的呼叫。</li><li>您可以指定字串 "<code>localhost</code>"，允許從本機安裝的 檔呼叫此 檔。 <span>Flash Player 8 在本機 檔上新增了安全性限制。 根據預設，在 Flash Player 中執行、允許存取網際網路的 SWF 檔無法同時存取本機檔案系統。在 Flash Player 中，如果您指定 "<code>localhost</code>"，則任何本機 SWF 檔都可以存取此 SWF 檔。</span> </li></ul>
+     
+     </td></tr></table></p><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; 所有指定的參數都必須是非 null 字串。
+     
+     </td></tr></table><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="LocalConnection.html#allowInsecureDomain()" target="">flash.net.LocalConnection.allowInsecureDomain()</a><br/><a href="../display/LoaderInfo.html#url" target="">flash.display.LoaderInfo.url</a><br/><a href="../system/Security.html#allowDomain()" target="">flash.system.Security.allowDomain()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="allowInsecureDomain()" id="allowInsecureDomain()"></a><a name="allowInsecureDomain(restParam)" id="allowInsecureDomain(restParam)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>allowInsecureDomain</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function allowInsecureDomain(<a href="../../statements.html#..._(rest)_parameter">...</a> domains):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     會指定一個或多個可傳送 LocalConnection 呼叫至此 LocalConnection 物件的網域。
+     
+     <p><code>allowInsecureDomain()</code> 方法的運作方式就如同 <code>allowDomain()</code> 方法，不過 <code>allowInsecureDomain()</code> 方法會另外允許非 HTTPS 來源的 檔將 LocalConnection 呼叫傳送至 HTTPS 來源的 SWF 檔。 只有當您從使用 HTTPS 載入的 檔呼叫 <code>allowInsecureDomain()</code> 方法時，這項差異才有意義。 即使您要跨越相同網域內的非 HTTPS/HTTPS 界線，還是必須呼叫 <code>allowInsecureDomain()</code> 方法。根據預設，系統永遠不允許 LocalConnection 呼叫從非 HTTPS 檔傳送至 HTTPS 檔，即使在相同網域內也一樣。</p>
+     
+     <p>呼叫 <code>allowInsecureDomain()</code> 並非建議的方式，因為它可能會危害 HTTPS 提供的安全性。 當您透過 HTTPS 載入檔案時，可以理所當然地確定檔案不會在透過網路傳遞期間遭竄改。如果您之後允許非 HTTPS 的 檔對 HTTPS 的 檔進行 LocalConnection 呼叫，就表示您接受可能已經在傳遞期間遭竄改之 檔的呼叫。 因為您無法信任送達至 HTTPS 檔之 LocalConnection 呼叫的可靠性，所以通常必須特別留意這一點。</p>
+     
+     <p>根據預設，位於使用 HTTPS 通訊協定網域中的檔案只能讓其他位於使用 HTTPS 通訊協定網域中的檔案來存取。這種實作方式保留了 HTTPS 通訊協定所提供的完整性。</p>
+     
+     <p>我們不建議您使用這個方法覆寫預設的行為，因為這將會危害 HTTPS 的安全性。 然而，如果您需要允許發佈為 Flash Player 6 或更早版本的 HTTP SWF 檔存取發佈為 Flash Player 9 或更新版本的 HTTPS SWF 檔，您可能就有必要這麼做。</p>
+     
+     <p>如需安全性詳細資訊，請參閱「Flash Player 開發人員中心」主題：<a href="http://www.adobe.com/go/devnet_security_tw" target="external">安全性</a>。</p>
+     
+     </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><a href="../../statements.html#..._(rest)_parameter">...</a> <span class="label">domains</span></code> &mdash; 一個或多個字串，為您想要允許 LocalConnection 呼叫的網域加以命名。 這個參數具有兩種特殊案例：
+     <ul><li>您可以指定萬用字元 "*"，允許來自所有網域的呼叫。 指定 "*" 並不包含本機主機。</li><li>您可以指定字串 "<code>localhost</code>"，允許從本機安裝的 SWF 檔呼叫此 SWF 檔。 Flash Player 8 在本機 SWF 檔上新增了安全性限制。 允許存取網際網路的 SWF 檔無法同時存取本機檔案系統。 如果您指定 "<code>localhost</code>"，則任何本機 SWF 檔都可以存取此 SWF 檔。請記住，您必須在編寫時，同時將呼叫的 SWF 檔指定為「具有網路連線的本機」SWF 檔。</li></ul>
+     
+     </td></tr></table></p><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; 所有指定的參數都必須是非 null 字串。
+     </td></tr></table><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="LocalConnection.html#allowDomain()" target="">flash.net.LocalConnection.allowDomain()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="close()" id="close()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>close</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function close():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     關閉 (離線) LocalConnection 物件。 當您不想再讓物件接受命令時，請發佈這個命令，例如，您想要以其他 SWF 檔中相同的 <code>connectionName</code> 參數來發佈 <code>connect()</code> 命令時。
+     
+     </p><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; LocalConnection 實體尚未連線，所以無法關閉。
+     
+     </td></tr></table><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="LocalConnection.html#connect()" target="">flash.net.LocalConnection.connect()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="connect()" id="connect()"></a><a name="connect(String)" id="connect(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>connect</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function connect(connectionName:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     準備 LocalConnection 物件，以便接收從 <code>send()</code> 命令 (從「傳送端 LocalConnection 物件」) 傳送的命令。<i></i>搭配 <code>connect()</code> 方法使用的物件稱為「接收端 LocalConnection 物件」。<i></i>接收端和傳送端物件都必須在相同的用戶端電腦上執行。
+     
+     <p>若要避免發生爭用情況，請定義附加至接收端 LocalConnection 物件的方法，然後再呼叫此方法，如 LocalConnection 類別範例中所示。 </p>
+     
+     <p>根據預設，<code>connectionName</code> 引數會解析為值 <code>"<i>superdomain</i>:connectionName"</code>，其中 <code><i>superdomain</i></code> 為包含 <code>connect()</code> 命令之檔案的父網域。例如，如果包含接收端 LocalConnection 物件的 檔位於 www.someDomain.com，則 <code>connectionName</code> 會解析成 <code>"someDomain.com:connectionName"</code> (如果 Flash Player 中執行的檔案位於用戶端電腦，則指定給 <code>superdomain</code> 的值會是 <code>"localhost"</code>)。</p>
+     
+     <p>在 Adobe AIR 的 <code>application</code> 安全執行程序中執行的內容中 (使用 AIR 應用程式所安裝的內容)，執行階段會使用字串 <code>app#</code>，後面跟著 AIR 應用程式的應用程式 ID (在應用程式描述器檔案中定義)，以取代父網域。例如，對於具有應用程式 ID <code>com.example.air.MyApp</code> 之應用程式的 <code>connectionName</code>，<code>connectionName</code> 會解析為 <code>"app#com.example.air.MyApp:connectionName"</code>。</p>
+     
+     <p>而且，Flash Player 預設也會讓接收端的 LocalConnection 物件只接受來自於傳送端 LocalConnection 物件的命令，且傳送端 LocalConnection 物件的連線名稱也會解析成 <code>"</code> <code> <i>superdomain</i> </code> <code>:connectionName"</code> 的值。 Flash Player 透過這種方式，讓位於相同網域的檔案可以輕易地彼此通訊。</p>
+     
+     <p>如果您只要在相同網域 檔之間實作通訊，請為 <code>connectionName</code> 指定不以底線 (_) 開頭、也不會指定網域名稱 (例如，<code>"myDomain:connectionName"</code>) 的字串。 請在 <code>connect(connectionName)</code> 方法中使用相同的字串。</p>
+     
+     <p>如果您要在不同網域的 檔之間實作通訊，請為 <code>connectionName</code> 指定一個以底線 (_) 為開頭的字串，以便包含接收端 LocalConnection 物件的 檔更容易在網域之間傳送。 此處列出兩種可能的案例：</p>
+     
+     <ul><li>如果 <code>connectionName</code> 的字串不以底線 (_) 開頭，就會加上父網域前置詞與冒號 (例如，<code>"myDomain:connectionName"</code>)。儘管這樣能確保您的連線不會與來自其他網域的相同名稱連線發生衝突，任何傳送端的 LocalConnection 物件仍然必須指定此父網域 (例如，<code>"myDomain:connectionName"</code>)。 如果包含接收端 LocalConnection 物件的檔案移到其他網域，則播放程式會變更前置詞來反映新的父網域 (例如，<code>"anotherDomain:connectionName"</code>)。 所有傳送端 LocalConnection 物件都必須手動加以編輯，以指向新的父網域。</li><li>如果 <code>connectionName</code> 的字串以底線為開頭 (例如，<code>"_connectionName"</code>)，則不會為該字串加上前置詞。這表示接收端與傳送端 LocalConnection 物件將使用相同的 <code>connectionName</code> 字串。 如果接收端物件使用 <code>allowDomain()</code> 來指定接受來自任何網域的連線，則含有接收端 LocalConnection 物件的檔案就可以在不更動任何傳送端 LocalConnection 物件的情況下，移動到其他網域。</li></ul>
+     
+     <p>如需詳細資訊，請參閱類別概觀中的討論、<code>send()</code> 中 <code>connectionName</code> 的討論，以及 <code>allowDomain()</code> 和 <code>domain</code> 項目。</p>
+     
+     <p><b>注意：</b>冒號是當作特殊字元使用，用來分隔 <code>connectionName</code> 字串中的父網域。 包含冒號的 <code>connectionName</code> 字串是無效的。</p>
+     
+     <p>使用此方法時，必須顧及 <span>Flash Player</span> 安全性模型。根據預設， 檔所建立的 LocalConnection 物件會與該 檔的安全執行程序產生關聯，因此除非您呼叫 <code>LocalConnection.allowDomain()</code> 方法，否則不允許跨網域呼叫 LocalConnection 物件。<span>如果您希望防止任何檔案使用此方法，可以在包含 SWF 內容的 HTML 頁面中，設定 <code>object</code> 和 <code>embed</code> 標籤的 <code>allowNetworking</code> 參數。</span>但在 Adobe AIR 中，<code>application</code> 安全執行程序中的內容 (使用 AIR 應用程式所安裝的內容) 沒有這些安全性限制。</p>
+     
+     <p>如需安全性詳細資訊，請參閱「Flash Player 開發人員中心」主題：<a href="http://www.adobe.com/go/devnet_security_tw" target="external">安全性</a>。</p>
+     
+     </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">connectionName</span>:<a href="../../String.html">String</a></code> &mdash; 字串，會對應至 <code>send()</code> 命令 (要與接收端 LocalConnection 物件進行通訊) 中指定的連線名稱。
+     
+     </td></tr></table></p><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../TypeError.html">TypeError</a> </code> &mdash; 傳遞給 <code>connectionName</code> 參數的值必須是非 null。
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; 這項錯誤可能會因為三種原因而發生：1) 傳遞給 <code>connectionName</code> 參數的字串值為 null。 請傳遞非 null 的值。 2) 傳遞給 <code>connectionName</code> 參數的值包含冒號 (:)。 冒號是當作特殊字元使用，用來在 <code>send()</code> 方法 (而非 <code>connect()</code> 方法) 的 <code>connectionName</code> 字串中分隔父網域。 3) LocalConnection 實體已連線。
+     
+     </td></tr></table><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="LocalConnection.html#send()" target="">flash.net.LocalConnection.send()</a><br/><a href="LocalConnection.html#allowDomain()" target="">flash.net.LocalConnection.allowDomain()</a><br/><a href="LocalConnection.html#domain" target="">flash.net.LocalConnection.domain</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="send()" id="send()"></a><a name="send(String,String,restParam)" id="send(String,String,restParam)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>send</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function send(connectionName:<a href="../../String.html">String</a>, methodName:<a href="../../String.html">String</a>, <a href="../../statements.html#..._(rest)_parameter">...</a> arguments):<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     會針對使用 <code>connect( connectionName)</code> 方法 (在接收端 LocalConnection 物件中) 開啟的連線叫用名為 <code>methodName</code> 的方法。<i> </i>搭配 <code>send()</code> 方法使用的物件稱為「傳送端 LocalConnection 物件」。<i></i>包含接收端和傳送端物件的 SWF 檔都必須在相同的用戶端電腦上執行。
+     
+     <p>可放在參數中傳遞給這個命令的資料量限制為 40 KB。 如果 <code>send()</code> 擲回 <code>ArgumentError</code>，而您的語法是正確的，請嘗試將 <code>send()</code> 要求分成多個命令，而各個命令包含的資料必須少於 40K。</p>
+     
+     <p>如 <code>connect()</code> 項目中所說明，目前的父網域預設會加入 <code>connectionName</code>。如果您正在實作不同網域之間的通訊，就必須同時定義傳送端和接收端 LocalConnection 物件中的 <code>connectionName</code>，而不致於將目前的父網域加入 <code>connectionName</code> 中。您可依下列兩種方式之一來進行實作：</p>
+     
+     <ul><li>在傳送端和接收端 LocalConnection 物件中，於 <code>connectionName</code> 的開頭使用底線 (_)。 在包含接收端物件的 檔案中，使用 <code>LocalConnection.allowDomain()</code> 指定可接受所有網域的連線。 這個實作可以讓您將傳送端和接收端 檔儲存在任何網域中。</li><li>請於傳送端 LocalConnection 物件中，將父網域納入 <code>connectionName</code> 內&mdash;例如，<code>myDomain.com:myConnectionName</code>。 請於接收端物件中，使用 <code>LocalConnection.allowDomain()</code> 指定接受來自特定父網域的連線 (在此是指 myDomain.com)，或是接受來自任何網域的連線。</li></ul>
+     
+     <p><b>注意：</b>您無法在接收端 LocalConnection 物件的 <code>connectionName</code> 中指定父網域&mdash;只能在傳送端 LocalConnection 物件中指定。</p>
+     
+     <p>使用此方法時，必須顧及 <span>Flash Player</span> 安全性模型。根據預設， 檔所建立的 LocalConnection 物件會與該 檔的安全執行程序產生關聯，因此除非您呼叫 <code>LocalConnection.allowDomain()</code> 方法，否則不允許跨網域呼叫 LocalConnection 物件。對於瀏覽器中執行的 SWF 檔，只要在包含 SWF 內容的 HTML 頁面中設定 <code>object</code> 和 <code>embed</code> 標籤的 <code>allowNetworking</code> 參數，即可避免檔案使用這個方法。但在 Adobe AIR 中，<code>application</code> 安全執行程序中的內容 (使用 AIR 應用程式所安裝的內容) 沒有這些安全性限制。</p>
+     
+     <p>如需安全性詳細資訊，請參閱「Flash Player 開發人員中心」主題：<a href="http://www.adobe.com/go/devnet_security_tw" target="external">安全性</a>。</p>
+     
+     </p><p><span class="label"> 參數 </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">connectionName</span>:<a href="../../String.html">String</a></code> &mdash; 會對應至想要與傳送端 LocalConnection 物件進行通訊的連線名稱 (會在 <code>connect()</code> 命令中指定)。
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">methodName</span>:<a href="../../String.html">String</a></code> &mdash; 要在接收端 LocalConnection 物件中叫用的方法名稱。 下列方法名稱會導致命令執行失敗：<code>send</code>、<code>connect</code>、<code>close</code>、<code>allowDomain</code>、<code>allowInsecureDomain</code>、<code>client</code> 和 <code>domain</code>。
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><a href="../../statements.html#..._(rest)_parameter">...</a> <span class="label">arguments</span></code> &mdash; 要傳遞給指定方法的其他選擇性參數。
+     
+     </td></tr></table></p><br/><span class="label">事件</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>securityError</b>:<a href="../events/SecurityErrorEvent.html"><code>SecurityErrorEvent</code></a></code> &mdash; <code>LocalConnection.send()</code> 嘗試與來自安全執行程序 (呼叫的程式碼無法加以存取) 的 SWF 檔通訊。您可以在收件者的 <code>LocalConnection.allowDomain()</code> 實作中解決此問題。
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>status</b>:<a href="../events/StatusEvent.html"><code>StatusEvent</code></a></code> &mdash; 如果 <code>level</code> 屬性的值為 <code>"status"</code>，就表示呼叫成功；如果該值為 <code>"error"</code>，就表示呼叫失敗。如果接收端 SWF 檔拒絕連線，呼叫就可能會失敗。
+     
+     </td></tr></table><br/><span class="label">擲回值</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../TypeError.html">TypeError</a> </code> &mdash; <code>connectionName</code> 或 <code>methodName</code> 的值為 null。 請為這些參數傳遞非 null 的值。
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; 這項錯誤可能會因為下列其中一個原因而發生：1) <code>connectionName</code> 或 <code>methodName</code> 的值為空字串。 請為這些參數傳遞有效的字串。 2) <code>methodName</code> 中指定的方法受到限制。 3) 已傳送的序列化訊息過大 (超過 40K)。
+     
+     </td></tr></table><p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="LocalConnection.html#allowDomain()" target="">flash.net.LocalConnection.allowDomain()</a><br/><a href="LocalConnection.html#connect()" target="">flash.net.LocalConnection.connect()</a><br/><a href="LocalConnection.html#domain" target="">flash.net.LocalConnection.domain</a></div></div></span><div class="detailSectionHeader"> 事件詳細資訊 </div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:asyncError" id="event:asyncError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>asyncError</h3></td><td class="detailHeaderType"> 事件 </td></tr></table><div class="detailBody"><span class="label">事件物件類型: </span><a href="../events/AsyncErrorEvent.html"><code>flash.events.AsyncErrorEvent</code></a><br/><span class="label">屬性 AsyncErrorEvent.type  =  </span><a href="../events/AsyncErrorEvent.html#ASYNC_ERROR"><code>flash.events.AsyncErrorEvent.ASYNC_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+ 會在以非同步方式 (亦即，從原生非同步程式碼) 擲回例外時傳送。
+ 
+ </p>
+	<code>AsyncErrorEvent.ASYNC_ERROR</code> 常數會定義 <code>asyncError</code> 事件物件的 <code>type</code> 屬性值。 
+	<p>這個事件具有下列屬性：</p>
+	<table class="innertable" ><tr><th>屬性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；沒有要取消的預設行為指令。 </td></tr><tr><td><code>currentTarget</code></td><td>正主動使用事件偵聽程式處理 Event 物件的物件。 </td></tr><tr><td><code>target</code></td><td>傳送該事件的物件。</td></tr><tr><td><code>error</code></td><td>觸發事件的錯誤。</td></tr></table>
+	
+	</div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:securityError" id="event:securityError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>securityError</h3></td><td class="detailHeaderType"> 事件 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">事件物件類型: </span><a href="../events/SecurityErrorEvent.html"><code>flash.events.SecurityErrorEvent</code></a><br/><span class="label">屬性 SecurityErrorEvent.type  =  </span><a href="../events/SecurityErrorEvent.html#SECURITY_ERROR"><code>flash.events.SecurityErrorEvent.SECURITY_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+ 會在 <code>LocalConnection.send()</code> 的呼叫嘗試將資料傳送至不同的安全執行程序時傳送。
+ </p>
+	<code>SecurityErrorEvent.SECURITY_ERROR</code> 常數會定義 <code>securityError</code> 事件物件的 <code>type</code> 屬性值。 
+	
+	<p>這個事件具有下列屬性：</p>
+	<table class="innertable" ><tr><th>屬性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；沒有要取消的預設行為指令。</td></tr><tr><td><code>currentTarget</code></td><td>正主動使用事件偵聽程式處理 Event 物件的物件。</td></tr><tr><td><code>target</code></td><td>回報安全性錯誤的網路物件。</td></tr><tr><td><code>text</code></td><td>要顯示為錯誤訊息的文字。</td></tr></table>
+	
+	<p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="LocalConnection.html#send()" target="">send()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:status" id="event:status"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>status</h3></td><td class="detailHeaderType"> 事件 </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">事件物件類型: </span><a href="../events/StatusEvent.html"><code>flash.events.StatusEvent</code></a><br/><span class="label">屬性 StatusEvent.type  =  </span><a href="../events/StatusEvent.html#STATUS"><code>flash.events.StatusEvent.STATUS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>語言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>執行階段版本:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+ 在 LocalConnection 物件回報其狀態時傳送。 如果 <code>LocalConnection.send()</code> 成功，<code>status</code> 事件物件的 <code>level</code> 屬性值就是 <code>"status"</code>；如果呼叫失敗，<code>level</code> 屬性就是 <code>"error"</code>。 如果接收端 檔拒絕連線，呼叫就可能會失敗，而且不會對傳送端 檔發出通知。
+ 
+ </p>
+     定義 <code>status</code> 事件物件的 <code>type</code> 屬性值。
+	 <p>這個事件具有下列屬性：</p>
+	 <table class="innertable" ><tr><th>屬性</th><th>值</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>；沒有要取消的預設行為指令。</td></tr><tr><td><code>code</code></td><td>物件狀態的說明。</td></tr><tr><td><code>currentTarget</code></td><td>正主動使用事件偵聽程式處理 Event 物件的物件。</td></tr><tr><td><code>level</code></td><td>訊息的類別，例如 <code>"status"</code>、<code>"warning"</code> 或 <code>"error"</code>。 </td></tr><tr><td><code>target</code></td><td>回報其自身狀態的物件。</td></tr></table>
+	 
+	 <p><span class="label">相關 API 元素</span></p><div class="seeAlso"><a href="LocalConnection.html#send()" target="">LocalConnection.send()</a></div></div></span><a name="includeExamplesSummary" id="includeExamplesSummary"></a><div class="detailSectionHeader">範例<span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_tw"> 如何使用本範例 </a></span></div><span id="pageFilter"><div class="exampleHeader">LocalConnectionSenderExample.as</div><br/><div class="detailBody"> 此範例包含兩個 ActionScript 類別，應該在兩個不同的 SWF 檔案中進行編譯：
+ 
+ <p>在 LocalConnectionSenderExample SWF 檔案中，會建立 LocalConnection 實體，並在按下按鈕後使用 <code>call()</code> 方法，以連線名稱 "myConnection" 呼叫 SWF 檔案中的方法 <code>lcHandler</code>，將 TextField 的內容做為要傳遞的參數。</p>
+ 
+ <p>而在 LocalConnectionReceiverExample SWF 檔案中，則是建立 LocalConnection 實體，並呼叫 <code>connect()</code> 方法，指定這個 SWF 檔案是做為寄給連線名稱 "myConnection" 的訊息收件者。 此外，這個類別也包括一個 public 方法 <code>lcHandler()</code>；這個方法就是 LocalConnectionSenderExample SWF 檔案所呼叫的方法。 呼叫它時，做為參數傳入的文字會附加至「舞台」上的 TextField。</p>
+ 
+ <p><b>注意： </b>如果要測試這個範例，這兩個 SWF 檔案必須同時由同一部電腦載入。</p>
+<div class="listing"><pre>
+
+// Code in LocalConnectionSenderExample.as
+package {
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.net.LocalConnection;
+    import flash.text.TextField;
+    import flash.text.TextFieldType;
+    import flash.events.StatusEvent;
+    import flash.text.TextFieldAutoSize;
+
+    public class LocalConnectionSenderExample extends Sprite {
+        private var conn:LocalConnection;
+        
+        // UI elements
+        private var messageLabel:TextField;
+        private var message:TextField;
+        private var sendBtn:Sprite;
+        
+        public function LocalConnectionSenderExample() {
+            buildUI();
+            sendBtn.addEventListener(MouseEvent.CLICK, sendMessage);
+            conn = new LocalConnection();
+            conn.addEventListener(StatusEvent.STATUS, onStatus);
+        }
+        
+        private function sendMessage(event:MouseEvent):void {
+            conn.send("myConnection", "lcHandler", message.text);
+        }
+        
+        private function onStatus(event:StatusEvent):void {
+            switch (event.level) {
+                case "status":
+                    trace("LocalConnection.send() succeeded");
+                    break;
+                case "error":
+                    trace("LocalConnection.send() failed");
+                    break;
+            }
+        }
+        
+        private function buildUI():void {
+            const hPadding:uint = 5;
+            // messageLabel
+            messageLabel = new TextField();
+            messageLabel.x = 10;
+            messageLabel.y = 10;
+            messageLabel.text = "Text to send:";
+            messageLabel.autoSize = TextFieldAutoSize.LEFT;
+            addChild(messageLabel);
+            
+            // message
+            message = new TextField();
+            message.x = messageLabel.x + messageLabel.width + hPadding;
+            message.y = 10;
+            message.width = 120;
+            message.height = 20;
+            message.background = true;
+            message.border = true;
+            message.type = TextFieldType.INPUT;
+            addChild(message);
+            
+            // sendBtn
+            sendBtn = new Sprite();
+            sendBtn.x = message.x + message.width + hPadding;
+            sendBtn.y = 10;
+            var sendLbl:TextField = new TextField();
+            sendLbl.x = 1 + hPadding;
+            sendLbl.y = 1;
+            sendLbl.selectable = false;
+            sendLbl.autoSize = TextFieldAutoSize.LEFT;
+            sendLbl.text = "Send";
+            sendBtn.addChild(sendLbl);
+            sendBtn.graphics.lineStyle(1);
+            sendBtn.graphics.beginFill(0xcccccc);
+            sendBtn.graphics.drawRoundRect(0, 0, (sendLbl.width + 2 + hPadding + hPadding), (sendLbl.height + 2), 5, 5);
+            sendBtn.graphics.endFill();
+            addChild(sendBtn);
+        }
+    }
+}
+</pre></div></div></span><span id="pageFilter"><div class="exampleHeader">LocalConnectionReceiverExample.as</div><br/><div class="detailBody"><div class="listing"><pre>
+// Code in LocalConnectionReceiverExample.as
+package {
+    import flash.display.Sprite;
+    import flash.net.LocalConnection;
+    import flash.text.TextField;
+
+    public class LocalConnectionReceiverExample extends Sprite {
+        private var conn:LocalConnection;
+        private var output:TextField;
+        
+        public function LocalConnectionReceiverExample()     {
+            buildUI();
+            
+            conn = new LocalConnection();
+            conn.client = this;
+            try {
+                conn.connect("myConnection");
+            } catch (error:ArgumentError) {
+                trace("Can't connect...the connection name is already being used by another SWF");
+            }
+        }
+        
+        public function lcHandler(msg:String):void {
+            output.appendText(msg + "\n");
+        }
+        
+        private function buildUI():void {
+            output = new TextField();
+            output.background = true;
+            output.border = true;
+            output.wordWrap = true;
+            addChild(output);
+        }
+    }
+}
+</pre></div></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,true,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script></div><p xmlns:xd="http://www.pnp-software.com/XSLTdoc"></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 03:47 PM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/zh_TW/legalnotices/index.html">法律聲明</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">線上隱私權政策</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">為什麼顯示英文？</span>
+				</div>
+				<div class="white_content_body">
+					<b>「ActionScript 3.0 參考」的內容是以英文顯示</b><br><br>
+					並非所有「ActionScript 3.0 參考」的內容都翻譯為所有語言。當語言元素未翻譯時，就會以英文顯示。例如，ga.controls.HelpBox 類別並沒有翻譯為任何語言。因此在參考的繁體中文版本中，ga.controls.HelpBox 類別就會以英文顯示。
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 03:47 PM Z  -->

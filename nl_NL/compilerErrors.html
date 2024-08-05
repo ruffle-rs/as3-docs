@@ -1,0 +1,795 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Naslaggids voor Adobe ActionScript&reg; 3.0 voor het Adobe&reg; Flash&reg;-platform"><meta name="lang" content="nl-nl"><link rel="stylesheet" href="style.css" type="text/css" media="screen"><link rel="stylesheet" href="print.css" type="text/css" media="print"><link rel="stylesheet" href="override.css" type="text/css"><link rel="stylesheet" href="asfilter.css" type="text/css"><link rel="stylesheet" href="ion.css" type="text/css"><title>Compilerfouten - Bron voor Adobe ActionScript&reg; 3 (AS3 ) API</title>
+		<link rel="stylesheet" href="filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="filter_new.css" type="text/css">
+			
+		<script src="jquery.js" type="text/javascript"></script>
+		<script src="s_chl_code.js" type="text/javascript"></script>
+		<script src="jquery.zclip.js" type="text/javascript"></script>
+		<script src="jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="cookies.js" type="text/javascript"></script>
+		<script src="asdoc.js" type="text/javascript"></script>
+		<script src="iscroll.js" type="text/javascript"></script>
+		<script src="AC_OETags.js" type="text/javascript"></script>
+		<script src="omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "Runtimes";
+			var productsLabel = "Producten";
+			var noneLabel = "Geen";
+			var qsearchBoxLabel = "Snel zoeken";
+			var qsearchText = "Term niet gevonden";
+			var ajaxErrorMsg="Fout bij laden van pagina";
+			var ajaxErrorTryMsg="Opnieuw proberen";
+			var ajaxLoadingMsg="Nog bezig met laden";
+			var cancelMsg = "Annuleren";
+			var classesText = "Klassen";
+			var strJiveReply = "Deze vraag is geplaatst als reactie op het volgende artikel: "
+			var showFilters = "Filters weergeven";
+			var hideFilters = "Filters verbergen";
+			
+		
+			var baseRef = "./";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											Naslaggids voor Adobe ActionScript<sup>&reg;</sup> 3.0 voor het Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup>-platform<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="index.html"> Startpagina </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="compilerErrors.html#top" style="display:">Lijst met pakketten en klassen weergeven</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="compilerErrors.html#top" style="display:none">Lijst met pakketten en klassen verbergen</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="package-summary.html"> Pakketten </a>&nbsp;|&nbsp;
+												<a target="_self" href="class-summary.html"> Klassen </a>&nbsp;|&nbsp;
+												<a target="_self" href="whatsnew.html"> Nieuw </a>&nbsp;|&nbsp;
+												<a target="_self" href="all-index-Symbols.html"> Index </a>&nbsp;|&nbsp;
+												<a target="_self" href="appendixes.html"> Bijlagen </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Waarom in het Engels?</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/nl_NL/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('./')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('./')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="help.js"></script>
+						<script language="javascript" type="text/javascript" src="asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>Filters:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">Gegevens ophalen van server...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">Gegevens ophalen van server...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="compilerErrors.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">&nbsp;</a><br>
+								<h1 id="classProductName">Compilerfouten&nbsp;</h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="compilerErrors.html#propertySummary" style="display:none"> Eigenschappen </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="compilerErrors.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Eigenschappen </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="compilerErrors.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="compilerErrors.html#methodSummary" style="display:none"> Methoden </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="compilerErrors.html#constantSummary" style="display:none"> Algemene constanten </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="compilerErrors.html#eventSummary" style="display:none"> Gebeurtenissen </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="compilerErrors.html#styleSummary" style="display:none"> Stijlen </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="compilerErrors.html#SkinPartSummary" style="display:none"> Skinonderdelen  </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="compilerErrors.html#SkinStateSummary" style="display:none"> Skinstatussen </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="compilerErrors.html#effectSummary" style="display:none"> Effecten </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="compilerErrors.html#constantSummary" style="display:none"> Constanten </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="compilerErrors.html#methodSummary" style="display:none"> Algemene functies </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="compilerErrors.html#methodSummary" style="display:none">Functies</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="compilerErrors.html#interfaceSummary" style="display:none"> Interfaces </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="compilerErrors.html#classSummary" style="display:none"> Klassen </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="compilerErrors.html#includeExamplesSummary" style="display:none"> Voorbeelden </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="compilerErrors.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								Klassen
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><p>
+        <div id="badgeAnchorSupport" class="ionBadgeWrapper"></div>
+        <div id="badgeContainerSupport"></div>
+        <br/>Hieronder volgt een lijst van compileerfouten die worden gegenereerd door de compiler wanneer deze ongeldige code tegenkomt. Een subset van deze fouten wordt alleen gedetecteerd wanneer er code wordt gecompileerd in de strikte modus. In de strikte modus worden de volgende drie beperkingen toegevoegd die niet in de standaardtaal voorkomen:
+        <p>
+        <ul>
+        <li>Expressies hebben statische typen en typefouten zijn verificatiefouten.</li>
+        <li>Aanvullende verificatieregels vangen veelvoorkomende programmeerfouten af.</li>
+        <li>Verificatiefouten worden tijdig gerapporteerd. De volgende verificatiefouten komen alleen voor in de strikte modus:</li> <ul>
+        <li>Vergelijking van de handtekening bij functieaanroepen, waarbij het aantal opgegeven parameters en de typen worden gecontroleerd.</li>
+        <li>Conflicten door dubbele definities.</li>
+        <li>Niet-gebonden verwijzingen, die zich voordoen wanneer methoden of eigenschappen worden benaderd die tijdens het compileren niet zijn gedefinieerd.</li>
+        <li>Dynamische toevoeging van eigenschappen aan verzegelde objecten.</li>
+        <li>Schrijven naar constante variabelen.</li>
+        <li>Verwijderen van vaste eigenschappen.</li>
+        <li>Vergelijkende expressies die incompatibele typen gebruiken.</li>
+        <li>Niet-aangetroffen pakketten.</li> </ul></ul>
+        </p></p><br><a name="compilerErrorSummary"></a><table cellpadding="3" cellspacing="0" class="summaryTable"><tr><th>&nbsp;</th><th>Code</th><th width="35%">Bericht</th><th>Beschrijving</th></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1000"></a><b>1000</b></td><td class="summaryTableCol">Dubbelzinnige verwijzing naar %s.
+
+
+	
+
+</td><td class="summaryTableLastCol">
+	Een verwijzing kan verschillende doelen hebben. In de volgende code worden de naamruimten <code>rss</code> en <code>xml</code> gebruikt, die elk een andere waarde hanteren voor de functie <code>hello()</code>. De instructie <code>trace(hello())</code> retourneert deze fout omdat niet kan worden vastgesteld welke naamruimte er moet worden gebruikt.
+	
+<pre><code>private namespace rss;
+private namespace xml;
+    
+public function ErrorExamples() {
+  	use namespace rss;
+   	use namespace xml;
+	trace(hello());
+}
+    
+rss function hello():String {
+      	return "hola";
+    }
+    
+    xml function hello():String {
+        return "foo";
+    }</code></pre>
+ 
+
+	<p>Corrigeer een dubbelzinnige verwijzing door deze specifiek te maken. In het volgende voorbeeld wordt de vorm <i>naamruimte</i>::<i>functie</i> gebruikt om aan te geven welke naamruimte moet worden gebruikt:</p>
+
+
+<pre><code>public function ErrorExamples() {
+    
+    trace(rss::hello());
+    trace(xml::hello());
+}</code></pre>
+        
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1003"></a><b>1003</b></td><td class="summaryTableCol">Toegangsspecificaties zijn niet toegestaan met naamruimtekenmerken.
+		</td><td class="summaryTableLastCol">In een definitie kunt u niet zowel een toegangsspecificatie (zoals private of public) als een naamruimtekenmerk gebruiken.&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1004"></a><b>1004</b></td><td class="summaryTableCol">Naamruimte niet gevonden of geen constante bij compilatie.
+	
+
+</td><td class="summaryTableLastCol">
+		De naamruimte is onbekend of is een expressie die bij de compilatie verschillende waarden kan hebben. Controleer of de naamruimte goed is gespeld en of de bijbehorende definitie goed wordt geïmporteerd.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1006"></a><b>1006</b></td><td class="summaryTableCol">Een expressie 'super' kan alleen worden gebruikt binnen methoden van klasse-instanties.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1007"></a><b>1007</b></td><td class="summaryTableCol">Een instructie 'super' kan alleen worden gebruikt binnen constructors van klasse-instanties.
+
+</td><td class="summaryTableLastCol">
+		De instructie <code>super</code> mag niet worden gebruikt in leden van het type static. U mag de instructie <code>super</code> alleen gebruiken in klasse-instanties.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1008"></a><b>1008</b></td><td class="summaryTableCol">Ongeldig kenmerk.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1010"></a><b>1010</b></td><td class="summaryTableCol">Het kenmerk 'override' mag alleen worden gebruikt in definities van klasse-eigenschappen.
+
+
+</td><td class="summaryTableLastCol">
+		Het gereserveerde woord <code>override</code> mag niet worden gebruikt in een functieblok.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1011"></a><b>1011</b></td><td class="summaryTableCol">Het kenmerk 'virtual' mag alleen worden gebruikt in definities van klasse-eigenschappen.
+
+</td><td class="summaryTableLastCol">
+		U kunt het kenmerk <code>virtual</code> niet gebruiken bij het declareren van eigenschappen die niet tot een klasse behoren (zoals bij het declareren van een variabele binnen een functieblok).
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1012"></a><b>1012</b></td><td class="summaryTableCol">Het kenmerk 'static' mag alleen worden gebruikt in definities binnen een klasse.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1013"></a><b>1013</b></td><td class="summaryTableCol">Het kenmerk 'private' mag alleen worden gebruikt in definities van klasse-eigenschappen.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1014"></a><b>1014</b></td><td class="summaryTableCol">Het kenmerk 'intrinsic' wordt niet meer ondersteund.
+
+
+</td><td class="summaryTableLastCol">
+		ActionScript 3.0 ondersteunt het gereserveerde woord <code>intrinsic</code> niet.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1016"></a><b>1016</b></td><td class="summaryTableCol">Basisklasse is 'final'.
+
+
+</td><td class="summaryTableLastCol">
+		De superklasse kan niet worden uitgebreid omdat deze is gemarkeerd als <code>final</code>.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1017"></a><b>1017</b></td><td class="summaryTableCol">De definitie van basisklasse %s is niet gevonden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1018"></a><b>1018</b></td><td class="summaryTableCol">Dubbele klassendefinitie: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1020"></a><b>1020</b></td><td class="summaryTableCol">Een methode gemarkeerd als 'override' moet een andere methode overschrijven.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1021"></a><b>1021</b></td><td class="summaryTableCol">Dubbele functiedefinitie.
+
+
+</td><td class="summaryTableLastCol">
+		U kunt een functie niet meer dan één keer met dezelfde id-naam in hetzelfde bereik declareren.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1022"></a><b>1022</b></td><td class="summaryTableCol">Een accessor van het type 'final' kan niet worden overschreven.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1023"></a><b>1023</b></td><td class="summaryTableCol">Incompatibele overschrijving.
+</td><td class="summaryTableLastCol"> Een functie gemarkeerd als 'override' moet exact overeenkomen met de parameter en de declaratie van het retourneringstype van de functie die wordt overschreven. De functie moet hetzelfde aantal parameters hebben, allemaal van hetzelfde type, en hetzelfde retourneringstype declareren. Als een van de parameters optioneel is, moet dit ook het geval zijn bij de functie die wordt overschreven. Beide functies moeten dezelfde toegangsspecificatie (public, private, enzovoort) of hetzelfde naamruimtekenmerk gebruiken.&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1024"></a><b>1024</b></td><td class="summaryTableCol">Er wordt een functie overschreven die niet is gemarkeerd voor overschrijven.
+
+
+</td><td class="summaryTableLastCol">
+		
+		Als een methode in een klasse een methode in een basisklasse overschrijft, moet u de methode expliciet declareren met het kenmerk <code>override</code>, zoals in dit voorbeeld:
+
+		<pre>public override function foo():void{};</pre>
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1025"></a><b>1025</b></td><td class="summaryTableCol">Een methode van het type 'final' kan niet opnieuw worden gedefinieerd.
+
+
+</td><td class="summaryTableLastCol">
+		De methode kan niet worden uitgebreid omdat deze in de basisklasse is gemarkeerd als <code>final</code>.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1026"></a><b>1026</b></td><td class="summaryTableCol">Constructorfuncties moeten instantiemethoden zijn.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1027"></a><b>1027</b></td><td class="summaryTableCol">Functies kunnen niet zowel 'static' als 'override' zijn.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1028"></a><b>1028</b></td><td class="summaryTableCol">Functies kunnen niet zowel 'static' als 'virtual' zijn.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1029"></a><b>1029</b></td><td class="summaryTableCol">Functies kunnen niet zowel 'final' als 'virtual' zijn.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1030"></a><b>1030</b></td><td class="summaryTableCol">U moet een naam opgeven van de array met variabele argumenten.
+
+
+</td><td class="summaryTableLastCol">
+	
+		In de parameterdefinitie ...(rest) is ingesteld dat alle waarden na ...(rest) in een array worden verzameld. U moet een naam opgeven voor de array, zoals in de expressie <code>function foo(x,...(rest))</code>.
+
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1033"></a><b>1033</b></td><td class="summaryTableCol">Virtuele variabelen worden niet ondersteund.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1034"></a><b>1034</b></td><td class="summaryTableCol">Variabelen kunnen niet native zijn.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1035"></a><b>1035</b></td><td class="summaryTableCol">Variabelen kunnen niet zowel 'final' als 'virtual' zijn.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1037"></a><b>1037</b></td><td class="summaryTableCol">Pakketten kunnen niet worden genest.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1038"></a><b>1038</b></td><td class="summaryTableCol">Kan doel van instructie 'break' niet vinden</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1039"></a><b>1039</b></td><td class="summaryTableCol">Kan doel van instructie 'continue' niet vinden</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1040"></a><b>1040</b></td><td class="summaryTableCol">Dubbele labeldefinitie.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1041"></a><b>1041</b></td><td class="summaryTableCol">Kenmerken kunnen niet worden aangeroepen.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1042"></a><b>1042</b></td><td class="summaryTableCol">Het gereserveerde woord 'this' kan niet worden gebruikt in statische methoden. 'this' kan alleen worden gebruikt in instantiemethoden, closures van functies en algemene code.
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Het trefwoord <code>this</code> mag niet worden gebruikt in leden van het type static omdat het trefwoord <code>this</code> dan geen context heeft.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1043"></a><b>1043</b></td><td class="summaryTableCol">Niet-gedefinieerde naamruimte.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1044"></a><b>1044</b></td><td class="summaryTableCol">Interfacemethode %s in naamruimte %s niet geïmplementeerd door klasse %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1045"></a><b>1045</b></td><td class="summaryTableCol">Interface %s niet gevonden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1046"></a><b>1046</b></td><td class="summaryTableCol">Type niet gevonden of geen constante bij compilatie. %s.
+
+
+
+</td><td class="summaryTableLastCol">
+		
+		De klasse die als typedeclaratie is gebruikt, is onbekend of is een expressie die bij de compilatie verschillende waarden kan hebben. Controleer of u de juiste klasse importeert en of de locatie van het pakket niet is gewijzigd. Controleer ook of het pakket met de code (niet de geïmporteerde klasse) juist is gedefinieerd (gebruik bijvoorbeeld de pakketsyntaxis van ActionScript 3.0 en niet die van ActionScript 2.0).
+
+		<p>De fout kan ook optreden als de klasse waarnaar wordt verwezen, niet is gedefinieerd in een naamruimte die in gebruik is of niet gedefinieerd is als 'public':</p>
+
+		<pre><code>public class Foo{}</code></pre>
+
+        <p>Als u Flex&#153 Builder&#153 2 gebruikt en de klasse zich in een bibliotheek bevindt, moet u het klassepad voor het project instellen.</p>
+
+
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1047"></a><b>1047</b></td><td class="summaryTableCol">Parameterinitialisatie onbekend of is geen constante bij compilatie.
+	
+	
+</td><td class="summaryTableLastCol">
+	De waarde die wordt gebruikt als de standaardwaarde voor de parameter is niet gedefinieerd of kan bij compilatie andere waarden hebben. Controleer of de naam van de initialisatie goed is gespeld en of de initialisatiewaarde geen expressie is die op het moment van compilatie verschillende waarden kan opleveren.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1048"></a><b>1048</b></td><td class="summaryTableCol">Methode kan niet worden gebruikt als een constructor.
+	
+		
+</td><td class="summaryTableLastCol">
+	Het is niet mogelijk een instantie te maken van een methode van een klasse. Alleen algemene functies kunnen worden gebruikt in een expressie <code>new</code>.
+	
+<pre>class D { function xx() { return 22; } }
+var d:D = new D();
+var x = new d.xx(); // error, method cannot be used as constructor
+function yy() { this.a = 22; }
+var z = new yy(); // no error, global functions can be used as constructors.</pre>
+
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1049"></a><b>1049</b></td><td class="summaryTableCol">Ongeldige toewijzing aan een variabele die is opgegeven als constante.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1050"></a><b>1050</b></td><td class="summaryTableCol">Toewijzing aan niet-verwijzingswaarde is onmogelijk.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1051"></a><b>1051</b></td><td class="summaryTableCol">Geretourneerde waarde moet undefined zijn.
+
+
+
+</td><td class="summaryTableLastCol">
+		U probeert de instructie <code>return</code> te gebruiken in een methode met het gedeclareerde retourneringstype <code>void</code>.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1052"></a><b>1052</b></td><td class="summaryTableCol">Constante-initialisatie onbekend of is geen constante bij compilatie.
+
+	
+
+</td><td class="summaryTableLastCol">
+	De waarde die wordt gebruikt voor het initialiseren van de constante is niet gedefinieerd of kan bij compilatie andere waarden hebben. Controleer of de naam van de initialisatie goed is gespeld en of de initialisatiewaarde geen expressie is die op het moment van compilatie verschillende waarden kan opleveren.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1053"></a><b>1053</b></td><td class="summaryTableCol">Accessortypen moeten overeenkomen.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1054"></a><b>1054</b></td><td class="summaryTableCol">Retourneringstype van een definitie setter mag niet zijn opgegeven of 'void' zijn.
+
+
+</td><td class="summaryTableLastCol">
+		U kunt geen geretourneerde waarde opgeven voor de functie setter. Deze instructie is bijvoorbeeld ongeldig:
+
+		<pre>public function set gamma(g:Number):Number;</pre>
+
+		<p>Deze instructie is <i>wel </i> toegestaan:</p>
+
+		<pre>public function set gamma(g:Number):void;</pre>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1058"></a><b>1058</b></td><td class="summaryTableCol">Eigenschap is alleen-schrijven.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1059"></a><b>1059</b></td><td class="summaryTableCol">Eigenschap is alleen-lezen.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Deze eigenschap wordt gedefinieerd via een functie getter, wat betekent dat u de waarde van die eigenschap kunt opvragen. Er is echter geen functie setter gedefinieerd voor deze eigenschap, en dus is de eigenschap alleen-lezen.
+	<p>In het volgende voorbeeld levert regel 3 een fout op omdat er geen functie setter is gedefinieerd voor <code>xx</code>:</p>
+	
+<pre>class D { function get xx() { return 22; } }
+var d:D = new D();
+d.xx = 44; // error, property is read-only</pre>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1061"></a><b>1061</b></td><td class="summaryTableCol">Aanroep van een mogelijk niet-gedefinieerde methode %s via een verwijzing van het type static %s.
+
+	
+
+</td><td class="summaryTableLastCol">
+	U roept een methode aan die niet is gedefinieerd.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1063"></a><b>1063</b></td><td class="summaryTableCol">Kan bestand niet openen: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1064"></a><b>1064</b></td><td class="summaryTableCol">Ongeldige metagegevens.
+	
+
+
+</td><td class="summaryTableLastCol">
+	Deze metagegevens worden niet herkend.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1065"></a><b>1065</b></td><td class="summaryTableCol">Kenmerken van metagegevens kunnen niet meerdere elementen hebben.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1067"></a><b>1067</b></td><td class="summaryTableCol">Impliciete afgedwongen omzetting van een waarde van het type %s in een niet-gerelateerd type %s.
+
+
+
+</td><td class="summaryTableLastCol">
+		U probeert een object te casten naar een type waarnaar het object niet kan worden geconverteerd. Dit kan gebeuren als de klasse waarnaar u cast zich niet bevindt in de overervingsketen van het object dat wordt gecast. Dit foutbericht wordt alleen weergegeven als de compiler wordt uitgevoerd in de strikte modus.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1068"></a><b>1068</b></td><td class="summaryTableCol">Kan opgenomen bestand niet openen: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1069"></a><b>1069</b></td><td class="summaryTableCol">Syntaxisfout: definitie of compilerinstructie verwacht.
+
+
+
+</td><td class="summaryTableLastCol">
+		Controleer de syntaxis op de regel.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1071"></a><b>1071</b></td><td class="summaryTableCol">Syntaxisfout: trefwoord voor definitie (zoals 'function') verwacht na kenmerk %s, niet %s.
+
+
+</td><td class="summaryTableLastCol">
+	
+		Deze fout treedt op als de ontwerper is vergeten het gereserveerde woord 'var' of 'function' te gebruiken in een declaratie.
+<pre><code>public int z;// should be 'public var z:int;'</code></pre>
+
+		Deze fout kan zich ook voordoen wanneer de compiler een onverwacht teken aantreft. De volgende instructie met de functie <code>trace()</code> is bijvoorbeeld ongeldig omdat de haakjes ontbreken (de juiste syntaxis is <code>trace("hello")</code>):
+
+<pre>
+trace "hello"
+</pre>
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1072"></a><b>1072</b></td><td class="summaryTableCol">Syntaxisfout: 'xml' verwacht vóór 'namespace'.
+
+
+</td><td class="summaryTableLastCol">
+	
+		De juiste syntaxis van de instructie is <code>default xml namespace = </code> <i>ns </i>. Het gereserveerde woord <code>xml</code> (kleine letters) ontbreekt of er is een onjuist gereserveerd woord gebruikt. Zie de compileraanwijzing <a href="statements.html#default_xml_namespace" >default xml namespace </a>.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1073"></a><b>1073</b></td><td class="summaryTableCol">Syntaxisfout: clausule 'catch' of 'finally' verwacht.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1075"></a><b>1075</b></td><td class="summaryTableCol">Syntaxisfout: het trefwoord 'each' is niet toegestaan zonder de operator 'in'.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1076"></a><b>1076</b></td><td class="summaryTableCol">Syntaxisfout: haakje openen verwacht vóór de id.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1077"></a><b>1077</b></td><td class="summaryTableCol">CaseLabel verwacht.
+
+	
+</td><td class="summaryTableLastCol">
+	De compiler verwacht een instructie <code>case</code> op dit punt in het blok 'switch'. Het volgende blok switch bevat vóór de eerste instructie <code>case</code> een aanroep van <code>print</code>. Dit is niet toegestaan.
+
+<pre>switch(x)
+{
+trace(2);
+case 0:  trace(0); 
+break
+}</pre>
+	
+    &nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1078"></a><b>1078</b></td><td class="summaryTableCol">Label moet een eenvoudige id zijn.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1079"></a><b>1079</b></td><td class="summaryTableCol">Een expressie 'super' moet één operand hebben.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1080"></a><b>1080</b></td><td class="summaryTableCol">Operator voor verhogen of verlagen verwacht.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1082"></a><b>1082</b></td><td class="summaryTableCol">Eén expressie tussen haakjes verwacht.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1083"></a><b>1083</b></td><td class="summaryTableCol">Syntaxisfout: %s niet verwacht.
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Er ontbreken gegevens in de coderegel. In het volgende voorbeeld moet een expressie (zoals een ander getal) worden opgenomen na het laatste plusteken:
+
+		<pre>var sum:int = 1 + 2 + ;</pre>
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1084"></a><b>1084</b></td><td class="summaryTableCol">Syntaxisfout: %s verwacht vóór %s.
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		De expressie werd hier niet verwacht. Als de tekst van het foutbericht 'Afsluitende accolade verwacht vóór einde van programma' is, ontbreekt er een afsluitende accolade ( &#125) in een blok met code.
+
+		<p>Als de tekst is 'haakje openen verwacht vóór _', bent u een haakje vergeten in een voorwaardelijke expressie, zoals in het volgende voorbeeld. Dit is niet toegestaan. </p>
+
+		<pre><code>var fact:int = 1 * 2 * 3;
+if fact > 2 {
+	var bigger:Boolean = true;
+}</code></pre>
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1086"></a><b>1086</b></td><td class="summaryTableCol">Syntaxisfout: puntkomma verwacht vóór %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1087"></a><b>1087</b></td><td class="summaryTableCol">Syntaxisfout: extra tekens gevonden na einde van programma.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1093"></a><b>1093</b></td><td class="summaryTableCol">Syntaxisfout.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1094"></a><b>1094</b></td><td class="summaryTableCol">Syntaxisfout: een letterlijke tekenreeks moet worden afgesloten vóór het regeleinde.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1095"></a><b>1095</b></td><td class="summaryTableCol">Syntaxisfout: een letterlijke tekenreeks moet worden afgesloten vóór het regeleinde.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1097"></a><b>1097</b></td><td class="summaryTableCol">Syntaxisfout: einde van invoer bereikt vóór afsluitend aanhalingsteken voor een letterlijke tekenreeks.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1099"></a><b>1099</b></td><td class="summaryTableCol">Syntaxisfout.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1100"></a><b>1100</b></td><td class="summaryTableCol">Syntaxisfout: XML heeft geen overeenkomende start- en eindtags.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1102"></a><b>1102</b></td><td class="summaryTableCol">Kan afstammingen 'super' niet verwijderen.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1103"></a><b>1103</b></td><td class="summaryTableCol">Dubbele naamruimtedefinitie.
+
+	
+
+
+</td><td class="summaryTableLastCol">
+	U hebt de naamruimte verschillende keren gedefinieerd. Verwijder of wijzig de dubbele definitie.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1104"></a><b>1104</b></td><td class="summaryTableCol"> %s </td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1105"></a><b>1105</b></td><td class="summaryTableCol">Doel van toewijzing moet een verwijzingswaarde zijn.
+
+	 
+</td><td class="summaryTableLastCol">
+	U kunt wel een waarde toewijzen aan een variabele, maar niet een waarde aan een andere waarde. 
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1106"></a><b>1106</b></td><td class="summaryTableCol">De operand van verhogen moet een verwijzing zijn.
+	
+</td><td class="summaryTableLastCol">
+	De operand moet een variabele, een element in een array of een eigenschap van een object zijn.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1107"></a><b>1107</b></td><td class="summaryTableCol">De operand van verhogen is ongeldig.
+
+	
+</td><td class="summaryTableLastCol">
+	De operand moet een variabele, een element in een array of een eigenschap van een object zijn.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1108"></a><b>1108</b></td><td class="summaryTableCol">De operand van verlagen is ongeldig.
+	
+</td><td class="summaryTableLastCol">
+	De operand moet een variabele, een element in een array of een eigenschap van een object zijn.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1109"></a><b>1109</b></td><td class="summaryTableCol">Expressie verwacht.
+
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		Er ontbreekt een expressie in een gedeelte van de code. Deze fout treedt bijvoorbeeld op als de onderstaande instructie wordt gebruikt (er ontbreekt een voorwaarde in de instructie <code>if</code>):
+
+<pre><code>var x = (5 > 2) ? 
+trace(x)</code></pre>
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1110"></a><b>1110</b></td><td class="summaryTableCol">XML-tagnaam ontbreekt.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1111"></a><b>1111</b></td><td class="summaryTableCol">Het bestand %s is geen geldig ABC-bestand.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1112"></a><b>1112</b></td><td class="summaryTableCol">Mogelijk oneindige herhaling door opnemen van dit bestand: %s.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Een bestand dat wordt opgenomen in de broncode die wordt gecompileerd, bevat andere instructies <code>include</code> die een oneindige lus tot gevolg hebben. De volgende bestanden, a.as en b.as, genereren deze fout bijvoorbeeld omdat beide bestanden proberen het andere bestand op te nemen.
+	<p>
+	Bestand a.as bevat de volgende code, waarmee wordt geprobeerd het bestand b.as op te nemen:</p>
+<pre>import foo.bar.baz;
+include "b.as"
+trace(2);</pre>
+	<p>Bestand b.as bevat de volgende code, waarmee wordt geprobeerd het bestand a.as op te nemen:</p>
+	<pre>include "a.as"</pre>
+
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1113"></a><b>1113</b></td><td class="summaryTableCol">Kringverwijzing gevonden in %s.
+	
+
+</td><td class="summaryTableLastCol">
+	Een klasse probeert een superklasse uit te breiden. Klasse A kan bijvoorbeeld niet klasse B uitbreiden als B overerft van A:
+<pre><code>class a extends b { }
+class b extends a { }</code></pre>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1114"></a><b>1114</b></td><td class="summaryTableCol">Het kenmerk 'public' mag alleen binnen een pakket worden gebruikt.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1115"></a><b>1115</b></td><td class="summaryTableCol">Het kenmerk 'internal' mag alleen binnen een pakket worden gebruikt.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1116"></a><b>1116</b></td><td class="summaryTableCol">Een door de gebruiker gedefinieerd naamruimtekenmerk kan alleen op het hoofdniveau van een klassedefinitie worden gebruikt.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1118"></a><b>1118</b></td><td class="summaryTableCol">Impliciete afgedwongen omzetting van een waarde van het type static %s in een mogelijk niet-gerelateerd type %s.
+	
+
+</td><td class="summaryTableLastCol">U gebruikt een waarde die niet van het verwachte type is en er bestaat geen impliciet afgedwongen omzetting voor conversie naar het verwachte type.
+	<p>Mogelijk gebruikt u een supertype waar een subtype wordt verwacht. Bijvoorbeeld:</p>
+<pre><code>class A {}
+var a:A = new A(); 
+class B extends A { function f() }
+var b : B = a // error</code></pre>
+	<p>De laatste instructie genereert een fout omdat er wordt geprobeerd een object van het type A toe te wijzen aan een variabele van het type B.</p>
+	<p>De volgende instructie definieert de functie <code>foo()</code>, waarvoor een parameter van type B wordt gebruikt. De instructie <code> foo(a);</code> genereert een fout omdat deze een parameter van type A probeert te gebruiken:</p>
+<pre><code>function foo(x:B) { }
+foo(a);</code></pre>
+	<p>De volgende instructie genereert een fout omdat de geretourneerde waarde voor <code>foo2()</code> van type B moet zijn:</p>
+	<pre><code>function foo2():B { return new A(); }</code></pre>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1119"></a><b>1119</b></td><td class="summaryTableCol">Gebruik van een mogelijk niet-gedefinieerde eigenschap %s via een verwijzing van het type static %s.
+
+
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		U wilt een eigenschap gebruiken die niet bestaat voor het opgegeven object. De volgende code levert bijvoorbeeld deze fout op omdat een object int geen eigenschap heeft met de naam <code>assortment</code>:
+
+<pre><code>var i:int = 44;
+var str:String = i.assortment;</code></pre>
+
+		Dit foutbericht wordt alleen weergegeven als de compiler wordt uitgevoerd in de strikte modus.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1120"></a><b>1120</b></td><td class="summaryTableCol">Gebruik van niet-gedefinieerde eigenschap %s.
+
+
+
+
+</td><td class="summaryTableLastCol">
+	
+		U wilt een niet-gedefinieerde variabele gebruiken. Als de variabele <code>huh</code> bijvoorbeeld niet is gedefinieerd, genereert een aanroep van de variabele deze fout:
+
+<pre><code>huh = 55;</code></pre>
+
+		Dit foutbericht wordt alleen weergegeven als de compiler wordt uitgevoerd in de strikte modus.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1121"></a><b>1121</b></td><td class="summaryTableCol">Een definitie getter mag geen parameters hebben.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1122"></a><b>1122</b></td><td class="summaryTableCol">Een definitie setter moet precies één parameter hebben.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1123"></a><b>1123</b></td><td class="summaryTableCol">Een definitie setter kan geen optionele parameters hebben.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1124"></a><b>1124</b></td><td class="summaryTableCol">Retourneringstype van een definitie getter mag niet 'void' zijn.
+
+	
+</td><td class="summaryTableLastCol">
+	Een functie getter simuleert een variabele. Aangezien variabelen niet van het type 'void' mogen zijn, kunt u functies getter niet declareren om een type 'void' te retourneren.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1125"></a><b>1125</b></td><td class="summaryTableCol">Methoden die zijn gedefinieerd in een interface mogen geen hoofdtekst hebben.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1126"></a><b>1126</b></td><td class="summaryTableCol">Functie heeft geen hoofdtekst.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1127"></a><b>1127</b></td><td class="summaryTableCol">Kenmerk %s is verschillende keren opgegeven.
+
+	
+
+</td><td class="summaryTableLastCol">
+	U hebt een kenmerk verschillende keren opgegeven in dezelfde instructie. De instructie <code>public static public var x;</code>, bijvoorbeeld, genereert deze fout omdat tweemaal wordt aangegeven dat de variabele <code>x</code> public is. Verwijder de dubbele declaraties.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1129"></a><b>1129</b></td><td class="summaryTableCol">Dubbele interfacedefinitie: %s.
+
+	
+
+</td><td class="summaryTableLastCol">
+	Verwijder of wijzig de dubbele definities.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1130"></a><b>1130</b></td><td class="summaryTableCol">Een constructor kan geen retourneringstype opgeven.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1131"></a><b>1131</b></td><td class="summaryTableCol">Klassen mogen niet genest zijn.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1132"></a><b>1132</b></td><td class="summaryTableCol">Het kenmerk 'final' kan alleen worden gebruikt voor een methode die is gedefinieerd in een klasse.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1133"></a><b>1133</b></td><td class="summaryTableCol">Het kenmerk 'native' mag alleen worden gebruikt bij functiedefinities.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1134"></a><b>1134</b></td><td class="summaryTableCol">Het kenmerk 'dynamic' mag alleen worden gebruikt bij functiedefinities.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1135"></a><b>1135</b></td><td class="summaryTableCol">Syntaxisfout: %s is geen geldig type.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1136"></a><b>1136</b></td><td class="summaryTableCol">Onjuist aantal argumenten. %s verwacht.
+
+	
+</td><td class="summaryTableLastCol">
+	De functie verwacht een ander aantal argumenten dan opgegeven. De volgende instructie bevat bijvoorbeeld een definitie van de functie <code>goo</code>, met twee argumenten:
+<pre>class A { static function goo(x:int,y:int) 
+{ return(x+y); } }</pre>
+	<p>De volgende instructie levert een fout op omdat er drie argumenten worden opgegeven:</p>
+<pre>A.goo(1,2,3);</pre>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1137"></a><b>1137</b></td><td class="summaryTableCol">Onjuist aantal argumenten. Niet meer dan %s verwacht.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1138"></a><b>1138</b></td><td class="summaryTableCol">Vereiste parameters zijn niet toegestaan na optionele parameters.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1139"></a><b>1139</b></td><td class="summaryTableCol">Declaraties van variabelen zijn niet toegestaan in interfaces.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1140"></a><b>1140</b></td><td class="summaryTableCol">Parameters opgegeven na het gereserveerde woord ...rest voor een parameterdefinitie moeten van het gegevenstype Array zijn.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1141"></a><b>1141</b></td><td class="summaryTableCol">Een klasse kan alleen een andere klasse uitbreiden, niet een interface.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1142"></a><b>1142</b></td><td class="summaryTableCol">Een interface kan alleen andere interfaces uitbreiden, maar %s is een klasse.
+	
+
+</td><td class="summaryTableLastCol">
+	U wilt een klasse laten uitbreiden door een interface. Een interface kan alleen een andere interface uitbreiden.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1143"></a><b>1143</b></td><td class="summaryTableCol">Het kenmerk 'override' kan alleen worden gebruikt voor een methode die is gedefinieerd in een klasse.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1144"></a><b>1144</b></td><td class="summaryTableCol">Interfacemethode %s in naamruimte %s niet geïmplementeerd met een incompatibele handtekening in klasse %s.
+
+	
+
+</td><td class="summaryTableLastCol">
+	De methodehandtekeningen moeten exact overeenkomen.
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1145"></a><b>1145</b></td><td class="summaryTableCol">Native methoden mogen geen hoofdtekst hebben.
+	
+
+</td><td class="summaryTableLastCol">
+	U kunt <code>native</code> niet gebruiken omdat het een gereserveerd woord is.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1146"></a><b>1146</b></td><td class="summaryTableCol">Een constructor mag geen methode getter of setter zijn.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1147"></a><b>1147</b></td><td class="summaryTableCol">Er is geen ActionScript-bronbestand opgegeven.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1149"></a><b>1149</b></td><td class="summaryTableCol">De instructie 'return' mag niet worden gebruikt in statische initialisatiecode.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1150"></a><b>1150</b></td><td class="summaryTableCol">Het kenmerk 'protected' mag alleen worden gebruikt in definities van klasse-eigenschappen.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1151"></a><b>1151</b></td><td class="summaryTableCol">Er is een conflict met definitie %s in naamruimte %s.
+
+	
+
+
+</td><td class="summaryTableLastCol">
+	Het is niet mogelijk binnen hetzelfde bereik meerdere variabelen met dezelfde id te declareren, tenzij al deze variabelen als hetzelfde type worden gedeclareerd. In ActionScript 3.0 worden verschillende codeblokken (zoals die van twee lussen <code>for</code> binnen dezelfde functiedefinitie) beschouwd als binnen hetzelfde bereik. 
+	<p>In het volgende codevoorbeeld wordt de variabele <code>x</code> op de juiste manier als hetzelfde type gecast:</p>
+<pre><code>function test()
+{
+	var x:int = 3;
+	for(var x:int = 33; x < 55; x++)
+	trace(x);
+	for(var x:int = 11; x < 33; x++)
+	trace(x)
+}</code></pre>
+	<p>Het volgende codevoorbeeld levert een fout op omdat de typecasting in de variabeledeclaratie en de lussen <code>for</code> verschillend zijn:</p>
+<pre><code>function test()
+{
+	var x:String = "The answer is";
+	for(var x:int = 33; x < 55; x++) // error
+	trace(x);
+	for(var x:unit = 11; x < 33; x++) // error
+	trace(x)
+}</code></pre>
+&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1152"></a><b>1152</b></td><td class="summaryTableCol"> Er is een conflict met geërfde definitie %s in naamruimte %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1153"></a><b>1153</b></td><td class="summaryTableCol">Een constructor kan alleen als 'public' worden gedeclareerd.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1154"></a><b>1154</b></td><td class="summaryTableCol">In een definitie mogen 'public', 'private', 'protected' en 'internal' maar één keer worden opgegeven.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1155"></a><b>1155</b></td><td class="summaryTableCol">Accessors kunnen niet worden genest binnen andere functies.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1156"></a><b>1156</b></td><td class="summaryTableCol">De operator new kan niet worden gebruikt voor het maken van nieuwe instanties van interfaces.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1157"></a><b>1157</b></td><td class="summaryTableCol">Interfaceleden kunnen niet als 'public', 'private', 'protected' of 'internal' worden gedeclareerd.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1158"></a><b>1158</b></td><td class="summaryTableCol">Syntaxisfout: er ontbreekt een accolade ({) vóór de hoofdtekst van de functie.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1159"></a><b>1159</b></td><td class="summaryTableCol">De instructie 'return' mag niet worden gebruikt in initialisatiecode voor pakketten.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1160"></a><b>1160</b></td><td class="summaryTableCol">Het kenmerk 'native' kan niet worden gebruikt in interfacedefinities.
+	
+
+</td><td class="summaryTableLastCol">
+	U kunt <code>native</code> niet gebruiken omdat het een gereserveerd woord is.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1162"></a><b>1162</b></td><td class="summaryTableCol">Per definitie kan maar één naamruimtekenmerk worden gebruikt.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1163"></a><b>1163</b></td><td class="summaryTableCol">Methode %s veroorzaakt een conflict met de definitie die is overerfd van interface %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1165"></a><b>1165</b></td><td class="summaryTableCol">Interfacekenmerk %s is ongeldig.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1166"></a><b>1166</b></td><td class="summaryTableCol">Declaraties van naamruimten zijn niet toegestaan in interfaces.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1167"></a><b>1167</b></td><td class="summaryTableCol">Klasse %s implementeert interface %s meerdere keren
+
+	
+
+</td><td class="summaryTableLastCol">
+	De klasse implementeert dezelfde interface diverse keren. De volgende instructie levert bijvoorbeeld deze fout op omdat klasse C interface A tweemaal implementeert:
+
+<pre><code>interface A {  public function f();  };
+class C implements A,A {
+public function f() { trace("f"); }
+}</code></pre>
+	
+	<p>De juiste instructie voor implementatie is <code> class C implements A {</code>.</p>
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1168"></a><b>1168</b></td><td class="summaryTableCol">Ongeldige toewijzing aan functie %s.
+
+	
+
+
+</td><td class="summaryTableLastCol">
+	U probeert een functie opnieuw te definiëren. Met de volgende code wordt de functie <code>topLevel()</code> gedefinieerd om het woord "top" af te drukken. De tweede instructie produceert een fout omdat er een andere geretourneerde waarde wordt toegewezen aan de functie:
+<pre><code>function topLevel() { trace("top"); }
+topLevel = function() { trace("replacement works in ~");} // error</code></pre>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1169"></a><b>1169</b></td><td class="summaryTableCol">Naamruimtekenmerken zijn niet toegestaan bij interfacemethoden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1170"></a><b>1170</b></td><td class="summaryTableCol">Functie retourneert geen waarde.
+
+	
+</td><td class="summaryTableLastCol">
+	Elk onderdeel van een functie moet een waarde retourneren wanneer het retourneringstype niet is ingesteld op 'void'. De volgende functie <code>f(x)</code> genereert geen fout omdat de instructie <code>if..else</code> altijd een waarde retourneert:
+
+<pre><code>function f(x):int
+{
+if (x)
+    	return 2;
+else
+    	return 3;
+} // no error</code></pre>
+
+<p>De functie <code>g(x)</code> hieronder resulteert echter wel in een fout omdat de instructie <code>switch</code> niet altijd een waarde retourneert.</p>
+<pre><code>function g(x:int):int
+{
+switch(x)
+{
+      	case 1: return 1;
+      	case 2: return 2:
+}
+// return 2;//uncomment to remove the error
+}</code></pre>
+
+	<p>Deze controle wordt alleen uitgevoerd wanneer de functie een ander retourneringstype dan 'void' declareert. </p>
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1171"></a><b>1171</b></td><td class="summaryTableCol">Een naamruimte-initialisatie moet een letterlijke tekenreeks of een andere naamruimte zijn.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1172"></a><b>1172</b></td><td class="summaryTableCol">Kan definitie %s niet vinden.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1173"></a><b>1173</b></td><td class="summaryTableCol">Labeldefinitie is ongeldig.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1176"></a><b>1176</b></td><td class="summaryTableCol">Vergelijking van een waarde van het type static %s en een mogelijk niet-gerelateerd type %s.
+</td><td class="summaryTableLastCol">Dit foutbericht wordt alleen weergegeven als de compiler wordt uitgevoerd in de strikte modus.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1177"></a><b>1177</b></td><td class="summaryTableCol">De instructie 'return' mag niet worden gebruikt in algemene initialisatiecode.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1178"></a><b>1178</b></td><td class="summaryTableCol">Poging tot gebruik van een niet-toegankelijke eigenschap %s via een verwijzing van het type static %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1179"></a><b>1179</b></td><td class="summaryTableCol">:Object is tijdelijk buiten service. Gebruik :*.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1180"></a><b>1180</b></td><td class="summaryTableCol">Aanroep van een mogelijk niet-gedefinieerde methode %s.
+</td><td class="summaryTableLastCol">Dit foutbericht wordt alleen weergegeven als de compiler wordt uitgevoerd in de strikte modus.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1181"></a><b>1181</b></td><td class="summaryTableCol">Voorwaartse verwijzing naar basisklasse %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1182"></a><b>1182</b></td><td class="summaryTableCol">Pakket kan niet als waarde worden gebruikt: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1184"></a><b>1184</b></td><td class="summaryTableCol">Incompatibele standaardwaarde van het type %s waar %s wordt verwacht.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1185"></a><b>1185</b></td><td class="summaryTableCol">De instructie 'switch' heeft verschillende standaardwaarden, terwijl maar één standaardwaarde is toegestaan.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1188"></a><b>1188</b></td><td class="summaryTableCol">Ongeldige toewijzing aan klasse %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1189"></a><b>1189</b></td><td class="summaryTableCol">Poging tot verwijdering van de vaste eigenschap %s. Alleen dynamisch gedefinieerde eigenschappen kunnen worden verwijderd.
+</td><td class="summaryTableLastCol">Met de instructie delete worden dynamisch gedefinieerde eigenschappen van een object verwijderd. Gedeclareerde eigenschappen van een klasse kunnen niet worden verwijderd. Dit foutbericht wordt alleen weergegeven als de compiler wordt uitgevoerd in de strikte modus.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1190"></a><b>1190</b></td><td class="summaryTableCol">Basisklasse niet gevonden of geen constante bij compilatie.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1191"></a><b>1191</b></td><td class="summaryTableCol">Interface niet gevonden of geen constante bij compilatie.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1192"></a><b>1192</b></td><td class="summaryTableCol">Het kenmerk 'static' is niet toegestaan in naamruimtedefinities.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1193"></a><b>1193</b></td><td class="summaryTableCol">Interfacedefinities mogen niet zijn genest binnen klasse- of andere interfacedefinities.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1194"></a><b>1194</b></td><td class="summaryTableCol">Het kenmerk 'prototype' is ongeldig.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1195"></a><b>1195</b></td><td class="summaryTableCol">Poging tot gebruik van een niet-toegankelijke methode %s via een verwijzing van het type static %s.
+		
+ 	</td><td class="summaryTableLastCol">U roept een methode van het type 'private' aan vanuit een andere klasse of u roept een methode aan die is gedefinieerd in een naamruimte die niet in gebruik is. Als u een methode aanroept die is gedefinieerd in een niet-gebruikte naamruimte, voegt u een instructie <code>use</code> toe voor de vereiste naamruimte.
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1196"></a><b>1196</b></td><td class="summaryTableCol">Syntaxisfout: expressie verwacht na 'throw'.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1197"></a><b>1197</b></td><td class="summaryTableCol">De klasse %s kan %s niet uitbreiden aangezien beiden zijn gekoppeld aan bibliotheeksymbolen of de hoofdtijdlijn.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1198"></a><b>1198</b></td><td class="summaryTableCol">Kenmerken zijn niet toegestaan in een pakketdefinitie.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1199"></a><b>1199</b></td><td class="summaryTableCol">Interne fout: %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1200"></a><b>1200</b></td><td class="summaryTableCol">Syntaxisfout: ongeldige initialisatie for-in, slechts 1 expressie verwacht.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1201"></a><b>1201</b></td><td class="summaryTableCol">Een instructie 'super' is niet toegestaan na een instructie 'this', 'super', 'return' of 'throw'.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1202"></a><b>1202</b></td><td class="summaryTableCol">Gebruik van niet-gedefinieerde eigenschap %s in pakket %s.
+
+
+    </td><td class="summaryTableLastCol">
+	
+		U wilt een niet-gedefinieerde variabele in een pakket gebruiken. Als de variabele <code>p.huh</code> bijvoorbeeld niet is gedefinieerd, maar wel wordt aangeroepen, levert dit de volgende fout op:
+
+<pre><code>p.huh = 55;</code></pre>
+
+		Dit foutbericht wordt alleen weergegeven als de compiler wordt uitgevoerd in de strikte modus.
+	
+&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1203"></a><b>1203</b></td><td class="summaryTableCol">Geen standaardconstructor gevonden in basisklasse %s.
+    </td><td class="summaryTableLastCol">U moet de constructor van de basisklasse expliciet aanroepen met een instructie super() als de constructor een of meer vereiste argumenten heeft.&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1204"></a><b>1204</b></td><td class="summaryTableCol">/* gevonden zonder bijbehorende */ .
+
+	</td><td class="summaryTableLastCol">
+	
+		De tekens '/*' zijn aangetroffen (geven het begin van een commentaar aan), maar niet de bijbehorende tekens '*/' (die het einde van het commentaar aangeven).
+    &nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1205"></a><b>1205</b></td><td class="summaryTableCol">Syntaxisfout: accolade ({) of letterlijke tekenreeks ("") verwacht.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1206"></a><b>1206</b></td><td class="summaryTableCol">Een instructie super kan alleen worden gebruikt als laatste item in initialisatielijst van een constructor.
+
+    </td><td class="summaryTableLastCol">
+		De instructie <code>super</code> mag niet worden in een constructor. Een instructie <code>super</code> mag alleen worden gebruikt als laatste item in initialisatielijst van een constructor.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1207"></a><b>1207</b></td><td class="summaryTableCol">Het trefwoord this kan niet worden gebruikt in initialiseerders van eigenschappen.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Het trefwoord <code>this</code> mag niet worden gebruikt in een initialiseerder voor eigenschappen.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1208"></a><b>1208</b></td><td class="summaryTableCol">De initialiseerder voor een configuratiewaarde moet een constante bij compileren zijn.
+    
+    </td><td class="summaryTableLastCol">
+	
+		De initialiseerder voor een configuratiewaarde moet een waarde zijn die bekend is bij compileren. De initialiseerder mag een constante reeks, getal of booleaanse reeks zijn, of een verwijzing naar een eerder gedefinieerde configuratiewaarde.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1209"></a><b>1209</b></td><td class="summaryTableCol">Een configuratievariabele mag alleen als const worden gedeclareerd.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Wanneer u een configuratievariabele definieert, moet deze als const worden gedeclareerd.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1210"></a><b>1210</b></td><td class="summaryTableCol">Een configuratiewaarde moet op het hoofdniveau van een programma of pakket worden gedeclareerd.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Een configuratiewaarde moet op het hoofdniveau van een programma of pakket worden gedeclareerd.
+	
+	&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1211"></a><b>1211</b></td><td class="summaryTableCol">Er is een conflict met naamruimte %s en een naamruimte in een configuratie.
+    
+    </td><td class="summaryTableLastCol">
+	
+		Een naamruimte mag niet dezelfde naam hebben als een naamruimte in een configuratie.
+	
+	&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1212"></a><b>1212</b></td><td class="summaryTableCol">Precisie moet een geheel getal zijn tussen 1 en 34.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1214"></a><b>1214</b></td><td class="summaryTableCol">Incompatibele versie: kan niet verwijzen naar definitie %s die voor het eerst werd toegepast in versie %s vanuit code met versie %s.</td><td class="summaryTableLastCol">&nbsp;</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="1215"></a><b>1215</b></td><td class="summaryTableCol">Ongeldige initialisatie: bij conversie naar type %s gaan gegevens verloren.</td><td class="summaryTableLastCol">&nbsp;</td></tr></table><br><br><div><p></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Wed Jun 13 2018, 11:59 AM Z  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/nl_NL/legalnotices/index.html">Juridische kennisgeving</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online privacybeleid</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">Waarom in het Engels?</span>
+				</div>
+				<div class="white_content_body">
+					<b>Sommige inhoud van de Naslaggids voor ActionScript 3.0 staat in het Engels</b><br><br>
+					Niet alle onderdelen van de Naslaggids voor ActionScript 3.0 zijn in alle talen vertaald. Wanneer een taalelement niet is vertaald, wordt het in het Engels weergegeven. Zo is de klasse ga.controls.HelpBox niet in elke taal vertaald. In de Nederlandse versie van de naslaggids wordt de klasse ga.controls.HelpBox bijvoorbeeld in het Engels weergegeven.
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Wed Jun 13 2018, 11:59 AM Z  -->

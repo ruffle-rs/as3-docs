@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="用于 Adobe&reg; Flash&reg; Platform 的 ActionScript&reg; 3.0 参考"><meta name="lang" content="zh-cn"><meta name="runtime" content="flash player"><meta name="runtimever" content="flash player:11.5"><meta name="runtime" content="air"><meta name="runtimever" content="air:3.5"><meta name="product" content="flash player"><meta name="productver" content="flash player:11.5"><meta name="product" content="air"><meta name="productver" content="air:3.5"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../asfilter.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="Mutex,flash.concurrent.Mutex,lock,tryLock,unlock"><title>Mutex - Adobe ActionScript&reg; 3 (AS3  ) API 参考</title>
+		<link rel="stylesheet" href="../../filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="../../filter_new.css" type="text/css">
+			
+		<script src="../../jquery.js" type="text/javascript"></script>
+		<script src="../../s_chl_code.js" type="text/javascript"></script>
+		<script src="../../jquery.zclip.js" type="text/javascript"></script>
+		<script src="../../jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="../../cookies.js" type="text/javascript"></script>
+		<script src="../../asdoc.js" type="text/javascript"></script>
+		<script src="../../iscroll.js" type="text/javascript"></script>
+		<script src="../../AC_OETags.js" type="text/javascript"></script>
+		<script src="../../omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "运行时";
+			var productsLabel = "产品";
+			var noneLabel = "无";
+			var qsearchBoxLabel = "快速搜索";
+			var qsearchText = "未找到所搜索的词";
+			var ajaxErrorMsg="加载页面时出错";
+			var ajaxErrorTryMsg="重试";
+			var ajaxLoadingMsg="仍在加载中";
+			var cancelMsg = "取消";
+			var classesText = "类";
+			var strJiveReply = "此问题针对以下文章提出： "
+			var showFilters = "显示过滤条件";
+			var hideFilters = "隐藏过滤条件";
+			
+		
+			var baseRef = "../../";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											用于 Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup> Platform 的 ActionScript<sup>&reg;</sup> 3.0 参考<br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="../../index.html"> 主页 </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="Mutex.html#top" style="display:">显示包列表和类列表</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="Mutex.html#top" style="display:none">隐藏包列表和类列表</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="../../package-summary.html"> 包 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../class-summary.html"> 类 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../whatsnew.html"> 新增内容 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../all-index-Symbols.html"> 索引 </a>&nbsp;|&nbsp;
+												<a target="_self" href="../../appendixes.html"> 附录 </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">为什么显示为英语？</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/zh_CN/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('../../')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('../../')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="../../help.js"></script>
+						<script language="javascript" type="text/javascript" src="../../asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="../../filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>过滤条件:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">正在从服务器检索数据...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">正在从服务器检索数据...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="Mutex.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">flash.concurrent&nbsp;</a><br>
+								<h1 id="classProductName">Mutex&nbsp; - AS3 </h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="Mutex.html#propertySummary" style="display:none"> 属性 </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="Mutex.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> 属性 </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="Mutex.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> 构造函数 </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="Mutex.html#methodSummary" style="display:none"> 方法 </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="Mutex.html#constantSummary" style="display:none"> 全局常量 </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="Mutex.html#eventSummary" style="display:none"> 事件 </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="Mutex.html#styleSummary" style="display:none"> 样式 </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="Mutex.html#SkinPartSummary" style="display:none"> 外观部件 </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="Mutex.html#SkinStateSummary" style="display:none"> 外观状态 </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="Mutex.html#effectSummary" style="display:none"> 效果 </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="Mutex.html#constantSummary" style="display:none"> 常量 </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="Mutex.html#methodSummary" style="display:none"> 全局函数 </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="Mutex.html#methodSummary" style="display:none">函数</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="Mutex.html#interfaceSummary" style="display:none"> 接口 </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="Mutex.html#classSummary" style="display:none"> 类 </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="Mutex.html#includeExamplesSummary" style="display:none"> 示例 </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="Mutex.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								类
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">包</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">flash.concurrent</a></td></tr><tr><td class="classHeaderTableLabel">类</td><td class="classSignature">public final   class  Mutex</td></tr><tr><td class="classHeaderTableLabel">继承</td><td class="inheritanceList">Mutex  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../Object.html">Object</a></td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>Flash Player 11.5, AIR 3.5</td></tr></table><p></p><p></p><p></p>
+ Mutex（"mutual exclusion"（互斥）的简写）类提供一种方式，可以确保同一时间只有一组代码在对特定内存块或其他共享资源进行操作。Mutex 主要用于在访问可共享字节数组（<code>shareable</code> 属性为 <code>true</code> 的 ByteArray 对象）的不同 worker 之间管理代码。不过，Mutex 也可用于管理 worker 对诸如 AIR 本机扩展或文件系统文件等任何可共享资源的访问。无论是什么资源，mutex 的目的是确保同一时间只有一组代码在访问资源。
+ 
+ <p>mutex 使用资源所有权概念来管理访问。任一时间一个单一的 mutex 最多由一个 worker“拥有”。当 mutex 所有权从一个 worker 切换到另一个 worker 时，这种转换是原子性的。这就保证了任何时候都不会出现一个以上 worker 接管 mutex 所有权的情况。只有 worker 中的代码只对一个共享资源操作，则该 worker 拥有 mutex 时，您才可以确信不会出现多个 worker 发生冲突的情况。</p>
+ 
+               <p>使用 <code>tryLock()</code> 方法可以接管 mutex（如果有）的所有权。使用 <code>lock()</code> 方法可以暂停当前 worker 的执行，直到 mutex 可用，便可以接管 mutex 的所有权。一旦当前 worker 拥有 mutex 所有权后，便可以对共享资源进行安全操作了。完成这些操作后，调用 <code>unlock()</code> 方法可以释放 mutex。此时，当前 worker 应不再访问共享资源。</p>
+ 
+               <p>Mutex 类是一种特殊的对象类型，它是在 worker 之间共享的，而不是在 worker 之间复制的。当您通过调用 Worker 对象的 <code>setSharedProperty()</code> 方法或通过使用 MessageChannel 对象而将 mutex 从一个 worker 传递给另一个 worker 时，这两个 worker 引用的是运行时内存中的同一个 Mutex 对象。</p>
+ 
+            <p></p><p><span class="classHeaderTableLabel">相关 API 元素</span></p><div class="seeAlso"><a href="../system/Worker.html" target="">Worker 类</a><br/><a href="../utils/ByteArray.html#shareable" target="">ByteArray.shareable 属性</a><br/><a href="Condition.html" target="">Condition 类</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary" id="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">公共属性</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="Mutex.html#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隐藏继承的公共属性</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="Mutex.html#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 显示继承的公共属性</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable hideInheritedProperty" id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">属性</th><th>由以下参数定义</th></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="../../Object.html#constructor" class="signatureLink">constructor</a> : <a href="../../Object.html">Object</a><div class="summaryTableDescription">
+	 对类对象或给定对象实例的构造函数的引用。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary" id="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">公共方法 </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="Mutex.html#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> 隐藏继承的公共方法</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="Mutex.html#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> 显示继承的公共方法</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">方法</th><th>由以下参数定义</th></tr><tr class="" runtime="Flash::11.5##AIR::3.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Mutex.html#Mutex()" class="signatureLink">Mutex</a>()</div><div class="summaryTableDescription">
+     创建一个新的 Mutex 实例。</div></td><td class="summaryTableOwnerCol">Mutex</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#hasOwnProperty()" class="signatureLink">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 表示对象是否已经定义了指定的属性。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#isPrototypeOf()" class="signatureLink">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 表示 Object 类的实例是否在指定为参数的对象的原型链中。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="Flash::11.5##AIR::3.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Mutex.html#lock()" class="signatureLink">lock</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     暂停当前 worker 的执行，直到此 mutex 可用后接管其所有权。</div></td><td class="summaryTableOwnerCol">Mutex</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#propertyIsEnumerable()" class="signatureLink">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 表示指定的属性是否存在、是否可枚举。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#setPropertyIsEnumerable()" class="signatureLink">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     设置循环操作动态属性的可用性。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toLocaleString()" class="signatureLink">toLocaleString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 返回此对象的字符串表示形式，其格式设置遵守区域设置特定的约定。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#toString()" class="signatureLink">toString</a>():<a href="../../String.html">String</a></div><div class="summaryTableDescription">
+	 返回指定对象的字符串表示形式。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr><tr class="" runtime="Flash::11.5##AIR::3.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Mutex.html#tryLock()" class="signatureLink">tryLock</a>():<a href="../../Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+     获取 mutex（如果可用）所有权。</div></td><td class="summaryTableOwnerCol">Mutex</td></tr><tr class="" runtime="Flash::11.5##AIR::3.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Mutex.html#unlock()" class="signatureLink">unlock</a>():<a href="../../specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+     释放此 mutex 的所有权，允许任何 worker 获取它，对相关资源执行操作。</div></td><td class="summaryTableOwnerCol">Mutex</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../Object.html#valueOf()" class="signatureLink">valueOf</a>():<a href="../../Object.html">Object</a></div><div class="summaryTableDescription">
+	 返回指定对象的原始值。</div></td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><a name="constructorDetail" id="constructorDetail"></a><div class="detailSectionHeader">构造函数详细信息</div><span id="pageFilter" runtime="Flash::11.5##AIR::3.5##"><a name="Mutex()" id="Mutex()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Mutex</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">构造函数</td></tr></table><div class="detailBody"><code>public function Mutex()</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>Flash Player 11.5, AIR 3.5</td></tr></table><p></p><p>
+     创建一个新的 Mutex 实例。
+     
+     </p><br/><span class="label">引发</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Error.html">Error</a> </code> &mdash; 如果 mutex 无法初始化。
+     
+     </td></tr></table></div></span><a name="methodDetail" id="methodDetail"></a><div class="detailSectionHeader">方法详细信息</div><span id="pageFilter" runtime="Flash::11.5##AIR::3.5##"><a name="lock()" id="lock()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>lock</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td></tr></table><div class="detailBody"><code> public function lock():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>Flash Player 11.5, AIR 3.5</td></tr></table><p></p><p></p><p>
+     暂停当前 worker 的执行，直到此 mutex 可用后接管其所有权。如果另一个 worker 在调用 <code>lock()</code> 时拥有 mutex，则调用方 worker 的执行线程将在 <code>lock()</code> 调用处暂停，该 worker 被添加到所有权请求队列中。一旦调用方 worker 获取 mutex，该 worker 将继续执行跟在 <code>lock()</code> 调用后的代码行。
+     
+     <p>一旦当前 worker 拥有 mutex 所有权后，便可以对共享资源进行安全操作了。完成这些操作后，调用 <code>unlock()</code> 方法可以释放 mutex。此时，当前 worker 应不再访问共享资源。</p>
+     
+     <p>mutex 内部会保留所收到的锁定请求计数。mutex 必须接收到相同数目的解锁请求，才能被完全释放。如果拥有 mutex 的 worker 中的代码再次锁定（通过调用 <code>lock()</code> 方法），则内部锁定计数会增加 1。您调用 <code>unlock()</code> 方法的次数必须与锁定请求数目相同，才能释放 mutex 的所有权。</p>
+     
+     <p>当多个 worker 都在等待 mutex 时，mutex 会优先将所有权分配给等待时间最长的 worker。不过，worker 线程的调度是由主机操作系统管理的，因此 worker 之间不能保证特定的代码执行顺序。</p>
+     
+     </p></div></span><span id="pageFilter" runtime="Flash::11.5##AIR::3.5##"><a name="tryLock()" id="tryLock()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>tryLock</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function tryLock():<a href="../../Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>Flash Player 11.5, AIR 3.5</td></tr></table><p></p><p></p><p>
+     获取 mutex（如果可用）所有权。如果另一个 worker 已经拥有 mutex 或另一个 worker 已经调用了 <code>lock()</code> 方法，正等待获取 mutex 时，mutex 不可用。此时，调用此方法将返回 <code>false</code>，代码执行立即继续。
+     
+     <p>一旦当前 worker 拥有 mutex 所有权后，便可以对共享资源进行安全操作了。完成这些操作后，调用 <code>unlock()</code> 方法可以释放 mutex。此时，当前 worker 应不再访问共享资源。</p>
+     
+     <p>当多个 worker 都在等待 mutex 时，mutex 会优先将所有权分配给等待时间最长的 worker。不过，worker 线程的调度是由主机操作系统管理的，因此 worker 之间不能保证特定的代码执行顺序。</p>
+     
+     </p><p></p><span class="label">返回</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../Boolean.html">Boolean</a></code> &mdash; 如果 mutex 可用（且目前由当前 worker 拥有），则为 <code>true</code>；如果当前 worker 未获取 mutex 的所有权，则为 <code>false</code>。
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::11.5##AIR::3.5##"><a name="unlock()" id="unlock()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>unlock</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">方法</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function unlock():<a href="../../specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>语言版本:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>运行时版本:&nbsp;</b></td><td>Flash Player 11.5, AIR 3.5</td></tr></table><p></p><p></p><p>
+     释放此 mutex 的所有权，允许任何 worker 获取它，对相关资源执行操作。
+     
+     <p>mutex 内部会保留所收到的锁定请求计数。worker 中的代码调用 <code>unlock()</code> 方法的次数必须与锁定请求数目相同，才能释放 mutex 的所有权。</p>
+     
+     </p><br/><span class="label">引发</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; 在当前 worker 未拥有 mutex 时。
+     
+     </td></tr></table></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,true,false,false,false,false,false,false,true,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script></div><p xmlns:xd="http://www.pnp-software.com/XSLTdoc"></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 11:04 AM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/zh_CN/legalnotices/index.html">法律声明</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">在线隐私策略</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">为什么显示为英语？</span>
+				</div>
+				<div class="white_content_body">
+					<b>《ActionScript 3.0 参考》中的内容以英语显示</b><br><br>
+					《ActionScript 3.0 参考》中的部分内容未翻译成所有语言。当某个语言元素未翻译时，将显示为英语。例如，ga.controls.HelpBox 类未翻译成任何语言。因此在简体中文版的参考中，ga.controls.HelpBox 类显示为英语。
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 11:04 AM Z  -->

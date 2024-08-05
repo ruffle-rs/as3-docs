@@ -1,0 +1,553 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+			<!-- saved from url=(0014)about:internet -->
+			<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="ActionScript&reg; 3.0 &mdash; dokumentacja dla platformy Adobe&reg; Flash&reg;  "><meta name="lang" content="pl-pl"><link rel="stylesheet" href="style.css" type="text/css" media="screen"><link rel="stylesheet" href="print.css" type="text/css" media="print"><link rel="stylesheet" href="override.css" type="text/css"><link rel="stylesheet" href="asfilter.css" type="text/css"><link rel="stylesheet" href="ion.css" type="text/css"><title>Stałe i funkcje najwyższego poziomu - Szczegóły Adobe ActionScript&reg; 3 (AS3) &mdash; dokumentacja interfejsu API</title>
+		<link rel="stylesheet" href="filter-style.css" type="text/css">
+		<link href="http://community.adobe.com/help/badge/v3/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="http://community.adobe.com/help/badge/ionBadge.css" rel="stylesheet" type="text/css" media="screen">
+		<link rel="stylesheet" href="filter_new.css" type="text/css">
+			
+		<script src="jquery.js" type="text/javascript"></script>
+		<script src="s_chl_code.js" type="text/javascript"></script>
+		<script src="jquery.zclip.js" type="text/javascript"></script>
+		<script src="jquery.ba-hashchange.js" type="text/javascript"></script>
+		<script src="cookies.js" type="text/javascript"></script>
+		<script src="asdoc.js" type="text/javascript"></script>
+		<script src="iscroll.js" type="text/javascript"></script>
+		<script src="AC_OETags.js" type="text/javascript"></script>
+		<script src="omniture_asdocs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+			var runtimesLabel = "Środowiska wykonawcze";
+			var productsLabel = "Produkty";
+			var noneLabel = "Brak";
+			var qsearchBoxLabel = "Wyszukiwanie";
+			var qsearchText = "Nie znaleziono terminu.";
+			var ajaxErrorMsg="Błąd wczytywania strony";
+			var ajaxErrorTryMsg="Ponów próbę";
+			var ajaxLoadingMsg="Wczytywanie nadal w toku";
+			var cancelMsg = "Anuluj";
+			var classesText = "Klasy";
+			var strJiveReply = "To pytanie zamieszczono w odpowiedzi na następujący artykuł: "
+			var showFilters = "Pokaż filtry";
+			var hideFilters = "Ukryj filtry";
+			
+		
+			var baseRef = "";
+			var buildType = 'filter';
+			var alreadyrunflag=0; //flag to indicate whether target function has already been run
+			var terms_HELPCFG = "PlatformASLR.helpcfg";
+			
+			$(document).ready(function(){
+				init2();
+			});
+			
+		
+		</script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body>
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<table class="titleTable" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="titleTableTitleION" align="left" nowrap="true">
+											ActionScript<sup>&reg;</sup> 3.0 &mdash; dokumentacja dla platformy Adobe<sup>&reg;</sup> Flash<sup>&reg;</sup>  <br>
+											<span class="titleTableTopNavION">
+												<span id="homelink">
+													<a target="_self" href="index.html"> Strona główna </a>&nbsp;|&nbsp;
+												</span>
+												<span id="TocLink">
+													<a target="_self" id="showtoc" onClick="showHideTOC(true)" href="package.html#top" style="display:">Pokaż listę pakietów i klas</a><a target="_self" id="hidetoc" onClick="showHideTOC(false)" href="package.html#top" style="display:none">Ukryj listę pakietów i klas</a>&nbsp;|&nbsp;
+												</span>
+												<a target="_self" href="package-summary.html"> Pakiety </a>&nbsp;|&nbsp;
+												<a target="_self" href="class-summary.html"> Klasy </a>&nbsp;|&nbsp;
+												<a target="_self" href="whatsnew.html"> Nowości </a>&nbsp;|&nbsp;
+												<a target="_self" href="all-index-Symbols.html"> Indeks </a>&nbsp;|&nbsp;
+												<a target="_self" href="appendixes.html"> Dodatki </a>
+												<span id="whyEnglish">&nbsp;|&nbsp;
+													<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Dlaczego język angielski?</a>
+												</span><br>
+											</span>	
+										</td>
+										<td class="titleTableSearchION" align="right" nowrap="true">
+											<span id="gsa" class="gsa">
+												<form class="searchForm" method="get" action="https://help.adobe.com/pl_PL/FlashPlatform/reference/actionscript/3/search.html" onSubmit="searchfunctionsubmit('')"><input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text"><input type="button" name="action" value="" class="searchbutton" onClick="searchfunctionsubmit('')"></form>
+											</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="titleTableLogo" align="right" rowspan="3"><div class="sprite logoION" alt="Adobe Logo" title="Adobe Logo"></div></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="filter_panel_float">
+						<script language="javascript" type="text/javascript" src="help.js"></script>
+						<script language="javascript" type="text/javascript" src="asfilter.js"></script>
+						<script language="javascript" type="text/javascript" src="filter_new.js"></script>
+						<div id="filter_panel_nf">
+							<table class="filterTable" width="100%">
+								<tr>
+									<td>Filtry:</td>
+									<td width="5%" id="runtimefilter"></td>
+									<td id="runtimes" align="left" style=" white-space:normal">Pobieranie danych z serwera...</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td id="productfilter" valign="top"></td>
+									<td id="products" width="85%" style="white-space:normal">Pobieranie danych z serwera...</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<a href="package.html#"><span id="filterImg" class="filterImg_hide" alt="Hide Filters" title="Hide Filters" onclick="showHideFilters();">
+							<font id="filterImgText">
+							</font>
+						</span></a>
+					</center>
+					<table class="titleTable" cellpadding="0" cellspacing="0">
+						<tr class="titleTableRow2">
+							<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+								<a href="package-detail.html" id="packageName" style="font-size:11px;">&nbsp;</a><br>
+								<h1 id="classProductName">Najwyższy poziom&nbsp;</h1>
+							</td>
+							<td class="titleTableSubNav" id="subNav" align="right">
+								<a id="propertiesLink" href="package.html#propertySummary" style="display:none"> Właściwości </a>
+								<span id="propertiesBar" style="display:none"> | </span>
+								<a id="packagePropertiesLink" href="package.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Właściwości </a>
+								<span id="packagePropertiesBar" style="display:none"> | </span>
+								<a id="constructorLink" href="package.html#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Konstruktor </a>
+								<span id="constructorBar" style="display:none"> | </span>
+								<a id="methodsLink" href="package.html#methodSummary" style="display:none"> Metody </a>
+								<span id="methodsBar" style="display:none"> | </span>
+								<a id="packageConstantsLink" href="package.html#constantSummary" style="display:none"> Stałe globalne </a>
+								<span id="packageConstantsBar" style="display:none"> | </span>
+								<a id="eventsLink" href="package.html#eventSummary" style="display:none"> Zdarzenia </a>
+								<span id="eventsBar" style="display:none"> | </span>
+								<a id="stylesLink" href="package.html#styleSummary" style="display:none"> Style </a>
+								<span id="stylesBar" style="display:none"> | </span>
+								<a id="SkinPartLink" href="package.html#SkinPartSummary" style="display:none"> Części karnacji </a>
+								<span id="SkinPartBar" style="display:none"> | </span>
+								<a id="SkinStateLink" href="package.html#SkinStateSummary" style="display:none"> Stany karnacji </a>
+								<span id="SkinStateBar" style="display:none"> | </span>
+								<a id="effectsLink" href="package.html#effectSummary" style="display:none"> Efekty </a>
+								<span id="effectsBar" style="display:none"> | </span>
+								<a id="constantsLink" href="package.html#constantSummary" style="display:none"> Stałe </a>
+								<span id="constantsBar" style="display:none"> | </span>
+								<a id="packageFunctionsLink" href="package.html#methodSummary" style="display:none"> Funkcje globalne </a>
+								<span id="packageFunctionsBar" style="display:none"> | </span>
+								<a id="packageMethodFunctionsLink" href="package.html#methodSummary" style="display:none">Funkcje</a>
+								<span id="packageMethodFunctionsBar" style="display:none"> | </span>
+								<a id="interfacesLink" href="package.html#interfaceSummary" style="display:none"> Interfejsy </a>
+								<span id="interfacesBar" style="display:none"> | </span>
+								<a id="classesLink" href="package.html#classSummary" style="display:none"> Klasy </a>
+								<span id="classesBar" style="display:none"> | </span>
+								<a id="examplesLink" href="package.html#includeExamplesSummary" style="display:none"> Przykłady </a>
+							</td>
+						</tr>
+						<tr class="titleTableRow3">
+							<td colspan="4"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="packagelist" class="packagelist"></div>
+				<div class="h_splitter" id="h_splitter" onMouseDown="h_splitterMouseDown(event, this);" onMouseUp="h_splitterMouseUp(event);" onMouseMove="h_splitterMouseMove(event);"></div>
+				<div id="classlist" class="classlist">
+					<div id="classlistWrapper">
+						<h4 id="classlisth4">
+							<a id="cls_name" href="package.html" target="_self" onclick="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" oncontextmenu="this.href=baseRef + 'class-summary.html';saveClassListScrollTop();" style="color:black">
+								Klasy
+							</a>
+							<span id="cls_searchspan" style="display:none">
+								<input type="text" id="cls_searchbox" onfocus="clsSearchBoxOnFocus();" onblur="clsSearchBoxOnBlur()" onkeyup="clsSearchOnKeyUp();">
+								<span id="cls_clear_search" class="search_inactive" onclick="clsClearSearchButton()">x</span>
+							</span>
+						</h4>
+						<div id="classlistoutline" class="classlistoutline"></div>
+					</div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><br><a name="methodSummary"></a>Funkcje najwyższego poziomu (globalne) są dostępne we wszystkich częściach pliku SWF, w których używany jest kod ActionScript, oraz we wszystkich klasach zdefiniowanych przez użytkownika. Większość funkcji globalnych języka ActionScript 2.0 została przeniesiona do klas.<div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Funkcje globalne </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Funkcja</th><th>Zdefiniowane przez</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#Array()" class="signatureLink">Array</a>(<a href="statements.html#..._(rest)_parameter">...</a> args):<a href="Array.html">Array</a></div><div class="summaryTableDescription">
+	 Tworzy nową tablicę.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#Boolean()" class="signatureLink">Boolean</a>(expression:<a href="Object.html">Object</a>):<a href="Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Konwertuje parametr expression na wartość Boolean i na wartość typu Boolean i zwraca ją.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#decodeURI()" class="signatureLink">decodeURI</a>(uri:<a href="String.html">String</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 Przekształca zakodowany identyfikator URI w ciąg znaków.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#decodeURIComponent()" class="signatureLink">decodeURIComponent</a>(uri:<a href="String.html">String</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 Przekształca zakodowany składnik URI w ciąg znaków.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#encodeURI()" class="signatureLink">encodeURI</a>(uri:<a href="String.html">String</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 Przekształca ciąg znaków w poprawny identyfikator URI (Uniform Resource Identifier).</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#encodeURIComponent()" class="signatureLink">encodeURIComponent</a>(uri:<a href="String.html">String</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 Przekształca ciąg znaków w poprawny składnik URI.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#escape()" class="signatureLink">escape</a>(str:<a href="String.html">String</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 Konwertuje parametr na ciąg znaków i koduje go w formacie adresu URL (większość znaków alfanumerycznych jest zastępowana sekwencjami szesnastkowymi %).</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#int()" class="signatureLink">int</a>(value:<a href="Number.html">Number</a>):<a href="int.html">int</a></div><div class="summaryTableDescription">
+	 Konwertuje daną wartość liczbową na wartość liczby całkowitej.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#isFinite()" class="signatureLink">isFinite</a>(num:<a href="Number.html">Number</a>):<a href="Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 W przypadku liczby skończonej zwraca wartość true. W przypadku wartości Infinity lub -Infinity zwraca wartość false.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#isNaN()" class="signatureLink">isNaN</a>(num:<a href="Number.html">Number</a>):<a href="Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Zwraca prawdę, jeśli wartość nie jest liczbą.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#isXMLName()" class="signatureLink">isXMLName</a>(str:<a href="String.html">String</a>):<a href="Boolean.html">Boolean</a></div><div class="summaryTableDescription">
+	 Określa, czy podany ciąg znaków jest poprawną nazwą elementu lub atrybutu XML.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#Number()" class="signatureLink">Number</a>(expression:<a href="Object.html">Object</a>):<a href="Number.html">Number</a></div><div class="summaryTableDescription">
+	 Konwertuje daną wartość liczbową na wartość typu Number.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#Object()" class="signatureLink">Object</a>(value:<a href="Object.html">Object</a>):<a href="Object.html">Object</a></div><div class="summaryTableDescription">
+	 W programie ActionScript 3.0 każda wartość jest obiektem, a zatem w wyniku wywołania funkcji Object() dla wartości otrzymuje się zawsze wartość.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#parseFloat()" class="signatureLink">parseFloat</a>(str:<a href="String.html">String</a>):<a href="Number.html">Number</a></div><div class="summaryTableDescription">
+	 Konwertuje ciąg znaków na liczbę zmiennoprzecinkową.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#parseInt()" class="signatureLink">parseInt</a>(str:<a href="String.html">String</a>, radix:<a href="uint.html">uint</a> = 0):<a href="Number.html">Number</a></div><div class="summaryTableDescription">
+	 Konwertuje ciąg znaków na liczbę całkowitą.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#String()" class="signatureLink">String</a>(expression:<a href="Object.html">Object</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 Zwraca ciąg znaków reprezentujący określony parametr.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#trace()" class="signatureLink">trace</a>(<a href="statements.html#..._(rest)_parameter">...</a> arguments):<a href="specialTypes.html#void">void</a></div><div class="summaryTableDescription">
+	 W trakcie debugowania wyświetla wyrażenia lub zapisuje informacje w dzienniku.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#uint()" class="signatureLink">uint</a>(value:<a href="Number.html">Number</a>):<a href="uint.html">uint</a></div><div class="summaryTableDescription">
+	 Konwertuje daną wartość liczbową na liczbę całkowitą bez znaku.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#unescape()" class="signatureLink">unescape</a>(str:<a href="String.html">String</a>):<a href="String.html">String</a></div><div class="summaryTableDescription">
+	 Analizuje parametr str jako ciąg znaków, odtwarza reprezentację ciągu znaków sprzed kodowania formacie URL (poprzez konwersję wszystkich sekwencji szesnastkowych na znaki ASCII) i zwraca ciąg znaków.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#Vector()" class="signatureLink">Vector</a>(sourceArray:<a href="Object.html">Object</a>):<a href="Vector.html">Vector</a>.&lt;T&gt;</div><div class="summaryTableDescription">
+	 Tworzy nową instancję Vector, której elementy są instancjami określonego typu danych.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#XML()" class="signatureLink">XML</a>(expression:<a href="Object.html">Object</a>):<a href="XML.html">XML</a></div><div class="summaryTableDescription">
+	 Konwertuje obiekt na obiekt XML.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="package.html#XMLList()" class="signatureLink">XMLList</a>(expression:<a href="Object.html">Object</a>):<a href="XMLList.html">XMLList</a></div><div class="summaryTableDescription">
+     Konwertuje obiekt na obiekt XMLList.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr></table></div><br><br><a name="constantSummary"></a>Stałe najwyższego poziomu (globalne) są dostępne w każdym skrypcie i widoczne na każdej osi czasu i w każdym zasięgu w dokumencie.<div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Stałe globalne</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Stała</th><th>Zdefiniowane przez</th></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="package.html#Infinity" class="signatureLink">Infinity</a> : <a href="Number.html">Number</a><div class="summaryTableDescription">
+ Wartość specjalna reprezentująca dodatnią nieskończoność.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="package.html#-Infinity" class="signatureLink">-Infinity</a> : <a href="Number.html">Number</a><div class="summaryTableDescription">
+ Wartość specjalna reprezentująca ujemną nieskończoność.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="package.html#NaN" class="signatureLink">NaN</a> : <a href="Number.html">Number</a><div class="summaryTableDescription">
+ Specjalny element typu danych Number, który reprezentuje wartość nieliczbową (NaN).</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="package.html#undefined" class="signatureLink">undefined</a> : <a href="specialTypes.html#*">*</a><div class="summaryTableDescription">
+ Wartość specjalna, która jest stosowana do niezainicjowanych zmiennych bez typu lub niezainicjowanych właściwości obiektów dynamicznych.</div></td><td class="summaryTableOwnerCol">Najwyższy&nbsp;poziom</td></tr></table></div><div class="detailSectionHeader"> Szczegół stałej </div><span id="pageFilter" runtime="Flash::9##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="constantDetail" id="constantDetail"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="-Infinity" id="-Infinity"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>-Infinity</h3></td><td class="detailHeaderType">Stała</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code>public const -Infinity:<a href="Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9</td></tr></table><p></p><p></p><p>
+ Wartość specjalna reprezentująca ujemną wartość <code>Infinity</code>. Wartość tej stałej jest taka sama, jak wartość <code>Number.NEGATIVE_INFINITY</code>.
+ </p><p><span class="label">Powiązane elementy interfejsu API</span></p><div class="seeAlso"><a href="Number.html#NEGATIVE_INFINITY" target="">Number.NEGATIVE_INFINITY</a></div><span id="pageFilter"><br/><span class="label"> Przykład &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_pl"> Sposób korzystania z tego przykładu </a></span>)
+            </span><br/><br/><div class="detailBody"> Wynikiem dzielenia przez 0 będzie wartość <code>-Infinity</code> tylko w przypadku, gdy dzielnik jest liczbą ujemną.
+<div class="listing"><pre>
+
+trace(0 / 0);  // NaN
+trace(7 / 0);  // Infinity
+trace(-7 / 0); // -Infinity
+
+
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="constantDetail" id="constantDetail"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Infinity" id="Infinity"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Infinity</h3></td><td class="detailHeaderType">Stała</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code>public const Infinity:<a href="Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9</td></tr></table><p></p><p></p><p>
+ Wartość specjalna reprezentująca dodatnią wartość <code>Infinity</code>. Wartość tej stałej jest taka sama, jak wartość <code>Number.POSITIVE_INFINITY</code>.
+ </p><p><span class="label">Powiązane elementy interfejsu API</span></p><div class="seeAlso"><a href="Number.html#POSITIVE_INFINITY" target="">Number.POSITIVE_INFINITY</a></div><span id="pageFilter"><br/><span class="label"> Przykład &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_pl"> Sposób korzystania z tego przykładu </a></span>)
+            </span><br/><br/><div class="detailBody"> Wynikiem dzielenia przez 0 będzie wartość <code>Infinity</code> tylko w przypadku, gdy dzielnik jest liczbą dodatnią.
+<div class="listing"><pre>
+
+trace(0 / 0);  // NaN
+trace(7 / 0);  // Infinity
+trace(-7 / 0); // -Infinity
+
+
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="constantDetail" id="constantDetail"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="NaN" id="NaN"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>NaN</h3></td><td class="detailHeaderType">Stała</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code>public const NaN:<a href="Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9</td></tr></table><p></p><p></p><p>
+ Specjalny element typu danych Number, który reprezentuje wartość nieliczbową (<code>NaN</code>). Jeśli wynikiem wyrażenia matematycznego jest wartość, której nie można wyrazić liczbą, wynik ten ma wartość <code>NaN</code>. Poniżej znajduje się lista zawierająca najczęściej występujące wyrażenia, których wynikiem jest wartość <code>NaN</code>.
+ <ul><li>Wynikiem dzielenia przez 0 jest wartość <code>NaN</code> tylko w przypadku, gdy dzielnik jest również liczbą 0. Jeśli dzielnik jest liczbą większą od 0, wynikiem dzielenia przez 0 jest wartość <code><code>Infinity</code></code>. Jeśli dzielnik jest liczbą mniejszą od 0, wynikiem dzielenia przez 0 jest wartość <code><code>-Infinity</code></code>;</li><li>Pierwiastek kwadratowy z liczby ujemnej;</li><li>Arcus sinus liczby spoza poprawnego zakresu od 0 do 1;</li><li>Wartość <code>Infinity</code> odjęta od wartości <code>Infinity</code>;</li><li>Wartość <code>Infinity</code> lub wartość <code>-Infinity</code> dzielona przez wartość <code>Infinity</code> lub wartość <code>-Infinity</code>;</li><li>Wartość <code>Infinity</code> lub wartość <code>-Infinity</code> mnożona przez 0;</li></ul>
+ <p>Wartość <code>NaN</code> nie należy do typów danych int ani uint.</p>
+ <p>Wartość <code>NaN</code> nie jest równa żadnej innej wartości, w tym wartości typu <code>NaN</code>, co wyklucza użycie operatora równości w celu sprawdzenia, czy wartość wyrażenia to <code>NaN</code>. Aby określić, czy liczba jest funkcją <code>NaN</code>, należy użyć funkcji <code>isNaN()</code>.</p>
+ 
+ </p><p><span class="label">Powiązane elementy interfejsu API</span></p><div class="seeAlso"><a href="package.html#isNaN()" target="">isNaN()</a><br/><a href="Number.html#NaN" target="">Number.NaN</a></div></div></span><span id="pageFilter" runtime="Flash::9##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="constantDetail" id="constantDetail"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="undefined" id="undefined"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>undefined</h3></td><td class="detailHeaderType">Stała</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code>public const undefined:<a href="specialTypes.html#*">*</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9</td></tr></table><p></p><p></p><p>
+ Wartość specjalna, która jest stosowana do niezainicjowanych zmiennych bez typu lub niezainicjowanych właściwości obiektów dynamicznych. W narzędziu ActionScript 3.0 tylko zmienne bez typu mogą przyjmować wartość <code>undefined</code>, co nie sprawdza się w przypadku wersji ActionScript 1.0 i ActionScript 2.0. Na przykład obydwie poniższe zmienne mają wartość <code>undefined</code> ponieważ nie posiadają typu i nie zostały zainicjowane:
+ <ul><li><code>var foo;</code></li><li><code>var bar:*;</code></li></ul>
+ <p>Wartość <code>undefined</code> ma zastosowanie również do właściwości bez typu lub niezainicjowanych, a należących do obiektów dynamicznych. Przykład: Jeśli obiekt stanowi instancję klasy Object, każda dynamicznie dodana właściwość będzie miała wartość <code>undefined</code>, chyba że właściwości zostanie przypisana wartość.
+ </p>
+ <p>Rezultaty użycia wartości <code>undefined</code> z różnymi funkcjami są różne:</p>
+ <ul><li>Wartość zwrócona przez funkcję <code>String(undefined)</code> to <code>"undefined"</code> (wartość <code>undefined</code> jest konwertowana na ciąg znaków).</li><li>Wartość zwrócona przez funkcję <code>Number(undefined)</code> to <code>NaN</code>.</li><li>Wartość zwrócona przez funkcję <code>int(undefined)</code> i <code>uint(undefined)</code> to 0.</li><li>Wartość zwrócona przez funkcję <code>Object(undefined)</code> to nowa instancja Object.</li><li>Jeśli wartość to <code>undefined</code>, zostanie przypisana do zmiennej o określonym typie, jest konwertowana na wartość domyślną dla tego typu danych.</li></ul>
+ <p>Nie należy mylić wartości <code>undefined</code> z wartością <code>null</code>. Porównanie wartości <code>null</code> i <code>undefined</code> z pomocą operatora równości (<code>==</code>) wykaże ich równoważność. Porównanie wartości <code>null</code> i <code>undefined</code> za pomocą operatora ścisłej równości (<code>===</code>) wykaże jednak, że te wartości nie są równoważne.</p>
+ </p><p><span class="label">Powiązane elementy interfejsu API</span></p><div class="seeAlso"><a href="statements.html#null" target="">null</a></div><span id="pageFilter"><br/><span class="label"> Przykład &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_pl"> Sposób korzystania z tego przykładu </a></span>)
+            </span><br/><br/><div class="detailBody"> Poniższy przykład ilustruje, jak zmienna <code>myVar</code> bez typu jest deklarowana, ale nie inicjowana. Wartość zmiennej <code>myVar</code> to <code>undefined</code>, ponieważ zmienna nie posiada typu. Jest to prawda w przypadku, gdy zmienna nie posiada opisu typu lub wykorzystuje specjalny nieposiadający typu opis (*) (<code>var myVar:*;</code>).
+<div class="listing"><pre>
+
+// trace value of untyped and uninitialized variable
+var myVar;
+trace(myVar); // undefined
+</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody"> Ta sama reguła ma zastosowanie do niezainicjowanych właściwości obiektu dynamicznego. Przykład: Dla instancji <code>obj</code> dynamicznej klasy <code>A</code> wartość właściwości <code>obj.propName</code>, która stanowi niezainicjowaną właściwość instancji <code>obj</code> to wartość <code>undefined</code>.
+<div class="listing"><pre>
+
+dynamic class A {}
+var obj:A = new A()
+
+// trace undefined property of obj
+trace(obj.propName); // undefined
+
+</pre></div></div></span></div></span><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodDetail" id="methodDetail"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailSectionHeader"> Szczegół funkcji </div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Array()" id="Array()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Array(restParam)" id="Array(restParam)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Array</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function Array(<a href="statements.html#..._(rest)_parameter">...</a> args):<a href="Array.html">Array</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Tworzy nową tablicę. Tablica może mieć długość zerową lub większą. Można w niej również umieścić jeden (podany) obiekt. 
+	 <ul><li>Wywołanie funkcji <code>Array()</code> bez argumentów spowoduje zwrot pustej tablicy.</li><li>Wywołanie funkcji <code>Array()</code> z pojedynczym argumentem liczby całkowitej spowoduje, że zwrócona tablica będzie miała określoną długość, a jej elementy będą posiadały wartość undefined.</li><li>Wywołanie funkcji <code>Array()</code> dla określonego obiektu zwraca tablicę z jednym elementem &mdash; tym obiektem.</li></ul>
+	 Efekt działania funkcji <code>Array()</code> jest <i>podobny</i> do utworzenia tablicy za pomocą konstruktora klasy Array, ale funkcja <code>Array()</code> umożliwia tylko użycie jednej wartości parametru lub pominięcie parametru. Funkcja <code>Array()</code> nie pozwala wypełnić nowej tablicy wieloma wartościami.
+	 <p><b>Uwaga:</b> Próba utworzenia nowej tablicy i przekazania do niej wielu wartości jako parametrów funkcji <code>Array()</code> w celu wypełnienia tej tabeli wywoła błąd kompilatora. Funkcja <code>Array()</code> pozwala użyć tylko jednego parametru. W celu utworzenia tablicy i wypełnienia jej wieloma wartościami należy użyć konstruktora klasy Array.</p>
+	 <p>Funkcja <code>Array()</code> nie rzutuje typu obiektu na tablicę. Operatora <code>as</code> można używać do jawnej konwersji typu lub do rzutowania typu, jeśli argument nie jest wartością pierwotną. Więcej informacji można znaleźć z sekcji Przykłady dla tego elementu języka. W przypadku przekazania obiektu jako parametru do funkcji <code>Array()</code> zostanie utworzona nowa tablica zawierająca ten obiekt jako element.</p>
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><a href="statements.html#..._(rest)_parameter">...</a> <span class="label">args</span></code> &mdash; Można nie przekazywać argumentów, aby uzyskać pustą tablicę, przekazać jeden argument będący liczbą całkowitą w celu utworzenia tablicy o określonej długości albo przekazać pojedynczy obiekt, co spowoduje utworzenie tablicy zawierającej ten obiekt.
+	 </td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Array.html">Array</a></code> &mdash; Tablica, której długość jest określona wartością zero lub większą.
+	 </td></tr></table><p><span class="label">Powiązane elementy interfejsu API</span></p><div class="seeAlso"><a href="Array.html" target="">klasa Array</a><br/><a href="operators.html#as" target="">jako operator</a></div><span id="pageFilter"><br/><span class="label"> Przykład &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_pl"> Sposób korzystania z tego przykładu </a></span>)
+            </span><br/><br/><div class="detailBody"> Poniższy przykład ilustruje zachowanie funkcji <code>Array()</code>, jeśli argument nie jest wartością pierwotną. Częstym przypadkiem wykorzystania rzutowania na tablicę jest konwersja instancji klasy Object, która zawiera wartości w formie tablicy. W przypadku wywołania funkcji <code>Array()</code> z argumentem typu <code>Object</code> lub innymi danymi, które nie są wartościami pierwotnymi w elemencie nowej tablicy przechowywane jest odwołanie do obiektu. Innymi słowy, jeśli jedynym przekazanym argumentem jest obiekt, odwołanie to tego obiektu staje się pierwszym elementem nowej tablicy.
+<div class="listing"><pre>
+var obj:Object = [ "a", "b", "c" ];
+      
+var newArray:Array = Array( obj );
+
+trace(newArray == obj);    // false
+trace(newArray[0] == obj); // true
+trace(newArray[0][0])      // a
+trace(newArray[0][1])      // b
+trace(newArray[0][2])      // c
+</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody"> Rzutowania obiektu <code>obj</code> na tablicę można dokonać za pomocą operatora <code>as</code>, który zwraca odwołanie do tablicy, jeśli argument <code>obj</code> stanowi poprawą tablicę. W przeciwnym razie zwracana jest wartość <code>null</code>:
+<div class="listing"><pre>
+var obj:Object = [ "a", "b", "c" ];
+      
+var newArray:Array = obj as Array;
+
+trace(newArray == obj); // true
+trace(newArray[0]);     // a
+trace(newArray[1]);     // b
+trace(newArray[2]);     // c
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Boolean()" id="Boolean()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Boolean(Object)" id="Boolean(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Boolean</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function Boolean(expression:<a href="Object.html">Object</a>):<a href="Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Konwertuje parametr <code>expression</code> na wartość typu Boolean i zwraca ją. 
+	 <p>Zwrócona wartość zależy od typu danych i wartości argumentu, jak opisano w poniższej tabeli:</p>
+	 
+	 <table class="innertable" ><tr><th>Wartość wejściowa</th><th>Przykład</th><th>Wartość zwrócona</th></tr><tr><td><code>0</code></td><td><code>Boolean(0)</code></td><td><code>false</code></td></tr><tr><td><code>NaN</code></td><td><code>Boolean(NaN)</code></td><td><code>false</code></td></tr><tr><td>Number (nie <code>0</code> lub <code>NaN</code>)</td><td><code>Boolean(4)</code></td><td><code>true</code></td></tr><tr><td>Pusty ciąg znaków</td><td><code>Boolean("")</code></td><td><code>false</code></td></tr><tr><td>Niepusty ciąg znaków</td><td><code>Boolean("6")</code></td><td><code>true</code></td></tr><tr><td><code>null</code></td><td><code>Boolean(null)</code></td><td><code>false</code></td></tr><tr><td><code>undefined</code></td><td><code>Boolean(undefined)</code></td><td><code>false</code></td></tr><tr><td>Instancja klasy Object</td><td><code>Boolean(new Object())</code></td><td><code>true</code></td></tr><tr><td>Bez argumentu</td><td><code>Boolean()</code></td><td><code>false</code></td></tr></table>
+	 <p>W przeciwieństwie do starszych wersji narzędzia ActionScript, funkcja <code>Boolean()</code> zwraca te same wyniki co konstruktor klasy Boolean.</p>
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">expression</span>:<a href="Object.html">Object</a></code> &mdash; Wyrażenie lub obiekt konwertowany na wartość typu Boolean.
+	 </td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Boolean.html">Boolean</a></code> &mdash; Rezultat konwersji na wartość typu Boolean.
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="decodeURI()" id="decodeURI()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="decodeURI(String)" id="decodeURI(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>decodeURI</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function decodeURI(uri:<a href="String.html">String</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Przekształca zakodowany identyfikator URI w ciąg znaków. Zwraca ciąg znaków, w którym wszystkie wcześniej zakodowane za pomocą funkcji <code>encodeURI</code> znaki zostały przywrócone do swojej reprezentacji sprzed kodowania.
+	 <p>Poniższy przykład przedstawia zbiór sekwencji zmiany znaczenia, które <i>nie</i> są dekodowane przez funkcję <code>decodeURI</code>. Do zdekodowania sekwencji zmiany znaczenia z tej tabeli należy używać metody <code>decodeURIComponent()</code>.</p>
+	 <table class="innertable" ><tr><th>Sekwencje zmiany znaczenia, które nie są dekodowane</th><th>Odpowiedniki znaków</th></tr><tr><td><code>%23</code></td><td><code>#</code></td></tr><tr><td><code>%24</code></td><td><code>$</code></td></tr><tr><td><code>%26</code></td><td><code>&</code></td></tr><tr><td><code>%2B</code></td><td><code>+</code></td></tr><tr><td><code>%2C</code></td><td><code>,</code></td></tr><tr><td><code>%2F</code></td><td><code>/</code></td></tr><tr><td><code>%3A</code></td><td><code>:</code></td></tr><tr><td><code>%3B</code></td><td><code>;</code></td></tr><tr><td><code>%3D</code></td><td><code>=</code></td></tr><tr><td><code>%3F</code></td><td><code>?</code></td></tr><tr><td><code>%40</code></td><td><code>@</code></td></tr></table>
+	 
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">uri</span>:<a href="String.html">String</a></code> &mdash; Ciąg znaków zakodowany za pomocą funkcji <code>encodeURI</code>.
+	 </td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code> &mdash; Ciąg znaków, w których wszystkie znaki zmienione za pomocą funkcji <code>encodeURI</code> zostały przywrócone do swojej reprezentacji przed zmianą.
+	 </td></tr></table><p><span class="label">Powiązane elementy interfejsu API</span></p><div class="seeAlso"><a href="package.html#decodeURIComponent()" target="">decodeURIComponent()</a><br/><a href="package.html#encodeURI()" target="">encodeURI()</a><br/><a href="package.html#encodeURIComponent()" target="">encodeURIComponent()</a></div><span id="pageFilter"><br/><span class="label"> Przykład &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_pl"> Sposób korzystania z tego przykładu </a></span>)
+            </span><br/><br/><div class="detailBody"><div class="listing"><pre>package {
+    import flash.display.Sprite;
+
+    public class DecodeURIExample extends Sprite {
+        public function DecodeURIExample() {
+            var uri:String = "http://www.example.com/application.jsp?user=&lt;user name='some user'&gt;&lt;/user&gt;";
+            var encoded:String = encodeURI(uri);
+            var decoded:String = decodeURI(encoded);
+            trace(uri);        // http://www.example.com/application.jsp?user=&lt;user name='some user'&gt;&lt;/user&gt;
+            trace(encoded);    // http://www.example.com/application.jsp?user=%3Cuser%20name='some%20user'%3E%3C/user%3E
+            trace(decoded);    // http://www.example.com/application.jsp?user=&lt;user name='some user'&gt;&lt;/user&gt;
+        }
+    }
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="decodeURIComponent()" id="decodeURIComponent()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="decodeURIComponent(String)" id="decodeURIComponent(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>decodeURIComponent</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function decodeURIComponent(uri:<a href="String.html">String</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Przekształca zakodowany składnik URI w ciąg znaków. Zwraca ciąg znaków, w którym wszystkie wcześniej zakodowane za pomocą funkcji <code>encodeURIComponent</code> znaki zostały przywrócone do swojej reprezentacji sprzed kodowania.
+	 <p>Ta funkcja różni się od funkcji <code>decodeURI()</code>, gdyż można jej używać tylko z fragmentem ciągu URI określanym jako składnik URI. Składnik URI to dowolny tekst pojawiający się między znakami specjalnymi nazywanymi <i>separatorami składników </i> (<code>: / ; oraz ? </code>). Typowymi przykładami składników URI są „http” i „www.adobe.com”.</p>
+	 <p>Ponadto, w odróżnieniu od funkcji <code>decodeURI()</code>, ta funkcja zakłada, iż przetwarza składnik identyfikatora URI i z tego względu traktuje wszystkie znaki zmiany znaczenia reprezentujące separatory (<code>; / ? : @ & = + $ , #</code>) jak regularny tekst, który należy zdekodować. </p>
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">uri</span>:<a href="String.html">String</a></code> &mdash; Ciąg znaków zakodowany z pomocą funkcji <code>encodeURIComponent</code>.
+	 </td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code> &mdash; Ciąg znaków, w których wszystkie znaki zmienione za pomocą funkcji <code>encodeURIComponent</code> zostały przywrócone do swojej reprezentacji przed zmianą.
+	 </td></tr></table><p><span class="label">Powiązane elementy interfejsu API</span></p><div class="seeAlso"><a href="package.html#decodeURI()" target="">decodeURI()</a><br/><a href="package.html#encodeURI()" target="">encodeURI()</a><br/><a href="package.html#encodeURIComponent()" target="">encodeURIComponent()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="encodeURI()" id="encodeURI()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="encodeURI(String)" id="encodeURI(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>encodeURI</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function encodeURI(uri:<a href="String.html">String</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Przekształca ciąg znaków w poprawny identyfikator URI (Uniform Resource Identifier). Konwertuje cały identyfikator URI na ciąg, w którym wszystkie znaki &mdash; oprócz znaków należących do bardzo małej grupy znaków podstawowych&mdash; są zakodowane jako sekwencje zmiany znaczenia UTF-8.
+	 <p>Poniższy przykład ilustruje cały zbiór znaków podstawowych, które <i>nie</i> są konwertowane na sekwencje zmiany znaczenia UTF-8 przez funkcję <code>encodeURI</code>.</p>
+	 <table class="innertable" ><tr><th>Znaki niekodowane</th></tr><tr><td><code>0 1 2 3 4 5 6 7 8 9</code></td></tr><tr><td><code>a b c d e f g h i j k l m n o p q r s t u v w x y z</code></td></tr><tr><td><code>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</code></td></tr><tr><td><code>; / ? : @ & = + $ , #</code></td></tr><tr><td><code>- _ . ! ~ * ' ( )</code></td></tr></table>
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">uri</span>:<a href="String.html">String</a></code> &mdash; Ciąg znaków reprezentujący pełny identyfikator URI.
+	 </td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code> &mdash; Ciąg zawierający określone znaki zakodowane jako sekwencje zmiany znaczenia UTF-8.
+	 </td></tr></table><p><span class="label">Powiązane elementy interfejsu API</span></p><div class="seeAlso"><a href="package.html#decodeURI()" target="">decodeURI()</a><br/><a href="package.html#decodeURIComponent()" target="">decodeURIComponent()</a><br/><a href="package.html#encodeURIComponent()" target="">encodeURIComponent()</a></div><span id="pageFilter"><br/><span class="label"> Przykład &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_pl"> Sposób korzystania z tego przykładu </a></span>)
+            </span><br/><br/><div class="detailBody"><div class="listing"><pre>package {
+    import flash.display.Sprite;
+
+    public class EncodeURIExample extends Sprite {
+        public function EncodeURIExample() {
+            var uri:String = "http://www.example.com/application.jsp?user=&lt;user name='some user'&gt;&lt;/user&gt;";
+            var encoded:String = encodeURI(uri);
+            var decoded:String = decodeURI(encoded);
+            trace(uri);        // http://www.example.com/application.jsp?user=&lt;user name='some user'&gt;&lt;/user&gt;
+            trace(encoded);    // http://www.example.com/application.jsp?user=%3Cuser%20name='some%20user'%3E%3C/user%3E
+            trace(decoded);    // http://www.example.com/application.jsp?user=&lt;user name='some user'&gt;&lt;/user&gt;
+        }
+    }
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="encodeURIComponent()" id="encodeURIComponent()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="encodeURIComponent(String)" id="encodeURIComponent(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>encodeURIComponent</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function encodeURIComponent(uri:<a href="String.html">String</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Przekształca ciąg znaków w poprawny składnik URI. Konwertuje fragment ciągu identyfikatora URI na ciąg, w którym wszystkie znaki &mdash; oprócz znaków należących do bardzo małej grupy znaków podstawowych&mdash; są zakodowane jako sekwencje zmiany znaczenia UTF-8.
+	 <p>Funkcja <code>encodeURIComponent()</code> różni się od funkcji <code>encodeURI()</code>, gdyż można jej używać tylko z fragmentem ciągu stanowiącym identyfikator URI określanym jako składnik URI. Składnik URI to dowolny tekst pojawiający się między znakami specjalnymi nazywanymi <i>separatorami składników </i> (<code>: / ; oraz ? </code>). Typowymi przykładami składników URI są „http” i „www.adobe.com”.</p>
+	 <p>Ponadto, w odróżnieniu od funkcji <code>encodeURI()</code>, ta funkcja zakłada, iż przetwarza składnik identyfikatora URI i z tego względu traktuje wszystkie znaki specjalne separatorów (<code>; / ? : @ & = + $ , #</code>) jako regularny tekst, który należy zakodować. </p>
+	 <p>Poniższa tabela zawiera wszystkie znaki, które <i>nie</i> są konwertowane na sekwencje zmiany znaczenia UTF-8 przez funkcję <code>encodeURIComponent</code>.</p>
+	 <table class="innertable" ><tr><th>Znaki niekodowane</th></tr><tr><td><code>0 1 2 3 4 5 6 7 8 9</code></td></tr><tr><td><code>a b c d e f g h i j k l m n o p q r s t u v w x y z</code></td></tr><tr><td><code>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</code></td></tr><tr><td><code>- _ . ! ~ * ' ( )</code></td></tr></table>	 
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">uri</span>:<a href="String.html">String</a></code></td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code></td></tr></table><p><span class="label">Powiązane elementy interfejsu API</span></p><div class="seeAlso"><a href="package.html#decodeURI()" target="">decodeURI()</a><br/><a href="package.html#decodeURIComponent()" target="">decodeURIComponent()</a><br/><a href="package.html#encodeURI()" target="">encodeURI()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="escape()" id="escape()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="escape(String)" id="escape(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>escape</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function escape(str:<a href="String.html">String</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Konwertuje parametr na ciąg znaków i koduje go w formacie adresu URL, gdzie większość znaków niebędących znakami alfanumerycznymi zastępowana jest szesnastkowymi sekwencjami symbolu <code>%</code>. W przypadku ciągu znaków w formacie adresu URL w celu wprowadzenia znaków zmiany znaczenia używany jest symbol procentu (<code>%</code>), który nie jest równoważny z operatorem modulo (<code>%</code>).
+	 <p>Poniższa tabela zawiera wszystkie znaki, które <i>nie</i> są konwertowane na sekwencje zmiany znaczenia za pomocą funkcji <code>escape()</code>.</p>
+	 <table class="innertable" ><tr><th>Znaki niekodowane</th></tr><tr><td><code>0 1 2 3 4 5 6 7 8 9</code></td></tr><tr><td><code>a b c d e f g h i j k l m n o p q r s t u v w x y z</code></td></tr><tr><td><code>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</code></td></tr><tr><td><code>@ - _ . * + /</code></td></tr></table>	 
+	 <p><b>Uwaga:</b> W przypadku użycia funkcji <code>encodeURIComponent()</code> zamiast <code>escape()</code> znaki specjalne separatora (<code>@ + /</code>) są traktowane jako zwykły tekst do zakodowania.</p>
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:<a href="String.html">String</a></code> &mdash; Wyrażenie konwertowane na ciąg znaków i kodowane w formacie adresu URL.
+	 </td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code> &mdash; Ciąg znaków zakodowany w formacie adresu URL.
+	 </td></tr></table><p><span class="label">Powiązane elementy interfejsu API</span></p><div class="seeAlso"><a href="package.html#unescape()" target="">unescape()</a><br/><a href="package.html#encodeURIComponent()" target="">encodeURIComponent()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="int()" id="int()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="int(Number)" id="int(Number)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>int</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function int(value:<a href="Number.html">Number</a>):<a href="int.html">int</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Konwertuje daną wartość liczbową na wartość liczby całkowitej. Wartości dziesiętne są odcinane w miejscu kropki dziesiętnej.
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="Number.html">Number</a></code> &mdash; Wartość konwertowana na liczbę całkowitą.
+	 </td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="int.html">int</a></code> &mdash; Konwertowana wartość liczby całkowitej.
+	 </td></tr></table><p><span class="label">Powiązane elementy interfejsu API</span></p><div class="seeAlso"><a href="package.html#uint()" target="">uint()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="isFinite()" id="isFinite()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="isFinite(Number)" id="isFinite(Number)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>isFinite</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function isFinite(num:<a href="Number.html">Number</a>):<a href="Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0.</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 W przypadku liczby skończonej zwraca wartość <code>true</code>. W przypadku wartości <code>Infinity</code> lub <code>-Infinity</code> zwraca wartość <code>false</code>. Wartość <code>Infinity</code> lub <code>-Infinity</code> wskazuje na wystąpienie błędu matematycznego, jak np. dzielenie przez 0.
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">num</span>:<a href="Number.html">Number</a></code> &mdash; Liczba określana jako liczba skończona lub nieskończoność.
+	 </td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Boolean.html">Boolean</a></code> &mdash; W przypadku liczby skończonej zwraca wartość <code>true</code>. W przypadku wartości nieskończoności lub minus nieskończoności zwraca wartość <code>false</code>
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="isNaN()" id="isNaN()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="isNaN(Number)" id="isNaN(Number)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>isNaN</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function isNaN(num:<a href="Number.html">Number</a>):<a href="Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Zwraca wartość <code>true</code> dla wartości <code>NaN</code> (nie liczba). Za pomocą funkcji <code>isNaN()</code> można sprawdzić, czy analizowane wyrażenie matematyczne jest liczbą. Najczęstsze zastosowanie <code>isNaN()</code> to sprawdzenie wartości zwracanej przez funkcje <code>parseInt()</code> i <code>parseFloat()</code>. Wartość <code>NaN</code> to specjalny element typu danych Number, który reprezentuje wartość nieliczbową. 
+	 <p><b>Uwaga</b>: Wartość <code>NaN</code> nie należy do typów danych int ani uint.</p>
+	 <p>Poniższa tabela opisuje wartości zwracane przez funkcję <code>isNaN()</code> dla różnych wejściowych typów danych i wartości. (Jeśli ostrzeżenia kompilatora są wysyłane w trybie dokładnym, niektóre z poniższych operacji będą generowały ostrzeżenia kompilatora).</p>
+	 <table class="innertable" ><tr><th>Typ wejściowy/Wartość wejściowa</th><th>Przykład</th><th>Wartość zwrócona</th></tr><tr><td>0 dzielone przez 0</td><td><code>isNaN(0/0)</code></td><td><code>true</code></td></tr><tr><td>Liczba, która nie jest zerem, dzielona przez <code>0</code></td><td><code>isNaN(5/0)</code></td><td><code>false</code></td></tr><tr><td>Pierwiastek kwadratowy z liczby ujemnej</td><td><code>isNaN(Math.sqrt(-1))</code></td><td><code>true</code></td></tr><tr><td>Arcus sinus liczby większej od 1 lub mniejszej od 0</td><td><code>isNaN(Math.asin(2))</code></td><td><code>true</code></td></tr><tr><td>Ciąg znaków, który można konwertować na typ Number</td><td><code>isNaN("5")</code></td><td><code>false</code></td></tr><tr><td>Ciąg znaków, którego nie można konwertować na typ Number</td><td><code>isNaN("5a")</code></td><td><code>true</code></td></tr></table>
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">num</span>:<a href="Number.html">Number</a></code> &mdash; Analizowana wartość liczbowa lub wyrażenie matematyczne.
+	 </td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Boolean.html">Boolean</a></code> &mdash; Dla wartości <code>NaN</code> (nie liczba) zwraca wartość <code>true</code>. W przeciwnym razie zwraca wartość <code>false</code>.
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="isXMLName()" id="isXMLName()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="isXMLName(String)" id="isXMLName(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>isXMLName</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function isXMLName(str:<a href="String.html">String</a>):<a href="Boolean.html">Boolean</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Określa, czy podany ciąg jest poprawną nazwą elementu lub atrybutu XML.
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:<a href="String.html">String</a></code> &mdash; Analizowany ciąg danych.
+	 </td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Boolean.html">Boolean</a></code> &mdash; Jeśli argument <code>str</code> stanowi poprawna nazwę XML, zwraca wartość <code>true</code>. W przeciwnym razie zwraca wartość <code>false</code>.
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Number()" id="Number()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Number(Object)" id="Number(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Number</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function Number(expression:<a href="Object.html">Object</a>):<a href="Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Konwertuje daną wartość liczbową na wartość typu Number. Poniższa tabela przedstawia rezultaty dla różnych typów danych wejściowych:
+	 
+	 <table class="innertable" ><tr><th>Typ wejściowy/Wartość wejściowa</th><th>Przykład</th><th>Wartość zwrócona</th></tr><tr><td><code>undefined</code></td><td><code>Number(undefined)</code></td><td><code>NaN</code></td></tr><tr><td><code>null</code></td><td><code>Number(null)</code></td><td><code>0</code></td></tr><tr><td><code>true</code></td><td><code>Number(true)</code></td><td><code>1</code></td></tr><tr><td><code>false</code></td><td><code>Number(false)</code></td><td><code>0</code></td></tr><tr><td><code>NaN</code></td><td><code>Number(NaN)</code></td><td><code>NaN</code></td></tr><tr><td>Pusty ciąg</td><td><code>Number("")</code></td><td><code>0</code></td></tr><tr><td>Ciąg znaków konwertowany na typ Number</td><td><code>Number("5")</code></td><td>Liczba (np. <code>5</code>)</td></tr><tr><td>Ciąg, którego nie można przekonwertować na typ Number</td><td><code>Number("5a")</code></td><td><code>NaN</code></td></tr></table>
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">expression</span>:<a href="Object.html">Object</a></code> &mdash; Wartość konwertowana na liczbę.
+	 </td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Number.html">Number</a></code> &mdash; Konwertowana wartość liczbowa
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Object()" id="Object()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Object(Object)" id="Object(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Object</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function Object(value:<a href="Object.html">Object</a>):<a href="Object.html">Object</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 W narzędziu ActionScript 3.0 każda wartość jest obiektem, z zatem w wyniku wywołania funkcji <code>Object()</code> dla wartości otrzymuje się zawsze wartość.
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="Object.html">Object</a></code> &mdash; Konwertowany obiekt, liczba, ciąg znaków lub wartość typu Boolean.
+	 </td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Object.html">Object</a></code> &mdash; Wartość określona przez parametr <code>value</code>.
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="parseFloat()" id="parseFloat()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="parseFloat(String)" id="parseFloat(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>parseFloat</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function parseFloat(str:<a href="String.html">String</a>):<a href="Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Konwertuje ciąg znaków na liczbę zmiennoprzecinkową. Funkcja odczytuje lub <i>analizuje składniowo</i> i zwraca liczby w ciągu znaków do momentu wystąpienia znaku, który nie będzie częścią początkowej liczby. Jeśli ciąg znaków nie rozpoczyna się liczbą, którą można analizować składniowo, funkcja <code>parseFloat()</code> zwraca wartość <code>NaN</code>. Białe znaki poprzedzające poprawne liczby całkowite, jak i wprowadzające znaki nienumeryczne są pomijane.
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:<a href="String.html">String</a></code> &mdash; Ciąg znaków odczytywany i konwertowany na liczbę zmiennoprzecinkową.
+	 </td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Number.html">Number</a></code> &mdash; Liczba lub wartość <code>NaN</code> (nie liczba).
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="parseInt()" id="parseInt()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="parseInt(String,uint)" id="parseInt(String,uint)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>parseInt</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function parseInt(str:<a href="String.html">String</a>, radix:<a href="uint.html">uint</a> = 0):<a href="Number.html">Number</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Konwertuje ciąg znaków na liczbę całkowitą. Jeśli określonego w parametrach ciągu znaków nie można konwertować na liczbę, funkcja zwraca wartość <code>NaN</code>. Ciągi znaków rozpoczynające się znakami 0x są interpretowane jako liczby szesnastkowe. W przeciwieństwie do wcześniejszych wersji, w tej wersji narzędzia ActionScript liczby całkowite rozpoczynające się cyfrą 0 <i>nie</i> są interpretowane jako liczby ósemkowe. Dla liczb ósemkowych należy określić podstawę 8. Białe znaki i zera poprzedzające poprawne liczby całkowite, jak również nienumeryczne znaki wprowadzające są pomijane.
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:<a href="String.html">String</a></code> &mdash; Ciąg znaków konwertowany na liczbę całkowitą.
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">radix</span>:<a href="uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; Liczba całkowita reprezentująca podstawę analizowanej składniowo liczby. Wartości poprawne należą do zakresu od 2 do 36.
+	 </td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Number.html">Number</a></code> &mdash; Liczba lub wartość <code>NaN</code> (nie liczba).
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="String()" id="String()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="String(Object)" id="String(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>String</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function String(expression:<a href="Object.html">Object</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Zwraca ciąg reprezentujący określony parametr.
+	 <p>Poniższa tabela przedstawia rezultaty dla różnych typów danych wejściowych:</p>
+	 <table class="innertable" ><tr><th>Typ wejściowy/Wartość wejściowa</th><th>Wartość zwrócona</th></tr><tr><td><code>undefined</code></td><td><code>undefined</code></td></tr><tr><td><code>null</code></td><td><code>"null"</code></td></tr><tr><td><code>true</code></td><td><code>"true"</code></td></tr><tr><td><code>false</code></td><td><code>"false"</code></td></tr><tr><td><code>NaN</code></td><td><code>"NaN"</code></td></tr><tr><td>String</td><td>String</td></tr><tr><td>Object</td><td>Object.toString()</td></tr><tr><td>Number</td><td>Ciąg znaków reprezentujący liczbę</td></tr></table>
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">expression</span>:<a href="Object.html">Object</a></code> &mdash;  Wyrażenie konwertowane na ciąg znaków.
+	 </td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code> &mdash; Ciąg znaków reprezentujący wartość przekazaną do parametru <code>expression</code>.
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##AIR::1.0##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="trace()" id="trace()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="trace(restParam)" id="trace(restParam)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>trace</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function trace(<a href="statements.html#..._(rest)_parameter">...</a> arguments):<a href="specialTypes.html#void">void</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>Flash Player 9, AIR 1.0, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 W trakcie debugowania wyświetla wyrażenia lub zapisuje informacje w dzienniku. Pojedyncza instrukcja trace może obsługiwać wiele argumentów. Jeśli argument w instrukcji trace zawiera typ danych inny niż String, funkcja trace wywołuje skojarzoną metodę <code>toString()</code> dla tego typu danych. Jeśli na przykład argument stanowi wartość typu Boolean, funkcja trace wywołuje metodę <code>Boolean.toString()</code> i wyświetla zwróconą wartość. 
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><a href="statements.html#..._(rest)_parameter">...</a> <span class="label">arguments</span></code> &mdash; Jedno lub więcej analizowanych wyrażeń (oddzielonych przecinkiem). W przypadku wielu wyrażeń ich wyniki oddzielane są spacją.
+     </td></tr></table></p><span id="pageFilter"><br/><span class="label"> Przykład &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_pl"> Sposób korzystania z tego przykładu </a></span>)
+            </span><br/><br/><div class="detailBody"> Poniższy przykład ilustruje użycie klasy <code>TraceExample</code> w celu pokazania sposobu, w jaki można użyć metody <code>trace()</code>, aby wydrukować prosty ciąg znaków. Zwykle taki komunikat jest drukowany w przypadku Konsoli debugowania.
+<div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+
+    public class TraceExample extends Sprite {
+
+        public function TraceExample() {
+            trace("Hello World");
+        }
+    }
+}
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="uint()" id="uint()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="uint(Number)" id="uint(Number)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>uint</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function uint(value:<a href="Number.html">Number</a>):<a href="uint.html">uint</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Konwertuje daną wartość liczbową na liczbę całkowitą bez znaku. Wartości dziesiętne są odcinane w miejscu kropki dziesiętnej.
+	 <p>Poniższy przykład ilustruje wartość zwróconą przez funkcję <code>uint()</code> dla różnych typów i wartości wejściowych.</p>
+	 <table class="innertable" ><tr><th>Typ wejściowy/Wartość wejściowa</th><th>Przykład</th><th>Wartość zwrócona</th></tr><tr><td><code>undefined</code></td><td><code>uint(undefined)</code></td><td><code>0</code></td></tr><tr><td><code>null</code></td><td><code>uint(null)</code></td><td><code>0</code></td></tr><tr><td><code>0</code></td><td><code>uint(0)</code></td><td><code>0</code></td></tr><tr><td><code>NaN</code></td><td><code>uint(NaN)</code></td><td><code>0</code></td></tr><tr><td>Dodatnia liczba zmiennoprzecinkowa</td><td><code>uint(5.31)</code></td><td>Przycięta liczba całkowita bez znaku (np. <code>5</code>)</td></tr><tr><td>Ujemna liczba zmiennoprzecinkowa</td><td><code>uint(-5.78)</code></td><td>Przycina do liczby całkowitej, a następnie stosuje zasadę dla ujemnych liczb całkowitych</td></tr><tr><td>Ujemna liczba całkowita</td><td><code>uint(-5)</code></td><td>Suma wartości <code>uint.MAX_VALUE</code> oraz ujemnej liczby całkowitej (na przykład <code>uint.MAX_VALUE + (-5)</code>)</td></tr><tr><td><code>true</code></td><td><code>uint(true)</code></td><td><code>1</code></td></tr><tr><td><code>false</code></td><td><code>uint(false)</code></td><td><code>0</code></td></tr><tr><td>Pusty ciąg znaków</td><td><code>uint("")</code></td><td><code>0</code></td></tr><tr><td>Ciąg znaków konwertowany na typ Number</td><td><code>uint("5")</code></td><td>Liczba</td></tr><tr><td>Ciąg znaków, którego nie można konwertować na typ Number</td><td><code>uint("5a")</code></td><td><code>0</code></td></tr></table>
+
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:<a href="Number.html">Number</a></code> &mdash; Wartość konwertowana na liczbę całkowitą.
+	 </td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="uint.html">uint</a></code> &mdash; Konwertowana wartość liczby całkowitej.
+	 </td></tr></table><p><span class="label">Powiązane elementy interfejsu API</span></p><div class="seeAlso"><a href="package.html#int()" target="">int()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="unescape()" id="unescape()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="unescape(String)" id="unescape(String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>unescape</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function unescape(str:<a href="String.html">String</a>):<a href="String.html">String</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Analizuje parametr <code>str</code> jako ciąg znaków, odtwarza reprezentację ciągu znaków sprzed kodowania formacie URL (poprzez konwersję wszystkich sekwencji szesnastkowych na znaki ASCII) i zwraca ciąg znaków.
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:<a href="String.html">String</a></code> &mdash; Ciąg znaków zawierający zmieniane sekwencje szesnastkowe.
+	 </td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="String.html">String</a></code> &mdash; Ciąg zdekodowany z parametru w formacie adresu URL.
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Vector()" id="Vector()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="Vector(Object)" id="Vector(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>Vector</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function Vector(sourceArray:<a href="Object.html">Object</a>):<a href="Vector.html">Vector</a>.&lt;T&gt;</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>Flash Player 10, AIR 1.5, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Tworzy nową instancję Vector, której elementy są instancjami określonego typu danych. Wywołanie tej funkcji spowoduje określenie za pomocą parametru type typu danych elementów wynikowej instancji Vector (<i>typ bazowy</i> instancji Vector). Ta funkcja korzysta ze składni używanej do deklaracji instancji Vector lub wywoływania konstruktora <code>new Vector.&lt;T&gt;()</code>:
+	 
+	 <div class="listing"><pre>var v:Vector.&lt;String&gt; = Vector.&lt;String&gt;(["Hello", "World"]);</pre></div>
+	 
+	 <p>Wynikowa instancja Vector zapełniania jest wartościami w postaci elementów argumentu <code>sourceArray</code>. Jeśli argument <code>sourceArray</code> stanowi już instancję Vector.&lt;T>, gdzie <code>T</code> określa typ bazowy, funkcja zwraca te instancję Vector. W przeciwnym razie wynikowa instancja Vector jest zapełniana elementami argumentu Array <code>sourceArray</code> lub instancji Vector.</p>
+	 
+	 <p>W obydwu przypadkach typ danych wszystkich elementów argumentu <code>sourceArray</code> musi być zgodny z typem bazowym <code>T</code> określonym dla wywołania funkcji.</p>
+	 
+	 <p>Jeśli argument <code>sourceArray</code> posiada właściwość <code>length</code> o wartości 0, funkcja zwraca pustą instancję Vector.</p>
+	 
+	 <p>Jeśli typ bazowy przekazanej jako argument <code>sourceArray</code> instancji Vector nie jest typem <code>T</code> lub jeśli nie wszystkie elementy przekazanego obiektu Array są instancjami należącymi do typu danych <code>T</code>, następuje próba konwertowania wartości na typ bazowy. W przypadku możliwości automatycznej konwersji wartości wynikowa instancja Vector zawierać będzie wartości po konwersji. W przypadku braku możliwości konwersji generowany jest błąd.</p>
+	 
+	 <p>Podobnie dzieje się w przypadku, gdy element argumentu <code>sourceArray</code> jest instancją podklasy typu bazowego <code>T</code>. Wywołanie przebiega pomyślnie, a element jest dodawany do wynikowej instancji Vector. Sprawdza się to nawet w przypadku, gdy argument <code>sourceArray</code> jest instancją Vector, której typ bazowy stanowi podklasę typu <code>T</code>. W rzeczywistości jest to jedyny sposób na przeprowadzenie konwersji instancji Vector o typie bazowym <code>T</code> na instancję Vector, której typ bazowy jest nadklasą dla typu <code>T</code>.</p>
+	 
+	 <p>Przykład: wynikiem wykonania poniższego kodu jest błąd kompilacji w trybie dokładnym lub błąd TypeError środowiska wykonawczego wywołany próbą przypisania instancji Vector.&lt;Sprite> do instancji Vector.Zmienna &lt;DisplayObject> (Sprite stanowi podklasę zmiennej DisplayObject):</p>
+	 
+	 <div class="listing"><pre>
+     var v1:Vector.&lt;Sprite&gt; = new Vector.&lt;Sprite&gt;();
+     v1[0] = new Sprite();
+     var v2:Vector.&lt;DisplayObject&gt; = v1;
+     </pre></div>
+	 
+	 <p>Za pomocą poniższej, alternatywnej wersji kodu można pomyślnie przeprowadzić kopiowanie elementów instancji Vector.&lt;Sprite> do instancji Vector.Instancja &lt;DisplayObject>:</p>
+	 
+	 <div class="listing"><pre>
+     var v1:Vector.&lt;Sprite&gt; = new Vector.&lt;Sprite&gt;();
+     v1[0] = new Sprite();
+     var v2:Vector.&lt;DisplayObject&gt; = Vector.&lt;DisplayObject&gt;(v1);
+     </pre></div>
+	 
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">sourceArray</span>:<a href="Object.html">Object</a></code> &mdash; Obiekt Array lub instancja Vector, którego elementy stają się elementami wynikowej instancji Vector. Jeśli argument stanowi instancję Vector, której skojarzony typ danych jest taki sam, jak określony typ danych, zwróconym wynikiem funkcji będzie ten argument.
+	 
+	 </td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Vector.html">Vector</a>.&lt;T&gt;</code> &mdash; Instancja Vector zapełniona elementami tablicy <code>sourceArray</code>.
+	 
+	 </td></tr></table><br/><span class="label">Zgłasza</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="TypeError.html">TypeError</a> </code> &mdash; Jeśli argument <code>sourceArray</code> zawiera element, którego nie można konwertować na określony typ danych.
+	 
+	 </td></tr></table><p><span class="label">Powiązane elementy interfejsu API</span></p><div class="seeAlso"><a href="Vector.html" target="">Klasa Vector</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="XML()" id="XML()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="XML(Object)" id="XML(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>XML</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function XML(expression:<a href="Object.html">Object</a>):<a href="XML.html">XML</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+	 Konwertuje obiekt na obiekt XML. 
+	 <p>Poniższa tabela przedstawia wartości zwracane dla różnych typów danych wejściowych.</p>
+	 	<table class="innertable" ><tr><th>Typ parametru</th><th>Wartość zwrócona</th></tr><tr><td>Boolean</td><td>W pierwszej kolejności wartość jest konwertowana na ciąg, a następnie na obiekt XML.</td></tr><tr><td>Null</td><td>Pojawia się błąd środowiska wykonawczego (wyjątek TypeError).</td></tr><tr><td>Number</td><td>W pierwszej kolejności wartość jest konwertowana na ciąg znaków, a następnie na obiekt XML.</td></tr><tr><td>Object</td><td>Konwertuje jedynie na obiekt XML, jeśli jest to wartość typu String, Number lub Boolean. W przeciwnym razie pojawia się błąd środowiska wykonawczego (wyjątek TypeError).</td></tr><tr><td>String</td><td>Wartość konwertowana na obiekt XML.</td></tr><tr><td>Undefined</td><td>Występuje błąd środowiska wykonawczego (wyjątek TypeError).</td></tr><tr><td>XML</td><td>Zwracana jest niezmieniona wartość wejściowa.</td></tr><tr><td>XMLList</td><td>Zwraca jedynie obiekt XML, jeśli obiekt XMLList zawiera tylko jedną właściwość typu XML. W przeciwnym razie występuje błąd środowiska wykonawczego (wyjątek TypeError).</td></tr></table>
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">expression</span>:<a href="Object.html">Object</a></code> &mdash; Obiekt konwertowany na obiekt XML.
+	 </td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="XML.html">XML</a></code> &mdash; Obiekt XML zawierający wartości obiektu konwertowanego.
+	 </td></tr></table><p><span class="label">Powiązane elementy interfejsu API</span></p><div class="seeAlso"><a href="package.html#XMLList()" target="">XMLList()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="XMLList()" id="XMLList()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="XMLList(Object)" id="XMLList(Object)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h3>XMLList</h3></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">funkcja</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function XMLList(expression:<a href="Object.html">Object</a>):<a href="XMLList.html">XMLList</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersja języka:&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Wersje środowiska wykonawczego:&nbsp;</b></td><td>AIR 1.0, Flash Player 9, Flash Lite 4</td></tr></table><p></p><p></p><p>
+     Konwertuje obiekt na obiekt XMLList.
+     <p>Poniższa tabela przedstawia wartości zwracane dla różnych typów danych wejściowych.</p>
+	 <table class="innertable" ><tr><th>Typ parametru</th><th>Wartość zwrócona</th></tr><tr><td>Boolean</td><td>W pierwszej kolejności wartość jest konwertowana na ciąg znaków, a następnie na obiekt XMLList.</td></tr><tr><td>Null</td><td>Pojawia się błąd środowiska wykonawczego (wyjątek TypeError).</td></tr><tr><td>Number</td><td>W pierwszej kolejności wartość jest konwertowana na ciąg, a następnie na obiekt XMLList.</td></tr><tr><td>Object</td><td>Konwertuje jedynie na obiekt XMLList, jeśli jest to wartość typu String, Number lub Boolean. W przeciwnym razie pojawia się błąd środowiska wykonawczego (wyjątek TypeError).</td></tr><tr><td>String</td><td>Wartość jest konwertowana na obiekt XMLList.</td></tr><tr><td>Undefined</td><td>Występuje błąd środowiska wykonawczego (wyjątek TypeError).</td></tr><tr><td>XML</td><td>Wartość jest konwertowana na obiekt XMLList.</td></tr><tr><td>XMLList</td><td>Zwracana jest niezmieniona wartość wejściowa.</td></tr></table>
+	 </p><p><span class="label"> Parametry </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">expression</span>:<a href="Object.html">Object</a></code> &mdash; Obiekt konwertowany na obiekt XMLList.
+	 </td></tr></table></p><p></p><span class="label">Zwraca</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="XMLList.html">XMLList</a></code> &mdash; Obiekt XMLList zawierający wartości konwertowanego obiektu.
+	 </td></tr></table><p><span class="label">Powiązane elementy interfejsu API</span></p><div class="seeAlso"><a href="package.html#XML()" target="">XML()</a></div></div></span><p></p><center class="copyright"> &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 12:22 PM Z  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/pl_PL/legalnotices/index.html">Informacje prawne</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Zasady prywatności online</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+		<div id="whyEnglishContent">
+			<div id="light" class="white_content">
+				<div class="white_content_title">
+					<span style="float:right"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">[ X ]</a></span><span style="float:left">Dlaczego język angielski?</span>
+				</div>
+				<div class="white_content_body">
+					<b>Treść dokumentacji języka ActionScript 3.0 wyświetlana w języku angielskim</b><br><br>
+					Niektóre części dokumentacji języka ActionScript 3.0 nie są przetłumaczone na poszczególne języki. Gdy element nie jest przetłumaczony na dany język, jest wyświetlany tekst angielski. Na przykład opis klasy ga.controls.HelpBox nie jest przetłumaczony na żaden dodatkowy język. Z tego powodu polska wersja dokumentacji zawiera opis klasy ga.controls.HelpBox w języku angielskim.
+				</div>
+			</div>
+			<div id="fade" class="black_overlay"></div>
+		</div>
+		
+		
+		<script src="http://community.adobe.com/help/badge/v3/ionLoader.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionSupport.js" type="text/javascript"></script>
+		<script src="http://community.adobe.com/help/badge/v3/ionBadge.js" type="text/javascript"></script>
+	</body>
+</html><!-- &copy; 2015 Adobe Systems Incorporated. All rights reserved. <br/>Tue Jun 12 2018, 12:22 PM Z  -->
