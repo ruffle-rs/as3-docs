@@ -777,7 +777,7 @@ var ionSupportLoadReady=false;
 var agt=navigator.userAgent.toLowerCase();
 var use_robohelp_behavior=false;
 if(typeof(terms_HELPCFG)!="undefined"&&terms_HELPCFG.length>0){var loc=getLangName();
-helpcfgPath="http://"+window.location.host+"/HelpCfg/"+loc+"/"+terms_HELPCFG
+helpcfgPath="https://"+window.location.host+"/as3/HelpCfg/"+loc+"/"+terms_HELPCFG
 }var helpcfgLoaded=false;
 function loadIonComments(){if(!helpcfgLoaded){$.get(helpcfgPath,function(a){helpcfgLoaded=true;
 info=a.getElementsByTagName("product");
