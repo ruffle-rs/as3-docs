@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"><html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers"><meta name="lang" content="en-us"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="VertexBuffer3D,flash.display3D.VertexBuffer3D,dispose,uploadFromByteArray,uploadFromVector"><title>flash.display3D.VertexBuffer3D - Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers</title>
+	<link rel="stylesheet" href="../../jslr-style.css" type="text/css">
+		<script type="text/javascript">
+			
+				var baseRef = "../../";
+				var buildType = 'jslr';
+				var alreadyrunflag=0; //flag to indicate whether target function has already been run
+				var terms_HELPCFG = ".helpcfg";
+
+if (document.addEventListener)
+  document.addEventListener("DOMContentLoaded", function(){alreadyrunflag=1; init()}, false)
+else if (document.all && !window.opera){
+  /* blocks IE from working, as it's fired before dom if ready
+ document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
+  var contentloadtag=document.getElementById("contentloadtag")
+  contentloadtag.onreadystatechange=function(){
+    if (this.readyState=="complete"){
+      alreadyrunflag=1;
+      init();
+    }
+  }*/
+} else if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+  var _timer=setInterval(function(){
+  if(/loaded|complete/.test(document.readyState)){
+    clearInterval(_timer);
+    alreadyrunflag=1;
+    init(); // call target function
+  }}, 10)
+}
+function onLoadFunction() {
+	setTimeout("if (!alreadyrunflag) init();  alreadyrunflag=1; ionReadyLoad(); ", 0);
+}
+
+		</script>
+		<script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+		<script language="javascript" type="text/javascript" src="../../asdoc.js"></script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body onLoad="onLoadFunction()">
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td>
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr>
+				  <td class="titleTableTitleION" align="left" nowrap="true">Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers<br>
+				  <span class="titleTableTopNavION">
+				  <span id="homelink">
+						<a target="_self" href="../../index.html"> Home </a>&nbsp;|&nbsp;
+				  </span>
+				  <a id="showtoc" onClick="showHideTOC(true)" href="#top" style="display:none">Show Classes List</a><a id="hidetoc" onClick="showHideTOC(false)" href="#top" style="display:">Hide Classes List</a>&nbsp;|&nbsp;
+				  <a href="../../all-index-A.html"> Index </a>&nbsp;|&nbsp;
+				  <a href="../../appendixes.html"> Appendixes </a><br>
+				  </span>	
+				  </td>
+				  <td class="titleTableSearchION" align="right" nowrap="true">
+				  <span id="gsa" class="gsa">
+					<form class="searchFormION" method="get" onSubmit="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US');return false;">
+				  <input class="hidden" name="loc" value="" type="hidden">
+				  <input class="hidden" name="termPrefix" value="site:help.adobe.com/en_US/AS3CLR/Flash_10.0" type="hidden">
+				  <input class="hidden" name="title" value="ActionScript 3.0 Reference for the Adobe Flash Platform" type="hidden">
+				  <input class="hidden" name="term" value="" type="hidden">
+				  <input class="hidden" name="area" value="" type="hidden">
+				  <input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text">
+				  <input type="button" name="action" value="" onClick="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US')" class="searchbutton"><br>
+			      <input id="checkBoxId" type="checkbox" name="checkbox" value="checkbox" checked>Language Reference only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  </form>
+				  </span>				  
+				  </td>
+				</tr>
+			  </table>			
+			  </td>
+			<td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logoION.jpg" class="logoImageION" alt=" Adobe Logo " title=" Adobe Logo "></td>
+		  </tr>
+		  <tr>
+			<td colspan="2">
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr class="titleTableRow2">
+				<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+					<convert>VertexBuffer3D&nbsp;</convert>
+				</td>
+				<td class="titleTableSubNav" id="subNav" align="right">
+				  <a id="propertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="propertiesBar" style="display:none"> | </span>
+				  <a id="packagePropertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="packagePropertiesBar" style="display:none"> | </span>
+				  <a id="constructorLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+				  <span id="constructorBar" style="display:none"> | </span>
+				  <a id="methodsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Methods </a>
+				  <span id="methodsBar" style="display:none"> | </span>
+				  <a id="packageFunctionsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Functions </a>
+				  <span id="packageFunctionsBar" style="display:none"> | </span>
+				  <a id="eventsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('eventSummary');" style="display:none"> Events </a>
+				  <span id="eventsBar" style="display:none"> | </span>
+				  <a id="stylesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('styleSummary');" style="display:none"> Styles </a>
+				  <span id="stylesBar" style="display:none"> | </span>
+				  <a id="SkinPartLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinPartSummary');" style="display:none"> Skin Parts </a>
+				  <span id="SkinPartBar" style="display:none"> | </span>
+				  <a id="SkinStateLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinStateSummary');" style="display:none"> Skin States </a>
+				  <span id="SkinStateBar" style="display:none"> | </span>
+				  <a id="effectsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('effectSummary');" style="display:none"> Effects </a>
+				  <span id="effectsBar" style="display:none"> | </span>
+				  <a id="constantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="constantsBar" style="display:none"> | </span>
+				  <a id="packageConstantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="packageConstantsBar" style="display:none"> | </span>
+				  <a id="interfacesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('interfaceSummary');" style="display:none"> Interfaces </a>
+				  <span id="interfacesBar" style="display:none"> | </span>
+				  <a id="classesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('classSummary');" style="display:none"> Classes </a>
+				  <span id="classesBar" style="display:none"> | </span>
+				  <a id="packageUseLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('package-use.html');" style="display:none">Use</a>
+				  <span id="packageUseBar" style="display:none"> | </span>
+				  <a id="examplesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('includeExamplesSummary');" style="display:none"> Examples </a>
+				</td>
+				</tr>
+				<tr class="titleTableRow3">
+				  <td colspan="4"></td>
+				</tr>
+			  </table>
+			</td>
+		  </tr>
+		</table>
+        <div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="classlist" class="jslrclasslist">
+					<div class="classlistoutline"></div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content">
+<script language="javascript" type="text/javascript">  <!--  
+         
+        asdocTitle = "VertexBuffer3D - Adobe® AIR® API Reference for HTML Developers"; 
+        var baseRef = '../../'; 
+	document.baseRef = '../../'; 
+          -->  </script>
+<script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+<script language="javascript" type="text/javascript"><!--
+function submitValue() {
+var title="Adobe® AIR® API Reference for HTML Developers";
+var searchStr=document.getElementById('search-livedocs').value;
+
+        
+        
+        if(document.getElementById('checkBoxId').checked){
+        window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
++"&site=communityhelp-air-jslr ";
+} 
+
+        else{ 
+window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
+;
+} 
+} 
+--></script><script type="text/javascript"> scrollToNameAnchor(); </script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">window.runtime property</td><td>window.runtime.flash.display3D.VertexBuffer3D</td></tr><tr><td class="classSignature"></td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">VertexBuffer3D  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><div id="badgeAnchorSupport" class="ionBadgeWrapper"></div><div id="badgeContainerSupport"></div><p></p><p></p>
+
+ The VertexBuffer3D class represents a set of vertex data uploaded to a rendering context.
+
+ 
+ <p>Use a VertexBuffer3D object to define the data associated with each point in a set of
+
+ vertexes. You can upload the vertex data either from a Vector array or a ByteArray. (Once
+
+ uploaded, the data in the original array is no longer referenced; changing or discarding the 
+
+ source array does not change the vertex data.)</p>
+
+ 
+
+               <p>The data associated with each vertex is in an application-defined format and is used as the
+
+ input for the vertex shader program. Identify which values belong
+
+ to which vertex program input using the Context3D <code>setVertexBufferAt()</code> function. 
+
+ A vertex program can use up to eight inputs (also known as vertex attribute registers). Each
+
+ input can require between one and four 32-bit values. For example, the [x,y,z] position
+
+ coordinates of a vertex can be passed to a vertex program as a vector containing three 32 bit
+
+ values. The Context3DVertexBufferFormat class defines constants for the supported 
+
+ formats for shader inputs. You can supply up to sixty-four 32-bit values (256 bytes) of data 
+
+ for each point (but a single vertex shader cannot use all of the data in this case).</p>
+
+ 
+
+               <p>The <code>setVertexBufferAt()</code> function also identifies which vertex buffer to use 
+
+ for rendering any subsequent <code>drawTriangles()</code> calls. To render data from a different 
+
+ vertex buffer, call <code>setVertexBufferAt()</code> again with the appropriate arguments. 
+
+ (You can store data for the same point in multiple vertex buffers,
+
+ say position data in one buffer and texture coordinates in another, but typically rendering is
+
+ more efficient if all the data for a point comes from a single buffer.)</p> 
+
+ 
+
+               <p>The Index3DBuffer
+
+ object passed to the Context3D <code>drawTriangles()</code> method organizes the vertex data into 
+
+ triangles. Each value in the index buffer is the index to a vertex in the vertex buffer.
+
+ A set of three indexes, in sequence, defines a triangle.</p>
+
+ 
+
+               <p>You cannot create a VertexBuffer3D object directly. Use the  
+
+ Context3D <code>createVertexBuffer()</code> method instead.</p>
+
+ 
+               <p>To free the render context resources associated with a vertex buffer, call the object's <code>dispose()</code>
+
+ method.</p>
+
+ 
+
+            <p></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="Context3D.html#createVertexBuffer()" target="">Context3D.createVertexBuffer()</a><br/><a href="Context3D.html#setVertexBufferAt()" target="">Context3D.setVertexBufferAt()</a><br/><a href="Context3DVertexBufferFormat.html" target="">Context3DVertexBufferFormat</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Properties</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Properties</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Properties</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable hideInheritedProperty" id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th>Defined By</th></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">constructor : Object<div class="summaryTableDescription">
+
+	 A reference to the class object or constructor function for a given object instance.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">prototype : Object<div class="summaryTableDescription">[static] 
+
+	 A reference to the prototype object of a class or function object.</div></td><td class="summaryTableOwnerCol">Object</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Public Methods </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Methods</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th>Defined By</th></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#dispose()" class="signatureLink">dispose</a>():void</div><div class="summaryTableDescription">
+
+	 Frees all resources associated with this object.</div></td><td class="summaryTableOwnerCol">VertexBuffer3D</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">hasOwnProperty(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an object has a specified property defined.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">isPrototypeOf(theClass:Object):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+
+	 as the parameter.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">propertyIsEnumerable(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether the specified property exists and is enumerable.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">setPropertyIsEnumerable(name:String, isEnum:Boolean = true):void</div><div class="summaryTableDescription">
+
+     Sets the availability of a dynamic property for loop operations.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toLocaleString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of this object, formatted according to locale-specific conventions.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#uploadFromByteArray()" class="signatureLink">uploadFromByteArray</a>(data:<a href="../utils/ByteArray.html">ByteArray</a>, byteArrayOffset:int, startVertex:int, numVertices:int):void</div><div class="summaryTableDescription">
+
+	 Uploads the data for a set of points to the rendering context from a byte array.</div></td><td class="summaryTableOwnerCol">VertexBuffer3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#uploadFromVector()" class="signatureLink">uploadFromVector</a>(data:<a href="../../Vector.html">Vector</a>.&lt;Number&gt;, startVertex:int, numVertices:int):void</div><div class="summaryTableDescription">
+
+	 Uploads the data for a set of points to the rendering context from a vector array.</div></td><td class="summaryTableOwnerCol">VertexBuffer3D</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">valueOf():Object</div><div class="summaryTableDescription">
+
+	 Returns the primitive value of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="dispose()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>dispose</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function dispose():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+	 Frees all resources associated with this object. 		 		 
+
+	 After disposing a vertex buffer, calling upload() and rendering using this object will fail. 
+
+	 
+
+	 </p></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="uploadFromByteArray()"></a><a name="uploadFromByteArray(flash.utils.ByteArray,int,int,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>uploadFromByteArray</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function uploadFromByteArray(data:<a href="../utils/ByteArray.html">ByteArray</a>, byteArrayOffset:int, startVertex:int, numVertices:int):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+	 Uploads the data for a set of points to the rendering context from a byte array.
+
+	 
+	 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">data</span>:<a href="../utils/ByteArray.html">ByteArray</a></code> &mdash; a byte array containing the vertex data. Each data value is four bytes long. The number of values in a vertex is specified at 
+
+	 buffer creation using the <code>data32PerVertex</code> parameter to the Context3D <code>createVertexBuffer3D()</code> method. 
+
+	 The length of the data in bytes must be <code>byteArrayOffset</code> plus four times the number of values per vertex times the number of vertices.
+
+	 The ByteArray object must use the little endian format.
+
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">byteArrayOffset</span>:int</code> &mdash; number of bytes to skip from the beginning of data
+
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">startVertex</span>:int</code> &mdash; The index of the first vertex to be loaded.  A value for startVertex not equal to zero may be used to load a sub-region of the vertex data.
+
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">numVertices</span>:int</code> &mdash; The number of vertices to be loaded from <code>data</code>.
+
+	 
+	 </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>TypeError </code> &mdash; Null Pointer Error: when <code>data</code> is null.
+
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>RangeError </code> &mdash; Bad Input Size: if <code>byteArrayOffset</code> is less than 0,
+
+	  or if <code>byteArrayOffset</code> is greater than or equal to the length of <code>data</code>, 
+
+	  or if there isn't enough data in the byte array after the offset position for the number of
+
+	 vertices uploaded.
+
+	 
+
+	 </td></tr></table></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="uploadFromVector()"></a><a name="uploadFromVector(Vector$Number,int,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>uploadFromVector</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function uploadFromVector(data:<a href="../../Vector.html">Vector</a>.&lt;Number&gt;, startVertex:int, numVertices:int):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+	 Uploads the data for a set of points to the rendering context from a vector array.
+
+	 
+	 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">data</span>:<a href="../../Vector.html">Vector</a>.&lt;Number&gt;</code> &mdash; a vector of 32-bit values.  A single vertex is comprised of a number of values stored sequentially 
+
+	 in the vector.  The number of values in a vertex is specified at buffer creation using the <code>data32PerVertex</code> 
+
+	 parameter to the Context3D <code>createVertexBuffer3D()</code> method. The length of the vector must
+
+	  be the number of values per vertex times the number of vertexes.  
+
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">startVertex</span>:int</code> &mdash; The index of the first vertex to be loaded.  A value for <code>startVertex</code> not equal to zero may be used to load a sub-region of the vertex data.
+
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">numVertices</span>:int</code> &mdash; The number of vertices represented by <code>data</code>.
+
+	 
+	 </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>TypeError </code> &mdash; Null Pointer Error: when <code>data</code> is null.
+
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>RangeError </code> &mdash; Bad Input Size: when there isn't enough data in the vector for the
+
+	 number of vertices uploaded.
+
+	 
+
+	 </td></tr></table></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script><p></p><center class="copyright"> &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><!--BEGIN IONCOMMENTS--><div id="ionComHere"></div><!--END IONCOMMENTS-->[an error occurred while processing this directive][an error occurred while processing this directive]<p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/en_US/legalnotices/index.html">Legal Notices</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online Privacy Policy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html><!-- &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  -->

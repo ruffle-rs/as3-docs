@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"><html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers"><meta name="lang" content="en-us"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><title>flash.net - Details Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers</title>
+	<link rel="stylesheet" href="../../jslr-style.css" type="text/css">
+		<script type="text/javascript">
+			
+				var baseRef = "../../";
+				var buildType = 'jslr';
+				var alreadyrunflag=0; //flag to indicate whether target function has already been run
+				var terms_HELPCFG = ".helpcfg";
+
+if (document.addEventListener)
+  document.addEventListener("DOMContentLoaded", function(){alreadyrunflag=1; init()}, false)
+else if (document.all && !window.opera){
+  /* blocks IE from working, as it's fired before dom if ready
+ document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
+  var contentloadtag=document.getElementById("contentloadtag")
+  contentloadtag.onreadystatechange=function(){
+    if (this.readyState=="complete"){
+      alreadyrunflag=1;
+      init();
+    }
+  }*/
+} else if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+  var _timer=setInterval(function(){
+  if(/loaded|complete/.test(document.readyState)){
+    clearInterval(_timer);
+    alreadyrunflag=1;
+    init(); // call target function
+  }}, 10)
+}
+function onLoadFunction() {
+	setTimeout("if (!alreadyrunflag) init();  alreadyrunflag=1; ionReadyLoad(); ", 0);
+}
+
+		</script>
+		<script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+		<script language="javascript" type="text/javascript" src="../../asdoc.js"></script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body onLoad="onLoadFunction()">
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td>
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr>
+				  <td class="titleTableTitleION" align="left" nowrap="true">Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers<br>
+				  <span class="titleTableTopNavION">
+				  <span id="homelink">
+						<a target="_self" href="../../index.html"> Home </a>&nbsp;|&nbsp;
+				  </span>
+				  <a id="showtoc" onClick="showHideTOC(true)" href="#top" style="display:none">Show Classes List</a><a id="hidetoc" onClick="showHideTOC(false)" href="#top" style="display:">Hide Classes List</a>&nbsp;|&nbsp;
+				  <a href="../../all-index-A.html"> Index </a>&nbsp;|&nbsp;
+				  <a href="../../appendixes.html"> Appendixes </a><br>
+				  </span>	
+				  </td>
+				  <td class="titleTableSearchION" align="right" nowrap="true">
+				  <span id="gsa" class="gsa">
+					<form class="searchFormION" method="get" onSubmit="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US');return false;">
+				  <input class="hidden" name="loc" value="" type="hidden">
+				  <input class="hidden" name="termPrefix" value="site:help.adobe.com/en_US/AS3CLR/Flash_10.0" type="hidden">
+				  <input class="hidden" name="title" value="ActionScript 3.0 Reference for the Adobe Flash Platform" type="hidden">
+				  <input class="hidden" name="term" value="" type="hidden">
+				  <input class="hidden" name="area" value="" type="hidden">
+				  <input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text">
+				  <input type="button" name="action" value="" onClick="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US')" class="searchbutton"><br>
+			      <input id="checkBoxId" type="checkbox" name="checkbox" value="checkbox" checked>Language Reference only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  </form>
+				  </span>				  
+				  </td>
+				</tr>
+			  </table>			
+			  </td>
+			<td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logoION.jpg" class="logoImageION" alt=" Adobe Logo " title=" Adobe Logo "></td>
+		  </tr>
+		  <tr>
+			<td colspan="2">
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr class="titleTableRow2">
+				<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+					<convert>Package flash.net&nbsp;</convert>
+				</td>
+				<td class="titleTableSubNav" id="subNav" align="right">
+				  <a id="propertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="propertiesBar" style="display:none"> | </span>
+				  <a id="packagePropertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="packagePropertiesBar" style="display:none"> | </span>
+				  <a id="constructorLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+				  <span id="constructorBar" style="display:none"> | </span>
+				  <a id="methodsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Methods </a>
+				  <span id="methodsBar" style="display:none"> | </span>
+				  <a id="packageFunctionsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Functions </a>
+				  <span id="packageFunctionsBar" style="display:none"> | </span>
+				  <a id="eventsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('eventSummary');" style="display:none"> Events </a>
+				  <span id="eventsBar" style="display:none"> | </span>
+				  <a id="stylesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('styleSummary');" style="display:none"> Styles </a>
+				  <span id="stylesBar" style="display:none"> | </span>
+				  <a id="SkinPartLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinPartSummary');" style="display:none"> Skin Parts </a>
+				  <span id="SkinPartBar" style="display:none"> | </span>
+				  <a id="SkinStateLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinStateSummary');" style="display:none"> Skin States </a>
+				  <span id="SkinStateBar" style="display:none"> | </span>
+				  <a id="effectsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('effectSummary');" style="display:none"> Effects </a>
+				  <span id="effectsBar" style="display:none"> | </span>
+				  <a id="constantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="constantsBar" style="display:none"> | </span>
+				  <a id="packageConstantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="packageConstantsBar" style="display:none"> | </span>
+				  <a id="interfacesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('interfaceSummary');" style="display:none"> Interfaces </a>
+				  <span id="interfacesBar" style="display:none"> | </span>
+				  <a id="classesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('classSummary');" style="display:none"> Classes </a>
+				  <span id="classesBar" style="display:none"> | </span>
+				  <a id="packageUseLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('package-use.html');" style="display:none">Use</a>
+				  <span id="packageUseBar" style="display:none"> | </span>
+				  <a id="examplesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('includeExamplesSummary');" style="display:none"> Examples </a>
+				</td>
+				</tr>
+				<tr class="titleTableRow3">
+				  <td colspan="4"></td>
+				</tr>
+			  </table>
+			</td>
+		  </tr>
+		</table>
+        <div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="classlist" class="jslrclasslist">
+					<div class="classlistoutline"></div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content"><br><a name="methodSummary"></a>The flash.net package contains the <code>navigateToURL()</code> and <code>sendToURL()</code>             functions. You can access these in JavaScript as <code>window.runtime.navigateToURL()</code> and                <code>window.runtime.sendToURL()</code> (or as <code>air.navigateToURL()</code> and             <code>air.sendToURL()</code> if you use the AIRAliases.js file).<div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Function</th><th>Defined By</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"></div></td><td class="summaryTableOwnerCol"></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#navigateToURL()" class="signatureLink">navigateToURL</a>(request:<a href="URLRequest.html">URLRequest</a>, window:String = null):void</div><div class="summaryTableDescription">
+
+     Opens or replaces a window in the application that contains the Flash Player container
+
+     (usually a browser).</div></td><td class="summaryTableOwnerCol">flash.net</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"></div></td><td class="summaryTableOwnerCol"></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#sendToURL()" class="signatureLink">sendToURL</a>(request:<a href="URLRequest.html">URLRequest</a>):void</div><div class="summaryTableDescription">
+
+     Sends a URL request to a server, but ignores any response.</div></td><td class="summaryTableOwnerCol">flash.net</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodDetail"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailSectionHeader"> Function detail </div><span id="pageFilter" runtime="Flash::9##Lite::4##"></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="navigateToURL()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="navigateToURL(flash.net.URLRequest,String)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>navigateToURL</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">function</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function navigateToURL(request:<a href="URLRequest.html">URLRequest</a>, window:String = null):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     
+
+     <span>Opens a URL in the default application for handling the 
+
+	 URI scheme.</span> For example, the default system web browser opens for
+
+	 the http: and https: URI schemes.
+
+	 
+
+      <p>  <b><i>Important Security Note  </i></b> </p>
+
+      <p>Developers often pass URL values to the <code>navigateToURL()</code> function that were obtained from external sources 
+
+     such as FlashVars.  Attackers may try to manipulate these external sources to perform attacks such as cross-site scripting.
+
+	 In AIR, attackers could attempt to open other applications. 
+
+     Therefore, developers should validate all URLs before passing them to this function. </p>
+
+      
+
+     <p>Good data validation for URLs can mean different things depending on the usage of the URL within the overall application.  
+
+     The most common data validation techniques include validating that the URL is of the appropriate scheme.  
+
+     For instance, unintentionally allowing javascript: URLs may result in cross-site scripting.  
+
+     Validating that the URL is a within your domain can ensure that the SWF file can't be used as an open-redirector 
+
+     by people who conduct phishing attacks.  For additional security, you may also choose to validate the path of the URL 
+
+     and to validate that the URL conforms to the RFC guidelines</p>
+
+     
+     
+
+     
+      
+
+     
+
+     
+
+      
+
+     
+     
+
+     
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+	 <p>In AIR 3 and later, any URI scheme can be used in the ZURL to be launched. 
+
+	 If a suitable application is registered with the 
+
+	 operating system to handle the URI scheme, then that application is launched. Only AIR content running in the 
+
+	 application security sandbox can use arbitrary URI schemes. Content running in other sandboxes
+
+	 can only navigate to file:, mailto:, http: and https: URLs.</p>
+
+	 
+
+     
+
+     
+
+     
+
+     
+      
+
+      
+
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">request</span>:<a href="URLRequest.html">URLRequest</a></code> &mdash; A URLRequest object that specifies the URL to navigate to.
+
+     
+
+     <p><span>When </span> using the <code>navigateToURL()</code> 
+
+	 function, the runtime treats a URLRequest that uses the POST
+
+     method (one that has its <code>method</code> property set to <code>URLRequestMethod.POST</code>)
+
+     as using the GET method.</p>
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">window</span>:String</code> (default = <code>null</code>)<code></code> &mdash; The browser window or HTML frame in which to display
+
+                   the document indicated by the <code>request</code> parameter.
+
+     You can enter the name of a specific window or use one of the following values:
+
+     <ul><li><code>"_self"</code> specifies the current frame in the current window.</li><li><code>"_blank"</code> specifies a new window.</li><li><code>"_parent"</code> specifies the parent of the current frame.</li><li><code>"_top"</code> specifies the top-level frame in the current window.</li></ul>
+
+     <p>If you do not specify a value for this parameter, a new empty window is created.
+
+     In the stand-alone player, you can either specify a new (<code>"_blank"</code>) window
+
+     or a named window. The other values don't apply.</p>
+
+     
+
+     
+
+     
+
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IOError </code> &mdash; The <code>digest</code> property of the <code>request</code> object is not 
+
+     <code>null</code>. You should only set the <code>digest</code> property of a URLRequest object
+
+     for use calling the <code>URLLoader.load()</code> method when loading a SWZ file (an Adobe 
+
+     platform component).
+
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>SecurityError </code> &mdash; In Flash Player (and in non-application sandbox content in Adobe AIR), 
+
+     this error is thrown in the following situations:
+
+     <ul><li>Local untrusted SWF files may not communicate with
+
+     the Internet. You can avoid this situation by reclassifying this SWF file
+
+     as local-with-networking or trusted.</li><li>A navigate operation attempted to evaluate a scripting
+
+     pseudo-URL, but the containing document (usually an HTML document in a
+
+     browser) is from a sandbox to which you do not have access.  You can avoid this situation 
+
+     by specifying <code>allowScriptAccess="always"</code> in the containing
+
+     document.</li><li>You cannot navigate the special windows 
+
+     <code>"_self"</code>, <code>"_top"</code>, or <code>"_parent"</code>
+
+     if your SWF file is contained by an HTML page
+
+     that has set the <code>allowScriptAccess</code> to 
+
+     <code>"none"</code>, or to <code>"sameDomain"</code> 
+
+     when the domains of the HTML file and the SWF file do not match.</li><li>You cannot navigate a window with a nondefault name
+
+     from within a SWF file that is in the local-with-filesystem sandbox.</li><li>You cannot connect to commonly reserved ports. 
+
+     For a complete list of blocked ports, see "Restricting Networking APIs" in the 
+
+     <i>ActionScript 3.0 Developer's Guide</i>.</li></ul>
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; If the method is not called in response to a user action, such as a mouse
+
+     event or keypress event. This requirement only applies to content in Flash Player and 
+
+     to non-application sandbox content in Adobe AIR.
+
+     
+
+     </td></tr></table><span id="pageFilter"><br/><span class="label"> Example &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_en"> How to use this example </a></span>)
+            </span><br/><br/><div class="detailBody"> The following example opens the URL http://www.adobe.com in a new browser window and passes data about a
+ user session, captured in a URLVariables object, to the web server.
+<div class="listing"><pre>
+&lt;html&gt;
+    &lt;head&gt;
+      &lt;script src="AIRAliases.js" /&gt;
+      &lt;script&gt;
+        function init() {
+            var url = "http://www.adobe.com";
+            var variables = new air.URLVariables();
+            variables.exampleSessionId = new Date().getTime();
+            variables.exampleUserLabel = "Your Name";
+            var request = new air.URLRequest(url);
+            request.data = variables;
+            try {            
+                air.navigateToURL(request);
+            }
+            catch (e) {
+                // handle error here
+            }
+        }
+      &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body onload='init()'&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody"></div></span><span id="pageFilter"><br/><div class="detailBody"></div></span><span id="pageFilter"><br/><div class="detailBody"></div></span><span id="pageFilter"><br/><div class="detailBody"></div></span></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="sendToURL()"></a><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="sendToURL(flash.net.URLRequest)"></a><table xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>sendToURL</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">function</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="detailBody"><code> public function sendToURL(request:<a href="URLRequest.html">URLRequest</a>):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Sends a URL request to a server, but ignores any response.
+
+     <p>To examine the server response, use the <code>URLLoader.load()</code> method instead.</p>
+
+     
+
+     <p>You cannot connect to commonly reserved ports. 
+
+     For a complete list of blocked ports, see "Restricting Networking APIs" in the 
+
+     <i>ActionScript 3.0 Developer's Guide</i>.</p>
+
+     
+     <p>You can prevent a SWF file from using this method by setting the 
+
+     <code>allowNetworking</code> parameter of the the <code>object</code> and <code>embed</code> 
+
+     tags in the HTML page that contains the SWF content.</p>
+
+     
+     <p> In Flash Player 10 and later, if you use a multipart Content-Type (for example "multipart/form-data") 
+
+     that contains an upload (indicated by a "filename" parameter in a "content-disposition" header within the POST body),
+
+     the POST operation is subject to the security rules applied to uploads:</p>
+
+     <ul><li>The POST operation must be performed in response to a user-initiated action, such as a mouse click or key press.</li><li>If the POST operation is cross-domain (the POST target is not on the same server as the SWF file 
+
+     that is sending the POST request),
+
+     the target server must provide a URL policy file that permits cross-domain access.</li></ul>
+
+     <p>Also, for any multipart Content-Type, the syntax must be valid (according to the RFC2046 standards).
+
+     If the syntax appears to be invalid, the POST operation is subject to the security rules applied to uploads.</p>
+
+     
+
+     <p>For more information related to security, see the Flash Player Developer Center Topic: 
+
+     <a href="http://www.adobe.com/go/devnet_security_en" target="external">Security</a>.</p>
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">request</span>:<a href="URLRequest.html">URLRequest</a></code> &mdash; A URLRequest object specifying the URL to send data to.
+
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>SecurityError </code> &mdash; Local untrusted SWF files cannot communicate with
+
+     the Internet. You can avoid this situation by reclassifying this SWF file
+
+     as local-with-networking or trusted.
+
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>SecurityError </code> &mdash; You cannot connect to commonly reserved ports. 
+
+     For a complete list of blocked ports, see "Restricting Networking APIs" in the 
+
+     <i>ActionScript 3.0 Developer's Guide</i>.
+
+      
+
+     
+
+     </td></tr></table><span id="pageFilter"><br/><span class="label"> Example &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_en"> How to use this example </a></span>)
+            </span><br/><br/><div class="detailBody"> The following example passes data about a
+ user session, captured in a URLVariables object, to the application at http://www.yourDomain.com/application.jsp.
+<div class="listing"><pre>
+ &lt;html&gt;
+    &lt;head&gt;
+      &lt;script src="AIRAliases.js" /&gt;
+      &lt;script&gt;
+        function init() {
+            var url = "http://www.yourDomain.com/application.jsp";
+            var variables = new air.URLVariables();
+            variables.sessionId = new Date().getTime();
+            variables.userLabel = "Your Name";
+
+            var request = new air.URLRequest(url);
+            request.data = variables;
+            air.trace("air.sendToURL: " + request.url + "?" + request.data);
+            try {
+                air.sendToURL(request);
+            }
+            catch (e) {
+                // handle error here
+            }
+        }
+      &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body onload='init()'&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div></span></div></span><p></p><center class="copyright"> &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:35 AM -07:00  </center></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><!--BEGIN IONCOMMENTS--><div id="ionComHere"></div><!--END IONCOMMENTS-->[an error occurred while processing this directive][an error occurred while processing this directive]<p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/en_US/legalnotices/index.html">Legal Notices</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online Privacy Policy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html><!-- &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:35 AM -07:00  -->

@@ -1,0 +1,626 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"><html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers"><meta name="lang" content="en-us"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="EventDispatcher,flash.events.EventDispatcher,addEventListener,dispatchEvent,hasEventListener,removeEventListener,willTrigger"><title>flash.events.EventDispatcher - Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers</title>
+	<link rel="stylesheet" href="../../jslr-style.css" type="text/css">
+		<script type="text/javascript">
+			
+				var baseRef = "../../";
+				var buildType = 'jslr';
+				var alreadyrunflag=0; //flag to indicate whether target function has already been run
+				var terms_HELPCFG = ".helpcfg";
+
+if (document.addEventListener)
+  document.addEventListener("DOMContentLoaded", function(){alreadyrunflag=1; init()}, false)
+else if (document.all && !window.opera){
+  /* blocks IE from working, as it's fired before dom if ready
+ document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
+  var contentloadtag=document.getElementById("contentloadtag")
+  contentloadtag.onreadystatechange=function(){
+    if (this.readyState=="complete"){
+      alreadyrunflag=1;
+      init();
+    }
+  }*/
+} else if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+  var _timer=setInterval(function(){
+  if(/loaded|complete/.test(document.readyState)){
+    clearInterval(_timer);
+    alreadyrunflag=1;
+    init(); // call target function
+  }}, 10)
+}
+function onLoadFunction() {
+	setTimeout("if (!alreadyrunflag) init();  alreadyrunflag=1; ionReadyLoad(); ", 0);
+}
+
+		</script>
+		<script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+		<script language="javascript" type="text/javascript" src="../../asdoc.js"></script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body onLoad="onLoadFunction()">
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td>
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr>
+				  <td class="titleTableTitleION" align="left" nowrap="true">Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers<br>
+				  <span class="titleTableTopNavION">
+				  <span id="homelink">
+						<a target="_self" href="../../index.html"> Home </a>&nbsp;|&nbsp;
+				  </span>
+				  <a id="showtoc" onClick="showHideTOC(true)" href="#top" style="display:none">Show Classes List</a><a id="hidetoc" onClick="showHideTOC(false)" href="#top" style="display:">Hide Classes List</a>&nbsp;|&nbsp;
+				  <a href="../../all-index-A.html"> Index </a>&nbsp;|&nbsp;
+				  <a href="../../appendixes.html"> Appendixes </a><br>
+				  </span>	
+				  </td>
+				  <td class="titleTableSearchION" align="right" nowrap="true">
+				  <span id="gsa" class="gsa">
+					<form class="searchFormION" method="get" onSubmit="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US');return false;">
+				  <input class="hidden" name="loc" value="" type="hidden">
+				  <input class="hidden" name="termPrefix" value="site:help.adobe.com/en_US/AS3CLR/Flash_10.0" type="hidden">
+				  <input class="hidden" name="title" value="ActionScript 3.0 Reference for the Adobe Flash Platform" type="hidden">
+				  <input class="hidden" name="term" value="" type="hidden">
+				  <input class="hidden" name="area" value="" type="hidden">
+				  <input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text">
+				  <input type="button" name="action" value="" onClick="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US')" class="searchbutton"><br>
+			      <input id="checkBoxId" type="checkbox" name="checkbox" value="checkbox" checked>Language Reference only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  </form>
+				  </span>				  
+				  </td>
+				</tr>
+			  </table>			
+			  </td>
+			<td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logoION.jpg" class="logoImageION" alt=" Adobe Logo " title=" Adobe Logo "></td>
+		  </tr>
+		  <tr>
+			<td colspan="2">
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr class="titleTableRow2">
+				<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+					<convert>EventDispatcher&nbsp;</convert>
+				</td>
+				<td class="titleTableSubNav" id="subNav" align="right">
+				  <a id="propertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="propertiesBar" style="display:none"> | </span>
+				  <a id="packagePropertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="packagePropertiesBar" style="display:none"> | </span>
+				  <a id="constructorLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+				  <span id="constructorBar" style="display:none"> | </span>
+				  <a id="methodsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Methods </a>
+				  <span id="methodsBar" style="display:none"> | </span>
+				  <a id="packageFunctionsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Functions </a>
+				  <span id="packageFunctionsBar" style="display:none"> | </span>
+				  <a id="eventsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('eventSummary');" style="display:none"> Events </a>
+				  <span id="eventsBar" style="display:none"> | </span>
+				  <a id="stylesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('styleSummary');" style="display:none"> Styles </a>
+				  <span id="stylesBar" style="display:none"> | </span>
+				  <a id="SkinPartLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinPartSummary');" style="display:none"> Skin Parts </a>
+				  <span id="SkinPartBar" style="display:none"> | </span>
+				  <a id="SkinStateLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinStateSummary');" style="display:none"> Skin States </a>
+				  <span id="SkinStateBar" style="display:none"> | </span>
+				  <a id="effectsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('effectSummary');" style="display:none"> Effects </a>
+				  <span id="effectsBar" style="display:none"> | </span>
+				  <a id="constantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="constantsBar" style="display:none"> | </span>
+				  <a id="packageConstantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="packageConstantsBar" style="display:none"> | </span>
+				  <a id="interfacesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('interfaceSummary');" style="display:none"> Interfaces </a>
+				  <span id="interfacesBar" style="display:none"> | </span>
+				  <a id="classesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('classSummary');" style="display:none"> Classes </a>
+				  <span id="classesBar" style="display:none"> | </span>
+				  <a id="packageUseLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('package-use.html');" style="display:none">Use</a>
+				  <span id="packageUseBar" style="display:none"> | </span>
+				  <a id="examplesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('includeExamplesSummary');" style="display:none"> Examples </a>
+				</td>
+				</tr>
+				<tr class="titleTableRow3">
+				  <td colspan="4"></td>
+				</tr>
+			  </table>
+			</td>
+		  </tr>
+		</table>
+        <div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="classlist" class="jslrclasslist">
+					<div class="classlistoutline"></div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content">
+<script language="javascript" type="text/javascript">  <!--  
+         
+        asdocTitle = "EventDispatcher - Adobe® AIR® API Reference for HTML Developers"; 
+        var baseRef = '../../'; 
+	document.baseRef = '../../'; 
+          -->  </script>
+<script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+<script language="javascript" type="text/javascript"><!--
+function submitValue() {
+var title="Adobe® AIR® API Reference for HTML Developers";
+var searchStr=document.getElementById('search-livedocs').value;
+
+        
+        
+        if(document.getElementById('checkBoxId').checked){
+        window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
++"&site=communityhelp-air-jslr ";
+} 
+
+        else{ 
+window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
+;
+} 
+} 
+--></script><script type="text/javascript"> scrollToNameAnchor(); </script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">window.runtime property</td><td>window.runtime.flash.events.EventDispatcher</td></tr><tr><td class="classSignature"></td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">EventDispatcher  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><div id="badgeAnchorSupport" class="ionBadgeWrapper"></div><div id="badgeContainerSupport"></div><p></p><p></p>
+
+The EventDispatcher class is the base class for all <span>runtime</span> classes that dispatch events.
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>You can register functions to handle runtime events by calling the
+
+<code>addEventListener()</code> method of the object dispatching the event.</p>
+
+
+            <p></p><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Properties</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Properties</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Properties</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable hideInheritedProperty" id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th>Defined By</th></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">constructor : Object<div class="summaryTableDescription">
+
+	 A reference to the class object or constructor function for a given object instance.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">prototype : Object<div class="summaryTableDescription">[static] 
+
+	 A reference to the prototype object of a class or function object.</div></td><td class="summaryTableOwnerCol">Object</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Public Methods </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Methods</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th>Defined By</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#EventDispatcher()" class="signatureLink">EventDispatcher</a>(target:IEventDispatcher = null)</div><div class="summaryTableDescription">
+
+	Aggregates an instance of the EventDispatcher class.</div></td><td class="summaryTableOwnerCol">EventDispatcher</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#addEventListener()" class="signatureLink">addEventListener</a>(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void</div><div class="summaryTableDescription">
+
+	Registers an event listener object with an EventDispatcher object so that the listener 
+
+	receives notification of an event.</div></td><td class="summaryTableOwnerCol">EventDispatcher</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="Event.html">Event</a>):Boolean</div><div class="summaryTableDescription">
+
+	Dispatches an event into the event flow.</div></td><td class="summaryTableOwnerCol">EventDispatcher</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#hasEventListener()" class="signatureLink">hasEventListener</a>(type:String):Boolean</div><div class="summaryTableDescription">
+
+	Checks whether the EventDispatcher object has any listeners registered for a specific type 
+
+	of event.</div></td><td class="summaryTableOwnerCol">EventDispatcher</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">hasOwnProperty(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an object has a specified property defined.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">isPrototypeOf(theClass:Object):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+
+	 as the parameter.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">propertyIsEnumerable(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether the specified property exists and is enumerable.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeEventListener()" class="signatureLink">removeEventListener</a>(type:String, listener:Function, useCapture:Boolean = false):void</div><div class="summaryTableDescription">
+
+	Removes a listener from the EventDispatcher object.</div></td><td class="summaryTableOwnerCol">EventDispatcher</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">setPropertyIsEnumerable(name:String, isEnum:Boolean = true):void</div><div class="summaryTableDescription">
+
+     Sets the availability of a dynamic property for loop operations.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toLocaleString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of this object, formatted according to locale-specific conventions.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">valueOf():Object</div><div class="summaryTableDescription">
+
+	 Returns the primitive value of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#willTrigger()" class="signatureLink">willTrigger</a>(type:String):Boolean</div><div class="summaryTableDescription">
+
+	Checks whether an event listener is registered with this EventDispatcher object or any of 
+
+	its ancestors for the specified event type.</div></td><td class="summaryTableOwnerCol">EventDispatcher</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th>Defined By</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[broadcast event] Dispatched when the Flash Player or AIR application gains operating system focus and becomes active.</td><td class="summaryTableOwnerCol">EventDispatcher</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[broadcast event] Dispatched when the Flash Player or AIR application operating loses system focus and is becoming inactive.</td><td class="summaryTableOwnerCol">EventDispatcher</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="EventDispatcher()"></a><a name="EventDispatcher(flash.events.IEventDispatcher)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>EventDispatcher</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function EventDispatcher(target:IEventDispatcher = null)</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p>
+
+	Aggregates an instance of the EventDispatcher class.
+
+	
+
+    <p>The EventDispatcher class is generally used as a base class<span> in ActionScript 3.0
+
+    code used in SWF content</span>, which means that  
+
+	<span>JavaScript</span> developers do not need to use 
+
+    this constructor function. </p>
+
+	
+
+	</p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">target</span>:IEventDispatcher</code> (default = <code>null</code>)<code></code> &mdash; The target object for events dispatched to the EventDispatcher object. 
+
+	
+
+    <span>Target objects are only relavent in display objects in SWF content, which
+
+    use the ActionScript 3.0 display list architecture.</span>
+
+	
+
+	</td></tr></table></div></span><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="addEventListener()"></a><a name="addEventListener(String,Function,Boolean,int,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>addEventListener</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function addEventListener(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	Registers an event listener object with an EventDispatcher object so that the listener 
+
+	receives notification of an event. 
+
+	
+
+	<p>JavaScript code in the AIR runtime uses this method to register
+
+	event listeners for events defined by the AIR APIs. For other JavaScript events (such as the <code>onload</code>
+
+	event of the DOM <code>body</code> object), you can use standard event handling techniques, as you would 
+
+	for content running in the browser.</p>
+
+	
+
+	<p>After you successfully register an event listener, you cannot change its priority
+
+	through additional calls to <code>addEventListener()</code>. To change a listener's
+
+	priority, you must first call <code>removeListener()</code>. Then you can register the
+
+	listener again with the new priority level. </p>
+
+	
+
+	<p>Keep in mind that after the listener is registered, subsequent calls to
+
+	<code>addEventListener()</code> with a different <code>type</code> or
+
+	<code>useCapture</code> value result in the creation of a separate listener registration. 
+
+	
+
+	</p>
+
+	
+
+	
+
+	
+
+	<p>If you no longer need an event listener, remove it by calling 
+
+	<code>removeEventListener()</code>, or memory problems could result. Event listeners are not automatically
+
+	removed from memory because the garbage
+
+	collector does not remove the listener as long as the dispatching object exists (unless the <code>useWeakReference</code>
+
+	parameter is set to <code>true</code>).</p>
+
+		
+
+	<p>Copying an EventDispatcher instance does not copy the event listeners attached to it. 
+
+	(If your newly created node needs an event listener, you must attach the listener after
+
+    creating the node.) However, if you move an EventDispatcher instance, the event listeners 
+
+    attached to it move along with it.</p>
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:String</code> &mdash; The type of event.
+
+	
+
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">listener</span>:Function</code> &mdash; The listener function that processes the event. This function must accept
+
+    an Event object as its only parameter and must return nothing
+
+	<span>.</span>
+
+	
+
+    
+
+	
+
+	<p>The function can have any name.</p>
+
+	
+
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useCapture</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; <span>This parameter applies to display objects in the
+
+	ActionScript 3.0 display list architecture, used by SWF content.</span>
+
+	
+
+	
+
+	
+
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">priority</span>:int</code> (default = <code>0</code>)<code></code> &mdash; The priority level of the event listener. The priority is designated by
+
+	a signed 32-bit integer. The higher the number, the higher the priority. All listeners
+
+	with priority <i>n</i> are processed before listeners of priority <i>n</i>-1. If two
+
+	or more listeners share the same priority, they are processed in the order in which they
+
+	were added. The default priority is 0.
+
+	
+
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useWeakReference</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Determines whether the reference to the listener is strong or
+
+	weak. A strong reference (the default) prevents your listener from being garbage-collected.
+
+    A weak reference does not. <p>Class-level member functions are not subject to garbage 
+
+    collection, so you can set <code>useWeakReference</code> to <code>true</code> for 
+
+    class-level member functions without subjecting them to garbage collection. If you set
+
+    <code>useWeakReference</code> to <code>true</code> for a listener that is a nested inner 
+
+    function, the function will be garbage-collected and no longer persistent. If you create 
+
+    references to the inner function (save it in another variable) then it is not 
+
+    garbage-collected and stays persistent.</p>
+
+	
+	</td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; The <code>listener</code> specified is not a function.
+
+	</td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="dispatchEvent()"></a><a name="dispatchEvent(flash.events.Event)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>dispatchEvent</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function dispatchEvent(event:<a href="Event.html">Event</a>):Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	Dispatches an event into the event flow. The event target is the EventDispatcher 
+
+	object upon which the <code>dispatchEvent()</code> method is called.
+
+	
+	</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">event</span>:<a href="Event.html">Event</a></code> &mdash; The Event object that is dispatched into the event flow.
+
+	If the event is being redispatched, a clone of the event is created automatically.
+
+	After an event is dispatched, its <code>target</code> property cannot be changed, so you
+
+	must create a new copy of the event for redispatching to work.
+
+	
+
+	</td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; A value of <code>true</code> if the event was successfully dispatched. A value of <code>false</code> indicates failure or that <code>preventDefault()</code> was called 
+
+	on the event.
+
+	
+	</td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; The event dispatch recursion limit has been reached.
+
+	</td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="hasEventListener()"></a><a name="hasEventListener(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>hasEventListener</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function hasEventListener(type:String):Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	Checks whether the EventDispatcher object has any listeners registered for a specific type 
+
+	of event. This allows you to determine where an EventDispatcher object has altered
+
+	handling of an event type in the event flow hierarchy. To determine whether a specific
+
+	event type actually triggers an event listener, use <code>willTrigger()</code>.
+
+	
+
+	<p>The difference between <code>hasEventListener()</code> and <code>willTrigger()</code> 
+
+	is that <code>hasEventListener()</code> examines only the object to 
+
+	which it belongs, whereas <code>willTrigger()</code> examines the entire 
+
+    event flow for the event specified by the <code>type</code> parameter.
+
+	<span>The event flow applies to the ActionScript 3.0
+
+	display list, used in SWF content.</span>
+
+	</p>
+
+	
+
+	<p>When <code>hasEventListener()</code> is called from a LoaderInfo object, only the 
+
+	listeners that the caller can access are considered.</p>
+
+	
+
+	</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:String</code> &mdash; The type of event.
+
+	</td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; A value of <code>true</code> if a listener of the specified type is registered; 
+
+	<code>false</code> otherwise.
+
+	</td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="EventDispatcher.html#willTrigger()" target="">willTrigger()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="removeEventListener()"></a><a name="removeEventListener(String,Function,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>removeEventListener</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function removeEventListener(type:String, listener:Function, useCapture:Boolean = false):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	Removes a listener from the EventDispatcher object. If there is no matching listener registered with the EventDispatcher object, a call to this method has no effect.
+
+	
+
+	</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:String</code> &mdash; The type of event.
+
+	
+
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">listener</span>:Function</code> &mdash; The listener object to remove.
+
+	
+
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useCapture</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; <span>This parameter applies to display objects in the
+
+	ActionScript 3.0 display list architecture, used by SWF content.</span>
+
+	
+
+	
+
+	
+
+	</td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="willTrigger()"></a><a name="willTrigger(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>willTrigger</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function willTrigger(type:String):Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	Checks whether an event listener is registered with this EventDispatcher object or any of 
+
+	its ancestors for the specified event type. This method returns <code>true</code> if an 
+
+	event listener is triggered during any phase of the event flow when an event of the 
+
+	specified type is dispatched to this EventDispatcher object or any of its descendants.
+
+	
+
+	<p>The difference between the <code>hasEventListener()</code> and the <code>willTrigger()</code> 
+
+	methods is that <code>hasEventListener()</code> examines only the object to which it belongs, 
+
+	whereas the <code>willTrigger()</code> method examines the entire event flow for the event specified by the
+
+    <code>type</code> parameter. <span>The event flow applies to the ActionScript 3.0
+
+	display list, used in SWF content.</span></p>
+
+	
+
+	<p>When <code>willTrigger()</code> is called from a LoaderInfo object, only the 
+
+	listeners that the caller can access are considered.</p>
+
+	
+
+	</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:String</code> &mdash; The type of event.
+
+	</td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; A value of <code>true</code> if a listener of the specified type will be triggered; <code>false</code> otherwise.
+
+	</td></tr></table></div></span><div class="detailSectionHeader"> Event Detail </div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:activate"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>activate</h2></td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="Event.html"><code>flash.events.Event</code></a><br/><span class="label">property Event.type  =  </span><a href="Event.html#ACTIVATE"><code>flash.events.Event.ACTIVATE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ [broadcast event] Dispatched when the  AIR application gains  
+
+ operating system focus and becomes active. This event is a broadcast event, which means that it is dispatched 
+
+ by all EventDispatcher objects with a listener registered for this event. 
+
+ 
+ </p>
+
+	The <code>ACTIVATE</code> constant defines the value of the <code>type</code> property of an <code>activate</code> event object. 
+
+	<p><b>Note:</b> This event has neither a "capture phase" nor a "bubble phase",
+
+	which means that event listeners must be added directly to any potential targets, 
+
+	whether the target is on the display list or not.</p>
+
+	<p>AIR for TV devices never automatically dispatch this event. You can, however, dispatch it manually.</p>
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>Any DisplayObject instance with a listener registered for the <code>activate</code> event.</td></tr></table>
+
+	
+
+	</div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:deactivate"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>deactivate</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="Event.html"><code>flash.events.Event</code></a><br/><span class="label">property Event.type  =  </span><a href="Event.html#DEACTIVATE"><code>flash.events.Event.DEACTIVATE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ [broadcast event] Dispatched when the  AIR application operating
+
+ loses system focus and is becoming inactive. This event is a broadcast event, which means that it is dispatched 
+
+ by all EventDispatcher objects with a listener registered for this event. 
+
+ 
+ </p>
+
+	The <code>Event.DEACTIVATE</code> constant defines the value of the <code>type</code> property of a <code>deactivate</code> event object. 
+
+	<p><b>Note:</b> This event has neither a "capture phase" nor a "bubble phase",
+
+	which means that event listeners must be added directly to any potential targets, 
+
+	whether the target is on the display list or not.</p>
+
+    <p>AIR for TV devices never automatically dispatch this event. You can, however, dispatch it manually.</p>
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>Any DisplayObject instance with a listener registered for the <code>deactivate</code> event.</td></tr></table>
+
+	
+
+	</div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script><p></p><center class="copyright"> &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><!--BEGIN IONCOMMENTS--><div id="ionComHere"></div><!--END IONCOMMENTS-->[an error occurred while processing this directive][an error occurred while processing this directive]<p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/en_US/legalnotices/index.html">Legal Notices</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online Privacy Policy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html><!-- &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  -->

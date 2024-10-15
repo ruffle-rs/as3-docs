@@ -1,0 +1,2493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- saved from url=(0022)http://help.adobe.com/ -->
+<!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="en-us">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <meta content="en-us" name="lang"/>
+  <meta content="livedocs" name="area"/>
+  <title>
+   Adobe Flash Platform * AGAL bytecode format
+  </title>
+  <link href="https://help.adobe.com/en_US/as3/dev/images/FlashRuntimeLinkIndicator.png" rel="shortcut icon"/>
+  <meta content="ActionScript 3.0 Developer’s Guide" name="book"/>
+  <meta content="adobe" name="product"/>
+  <meta content="air" name="product"/>
+  <meta content="flash" name="product"/>
+  <meta content="flex" name="product"/>
+  <meta content="" name="keywords"/>
+  <!--<PageMap><DataObject type="document"><Attribute name="product" value="adobe"></Attribute><Attribute name="product" value="air"></Attribute><Attribute name="product" value="flash"></Attribute><Attribute name="product" value="flex"></Attribute><Attribute name="book" value="ActionScript 3.0 Developer’s Guide"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+  <script charset="UTF-8" language="Javascript" type="text/javascript">
+   <!--[CDATA[
+        var currentTreeNode = "WSd6a006f2eb1dc31e-310b95831324724ec56-8000.html";
+// ]]-->
+  </script>
+  <script charset="UTF-8" language="Javascript" src="terms.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="help.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="utilities.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="event.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="treeview.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="toc.js" type="text/javascript">
+   ..
+  </script>
+  <script charset="UTF-8" language="Javascript" src="swfobject.js" type="text/javascript">
+   ..
+  </script>
+  <script charset="UTF-8" language="Javascript" src="booklist.js" type="text/javascript">
+   ..
+  </script>
+  <script type="text/javascript">
+   <!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+  </script>
+  
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+  
+  
+  <link href="tree.css" rel="stylesheet" type="text/css"/>
+  <link href="content.css" rel="stylesheet" type="text/css"/>
+  <link href="localeSpecific.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body id="content_body" onload="window.focus();">
+  <a name="top" shape="rect">
+   <!--LeaveCommentHere-->
+  </a>
+  <div id="mnemonic">
+   <!--googleoff: index-->
+   <div class="FlashRuntime" xmlns:adobe="http://www.adobe.com/saxon">
+    <div class="banner">
+     <a href="WS9936fa0d5984e93b3f4f38ec1272a447844-8000.html">
+      Adobe Flash Platform
+     </a>
+    </div>
+   </div>
+   <!--googleon: index-->
+  </div>
+  <div id="searchbar">
+   <table id="searchbartable">
+    <tr>
+     <td colspan="2">
+      <!--googleoff: index-->
+      <div xmlns:adobe="http://www.adobe.com/saxon">
+       <div id="pdf">
+        <img height="16" src="images/PDF.gif" width="16"/>
+        <a href="as3_devguide.pdf" title="View Help PDF">
+         View Help PDF (
+          18M
+         B)
+        </a>
+       </div>
+      </div>
+      <!--googleon: index-->
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!-- BEGIN SEARCH CONTENT -->
+  <form action="https://help.adobe.com/en_US/as3/dev/search.html" id="search" name="search" target="_self">
+   <script type="text/javascript">
+    <!--[CDATA[
+if ( !use_chc_behavior ){
+    if (typeof(terms_AHV_SEARCH_CONSTRAINT) != "undefined" && 
+        terms_AHV_SEARCH_CONSTRAINT.length > 0 && 
+        document.location.href.indexOf(".adobe.com") > 0){
+        if ( typeof(terms_SEARCH_THIS_HELP_ONLY) != "undefined" && terms_SEARCH_THIS_HELP_ONLY == "ON" ) {
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                checked="checked" \
+                value="1" ><\/input>'); 
+                
+        // Leave the "Search this help system only" checkbox unckecked
+        }else{    
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                value="1" ><\/input>'); 
+        }
+        document.write('<span class="gsalabel">' + terms_AHV_SEARCH_CONSTRAINT + '<\/span><\/div>'); 
+    }
+    document.write('<input class="searchinput" \
+        name="q" \
+        id="q" \
+        type="text" \
+        maxlength="256" \
+        value="' + terms_AHV_SEARCH_BUTTON + '" \
+        onclick="clearSearch()"><\/input><input \
+        type="button" \
+        name="searchbutton" \
+        class="searchbutton" \
+        onclick="submit()"><\/input>'); 
+} 
+ 
+/* 
+ * Start Functions 
+ */
+function clearSearch(){
+    if (document.search.q.value == terms_AHV_SEARCH_BUTTON){document.search.q.value = ""}; 
+}
+
+// set search preferences
+function setAHSearchPref(){
+    if (document.search.gsa.checked == 1){
+        setAHSearchCookie( dirname );
+    }else{
+        setAHSearchCookie( "community" );
+    }
+}
+
+// Set search preferences cookie
+function setAHSearchCookie( p ){
+    // set cookie ah_searchpref with a value of the document path
+    var expire=new Date();
+    expire.setDate(expire.getDate()+365); // Cookie expires after 1 year (365 days) 
+}
+
+// ]]-->
+   </script>
+  </form>
+  <!-- END SEARCH CONTENT -->
+  <!-- BEGIN PAGE CONTENT WRAPPER -->
+  <div id="page_content_wrapper">
+   <!-- BEGIN PAGE WRAPPER -->
+   <table id="page_content_table">
+    <tr>
+     
+     <td id="col2">
+      <!-- BEGIN CONTENT WRAPPER -->
+      <!-- BEGIN BREADCRUMBS -->
+      <div id="breadcrumb">
+       <ul class="navigation">
+        <li class="prev">
+         <a accesskey="p" class="prev" href="WS34397bd86479a29f-337b5a9132428888f0-8000.html" title="Adobe Graphics Assembly Language (AGAL)">
+          <img alt="Previous" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+        <li class="next">
+         <img height="17" src="images/next_null.gif" width="17"/>
+        </li>
+       </ul>
+       <div class="hierarchy" id="hierarchy">
+        <a href="WS9936fa0d5984e93b3f4f38ec1272a447844-8000.html">
+         <b>
+          Home
+         </b>
+        </a>
+        /
+        <a href="WS9936fa0d5984e93b3f4f38ec1272a447844-8000.html">
+         <b>
+          ActionScript 3.0 Developer’s Guide
+         </b>
+        </a>
+        /
+        <a href="WSb2ba3b1aad8a27b0-783ba6d012744358014-8000.html">
+         <b>
+          Appendixes
+         </b>
+        </a>
+        /
+        <a href="WS34397bd86479a29f-337b5a9132428888f0-8000.html">
+         <b>
+          Adobe Graphics Assembly Language (AGAL)
+         </b>
+        </a>
+       </div>
+      </div>
+      <!-- END BREADCRUMBS -->
+      <div id="content_wrapper">
+       <!-- BEGIN PAGE TITLE -->
+       <h1>
+        AGAL bytecode format
+       </h1>
+       <!-- END PAGE TITLE -->
+       <!-- BEGIN IONCOMMENTCOUNT -->
+       <div id="ionCount">
+       </div>
+       <!-- END IONCOMMENTCOUNT -->
+       <table border="0" cellpadding="0" cellspacing="0" id="inner_content_table" width="100%">
+        <tr>
+         <td>
+          <div style="border-top:#ccc solid 1px;">
+           <p>
+           </p>
+          </div>
+          <p id="chcPromo" style="display:none;">
+<a id="chcLink" href="http://www.adobe.com/support/chc/">
+<img id="chcImage" src="http://www.adobe.com/support/chc/GetMoreHelpFeatures.png"/>
+</a>
+</p>
+<script type="text/javascript" language="javascript" charset="utf-8">
+<!--
+var cfgArray = [];
+//cfgArray["Acrobat_10.0_Professional.helpcfg"] = "acrobatpro";
+//cfgArray["Acrobat_10.0_Standard.helpcfg"] = "acrobatstd";
+cfgArray["Lightroom_3.0.helpcfg"] = "lightroom";
+cfgArray["PhotoshopElements_8.0_Win.helpcfg"] = "photoshopelements";
+cfgArray["PhotoshopElements_8.0_Mac.helpcfg"] = "photoshopelementsmac";
+cfgArray["PremiereElements_8.0_Win.helpcfg"] = "premiereelements";
+
+//cfgArray["AfterEffects_10.0.helpcfg"] = "aftereffects";
+//cfgArray["AIR.helpcfg"] = "air";
+//cfgArray["ColdFusionBuilder.helpcfg"] = "coldfusion";
+//cfgArray["Contribute_6.0.helpcfg"] = "contribute";
+//cfgArray["DeviceCentral_3.0.helpcfg"] = "devicecentral";
+//cfgArray["Dreamweaver_11.0.helpcfg"] = "dreamweaver";
+//cfgArray["EncoreDVD_5.0.helpcfg"] = "encore";
+//cfgArray["ExtensionManager_3.0.helpcfg"] = "extension";
+//cfgArray["Fireworks_11.0.helpcfg"] = "fireworks";
+//cfgArray["Flash_11.0.helpcfg"] = "flash";
+//cfgArray["Flex_4.0.helpcfg"] = "flashbuilder";
+//cfgArray["FlashCatalyst_1.0.helpcfg"] = "flashcatalyst";
+//cfgArray["Illustrator_15.0.helpcfg"] = "illustrator";
+//cfgArray["InCopy_7.0.helpcfg"] = "incopy";
+//cfgArray["InDesign_7.0.helpcfg"] = "indesign";
+//cfgArray["OnLocation_5.0.helpcfg"] = "onlocation";
+//cfgArray["Photoshop_12.0.helpcfg"] = "photoshop";
+//cfgArray["PremierePro_5.0.helpcfg"] = "premierepro";
+
+function getLangName() {
+    var lang = "en-us";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if (ptn.test(lang)) {
+        var languageCode = lang.replace(ptn, "$1");
+        var countryCode = lang.replace(ptn, "$2");
+        lang = languageCode + "_" + countryCode.toUpperCase();
+    }
+    return lang;
+}
+
+function getCountryName() {
+    var lang = "";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if ((ptn.test(lang)) && (lang != "en-us")) {
+        var countryCode = lang.replace(ptn, "$2");
+        return "/" + countryCode;
+    }
+    return "";
+}
+
+if ( (typeof(terms_HELPCFG) != 'undefined')  && (terms_HELPCFG.indexOf(".helpcfg") != -1) ) {
+    var stage   = (document.location.href.indexOf(".stage.") != -1) ? 'stage.' : '';
+    var baseUrl = 'http://www.' + stage + 'adobe.com';
+    var refpage = document.location.href.replace(/#.*$/, '');
+	
+	if ((!use_robohelp_behavior) && (terms_HELPCFG.length > 0) && (typeof(cfgArray[terms_HELPCFG]) != 'undefined') && (cfgArray[terms_HELPCFG].length > 0)) {
+		if (document.getElementById) { // DOM3 = IE5, NS6
+			var newHref = baseUrl + getCountryName() + "/support/chc/" + "?helpcfg=http://help." + stage + "adobe.com/HelpCfg/" + getLangName() + "/" + terms_HELPCFG + "&url=" + refpage + "&product=" + cfgArray[terms_HELPCFG];
+			var newSrc = baseUrl + getCountryName() + "/support/chc/GetMoreHelpFeatures.png";
+			document.getElementById("chcPromo").style.display = "block";
+			document.getElementById("chcLink").href = newHref;
+			document.getElementById("chcImage").src = newSrc;
+		}
+	}
+}
+
+//-->
+</script>
+
+
+          <div>
+           <p>
+            AGAL bytecode must use Endian.LITTLE_ENDIAN format.
+           </p>
+           <div class="section">
+            <h4 class="sectiontitle">
+             Bytecode Header
+            </h4>
+            <p>
+             AGAL bytecode must begin
+with a 7-byte header:
+            </p>
+            <pre>A0 01000000 A1 00 -- for a vertex program 
+A0 01000000 A1 01 -- for a fragment program</pre>
+            <div class="tablenoborder">
+             <table border="1" cellpadding="4" cellspacing="0">
+              <thead align="left">
+               <tr>
+                <th id="d17e77614" valign="top" width="NaN%">
+                 <p>
+                  Offset (bytes)
+                 </p>
+                </th>
+                <th id="d17e77617" valign="top" width="NaN%">
+                 <p>
+                  Size (bytes)
+                 </p>
+                </th>
+                <th id="d17e77620" valign="top" width="NaN%">
+                 <p>
+                  Name
+                 </p>
+                </th>
+                <th id="d17e77623" valign="top" width="NaN%">
+                 <p>
+                  Description
+                 </p>
+                </th>
+               </tr>
+              </thead>
+              <tbody>
+               <tr>
+                <td headers="d17e77614 " valign="top" width="NaN%">
+                 <p>
+                  0
+                 </p>
+                </td>
+                <td headers="d17e77617 " valign="top" width="NaN%">
+                 <p>
+                  1
+                 </p>
+                </td>
+                <td headers="d17e77620 " valign="top" width="NaN%">
+                 <p>
+                  magic
+                 </p>
+                </td>
+                <td headers="d17e77623 " valign="top" width="NaN%">
+                 <p>
+                  must be 0xa0
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77614 " valign="top" width="NaN%">
+                 <p>
+                  1
+                 </p>
+                </td>
+                <td headers="d17e77617 " valign="top" width="NaN%">
+                 <p>
+                  4
+                 </p>
+                </td>
+                <td headers="d17e77620 " valign="top" width="NaN%">
+                 <p>
+                  version
+                 </p>
+                </td>
+                <td headers="d17e77623 " valign="top" width="NaN%">
+                 <p>
+                  must be 1
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77614 " valign="top" width="NaN%">
+                 <p>
+                  5
+                 </p>
+                </td>
+                <td headers="d17e77617 " valign="top" width="NaN%">
+                 <p>
+                  1
+                 </p>
+                </td>
+                <td headers="d17e77620 " valign="top" width="NaN%">
+                 <p>
+                  shader type ID
+                 </p>
+                </td>
+                <td headers="d17e77623 " valign="top" width="NaN%">
+                 <p>
+                  must be 0xa1
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77614 " valign="top" width="NaN%">
+                 <p>
+                  6
+                 </p>
+                </td>
+                <td headers="d17e77617 " valign="top" width="NaN%">
+                 <p>
+                  1
+                 </p>
+                </td>
+                <td headers="d17e77620 " valign="top" width="NaN%">
+                 <p>
+                  shader type
+                 </p>
+                </td>
+                <td headers="d17e77623 " valign="top" width="NaN%">
+                 <p>
+                  0 for a vertex program; 1 for a fragment
+program
+                 </p>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+           <div class="section">
+            <h4 class="sectiontitle">
+             Tokens
+            </h4>
+            <p>
+             The header is immediately followed
+by any number of tokens. Every token is 192 bits (24 bytes) in size
+and always has the format:
+            </p>
+            <p>
+             <samp class="codeph">
+              [opcode][destination][source1][source2 or sampler]
+             </samp>
+            </p>
+            <p>
+             Not every opcode uses all of these fields. Unused fields
+must be set to 0.
+            </p>
+           </div>
+           <div class="section">
+            <h4 class="sectiontitle">
+             Operation codes
+            </h4>
+            <p>
+             The [opcode] field is
+32 bits in size and can take one of these values:
+            </p>
+            <div class="tablenoborder">
+             <table border="1" cellpadding="4" cellspacing="0">
+              <thead align="left">
+               <tr>
+                <th id="d17e77702" valign="top" width="NaN%">
+                 <p>
+                  Name
+                 </p>
+                </th>
+                <th id="d17e77705" valign="top" width="NaN%">
+                 <p>
+                  Opcode
+                 </p>
+                </th>
+                <th id="d17e77708" valign="top" width="NaN%">
+                 <p>
+                  Operation
+                 </p>
+                </th>
+                <th id="d17e77711" valign="top" width="NaN%">
+                 <p>
+                  Description
+                 </p>
+                </th>
+               </tr>
+              </thead>
+              <tbody>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  mov
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x00
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  move
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  move data from source1 to destination, component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  add
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x01
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  add
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = source1 + source2, component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  sub
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x02
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  subtract
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = source1 - source2, component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  mul
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x03
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  multiply
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = source1 * source2, component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  div
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x04
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  divide
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = source1 / source2, component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  rcp
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x05
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  reciprocal
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = 1/source1, component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  min
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x06
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  minimum
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = minimum(source1,source2),
+component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  max
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x07
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  maximum
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = maximum(source1,source2),
+component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  frc
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x08
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  fractional
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = source1 - (float)floor(source1),
+component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  sqt
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x09
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  square root
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = sqrt(source1), component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  rsq
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x0a
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  reciprocal root
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = 1/sqrt(source1), component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  pow
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x0b
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  power
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = pow(source1,source2), component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  log
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x0c
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  logarithm
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = log_2(source1), component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  exp
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x0d
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  exponential
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = 2^source1, component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  nrm
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x0e
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  normalize
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = normalize(source1), component-wise
+(produces only a 3 component result, destination must be masked
+to .xyz or less)
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  sin
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x0f
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  sine
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = sin(source1), component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  cos
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x10
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  cosine
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = cos(source1), component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  crs
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x11
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  cross product
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination.x = source1.y * source2.z -
+source1.z * source2.y
+                 </p>
+                 <p>
+                  destination.y = source1.z * source2.x
+- source1.x * source2.z
+                 </p>
+                 <p>
+                  destination.z = source1.x * source2.y
+- source1.y * source2.x
+                 </p>
+                 <p>
+                  (produces only a 3 component result,
+destination must be masked to .xyz or less)
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  dp3
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x12
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  dot product
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = source1.x*source2.x + source1.y*source2.y
++ source1.z*source2.z
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  dp4
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x13
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  dot product
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = source1.x*source2.x + source1.y*source2.y
++ source1.z*source2.z + source1.w*source2.w
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  abs
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x14
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  absolute
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = abs(source1), component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  neg
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x15
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  negate
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = -source1, component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  sat
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x16
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  saturate
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = maximum(minimum(source1,1),0),
+component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  m33
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x17
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  multiply matrix 3x3
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination.x = (source1.x * source2[0].x)
++ (source1.y * source2[0].y) + (source1.z * source2[0].z)
+                 </p>
+                 <p>
+                  destination.y
+= (source1.x * source2[1].x) + (source1.y * source2[1].y) + (source1.z
+* source2[1].z)
+                 </p>
+                 <p>
+                  destination.z = (source1.x * source2[2].x)
++ (source1.y * source2[2].y) + (source1.z * source2[2].z)
+                 </p>
+                 <p>
+                  (produces
+only a 3 component result, destination must be masked to .xyz or
+less)
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  m44
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x18
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  multiply matrix 4x4
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination.x = (source1.x * source2[0].x)
++ (source1.y * source2[0].y) + (source1.z * source2[0].z) + (source1.w
+* source2[0].w)
+                 </p>
+                 <p>
+                  destination.y = (source1.x * source2[1].x)
++ (source1.y * source2[1].y) + (source1.z * source2[1].z) + (source1.w
+* source2[1].w)
+                 </p>
+                 <p>
+                  destination.z = (source1.x * source2[2].x)
++ (source1.y * source2[2].y) + (source1.z * source2[2].z) + (source1.w
+* source2[2].w)
+                 </p>
+                 <p>
+                  destination.w = (source1.x * source2[3].x)
++ (source1.y * source2[3].y) + (source1.z * source2[3].z) + (source1.w
+* source2[3].w)
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  m34
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x19
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  multiply matrix 3x4
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination.x = (source1.x * source2[0].x)
++ (source1.y * source2[0].y) + (source1.z * source2[0].z) + (source1.w
+* source2[0].w)
+                 </p>
+                 <p>
+                  destination.y = (source1.x * source2[1].x)
++ (source1.y * source2[1].y) + (source1.z * source2[1].z) + (source1.w
+* source2[1].w)
+                 </p>
+                 <p>
+                  destination.z = (source1.x * source2[2].x)
++ (source1.y * source2[2].y) + (source1.z * source2[2].z) + (source1.w
+* source2[2].w)
+                 </p>
+                 <p>
+                  (produces only a 3 component result, destination
+must be masked to .xyz or less)
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  kil
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x27
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  kill/discard (fragment shader only)
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  If single scalar source component is less
+than zero, fragment is discarded and not drawn to the frame buffer.
+(Destination register must be set to all 0)
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  tex
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x28
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  texture sample (fragment shader only)
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination equals load from texture source2
+at coordinates source1. In this case, source2 must be in sampler
+format.
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  sge
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x29
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  set-if-greater-equal
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = source1 &gt;= source2 ? 1
+: 0, component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  slt
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x2a
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  set-if-less-than
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = source1 &lt; source2 ? 1 :
+0, component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  seq
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x2c
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  set-if-equal
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = source1 == source2 ? 1 : 0,
+component-wise
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e77702 " valign="top" width="NaN%">
+                 <p>
+                  sne
+                 </p>
+                </td>
+                <td headers="d17e77705 " valign="top" width="NaN%">
+                 <p>
+                  0x2d
+                 </p>
+                </td>
+                <td headers="d17e77708 " valign="top" width="NaN%">
+                 <p>
+                  set-if-not-equal
+                 </p>
+                </td>
+                <td headers="d17e77711 " valign="top" width="NaN%">
+                 <p>
+                  destination = source1 != source2 ? 1 : 0,
+component-wise
+                 </p>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <p>
+             In AGAL2, the following opcodes have been introduced:
+            </p>
+            <div class="tablenoborder">
+             <table border="1" cellpadding="4" cellspacing="0">
+              <thead align="left">
+               <tr>
+                <th id="d17e78167" valign="top" width="NaN%">
+                 <p>
+                  Name
+                 </p>
+                </th>
+                <th id="d17e78170" valign="top" width="NaN%">
+                 <p>
+                  Opcode
+                 </p>
+                </th>
+                <th id="d17e78173" valign="top" width="NaN%">
+                 <p>
+                  Operation
+                 </p>
+                </th>
+                <th id="d17e78176" valign="top" width="NaN%">
+                 <p>
+                  Description
+                 </p>
+                </th>
+               </tr>
+              </thead>
+              <tbody>
+               <tr>
+                <td headers="d17e78167 " valign="top" width="NaN%">
+                 <p>
+                  ddx
+                 </p>
+                </td>
+                <td headers="d17e78170 " valign="top" width="NaN%">
+                 <p>
+                  0x1a
+                 </p>
+                </td>
+                <td headers="d17e78173 " valign="top" width="NaN%">
+                 <p>
+                  partial derivative in X
+                 </p>
+                </td>
+                <td headers="d17e78176 " valign="top" width="NaN%">
+                 <p>
+                  Load partial derivative in X of source1 into destination.
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e78167 " valign="top" width="NaN%">
+                 <p>
+                  ddy
+                 </p>
+                </td>
+                <td headers="d17e78170 " valign="top" width="NaN%">
+                 <p>
+                  0x1b
+                 </p>
+                </td>
+                <td headers="d17e78173 " valign="top" width="NaN%">
+                 <p>
+                  partial derivative in Y
+                 </p>
+                </td>
+                <td headers="d17e78176 " valign="top" width="NaN%">
+                 <p>
+                  Load partial derivative in Y of source1 into destination.
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e78167 " valign="top" width="NaN%">
+                 <p>
+                  ife
+                 </p>
+                </td>
+                <td headers="d17e78170 " valign="top" width="NaN%">
+                 <p>
+                  0x1c
+                 </p>
+                </td>
+                <td headers="d17e78173 " valign="top" width="NaN%">
+                 <p>
+                  if equal to
+                 </p>
+                </td>
+                <td headers="d17e78176 " valign="top" width="NaN%">
+                 <p>
+                  Jump if source1 is equal to source2.
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e78167 " valign="top" width="NaN%">
+                 <p>
+                  ine
+                 </p>
+                </td>
+                <td headers="d17e78170 " valign="top" width="NaN%">
+                 <p>
+                  0x1d
+                 </p>
+                </td>
+                <td headers="d17e78173 " valign="top" width="NaN%">
+                 <p>
+                  if not equal to
+                 </p>
+                </td>
+                <td headers="d17e78176 " valign="top" width="NaN%">
+                 <p>
+                  Jump if source1 is not equal to source2.
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e78167 " valign="top" width="NaN%">
+                 <p>
+                  ifg
+                 </p>
+                </td>
+                <td headers="d17e78170 " valign="top" width="NaN%">
+                 <p>
+                  0x1e
+                 </p>
+                </td>
+                <td headers="d17e78173 " valign="top" width="NaN%">
+                 <p>
+                  if greater than
+                 </p>
+                </td>
+                <td headers="d17e78176 " valign="top" width="NaN%">
+                 <p>
+                  Jump if source1 is greater than or equal to source2.
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e78167 " valign="top" width="NaN%">
+                 <p>
+                  ifl
+                 </p>
+                </td>
+                <td headers="d17e78170 " valign="top" width="NaN%">
+                 <p>
+                  0x1f
+                 </p>
+                </td>
+                <td headers="d17e78173 " valign="top" width="NaN%">
+                 <p>
+                  if less than
+                 </p>
+                </td>
+                <td headers="d17e78176 " valign="top" width="NaN%">
+                 <p>
+                  Jump if source1 is less than source2.
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e78167 " valign="top" width="NaN%">
+                 <p>
+                  els
+                 </p>
+                </td>
+                <td headers="d17e78170 " valign="top" width="NaN%">
+                 <p>
+                  0x20
+                 </p>
+                </td>
+                <td headers="d17e78173 " valign="top" width="NaN%">
+                 <p>
+                  else
+                 </p>
+                </td>
+                <td headers="d17e78176 " valign="top" width="NaN%">
+                 <p>
+                  Else block
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e78167 " valign="top" width="NaN%">
+                 <p>
+                  eif
+                 </p>
+                </td>
+                <td headers="d17e78170 " valign="top" width="NaN%">
+                 <p>
+                  0x21
+                 </p>
+                </td>
+                <td headers="d17e78173 " valign="top" width="NaN%">
+                 <p>
+                  Endif
+                 </p>
+                </td>
+                <td headers="d17e78176 " valign="top" width="NaN%">
+                 <p>
+                  Close if or else block.
+                 </p>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+           <div class="section">
+            <h4 class="sectiontitle">
+             Destination field format
+            </h4>
+            <p>
+             The [destination]
+field is 32 bits in size:
+            </p>
+            <pre>31.............................0 
+----TTTT----MMMMNNNNNNNNNNNNNNNN</pre>
+            <p>
+             T = Register type
+(4 bits)
+            </p>
+            <p>
+             M = Write mask (4 bits)
+            </p>
+            <p>
+             N = Register number
+(16 bits)
+            </p>
+            <p>
+             - = undefined, must be 0
+            </p>
+           </div>
+           <div class="section">
+            <h4 class="sectiontitle">
+             Source field format
+            </h4>
+            <p>
+             The [source] field
+is 64 bits in size:
+            </p>
+            <pre>63.............................................................0 
+D-------------QQ----IIII----TTTTSSSSSSSSOOOOOOOONNNNNNNNNNNNNNNN</pre>
+            <p>
+             D
+= Direct=0/Indirect=1 for direct Q and I are ignored, 1bit
+            </p>
+            <p>
+             Q
+= Index register component select (2 bits)
+            </p>
+            <p>
+             I = Index register
+type (4 bits)
+            </p>
+            <p>
+             T = Register type (4 bits)
+            </p>
+            <p>
+             S = Swizzle
+(8 bits, 2 bits per component)
+            </p>
+            <p>
+             O = Indirect offset (8 bits)
+            </p>
+            <p>
+             N
+= Register number (16 bits)
+            </p>
+            <p>
+             - = undefined, must be 0
+            </p>
+           </div>
+           <div class="section">
+            <h4 class="sectiontitle">
+             Sampler field format
+            </h4>
+            <p>
+             The second source
+field for the tex opcode must be in [sampler] format, which is 64
+bits in size:
+            </p>
+            <pre>63.............................................................0 
+FFFFMMMMWWWWSSSSDDDD--------TTTT--------BBBBBBBBNNNNNNNNNNNNNNNN</pre>
+            <p>
+             N
+= Sampler register number (16 bits)
+            </p>
+            <p>
+             B = Texture level-of-detail
+(LOD) bias, signed integer, scale by 8. The floating point value
+used is b/8.0 (8 bits)
+            </p>
+            <p>
+             T = Register type, must be 5, Sampler
+(4 bits)
+            </p>
+            <p>
+             F = Filter (0=nearest,1=linear) (4 bits)
+            </p>
+            <p>
+             M
+= Mipmap (0=disable,1=nearest, 2=linear)
+            </p>
+            <p>
+             W = Wrapping (0=clamp,1=repeat)
+            </p>
+            <p>
+             S
+= Special flag bits (must be 0)
+            </p>
+            <p>
+             D = Dimension (0=2D, 1=Cube)
+            </p>
+           </div>
+           <div class="section">
+            <h4 class="sectiontitle">
+             Program Registers
+            </h4>
+            <p>
+             The number of registers used depend upon the Context3D profile used. The number of registers along with their usage are defined in the following table:
+            </p>
+            <div class="tablenoborder">
+             <table border="1" cellpadding="4" cellspacing="0">
+              <thead align="left">
+               <tr>
+                <th id="d17e78363" valign="top" width="NaN%">
+                 <p>
+                  Name
+                 </p>
+                </th>
+                <th id="d17e78366" valign="top" width="NaN%">
+                 <p>
+                  Value
+                 </p>
+                </th>
+                <th colspan="2" id="d17e78369" valign="top">
+                 <p>
+                  AGAL
+                 </p>
+                </th>
+                <th colspan="2" id="d17e78372" valign="top">
+                 <p>
+                  AGAL2
+                 </p>
+                </th>
+                <th colspan="2" id="d17e78375" valign="top">
+                 <p>
+                  AGAL3
+                 </p>
+                </th>
+                <th id="d17e78378" valign="top" width="NaN%">
+                 <p>
+                  Usage
+                 </p>
+                </th>
+               </tr>
+              </thead>
+              <tbody>
+               <tr>
+                <td headers="d17e78363 " valign="top" width="NaN%">
+                </td>
+                <td headers="d17e78366 " valign="top" width="NaN%">
+                </td>
+                <td headers="d17e78369 " valign="top" width="NaN%">
+                 <p>
+                  Number per fragment program
+                 </p>
+                </td>
+                <td headers="d17e78369 " valign="top" width="NaN%">
+                 <p>
+                  Number per vertex program
+                 </p>
+                </td>
+                <td headers="d17e78372 " valign="top" width="NaN%">
+                 <p>
+                  Number per fragment program
+                 </p>
+                </td>
+                <td headers="d17e78372 " valign="top" width="NaN%">
+                 <p>
+                  Number per vertex program
+                 </p>
+                </td>
+                <td headers="d17e78375 " valign="top" width="NaN%">
+                 <p>
+                  Number per fragment program
+                 </p>
+                </td>
+                <td headers="d17e78375 " valign="top" width="NaN%">
+                 <p>
+                  Number per vertex program
+                 </p>
+                </td>
+                <td headers="d17e78378 " valign="top" width="NaN%">
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e78363 " valign="top" width="NaN%">
+                 <p>
+                  Context 3D Profiles Support
+                 </p>
+                </td>
+                <td headers="d17e78366 " valign="top" width="NaN%">
+                </td>
+                <td colspan="2" headers="d17e78369 " valign="top">
+                 <p>
+                  Below Standard
+                 </p>
+                </td>
+                <td colspan="2" headers="d17e78372 " valign="top">
+                 <p>
+                  Standard
+                 </p>
+                </td>
+                <td colspan="2" headers="d17e78375 " valign="top">
+                 <p>
+                  Standard Extended
+                 </p>
+                </td>
+                <td headers="d17e78378 " valign="top" width="NaN%">
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e78363 " valign="top" width="NaN%">
+                 <p>
+                  SWF version
+                 </p>
+                </td>
+                <td headers="d17e78366 " valign="top" width="NaN%">
+                </td>
+                <td colspan="2" headers="d17e78369 " valign="top">
+                 <p>
+                  Below 25
+                 </p>
+                </td>
+                <td colspan="2" headers="d17e78372 " valign="top">
+                 <p>
+                  25
+                 </p>
+                </td>
+                <td colspan="2" headers="d17e78375 " valign="top">
+                 <p>
+                  28 and above
+                 </p>
+                </td>
+                <td headers="d17e78378 " valign="top" width="NaN%">
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e78363 " valign="top" width="NaN%">
+                 <p>
+                  Attribute
+                 </p>
+                </td>
+                <td headers="d17e78366 " valign="top" width="NaN%">
+                 <p>
+                  0
+                 </p>
+                </td>
+                <td headers="d17e78369 " valign="top" width="NaN%">
+                 <p>
+                  NA
+                 </p>
+                </td>
+                <td headers="d17e78369 " valign="top" width="NaN%">
+                 <p>
+                  8
+                 </p>
+                </td>
+                <td headers="d17e78372 " valign="top" width="NaN%">
+                 <p>
+                  NA
+                 </p>
+                </td>
+                <td headers="d17e78372 " valign="top" width="NaN%">
+                 <p>
+                  8
+                 </p>
+                </td>
+                <td headers="d17e78375 " valign="top" width="NaN%">
+                 <p>
+                  NA
+                 </p>
+                </td>
+                <td headers="d17e78375 " valign="top" width="NaN%">
+                 <p>
+                  16
+                 </p>
+                </td>
+                <td headers="d17e78378 " valign="top" width="NaN%">
+                 <p>
+                  Vertex shader input; read from a vertex buffer specified using Context3D.setVertexBufferAt().
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e78363 " valign="top" width="NaN%">
+                 <p>
+                  Constant
+                 </p>
+                </td>
+                <td headers="d17e78366 " valign="top" width="NaN%">
+                 <p>
+                  1
+                 </p>
+                </td>
+                <td headers="d17e78369 " valign="top" width="NaN%">
+                 <p>
+                  28
+                 </p>
+                </td>
+                <td headers="d17e78369 " valign="top" width="NaN%">
+                 <p>
+                  128
+                 </p>
+                </td>
+                <td headers="d17e78372 " valign="top" width="NaN%">
+                 <p>
+                  64
+                 </p>
+                </td>
+                <td headers="d17e78372 " valign="top" width="NaN%">
+                 <p>
+                  250
+                 </p>
+                </td>
+                <td headers="d17e78375 " valign="top" width="NaN%">
+                 <p>
+                  200
+                 </p>
+                </td>
+                <td headers="d17e78375 " valign="top" width="NaN%">
+                 <p>
+                  250
+                 </p>
+                </td>
+                <td headers="d17e78378 " valign="top" width="NaN%">
+                 <p>
+                  Shader input; set using the Context3D.setProgramConstants() family of functions.
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e78363 " valign="top" width="NaN%">
+                 <p>
+                  Temporary
+                 </p>
+                </td>
+                <td headers="d17e78366 " valign="top" width="NaN%">
+                 <p>
+                  2
+                 </p>
+                </td>
+                <td headers="d17e78369 " valign="top" width="NaN%">
+                 <p>
+                  8
+                 </p>
+                </td>
+                <td headers="d17e78369 " valign="top" width="NaN%">
+                 <p>
+                  8
+                 </p>
+                </td>
+                <td headers="d17e78372 " valign="top" width="NaN%">
+                 <p>
+                  26
+                 </p>
+                </td>
+                <td headers="d17e78372 " valign="top" width="NaN%">
+                 <p>
+                  26
+                 </p>
+                </td>
+                <td headers="d17e78375 " valign="top" width="NaN%">
+                 <p>
+                  26
+                 </p>
+                </td>
+                <td headers="d17e78375 " valign="top" width="NaN%">
+                 <p>
+                  26
+                 </p>
+                </td>
+                <td headers="d17e78378 " valign="top" width="NaN%">
+                 <p>
+                  Temporary register for computation; not accessible outside program.
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e78363 " valign="top" width="NaN%">
+                 <p>
+                  Output
+                 </p>
+                </td>
+                <td headers="d17e78366 " valign="top" width="NaN%">
+                 <p>
+                  3
+                 </p>
+                </td>
+                <td headers="d17e78369 " valign="top" width="NaN%">
+                 <p>
+                  1
+                 </p>
+                </td>
+                <td headers="d17e78369 " valign="top" width="NaN%">
+                 <p>
+                  1
+                 </p>
+                </td>
+                <td headers="d17e78372 " valign="top" width="NaN%">
+                 <p>
+                  1
+                 </p>
+                </td>
+                <td headers="d17e78372 " valign="top" width="NaN%">
+                 <p>
+                  1
+                 </p>
+                </td>
+                <td headers="d17e78375 " valign="top" width="NaN%">
+                 <p>
+                  1
+                 </p>
+                </td>
+                <td headers="d17e78375 " valign="top" width="NaN%">
+                 <p>
+                  1
+                 </p>
+                </td>
+                <td headers="d17e78378 " valign="top" width="NaN%">
+                 <p>
+                  Shader output: in a vertex program, the output is the clip space position; in a fragment program, the output is a color.
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e78363 " valign="top" width="NaN%">
+                 <p>
+                  Varying
+                 </p>
+                </td>
+                <td headers="d17e78366 " valign="top" width="NaN%">
+                 <p>
+                  4
+                 </p>
+                </td>
+                <td headers="d17e78369 " valign="top" width="NaN%">
+                 <p>
+                  8
+                 </p>
+                </td>
+                <td headers="d17e78369 " valign="top" width="NaN%">
+                 <p>
+                  8
+                 </p>
+                </td>
+                <td headers="d17e78372 " valign="top" width="NaN%">
+                 <p>
+                  10
+                 </p>
+                </td>
+                <td headers="d17e78372 " valign="top" width="NaN%">
+                 <p>
+                  10
+                 </p>
+                </td>
+                <td headers="d17e78375 " valign="top" width="NaN%">
+                 <p>
+                  10
+                 </p>
+                </td>
+                <td headers="d17e78375 " valign="top" width="NaN%">
+                 <p>
+                  10
+                 </p>
+                </td>
+                <td headers="d17e78378 " valign="top" width="NaN%">
+                 <p>
+                  Transfer interpolated data between vertex and fragment shaders. The varying registers from the vertex program are applied as input to the fragment program. Values are interpolated according to the distance from the triangle vertices.
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e78363 " valign="top" width="NaN%">
+                 <p>
+                  Sampler
+                 </p>
+                </td>
+                <td headers="d17e78366 " valign="top" width="NaN%">
+                 <p>
+                  5
+                 </p>
+                </td>
+                <td headers="d17e78369 " valign="top" width="NaN%">
+                 <p>
+                  8
+                 </p>
+                </td>
+                <td headers="d17e78369 " valign="top" width="NaN%">
+                 <p>
+                  NA
+                 </p>
+                </td>
+                <td headers="d17e78372 " valign="top" width="NaN%">
+                 <p>
+                  16
+                 </p>
+                </td>
+                <td headers="d17e78372 " valign="top" width="NaN%">
+                 <p>
+                  NA
+                 </p>
+                </td>
+                <td headers="d17e78375 " valign="top" width="NaN%">
+                 <p>
+                  16
+                 </p>
+                </td>
+                <td headers="d17e78375 " valign="top" width="NaN%">
+                 <p>
+                  NA
+                 </p>
+                </td>
+                <td headers="d17e78378 " valign="top" width="NaN%">
+                 <p>
+                  Fragment shader input; read from a texture specified using Context3D.setTextureAt().
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e78363 " valign="top" width="NaN%">
+                 <p>
+                  Fragment register
+                 </p>
+                </td>
+                <td headers="d17e78366 " valign="top" width="NaN%">
+                 <p>
+                  6
+                 </p>
+                </td>
+                <td headers="d17e78369 " valign="top" width="NaN%">
+                 <p>
+                  NA
+                 </p>
+                </td>
+                <td headers="d17e78369 " valign="top" width="NaN%">
+                 <p>
+                  NA
+                 </p>
+                </td>
+                <td headers="d17e78372 " valign="top" width="NaN%">
+                 <p>
+                  1
+                 </p>
+                </td>
+                <td headers="d17e78372 " valign="top" width="NaN%">
+                 <p>
+                  NA
+                 </p>
+                </td>
+                <td headers="d17e78375 " valign="top" width="NaN%">
+                 <p>
+                  1
+                 </p>
+                </td>
+                <td headers="d17e78375 " valign="top" width="NaN%">
+                 <p>
+                  NA
+                 </p>
+                </td>
+                <td headers="d17e78378 " valign="top" width="NaN%">
+                 <p>
+                  It is write-only and used to re-write z-value (or depth value) written in vertex shader.
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e78363 " valign="top" width="NaN%">
+                 <p>
+                  Tokens
+                 </p>
+                </td>
+                <td headers="d17e78366 " valign="top" width="NaN%">
+                </td>
+                <td colspan="2" headers="d17e78369 " valign="top">
+                 <p>
+                  200
+                 </p>
+                </td>
+                <td colspan="2" headers="d17e78372 " valign="top">
+                 <p>
+                  1024
+                 </p>
+                </td>
+                <td colspan="2" headers="d17e78375 " valign="top">
+                 <p>
+                  2048
+                 </p>
+                </td>
+                <td headers="d17e78378 " valign="top" width="NaN%">
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <p>
+             The latest AGAL Mini Assembler can be found
+             <a href="https://github.com/adobe-flash/graphicscorelib/tree/master/src/com/adobe/utils/v3" target="_self">
+              here
+             </a>
+             .
+            </p>
+           </div>
+          </div>
+          <!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+          <!-- END USER PREFERENCES -->
+          <div id="related">
+           <div class="separator">
+           </div>
+          </div>
+          <div id="footer">
+           <!-- BEGIN IONCOMMENTS -->
+           <div id="ionComHere">
+           </div>
+           <!-- END IONCOMMENTS -->
+           
+
+           <p id="creativecommons">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" id="creativecommons_text">
+             <img alt="This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License" id="creativecommons_img" src="images/CC.png"/>
+            </a>
+            Twitter™ and Facebook posts are not covered under the terms of Creative Commons.
+           </p>
+          </div>
+         </td>
+         <td width="10px">
+         </td>
+         <td id="inner_rightcolumn">
+          
+         </td>
+        </tr>
+       </table>
+      </div>
+      <!-- BEGIN BREADCRUMBS -->
+      <div id="breadcrumb">
+       <ul class="navigation">
+        <li class="prev">
+         <a accesskey="p" class="prev" href="WS34397bd86479a29f-337b5a9132428888f0-8000.html" title="Adobe Graphics Assembly Language (AGAL)">
+          <img alt="Previous" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+        <li class="next">
+         <img height="17" src="images/next_null.gif" width="17"/>
+        </li>
+       </ul>
+       <div class="hierarchy" id="hierarchy">
+        <a href="WS9936fa0d5984e93b3f4f38ec1272a447844-8000.html">
+         <b>
+          Home
+         </b>
+        </a>
+        /
+        <a href="WS9936fa0d5984e93b3f4f38ec1272a447844-8000.html">
+         <b>
+          ActionScript 3.0 Developer’s Guide
+         </b>
+        </a>
+        /
+        <a href="WSb2ba3b1aad8a27b0-783ba6d012744358014-8000.html">
+         <b>
+          Appendixes
+         </b>
+        </a>
+        /
+        <a href="WS34397bd86479a29f-337b5a9132428888f0-8000.html">
+         <b>
+          Adobe Graphics Assembly Language (AGAL)
+         </b>
+        </a>
+       </div>
+      </div>
+      <!-- END BREADCRUMBS -->
+      <!-- END CONTENT WRAPPER -->
+      
+     </td>
+     <td id="col3">
+      <div>
+       <img src="images/adobe-lq.png"/>
+      </div>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!-- END PAGE CONTENT WRAPPER -->
+  <script type="text/javascript">
+   <!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+  </script>
+  <!--
+    Description:
+    This file generates the link to product support in the top right corner
+-->
+
+<style>
+#menutop{
+    position:absolute;
+    top:4px;
+    right:24px;
+    width:auto;    
+    font-size:11px;
+    color:#fff;
+    text-align:right;
+}
+#menutop a{
+    color:#fff;
+}
+#menutop a:hover{
+        text-decoration:underline;
+}
+</style>  
+  
+  
+  
+  
+<div id="productmenu">
+<!--googleoff: index-->
+  <div id="menutop">
+
+
+<script language=javascript type='text/javascript'>
+    // darken menu text for products with light backgrounds
+    var path = document.location.href.toLowerCase();
+    if (path.indexOf("/acrobat/")           	> 0 ||
+        path.indexOf("/acrobat.com/")       	> 0 ||
+        path.indexOf("/acrobatConnectPro/") 	> 0 ||
+        path.indexOf("/connect/")           	> 0 ||
+        path.indexOf("/framemaker/")           	> 0 ||
+        path.indexOf("/livecycledataserviceses/") > 0 ||
+        path.indexOf("/muse/")         	> 0 ||
+		path.indexOf("/presenter/")         	> 0 ||
+        path.indexOf("/scene7/")            	> 0 ||
+        path.indexOf("/flashmediaserver/")  	> 0 ||
+        path.indexOf("/wave/")              	> 0 )
+    {
+        document.write('<style>#menutop a{color:#505050}</style>');
+    }
+    if (typeof('terms_AHV_PRODUCT_SUPPORT') != "undefined" && ! use_robohelp_behavior ){      
+        if (path.indexOf("/muse/") > -1 ){
+            var supportlink = '<a href="http://muse.adobe.com/support.html">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }else{
+            var supportlink = '<a href="http://adobe.com/support">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }
+        document.write( supportlink );
+     }
+
+</script> 
+
+  </div>
+<!--googleon: index-->
+</div>
+
+
+
+  <style>
+#online-privacy-policy{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+<p id="online-privacy-policy">
+<script language="javascript">
+var pageLoc = "en_US";
+var metaElements = document.all ?
+document.all.tags('meta') :
+document.getElementsByTagName ?
+document.getElementsByTagName ('meta') : new Array();
+for (var m = 0; m < metaElements.length; m++) {
+	if (metaElements[m].name == "lang") {
+		pageLoc = metaElements[m].content;
+		break;
+	}
+}
+var ptn = /(..)-(..)/;
+if (ptn.test(pageLoc)) {
+	var languageCode = pageLoc.replace(ptn, "$1");
+	var countryCode = pageLoc.replace(ptn, "$2");
+	pageLoc = languageCode + "_" + countryCode.toUpperCase();
+}
+
+var policyLoc = "en_US";
+var policyText = "Online Privacy Policy";
+var policyPath = "";
+var policyArray=[
+"da_DK", "Online fortrolighedserklæring",
+"de_DE", "Online-Datenschutzrichtlinie",
+"es_ES", "Política de confidencialidad en línea",
+"fi_FI", "Yksityisyyttä koskeva Online-toimintaohjelma",
+"fr_FR", "Confidentialité et sécurité",
+"it_IT", "Informativa sulla privacy online",
+"ja_JP", "プライバシーポリシー",
+"ko_KR", "Adobe 온라인 개인정보 보호정책",
+"pt_BR", "Política de Confidencialidade On-line", 
+"zh_CN", "在线隐私政策",
+"zh_TW", "線上隱私政策"
+];
+var legalLoc = "en_US";
+var legalText = "Legal Notices";
+var legalPath = legalLoc;
+var legalArray=[
+"ar_AE", "إشعارات قانونية",
+"bg_BG", "Юридически бележки",
+"cs_CZ", "Právní upozornění",
+"da_DK", "Juridiske meddelelser",
+"de_DE", "Rechtliche Hinweise",
+"el_GR", "Σημειώσεις νομικού περιεχομένου",
+"es_ES", "Avisos legales",
+"et_EE", "Juriidilised teated",
+"fi_FI", "Lakisääteiset ilmoitukset",
+"fr_FR", "Mentions légales",
+"he_IL", "הצהרות משפטיות",
+"hr_HR", "Pravne napomene",
+"hu_HU", "Jogi közlemények",
+"it_IT", "Informazioni legali",
+"ja_JP", "法律上の注意",
+"ko_KR", "법적 고지 사항",
+"lt_LT", "Teisinės pastabos",
+"lv_LV", "Juridisks paziņojums",
+"nb_NO", "Juridiske merknader",
+"nl_NL", "Juridische kennisgevingen",
+"pl_PL", "Informacje prawne",
+"pt_BR", "Aspectos jurídicos",
+"ro_RO", "Prevederi legale",
+"ru_RU", "Юридическая информация",
+"sk_SK", "Právne upozornenie",
+"sl_SI", "Pravni pouk",
+"sv_SE", "Upphovsrätt",
+"tr_TR", "Yasal uyarılar",
+"uk_UA", "Юридична інформація",
+"zh_CN", "法律声明",
+"zh_TW", "法律注意事項"
+];
+
+ruPolicy = "http://www.adobe.com/ru/misc/privacy.html";
+trPolicy = "http://www.adobe.com/tr/misc/privacy.html";
+
+// Bug 2846992: LOC: RUS, TUR: The link to "Online Privacy Policy" should include language, currently it is not appearing.
+if (pageLoc == "ru_RU") {
+	policyPath = "ru";
+}
+else if (pageLoc == "tr_TR") {
+	policyPath = "tr";
+}
+for (var i = 0; i < policyArray.length; i+=2) {
+	if (pageLoc == policyArray[i]) {
+		policyLoc = pageLoc;
+		policyText = policyArray[i+1];
+		var ptn = /(..)_(..)/;
+		if (ptn.test(policyLoc)) {
+			var countryCode = policyLoc.replace(ptn, "$2");
+			policyPath = countryCode.toLowerCase();
+		}
+		break;
+	}
+}
+
+for (var i = 0; i < legalArray.length; i+=2) {
+	if (pageLoc == legalArray[i]) {
+		legalLoc = pageLoc;
+		legalText = legalArray[i+1];
+		legalPath = legalLoc;
+		break;
+	}
+}
+if(agt.indexOf("community help client") > -1 ){
+	document.write('<a href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+}else{
+	//Open the privacy policy in a new window
+	document.write('<a target="_blank" href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a target="_blank" href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+} 
+
+
+remove_all_cookies();
+
+function remove_all_cookies() {
+	var res = document.cookie;
+    var multiple = res.split(";");
+    for(var i = 0; i < multiple.length; i++) {
+    	var key = multiple[i].split("=");
+        document.cookie = key[0]+" =; expires = Thu, 01 Jan 1970 00:00:00 UTC";
+    }
+}
+
+
+</script>
+</p>
+
+
+  
+<!-- localfooter.ssi -->
+
+<script type="text/javascript">
+    var debug = (top.location.href.indexOf("debug=true") > -1);
+</script>
+
+<script language="javascript">
+document.write('<scr'+'ipt ' +
+               'src="/en_US/ssi/_pod.js" ' +
+               'language="javascript" ' +
+               'charset="UTF-8"> ' +
+               '</scr'+'ipt>');
+</script>
+
+//  Ethnio survey code removed
+  
+  
+ </body>
+</html>

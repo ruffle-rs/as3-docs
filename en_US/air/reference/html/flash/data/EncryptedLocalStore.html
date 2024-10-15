@@ -1,0 +1,565 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"><html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers"><meta name="lang" content="en-us"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="EncryptedLocalStore,flash.data.EncryptedLocalStore,isSupported,getItem,removeItem,reset,setItem"><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" src="../../AC_OETags.js" type="text/javascript"></script><title>flash.data.EncryptedLocalStore - Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers</title>
+	<link rel="stylesheet" href="../../jslr-style.css" type="text/css">
+		<script type="text/javascript">
+			
+				var baseRef = "../../";
+				var buildType = 'jslr';
+				var alreadyrunflag=0; //flag to indicate whether target function has already been run
+				var terms_HELPCFG = ".helpcfg";
+
+if (document.addEventListener)
+  document.addEventListener("DOMContentLoaded", function(){alreadyrunflag=1; init()}, false)
+else if (document.all && !window.opera){
+  /* blocks IE from working, as it's fired before dom if ready
+ document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
+  var contentloadtag=document.getElementById("contentloadtag")
+  contentloadtag.onreadystatechange=function(){
+    if (this.readyState=="complete"){
+      alreadyrunflag=1;
+      init();
+    }
+  }*/
+} else if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+  var _timer=setInterval(function(){
+  if(/loaded|complete/.test(document.readyState)){
+    clearInterval(_timer);
+    alreadyrunflag=1;
+    init(); // call target function
+  }}, 10)
+}
+function onLoadFunction() {
+	setTimeout("if (!alreadyrunflag) init();  alreadyrunflag=1; ionReadyLoad(); ", 0);
+}
+
+		</script>
+		<script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+		<script language="javascript" type="text/javascript" src="../../asdoc.js"></script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body onLoad="onLoadFunction()">
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td>
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr>
+				  <td class="titleTableTitleION" align="left" nowrap="true">Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers<br>
+				  <span class="titleTableTopNavION">
+				  <span id="homelink">
+						<a target="_self" href="../../index.html"> Home </a>&nbsp;|&nbsp;
+				  </span>
+				  <a id="showtoc" onClick="showHideTOC(true)" href="#top" style="display:none">Show Classes List</a><a id="hidetoc" onClick="showHideTOC(false)" href="#top" style="display:">Hide Classes List</a>&nbsp;|&nbsp;
+				  <a href="../../all-index-A.html"> Index </a>&nbsp;|&nbsp;
+				  <a href="../../appendixes.html"> Appendixes </a><br>
+				  </span>	
+				  </td>
+				  <td class="titleTableSearchION" align="right" nowrap="true">
+				  <span id="gsa" class="gsa">
+					<form class="searchFormION" method="get" onSubmit="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US');return false;">
+				  <input class="hidden" name="loc" value="" type="hidden">
+				  <input class="hidden" name="termPrefix" value="site:help.adobe.com/en_US/AS3CLR/Flash_10.0" type="hidden">
+				  <input class="hidden" name="title" value="ActionScript 3.0 Reference for the Adobe Flash Platform" type="hidden">
+				  <input class="hidden" name="term" value="" type="hidden">
+				  <input class="hidden" name="area" value="" type="hidden">
+				  <input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text">
+				  <input type="button" name="action" value="" onClick="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US')" class="searchbutton"><br>
+			      <input id="checkBoxId" type="checkbox" name="checkbox" value="checkbox" checked>Language Reference only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  </form>
+				  </span>				  
+				  </td>
+				</tr>
+			  </table>			
+			  </td>
+			<td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logoION.jpg" class="logoImageION" alt=" Adobe Logo " title=" Adobe Logo "></td>
+		  </tr>
+		  <tr>
+			<td colspan="2">
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr class="titleTableRow2">
+				<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+					<convert>EncryptedLocalStore&nbsp;</convert>
+				</td>
+				<td class="titleTableSubNav" id="subNav" align="right">
+				  <a id="propertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="propertiesBar" style="display:none"> | </span>
+				  <a id="packagePropertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="packagePropertiesBar" style="display:none"> | </span>
+				  <a id="constructorLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+				  <span id="constructorBar" style="display:none"> | </span>
+				  <a id="methodsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Methods </a>
+				  <span id="methodsBar" style="display:none"> | </span>
+				  <a id="packageFunctionsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Functions </a>
+				  <span id="packageFunctionsBar" style="display:none"> | </span>
+				  <a id="eventsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('eventSummary');" style="display:none"> Events </a>
+				  <span id="eventsBar" style="display:none"> | </span>
+				  <a id="stylesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('styleSummary');" style="display:none"> Styles </a>
+				  <span id="stylesBar" style="display:none"> | </span>
+				  <a id="SkinPartLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinPartSummary');" style="display:none"> Skin Parts </a>
+				  <span id="SkinPartBar" style="display:none"> | </span>
+				  <a id="SkinStateLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinStateSummary');" style="display:none"> Skin States </a>
+				  <span id="SkinStateBar" style="display:none"> | </span>
+				  <a id="effectsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('effectSummary');" style="display:none"> Effects </a>
+				  <span id="effectsBar" style="display:none"> | </span>
+				  <a id="constantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="constantsBar" style="display:none"> | </span>
+				  <a id="packageConstantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="packageConstantsBar" style="display:none"> | </span>
+				  <a id="interfacesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('interfaceSummary');" style="display:none"> Interfaces </a>
+				  <span id="interfacesBar" style="display:none"> | </span>
+				  <a id="classesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('classSummary');" style="display:none"> Classes </a>
+				  <span id="classesBar" style="display:none"> | </span>
+				  <a id="packageUseLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('package-use.html');" style="display:none">Use</a>
+				  <span id="packageUseBar" style="display:none"> | </span>
+				  <a id="examplesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('includeExamplesSummary');" style="display:none"> Examples </a>
+				</td>
+				</tr>
+				<tr class="titleTableRow3">
+				  <td colspan="4"></td>
+				</tr>
+			  </table>
+			</td>
+		  </tr>
+		</table>
+        <div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="classlist" class="jslrclasslist">
+					<div class="classlistoutline"></div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content">
+<script language="javascript" type="text/javascript">  <!--  
+         
+        asdocTitle = "EncryptedLocalStore - Adobe® AIR® API Reference for HTML Developers"; 
+        var baseRef = '../../'; 
+	document.baseRef = '../../'; 
+          -->  </script>
+<script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+<script language="javascript" type="text/javascript"><!--
+function submitValue() {
+var title="Adobe® AIR® API Reference for HTML Developers";
+var searchStr=document.getElementById('search-livedocs').value;
+
+        
+        
+        if(document.getElementById('checkBoxId').checked){
+        window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
++"&site=communityhelp-air-jslr ";
+} 
+
+        else{ 
+window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
+;
+} 
+} 
+--></script><script type="text/javascript"> scrollToNameAnchor(); </script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">window.runtime property</td><td>window.runtime.flash.data.EncryptedLocalStore</td></tr><tr><td class="classSignature"></td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">EncryptedLocalStore  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><div id="badgeAnchorSupport" class="ionBadgeWrapper"></div><div id="badgeContainerSupport"></div><p></p><p></p>
+
+	The EncryptedLocalStore class provides a persistent, encrypted data storage mechanism.
+
+	 
+
+	 
+
+	 
+
+	 <p>AIR provides an encrypted local store (ELS) for each AIR application installed on
+
+	a user's computer. This lets you save and retrieve data that is
+
+	stored on the user’s local hard drive in an encrypted format that
+
+	cannot easily be deciphered by other users. A separate encrypted
+
+	local store is used for each AIR application, and each AIR application
+
+	uses a separate encrypted local store for each user account on the computer. </p>
+
+	
+
+	              <p>Use the encrypted local store to cache information
+
+	that must be secured, such as login credentials for web services.
+
+	The ELS is appropriate for storing information that must be kept
+
+	private from other users. It does not, however, protect the data
+
+	from other processes run under the same user account. It is thus
+
+	not appropriate for protecting secret application data, such as DRM
+
+	or encryption keys.</p>
+
+	
+
+	              <p>AIR uses
+
+	DPAPI on Windows, KeyChain on Mac OS and iOS, and KeyRing or KWallet on Linux
+
+	to associate the encrypted local store to each application and user.
+
+	The encrypted local store uses AES-CBC 128-bit encryption. On Android, a suitable
+
+	encrypted storage service is not available. Data stored in the encrypted local store
+
+	is not encrypted on Android; instead, the data is protected by Android's user ID-based
+
+	filesystem security. This means that on a "rooted" device, other applications
+
+	running with root privileges can access data stored in the ELS.</p>
+
+	
+
+	              <p>Information in the encrypted local store is only available to
+
+	AIR application content in the application security sandbox. </p>
+
+	
+
+	              <p>If you update an AIR application, the updated version retains
+
+	access to any existing data in the encrypted local store unless:</p>
+
+	
+
+	              <ul>
+                  <li>The items were added with the <code>stronglyBound</code> parameter
+
+	set to <code>true</code>
+                  </li>
+                  <li>The existing and update versions are both published prior
+
+	to AIR 1.5.3 and the update is signed with a migration signature</li>
+               </ul>
+
+	
+
+	              <p>
+                  <b>Limitations of the encrypted local store</b>
+               </p>
+
+	              <p>The
+
+	data in the encrypted local store is protected by the user’s operating
+
+	system account credentials. Other entities cannot access the data
+
+	in the store unless they can login as that user. However, the data
+
+	is not secure against access by other applications run by an authenticated
+
+	user. Thus, data that your application
+
+	may want to keep secret from users, such as keys used for licensing
+
+	or digital rights management, is not secure. The ELS is not
+
+	an appropriate location for storing such information. It is only
+
+	an appropriate place for storing a user’s private data, such as
+
+	passwords.</p>
+
+	
+
+	              <p>Data in the ELS can be lost for a variety of reasons.
+
+	For example, the user could uninstall the application and delete
+
+	the encrypted file. Or, the publisher ID could be changed as a result
+
+	of an update. Thus the ELS should be treated as a private cache,
+
+	not permanent data storage. </p>
+
+	
+
+	              <p>The <code>stronglyBound</code> parameter
+
+	is deprecated and should not be set to <code>true</code>. Setting
+
+	the parameter to <code>true</code> does not provide any additional
+
+	protection for data. At the same time, access to the data is lost
+
+	whenever the application is updated &mdash; even if the publisher ID stays
+
+	the same. On mobile devices, the <code>stronglyBound</code> parameter
+
+	is always treated as if set to <code>false</code>.</p>
+
+	
+
+	              <p>The encrypted local store may perform more slowly
+
+	if the stored data exceeds 10MB.</p>
+
+	
+
+	              <p>When you uninstall an AIR
+
+	application, the uninstaller does not delete data stored in the
+
+	encrypted local store. </p>
+
+	
+
+	              <p>The best practices for using the ELS
+
+	include:</p>
+
+	
+
+	              <ul>
+                  <li>Use the ELS to store sensitive user data
+
+	such as passwords (setting <code>stronglyBound</code> to <code>false</code>)</li>
+                  <li>Do not use the ELS to store applications secrets such as
+
+	DRM keys or licensing tokens</li>
+                  <li>Provide a way for your application to recreate the data stored
+
+	in the ELS if the ELS data is lost. For example, by prompting the
+
+	user to re-enter their account credentials when necessary.</li>
+                  <li>Do not use the <code>stronglyBound</code> parameter.</li>
+                  <li>If you do set <code>stronglyBound</code> to <code>true</code>,
+
+	do not migrate stored items during an update. Recreate the data
+
+	after the update instead.</li>
+                  <li>Only store relatively small amounts of data. For large amounts
+
+	of data, use an AIR SQL database with encryption.</li>
+               </ul>
+
+	
+
+	              <p>Items in the encrypted local store are identified with a string. All items are
+
+	stored as byte array data.</p>
+
+	
+
+	              <p>Encrypted local store data is put in a subdirectory of the user's application data directory; 
+
+	the subdirectory path is Adobe/AIR/ELS/ followed by the application ID.</p>
+
+	
+
+	           <p></p><p><a href="#includeExamplesSummary">View the examples</a></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118666ade46-7e31.html" target="_top">Encrypted local storage</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Properties</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Properties</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Properties</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th>Defined By</th></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">constructor : Object<div class="summaryTableDescription">
+
+	 A reference to the class object or constructor function for a given object instance.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="AIR::2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isSupported" class="signatureLink">isSupported</a> : Boolean<div class="summaryTableDescription">[static] [read-only] 
+
+        The isSupported property is set to true if the 
+
+        EncryptedLocalStore class is supported on the current platform, otherwise it is
+
+        set to false.</div></td><td class="summaryTableOwnerCol">EncryptedLocalStore</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">prototype : Object<div class="summaryTableDescription">[static] 
+
+	 A reference to the prototype object of a class or function object.</div></td><td class="summaryTableOwnerCol">Object</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Public Methods </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Methods</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th>Defined By</th></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getItem()" class="signatureLink">getItem</a>(name:String):<a href="../utils/ByteArray.html">ByteArray</a></div><div class="summaryTableDescription">[static] 
+
+		The data corresponding to the specified name.</div></td><td class="summaryTableOwnerCol">EncryptedLocalStore</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">hasOwnProperty(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an object has a specified property defined.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">isPrototypeOf(theClass:Object):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+
+	 as the parameter.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">propertyIsEnumerable(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether the specified property exists and is enumerable.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeItem()" class="signatureLink">removeItem</a>(name:String):void</div><div class="summaryTableDescription">[static] 
+
+		Removes the item with the given name from the encrypted local store.</div></td><td class="summaryTableOwnerCol">EncryptedLocalStore</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#reset()" class="signatureLink">reset</a>():void</div><div class="summaryTableDescription">[static] 
+
+		Clears the entire encrypted local store, deleting all data.</div></td><td class="summaryTableOwnerCol">EncryptedLocalStore</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setItem()" class="signatureLink">setItem</a>(name:String, data:<a href="../utils/ByteArray.html">ByteArray</a>, stronglyBound:Boolean = false):void</div><div class="summaryTableDescription">[static] 
+
+		Stores a ByteArray object under the specified name.</div></td><td class="summaryTableOwnerCol">EncryptedLocalStore</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">setPropertyIsEnumerable(name:String, isEnum:Boolean = true):void</div><div class="summaryTableDescription">
+
+     Sets the availability of a dynamic property for loop operations.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toLocaleString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of this object, formatted according to locale-specific conventions.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">valueOf():Object</div><div class="summaryTableDescription">
+
+	 Returns the primitive value of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Property Detail</div><span id="pageFilter" runtime="AIR::2##"><a name="propertyDetail"></a><a name="isSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>isSupported</h2></td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>isSupported:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2 </td></tr></table><p></p><p></p><p>
+
+        The <code>isSupported</code> property is set to <code>true</code> if the 
+
+        EncryptedLocalStore class is supported on the current platform, otherwise it is
+
+        set to <code>false</code>. 
+
+        
+        </p></div></span><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><span id="pageFilter" runtime="AIR::1.0##"><a name="getItem()"></a><a name="getItem(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>getItem</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function getItem(name:String):<a href="../utils/ByteArray.html">ByteArray</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+		The data corresponding to the specified name.
+
+		 
+
+		<p>If an item does not exist by the specified name, this method returns <code>null</code>.</p>
+
+		
+
+		</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; The name of the item in the encrypted local store.
+
+		
+
+		</td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../utils/ByteArray.html">ByteArray</a></code> &mdash; The ByteArray data. If there is no data for the provided <code>name</code>, 
+
+		the method returns <code>null</code>.
+
+		
+
+		</td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; The <code>name</code> value is <code>null</code> or an empty string.
+
+		
+
+		</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="removeItem()"></a><a name="removeItem(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>removeItem</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function removeItem(name:String):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+		Removes the item with the given name from the encrypted local store.
+
+		
+
+		</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; The name of the item in the encrypted local store.
+
+		
+
+		</td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; The <code>name</code> value is <code>null</code> or an empty string.
+
+		
+
+		</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="reset()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>reset</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function reset():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+		Clears the entire encrypted local store, deleting all data.
+
+		
+
+		</p></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="setItem()"></a><a name="setItem(String,flash.utils.ByteArray,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>setItem</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setItem(name:String, data:<a href="../utils/ByteArray.html">ByteArray</a>, stronglyBound:Boolean = false):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+		Stores a ByteArray object under the specified name.
+
+		
+
+		</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; The name of the item in the encrypted local store.
+
+		
+
+		</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">data</span>:<a href="../utils/ByteArray.html">ByteArray</a></code> &mdash; The data.
+
+		
+
+		</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">stronglyBound</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; (deprecated) The <code>stronglyBound</code> parameter should  
+
+		be set to <code>false</code> (the default value). If set to <code>true</code>, the stored item 
+
+		cannot be retrieved if any application files are altered. For example,if a user installs an 
+
+		update of your application, the updated application cannot read any strongly bound data that 
+
+		was previously written to the encrypted local store. Ignored (treated as <code>false</code>)
+
+		on mobile devices.
+
+		
+
+		</td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; The <code>name</code> value is <code>null</code> or an empty string.
+
+		</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; The <code>data</code> value is <code>null</code>.
+
+		
+
+		
+
+		</td></tr></table></div></span><a name="includeExamplesSummary"></a><div class="detailSectionHeader">Examples</div><span id="pageFilter"><br/><div class="detailBody"> The following code stores a string in the encrypted local store, retrieves it, and then deletes it:
+ 
+ <p><b>Note:</b> To test this example:</p>
+ 
+ <ul><li>Add the AIRAliases.js file to the project directory.</li><li>Create an application descriptor file for the project, and test the project using ADL.</li></ul> <div class="listing"><pre>
+&lt;html&gt;
+    &lt;head&gt;
+      &lt;script src="AIRAliases.js" /&gt;
+      &lt;script&gt;
+        function init() 
+        {
+            var str = "Bob";
+            var bytes = new air.ByteArray();
+            bytes.writeUTFBytes(str);
+            air.EncryptedLocalStore.setItem("firstName", bytes);
+            
+            var storedValue = air.EncryptedLocalStore.getItem("firstName");
+            air.trace(storedValue.readUTFBytes(storedValue.length)); // "Bob"
+            
+            air.EncryptedLocalStore.removeItem("firstName");
+        }
+      &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body onload='init()'&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre></div></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script><p></p><center class="copyright"> &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><!--BEGIN IONCOMMENTS--><div id="ionComHere"></div><!--END IONCOMMENTS-->[an error occurred while processing this directive][an error occurred while processing this directive]<p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/en_US/legalnotices/index.html">Legal Notices</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online Privacy Policy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html><!-- &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  -->

@@ -1,0 +1,1239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="en-us" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;AIR * Digitally signing an AIR file</title>
+    <link rel="shortcut icon" href="images/AIR.ico" />
+    <meta name="book" content="Building Adobe AIR Applications" />
+    <meta name="product" content="adobe" /><meta name="product" content="air" /><meta name="product" content="flash" /><meta name="product" content="flex" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="adobe"></Attribute><Attribute name="product" value="air"></Attribute><Attribute name="product" value="flash"></Attribute><Attribute name="product" value="flex"></Attribute><Attribute name="book" value="Building Adobe AIR Applications"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WS5b3ccc516d4fbf351e63e3d118666ade46-7ff0.html";
+    document.cookie = "topicId=" + "WS5b3ccc516d4fbf351e63e3d118666ade46-7ff0.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="https://help.adobe.com/en_US/air/build/swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    <div id="mnemonic">
+      <!--googleoff: index--><div xmlns:adobe="http://www.adobe.com/saxon" class="AIR"><div class="banner"><a href="WS485a42d56cd19641-a9697f4124ef986fac-8000.html">Adobe&#160;AIR</a></div></div><!--googleon: index-->
+    </div>
+    
+    <div id="searchbar">
+<table id="searchbartable">
+<tr>
+<td colspan="2">
+      <!--googleoff: index--><div xmlns:adobe="http://www.adobe.com/saxon"><div id="pdf"><img src="images/PDF.gif" width="16" height="16" /><a title="View Help PDF" href="air_buildingapps.pdf">View Help PDF (5.7MB)</a></div></div><!--googleon: index-->
+</td>
+</tr>
+</table>
+    </div>
+
+<!-- BEGIN SEARCH CONTENT -->
+<form id="search" name="search" action="https://help.adobe.com/en_US/air/build/search.html" target="_self">
+<script type="text/javascript">
+<!--[CDATA[
+if ( !use_chc_behavior ){
+    if (typeof(terms_AHV_SEARCH_CONSTRAINT) != "undefined" && 
+        terms_AHV_SEARCH_CONSTRAINT.length > 0 && 
+        document.location.href.indexOf(".adobe.com") > 0){
+        if ( typeof(terms_SEARCH_THIS_HELP_ONLY) != "undefined" && terms_SEARCH_THIS_HELP_ONLY == "ON" ) {
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                checked="checked" \
+                value="1" ><\/input>'); 
+                
+        // Leave the "Search this help system only" checkbox unckecked
+        }else{    
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                value="1" ><\/input>'); 
+        }
+        document.write('<span class="gsalabel">' + terms_AHV_SEARCH_CONSTRAINT + '<\/span><\/div>'); 
+    }
+    document.write('<input class="searchinput" \
+        name="q" \
+        id="q" \
+        type="text" \
+        maxlength="256" \
+        value="' + terms_AHV_SEARCH_BUTTON + '" \
+        onclick="clearSearch()"><\/input><input \
+        type="button" \
+        name="searchbutton" \
+        class="searchbutton" \
+        onclick="submit()"><\/input>'); 
+} 
+ 
+/* 
+ * Start Functions 
+ */
+function clearSearch(){
+    if (document.search.q.value == terms_AHV_SEARCH_BUTTON){document.search.q.value = ""}; 
+}
+
+// set search preferences
+function setAHSearchPref(){
+    if (document.search.gsa.checked == 1){
+        setAHSearchCookie( dirname );
+    }else{
+        setAHSearchCookie( "community" );
+    }
+}
+
+// Set search preferences cookie
+function setAHSearchCookie( p ){
+    // set cookie ah_searchpref with a value of the document path
+    var expire=new Date();
+    expire.setDate(expire.getDate()+365); // Cookie expires after 1 year (365 days) 
+    document.cookie="ah_searchpref=" +p+ "; expires=" +expire.toGMTString()+ ";";
+}
+
+// ]]-->
+</script> 
+ </form>
+<!-- END SEARCH CONTENT -->    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+<!-- BEGIN BREADCRUMBS -->
+
+      
+      <div id="breadcrumb">
+        
+<ul class="navigation"><li class="prev"><a accesskey="p" class="prev" href="WSfffb011ac560372f-19aa73f128cc9f05e8-8000.html" title="Signing AIR applications"><img src="images/blank.gif" alt="Previous" width="17" height="17" /></a></li><li class="next"><a accesskey="n" class="next" href="WS5b3ccc516d4fbf351e63e3d118666ade46-7f6e.html" title="Creating an unsigned AIR intermediate file with ADT"><img src="images/blank.gif" alt="Next" width="17" height="17" /></a></li></ul><div class="hierarchy" id="hierarchy"><a href="WS485a42d56cd19641-a9697f4124ef986fac-8000.html"><b>Home</b></a> / <a href="WS485a42d56cd19641-a9697f4124ef986fac-8000.html"><b>Building Adobe AIR Applications</b></a> / <a href="WSfffb011ac560372f-19aa73f128cc9f05e8-8000.html"><b>Signing AIR applications</b></a> 
+     </div>
+
+      </div>
+<!-- END BREADCRUMBS -->
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>Digitally signing an AIR file</h1>
+<!-- END PAGE TITLE -->
+<!-- BEGIN IONCOMMENTCOUNT -->
+        <div id="ionCount">
+        </div>
+<!-- END IONCOMMENTCOUNT -->
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<p id="chcPromo" style="display:none;">
+<a id="chcLink" href="http://www.adobe.com/support/chc/">
+<img id="chcImage" src="http://www.adobe.com/support/chc/GetMoreHelpFeatures.png"/>
+</a>
+</p>
+<script type="text/javascript" language="javascript" charset="utf-8">
+<!--
+var cfgArray = [];
+//cfgArray["Acrobat_10.0_Professional.helpcfg"] = "acrobatpro";
+//cfgArray["Acrobat_10.0_Standard.helpcfg"] = "acrobatstd";
+cfgArray["Lightroom_3.0.helpcfg"] = "lightroom";
+cfgArray["PhotoshopElements_8.0_Win.helpcfg"] = "photoshopelements";
+cfgArray["PhotoshopElements_8.0_Mac.helpcfg"] = "photoshopelementsmac";
+cfgArray["PremiereElements_8.0_Win.helpcfg"] = "premiereelements";
+
+//cfgArray["AfterEffects_10.0.helpcfg"] = "aftereffects";
+//cfgArray["AIR.helpcfg"] = "air";
+//cfgArray["ColdFusionBuilder.helpcfg"] = "coldfusion";
+//cfgArray["Contribute_6.0.helpcfg"] = "contribute";
+//cfgArray["DeviceCentral_3.0.helpcfg"] = "devicecentral";
+//cfgArray["Dreamweaver_11.0.helpcfg"] = "dreamweaver";
+//cfgArray["EncoreDVD_5.0.helpcfg"] = "encore";
+//cfgArray["ExtensionManager_3.0.helpcfg"] = "extension";
+//cfgArray["Fireworks_11.0.helpcfg"] = "fireworks";
+//cfgArray["Flash_11.0.helpcfg"] = "flash";
+//cfgArray["Flex_4.0.helpcfg"] = "flashbuilder";
+//cfgArray["FlashCatalyst_1.0.helpcfg"] = "flashcatalyst";
+//cfgArray["Illustrator_15.0.helpcfg"] = "illustrator";
+//cfgArray["InCopy_7.0.helpcfg"] = "incopy";
+//cfgArray["InDesign_7.0.helpcfg"] = "indesign";
+//cfgArray["OnLocation_5.0.helpcfg"] = "onlocation";
+//cfgArray["Photoshop_12.0.helpcfg"] = "photoshop";
+//cfgArray["PremierePro_5.0.helpcfg"] = "premierepro";
+
+function getLangName() {
+    var lang = "en-us";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if (ptn.test(lang)) {
+        var languageCode = lang.replace(ptn, "$1");
+        var countryCode = lang.replace(ptn, "$2");
+        lang = languageCode + "_" + countryCode.toUpperCase();
+    }
+    return lang;
+}
+
+function getCountryName() {
+    var lang = "";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if ((ptn.test(lang)) && (lang != "en-us")) {
+        var countryCode = lang.replace(ptn, "$2");
+        return "/" + countryCode;
+    }
+    return "";
+}
+
+if ( (typeof(terms_HELPCFG) != 'undefined')  && (terms_HELPCFG.indexOf(".helpcfg") != -1) ) {
+    var stage   = (document.location.href.indexOf(".stage.") != -1) ? 'stage.' : '';
+    var baseUrl = 'http://www.' + stage + 'adobe.com';
+    var refpage = document.location.href.replace(/#.*$/, '');
+	
+	if ((!use_robohelp_behavior) && (terms_HELPCFG.length > 0) && (typeof(cfgArray[terms_HELPCFG]) != 'undefined') && (cfgArray[terms_HELPCFG].length > 0)) {
+		if (document.getElementById) { // DOM3 = IE5, NS6
+			var newHref = baseUrl + getCountryName() + "/support/chc/" + "?helpcfg=http://help." + stage + "adobe.com/HelpCfg/" + getLangName() + "/" + terms_HELPCFG + "&url=" + refpage + "&product=" + cfgArray[terms_HELPCFG];
+			var newSrc = baseUrl + getCountryName() + "/support/chc/GetMoreHelpFeatures.png";
+			document.getElementById("chcPromo").style.display = "block";
+			document.getElementById("chcLink").href = newHref;
+			document.getElementById("chcImage").src = newSrc;
+		}
+	}
+}
+
+//-->
+</script>
+
+
+
+          <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WS5b3ccc516d4fbf351e63e3d118666ade46-7c6a"><span class="topictitle1">Code-signing certificates</span>
+</a></p></li><li><p><a href="#WS5b3ccc516d4fbf351e63e3d118666ade46-7c69"><span class="topictitle1">About AIR code signing</span>
+</a></p></li><li><p><a href="#WS5b3ccc516d4fbf351e63e3d118666ade46-7cca"><span class="topictitle1">About AIR publisher identifiers</span>
+</a></p></li><li><p><a href="#WS5b3ccc516d4fbf351e63e3d118666ade46-7c67"><span class="topictitle1">About Certificate formats</span>
+</a></p></li><li><p><a href="#WS5b3ccc516d4fbf351e63e3d118666ade46-7c66"><span class="topictitle1">Time stamps</span>
+</a></p></li><li><p><a href="#WS5b3ccc516d4fbf351e63e3d118666ade46-7c65"><span class="topictitle1">Obtaining a certificate</span>
+</a></p><ul><li><p><a href="#WS5b3ccc516d4fbf351e63e3d118676a640a-7fe9"><span class="topictitle2">Example: Getting an AIR Developer Certificate from Thawte</span>
+</a></p></li></ul></li><li><p><a href="#WSFAB6E5EB-316A-42b0-81A3-0BC232ACD99A"><span class="topictitle1">Changing certificates</span>
+</a></p></li><li><p><a href="#WS5b3ccc516d4fbf351e63e3d118666ade46-7c64"><span class="topictitle1">Terminology</span>
+</a></p></li><li><p><a href="#WSfffb011ac560372f284e44b012cd1e700c0-8000"><span class="topictitle1">iOS Certificates</span>
+</a></p><ul><li><p><a href="#WSfffb011ac560372f46768d8712cd1d13954-7ffd"><span class="topictitle2">Generating a certificate signing request</span>
+</a></p></li><li><p><a href="#WSfffb011ac560372f46768d8712cd1d13954-7ffc"><span class="topictitle2">Converting a developer certificate into a P12 keystore file</span>
+</a></p></li></ul></li></ul></div></div></div></div><div><p>Digitally signing your AIR installation
+files with a certificate issued by a recognized certification authority
+(CA) provides significant assurance to your users that the application
+they are installing has not been accidentally or maliciously altered
+and identifies you as the signer (publisher). AIR displays the publisher name
+during installation when the AIR application has been signed with
+a certificate that is trusted, or which <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">chains</i> to a certificate
+that is trusted on the installation computer:</p>
+<div xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema" class="fignone"><img alt="" id="CaSigned" src="images/CaSigned.png" /><div class="figdesc">Installation confirmation dialog for application signed by
+a trusted certificate</div></div><p>If you sign an application with a self-signed certificate (or
+a certificate that does not chain to a trusted certificate), the
+user must accept a greater security risk by installing your application.
+The installation dialogs reflect this additional risk:</p>
+<div xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema" class="fignone"><img alt="" id="SelfSigned" src="images/SelfSigned.png" /><div class="figdesc">Installation confirmation dialog for application signed by
+a self-signed certificate</div></div><div class="important"><span class="importanttitle">Important:  </span>A malicious entity could forge an AIR file
+with your identity if it somehow obtains your signing keystore file
+or discovers your private key. </div>
+<ul class="navlinklist"></ul>
+</div>
+<div id="WS5b3ccc516d4fbf351e63e3d118666ade46-7c6a" class="nochunk"><a name="WS5b3ccc516d4fbf351e63e3d118666ade46-7c6a"><!-- --></a><h2 class="topictitle2">Code-signing certificates</h2><div><p>The security assurances, limitations,
+and legal obligations involving the use of code-signing certificates
+are outlined in the Certificate Practice Statements (CPS) and subscriber
+agreements published by the issuing certification authority. For more
+information about the agreements for the certification authorities
+that currently issue AIR code signing certificates, refer to: </p>
+<p><a href="http://www.chosensecurity.com/products/tc_publisher_id_adobe_air.htm" target="_self">ChosenSecurity</a> (http://www.chosensecurity.com/products/tc_publisher_id_adobe_air.htm)</p>
+<p><a href="http://www.chosensecurity.com/resource_center/repository.htm" target="_self">ChosenSecurity CPS</a> (http://www.chosensecurity.com/resource_center/repository.htm)</p>
+<p><a href="http://www.globalsign.com/code-signing/index.html" target="_self">GlobalSign</a> (http://www.globalsign.com/code-signing/index.html)</p>
+<p><a href="http://www.globalsign.com/repository/index.htm" target="_self">GlobalSign CPS</a> (http://www.globalsign.com/repository/index.htm)</p>
+<p><a href="http://www.thawte.com/cps/index.html" target="_self">Thawte CPS</a> (http://www.thawte.com/cps/index.html) </p>
+<p><a href="http://www.verisign.com/repository/CPS/" target="_self">VeriSign CPS</a> (http://www.verisign.com/repository/CPS/) </p>
+<p><a href="https://www.verisign.com/repository/subscriber/SUBAGR.html" target="_self">VeriSign Subscriber's Agreement</a> (https://www.verisign.com/repository/subscriber/SUBAGR.html) </p>
+</div></div>
+<div id="WS5b3ccc516d4fbf351e63e3d118666ade46-7c69" class="nochunk"><a name="WS5b3ccc516d4fbf351e63e3d118666ade46-7c69"><!-- --></a><h2 class="topictitle2">About AIR code signing</h2><div><p>When an AIR file is signed, a digital signature is included
+in the installation file. The signature includes a digest of the
+package, which is used to verify that the AIR file has not been
+altered since it was signed, and it includes information about the
+signing certificate, which is used to verify the publisher identity.</p>
+<p>AIR uses the public key infrastructure (PKI) supported through
+the operating system’s certificate store to establish whether a
+certificate can be trusted. The computer on which an AIR application
+is installed must either directly trust the certificate used to
+sign the AIR application, or it must trust a chain of certificates linking
+the certificate to a trusted certification authority in order for
+the publisher information to be verified.</p>
+<p>If an AIR file is signed with a certificate that does not chain
+to one of the trusted root certificates (and normally this includes
+all self-signed certificates), then the publisher information cannot
+be verified. While AIR can determine that the AIR package has not
+been altered since it was signed, there is no way to know who actually
+created and signed the file. </p>
+<div class="note"><span class="notetitle">Note:  </span>A user can choose to trust a self-signed certificate
+and then any AIR applications signed with the certificate displays
+the value of the common name field in the certificate as the publisher
+name. AIR does not provide any means for a user to designate a certificate
+as trusted. The certificate (not including the private key) must be
+provided to the user separately and the user must use one of the
+mechanisms provided by the operating system or an appropriate tool
+to import the certificate into the proper location in system certificate
+store.</div>
+</div></div>
+<div id="WS5b3ccc516d4fbf351e63e3d118666ade46-7cca" class="nochunk"><a name="WS5b3ccc516d4fbf351e63e3d118666ade46-7cca"><!-- --></a><h2 class="topictitle2">About AIR publisher identifiers</h2><div><div class="important"><span class="importanttitle">Important:  </span>As of AIR 1.5.3 the publisher ID
+is deprecated and no longer computed based on the code signing certificate.
+New applications do not need and should not use a publisher ID.
+When updating existing applications, you must specify the original
+publisher ID in the application descriptor file. </div>
+<p>Prior to AIR 1.5.3, the AIR application
+installer generated a publisher ID during the installation of an
+AIR file. This was an identifier that is unique to the certificate used
+to sign the AIR file. If you reused the same certificate for multiple
+AIR applications, they received the same publisher ID. Signing an
+application update with a different certificate and sometimes even
+a renewed instance of the original certificate changed the publisher
+ID.</p>
+<p>In AIR 1.5.3 and later, a publisher ID is not assigned by AIR.
+An application published with AIR 1.5.3 can specify a publisher
+ID string in the application descriptor. You should only specify
+a publisher ID when publishing updates for applications originally
+published for versions of AIR prior to 1.5.3. If you do not specifying
+the original ID in the application descriptor then the new AIR package is
+not treated as an update of the existing application. </p>
+<p>To determine the original publisher ID, find the <samp class="codeph">publisherid</samp> file
+in the META-INF/AIR subdirectory where the original application
+is installed. The string within this file is the publisher ID. Your
+application descriptor must specify the AIR 1.5.3 runtime (or later)
+in the namespace declaration of the application descriptor file in
+order to specify the publisher ID manually.</p>
+<p>The publisher ID, when present, is used for the following purposes:</p>
+<ul><li><p>As part of the encryption key for the encrypted local
+store</p>
+</li>
+<li><p>As part of the path for the application storage directory</p>
+</li>
+<li><p>As part of the connection string for local connections</p>
+</li>
+<li><p>As part of the identity string used to invoke an application
+with the AIR in-browser API</p>
+</li>
+<li><p>As part of the OSID (used when creating custom install/uninstall
+programs)</p>
+</li>
+</ul>
+<p>When a publisher ID changes, the behavior of any AIR features
+relying on the ID also changes. For example, data in the existing
+encrypted local store can no longer be accessed and any Flash or
+AIR instances that create a local connection to the application
+must use the new ID in the connection string. The publisher ID for
+an installed application cannot change in AIR 1.5.3 or later. If
+you use a different publisher ID when publishing an AIR package,
+the installer treats the new package as a different application
+rather than as an update.</p>
+</div></div>
+<div id="WS5b3ccc516d4fbf351e63e3d118666ade46-7c67" class="nochunk"><a name="WS5b3ccc516d4fbf351e63e3d118666ade46-7c67"><!-- --></a><h2 class="topictitle2">About Certificate formats</h2><div><p>The
+AIR signing tools accept any keystores accessible through the Java
+Cryptography Architecture (JCA). This includes file-based keystores
+such as PKCS12-format files (which typically use a .pfx or .p12
+file extension), Java .keystore files, PKCS11 hardware keystores,
+and the system keystores. The keystore formats that ADT can access
+depend on the version and configuration of the Java runtime used
+to run ADT. Accessing some types of keystore, such as PKCS11 hardware tokens,
+may require the installation and configuration of additional software drivers
+and JCA plug-ins.</p>
+<p>To sign AIR files, you can use most
+existing code signing certificates or you can obtain a new one issued
+expressly for signing AIR applications. For example, any of the
+following types of certificate from VeriSign, Thawte, GlobalSign,
+or ChosenSecurity can be used:</p>
+<ul><li><p><a href="http://www.chosensecurity.com/products/tc_publisher_id_adobe_air.htm" target="_self">ChosenSecurity</a></p>
+<ul><li><p>TC Publisher
+ID for Adobe AIR</p>
+</li>
+</ul>
+</li>
+<li><p><a href="http://www.globalsign.com/code-signing/index.html" target="_self">GlobalSign</a></p>
+<ul><li><p>ObjectSign
+Code Signing Certificate</p>
+</li>
+</ul>
+</li>
+<li><p><a href="http://www.thawte.com/code-signing/" target="_self">Thawte</a>: </p>
+<ul><li><p>AIR Developer Certificate</p>
+</li>
+<li><p>Apple Developer Certificate </p>
+</li>
+<li><p>JavaSoft Developer Certificate </p>
+</li>
+<li><p>Microsoft Authenticode Certificate</p>
+</li>
+</ul>
+</li>
+<li><p><a href="http://www.verisign.com/products-services/security-services/code-signing/digital-ids-code-signing/" target="_self">VeriSign</a>: </p>
+<ul><li><p>Adobe AIR
+Digital ID</p>
+</li>
+<li><p>Microsoft Authenticode Digital ID </p>
+</li>
+<li><p>Sun Java Signing Digital ID </p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="note"><span class="notetitle">Note:  </span>The certificate must be created
+for code signing. You cannot use an SSL or other type of certificate
+to sign AIR files.</div>
+</div></div>
+<div id="WS5b3ccc516d4fbf351e63e3d118666ade46-7c66" class="nochunk"><a name="WS5b3ccc516d4fbf351e63e3d118666ade46-7c66"><!-- --></a><h2 class="topictitle2">Time stamps</h2><div><p>When
+you sign an AIR file, the packaging tool queries the server of a
+timestamp authority to obtain an independently verifiable date and
+time of signing. The time stamp obtained is embedded in the AIR
+file. As long as the signing certificate is valid at the time of
+signing, the AIR file can be installed, even after the certificate
+has expired. On the other hand, if no time stamp is obtained, the
+AIR file ceases to be installable when the certificate expires or
+is revoked.</p>
+<p>By default, the AIR packaging tools obtain a time stamp. However,
+to allow applications to be packaged when the time-stamp service
+is unavailable, you can turn time stamping off. Adobe recommends
+that all publicly distributed AIR files include a time stamp.</p>
+<p>The default time-stamp authority used by the AIR packaging tools
+is Geotrust.</p>
+</div></div>
+<div id="WS5b3ccc516d4fbf351e63e3d118666ade46-7c65" class="nochunk"><a name="WS5b3ccc516d4fbf351e63e3d118666ade46-7c65"><!-- --></a><h2 class="topictitle2">Obtaining a certificate</h2><div><p>To obtain a certificate, you would normally visit the certification
+authority web site and complete the company’s procurement process.
+The tools used to produce the keystore file needed by the AIR tools
+depend on the type of certificate purchased, how the certificate
+is stored on the receiving computer, and, in some cases, the browser
+used to obtain the certificate. For example, to obtain and export
+an Adobe Developer certificate certificate from Thawte you must
+use Mozilla Firefox. The certificate can then be exported as a .p12
+or .pfx file directly from the Firefox user interface. </p>
+<div class="note"><span class="notetitle">Note:  </span>Java versions 1.5 and above do not accept high-ASCII characters
+in passwords used to protect PKCS12 certificate files. Java is used
+by the AIR development tools to create the signed AIR packages.
+When you export the certificate as a .p12 or .pfx file, use only
+regular ASCII characters in the password. </div>
+<p>You can generate a self-signed certificate using the Air Development
+Tool (ADT) used to package AIR installation files. Some third-party
+tools can also be used. </p>
+<p>For instructions on how to generate a self-signed certificate,
+as well as instructions on signing an AIR file, see <a href="WS5b3ccc516d4fbf351e63e3d118666ade46-7fd9.html">AIR Developer Tool (ADT)</a>. You can also export and sign AIR files
+using Flash Builder, Dreamweaver, and the AIR update for Flash.</p>
+<p>The following example describes how to obtain an AIR Developer
+Certificate from the Thawte Certification Authority and prepare
+it for use with ADT. </p>
+</div><div id="WS5b3ccc516d4fbf351e63e3d118676a640a-7fe9" class="nochunk"><a name="WS5b3ccc516d4fbf351e63e3d118676a640a-7fe9"><!-- --></a><h3 class="topictitle3">Example: Getting an AIR Developer Certificate from Thawte</h3><div><div class="note"><span class="notetitle">Note:  </span>This example illustrates only one of the many ways to
+obtain and prepare a code signing certificate for use. Each certification
+authority has its own policies and procedures.</div>
+<p>To purchase an AIR Developer Certificate, the Thawte web site
+requires you to use the Mozilla Firefox browser. The private key
+for the certificate is stored within the browser’s keystore. Ensure
+that the Firefox keystore is secured with a master password and
+that the computer itself is physically secure. (You can export and remove
+the certificate and private key from the browser keystore once the procurement
+process is complete.)</p>
+<p>As part of the certificate enrollment process a private/public
+key pair is generated. The private key is automatically stored within
+the Firefox keystore. You must use the same computer and browser
+to both request and retrieve the certificate from Thawte’s web site.</p>
+<ol><li><p>Visit the Thawte web site and navigate to the <a href="https://www.thawte.com/process/retail/new_devel?language=en&amp;productInfo.productType=devel2" target="_self">Product page for Code Signing Certificates</a>.</p>
+</li>
+<li><p>From the list of Code Signing Certificates, select the Adobe
+AIR Developer Certificate.</p>
+</li>
+<li><p>Complete the three step enrollment process. You need to provide
+organizational and contact information. Thawte then performs its
+identity verification process and may request additional information.
+After verification is complete, Thawte will send you e-mail with
+instructions on how to retrieve the certificate.</p>
+<div class="note"><span class="notetitle">Note:  </span> Additional
+information about the type of documentation required can be found
+here: <a href="https://www.thawte.com/ssl-digital-certificates/free-guides-whitepapers/pdf/enroll_codesign_eng.pdf" target="_self">https://www.thawte.com/ssl-digital-certificates/free-guides-whitepapers/pdf/enroll_codesign_eng.pdf</a><i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">.</i></div>
+</li>
+<li><p>Retrieve the issued certificate from the Thawte site. The
+certificate is automatically saved to the Firefox keystore.</p>
+</li>
+<li><p>Export a keystore file containing the private key and certificate
+from the Firefox keystore using the following steps:</p>
+<div class="note"><span class="notetitle">Note:  </span>When exporting the private key/cert from Firefox,
+it is exported in a .p12 (pfx) format which ADT, Flex, Flash, and
+Dreamweaver can use.</div>
+<ol type="a"><li><p>Open the Firefox <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">Certificate Manager</i> dialog: </p>
+</li>
+<li><p>On Windows: open Tools -&gt; Options -&gt; Advanced -&gt;
+Encryption -&gt; View Certificates </p>
+</li>
+<li><p>On Mac OS: open Firefox -&gt; Preferences -&gt; Advanced
+-&gt; Encryption -&gt; View Certificates </p>
+</li>
+<li><p>On Linux: open Edit -&gt; Preferences -&gt; Advanced -&gt;
+Encryption -&gt; View Certificates</p>
+</li>
+<li><p>Select the Adobe AIR Code Signing Certificate from the list
+of certificates and click the <strong>Backup</strong> button. </p>
+</li>
+<li><p>Enter a file name and the location to which to export the
+keystore file and click <strong>Save</strong>. </p>
+</li>
+<li><p>If you are using the Firefox master password, you are prompted
+to enter your password for the software security device in order
+to export the file. (This password is used only by Firefox.) </p>
+</li>
+<li><p>On the <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">Choose a Certificate Backup Password</i> dialog
+box, create a password for the keystore file. </p>
+<div class="important"><span class="importanttitle">Important:  </span>This password protects the keystore file
+and is required when the file is used for signing AIR applications.A
+secure password should be chosen.</div>
+</li>
+<li><p>Click OK. You should receive a successful backup password
+message. The keystore file containing the private key and certificate
+is saved with a .p12 file extension (in PKCS12 format)</p>
+</li>
+</ol>
+</li>
+<li><p>Use the exported keystore file with ADT, Flash Builder, Flash
+Professional, or Dreamweaver. The password created for the file
+is required whenever an AIR application is signed.</p>
+</li>
+</ol>
+<div class="important"><span class="importanttitle">Important:  </span>The private key and certificate are still
+stored within the Firefox keystore. While this permits you to export
+an additional copy of the certificate file, it also provides another
+point of access that must be protected to maintain the security
+of your certificate and private key.</div>
+</div></div></div>
+<div id="WSFAB6E5EB-316A-42b0-81A3-0BC232ACD99A" class="nochunk"><a name="WSFAB6E5EB-316A-42b0-81A3-0BC232ACD99A"><!-- --></a><h2 class="topictitle2">Changing certificates</h2><div><p>In some circumstances, you must change
+the certificate you use to sign updates for your AIR application.
+Such circumstances include:</p>
+<ul><li><p>Renewing the original signing certificate. </p>
+</li>
+<li><p>Upgrading from a self-signed certificate to a certificate
+issued by a certification authority</p>
+</li>
+<li><p>Changing from a self-signed certificate that is about to
+expire to another</p>
+</li>
+<li><p>Changing from one commercial certificate to another, for
+example, when your corporate identity changes</p>
+</li>
+</ul>
+<p>For AIR to recognize an AIR file as an update, you must either
+sign both the original and update AIR files with the same certificate
+or apply a certificate migration signature to the update. A migration
+signature is a second signature applied to the update AIR package
+using the original certificate. The migration signature uses the
+original certificate to establish that the signer is the original publisher
+of the application. </p>
+<p>After an AIR file with a migration signature is installed, the
+new certificate becomes the primary certificate. Subsequent updates
+do not require a migration signature. However, you should apply
+migration signatures for as long as possible to accommodate users
+who skip updates. </p>
+<div class="important"><span class="importanttitle">Important:  </span>You must change the
+certificate and apply a migration signature to the update with the
+original certificate before it expires. Otherwise, users must uninstall their
+existing version of your application before installing a new version.
+For AIR 1.5.3 or later, you can apply a migration signature using
+an expired certificate within a grace period of 365 days after it
+expires. However, you cannot use the expired certificate to apply
+the main application signature.</div>
+<p>To change certificates:</p>
+<ol><li><p>Create an update to your application</p>
+</li>
+<li><p>Package and sign the update AIR file with the <strong>new</strong> certificate</p>
+</li>
+<li><p>Sign the AIR file again with the <strong>original</strong> certificate
+(using the ADT <samp class="codeph">-migrate</samp> command)</p>
+</li>
+</ol>
+<p>An AIR file with a migration signature is, in other respects,
+a normal AIR file. If the application is installed on a system without
+the original version, AIR installs the new version in the usual
+manner.</p>
+<div class="note"><span class="notetitle">Note:  </span>Prior to AIR 1.5.3, signing an AIR application with a renewed
+certificate did not always require a migration signature. Starting
+with AIR 1.5.3, a migration signature is always required for renewed
+certificates.</div>
+<p>To apply a migration signature use the <a href="WS901d38e593cd1bac1e63e3d128fc240122-7ffd.html">ADT migrate command</a>, as described in <a href="WS13ACB483-1711-43c0-9049-0A7251630A7D.html">Signing an updated version of an AIR application</a>.</p>
+<div class="note"><span class="notetitle">Note:  </span>The ADT migrate command cannot be used with AIR desktop applications
+that include native extensions, because those applications are packaged
+as native installers, not as .air files. To change certificates
+for an AIR desktop application that includes a native extension,
+package the application using the <a href="WS901d38e593cd1bac1e63e3d128cdca935b-8000.html">ADT package command</a> with the -migrate flag.</div>
+<div class="section"><h4 class="sectiontitle">Application identity changes</h4><p>Prior to
+AIR 1.5.3, the identity of an AIR application changed when an update signed
+with a migration signature was installed. Changing the identity
+of an application has the several repercussions, including: </p>
+<div class="para"><ul><li><p>The new application version cannot access data in the existing
+encrypted local store.</p>
+</li>
+<li><p>The location of the application storage directory changes.
+Data in the old location is not copied to the new directory. (But
+the new application can locate the original directory based on the
+old publisher ID).</p>
+</li>
+<li><p>The application can no longer open local connections using
+the old publisher ID.</p>
+</li>
+<li><p>The identity string used to access an application from a
+web page changes.</p>
+</li>
+<li><p>The OSID of the application changes. (The OSID is used when
+writing custom install/uninstall programs.)</p>
+</li>
+</ul>
+</div>
+<p>When
+publishing an update with AIR 1.5.3 or later, the application identity cannot
+change. The original application and publisher IDs must be specified
+in the application descriptor of the update AIR file. Otherwise,
+the new package is not recognized as an update.</p>
+<div class="note"><span class="notetitle">Note:  </span>When publishing
+a new AIR application with AIR 1.5.3 or later, you should not specify
+a publisher ID.</div>
+</div>
+</div></div>
+<div id="WS5b3ccc516d4fbf351e63e3d118666ade46-7c64" class="nochunk"><a name="WS5b3ccc516d4fbf351e63e3d118666ade46-7c64"><!-- --></a><h2 class="topictitle2">Terminology</h2><div><p>This section provides a glossary of some of the key terminology
+you should understand when making decisions about how to sign your
+application for public distribution.</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d17e18317"><p>Term</p>
+</th>
+<th valign="top" width="NaN%" id="d17e18320"><p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d17e18317 "><p>Certification Authority (CA) </p>
+</td>
+<td valign="top" width="NaN%" headers="d17e18320 "><p>An entity in a public-key infrastructure
+network that serves as a trusted third party and ultimately certifies
+the identity of the owner of a public key. A CA normally issues
+digital certificates, signed by its own private key, to attest that
+it has verified the identity of the certificate holder. </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e18317 "><p>Certificate Practice Statement (CPS) </p>
+</td>
+<td valign="top" width="NaN%" headers="d17e18320 "><p>Sets forth the practices and policies of the
+certification authority in issuing and verifying certificates. The
+CPS is part of the contract between the CA and its subscribers and
+relying parties. It also outlines the policies for identity verification
+and the level of assurances offered by the certificates they provide. </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e18317 "><p>Certificate Revocation List (CRL) </p>
+</td>
+<td valign="top" width="NaN%" headers="d17e18320 "><p>A list of issued certificates that have been
+revoked and should no longer be relied upon. AIR checks the CRL
+at the time an AIR application is signed, and, if no timestamp is
+present, again when the application is installed.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e18317 "><p>Certificate chain</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e18320 "><p>A
+certificate chain is a sequence of certificates in which each certificate
+in the chain has been signed by the next certificate.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e18317 "><p>Digital Certificate </p>
+</td>
+<td valign="top" width="NaN%" headers="d17e18320 "><p>A digital document that contains information
+about the identity of the owner, the owner’s public key, and the
+identity of the certificate itself. A certificate issued by a certification
+authority is itself signed by a certificate belonging to the issuing
+CA.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e18317 "><p>Digital Signature </p>
+</td>
+<td valign="top" width="NaN%" headers="d17e18320 "><p>An encrypted message or digest that can
+only be decrypted with the public key half of a public-private key
+pair. In a PKI, a digital signature contains one or more digital
+certificates that are ultimately traceable to the certification
+authority. A digital signature can be used to validate that a message
+(or computer file) has not been altered since it was signed (within
+the limits of assurance provided by the cryptographic algorithm
+used), and, assuming one trusts the issuing certification authority,
+the identity of the signer. </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e18317 "><p>Keystore</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e18320 "><p>A database containing digital certificates
+and, in some cases, the related private keys.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e18317 "><p>Java Cryptography Architecture (JCA)</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e18320 "><p>An extensible architecture for managing
+and accessing keystores. See the <a href="http://java.sun.com/javase/6/docs/technotes/guides/security/crypto/CryptoSpec.html" target="_self">Java Cryptography Architecture Reference
+Guide</a> for more information.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e18317 "><p>PKCS #11</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e18320 "><p>The Cryptographic Token Interface Standard
+by RSA Laboratories. A hardware token based keystore.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e18317 "><p>PKCS #12</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e18320 "><p>The Personal Information Exchange Syntax
+Standard by RSA Laboratories. A file-based keystore typically containing
+a private key and its associated digital certificate.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e18317 "><p>Private Key </p>
+</td>
+<td valign="top" width="NaN%" headers="d17e18320 "><p>The private half of a two-part, public-private
+key asymmetric cryptography system. The private key must be kept
+secret and should never be transmitted over a network. Digitally
+signed messages are encrypted with the private key by the signer. </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e18317 "><p>Public Key </p>
+</td>
+<td valign="top" width="NaN%" headers="d17e18320 "><p>The public half of a two-part, public-private
+key asymmetric cryptography system. The public key is openly available
+and is used to decrypt messages encrypted with the private key. </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e18317 "><p>Public Key Infrastructure (PKI) </p>
+</td>
+<td valign="top" width="NaN%" headers="d17e18320 "><p>A system of trust in which certification
+authorities attest to the identity of the owners of public keys.
+Clients of the network rely on the digital certificates issued by
+a trusted CA to verify the identity of the signer of a digital message
+(or file).</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e18317 "><p>Time stamp</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e18320 "><p>A digitally signed datum containing the
+date and time an event occurred. ADT can include a time stamp from
+an <a href="http://tools.ietf.org/html/rfc3161" target="_self">RFC
+3161</a> compliant time server in an AIR package. When present,
+AIR uses the time stamp to establish the validity of a certificate
+at the time of signing. This allows an AIR application to be installed
+after its signing certificate has expired.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e18317 "><p>Time stamp authority</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e18320 "><p>An authority that issues time stamps. To
+be recognized by AIR, the time stamp must conform to RFC 3161 and
+the time stamp signature must chain to a trusted root certificate
+on the installation machine.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+<div id="WSfffb011ac560372f284e44b012cd1e700c0-8000" class="nochunk"><a name="WSfffb011ac560372f284e44b012cd1e700c0-8000"><!-- --></a><h2 class="topictitle2">iOS Certificates</h2><div><p>The code signing certificates issued by Apple are used
+for signing iOS applications, including those developed with Adobe
+AIR. Applying a signature using a Apple development certificate
+is required to install an application on test devices. Applying
+a signature using a distribution certificate is required to distribute
+the finished application.</p>
+<p>To sign an application, ADT requires access to both the code
+signing certificate and the associated private key. The certificate
+file, itself, does not include the private key. You must create
+a keystore in the form of a Personal Information Exchange file (.p12
+or .pfx) that contains both the certificate and the private key. See <a href="WSfffb011ac560372f46768d8712cd1d13954-7ffc.html">Converting a developer certificate into a P12 keystore file</a>.</p>
+</div><div id="WSfffb011ac560372f46768d8712cd1d13954-7ffd" class="nochunk"><a name="WSfffb011ac560372f46768d8712cd1d13954-7ffd"><!-- --></a><h3 class="topictitle3">Generating a certificate signing request</h3><div><p>To obtain a developer certificate, you generate a certificate
+signing request, which you submit at the Apple iOS Provisioning
+Portal. </p>
+<p>The certificate signing request process generates a public-private
+key pair. The private key remains on your computer. You send the
+signing request containing the public key and your identifying information
+to Apple, who is acting in the role of a Certificate Authority.
+Apple signs your certificate with their own World Wide Developer
+Relations certificate.</p>
+<div class="section"><h4 class="sectiontitle">Generate a certificate signing request on Mac OS</h4><p>On
+Mac OS, you can use the Keychain Access application to generate
+a code signing request. The Keychain Access application is in the
+Utilities subdirectory of the Applications directory. Instructions
+for generating the certificate signing request are available at
+the Apple iOS Provisioning Portal.</p>
+</div>
+<div class="section"><h4 class="sectiontitle">Generate a certificate signing request on Windows</h4><p>For
+Windows developers, it may be easiest to obtain the iPhone developer
+certificate on a Mac computer. However, it is possible to obtain
+a certificate on a Windows computer. First, you create a certificate
+signing request (a CSR file) using OpenSSL:</p>
+<div class="para"><ol><li><p>Install
+OpenSSL on your Windows computer. (Go to <a href="http://www.openssl.org/related/binaries.html" target="_self">http://www.openssl.org/related/binaries.html</a>.)</p>
+<p>You
+may also need to install the Visual C++ 2008 Redistributable files,
+listed on the Open SSL download page. (You do <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">not</i> need Visual
+C++ installed on your computer.)</p>
+</li>
+<li><p>Open a Windows command session, and CD to the OpenSSL bin
+directory (such as c:\OpenSSL\bin\). </p>
+</li>
+<li><p>Create the private key by entering the following in the command
+line: </p>
+<pre>openssl genrsa -out mykey.key 2048</pre>
+<p>Save
+this private key file. You will use it later. </p>
+<p>When using
+OpenSSL, do not ignore error messages. If OpenSSL generates an error
+message, it may still output files. However, those files may not
+be usable. If you see errors, check your syntax and run the command
+again.</p>
+</li>
+<li><p>Create the CSR file by entering the following in the command
+line: </p>
+<pre>openssl req -new -key mykey.key -out CertificateSigningRequest.certSigningRequest  -subj "/emailAddress=yourAddress@example.com, CN=John Doe, C=US"</pre>
+<p>Replace
+the e-mail address, CN (certificate name), and C (country) values
+with your own. </p>
+</li>
+<li><p>Upload the CSR file to Apple at the <a href="http://developer.apple.com/iphone/" target="_self">iPhone
+developer site</a>. (See “Apply for an iPhone developer certificate
+and create a provisioning profile”.)</p>
+</li>
+</ol>
+</div>
+</div>
+</div></div><div id="WSfffb011ac560372f46768d8712cd1d13954-7ffc" class="nochunk"><a name="WSfffb011ac560372f46768d8712cd1d13954-7ffc"><!-- --></a><h3 class="topictitle3">Converting a developer certificate into a P12 keystore file</h3><div><p>To create a P12 keystore, you must combine your Apple developer
+certificate and the associated private key in a single file. The
+process for creating the keystore file depends on the method that
+you used to generate the original certificate signing request and
+where the private key is stored.</p>
+<div class="section"><h4 class="sectiontitle">Convert the iPhone developer certificate to a P12 file on Mac OS</h4><p>Once you have downloaded the Apple iPhone
+certificate from Apple, export it to the P12 keystore format. To
+do this on Mac® OS:</p>
+<ol><li><p>Open the Keychain Access application
+(in the Applications/Utilities folder).</p>
+</li>
+<li><p>If you have not already added the certificate to Keychain,
+select File &gt; Import. Then navigate to the certificate file (the
+.cer file) you obtained from Apple.</p>
+</li>
+<li><p>Select the Keys category in Keychain Access.</p>
+</li>
+<li><p>Select the private key associated with your iPhone Development
+Certificate. </p>
+<p>The private key is identified by the iPhone
+Developer: &lt;First Name&gt; &lt;Last Name&gt; public certificate
+that is paired with it.</p>
+</li>
+<li><p>Command-click the iPhone Developer certificate and select, <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">Export “iPhone Developer: Name...”</i>.</p>
+</li>
+<li><p>Save your keystore in the Personal Information Exchange (.p12)
+file format.</p>
+</li>
+<li><p>You will be prompted to create a password that is used when
+you use the keystore to sign applications or transfer the key and
+certificate in this keystore to another keystore.</p>
+</li>
+</ol>
+</div>
+<div class="section"><h4 class="sectiontitle">Convert an Apple developer certificate to a P12 file on Windows</h4><p>To develop AIR for iOS applications, you
+must use a P12 certificate file. You generate this certificate based
+on the Apple iPhone developer certificate file you receive from
+Apple. </p>
+<ol><li><p>Convert the developer certificate file you
+receive from Apple into a PEM certificate file. Run the following
+command-line statement from the OpenSSL bin directory:</p>
+<pre>openssl x509 -in developer_identity.cer -inform DER -out developer_identity.pem -outform PEM</pre>
+</li>
+<li><p>If you are using the private key from the keychain on a Mac
+computer, convert it into a PEM key:</p>
+<div class="para"><pre>openssl pkcs12 -nocerts -in mykey.p12 -out mykey.pem</pre>
+</div>
+</li>
+<li><p>You can now generate a valid P12 file, based on the key and
+the PEM version of the iPhone developer certificate:</p>
+<pre>openssl pkcs12 -export -inkey mykey.key -in developer_identity.pem -out iphone_dev.p12</pre>
+<p>If
+you are using a key from the Mac OS keychain, use the PEM version
+you generated in the previous step. Otherwise, use the OpenSSL key
+you generated earlier (on Windows).</p>
+</li>
+</ol>
+</div>
+</div></div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator"><a href="#top"><img src="images/BTT.jpg" /></a>&#160;</div>
+          </div>
+          <div id="footer">
+<!-- BEGIN IONCOMMENTS -->
+            <div id="ionComHere">
+            </div>
+<!-- END IONCOMMENTS -->
+
+
+            <p id="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" id="creativecommons_text"><img id="creativecommons_img" src="images/CC.png" alt="This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License" /></a>&nbsp;Twitter™ and Facebook posts are not covered under the terms of Creative Commons.</p>
+          </div>
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+
+</td></tr></table>
+      </div>
+<!-- BEGIN BREADCRUMBS -->
+      <div id="breadcrumb">
+        
+<ul class="navigation"><li class="prev"><a accesskey="p" class="prev" href="WSfffb011ac560372f-19aa73f128cc9f05e8-8000.html" title="Signing AIR applications"><img src="images/blank.gif" alt="Previous" width="17" height="17" /></a></li><li class="next"><a accesskey="n" class="next" href="WS5b3ccc516d4fbf351e63e3d118666ade46-7f6e.html" title="Creating an unsigned AIR intermediate file with ADT"><img src="images/blank.gif" alt="Next" width="17" height="17" /></a></li></ul><div class="hierarchy" id="hierarchy"><a href="WS485a42d56cd19641-a9697f4124ef986fac-8000.html"><b>Home</b></a> / <a href="WS485a42d56cd19641-a9697f4124ef986fac-8000.html"><b>Building Adobe AIR Applications</b></a> / <a href="WSfffb011ac560372f-19aa73f128cc9f05e8-8000.html"><b>Signing AIR applications</b></a> 
+     </div>
+
+      </div>
+<!-- END BREADCRUMBS -->
+<!-- END CONTENT WRAPPER -->
+
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--
+    Description:
+    This file generates the link to product support in the top right corner
+-->
+
+<style>
+#menutop{
+    position:absolute;
+    top:4px;
+    right:24px;
+    width:auto;    
+    font-size:11px;
+    color:#fff;
+    text-align:right;
+}
+#menutop a{
+    color:#fff;
+}
+#menutop a:hover{
+        text-decoration:underline;
+}
+</style>  
+  
+  
+  
+  
+<div id="productmenu">
+<!--googleoff: index-->
+  <div id="menutop">
+
+
+<script language=javascript type='text/javascript'>
+    // darken menu text for products with light backgrounds
+    var path = document.location.href.toLowerCase();
+    if (path.indexOf("/acrobat/")           	> 0 ||
+        path.indexOf("/acrobat.com/")       	> 0 ||
+        path.indexOf("/acrobatConnectPro/") 	> 0 ||
+        path.indexOf("/connect/")           	> 0 ||
+        path.indexOf("/framemaker/")           	> 0 ||
+        path.indexOf("/livecycledataserviceses/") > 0 ||
+        path.indexOf("/muse/")         	> 0 ||
+		path.indexOf("/presenter/")         	> 0 ||
+        path.indexOf("/scene7/")            	> 0 ||
+        path.indexOf("/flashmediaserver/")  	> 0 ||
+        path.indexOf("/wave/")              	> 0 )
+    {
+        document.write('<style>#menutop a{color:#505050}</style>');
+    }
+    if (typeof('terms_AHV_PRODUCT_SUPPORT') != "undefined" && ! use_robohelp_behavior ){      
+        if (path.indexOf("/muse/") > -1 ){
+            var supportlink = '<a href="http://muse.adobe.com/support.html">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }else{
+            var supportlink = '<a href="http://adobe.com/support">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }
+        document.write( supportlink );
+     }
+
+</script> 
+
+  </div>
+<!--googleon: index-->
+</div>
+
+
+
+<style>
+#online-privacy-policy{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+<p id="online-privacy-policy">
+<script language="javascript">
+var pageLoc = "en_US";
+var metaElements = document.all ?
+document.all.tags('meta') :
+document.getElementsByTagName ?
+document.getElementsByTagName ('meta') : new Array();
+for (var m = 0; m < metaElements.length; m++) {
+	if (metaElements[m].name == "lang") {
+		pageLoc = metaElements[m].content;
+		break;
+	}
+}
+var ptn = /(..)-(..)/;
+if (ptn.test(pageLoc)) {
+	var languageCode = pageLoc.replace(ptn, "$1");
+	var countryCode = pageLoc.replace(ptn, "$2");
+	pageLoc = languageCode + "_" + countryCode.toUpperCase();
+}
+
+var policyLoc = "en_US";
+var policyText = "Online Privacy Policy";
+var policyPath = "";
+var policyArray=[
+"da_DK", "Online fortrolighedserklæring",
+"de_DE", "Online-Datenschutzrichtlinie",
+"es_ES", "Política de confidencialidad en línea",
+"fi_FI", "Yksityisyyttä koskeva Online-toimintaohjelma",
+"fr_FR", "Confidentialité et sécurité",
+"it_IT", "Informativa sulla privacy online",
+"ja_JP", "プライバシーポリシー",
+"ko_KR", "Adobe 온라인 개인정보 보호정책",
+"pt_BR", "Política de Confidencialidade On-line", 
+"zh_CN", "在线隐私政策",
+"zh_TW", "線上隱私政策"
+];
+var legalLoc = "en_US";
+var legalText = "Legal Notices";
+var legalPath = legalLoc;
+var legalArray=[
+"ar_AE", "إشعارات قانونية",
+"bg_BG", "Юридически бележки",
+"cs_CZ", "Právní upozornění",
+"da_DK", "Juridiske meddelelser",
+"de_DE", "Rechtliche Hinweise",
+"el_GR", "Σημειώσεις νομικού περιεχομένου",
+"es_ES", "Avisos legales",
+"et_EE", "Juriidilised teated",
+"fi_FI", "Lakisääteiset ilmoitukset",
+"fr_FR", "Mentions légales",
+"he_IL", "הצהרות משפטיות",
+"hr_HR", "Pravne napomene",
+"hu_HU", "Jogi közlemények",
+"it_IT", "Informazioni legali",
+"ja_JP", "法律上の注意",
+"ko_KR", "법적 고지 사항",
+"lt_LT", "Teisinės pastabos",
+"lv_LV", "Juridisks paziņojums",
+"nb_NO", "Juridiske merknader",
+"nl_NL", "Juridische kennisgevingen",
+"pl_PL", "Informacje prawne",
+"pt_BR", "Aspectos jurídicos",
+"ro_RO", "Prevederi legale",
+"ru_RU", "Юридическая информация",
+"sk_SK", "Právne upozornenie",
+"sl_SI", "Pravni pouk",
+"sv_SE", "Upphovsrätt",
+"tr_TR", "Yasal uyarılar",
+"uk_UA", "Юридична інформація",
+"zh_CN", "法律声明",
+"zh_TW", "法律注意事項"
+];
+
+ruPolicy = "http://www.adobe.com/ru/misc/privacy.html";
+trPolicy = "http://www.adobe.com/tr/misc/privacy.html";
+
+// Bug 2846992: LOC: RUS, TUR: The link to "Online Privacy Policy" should include language, currently it is not appearing.
+if (pageLoc == "ru_RU") {
+	policyPath = "ru";
+}
+else if (pageLoc == "tr_TR") {
+	policyPath = "tr";
+}
+for (var i = 0; i < policyArray.length; i+=2) {
+	if (pageLoc == policyArray[i]) {
+		policyLoc = pageLoc;
+		policyText = policyArray[i+1];
+		var ptn = /(..)_(..)/;
+		if (ptn.test(policyLoc)) {
+			var countryCode = policyLoc.replace(ptn, "$2");
+			policyPath = countryCode.toLowerCase();
+		}
+		break;
+	}
+}
+
+for (var i = 0; i < legalArray.length; i+=2) {
+	if (pageLoc == legalArray[i]) {
+		legalLoc = pageLoc;
+		legalText = legalArray[i+1];
+		legalPath = legalLoc;
+		break;
+	}
+}
+if(agt.indexOf("community help client") > -1 ){
+	document.write('<a href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+}else{
+	//Open the privacy policy in a new window
+	document.write('<a target="_blank" href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a target="_blank" href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+} 
+
+
+remove_all_cookies();
+
+function remove_all_cookies() {
+	var res = document.cookie;
+    var multiple = res.split(";");
+    for(var i = 0; i < multiple.length; i++) {
+    	var key = multiple[i].split("=");
+        document.cookie = key[0]+" =; expires = Thu, 01 Jan 1970 00:00:00 UTC";
+    }
+}
+
+
+</script>
+</p>
+
+
+
+<!-- localfooter.ssi -->
+
+<script type="text/javascript">
+    var debug = (top.location.href.indexOf("debug=true") > -1);
+</script>
+
+<script language="javascript">
+document.write('<scr'+'ipt ' +
+               'src="/en_US/ssi/_pod.js" ' +
+               'language="javascript" ' +
+               'charset="UTF-8"> ' +
+               '</scr'+'ipt>');
+</script>
+
+//  Ethnio survey code removed
+
+
+  </body>
+</html>

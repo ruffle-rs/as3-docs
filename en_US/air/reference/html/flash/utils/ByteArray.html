@@ -1,0 +1,1926 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"><html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers"><meta name="lang" content="en-us"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="ByteArray,flash.utils.ByteArray,bytesAvailable,defaultObjectEncoding,endian,length,objectEncoding,position,clear,clear,compress,compress,deflate,deflate,inflate,inflate,readBoolean,readBoolean,readByte,readByte,readBytes,readBytes,readDouble,readDouble,readFloat,readFloat,readInt,readInt,readMultiByte,readMultiByte,readObject,readObject,readShort,readShort,readUTF,readUTF,readUTFBytes,readUTFBytes,readUnsignedByte,readUnsignedByte,readUnsignedInt,readUnsignedInt,readUnsignedShort,readUnsignedShort,toJSON,toString,toString,uncompress,uncompress,writeBoolean,writeBoolean,writeByte,writeByte,writeBytes,writeBytes,writeDouble,writeDouble,writeFloat,writeFloat,writeInt,writeInt,writeMultiByte,writeMultiByte,writeObject,writeObject,writeShort,writeShort,writeUTF,writeUTF,writeUTFBytes,writeUTFBytes,writeUnsignedInt,writeUnsignedInt"><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" src="../../AC_OETags.js" type="text/javascript"></script><title>flash.utils.ByteArray - Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers</title>
+	<link rel="stylesheet" href="../../jslr-style.css" type="text/css">
+		<script type="text/javascript">
+			
+				var baseRef = "../../";
+				var buildType = 'jslr';
+				var alreadyrunflag=0; //flag to indicate whether target function has already been run
+				var terms_HELPCFG = ".helpcfg";
+
+if (document.addEventListener)
+  document.addEventListener("DOMContentLoaded", function(){alreadyrunflag=1; init()}, false)
+else if (document.all && !window.opera){
+  /* blocks IE from working, as it's fired before dom if ready
+ document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
+  var contentloadtag=document.getElementById("contentloadtag")
+  contentloadtag.onreadystatechange=function(){
+    if (this.readyState=="complete"){
+      alreadyrunflag=1;
+      init();
+    }
+  }*/
+} else if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+  var _timer=setInterval(function(){
+  if(/loaded|complete/.test(document.readyState)){
+    clearInterval(_timer);
+    alreadyrunflag=1;
+    init(); // call target function
+  }}, 10)
+}
+function onLoadFunction() {
+	setTimeout("if (!alreadyrunflag) init();  alreadyrunflag=1; ionReadyLoad(); ", 0);
+}
+
+		</script>
+		<script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+		<script language="javascript" type="text/javascript" src="../../asdoc.js"></script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body onLoad="onLoadFunction()">
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td>
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr>
+				  <td class="titleTableTitleION" align="left" nowrap="true">Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers<br>
+				  <span class="titleTableTopNavION">
+				  <span id="homelink">
+						<a target="_self" href="../../index.html"> Home </a>&nbsp;|&nbsp;
+				  </span>
+				  <a id="showtoc" onClick="showHideTOC(true)" href="#top" style="display:none">Show Classes List</a><a id="hidetoc" onClick="showHideTOC(false)" href="#top" style="display:">Hide Classes List</a>&nbsp;|&nbsp;
+				  <a href="../../all-index-A.html"> Index </a>&nbsp;|&nbsp;
+				  <a href="../../appendixes.html"> Appendixes </a><br>
+				  </span>	
+				  </td>
+				  <td class="titleTableSearchION" align="right" nowrap="true">
+				  <span id="gsa" class="gsa">
+					<form class="searchFormION" method="get" onSubmit="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US');return false;">
+				  <input class="hidden" name="loc" value="" type="hidden">
+				  <input class="hidden" name="termPrefix" value="site:help.adobe.com/en_US/AS3CLR/Flash_10.0" type="hidden">
+				  <input class="hidden" name="title" value="ActionScript 3.0 Reference for the Adobe Flash Platform" type="hidden">
+				  <input class="hidden" name="term" value="" type="hidden">
+				  <input class="hidden" name="area" value="" type="hidden">
+				  <input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text">
+				  <input type="button" name="action" value="" onClick="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US')" class="searchbutton"><br>
+			      <input id="checkBoxId" type="checkbox" name="checkbox" value="checkbox" checked>Language Reference only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  </form>
+				  </span>				  
+				  </td>
+				</tr>
+			  </table>			
+			  </td>
+			<td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logoION.jpg" class="logoImageION" alt=" Adobe Logo " title=" Adobe Logo "></td>
+		  </tr>
+		  <tr>
+			<td colspan="2">
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr class="titleTableRow2">
+				<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+					<convert>ByteArray&nbsp;</convert>
+				</td>
+				<td class="titleTableSubNav" id="subNav" align="right">
+				  <a id="propertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="propertiesBar" style="display:none"> | </span>
+				  <a id="packagePropertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="packagePropertiesBar" style="display:none"> | </span>
+				  <a id="constructorLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+				  <span id="constructorBar" style="display:none"> | </span>
+				  <a id="methodsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Methods </a>
+				  <span id="methodsBar" style="display:none"> | </span>
+				  <a id="packageFunctionsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Functions </a>
+				  <span id="packageFunctionsBar" style="display:none"> | </span>
+				  <a id="eventsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('eventSummary');" style="display:none"> Events </a>
+				  <span id="eventsBar" style="display:none"> | </span>
+				  <a id="stylesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('styleSummary');" style="display:none"> Styles </a>
+				  <span id="stylesBar" style="display:none"> | </span>
+				  <a id="SkinPartLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinPartSummary');" style="display:none"> Skin Parts </a>
+				  <span id="SkinPartBar" style="display:none"> | </span>
+				  <a id="SkinStateLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinStateSummary');" style="display:none"> Skin States </a>
+				  <span id="SkinStateBar" style="display:none"> | </span>
+				  <a id="effectsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('effectSummary');" style="display:none"> Effects </a>
+				  <span id="effectsBar" style="display:none"> | </span>
+				  <a id="constantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="constantsBar" style="display:none"> | </span>
+				  <a id="packageConstantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="packageConstantsBar" style="display:none"> | </span>
+				  <a id="interfacesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('interfaceSummary');" style="display:none"> Interfaces </a>
+				  <span id="interfacesBar" style="display:none"> | </span>
+				  <a id="classesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('classSummary');" style="display:none"> Classes </a>
+				  <span id="classesBar" style="display:none"> | </span>
+				  <a id="packageUseLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('package-use.html');" style="display:none">Use</a>
+				  <span id="packageUseBar" style="display:none"> | </span>
+				  <a id="examplesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('includeExamplesSummary');" style="display:none"> Examples </a>
+				</td>
+				</tr>
+				<tr class="titleTableRow3">
+				  <td colspan="4"></td>
+				</tr>
+			  </table>
+			</td>
+		  </tr>
+		</table>
+        <div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="classlist" class="jslrclasslist">
+					<div class="classlistoutline"></div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content">
+<script language="javascript" type="text/javascript">  <!--  
+         
+        asdocTitle = "ByteArray - Adobe® AIR® API Reference for HTML Developers"; 
+        var baseRef = '../../'; 
+	document.baseRef = '../../'; 
+          -->  </script>
+<script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+<script language="javascript" type="text/javascript"><!--
+function submitValue() {
+var title="Adobe® AIR® API Reference for HTML Developers";
+var searchStr=document.getElementById('search-livedocs').value;
+
+        
+        
+        if(document.getElementById('checkBoxId').checked){
+        window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
++"&site=communityhelp-air-jslr ";
+} 
+
+        else{ 
+window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
+;
+} 
+} 
+--></script><script type="text/javascript"> scrollToNameAnchor(); </script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">window.runtime property</td><td>window.runtime.flash.utils.ByteArray</td></tr><tr><td class="classSignature"></td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">ByteArray  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><div id="badgeAnchorSupport" class="ionBadgeWrapper"></div><div id="badgeContainerSupport"></div><p></p><p></p>
+
+ The ByteArray class provides methods and properties to optimize reading, writing,
+
+ and working with binary data.
+
+ 
+ <p>
+                  <i>Note:</i> The ByteArray class is for advanced developers who need to access
+
+ data on the byte level.</p>
+
+ 
+               <p>In-memory data is a packed array (the most compact representation for the data type)
+
+ of bytes, but an instance of the ByteArray
+
+ class can be manipulated with the standard <code>[]</code> (array access) operators.
+
+ It also can be read and written to as an in-memory file, using
+
+ methods similar to those in the URLStream and Socket classes.</p>
+
+ 
+               <p>In addition, zlib compression and decompression are supported, as
+
+ well as Action Message Format (AMF) object serialization.</p>
+
+ 
+               <p>Possible uses of the ByteArray class include the following:
+
+ 
+ <ul>
+                     <li>Creating a custom protocol to connect to a server.</li>
+                     <li>Writing your own URLEncoder/URLDecoder.</li>
+                     <li>Optimizing the size of your data by using data types.</li>
+                     <li>Working with binary data loaded from a file in
+
+      Adobe<sup>&reg;</sup> AIR<sup>&reg;</sup>.</li>
+                  </ul>
+
+               </p>
+
+ 
+            <p></p><p><a href="#includeExamplesSummary">View the examples</a></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="../net/Socket.html" target="">Socket class</a><br/><a href="../net/URLStream.html" target="">URLStream class</a><br/><a href="../net/Socket.html" target="">Socket class</a><br/><a href="../net/URLStream.html" target="">URLStream class</a><br/><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118676a5388-8000.html" target="_top">Working with byte arrays</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Properties</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Properties</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Properties</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th>Defined By</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#bytesAvailable" class="signatureLink">bytesAvailable</a> : uint<div class="summaryTableDescription">[read-only] 
+
+     The number of bytes of data available for reading
+
+     from the current position in the byte array to the
+
+     end of the array.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">constructor : Object<div class="summaryTableDescription">
+
+	 A reference to the class object or constructor function for a given object instance.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#defaultObjectEncoding" class="signatureLink">defaultObjectEncoding</a> : uint<div class="summaryTableDescription">[static] 
+
+     Denotes the default object encoding for the ByteArray class to use for a new ByteArray instance.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#endian" class="signatureLink">endian</a> : String<div class="summaryTableDescription">
+
+     Changes or reads the byte order for the data; either Endian.BIG_ENDIAN or
+
+     Endian.LITTLE_ENDIAN.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#length" class="signatureLink">length</a> : uint<div class="summaryTableDescription">
+
+     The length of the ByteArray object, in bytes.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#objectEncoding" class="signatureLink">objectEncoding</a> : uint<div class="summaryTableDescription">
+
+     Used to determine whether the ActionScript 3.0, ActionScript 2.0, or ActionScript 1.0 format should be
+
+     used when writing to, or reading from, a ByteArray instance.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#position" class="signatureLink">position</a> : uint<div class="summaryTableDescription">
+
+     Moves, or returns the current position, in bytes, of the file
+
+     pointer into the ByteArray object.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">prototype : Object<div class="summaryTableDescription">[static] 
+
+	 A reference to the prototype object of a class or function object.</div></td><td class="summaryTableOwnerCol">Object</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Public Methods </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Methods</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th>Defined By</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#ByteArray()" class="signatureLink">ByteArray</a>()</div><div class="summaryTableDescription">
+
+     Creates a ByteArray instance representing a packed array of bytes, so that you can use the methods and properties in this class to optimize your data storage and stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#ByteArray2()" class="signatureLink">ByteArray</a>()</div><div class="summaryTableDescription">
+
+     Creates a ByteArray instance representing a packed array of bytes, so that you can use the methods and properties in this class to optimize your data storage and stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#clear()" class="signatureLink">clear</a>():void</div><div class="summaryTableDescription">
+
+     Clears the contents of the byte array and resets the length
+
+     and position properties to 0.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#clear()" class="signatureLink">clear</a>():void</div><div class="summaryTableDescription">
+
+     Clears the contents of the byte array and resets the length
+
+     and position properties to 0.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#compress()" class="signatureLink">compress</a>(algorithm:String):void</div><div class="summaryTableDescription">
+
+     Compresses the byte array.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#compress()" class="signatureLink">compress</a>(algorithm:String):void</div><div class="summaryTableDescription">
+
+     Compresses the byte array.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#deflate()" class="signatureLink">deflate</a>():void</div><div class="summaryTableDescription">
+
+     Compresses the byte array using the deflate compression algorithm.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#deflate()" class="signatureLink">deflate</a>():void</div><div class="summaryTableDescription">
+
+     Compresses the byte array using the deflate compression algorithm.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">hasOwnProperty(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an object has a specified property defined.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::10##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#inflate()" class="signatureLink">inflate</a>():void</div><div class="summaryTableDescription">
+
+     Decompresses the byte array using the deflate compression algorithm.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::10##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#inflate()" class="signatureLink">inflate</a>():void</div><div class="summaryTableDescription">
+
+     Decompresses the byte array using the deflate compression algorithm.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">isPrototypeOf(theClass:Object):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+
+	 as the parameter.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">propertyIsEnumerable(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether the specified property exists and is enumerable.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readBoolean()" class="signatureLink">readBoolean</a>():Boolean</div><div class="summaryTableDescription">
+
+     Reads a Boolean value from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readBoolean()" class="signatureLink">readBoolean</a>():Boolean</div><div class="summaryTableDescription">
+
+     Reads a Boolean value from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readByte()" class="signatureLink">readByte</a>():int</div><div class="summaryTableDescription">
+
+     Reads a signed byte from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readByte()" class="signatureLink">readByte</a>():int</div><div class="summaryTableDescription">
+
+     Reads a signed byte from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readBytes()" class="signatureLink">readBytes</a>(bytes:<a href="ByteArray.html">ByteArray</a>, offset:uint = 0, length:uint = 0):void</div><div class="summaryTableDescription">
+
+     Reads the number of data bytes, specified by the length parameter, from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readBytes()" class="signatureLink">readBytes</a>(bytes:<a href="ByteArray.html">ByteArray</a>, offset:uint = 0, length:uint = 0):void</div><div class="summaryTableDescription">
+
+     Reads the number of data bytes, specified by the length parameter, from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readDouble()" class="signatureLink">readDouble</a>():Number</div><div class="summaryTableDescription">
+
+     Reads an IEEE 754 double-precision (64-bit) floating-point number from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readDouble()" class="signatureLink">readDouble</a>():Number</div><div class="summaryTableDescription">
+
+     Reads an IEEE 754 double-precision (64-bit) floating-point number from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readFloat()" class="signatureLink">readFloat</a>():Number</div><div class="summaryTableDescription">
+
+     Reads an IEEE 754 single-precision (32-bit) floating-point number from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readFloat()" class="signatureLink">readFloat</a>():Number</div><div class="summaryTableDescription">
+
+     Reads an IEEE 754 single-precision (32-bit) floating-point number from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readInt()" class="signatureLink">readInt</a>():int</div><div class="summaryTableDescription">
+
+     Reads a signed 32-bit integer from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readInt()" class="signatureLink">readInt</a>():int</div><div class="summaryTableDescription">
+
+     Reads a signed 32-bit integer from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readMultiByte()" class="signatureLink">readMultiByte</a>(length:uint, charSet:String):String</div><div class="summaryTableDescription">
+
+     Reads a multibyte string of specified length from the byte stream using the
+
+     specified character set.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readMultiByte()" class="signatureLink">readMultiByte</a>(length:uint, charSet:String):String</div><div class="summaryTableDescription">
+
+     Reads a multibyte string of specified length from the byte stream using the
+
+     specified character set.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readObject()" class="signatureLink">readObject</a>():*</div><div class="summaryTableDescription">
+
+     Reads an object from the byte array, encoded in AMF
+
+     serialized format.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readObject()" class="signatureLink">readObject</a>():*</div><div class="summaryTableDescription">
+
+     Reads an object from the byte array, encoded in AMF
+
+     serialized format.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readShort()" class="signatureLink">readShort</a>():int</div><div class="summaryTableDescription">
+
+     Reads a signed 16-bit integer from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readShort()" class="signatureLink">readShort</a>():int</div><div class="summaryTableDescription">
+
+     Reads a signed 16-bit integer from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readUnsignedByte()" class="signatureLink">readUnsignedByte</a>():uint</div><div class="summaryTableDescription">
+
+     Reads an unsigned byte from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readUnsignedByte()" class="signatureLink">readUnsignedByte</a>():uint</div><div class="summaryTableDescription">
+
+     Reads an unsigned byte from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readUnsignedInt()" class="signatureLink">readUnsignedInt</a>():uint</div><div class="summaryTableDescription">
+
+     Reads an unsigned 32-bit integer from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readUnsignedInt()" class="signatureLink">readUnsignedInt</a>():uint</div><div class="summaryTableDescription">
+
+     Reads an unsigned 32-bit integer from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readUnsignedShort()" class="signatureLink">readUnsignedShort</a>():uint</div><div class="summaryTableDescription">
+
+     Reads an unsigned 16-bit integer from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readUnsignedShort()" class="signatureLink">readUnsignedShort</a>():uint</div><div class="summaryTableDescription">
+
+     Reads an unsigned 16-bit integer from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readUTF()" class="signatureLink">readUTF</a>():String</div><div class="summaryTableDescription">
+
+     Reads a UTF-8 string from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readUTF()" class="signatureLink">readUTF</a>():String</div><div class="summaryTableDescription">
+
+     Reads a UTF-8 string from the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readUTFBytes()" class="signatureLink">readUTFBytes</a>(length:uint):String</div><div class="summaryTableDescription">
+
+     Reads a sequence of UTF-8 bytes specified by the length
+
+     parameter from the byte stream and returns a string.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readUTFBytes()" class="signatureLink">readUTFBytes</a>(length:uint):String</div><div class="summaryTableDescription">
+
+     Reads a sequence of UTF-8 bytes specified by the length
+
+     parameter from the byte stream and returns a string.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">setPropertyIsEnumerable(name:String, isEnum:Boolean = true):void</div><div class="summaryTableDescription">
+
+     Sets the availability of a dynamic property for loop operations.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::11##AIR::3##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#toJSON()" class="signatureLink">toJSON</a>(k:String):*</div><div class="summaryTableDescription">
+
+     Provides an overridable method for customizing the JSON encoding of values in an ByteArray object.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toLocaleString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of this object, formatted according to locale-specific conventions.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#toString()" class="signatureLink">toString</a>():String</div><div class="summaryTableDescription">
+
+     Converts the byte array to a string.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#toString()" class="signatureLink">toString</a>():String</div><div class="summaryTableDescription">
+
+     Converts the byte array to a string.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#uncompress()" class="signatureLink">uncompress</a>(algorithm:String):void</div><div class="summaryTableDescription">
+
+     Decompresses the byte array.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#uncompress()" class="signatureLink">uncompress</a>(algorithm:String):void</div><div class="summaryTableDescription">
+
+     Decompresses the byte array.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">valueOf():Object</div><div class="summaryTableDescription">
+
+	 Returns the primitive value of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeBoolean()" class="signatureLink">writeBoolean</a>(value:Boolean):void</div><div class="summaryTableDescription">
+
+     Writes a Boolean value.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeBoolean()" class="signatureLink">writeBoolean</a>(value:Boolean):void</div><div class="summaryTableDescription">
+
+     Writes a Boolean value.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeByte()" class="signatureLink">writeByte</a>(value:int):void</div><div class="summaryTableDescription">
+
+     Writes a byte to the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeByte()" class="signatureLink">writeByte</a>(value:int):void</div><div class="summaryTableDescription">
+
+     Writes a byte to the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeBytes()" class="signatureLink">writeBytes</a>(bytes:<a href="ByteArray.html">ByteArray</a>, offset:uint = 0, length:uint = 0):void</div><div class="summaryTableDescription">
+
+     Writes a sequence of length bytes from the
+
+     specified byte array, bytes,
+
+     starting offset(zero-based index) bytes
+
+     into the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeBytes()" class="signatureLink">writeBytes</a>(bytes:<a href="ByteArray.html">ByteArray</a>, offset:uint = 0, length:uint = 0):void</div><div class="summaryTableDescription">
+
+     Writes a sequence of length bytes from the
+
+     specified byte array, bytes,
+
+     starting offset(zero-based index) bytes
+
+     into the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeDouble()" class="signatureLink">writeDouble</a>(value:Number):void</div><div class="summaryTableDescription">
+
+     Writes an IEEE 754 double-precision (64-bit) floating-point number to the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeDouble()" class="signatureLink">writeDouble</a>(value:Number):void</div><div class="summaryTableDescription">
+
+     Writes an IEEE 754 double-precision (64-bit) floating-point number to the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeFloat()" class="signatureLink">writeFloat</a>(value:Number):void</div><div class="summaryTableDescription">
+
+     Writes an IEEE 754 single-precision (32-bit) floating-point number to the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeFloat()" class="signatureLink">writeFloat</a>(value:Number):void</div><div class="summaryTableDescription">
+
+     Writes an IEEE 754 single-precision (32-bit) floating-point number to the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeInt()" class="signatureLink">writeInt</a>(value:int):void</div><div class="summaryTableDescription">
+
+     Writes a 32-bit signed integer to the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeInt()" class="signatureLink">writeInt</a>(value:int):void</div><div class="summaryTableDescription">
+
+     Writes a 32-bit signed integer to the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeMultiByte()" class="signatureLink">writeMultiByte</a>(value:String, charSet:String):void</div><div class="summaryTableDescription">
+
+     Writes a multibyte string to the byte stream using the specified character set.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeMultiByte()" class="signatureLink">writeMultiByte</a>(value:String, charSet:String):void</div><div class="summaryTableDescription">
+
+     Writes a multibyte string to the byte stream using the specified character set.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeObject()" class="signatureLink">writeObject</a>(object:*):void</div><div class="summaryTableDescription">
+
+     Writes an object into the byte array in AMF
+
+     serialized format.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeObject()" class="signatureLink">writeObject</a>(object:*):void</div><div class="summaryTableDescription">
+
+     Writes an object into the byte array in AMF
+
+     serialized format.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeShort()" class="signatureLink">writeShort</a>(value:int):void</div><div class="summaryTableDescription">
+
+     Writes a 16-bit integer to the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeShort()" class="signatureLink">writeShort</a>(value:int):void</div><div class="summaryTableDescription">
+
+     Writes a 16-bit integer to the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeUnsignedInt()" class="signatureLink">writeUnsignedInt</a>(value:uint):void</div><div class="summaryTableDescription">
+
+     Writes a 32-bit unsigned integer to the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeUnsignedInt()" class="signatureLink">writeUnsignedInt</a>(value:uint):void</div><div class="summaryTableDescription">
+
+     Writes a 32-bit unsigned integer to the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeUTF()" class="signatureLink">writeUTF</a>(value:String):void</div><div class="summaryTableDescription">
+
+     Writes a UTF-8 string to the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeUTF()" class="signatureLink">writeUTF</a>(value:String):void</div><div class="summaryTableDescription">
+
+     Writes a UTF-8 string to the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeUTFBytes()" class="signatureLink">writeUTFBytes</a>(value:String):void</div><div class="summaryTableDescription">
+
+     Writes a UTF-8 string to the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeUTFBytes()" class="signatureLink">writeUTFBytes</a>(value:String):void</div><div class="summaryTableDescription">
+
+     Writes a UTF-8 string to the byte stream.</div></td><td class="summaryTableOwnerCol">ByteArray</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Property Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="bytesAvailable"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>bytesAvailable</h2></td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>bytesAvailable:uint</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     The number of bytes of data available for reading
+
+     from the current position in the byte array to the
+
+     end of the array.
+
+     
+     <p>Use the <code>bytesAvailable</code> property in conjunction
+
+     with the read methods each time you access a ByteArray object
+
+     to ensure that you are reading valid data.</p>
+
+     
+     </p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="defaultObjectEncoding"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>defaultObjectEncoding</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static var defaultObjectEncoding:uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Denotes the default object encoding for the ByteArray class to use for a new ByteArray instance.
+
+     When you create a new ByteArray instance, the encoding on that instance starts
+
+     with the value of <code>defaultObjectEncoding</code>.
+
+     The <code>defaultObjectEncoding</code> property is initialized to <code>ObjectEncoding.AMF3</code>.
+
+     
+     
+     <p>When an object is written to or read from binary data, the <code>objectEncoding</code> value
+
+     is used to determine whether the ActionScript 3.0, ActionScript2.0, or ActionScript 1.0 format should be used. The value is a
+
+     constant from the ObjectEncoding class.</p>
+
+     
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../net/ObjectEncoding.html" target="">ObjectEncoding class</a><br/><a href="ByteArray.html#objectEncoding" target="">ByteArray.objectEncoding</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="endian"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>endian</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var endian:String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Changes or reads the byte order for the data; either <code>Endian.BIG_ENDIAN</code> or
+
+     <code>Endian.LITTLE_ENDIAN</code>.
+
+     
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Endian.html" target="">Endian class</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="length"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>length</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var length:uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     The length of the ByteArray object, in bytes.
+
+     
+     <p>If the length is set to a value that is larger than the current length,
+
+     the right side  of the byte array is filled with zeros.</p>
+
+     
+     <p>If the length is set to a value that is smaller than the
+
+     current length, the byte array is truncated.</p>
+
+     
+     </p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="objectEncoding"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>objectEncoding</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var objectEncoding:uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Used to determine whether the ActionScript 3.0, ActionScript 2.0, or ActionScript 1.0 format should be
+
+     used when writing to, or reading from, a ByteArray instance. The value is a
+
+     constant from the ObjectEncoding class.
+
+     
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../net/ObjectEncoding.html" target="">ObjectEncoding class</a><br/><a href="ByteArray.html#defaultObjectEncoding" target="">ByteArray.defaultObjectEncoding</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="position"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>position</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var position:uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Moves, or returns the current position, in bytes, of the file
+
+     pointer into the ByteArray object. This is the
+
+     point at which the next call to a read
+
+     method starts reading or a write
+
+     method starts writing.
+
+     
+     </p></div></span><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="ByteArray()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>ByteArray</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function ByteArray()</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p>
+
+     Creates a ByteArray instance representing a packed array of bytes, so that you can use the methods and properties in this class to optimize your data storage and stream.
+
+     </p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="ByteArray2()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>ByteArray</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public function ByteArray()</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p>
+
+     Creates a ByteArray instance representing a packed array of bytes, so that you can use the methods and properties in this class to optimize your data storage and stream.
+
+     </p></div></span><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="clear()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>clear</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function clear():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Clears the contents of the byte array and resets the <code>length</code>
+
+     and <code>position</code> properties to 0. Calling this method explicitly
+
+     frees up the memory used by the ByteArray instance.
+
+     
+     </p></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="clear()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>clear</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function clear():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Clears the contents of the byte array and resets the <code>length</code>
+
+     and <code>position</code> properties to 0. Calling this method explicitly
+
+     frees up the memory used by the ByteArray instance.
+
+     
+     </p></div></span><span id="pageFilter" runtime="Flash::9##"><a name="compress()"></a><a name="compress(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>compress</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function compress(algorithm:String):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Compresses the byte array. The entire byte array is compressed. For content
+
+     running in Adobe AIR, you can specify a compression algorithm by passing a
+
+     value (defined in the CompressionAlgorithm class) as the <code>algorithm</code>
+
+     parameter. 
+
+     
+     <p>After the call, the <code>length</code> property of the ByteArray is set to the new length.
+
+     The <code>position</code> property is set to the end of the byte array.</p>
+
+     
+     <p>The zlib compressed data format is described at
+
+     <a href="http://www.ietf.org/rfc/rfc1950.txt" target="external">http://www.ietf.org/rfc/rfc1950.txt</a>.</p>
+
+     
+     <p>The deflate compression algorithm is described at
+
+     <a href="http://www.ietf.org/rfc/rfc1951.txt" target="external">http://www.ietf.org/rfc/rfc1951.txt</a>.</p>
+
+     
+     <p>The deflate compression algorithm is used in several compression
+
+     formats, such as zlib, gzip, some zip implementations, and others. When data is
+
+     compressed using one of those compression formats, in addition to storing
+
+     the compressed version of the original data, the compression format data
+
+     (for example, the .zip file) includes metadata information. Some examples of
+
+     the types of metadata included in various file formats are file name,
+
+     file modification date/time, original file size, optional comments, checksum
+
+     data, and more.</p>
+
+     
+     <p>For example, when a ByteArray is compressed using the zlib algorithm,
+
+     the resulting ByteArray is structured in a specific format. Certain bytes contain
+
+     metadata about the compressed data, while other bytes contain the actual compressed
+
+     version of the original ByteArray data. As defined by the zlib compressed data
+
+     format specification, those bytes (that is, the portion containing
+
+     the compressed version of the original data) are compressed using the deflate
+
+     algorithm. Consequently those bytes are identical to the result of calling
+
+     <code>compress(<span src="https://help.adobe.com/en_US/air/reference/html/flash/utils/javascript">air.</span>CompressionAlgorithm.DEFLATE)</code>
+
+     on the original ByteArray. However, the result from
+
+     <code>compress(<span src="https://help.adobe.com/en_US/air/reference/html/flash/utils/javascript">air.</span>CompressionAlgorithm.ZLIB)</code> includes
+
+     the extra metadata, while the <code>compress(<span>air.</span>CompressionAlgorithm.DEFLATE)</code>
+
+     result includes only the compressed version of the original ByteArray data and nothing else.</p>
+
+     
+     <p>In order to use the deflate format to compress a ByteArray instance's
+
+     data in a specific format such as gzip or zip, you cannot simply call
+
+     <code>compress(<span>air.</span>CompressionAlgorithm.DEFLATE)</code>.
+
+     You must create a ByteArray structured
+
+     according to the compression format's specification, including the appropriate
+
+     metadata as well as the compressed data obtained using the deflate format.
+
+     Likewise, in order to decode data compressed in a format such
+
+     as gzip or zip, you can't simply call <code>uncompress(<span>air.</span>CompressionAlgorithm.DEFLATE)</code>
+
+     on that data. First, you must separate the metadata from the compressed data, and you can
+
+     then use the deflate format to decompress the compressed data.</p>
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">algorithm</span>:String</code> (default = <code>NaN</code>)<code></code> &mdash; The compression algorithm to use when compressing. Valid values are defined as
+
+     constants in the CompressionAlgorithm class. The default is to use zlib format.
+
+      Calling <code>compress(<span>air.</span>CompressionAlgorithm.DEFLATE)</code>
+
+     has the same effect as calling the <code>deflate()</code> method.
+
+     
+     </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="ByteArray.html#uncompress()" target="">uncompress()</a><br/><a href="CompressionAlgorithm.html" target="">CompressionAlgorithm</a></div></div></span><span id="pageFilter" runtime="Flash::9##"><a name="compress()"></a><a name="compress(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>compress</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function compress(algorithm:String):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Compresses the byte array. The entire byte array is compressed. For content
+
+     running in Adobe AIR, you can specify a compression algorithm by passing a
+
+     value (defined in the CompressionAlgorithm class) as the <code>algorithm</code>
+
+     parameter. 
+
+     
+     <p>After the call, the <code>length</code> property of the ByteArray is set to the new length.
+
+     The <code>position</code> property is set to the end of the byte array.</p>
+
+     
+     <p>The zlib compressed data format is described at
+
+     <a href="http://www.ietf.org/rfc/rfc1950.txt" target="external">http://www.ietf.org/rfc/rfc1950.txt</a>.</p>
+
+     
+     <p>The deflate compression algorithm is described at
+
+     <a href="http://www.ietf.org/rfc/rfc1951.txt" target="external">http://www.ietf.org/rfc/rfc1951.txt</a>.</p>
+
+     
+     <p>The deflate compression algorithm is used in several compression
+
+     formats, such as zlib, gzip, some zip implementations, and others. When data is
+
+     compressed using one of those compression formats, in addition to storing
+
+     the compressed version of the original data, the compression format data
+
+     (for example, the .zip file) includes metadata information. Some examples of
+
+     the types of metadata included in various file formats are file name,
+
+     file modification date/time, original file size, optional comments, checksum
+
+     data, and more.</p>
+
+     
+     <p>For example, when a ByteArray is compressed using the zlib algorithm,
+
+     the resulting ByteArray is structured in a specific format. Certain bytes contain
+
+     metadata about the compressed data, while other bytes contain the actual compressed
+
+     version of the original ByteArray data. As defined by the zlib compressed data
+
+     format specification, those bytes (that is, the portion containing
+
+     the compressed version of the original data) are compressed using the deflate
+
+     algorithm. Consequently those bytes are identical to the result of calling
+
+     <code>compress(<span src="https://help.adobe.com/en_US/air/reference/html/flash/utils/javascript">air.</span>CompressionAlgorithm.DEFLATE)</code>
+
+     on the original ByteArray. However, the result from
+
+     <code>compress(<span src="https://help.adobe.com/en_US/air/reference/html/flash/utils/javascript">air.</span>CompressionAlgorithm.ZLIB)</code> includes
+
+     the extra metadata, while the <code>compress(<span>air.</span>CompressionAlgorithm.DEFLATE)</code>
+
+     result includes only the compressed version of the original ByteArray data and nothing else.</p>
+
+     
+     <p>In order to use the deflate format to compress a ByteArray instance's
+
+     data in a specific format such as gzip or zip, you cannot simply call
+
+     <code>compress(<span>air.</span>CompressionAlgorithm.DEFLATE)</code>.
+
+     You must create a ByteArray structured
+
+     according to the compression format's specification, including the appropriate
+
+     metadata as well as the compressed data obtained using the deflate format.
+
+     Likewise, in order to decode data compressed in a format such
+
+     as gzip or zip, you can't simply call <code>uncompress(<span>air.</span>CompressionAlgorithm.DEFLATE)</code>
+
+     on that data. First, you must separate the metadata from the compressed data, and you can
+
+     then use the deflate format to decompress the compressed data.</p>
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">algorithm</span>:String</code> (default = <code>NaN</code>)<code></code> &mdash; The compression algorithm to use when compressing. Valid values are defined as
+
+     constants in the CompressionAlgorithm class. The default is to use zlib format.
+
+      Calling <code>compress(<span>air.</span>CompressionAlgorithm.DEFLATE)</code>
+
+     has the same effect as calling the <code>deflate()</code> method.
+
+     
+     </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="ByteArray.html#uncompress()" target="">uncompress()</a><br/><a href="CompressionAlgorithm.html" target="">CompressionAlgorithm</a></div></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="deflate()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>deflate</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function deflate():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Compresses the byte array using the deflate compression algorithm.
+
+     The entire byte array is compressed.
+
+     
+     <p>After the call, the <code>length</code> property of the ByteArray is set to the new length.
+
+     The <code>position</code> property is set to the end of the byte array.</p>
+
+     
+     <p>The deflate compression algorithm is described at
+
+     <a href="http://www.ietf.org/rfc/rfc1951.txt" target="external">http://www.ietf.org/rfc/rfc1951.txt</a>.</p>
+
+     
+     <p>In order to use the deflate format to compress a ByteArray instance's
+
+     data in a specific format such as gzip or zip, you cannot simply call
+
+     <code>deflate()</code>. You must create a ByteArray structured
+
+     according to the compression format's specification, including the appropriate
+
+     metadata as well as the compressed data obtained using the deflate format.
+
+     Likewise, in order to decode data compressed in a format such
+
+     as gzip or zip, you can't simply call <code>inflate()</code>
+
+     on that data. First, you must separate the metadata from the compressed data, and you can
+
+     then use the deflate format to decompress the compressed data.</p>
+
+     
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="ByteArray.html#inflate()" target="">inflate()</a></div></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="deflate()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>deflate</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function deflate():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Compresses the byte array using the deflate compression algorithm.
+
+     The entire byte array is compressed.
+
+     
+     <p>After the call, the <code>length</code> property of the ByteArray is set to the new length.
+
+     The <code>position</code> property is set to the end of the byte array.</p>
+
+     
+     <p>The deflate compression algorithm is described at
+
+     <a href="http://www.ietf.org/rfc/rfc1951.txt" target="external">http://www.ietf.org/rfc/rfc1951.txt</a>.</p>
+
+     
+     <p>In order to use the deflate format to compress a ByteArray instance's
+
+     data in a specific format such as gzip or zip, you cannot simply call
+
+     <code>deflate()</code>. You must create a ByteArray structured
+
+     according to the compression format's specification, including the appropriate
+
+     metadata as well as the compressed data obtained using the deflate format.
+
+     Likewise, in order to decode data compressed in a format such
+
+     as gzip or zip, you can't simply call <code>inflate()</code>
+
+     on that data. First, you must separate the metadata from the compressed data, and you can
+
+     then use the deflate format to decompress the compressed data.</p>
+
+     
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="ByteArray.html#inflate()" target="">inflate()</a></div></div></span><span id="pageFilter" runtime="Flash::10##"><a name="inflate()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>inflate</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function inflate():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Decompresses the byte array using the deflate compression algorithm.
+
+     The byte array must have been compressed using the same algorithm.
+
+     
+     <p>After the call, the <code>length</code> property of the ByteArray is set to the new length.
+
+     The <code>position</code> property is set to 0.</p>
+
+     
+     <p>The deflate compression algorithm is described at
+
+     <a href="http://www.ietf.org/rfc/rfc1951.txt" target="external">http://www.ietf.org/rfc/rfc1951.txt</a>.</p>
+
+     
+     <p>In order to decode data compressed in a format that uses the deflate compression algorithm,
+
+     such as data in gzip or zip format, it will not work to simply call <code>inflate()</code> on
+
+     a ByteArray containing the compression formation data. First, you must separate the metadata that is
+
+     included as part of the compressed data format from the actual compressed data. For more
+
+     information, see the <code>compress()</code> method description.</p>
+
+     
+     </p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IOError </code> &mdash; The data is not valid compressed data; it was not compressed with the
+
+     same compression algorithm used to compress.
+
+     
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="ByteArray.html#deflate()" target="">deflate()</a></div></div></span><span id="pageFilter" runtime="Flash::10##"><a name="inflate()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>inflate</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function inflate():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Decompresses the byte array using the deflate compression algorithm.
+
+     The byte array must have been compressed using the same algorithm.
+
+     
+     <p>After the call, the <code>length</code> property of the ByteArray is set to the new length.
+
+     The <code>position</code> property is set to 0.</p>
+
+     
+     <p>The deflate compression algorithm is described at
+
+     <a href="http://www.ietf.org/rfc/rfc1951.txt" target="external">http://www.ietf.org/rfc/rfc1951.txt</a>.</p>
+
+     
+     <p>In order to decode data compressed in a format that uses the deflate compression algorithm,
+
+     such as data in gzip or zip format, it will not work to simply call <code>inflate()</code> on
+
+     a ByteArray containing the compression formation data. First, you must separate the metadata that is
+
+     included as part of the compressed data format from the actual compressed data. For more
+
+     information, see the <code>compress()</code> method description.</p>
+
+     
+     </p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IOError </code> &mdash; The data is not valid compressed data; it was not compressed with the
+
+     same compression algorithm used to compress.
+
+     
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="ByteArray.html#deflate()" target="">deflate()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readBoolean()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readBoolean</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readBoolean():Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a Boolean value from the byte stream. A single byte is read,
+
+     and <code>true</code> is returned if the byte is nonzero,
+
+     <code>false</code> otherwise.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; Returns <code>true</code> if the byte is nonzero, <code>false</code> otherwise.
+
+     
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readBoolean()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readBoolean</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readBoolean():Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a Boolean value from the byte stream. A single byte is read,
+
+     and <code>true</code> is returned if the byte is nonzero,
+
+     <code>false</code> otherwise.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; Returns <code>true</code> if the byte is nonzero, <code>false</code> otherwise.
+
+     
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readByte()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readByte</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readByte():int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a signed byte from the byte stream.
+
+     <p>The returned value is in the range -128 to 127.</p>
+
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; An integer between -128 and 127.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readByte()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readByte</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readByte():int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a signed byte from the byte stream.
+
+     <p>The returned value is in the range -128 to 127.</p>
+
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; An integer between -128 and 127.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readBytes()"></a><a name="readBytes(flash.utils.ByteArray,uint,uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readBytes</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readBytes(bytes:<a href="ByteArray.html">ByteArray</a>, offset:uint = 0, length:uint = 0):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads the number of data bytes, specified by the <code>length</code> parameter, from the byte stream.
+
+     The bytes are read into the ByteArray object specified by the <code>bytes</code> parameter,
+
+     and the bytes are written into the destination ByteArray starting at the position specified by <code>offset</code>.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">bytes</span>:<a href="ByteArray.html">ByteArray</a></code> &mdash; The ByteArray object to read data into.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">offset</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; The offset (position) in <code>bytes</code> at which the read data should be written.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">length</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; The number of bytes to read.  The default value of 0 causes all available data to be read.
+
+     
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>RangeError </code> &mdash; The value of the supplied offset and length, combined, is greater than the maximum for a uint.
+
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118666ade46-7d54.html" target="_top">Reading and writing a ByteArray</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readBytes()"></a><a name="readBytes(flash.utils.ByteArray,uint,uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readBytes</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readBytes(bytes:<a href="ByteArray.html">ByteArray</a>, offset:uint = 0, length:uint = 0):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads the number of data bytes, specified by the <code>length</code> parameter, from the byte stream.
+
+     The bytes are read into the ByteArray object specified by the <code>bytes</code> parameter,
+
+     and the bytes are written into the destination ByteArray starting at the position specified by <code>offset</code>.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">bytes</span>:<a href="ByteArray.html">ByteArray</a></code> &mdash; The ByteArray object to read data into.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">offset</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; The offset (position) in <code>bytes</code> at which the read data should be written.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">length</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; The number of bytes to read.  The default value of 0 causes all available data to be read.
+
+     
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>RangeError </code> &mdash; The value of the supplied offset and length, combined, is greater than the maximum for a uint.
+
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118666ade46-7d54.html" target="_top">Reading and writing a ByteArray</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readDouble()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readDouble</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readDouble():Number</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an IEEE 754 double-precision (64-bit) floating-point number from the byte stream.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code> &mdash; A double-precision (64-bit) floating-point number.
+
+     
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readDouble()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readDouble</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readDouble():Number</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an IEEE 754 double-precision (64-bit) floating-point number from the byte stream.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code> &mdash; A double-precision (64-bit) floating-point number.
+
+     
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readFloat()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readFloat</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readFloat():Number</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an IEEE 754 single-precision (32-bit) floating-point number from the byte stream.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code> &mdash; A single-precision (32-bit) floating-point number.
+
+     
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readFloat()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readFloat</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readFloat():Number</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an IEEE 754 single-precision (32-bit) floating-point number from the byte stream.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code> &mdash; A single-precision (32-bit) floating-point number.
+
+     
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readInt()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readInt</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readInt():int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a signed 32-bit integer from the byte stream.
+
+     
+     <p>The returned value is in the range -2147483648 to 2147483647.</p>
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; A 32-bit signed integer between -2147483648 and 2147483647.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readInt()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readInt</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readInt():int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a signed 32-bit integer from the byte stream.
+
+     
+     <p>The returned value is in the range -2147483648 to 2147483647.</p>
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; A 32-bit signed integer between -2147483648 and 2147483647.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readMultiByte()"></a><a name="readMultiByte(uint,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readMultiByte</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readMultiByte(length:uint, charSet:String):String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a multibyte string of specified length from the byte stream using the
+
+     specified character set.
+
+     
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">length</span>:uint</code> &mdash; The number of bytes from the byte stream to read.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">charSet</span>:String</code> &mdash; The string denoting the character set to use to interpret the bytes.
+
+     Possible character set strings include <code>"shift-jis"</code>, <code>"cn-gb"</code>,
+
+     <code>"iso-8859-1"</code>, and others.
+
+     For a complete list, see <a href="../../charset-codes.html" >Supported Character Sets</a>.
+
+     <p><b>Note:</b> If the value for the <code>charSet</code> parameter
+
+     is not recognized by the current system, the application uses the system's default
+
+     code page as the character set. For example, a value for the <code>charSet</code> parameter,
+
+     as in <code>myTest.readMultiByte(22, "iso-8859-01")</code> that uses <code>01</code> instead of
+
+     <code>1</code> might work on your development system, but not on another system.
+
+     On the other system, the application will use the system's default code page.</p>
+
+     
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; UTF-8 encoded string.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readMultiByte()"></a><a name="readMultiByte(uint,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readMultiByte</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readMultiByte(length:uint, charSet:String):String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a multibyte string of specified length from the byte stream using the
+
+     specified character set.
+
+     
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">length</span>:uint</code> &mdash; The number of bytes from the byte stream to read.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">charSet</span>:String</code> &mdash; The string denoting the character set to use to interpret the bytes.
+
+     Possible character set strings include <code>"shift-jis"</code>, <code>"cn-gb"</code>,
+
+     <code>"iso-8859-1"</code>, and others.
+
+     For a complete list, see <a href="../../charset-codes.html" >Supported Character Sets</a>.
+
+     <p><b>Note:</b> If the value for the <code>charSet</code> parameter
+
+     is not recognized by the current system, the application uses the system's default
+
+     code page as the character set. For example, a value for the <code>charSet</code> parameter,
+
+     as in <code>myTest.readMultiByte(22, "iso-8859-01")</code> that uses <code>01</code> instead of
+
+     <code>1</code> might work on your development system, but not on another system.
+
+     On the other system, the application will use the system's default code page.</p>
+
+     
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; UTF-8 encoded string.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readObject()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readObject</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readObject():*</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an object from the byte array, encoded in AMF
+
+     serialized format.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>*</code> &mdash; The deserialized object.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readObject()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readObject</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readObject():*</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an object from the byte array, encoded in AMF
+
+     serialized format.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>*</code> &mdash; The deserialized object.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readShort()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readShort</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readShort():int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a signed 16-bit integer from the byte stream.
+
+     
+     <p>The returned value is in the range -32768 to 32767.</p>
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; A 16-bit signed integer between -32768 and 32767.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readShort()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readShort</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readShort():int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a signed 16-bit integer from the byte stream.
+
+     
+     <p>The returned value is in the range -32768 to 32767.</p>
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; A 16-bit signed integer between -32768 and 32767.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readUnsignedByte()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readUnsignedByte</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedByte():uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an unsigned byte from the byte stream.
+
+     
+     <p>The returned value is in the range 0 to 255. </p>
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>uint</code> &mdash; A 32-bit unsigned integer between 0 and 255.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readUnsignedByte()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readUnsignedByte</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedByte():uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an unsigned byte from the byte stream.
+
+     
+     <p>The returned value is in the range 0 to 255. </p>
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>uint</code> &mdash; A 32-bit unsigned integer between 0 and 255.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readUnsignedInt()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readUnsignedInt</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedInt():uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an unsigned 32-bit integer from the byte stream.
+
+     
+     <p>The returned value is in the range 0 to 4294967295. </p>
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>uint</code> &mdash; A 32-bit unsigned integer between 0 and 4294967295.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readUnsignedInt()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readUnsignedInt</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedInt():uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an unsigned 32-bit integer from the byte stream.
+
+     
+     <p>The returned value is in the range 0 to 4294967295. </p>
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>uint</code> &mdash; A 32-bit unsigned integer between 0 and 4294967295.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readUnsignedShort()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readUnsignedShort</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedShort():uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an unsigned 16-bit integer from the byte stream.
+
+     
+     <p>The returned value is in the range 0 to 65535. </p>
+
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>uint</code> &mdash; A 16-bit unsigned integer between 0 and 65535.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readUnsignedShort()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readUnsignedShort</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedShort():uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an unsigned 16-bit integer from the byte stream.
+
+     
+     <p>The returned value is in the range 0 to 65535. </p>
+
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>uint</code> &mdash; A 16-bit unsigned integer between 0 and 65535.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readUTF()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readUTF</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUTF():String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a UTF-8 string from the byte stream.  The string
+
+     is assumed to be prefixed with an unsigned short indicating
+
+     the length in bytes.
+
+     
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; UTF-8 encoded  string.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readUTF()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readUTF</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUTF():String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a UTF-8 string from the byte stream.  The string
+
+     is assumed to be prefixed with an unsigned short indicating
+
+     the length in bytes.
+
+     
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; UTF-8 encoded  string.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readUTFBytes()"></a><a name="readUTFBytes(uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readUTFBytes</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUTFBytes(length:uint):String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a sequence of UTF-8 bytes specified by the <code>length</code>
+
+     parameter from the byte stream and returns a string.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">length</span>:uint</code> &mdash; An unsigned short indicating the length of the UTF-8 bytes.
+
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; A string composed of the UTF-8 bytes of the specified length.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readUTFBytes()"></a><a name="readUTFBytes(uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readUTFBytes</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUTFBytes(length:uint):String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a sequence of UTF-8 bytes specified by the <code>length</code>
+
+     parameter from the byte stream and returns a string.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">length</span>:uint</code> &mdash; An unsigned short indicating the length of the UTF-8 bytes.
+
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; A string composed of the UTF-8 bytes of the specified length.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is not sufficient data available
+
+     to read.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##Lite::4##"><a name="toJSON()"></a><a name="toJSON(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>toJSON</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function toJSON(k:String):*</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+     Provides an overridable method for customizing the JSON encoding of values in an ByteArray object.
+
+     
+     <p>The <code>JSON.stringify()</code> method looks for a <code>toJSON()</code> method on each object that it traverses. If the 
+
+     <code>toJSON()</code> method is found, <code>JSON.stringify()</code> calls it for each value it encounters, passing in the key 
+
+     that is paired with the value.</p>
+
+     <p>ByteArray provides a default implementation of <code>toJSON()</code> that simply returns the name of the class. Because the content 
+
+     of any ByteArray requires interpretation, clients that wish to export ByteArray objects to JSON must provide their own implementation. 
+
+     You can do so by redefining the <code>toJSON()</code> method on the class prototype. </p>
+
+     <p> The <code>toJSON()</code> method can return a value of any type. If it returns an object, <code>stringify()</code> recurses into that object. 
+
+     If <code>toJSON()</code> returns a string, <code>stringify()</code> does not recurse and continues its traversal.</p>
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">k</span>:String</code> &mdash; The key of a key/value pair that <code>JSON.stringify()</code> has encountered in its traversal of this object
+
+     
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>*</code> &mdash; The class name string.
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="toString()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>toString</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function toString():String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Converts the byte array to a string.
+
+     If the data in the array begins with a Unicode byte order mark, the application will honor that mark
+
+     when converting to a string. If <code>System.useCodePage</code> is set to <code>true</code>, the
+
+     application will treat the data in the array as being in the current system code page when converting.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; The string representation of the byte array.
+
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="toString()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>toString</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function toString():String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Converts the byte array to a string.
+
+     If the data in the array begins with a Unicode byte order mark, the application will honor that mark
+
+     when converting to a string. If <code>System.useCodePage</code> is set to <code>true</code>, the
+
+     application will treat the data in the array as being in the current system code page when converting.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; The string representation of the byte array.
+
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="uncompress()"></a><a name="uncompress(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>uncompress</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function uncompress(algorithm:String):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Decompresses the byte array. For content running in Adobe AIR, you can specify
+
+     a compression algorithm by passing a value (defined in the CompressionAlgorithm class)
+
+     as the <code>algorithm</code> parameter. The byte array must have been compressed
+
+     using the same algorithm. 
+
+     
+     <p>After the call, the <code>length</code> property of the ByteArray is set to the new length.
+
+     The <code>position</code> property is set to 0.</p>
+
+     
+     <p>The zlib compressed data format is described at
+
+     <a href="http://www.ietf.org/rfc/rfc1950.txt" target="external">http://www.ietf.org/rfc/rfc1950.txt</a>.</p>
+
+     
+     <p>The deflate compression algorithm is described at
+
+     <a href="http://www.ietf.org/rfc/rfc1951.txt" target="external">http://www.ietf.org/rfc/rfc1951.txt</a>.</p>
+
+     
+     <p>In order to decode data compressed in a format that uses the deflate compression algorithm,
+
+     such as data in gzip or zip format, it will not work to call
+
+     <code>uncompress(CompressionAlgorithm.DEFLATE)</code> on
+
+     a ByteArray containing the compression formation data. First, you must separate the metadata that is
+
+     included as part of the compressed data format from the actual compressed data. For more
+
+     information, see the <code>compress()</code> method description.</p>
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">algorithm</span>:String</code> (default = <code>NaN</code>)<code></code> &mdash; The compression algorithm to use when decompressing. This must be the
+
+     same compression algorithm used to compress the data. Valid values are defined as
+
+     constants in the CompressionAlgorithm class. The default is to use zlib format. This parameter
+
+     is only recognized for content running in Adobe AIR. 
+
+     
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IOError </code> &mdash; The data is not valid compressed data; it was not compressed with the
+
+     same compression algorithm used to compress.
+
+     
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="ByteArray.html#compress()" target="">compress()</a><br/><a href="CompressionAlgorithm.html" target="">CompressionAlgorithm</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="uncompress()"></a><a name="uncompress(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>uncompress</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function uncompress(algorithm:String):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Decompresses the byte array. For content running in Adobe AIR, you can specify
+
+     a compression algorithm by passing a value (defined in the CompressionAlgorithm class)
+
+     as the <code>algorithm</code> parameter. The byte array must have been compressed
+
+     using the same algorithm. 
+
+     
+     <p>After the call, the <code>length</code> property of the ByteArray is set to the new length.
+
+     The <code>position</code> property is set to 0.</p>
+
+     
+     <p>The zlib compressed data format is described at
+
+     <a href="http://www.ietf.org/rfc/rfc1950.txt" target="external">http://www.ietf.org/rfc/rfc1950.txt</a>.</p>
+
+     
+     <p>The deflate compression algorithm is described at
+
+     <a href="http://www.ietf.org/rfc/rfc1951.txt" target="external">http://www.ietf.org/rfc/rfc1951.txt</a>.</p>
+
+     
+     <p>In order to decode data compressed in a format that uses the deflate compression algorithm,
+
+     such as data in gzip or zip format, it will not work to call
+
+     <code>uncompress(CompressionAlgorithm.DEFLATE)</code> on
+
+     a ByteArray containing the compression formation data. First, you must separate the metadata that is
+
+     included as part of the compressed data format from the actual compressed data. For more
+
+     information, see the <code>compress()</code> method description.</p>
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">algorithm</span>:String</code> (default = <code>NaN</code>)<code></code> &mdash; The compression algorithm to use when decompressing. This must be the
+
+     same compression algorithm used to compress the data. Valid values are defined as
+
+     constants in the CompressionAlgorithm class. The default is to use zlib format. This parameter
+
+     is only recognized for content running in Adobe AIR. 
+
+     
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IOError </code> &mdash; The data is not valid compressed data; it was not compressed with the
+
+     same compression algorithm used to compress.
+
+     
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="ByteArray.html#compress()" target="">compress()</a><br/><a href="CompressionAlgorithm.html" target="">CompressionAlgorithm</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeBoolean()"></a><a name="writeBoolean(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeBoolean</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeBoolean(value:Boolean):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a Boolean value. A single byte is written according to the <code>value</code> parameter,
+
+     either 1 if <code>true</code> or 0 if <code>false</code>.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:Boolean</code> &mdash; A Boolean value determining which byte is written. If the parameter is <code>true</code>,
+
+     the method writes a 1; if <code>false</code>, the method writes a 0.
+
+     
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeBoolean()"></a><a name="writeBoolean(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeBoolean</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeBoolean(value:Boolean):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a Boolean value. A single byte is written according to the <code>value</code> parameter,
+
+     either 1 if <code>true</code> or 0 if <code>false</code>.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:Boolean</code> &mdash; A Boolean value determining which byte is written. If the parameter is <code>true</code>,
+
+     the method writes a 1; if <code>false</code>, the method writes a 0.
+
+     
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeByte()"></a><a name="writeByte(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeByte</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeByte(value:int):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a byte to the byte stream.
+
+     <p>The low 8 bits of the
+
+     parameter are used. The high 24 bits are ignored. </p>
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:int</code> &mdash; A 32-bit integer. The low 8 bits are written to the byte stream.
+
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeByte()"></a><a name="writeByte(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeByte</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeByte(value:int):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a byte to the byte stream.
+
+     <p>The low 8 bits of the
+
+     parameter are used. The high 24 bits are ignored. </p>
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:int</code> &mdash; A 32-bit integer. The low 8 bits are written to the byte stream.
+
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeBytes()"></a><a name="writeBytes(flash.utils.ByteArray,uint,uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeBytes</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeBytes(bytes:<a href="ByteArray.html">ByteArray</a>, offset:uint = 0, length:uint = 0):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a sequence of <code>length</code> bytes from the
+
+     specified byte array, <code>bytes</code>,
+
+     starting <code>offset</code>(zero-based index) bytes
+
+     into the byte stream.
+
+     
+     <p>If the <code>length</code> parameter is omitted, the default
+
+     length of 0 is used; the method writes the entire buffer starting at
+
+     <code>offset</code>.
+
+     If the <code>offset</code> parameter is also omitted, the entire buffer is
+
+     written. </p> <p>If <code>offset</code> or <code>length</code>
+
+     is out of range, they are clamped to the beginning and end
+
+     of the <code>bytes</code> array.</p>
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">bytes</span>:<a href="ByteArray.html">ByteArray</a></code> &mdash; The ByteArray object.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">offset</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; A zero-based index indicating the position into the array to begin writing.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">length</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; An unsigned integer indicating how far into the buffer to write.
+
+     </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118666ade46-7d54.html" target="_top">Reading and writing a ByteArray</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeBytes()"></a><a name="writeBytes(flash.utils.ByteArray,uint,uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeBytes</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeBytes(bytes:<a href="ByteArray.html">ByteArray</a>, offset:uint = 0, length:uint = 0):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a sequence of <code>length</code> bytes from the
+
+     specified byte array, <code>bytes</code>,
+
+     starting <code>offset</code>(zero-based index) bytes
+
+     into the byte stream.
+
+     
+     <p>If the <code>length</code> parameter is omitted, the default
+
+     length of 0 is used; the method writes the entire buffer starting at
+
+     <code>offset</code>.
+
+     If the <code>offset</code> parameter is also omitted, the entire buffer is
+
+     written. </p> <p>If <code>offset</code> or <code>length</code>
+
+     is out of range, they are clamped to the beginning and end
+
+     of the <code>bytes</code> array.</p>
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">bytes</span>:<a href="ByteArray.html">ByteArray</a></code> &mdash; The ByteArray object.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">offset</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; A zero-based index indicating the position into the array to begin writing.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">length</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; An unsigned integer indicating how far into the buffer to write.
+
+     </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118666ade46-7d54.html" target="_top">Reading and writing a ByteArray</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeDouble()"></a><a name="writeDouble(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeDouble</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeDouble(value:Number):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes an IEEE 754 double-precision (64-bit) floating-point number to the byte stream.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:Number</code> &mdash; A double-precision (64-bit) floating-point number.
+
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeDouble()"></a><a name="writeDouble(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeDouble</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeDouble(value:Number):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes an IEEE 754 double-precision (64-bit) floating-point number to the byte stream.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:Number</code> &mdash; A double-precision (64-bit) floating-point number.
+
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeFloat()"></a><a name="writeFloat(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeFloat</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeFloat(value:Number):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes an IEEE 754 single-precision (32-bit) floating-point number to the byte stream.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:Number</code> &mdash; A single-precision (32-bit) floating-point number.
+
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeFloat()"></a><a name="writeFloat(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeFloat</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeFloat(value:Number):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes an IEEE 754 single-precision (32-bit) floating-point number to the byte stream.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:Number</code> &mdash; A single-precision (32-bit) floating-point number.
+
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeInt()"></a><a name="writeInt(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeInt</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeInt(value:int):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a 32-bit signed integer to the byte stream.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:int</code> &mdash; An integer to write to the byte stream.
+
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeInt()"></a><a name="writeInt(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeInt</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeInt(value:int):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a 32-bit signed integer to the byte stream.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:int</code> &mdash; An integer to write to the byte stream.
+
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeMultiByte()"></a><a name="writeMultiByte(String,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeMultiByte</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeMultiByte(value:String, charSet:String):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a multibyte string to the byte stream using the specified character set.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:String</code> &mdash; The string value to be written.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">charSet</span>:String</code> &mdash; The string denoting the character set to use. Possible character set strings
+
+     include <code>"shift-jis"</code>, <code>"cn-gb"</code>, <code>"iso-8859-1"</code>, and others.
+
+     For a complete list, see <a href="../../charset-codes.html" >Supported Character Sets</a>.
+
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeMultiByte()"></a><a name="writeMultiByte(String,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeMultiByte</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeMultiByte(value:String, charSet:String):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a multibyte string to the byte stream using the specified character set.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:String</code> &mdash; The string value to be written.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">charSet</span>:String</code> &mdash; The string denoting the character set to use. Possible character set strings
+
+     include <code>"shift-jis"</code>, <code>"cn-gb"</code>, <code>"iso-8859-1"</code>, and others.
+
+     For a complete list, see <a href="../../charset-codes.html" >Supported Character Sets</a>.
+
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeObject()"></a><a name="writeObject(any)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeObject</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeObject(object:*):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes an object into the byte array in AMF
+
+     serialized format.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">object</span>:*</code> &mdash; The object to serialize.
+
+     
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeObject()"></a><a name="writeObject(any)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeObject</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeObject(object:*):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes an object into the byte array in AMF
+
+     serialized format.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">object</span>:*</code> &mdash; The object to serialize.
+
+     
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeShort()"></a><a name="writeShort(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeShort</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeShort(value:int):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a 16-bit integer to the byte stream. The low 16 bits of the parameter are used.
+
+     The high 16 bits are ignored.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:int</code> &mdash; 32-bit integer, whose low 16 bits are written to the byte stream.
+
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeShort()"></a><a name="writeShort(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeShort</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeShort(value:int):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a 16-bit integer to the byte stream. The low 16 bits of the parameter are used.
+
+     The high 16 bits are ignored.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:int</code> &mdash; 32-bit integer, whose low 16 bits are written to the byte stream.
+
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeUnsignedInt()"></a><a name="writeUnsignedInt(uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeUnsignedInt</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUnsignedInt(value:uint):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a 32-bit unsigned integer to the byte stream.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:uint</code> &mdash; An unsigned integer to write to the byte stream.
+
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeUnsignedInt()"></a><a name="writeUnsignedInt(uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeUnsignedInt</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUnsignedInt(value:uint):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a 32-bit unsigned integer to the byte stream.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:uint</code> &mdash; An unsigned integer to write to the byte stream.
+
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeUTF()"></a><a name="writeUTF(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeUTF</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUTF(value:String):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a UTF-8 string to the byte stream. The length of the UTF-8 string in bytes
+
+     is written first, as a 16-bit integer, followed by the bytes representing the
+
+     characters of the string.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:String</code> &mdash; The string value to be written.
+
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>RangeError </code> &mdash; If the length is larger than
+
+     65535.
+
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeUTF()"></a><a name="writeUTF(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeUTF</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUTF(value:String):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a UTF-8 string to the byte stream. The length of the UTF-8 string in bytes
+
+     is written first, as a 16-bit integer, followed by the bytes representing the
+
+     characters of the string.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:String</code> &mdash; The string value to be written.
+
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>RangeError </code> &mdash; If the length is larger than
+
+     65535.
+
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeUTFBytes()"></a><a name="writeUTFBytes(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeUTFBytes</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUTFBytes(value:String):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a UTF-8 string to the byte stream. Similar to the <code>writeUTF()</code> method,
+
+     but <code>writeUTFBytes()</code> does not prefix the string with a 16-bit length word.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:String</code> &mdash; The string value to be written.
+
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeUTFBytes()"></a><a name="writeUTFBytes(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeUTFBytes</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUTFBytes(value:String):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a UTF-8 string to the byte stream. Similar to the <code>writeUTF()</code> method,
+
+     but <code>writeUTFBytes()</code> does not prefix the string with a 16-bit length word.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:String</code> &mdash; The string value to be written.
+
+     </td></tr></table></p></div></span><a name="includeExamplesSummary"></a><div class="detailSectionHeader">Examples</div><span id="pageFilter"><br/><div class="detailBody"> The following example writes a Boolean
+ and the double-precision floating-point representation of pi to a byte array.  This is accomplished 
+ using the following steps:
+ <ol><li>Declare a new ByteArray object instance <code>byteArr</code>.</li><li>Write the byte-equivalent value of the Boolean <code>false</code> and then check the length and 
+ 	read it back.</li><li>Write the double-precision floating-point equivalent of the mathematical value of pi.</li><li>Read back each of the nine bytes written into the byte array.</li></ol>
+ 
+ <p><b>Note: </b>when <code>air.trace()</code> is called on a byte, it prints the decimal equivalent
+ of the bytes stored in the byte array.</p>
+ 
+ <p>Notice how a code segment is added at the end to check for end of file errors to ensure that
+ the byte stream is not read past its end.</p>
+<div class="listing"><pre>
+&lt;html&gt;
+    &lt;head&gt;
+      &lt;script src="AIRAliases.js" /&gt;
+      &lt;script&gt;
+        function init() {
+            var byteArr = new air.ByteArray();
+
+            byteArr.writeBoolean(false);
+            air.trace(byteArr.length);            // 1
+            air.trace(byteArr[0]);            // 0
+
+            byteArr.writeDouble(Math.PI);
+            air.trace(byteArr.length);            // 9
+            air.trace(byteArr[0]);            // 0
+            air.trace(byteArr[1]);            // 64
+            air.trace(byteArr[2]);            // 9
+            air.trace(byteArr[3]);            // 33
+            air.trace(byteArr[4]);            // 251
+            air.trace(byteArr[5]);            // 84
+            air.trace(byteArr[6]);            // 68
+            air.trace(byteArr[7]);            // 45
+            air.trace(byteArr[8]);            // 24
+            
+            byteArr.position = 0;
+
+            try {
+                air.trace(byteArr.readBoolean() == false); // true
+            } 
+            catch(e) {
+                air.trace(e);           // EOFError: Error #2030: End of file was encountered.
+            }
+            
+            try {
+                air.trace(byteArr.readDouble());        // 3.141592653589793
+            }
+            catch(e) {
+                trace(e);           // EOFError: Error #2030: End of file was encountered.
+            }
+            
+            try {
+                air.trace(byteArr.readDouble());
+            } 
+            catch(e) {
+                air.trace(e);            // EOFError: Error #2030: End of file was encountered.
+            }
+        }
+      &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body onload="init()"&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre></div></div></span><span id="pageFilter"><br/><div class="detailBody"> The following example writes a Boolean
+ and the double-precision floating-point representation of pi to a byte array.  This is accomplished 
+ using the following steps:
+ <ol><li>Declare a new ByteArray object instance <code>byteArr</code>.</li><li>Write the byte-equivalent value of the Boolean <code>false</code> and then check the length and 
+ 	read it back.</li><li>Write the double-precision floating-point equivalent of the mathematical value of pi.</li><li>Read back each of the nine bytes written into the byte array.</li></ol>
+ 
+ <p><b>Note: </b>when <code>air.trace()</code> is called on a byte, it prints the decimal equivalent
+ of the bytes stored in the byte array.</p>
+ 
+ <p>Notice how a code segment is added at the end to check for end of file errors to ensure that
+ the byte stream is not read past its end.</p>
+<div class="listing"><pre>
+&lt;html&gt;
+    &lt;head&gt;
+      &lt;script src="AIRAliases.js" /&gt;
+      &lt;script&gt;
+        function init() {
+            var byteArr = new air.ByteArray();
+
+            byteArr.writeBoolean(false);
+            air.trace(byteArr.length);            // 1
+            air.trace(byteArr[0]);            // 0
+
+            byteArr.writeDouble(Math.PI);
+            air.trace(byteArr.length);            // 9
+            air.trace(byteArr[0]);            // 0
+            air.trace(byteArr[1]);            // 64
+            air.trace(byteArr[2]);            // 9
+            air.trace(byteArr[3]);            // 33
+            air.trace(byteArr[4]);            // 251
+            air.trace(byteArr[5]);            // 84
+            air.trace(byteArr[6]);            // 68
+            air.trace(byteArr[7]);            // 45
+            air.trace(byteArr[8]);            // 24
+            
+            byteArr.position = 0;
+
+            try {
+                air.trace(byteArr.readBoolean() == false); // true
+            } 
+            catch(e) {
+                air.trace(e);           // EOFError: Error #2030: End of file was encountered.
+            }
+            
+            try {
+                air.trace(byteArr.readDouble());        // 3.141592653589793
+            }
+            catch(e) {
+                trace(e);           // EOFError: Error #2030: End of file was encountered.
+            }
+            
+            try {
+                air.trace(byteArr.readDouble());
+            } 
+            catch(e) {
+                air.trace(e);            // EOFError: Error #2030: End of file was encountered.
+            }
+        }
+      &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body onload="init()"&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre></div></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script><p></p><center class="copyright"> &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><!--BEGIN IONCOMMENTS--><div id="ionComHere"></div><!--END IONCOMMENTS-->[an error occurred while processing this directive][an error occurred while processing this directive]<p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/en_US/legalnotices/index.html">Legal Notices</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online Privacy Policy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html><!-- &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  -->

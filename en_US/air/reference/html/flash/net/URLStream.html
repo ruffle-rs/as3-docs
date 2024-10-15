@@ -1,0 +1,1208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"><html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers"><meta name="lang" content="en-us"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="URLStream,flash.net.URLStream,bytesAvailable,connected,endian,objectEncoding,close,load,readBoolean,readByte,readBytes,readDouble,readFloat,readInt,readMultiByte,readObject,readShort,readUTF,readUTFBytes,readUnsignedByte,readUnsignedInt,readUnsignedShort"><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" src="../../AC_OETags.js" type="text/javascript"></script><title>flash.net.URLStream - Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers</title>
+	<link rel="stylesheet" href="../../jslr-style.css" type="text/css">
+		<script type="text/javascript">
+			
+				var baseRef = "../../";
+				var buildType = 'jslr';
+				var alreadyrunflag=0; //flag to indicate whether target function has already been run
+				var terms_HELPCFG = ".helpcfg";
+
+if (document.addEventListener)
+  document.addEventListener("DOMContentLoaded", function(){alreadyrunflag=1; init()}, false)
+else if (document.all && !window.opera){
+  /* blocks IE from working, as it's fired before dom if ready
+ document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
+  var contentloadtag=document.getElementById("contentloadtag")
+  contentloadtag.onreadystatechange=function(){
+    if (this.readyState=="complete"){
+      alreadyrunflag=1;
+      init();
+    }
+  }*/
+} else if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+  var _timer=setInterval(function(){
+  if(/loaded|complete/.test(document.readyState)){
+    clearInterval(_timer);
+    alreadyrunflag=1;
+    init(); // call target function
+  }}, 10)
+}
+function onLoadFunction() {
+	setTimeout("if (!alreadyrunflag) init();  alreadyrunflag=1; ionReadyLoad(); ", 0);
+}
+
+		</script>
+		<script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+		<script language="javascript" type="text/javascript" src="../../asdoc.js"></script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body onLoad="onLoadFunction()">
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td>
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr>
+				  <td class="titleTableTitleION" align="left" nowrap="true">Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers<br>
+				  <span class="titleTableTopNavION">
+				  <span id="homelink">
+						<a target="_self" href="../../index.html"> Home </a>&nbsp;|&nbsp;
+				  </span>
+				  <a id="showtoc" onClick="showHideTOC(true)" href="#top" style="display:none">Show Classes List</a><a id="hidetoc" onClick="showHideTOC(false)" href="#top" style="display:">Hide Classes List</a>&nbsp;|&nbsp;
+				  <a href="../../all-index-A.html"> Index </a>&nbsp;|&nbsp;
+				  <a href="../../appendixes.html"> Appendixes </a><br>
+				  </span>	
+				  </td>
+				  <td class="titleTableSearchION" align="right" nowrap="true">
+				  <span id="gsa" class="gsa">
+					<form class="searchFormION" method="get" onSubmit="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US');return false;">
+				  <input class="hidden" name="loc" value="" type="hidden">
+				  <input class="hidden" name="termPrefix" value="site:help.adobe.com/en_US/AS3CLR/Flash_10.0" type="hidden">
+				  <input class="hidden" name="title" value="ActionScript 3.0 Reference for the Adobe Flash Platform" type="hidden">
+				  <input class="hidden" name="term" value="" type="hidden">
+				  <input class="hidden" name="area" value="" type="hidden">
+				  <input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text">
+				  <input type="button" name="action" value="" onClick="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US')" class="searchbutton"><br>
+			      <input id="checkBoxId" type="checkbox" name="checkbox" value="checkbox" checked>Language Reference only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  </form>
+				  </span>				  
+				  </td>
+				</tr>
+			  </table>			
+			  </td>
+			<td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logoION.jpg" class="logoImageION" alt=" Adobe Logo " title=" Adobe Logo "></td>
+		  </tr>
+		  <tr>
+			<td colspan="2">
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr class="titleTableRow2">
+				<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+					<convert>URLStream&nbsp;</convert>
+				</td>
+				<td class="titleTableSubNav" id="subNav" align="right">
+				  <a id="propertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="propertiesBar" style="display:none"> | </span>
+				  <a id="packagePropertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="packagePropertiesBar" style="display:none"> | </span>
+				  <a id="constructorLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+				  <span id="constructorBar" style="display:none"> | </span>
+				  <a id="methodsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Methods </a>
+				  <span id="methodsBar" style="display:none"> | </span>
+				  <a id="packageFunctionsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Functions </a>
+				  <span id="packageFunctionsBar" style="display:none"> | </span>
+				  <a id="eventsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('eventSummary');" style="display:none"> Events </a>
+				  <span id="eventsBar" style="display:none"> | </span>
+				  <a id="stylesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('styleSummary');" style="display:none"> Styles </a>
+				  <span id="stylesBar" style="display:none"> | </span>
+				  <a id="SkinPartLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinPartSummary');" style="display:none"> Skin Parts </a>
+				  <span id="SkinPartBar" style="display:none"> | </span>
+				  <a id="SkinStateLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinStateSummary');" style="display:none"> Skin States </a>
+				  <span id="SkinStateBar" style="display:none"> | </span>
+				  <a id="effectsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('effectSummary');" style="display:none"> Effects </a>
+				  <span id="effectsBar" style="display:none"> | </span>
+				  <a id="constantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="constantsBar" style="display:none"> | </span>
+				  <a id="packageConstantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="packageConstantsBar" style="display:none"> | </span>
+				  <a id="interfacesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('interfaceSummary');" style="display:none"> Interfaces </a>
+				  <span id="interfacesBar" style="display:none"> | </span>
+				  <a id="classesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('classSummary');" style="display:none"> Classes </a>
+				  <span id="classesBar" style="display:none"> | </span>
+				  <a id="packageUseLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('package-use.html');" style="display:none">Use</a>
+				  <span id="packageUseBar" style="display:none"> | </span>
+				  <a id="examplesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('includeExamplesSummary');" style="display:none"> Examples </a>
+				</td>
+				</tr>
+				<tr class="titleTableRow3">
+				  <td colspan="4"></td>
+				</tr>
+			  </table>
+			</td>
+		  </tr>
+		</table>
+        <div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="classlist" class="jslrclasslist">
+					<div class="classlistoutline"></div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content">
+<script language="javascript" type="text/javascript">  <!--  
+         
+        asdocTitle = "URLStream - Adobe® AIR® API Reference for HTML Developers"; 
+        var baseRef = '../../'; 
+	document.baseRef = '../../'; 
+          -->  </script>
+<script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+<script language="javascript" type="text/javascript"><!--
+function submitValue() {
+var title="Adobe® AIR® API Reference for HTML Developers";
+var searchStr=document.getElementById('search-livedocs').value;
+
+        
+        
+        if(document.getElementById('checkBoxId').checked){
+        window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
++"&site=communityhelp-air-jslr ";
+} 
+
+        else{ 
+window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
+;
+} 
+} 
+--></script><script type="text/javascript"> scrollToNameAnchor(); </script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">window.runtime property</td><td>window.runtime.flash.net.URLStream</td></tr><tr><td class="classSignature"></td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">URLStream  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><div id="badgeAnchorSupport" class="ionBadgeWrapper"></div><div id="badgeContainerSupport"></div><p></p><p></p>
+
+ The URLStream class provides low-level access to
+
+ downloading URLs. Data is made available to application code
+
+ immediately as it is downloaded, instead of waiting until
+
+ the entire file is complete as with URLLoader.
+
+ The URLStream class also lets you close a stream
+
+ before it finishes downloading. 
+
+ The contents of the downloaded file are made available as raw binary data.
+
+ 
+ <p>The read operations in URLStream are nonblocking.
+
+ This means that you must use the <code>bytesAvailable</code> property to determine
+
+ whether sufficient data is available before reading it.  An
+
+ <code>EOFError</code> exception is thrown if insufficient
+
+ data is available.</p>
+
+ 
+               <p>All binary data is encoded by default in big-endian format, with the
+
+ most significant byte first.</p>
+
+ 
+               <p>The security rules that apply to URL downloading with the URLStream class are identical
+
+ to the rules applied to URLLoader objects.
+
+ Policy files may be downloaded as needed. Local file security rules are enforced,
+
+ and security warnings are raised as needed.</p>
+
+
+
+ 
+
+            <p></p><p><a href="#includeExamplesSummary">View the examples</a></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="URLLoader.html" target="">URLLoader</a><br/><a href="URLRequest.html" target="">URLRequest</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Properties</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Properties</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Properties</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th>Defined By</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#bytesAvailable" class="signatureLink">bytesAvailable</a> : uint<div class="summaryTableDescription">[read-only] 
+
+     Returns the number of bytes of data available for reading
+
+     in the input buffer.</div></td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#connected" class="signatureLink">connected</a> : Boolean<div class="summaryTableDescription">[read-only] 
+
+     Indicates whether this URLStream object is
+
+     currently connected.</div></td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">constructor : Object<div class="summaryTableDescription">
+
+	 A reference to the class object or constructor function for a given object instance.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#endian" class="signatureLink">endian</a> : String<div class="summaryTableDescription">
+
+     Indicates the byte order for the data.</div></td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#objectEncoding" class="signatureLink">objectEncoding</a> : uint<div class="summaryTableDescription">
+
+     Controls the version of Action Message Format (AMF) used when writing or reading an object.</div></td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">prototype : Object<div class="summaryTableDescription">[static] 
+
+	 A reference to the prototype object of a class or function object.</div></td><td class="summaryTableOwnerCol">Object</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Public Methods </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Methods</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th>Defined By</th></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#addEventListener()" class="signatureLink">addEventListener</a>(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void</div><div class="summaryTableDescription">
+
+	Registers an event listener object with an EventDispatcher object so that the listener 
+
+	receives notification of an event.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#close()" class="signatureLink">close</a>():void</div><div class="summaryTableDescription">
+
+     Immediately closes the stream and
+
+     cancels the download operation.</div></td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../events/Event.html">Event</a>):Boolean</div><div class="summaryTableDescription">
+
+	Dispatches an event into the event flow.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:String):Boolean</div><div class="summaryTableDescription">
+
+	Checks whether the EventDispatcher object has any listeners registered for a specific type 
+
+	of event.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">hasOwnProperty(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an object has a specified property defined.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">isPrototypeOf(theClass:Object):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+
+	 as the parameter.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#load()" class="signatureLink">load</a>(request:<a href="URLRequest.html">URLRequest</a>):void</div><div class="summaryTableDescription">
+
+     Begins downloading the URL specified in the request parameter.</div></td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">propertyIsEnumerable(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether the specified property exists and is enumerable.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readBoolean()" class="signatureLink">readBoolean</a>():Boolean</div><div class="summaryTableDescription">
+
+     Reads a Boolean value from the stream.</div></td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readByte()" class="signatureLink">readByte</a>():int</div><div class="summaryTableDescription">
+
+     Reads a signed byte from the stream.</div></td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readBytes()" class="signatureLink">readBytes</a>(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:uint = 0, length:uint = 0):void</div><div class="summaryTableDescription">
+
+     Reads length bytes of data from the stream.</div></td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readDouble()" class="signatureLink">readDouble</a>():Number</div><div class="summaryTableDescription">
+
+     Reads an IEEE 754 double-precision floating-point number from the stream.</div></td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readFloat()" class="signatureLink">readFloat</a>():Number</div><div class="summaryTableDescription">
+
+     Reads an IEEE 754 single-precision floating-point number from the stream.</div></td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readInt()" class="signatureLink">readInt</a>():int</div><div class="summaryTableDescription">
+
+     Reads a signed 32-bit integer from the stream.</div></td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readMultiByte()" class="signatureLink">readMultiByte</a>(length:uint, charSet:String):String</div><div class="summaryTableDescription">
+
+     Reads a multibyte string of specified length from the byte stream using the
+
+     specified character set.</div></td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readObject()" class="signatureLink">readObject</a>():*</div><div class="summaryTableDescription">
+
+     Reads an object from the socket, encoded in Action Message Format (AMF).</div></td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readShort()" class="signatureLink">readShort</a>():int</div><div class="summaryTableDescription">
+
+     Reads a signed 16-bit integer from the stream.</div></td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readUnsignedByte()" class="signatureLink">readUnsignedByte</a>():uint</div><div class="summaryTableDescription">
+
+     Reads an unsigned byte from the stream.</div></td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readUnsignedInt()" class="signatureLink">readUnsignedInt</a>():uint</div><div class="summaryTableDescription">
+
+     Reads an unsigned 32-bit integer from the stream.</div></td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readUnsignedShort()" class="signatureLink">readUnsignedShort</a>():uint</div><div class="summaryTableDescription">
+
+     Reads an unsigned 16-bit integer from the stream.</div></td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readUTF()" class="signatureLink">readUTF</a>():String</div><div class="summaryTableDescription">
+
+     Reads a UTF-8 string from the stream.</div></td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readUTFBytes()" class="signatureLink">readUTFBytes</a>(length:uint):String</div><div class="summaryTableDescription">
+
+     Reads a sequence of length UTF-8
+
+     bytes from the stream, and returns a string.</div></td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#removeEventListener()" class="signatureLink">removeEventListener</a>(type:String, listener:Function, useCapture:Boolean = false):void</div><div class="summaryTableDescription">
+
+	Removes a listener from the EventDispatcher object.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">setPropertyIsEnumerable(name:String, isEnum:Boolean = true):void</div><div class="summaryTableDescription">
+
+     Sets the availability of a dynamic property for loop operations.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toLocaleString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of this object, formatted according to locale-specific conventions.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">valueOf():Object</div><div class="summaryTableDescription">
+
+	 Returns the primitive value of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:String):Boolean</div><div class="summaryTableDescription">
+
+	Checks whether an event listener is registered with this EventDispatcher object or any of 
+
+	its ancestors for the specified event type.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Events</div><div class="showHideLinks"><div id="hideInheritedEvent" class="hideInheritedEvent"><a class="showHideLink" href="#eventSummary" onclick="javascript:setInheritedVisible(false,'Event');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Events</a></div><div id="showInheritedEvent" class="showInheritedEvent"><a class="showHideLink" href="#eventSummary" onclick="javascript:setInheritedVisible(true,'Event');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Events</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th>Defined By</th></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#event:activate#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[broadcast event] Dispatched when the Flash Player or AIR application gains operating system focus and becomes active.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:complete" class="signatureLink">complete</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when data has loaded successfully.</td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#event:deactivate#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[broadcast event] Dispatched when the Flash Player or AIR application operating loses system focus and is becoming inactive.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:httpResponseStatus" class="signatureLink">httpResponseStatus</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched if a call to the URLStream.load() method attempts to access data over HTTP and Adobe AIR is able to detect and return the status code for the request.</td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:httpStatus" class="signatureLink">httpStatus</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched if a call to URLStream.load() attempts to access data over HTTP, and Flash Player or Adobe AIR is able to detect and return the status code for the request.</td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:ioError" class="signatureLink">ioError</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when an input/output error occurs that causes a load operation to fail.</td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:open" class="signatureLink">open</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when a load operation starts.</td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:progress" class="signatureLink">progress</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when data is received as the download operation progresses.</td><td class="summaryTableOwnerCol">URLStream</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:securityError" class="signatureLink">securityError</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched if a call to URLStream.load() attempts to load data from a server outside the security sandbox.</td><td class="summaryTableOwnerCol">URLStream</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Property Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="bytesAvailable"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>bytesAvailable</h2></td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>bytesAvailable:uint</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Returns the number of bytes of data available for reading
+
+     in the input buffer.
+
+     Your code must call the <code>bytesAvailable</code> property to ensure
+
+     that sufficient data is available before you try to read
+
+     it with one of the <code>read</code> methods.
+
+     
+
+     </p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="connected"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>connected</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>connected:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Indicates whether this URLStream object is
+
+     currently connected. A call to this property returns a value of <code>true</code>
+
+     if the URLStream object is connected, or <code>false</code> otherwise.     
+
+     </p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="endian"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>endian</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>endian:String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Indicates the byte order for the data. Possible values are 
+
+     <code>Endian.BIG_ENDIAN</code> or <code>Endian.LITTLE_ENDIAN</code>.
+
+     </p><p> The default value is <code>Endian.BIG_ENDIAN.</code></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../utils/Endian.html" target="">Endian</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="objectEncoding"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>objectEncoding</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>objectEncoding:uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Controls the version of Action Message Format (AMF) used when writing or reading an object.
+
+     
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="URLStream.html#readObject()" target="">readObject()</a><br/><a href="ObjectEncoding.html" target="">ObjectEncoding class</a></div></div></span><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="close()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>close</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function close():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Immediately closes the stream and
+
+     cancels the download operation.
+
+     No data can be read from the stream after the <code>close()</code> method is called.
+
+     
+
+     </p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IOError </code> &mdash; The stream could not be closed, or the stream was not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="load()"></a><a name="load(flash.net.URLRequest)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>load</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function load(request:<a href="URLRequest.html">URLRequest</a>):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Begins downloading the URL specified in the <code>request</code> parameter.
+
+     
+     <p><b>Note</b>: If a file being loaded contains non-ASCII characters
+
+     (as found in many non-English languages), it is recommended that you save the file
+
+     with UTF-8 or UTF-16 encoding, as opposed to a non-Unicode format like ASCII.</p>
+
+     
+     <p>If the loading operation fails immediately, an IOError or SecurityError
+
+     (including the local file security error) exception is thrown describing the failure.
+
+     Otherwise, an <code>open</code> event is dispatched if the URL download
+
+     starts downloading successfully, or an error event is dispatched if an error occurs.</p>
+
+     
+     <p>By default, the calling SWF file and the URL you load must be in exactly the same domain.
+
+     For example, a SWF file at www.adobe.com can load data only from sources that are also at www.adobe.com. 
+
+     To load data from a different domain, place a URL policy file on the server hosting the data.</p>
+
+     
+     
+
+     
+     
+
+     
+     
+
+     
+
+     
+
+     
+     
+
+     
+
+     
+
+     
+
+     <p>In AIR, a URLRequest object can register for the <code>httpResponse</code> status event.
+
+     Unlike the <code>httpStatus</code> event, the <code>httpResponseStatus</code> event is 
+
+     delivered before any response data. Also, the <code>httpResponseStatus</code> event includes 
+
+     values for the <code>responseHeaders</code> and <code>responseURL</code> properties (which are 
+
+     undefined for an <code>httpStatus</code> event. Note that the <code>httpResponseStatus</code> event
+
+     (if any) will be sent before (and in addition to) any <code>complete</code> or <code>error</code> 
+
+     event. 
+
+     </p>
+
+     
+     
+     <p>If there <i>is</i> an <code>httpResponseStatus</code> event listener, the body of the response 
+
+     message is <i>always</i> sent; and HTTP status code responses always results in a <code>complete</code> event. 
+
+     This is true in spite of whether the HTTP response status code indicates a success or an error.</p> 
+
+     
+
+     <p><span>If</span> there is 
+
+     <i>no</i> <code>httpResponseStatus</code> event listener, the behavior differs
+
+     based on the <span>AIR</span> version:</p>
+
+     
+
+     <ul><li><span>In an AIR file
+
+     in which the application descriptor specifies AIR 1.0 or 1.1 as the runtime version</span>, the body of 
+
+     the HTTP response message is sent <i>only if</i> the HTTP response status code indicates success. 
+
+     Otherwise (if there is an error), no body is sent and the URLRequest object dispatches an IOError event.</li><li><span>In an AIR file
+
+     in which the application descriptor specifies AIR 1.5 as the runtime version</span>, the body of 
+
+     the HTTP response message is <i>always</i> sent. If there is an error, the URLRequest object dispatches
+
+     an IOError event.</li></ul>
+
+     
+     
+
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">request</span>:<a href="URLRequest.html">URLRequest</a></code> &mdash; A URLRequest object specifying the URL to download. If the value of
+
+     this parameter or the <code>URLRequest.url</code> property of the URLRequest object
+
+     passed are <code>null</code>, the application throws a null pointer error.
+
+     
+     </td></tr></table></p><br/><span class="label">Events</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>complete</b>:<a href="../events/Event.html"><code>Event</code></a></code> &mdash; Dispatched after data has loaded successfully. If there is a <code>httpResponseStatus</code>
+
+     event listener, the URLRequest object also dispatches a <code>complete</code> event whether the HTTP response status code 
+
+     indicates a success <em>or</em> an error.</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>httpStatus</b>:<a href="../events/HTTPStatusEvent.html"><code>HTTPStatusEvent</code></a></code> &mdash; If access is by HTTP <span platform="actionscript">and 
+
+     the current environment supports obtaining status codes</span>, you may
+
+     receive these events in addition to any <code>complete</code>
+
+     or <code>error</code> event.</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>httpResponseStatus</b>:<a href="../events/HTTPStatusEvent.html"><code>HTTPStatusEvent</code></a></code> &mdash; Dispatched if a call to the <code>load()</code> method attempts
+
+     to access data over HTTP and Adobe AIR is able to detect and return the status code for the request.</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; The load operation could not be
+
+     completed.</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>open</b>:<a href="../events/Event.html"><code>Event</code></a></code> &mdash; Dispatched when a load operation starts.</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>securityError</b>:<a href="../events/SecurityErrorEvent.html"><code>SecurityErrorEvent</code></a></code> &mdash; A load operation attempted
+
+     to retrieve data from a server outside the caller's security sandbox.
+
+     This may be worked around using a policy file on the server.</td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; <code>URLRequest.requestHeader</code> objects may not contain
+
+     certain prohibited HTTP request headers. For more information, see the URLRequestHeader class
+
+     description.
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>MemoryError </code> &mdash; This error can occur for the following reasons:
+
+     
+
+     <ol><li>Flash Player or Adobe AIR cannot convert the <code>URLRequest.data</code> parameter from UTF8 to MBCS. This error is
+
+     applicable if the URLRequest object passed to <code>load()</code> is set to perform a <code>GET</code> operation
+
+     and if <code>System.useCodePage</code> is set to <code>true</code>.</li><li>Flash Player or Adobe AIR cannot allocate memory for
+
+     the <code>POST</code> data. This error is applicable if the URLRequest object passed to load is set
+
+     to perform a <code>POST</code> operation.</li></ol>
+
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>SecurityError </code> &mdash; Local untrusted SWF files may not communicate with
+
+     the Internet. This may be worked around by reclassifying this SWF file
+
+     as local-with-networking or trusted.
+
+     
+      </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>SecurityError </code> &mdash; You are trying to connect to a commonly reserved port. 
+
+      For a complete list of blocked ports, see "Restricting Networking APIs" in the 
+
+      <i>ActionScript 3.0 Developer's Guide</i>.
+
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readBoolean()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readBoolean</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readBoolean():Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a Boolean value from the stream. A single byte is read,
+
+     and <code>true</code> is returned if the byte is nonzero,
+
+     <code>false</code> otherwise.
+
+     
+
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>True</code> is returned if the byte is nonzero, <code>false</code> otherwise.
+
+     
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; 
+
+     <span>This error applies to SWF content; it does not occur
+
+     in JavaScript code running in AIR.</span>
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the stream,
+
+     or the stream is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readByte()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readByte</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readByte():int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a signed byte from the stream.
+
+     <p>The returned value is in the range -128...127.</p>
+
+     
+
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; Value in the range -128...127.
+
+     
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; 
+
+     <span>This error applies to SWF content; it does not occur
+
+     in JavaScript code running in AIR.</span>
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the stream,
+
+     or the stream is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readBytes()"></a><a name="readBytes(flash.utils.ByteArray,uint,uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readBytes</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readBytes(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:uint = 0, length:uint = 0):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads <code>length</code> bytes of data from the stream.
+
+     The bytes are read into the ByteArray object specified
+
+     by <code>bytes</code>, starting <code>offset</code> bytes into
+
+     the ByteArray object.
+
+     
+
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">bytes</span>:<a href="../utils/ByteArray.html">ByteArray</a></code> &mdash; The ByteArray object to read
+
+                  data into.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">offset</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; The offset into <code>bytes</code> at which data
+
+                   read should begin.  Defaults to 0.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">length</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; The number of bytes to read.  The default value
+
+                   of 0 will cause all available data to be read.
+
+     
+
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; 
+
+     <span>This error applies to SWF content; it does not occur
+
+     in JavaScript code running in AIR.</span>
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the stream, or the stream is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readDouble()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readDouble</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readDouble():Number</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an IEEE 754 double-precision floating-point number from the stream.
+
+     
+
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code> &mdash; An IEEE 754 double-precision floating-point number from the stream.
+
+     
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; 
+
+     <span>This error applies to SWF content; it does not occur
+
+     in JavaScript code running in AIR.</span>
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the stream,
+
+     or the stream is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readFloat()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readFloat</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readFloat():Number</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an IEEE 754 single-precision floating-point number from the stream.
+
+     
+
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code> &mdash; An IEEE 754 single-precision floating-point number from the stream.
+
+     
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; 
+
+     <span>This error applies to SWF content; it does not occur
+
+     in JavaScript code running in AIR.</span>
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the stream,
+
+     or the stream is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readInt()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readInt</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readInt():int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a signed 32-bit integer from the stream.
+
+     <p>The returned value is in the range -2147483648...2147483647.</p>
+
+     
+
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; Value in the range -2147483648...2147483647.
+
+     
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; 
+
+     <span>This error applies to SWF content; it does not occur
+
+     in JavaScript code running in AIR.</span>
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the stream,
+
+     or the stream is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readMultiByte()"></a><a name="readMultiByte(uint,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readMultiByte</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readMultiByte(length:uint, charSet:String):String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a multibyte string of specified length from the byte stream using the
+
+     specified character set.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">length</span>:uint</code> &mdash; The number of bytes from the byte stream to read.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">charSet</span>:String</code> &mdash; The string denoting the character set to use to interpret the bytes. 
+
+     Possible character set strings include <code>"shift_jis"</code>, <code>"CN-GB"</code>,
+
+     <code>"iso-8859-1"</code>, and others.
+
+     For a complete list, see <a href="../../charset-codes.html" >Supported Character Sets</a>.    
+
+     
+
+     <p><b>Note:</b> If the value for the <code>charSet</code> parameter is not recognized 
+
+     by the current system, the application uses the system's default code page as the character set. 
+
+     For example, a value for the <code>charSet</code> parameter, as in 
+
+     <code>myTest.readMultiByte(22, "iso-8859-01")</code> that uses <code>01</code> instead of <code>1</code> 
+
+     might work on your development machine, but not on another machine. On the other machine, 
+
+     the application will use the system's default code page.</p>
+
+     
+
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; UTF-8 encoded string.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; 
+
+     <span>This error applies to SWF content; it does not occur
+
+     in JavaScript code running in AIR.</span>
+
+     
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readObject()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readObject</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readObject():*</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an object from the socket, encoded in Action Message Format (AMF).
+
+     
+
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>*</code> &mdash; The deserialized object.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is insufficient data available
+
+     to read. If a local SWF file triggers a security warning,
+
+     Flash Player prevents the URLStream data from being available to ActionScript.
+
+     When this happens, the <code>bytesAvailable</code> property returns 0 even if data has been
+
+     received, and any of the read methods throws an EOFError exception.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the stream,
+
+     or the stream is not open.
+
+     
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="ObjectEncoding.html" target="">ObjectEncoding</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readShort()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readShort</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readShort():int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a signed 16-bit integer from the stream.
+
+     <p>The returned value is in the range -32768...32767.</p>
+
+     
+
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; Value in the range -32768...32767.
+
+     
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; 
+
+     <span>This error applies to SWF content; it does not occur
+
+     in JavaScript code running in AIR.</span>
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the stream,
+
+     or the stream is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readUnsignedByte()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readUnsignedByte</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedByte():uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an unsigned byte from the stream.
+
+     <p>The returned value is in the range 0...255. </p>     
+
+     
+
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>uint</code> &mdash; Value in the range 0...255.
+
+     
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; 
+
+     <span>This error applies to SWF content; it does not occur
+
+     in JavaScript code running in AIR.</span>
+
+
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the stream,
+
+     or the stream is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readUnsignedInt()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readUnsignedInt</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedInt():uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an unsigned 32-bit integer from the stream.
+
+     <p>The returned value is in the range 0...4294967295. </p>
+
+     
+
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>uint</code> &mdash; Value in the range 0...4294967295.
+
+     
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; 
+
+     <span>This error applies to SWF content; it does not occur
+
+     in JavaScript code running in AIR.</span>
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the stream,
+
+     or the stream is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readUnsignedShort()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readUnsignedShort</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedShort():uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an unsigned 16-bit integer from the stream.
+
+     <p>The returned value is in the range 0...65535. </p>
+
+     
+
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>uint</code> &mdash; Value in the range 0...65535.
+
+     
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; 
+
+     <span>This error applies to SWF content; it does not occur
+
+     in JavaScript code running in AIR.</span>
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the stream,
+
+     or the stream is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readUTF()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readUTF</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUTF():String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a UTF-8 string from the stream.  The string
+
+     is assumed to be prefixed with an unsigned short indicating
+
+     the length in bytes.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; A UTF-8 string.
+
+     
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; 
+
+     <span>This error applies to SWF content; it does not occur
+
+     in JavaScript code running in AIR.</span>
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the stream,
+
+     or the stream is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readUTFBytes()"></a><a name="readUTFBytes(uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readUTFBytes</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUTFBytes(length:uint):String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a sequence of <code>length</code> UTF-8
+
+     bytes from the stream, and returns a string.
+
+     
+
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">length</span>:uint</code> &mdash; A sequence of UTF-8 bytes.
+
+     
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; A UTF-8 string produced by the byte representation of characters of specified length.
+
+     
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; 
+
+     <span>This error applies to SWF content; it does not occur
+
+     in JavaScript code running in AIR.</span>
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the stream,
+
+     or the stream is not open.
+
+      
+
+      </td></tr></table></div></span><div class="detailSectionHeader"> Event Detail </div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:complete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>complete</h2></td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">property Event.type  =  </span><a href="../events/Event.html#COMPLETE"><code>flash.events.Event.COMPLETE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ Dispatched when data has loaded successfully. 
+
+ </p>
+
+	The <code>Event.COMPLETE</code> constant defines the value of the <code>type</code> property of a <code>complete</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The network object that has completed loading. 
+
+	    </td></tr></table>
+
+	
+
+	</div></span><span id="pageFilter" runtime="AIR::1.0##Lite::4##"><a name="event:httpResponseStatus"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>httpResponseStatus</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/HTTPStatusEvent.html"><code>flash.events.HTTPStatusEvent</code></a><br/><span class="label">property HTTPStatusEvent.type  =  </span><a href="../events/HTTPStatusEvent.html#HTTP_RESPONSE_STATUS"><code>flash.events.HTTPStatusEvent.HTTP_RESPONSE_STATUS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 1.0 </td></tr></table><p></p><p></p><p>
+
+ Dispatched if a call to the <code>URLStream.load()</code> method attempts to access data over HTTP 
+
+ and Adobe AIR is able to detect and return the status code for the request. 
+
+ 
+
+ <p>If a URLStream object registers for an <code>httpStatusEvent</code> event, error responses  
+
+ are delivered as though they are content. So instead of dispatching an <code>ioError</code> 
+
+ event, the URLStream dispatches <code>progress</code> and <code>complete</code> events as 
+
+ the error data is loaded into the URLStream.</p>
+
+ 
+
+ </p>
+
+	Unlike the <code>httpStatus</code> event, the <code>httpResponseStatus</code> event is 
+
+	delivered before any response data. Also, the <code>httpResponseStatus</code> event includes 
+
+	values for the <code>responseHeaders</code> and <code>responseURL</code> properties (which are 
+
+	undefined for an <code>httpStatus</code> event. Note that the <code>httpResponseStatus</code> event
+
+	(if any) will be sent before (and in addition to) any <code>complete</code> or <code>error</code> 
+
+	event. 
+
+	
+
+	<p>The <code>HTTPStatusEvent.HTTP_RESPONSE_STATUS</code> constant defines the value of the 
+
+	<code>type</code> property of a <code>httpResponseStatus</code> event object. </p>
+
+	
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>responseURL</code></td><td>The URL from which the response was returned.</td></tr><tr><td><code>responseHeaders</code></td><td>The response headers that the response returned, 
+
+	as an array of URLRequestHeader objects.</td></tr><tr><td><code>status</code></td><td>The HTTP status code returned by the server.</td></tr><tr><td><code>target</code></td><td>The network object receiving an HTTP status code. </td></tr></table>
+
+	
+
+	<p><span class="label">See also</span></p><div class="seeAlso"><a href="URLStream.html#load()" target="">URLStream.load()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:httpStatus"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>httpStatus</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/HTTPStatusEvent.html"><code>flash.events.HTTPStatusEvent</code></a><br/><span class="label">property HTTPStatusEvent.type  =  </span><a href="../events/HTTPStatusEvent.html#HTTP_STATUS"><code>flash.events.HTTPStatusEvent.HTTP_STATUS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ Dispatched if a call to <code>URLStream.load()</code> 
+
+ attempts to access data over HTTP, and  Adobe AIR
+
+ is able to detect and return the status code for the request. (Some browser environments
+
+ may not be able to provide this information.) Note that the <code>httpStatus</code> 
+
+ (if any) will be sent before (and in addition to) any <code>complete</code>
+
+ or <code>error</code> event.
+
+ 
+
+ </p>
+
+	The <code>HTTPStatusEvent.HTTP_STATUS</code> constant defines the value of the 
+
+	<code>type</code> property of a <code>httpStatus</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>status</code></td><td>The HTTP status code returned by the server.</td></tr><tr><td><code>target</code></td><td>The network object receiving an HTTP status code. </td></tr></table>
+
+	
+
+	<p><span class="label">See also</span></p><div class="seeAlso"><a href="URLStream.html#load()" target="">URLStream.load()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:ioError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>ioError</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/IOErrorEvent.html"><code>flash.events.IOErrorEvent</code></a><br/><span class="label">property IOErrorEvent.type  =  </span><a href="../events/IOErrorEvent.html#IO_ERROR"><code>flash.events.IOErrorEvent.IO_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ Dispatched when an input/output error occurs that causes a load operation to fail. 
+
+ </p>
+
+	Defines the value of the <code>type</code> property of an <code>ioError</code> event object.
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>errorID</code></td><td>A reference number associated with the specific error (AIR only).</td></tr><tr><td><code>target</code></td><td>The network object experiencing the input/output error.</td></tr><tr><td><code>text</code></td><td>Text to be displayed as an error message.</td></tr></table>
+
+	
+
+	<p><span class="label">See also</span></p><div class="seeAlso"><a href="URLStream.html#load()" target="">URLStream.load()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:open"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>open</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">property Event.type  =  </span><a href="../events/Event.html#OPEN"><code>flash.events.Event.OPEN</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ Dispatched when a load operation starts.
+
+ </p>
+
+	The <code>Event.OPEN</code> constant defines the value of the <code>type</code> property of an <code>open</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The network object that has opened a connection. </td></tr></table>
+
+	
+
+	<p><span class="label">See also</span></p><div class="seeAlso"><a href="URLStream.html#load()" target="">URLStream.load()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:progress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>progress</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/ProgressEvent.html"><code>flash.events.ProgressEvent</code></a><br/><span class="label">property ProgressEvent.type  =  </span><a href="../events/ProgressEvent.html#PROGRESS"><code>flash.events.ProgressEvent.PROGRESS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ Dispatched when data is received as the download operation progresses.
+
+ Data that has been received can be read immediately using the methods of the URLStream class.
+
+ </p>
+
+	Defines the value of the <code>type</code> property of a <code>progress</code> event object.
+
+	
+
+	<p>This event has the following properties:</p>
+
+	
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>bytesLoaded</code></td><td>The number of items or bytes loaded at the time the listener processes the event.</td></tr><tr><td><code>bytesTotal</code></td><td>The total number of items or bytes that ultimately will  be loaded if the loading process succeeds.</td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The object reporting progress. </td></tr></table>
+
+	
+
+	<p><span class="label">See also</span></p><div class="seeAlso"><a href="URLStream.html#load()" target="">URLStream.load()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:securityError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>securityError</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/SecurityErrorEvent.html"><code>flash.events.SecurityErrorEvent</code></a><br/><span class="label">property SecurityErrorEvent.type  =  </span><a href="../events/SecurityErrorEvent.html#SECURITY_ERROR"><code>flash.events.SecurityErrorEvent.SECURITY_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ Dispatched if a call to <code>URLStream.load()</code> 
+
+ attempts to load data from a server outside the security sandbox.
+
+ 
+
+ </p>
+
+	The <code>SecurityErrorEvent.SECURITY_ERROR</code> constant defines the value of the <code>type</code> property of a <code>securityError</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The network object reporting the security error.</td></tr><tr><td><code>text</code></td><td>Text to be displayed as an error message.</td></tr></table>
+
+	
+
+	<p><span class="label">See also</span></p><div class="seeAlso"><a href="URLStream.html#load()" target="">URLStream.load()</a></div></div></span><a name="includeExamplesSummary"></a><div class="detailSectionHeader">Examples</div><span id="pageFilter"><br/><div class="detailBody"> The following example loads a SWF file and parses the beginning of its header to indicate 
+ compression and version number information. 
+
+ <p><b>Note:</b> To test this example:</p>
+ 
+ <ol><li>Add the AIRAliases.js file to the project directory.</li><li>Place a file named URLStreamExample.zip in the project directory</li><li>Create an application descriptor file for the project, and test the project using ADL.</li></ol>
+<div class="listing"><pre>
+
+&lt;html&gt;
+    &lt;head&gt;
+      &lt;script src="AIRAliases.js" /&gt;
+      &lt;script&gt;
+        function init() {
+            stream = new air.URLStream();
+            var request = new air.URLRequest("URLStreamExample.zip");
+            configureListeners(stream);
+            try {
+                stream.load(request);
+            } catch (error) {
+                air.trace("Unable to load requested URL.");
+            }
+        }
+
+        function configureListeners(dispatcher) {
+            dispatcher.addEventListener(air.Event.COMPLETE, completeHandler);
+            dispatcher.addEventListener(air.HTTPStatusEvent.HTTP_STATUS, httpStatusHandler);
+            dispatcher.addEventListener(air.IOErrorEvent.IO_ERROR, ioErrorHandler);
+            dispatcher.addEventListener(air.Event.OPEN, openHandler);
+            dispatcher.addEventListener(air.ProgressEvent.PROGRESS, progressHandler);
+            dispatcher.addEventListener(air.SecurityErrorEvent.SECURITY_ERROR, securityErrorHandler);
+        }
+
+        function parseHeader() {
+            air.trace("parseHeader");
+            air.trace("isCompressed: " + isCompressed());
+            air.trace("version: " + stream.readByte());
+        }
+
+        function isCompressed() {
+            return stream.readUTFBytes(3) == air.CompressionAlgorithm.ZLIB ;
+        }
+
+        function completeHandler(event) {
+            air.trace("completeHandler: " + event);
+            parseHeader();
+        }
+
+        function openHandler(event) {
+            air.trace("openHandler: " + event);
+        }
+
+        function progressHandler(event) {
+            air.trace("progressHandler: " + event);
+        }
+
+        function securityErrorHandler(event) {
+            air.trace("securityErrorHandler: " + event);
+        }
+
+        function httpStatusHandler(event) {
+            air.trace("httpStatusHandler: " + event);
+        }
+
+        function ioErrorHandler(event) {
+            air.trace("ioErrorHandler: " + event);
+        }
+      &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body onload='init()'&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script><p></p><center class="copyright"> &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><!--BEGIN IONCOMMENTS--><div id="ionComHere"></div><!--END IONCOMMENTS-->[an error occurred while processing this directive][an error occurred while processing this directive]<p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/en_US/legalnotices/index.html">Legal Notices</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online Privacy Policy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html><!-- &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  -->

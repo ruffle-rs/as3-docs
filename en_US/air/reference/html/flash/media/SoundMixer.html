@@ -1,0 +1,481 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"><html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers"><meta name="lang" content="en-us"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="SoundMixer,flash.media.SoundMixer,audioPlaybackMode,bufferTime,soundTransform,useSpeakerphoneForVoice,areSoundsInaccessible,computeSpectrum,stopAll"><title>flash.media.SoundMixer - Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers</title>
+	<link rel="stylesheet" href="../../jslr-style.css" type="text/css">
+		<script type="text/javascript">
+			
+				var baseRef = "../../";
+				var buildType = 'jslr';
+				var alreadyrunflag=0; //flag to indicate whether target function has already been run
+				var terms_HELPCFG = ".helpcfg";
+
+if (document.addEventListener)
+  document.addEventListener("DOMContentLoaded", function(){alreadyrunflag=1; init()}, false)
+else if (document.all && !window.opera){
+  /* blocks IE from working, as it's fired before dom if ready
+ document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
+  var contentloadtag=document.getElementById("contentloadtag")
+  contentloadtag.onreadystatechange=function(){
+    if (this.readyState=="complete"){
+      alreadyrunflag=1;
+      init();
+    }
+  }*/
+} else if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+  var _timer=setInterval(function(){
+  if(/loaded|complete/.test(document.readyState)){
+    clearInterval(_timer);
+    alreadyrunflag=1;
+    init(); // call target function
+  }}, 10)
+}
+function onLoadFunction() {
+	setTimeout("if (!alreadyrunflag) init();  alreadyrunflag=1; ionReadyLoad(); ", 0);
+}
+
+		</script>
+		<script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+		<script language="javascript" type="text/javascript" src="../../asdoc.js"></script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body onLoad="onLoadFunction()">
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td>
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr>
+				  <td class="titleTableTitleION" align="left" nowrap="true">Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers<br>
+				  <span class="titleTableTopNavION">
+				  <span id="homelink">
+						<a target="_self" href="../../index.html"> Home </a>&nbsp;|&nbsp;
+				  </span>
+				  <a id="showtoc" onClick="showHideTOC(true)" href="#top" style="display:none">Show Classes List</a><a id="hidetoc" onClick="showHideTOC(false)" href="#top" style="display:">Hide Classes List</a>&nbsp;|&nbsp;
+				  <a href="../../all-index-A.html"> Index </a>&nbsp;|&nbsp;
+				  <a href="../../appendixes.html"> Appendixes </a><br>
+				  </span>	
+				  </td>
+				  <td class="titleTableSearchION" align="right" nowrap="true">
+				  <span id="gsa" class="gsa">
+					<form class="searchFormION" method="get" onSubmit="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US');return false;">
+				  <input class="hidden" name="loc" value="" type="hidden">
+				  <input class="hidden" name="termPrefix" value="site:help.adobe.com/en_US/AS3CLR/Flash_10.0" type="hidden">
+				  <input class="hidden" name="title" value="ActionScript 3.0 Reference for the Adobe Flash Platform" type="hidden">
+				  <input class="hidden" name="term" value="" type="hidden">
+				  <input class="hidden" name="area" value="" type="hidden">
+				  <input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text">
+				  <input type="button" name="action" value="" onClick="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US')" class="searchbutton"><br>
+			      <input id="checkBoxId" type="checkbox" name="checkbox" value="checkbox" checked>Language Reference only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  </form>
+				  </span>				  
+				  </td>
+				</tr>
+			  </table>			
+			  </td>
+			<td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logoION.jpg" class="logoImageION" alt=" Adobe Logo " title=" Adobe Logo "></td>
+		  </tr>
+		  <tr>
+			<td colspan="2">
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr class="titleTableRow2">
+				<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+					<convert>SoundMixer&nbsp;</convert>
+				</td>
+				<td class="titleTableSubNav" id="subNav" align="right">
+				  <a id="propertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="propertiesBar" style="display:none"> | </span>
+				  <a id="packagePropertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="packagePropertiesBar" style="display:none"> | </span>
+				  <a id="constructorLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+				  <span id="constructorBar" style="display:none"> | </span>
+				  <a id="methodsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Methods </a>
+				  <span id="methodsBar" style="display:none"> | </span>
+				  <a id="packageFunctionsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Functions </a>
+				  <span id="packageFunctionsBar" style="display:none"> | </span>
+				  <a id="eventsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('eventSummary');" style="display:none"> Events </a>
+				  <span id="eventsBar" style="display:none"> | </span>
+				  <a id="stylesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('styleSummary');" style="display:none"> Styles </a>
+				  <span id="stylesBar" style="display:none"> | </span>
+				  <a id="SkinPartLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinPartSummary');" style="display:none"> Skin Parts </a>
+				  <span id="SkinPartBar" style="display:none"> | </span>
+				  <a id="SkinStateLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinStateSummary');" style="display:none"> Skin States </a>
+				  <span id="SkinStateBar" style="display:none"> | </span>
+				  <a id="effectsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('effectSummary');" style="display:none"> Effects </a>
+				  <span id="effectsBar" style="display:none"> | </span>
+				  <a id="constantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="constantsBar" style="display:none"> | </span>
+				  <a id="packageConstantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="packageConstantsBar" style="display:none"> | </span>
+				  <a id="interfacesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('interfaceSummary');" style="display:none"> Interfaces </a>
+				  <span id="interfacesBar" style="display:none"> | </span>
+				  <a id="classesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('classSummary');" style="display:none"> Classes </a>
+				  <span id="classesBar" style="display:none"> | </span>
+				  <a id="packageUseLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('package-use.html');" style="display:none">Use</a>
+				  <span id="packageUseBar" style="display:none"> | </span>
+				  <a id="examplesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('includeExamplesSummary');" style="display:none"> Examples </a>
+				</td>
+				</tr>
+				<tr class="titleTableRow3">
+				  <td colspan="4"></td>
+				</tr>
+			  </table>
+			</td>
+		  </tr>
+		</table>
+        <div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="classlist" class="jslrclasslist">
+					<div class="classlistoutline"></div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content">
+<script language="javascript" type="text/javascript">  <!--  
+         
+        asdocTitle = "SoundMixer - Adobe® AIR® API Reference for HTML Developers"; 
+        var baseRef = '../../'; 
+	document.baseRef = '../../'; 
+          -->  </script>
+<script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+<script language="javascript" type="text/javascript"><!--
+function submitValue() {
+var title="Adobe® AIR® API Reference for HTML Developers";
+var searchStr=document.getElementById('search-livedocs').value;
+
+        
+        
+        if(document.getElementById('checkBoxId').checked){
+        window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
++"&site=communityhelp-air-jslr ";
+} 
+
+        else{ 
+window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
+;
+} 
+} 
+--></script><script type="text/javascript"> scrollToNameAnchor(); </script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">window.runtime property</td><td>window.runtime.flash.media.SoundMixer</td></tr><tr><td class="classSignature"></td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">SoundMixer  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><div id="badgeAnchorSupport" class="ionBadgeWrapper"></div><div id="badgeContainerSupport"></div><p></p><p></p>
+
+The SoundMixer class contains static properties and methods for global sound control
+
+in the application. The SoundMixer class controls embedded and streaming sounds in the application. 
+
+it does not control dynamically created sounds (that is, sounds generated in response 
+
+to a Sound object dispatching a <code>sampleData</code> event).
+
+
+
+<p></p><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Properties</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Properties</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Properties</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th>Defined By</th></tr><tr class="" runtime="AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#audioPlaybackMode" class="signatureLink">audioPlaybackMode</a> : String<div class="summaryTableDescription">[static] 
+
+     Specifies the audio playback mode of all Sound objects.</div></td><td class="summaryTableOwnerCol">SoundMixer</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#bufferTime" class="signatureLink">bufferTime</a> : int<div class="summaryTableDescription">[static] 
+
+     The number of seconds to preload an embedded streaming sound into a buffer before it starts 
+
+     to stream.</div></td><td class="summaryTableOwnerCol">SoundMixer</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">constructor : Object<div class="summaryTableDescription">
+
+	 A reference to the class object or constructor function for a given object instance.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">prototype : Object<div class="summaryTableDescription">[static] 
+
+	 A reference to the prototype object of a class or function object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#soundTransform" class="signatureLink">soundTransform</a> : <a href="SoundTransform.html">flash.media:SoundTransform</a><div class="summaryTableDescription">[static]  
+
+     The SoundTransform object that controls global sound properties.</div></td><td class="summaryTableOwnerCol">SoundMixer</td></tr><tr class="" runtime="AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#useSpeakerphoneForVoice" class="signatureLink">useSpeakerphoneForVoice</a> : Boolean<div class="summaryTableDescription">[static] 
+
+     Toggles the speakerphone when the device is in voice mode.</div></td><td class="summaryTableOwnerCol">SoundMixer</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Public Methods </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Methods</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th>Defined By</th></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#areSoundsInaccessible()" class="signatureLink">areSoundsInaccessible</a>():Boolean</div><div class="summaryTableDescription">[static]  
+
+     Determines whether any sounds are not accessible due to security restrictions.</div></td><td class="summaryTableOwnerCol">SoundMixer</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#computeSpectrum()" class="signatureLink">computeSpectrum</a>(outputArray:<a href="../utils/ByteArray.html">ByteArray</a>, FFTMode:Boolean = false, stretchFactor:int = 0):void</div><div class="summaryTableDescription">[static] 
+
+     Takes a snapshot of the current sound wave and places it into the specified ByteArray object.</div></td><td class="summaryTableOwnerCol">SoundMixer</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">hasOwnProperty(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an object has a specified property defined.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">isPrototypeOf(theClass:Object):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+
+	 as the parameter.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">propertyIsEnumerable(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether the specified property exists and is enumerable.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">setPropertyIsEnumerable(name:String, isEnum:Boolean = true):void</div><div class="summaryTableDescription">
+
+     Sets the availability of a dynamic property for loop operations.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#stopAll()" class="signatureLink">stopAll</a>():void</div><div class="summaryTableDescription">[static] 
+
+     Stops all sounds currently playing.</div></td><td class="summaryTableOwnerCol">SoundMixer</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toLocaleString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of this object, formatted according to locale-specific conventions.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">valueOf():Object</div><div class="summaryTableDescription">
+
+	 Returns the primitive value of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Property Detail</div><span id="pageFilter" runtime="AIR::3##"><a name="propertyDetail"></a><a name="audioPlaybackMode"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>audioPlaybackMode</h2></td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>audioPlaybackMode:String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+     Specifies the audio playback mode of all Sound objects. On mobile devices,
+
+     this property sets sound priorities and defaults according to platform idioms. In
+
+     desktop and TV environments, no functional difference exists between audio playback modes.
+
+     
+     <p>Valid values for this property are defined in the AudioPlaybackMode class. 
+
+     </p>
+
+     
+     </p><p> The default value is <code>AudioPlaybackMode.MEDIA.</code></p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; kInvalidParameterError
+
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="AudioPlaybackMode.html" target="">AudioPlaybackMode</a><br/><a href="Sound.html" target="">Sound</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="bufferTime"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>bufferTime</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>bufferTime:int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     The number of seconds to preload an embedded streaming sound into a buffer before it starts 
+
+     to stream. The data in a loaded sound, including its buffer time,
+
+     cannot be accessed by a SWF file that is in a different domain 
+
+     unless you implement a cross-domain policy file. 
+
+     For more information about security and sound, see the Sound class description.
+
+      
+
+     
+     <p>The <code>SoundMixer.bufferTime</code> property only affects the buffer time 
+
+     for embedded streaming sounds in a SWF and is independent of dynamically created 
+
+     Sound objects (that is, Sound objects created in ActionScript). 
+
+     The value of <code>SoundMixer.bufferTime</code> cannot override 
+
+     or set the default of the buffer time specified in the SoundLoaderContext object 
+
+     that is passed to the <code>Sound.load()</code> method.</p>
+
+     
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Sound.html" target="">Sound</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="soundTransform"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>soundTransform</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>soundTransform:<a href="SoundTransform.html">flash.media:SoundTransform</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p> 
+
+     The SoundTransform object that controls global sound properties. A SoundTransform object
+
+     includes properties for setting volume, panning, left speaker assignment, and right
+
+     speaker assignment. The SoundTransform object used in this property provides final sound settings
+
+     that are applied to all sounds after any individual sound settings are applied.
+
+     
+
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="SoundTransform.html" target="">SoundTransform</a></div></div></span><span id="pageFilter" runtime="AIR::3##"><a name="propertyDetail"></a><a name="useSpeakerphoneForVoice"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>useSpeakerphoneForVoice</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>useSpeakerphoneForVoice:Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+     Toggles the speakerphone when the device is in voice mode. By default, smartphones use the phone earpiece for audio 
+
+     output when <code>SoundMixer.audioPlaybackMode</code> is set to
+
+     <code>AudioPlaybackMode.VOICE</code>. The <code>useSpeakerphoneForVoice</code> property lets you override 
+
+     the default output so that you can implement a speakerphone button in a phone application. This property 
+
+     has no effect in modes other than <code>AudioPlaybackMode.VOICE</code>. In desktop and TV environments, 
+
+     this property has no effect.
+
+     
+     <p><b>Note</b> On Android, you must set the <code>android.permission.MODIFY_AUDIO_SETTINGS</code>
+
+	 in the AIR application descriptor or changing this value has no effect. In addition, the
+
+     setting is global device setting. Other applications running on the device can change
+
+	 the underlying device setting at any time.</p>
+
+     
+     </p><p> The default value is <code>false.</code></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="AudioPlaybackMode.html" target="">AudioPlaybackMode</a></div></div></span><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><span id="pageFilter" runtime="Flash::9##"><a name="areSoundsInaccessible()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>areSoundsInaccessible</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function areSoundsInaccessible():Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p> 
+
+     Determines whether any sounds are not accessible due to security restrictions. For example, 
+
+     a sound loaded from a domain other than that of the content calling this method is not accessible if 
+
+     the server for the sound has no URL policy file that grants access to
+
+     the domain of that domain. The sound can still be loaded and played, but low-level
+
+     operations, such as getting ID3 metadata for the sound, cannot be performed on 
+
+     inaccessible sounds.
+
+     
+
+     <p>For AIR application content in the application security sandbox, calling this method always
+
+     returns <code>false</code>. All sounds, including those loaded from other domains, are accessible
+
+     to content in the application security sandbox.</p>
+
+     
+
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; The string representation of the boolean.
+
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="SoundMixer.html#computeSpectrum()" target="">computeSpectrum()</a></div></div></span><span id="pageFilter" runtime="Flash::9##"><a name="computeSpectrum()"></a><a name="computeSpectrum(flash.utils.ByteArray,Boolean,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>computeSpectrum</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function computeSpectrum(outputArray:<a href="../utils/ByteArray.html">ByteArray</a>, FFTMode:Boolean = false, stretchFactor:int = 0):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Takes a snapshot of the current sound wave and places it into the specified ByteArray object. 
+
+     The values are formatted as normalized floating-point values, in the range -1.0 to 1.0. 
+
+     The ByteArray object passed to the <code>outputArray</code> parameter is overwritten with the new values.
+
+     The size of the ByteArray object created is fixed to 512 floating-point values, where the
+
+     first 256 values represent the left channel, and the second 256 values represent 
+
+     the right channel.
+
+     
+     <p><b>Note:</b> This method is subject to local file security restrictions and
+
+     restrictions on cross-domain loading. If you are working with local files or sounds loaded from a server in a 
+
+     different domain than the calling content, you might need to address sandbox restrictions
+
+     through a cross-domain policy file. For more information, see the Sound class description.
+
+     In addition, this method cannot be used to extract data from RTMP streams, even when 
+
+     it is called by content that reside in the same domain as the RTMP server.</p>
+
+     
+     
+
+     <p>This method is supported over RTMP in Flash Player 9.0.115.0
+
+     and later and in Adobe AIR. You can control access to streams on 
+
+     Flash Media Server in a server-side script. For more information, see the <code>Client.audioSampleAccess</code>
+
+     and <code>Client.videoSampleAccess</code> properties in <a href="http://www.adobe.com/go/documentation" target="external"><i>
+
+     Server-Side ActionScript Language Reference for Adobe Flash Media Server</i></a>.</p>
+
+     
+
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">outputArray</span>:<a href="../utils/ByteArray.html">ByteArray</a></code> &mdash; A ByteArray object that holds the values associated with the sound.
+
+     If any sounds are not available due to security restrictions 
+
+     (<code>areSoundsInaccessible == true</code>), the <code>outputArray</code> object 
+
+     is left unchanged. If all sounds are stopped, the <code>outputArray</code> object is 
+
+     filled with zeros.
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">FFTMode</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; A Boolean value indicating whether a Fourier transformation is performed 
+
+     on the sound data first. Setting this parameter to <code>true</code> causes the method to return a 
+
+     frequency spectrum instead of the raw sound wave. In the frequency spectrum, low frequencies 
+
+     are represented on the left and high frequencies are on the right.
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">stretchFactor</span>:int</code> (default = <code>0</code>)<code></code> &mdash; The resolution of the sound samples. 
+
+     If you set the <code>stretchFactor</code> value to 0, data is sampled at 44.1 KHz; 
+
+     with a value of 1, data is sampled at 22.05 KHz; with a value of 2, data is sampled 11.025 KHz;
+
+     and so on.
+
+     
+
+     </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="SoundMixer.html#areSoundsInaccessible()" target="">areSoundsInaccessible()</a><br/><a href="../utils/ByteArray.html" target="">ByteArray</a><br/><a href="Sound.html" target="">Sound</a><br/><a href="SoundLoaderContext.html#checkPolicyFile" target="">SoundLoaderContext.checkPolicyFile</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="stopAll()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>stopAll</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function stopAll():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Stops all sounds currently playing. 
+
+     
+
+     <p>>In Flash Professional, this method does not stop the playhead. 
+
+     Sounds set to stream will resume playing as the playhead moves over the frames in which they 
+
+     are located.</p>
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     <p>For more information related to security, see the Flash Player Developer Center Topic: 
+
+     <a href="http://www.adobe.com/go/devnet_security_en" target="external">Security</a>.</p>
+
+     
+     </p></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script><p></p><center class="copyright"> &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><!--BEGIN IONCOMMENTS--><div id="ionComHere"></div><!--END IONCOMMENTS-->[an error occurred while processing this directive][an error occurred while processing this directive]<p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/en_US/legalnotices/index.html">Legal Notices</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online Privacy Policy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html><!-- &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  -->

@@ -1,0 +1,1309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="en-us">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <meta content="en-us" name="lang"/>
+  <meta content="livedocs" name="area"/>
+  <title>
+   Adobe Flash Platform * ByteArray example: Reading a .zip file
+  </title>
+  <link href="images/AIR.ico" rel="shortcut icon"/>
+  <meta content="HTML Developer’s Guide for Adobe AIR" name="book"/>
+  <meta content="adobe" name="product"/>
+  <meta content="air" name="product"/>
+  <meta content="flash" name="product"/>
+  <meta content="flex" name="product"/>
+  <meta content="" name="keywords"/>
+  <!--<PageMap><DataObject type="document"><Attribute name="product" value="adobe"></Attribute><Attribute name="product" value="air"></Attribute><Attribute name="product" value="flash"></Attribute><Attribute name="product" value="flex"></Attribute><Attribute name="book" value="HTML Developer’s Guide for Adobe AIR"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+  <script charset="UTF-8" language="Javascript" type="text/javascript">
+   <!--[CDATA[
+        var currentTreeNode = "WS5b3ccc516d4fbf351e63e3d118666ade46-7d53.html";
+// ]]-->
+  </script>
+  <script charset="UTF-8" language="Javascript" src="terms.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="help.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="utilities.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="event.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="treeview.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="toc.js" type="text/javascript">
+   ..
+  </script>
+  <script charset="UTF-8" language="Javascript" src="swfobject.js" type="text/javascript">
+   ..
+  </script>
+  <script charset="UTF-8" language="Javascript" src="booklist.js" type="text/javascript">
+   ..
+  </script>
+  <script type="text/javascript">
+   <!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+  </script>
+  
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+  
+  
+  <link href="tree.css" rel="stylesheet" type="text/css"/>
+  <link href="content.css" rel="stylesheet" type="text/css"/>
+  <link href="localeSpecific.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body id="content_body" onload="window.focus();">
+  <a name="top" shape="rect">
+   <!--LeaveCommentHere-->
+  </a>
+  <div id="mnemonic">
+   <!--googleoff: index-->
+   <div class="AIR" xmlns:adobe="http://www.adobe.com/saxon">
+    <div class="banner">
+     <a href="WS9936fa0d5984e93b-3d590ddd1272a3584c3-8000.html">
+      Adobe Flash Platform
+     </a>
+    </div>
+   </div>
+   <!--googleon: index-->
+  </div>
+  <div id="searchbar">
+   <table id="searchbartable">
+    <tr>
+     <td colspan="2">
+      <!--googleoff: index-->
+      <div xmlns:adobe="http://www.adobe.com/saxon">
+       <div id="pdf">
+        <img height="16" src="images/PDF.gif" width="16"/>
+        <a href="air_htmldevguide.pdf" title="View Help PDF">
+         View Help PDF (
+         5.8M
+         B)
+        </a>
+       </div>
+      </div>
+      <!--googleon: index-->
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!-- BEGIN SEARCH CONTENT -->
+  <form action="https://help.adobe.com/en_US/air/html/dev/search.html" id="search" name="search" target="_self">
+   <script type="text/javascript">
+    <!--[CDATA[
+if ( !use_chc_behavior ){
+    if (typeof(terms_AHV_SEARCH_CONSTRAINT) != "undefined" && 
+        terms_AHV_SEARCH_CONSTRAINT.length > 0 && 
+        document.location.href.indexOf(".adobe.com") > 0){
+        if ( typeof(terms_SEARCH_THIS_HELP_ONLY) != "undefined" && terms_SEARCH_THIS_HELP_ONLY == "ON" ) {
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                checked="checked" \
+                value="1" ><\/input>'); 
+                
+        // Leave the "Search this help system only" checkbox unckecked
+        }else{    
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                value="1" ><\/input>'); 
+        }
+        document.write('<span class="gsalabel">' + terms_AHV_SEARCH_CONSTRAINT + '<\/span><\/div>'); 
+    }
+    document.write('<input class="searchinput" \
+        name="q" \
+        id="q" \
+        type="text" \
+        maxlength="256" \
+        value="' + terms_AHV_SEARCH_BUTTON + '" \
+        onclick="clearSearch()"><\/input><input \
+        type="button" \
+        name="searchbutton" \
+        class="searchbutton" \
+        onclick="submit()"><\/input>'); 
+} 
+ 
+/* 
+ * Start Functions 
+ */
+function clearSearch(){
+    if (document.search.q.value == terms_AHV_SEARCH_BUTTON){document.search.q.value = ""}; 
+}
+
+// set search preferences
+function setAHSearchPref(){
+    if (document.search.gsa.checked == 1){
+        setAHSearchCookie( dirname );
+    }else{
+        setAHSearchCookie( "community" );
+    }
+}
+
+// Set search preferences cookie
+function setAHSearchCookie( p ){
+    // set cookie ah_searchpref with a value of the document path
+    var expire=new Date();
+    expire.setDate(expire.getDate()+365); // Cookie expires after 1 year (365 days) 
+}
+
+// ]]-->
+   </script>
+  </form>
+  <!-- END SEARCH CONTENT -->
+  <!-- BEGIN PAGE CONTENT WRAPPER -->
+  <div id="page_content_wrapper">
+   <!-- BEGIN PAGE WRAPPER -->
+   <table id="page_content_table">
+    <tr>
+     
+     <td id="col2">
+      <!-- BEGIN CONTENT WRAPPER -->
+      <!-- BEGIN BREADCRUMBS -->
+      <div id="breadcrumb">
+       <ul class="navigation">
+        <li class="prev">
+         <a accesskey="p" class="prev" href="WS5b3ccc516d4fbf351e63e3d118666ade46-7d54.html" title="Reading and writing a ByteArray">
+          <img alt="Previous" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+        <li class="next">
+         <a accesskey="n" class="next" href="WS887c509e5469a884909031a11c299fac04-8000.html" title="XML signature validation in AIR">
+          <img alt="Next" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+       </ul>
+       <div class="hierarchy" id="hierarchy">
+        <a href="WS9936fa0d5984e93b-3d590ddd1272a3584c3-8000.html">
+         <b>
+          Home
+         </b>
+        </a>
+        /
+        <a href="WS9936fa0d5984e93b-3d590ddd1272a3584c3-8000.html">
+         <b>
+          HTML Developer’s Guide for Adobe AIR
+         </b>
+        </a>
+        /
+        <a href="WS789ea67d3e73a8b2-56af28411242c603f1f-8000.html">
+         <b>
+          Files and data
+         </b>
+        </a>
+        /
+        <a href="WS5b3ccc516d4fbf351e63e3d118676a5388-8000.html">
+         <b>
+          Working with byte arrays
+         </b>
+        </a>
+       </div>
+      </div>
+      <!-- END BREADCRUMBS -->
+      <div id="content_wrapper">
+       <!-- BEGIN PAGE TITLE -->
+       <h1>
+        ByteArray example: Reading a .zip file
+       </h1>
+       <p class="adoberuntime">
+        Adobe AIR 1.0 and later
+       </p>
+       <!-- END PAGE TITLE -->
+       <!-- BEGIN IONCOMMENTCOUNT -->
+       <div id="ionCount">
+       </div>
+       <!-- END IONCOMMENTCOUNT -->
+       <table border="0" cellpadding="0" cellspacing="0" id="inner_content_table" width="100%">
+        <tr>
+         <td>
+          <div style="border-top:#ccc solid 1px;">
+           <p>
+           </p>
+          </div>
+          <p id="chcPromo" style="display:none;">
+<a id="chcLink" href="http://www.adobe.com/support/chc/">
+<img id="chcImage" src="http://www.adobe.com/support/chc/GetMoreHelpFeatures.png"/>
+</a>
+</p>
+<script type="text/javascript" language="javascript" charset="utf-8">
+<!--
+var cfgArray = [];
+//cfgArray["Acrobat_10.0_Professional.helpcfg"] = "acrobatpro";
+//cfgArray["Acrobat_10.0_Standard.helpcfg"] = "acrobatstd";
+cfgArray["Lightroom_3.0.helpcfg"] = "lightroom";
+cfgArray["PhotoshopElements_8.0_Win.helpcfg"] = "photoshopelements";
+cfgArray["PhotoshopElements_8.0_Mac.helpcfg"] = "photoshopelementsmac";
+cfgArray["PremiereElements_8.0_Win.helpcfg"] = "premiereelements";
+
+//cfgArray["AfterEffects_10.0.helpcfg"] = "aftereffects";
+//cfgArray["AIR.helpcfg"] = "air";
+//cfgArray["ColdFusionBuilder.helpcfg"] = "coldfusion";
+//cfgArray["Contribute_6.0.helpcfg"] = "contribute";
+//cfgArray["DeviceCentral_3.0.helpcfg"] = "devicecentral";
+//cfgArray["Dreamweaver_11.0.helpcfg"] = "dreamweaver";
+//cfgArray["EncoreDVD_5.0.helpcfg"] = "encore";
+//cfgArray["ExtensionManager_3.0.helpcfg"] = "extension";
+//cfgArray["Fireworks_11.0.helpcfg"] = "fireworks";
+//cfgArray["Flash_11.0.helpcfg"] = "flash";
+//cfgArray["Flex_4.0.helpcfg"] = "flashbuilder";
+//cfgArray["FlashCatalyst_1.0.helpcfg"] = "flashcatalyst";
+//cfgArray["Illustrator_15.0.helpcfg"] = "illustrator";
+//cfgArray["InCopy_7.0.helpcfg"] = "incopy";
+//cfgArray["InDesign_7.0.helpcfg"] = "indesign";
+//cfgArray["OnLocation_5.0.helpcfg"] = "onlocation";
+//cfgArray["Photoshop_12.0.helpcfg"] = "photoshop";
+//cfgArray["PremierePro_5.0.helpcfg"] = "premierepro";
+
+function getLangName() {
+    var lang = "en-us";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if (ptn.test(lang)) {
+        var languageCode = lang.replace(ptn, "$1");
+        var countryCode = lang.replace(ptn, "$2");
+        lang = languageCode + "_" + countryCode.toUpperCase();
+    }
+    return lang;
+}
+
+function getCountryName() {
+    var lang = "";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if ((ptn.test(lang)) && (lang != "en-us")) {
+        var countryCode = lang.replace(ptn, "$2");
+        return "/" + countryCode;
+    }
+    return "";
+}
+
+if ( (typeof(terms_HELPCFG) != 'undefined')  && (terms_HELPCFG.indexOf(".helpcfg") != -1) ) {
+    var stage   = (document.location.href.indexOf(".stage.") != -1) ? 'stage.' : '';
+    var baseUrl = 'http://www.' + stage + 'adobe.com';
+    var refpage = document.location.href.replace(/#.*$/, '');
+	
+	if ((!use_robohelp_behavior) && (terms_HELPCFG.length > 0) && (typeof(cfgArray[terms_HELPCFG]) != 'undefined') && (cfgArray[terms_HELPCFG].length > 0)) {
+		if (document.getElementById) { // DOM3 = IE5, NS6
+			var newHref = baseUrl + getCountryName() + "/support/chc/" + "?helpcfg=http://help." + stage + "adobe.com/HelpCfg/" + getLangName() + "/" + terms_HELPCFG + "&url=" + refpage + "&product=" + cfgArray[terms_HELPCFG];
+			var newSrc = baseUrl + getCountryName() + "/support/chc/GetMoreHelpFeatures.png";
+			document.getElementById("chcPromo").style.display = "block";
+			document.getElementById("chcLink").href = newHref;
+			document.getElementById("chcImage").src = newSrc;
+		}
+	}
+}
+
+//-->
+</script>
+
+
+          <div>
+           <p>
+            This example
+demonstrates how to read a simple .zip file containing several files of
+different types. It does so by extracting relevant data from the
+metadata for each file, uncompressing each file into a ByteArray
+and writing the file to the desktop.
+           </p>
+           <p>
+            The general structure of a .zip file is based on the specification
+by PKWARE Inc., which is maintained at
+            <a href="http://www.pkware.com/documents/casestudies/APPNOTE.TXT" target="_self">
+             http://www.pkware.com/documents/casestudies/APPNOTE.TXT
+            </a>
+            .
+First is a file header and file data for the first file in the .zip
+archive, followed by a file header and file data pair for each additional
+file. (The structure of the file header is described later.) Next,
+the .zip file optionally includes a data descriptor record (usually
+when the output zip file was created in memory rather than saved
+to a disk). Next are several additional optional elements: archive
+decryption header, archive extra data record, central directory
+structure, Zip64 end of central directory record, Zip64 end of central
+directory locator, and end of central directory record.
+           </p>
+           <p>
+            The code in this example is written to only parse zip files that
+do not contain folders and it does not expect data descriptor records.
+It ignores all information following the last file data.
+           </p>
+           <p>
+            The format of the file header for each file is as follows:
+           </p>
+           <div class="tablenoborder">
+            <table border="1" cellpadding="4" cellspacing="0">
+             <tbody>
+              <tr>
+               <td valign="top" width="NaN%">
+                <p>
+                 file header signature
+                </p>
+               </td>
+               <td valign="top" width="NaN%">
+                <p>
+                 4 bytes
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td valign="top" width="NaN%">
+                <p>
+                 required version
+                </p>
+               </td>
+               <td valign="top" width="NaN%">
+                <p>
+                 2 bytes
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td valign="top" width="NaN%">
+                <p>
+                 general-purpose bit flag
+                </p>
+               </td>
+               <td valign="top" width="NaN%">
+                <p>
+                 2 bytes
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td valign="top" width="NaN%">
+                <p>
+                 compression method
+                </p>
+               </td>
+               <td valign="top" width="NaN%">
+                <p>
+                 2 bytes (8=DEFLATE; 0=UNCOMPRESSED)
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td valign="top" width="NaN%">
+                <p>
+                 last modified file time
+                </p>
+               </td>
+               <td valign="top" width="NaN%">
+                <p>
+                 2 bytes
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td valign="top" width="NaN%">
+                <p>
+                 last modified file date
+                </p>
+               </td>
+               <td valign="top" width="NaN%">
+                <p>
+                 2 bytes
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td valign="top" width="NaN%">
+                <p>
+                 crc-32
+                </p>
+               </td>
+               <td valign="top" width="NaN%">
+                <p>
+                 4 bytes
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td valign="top" width="NaN%">
+                <p>
+                 compressed size
+                </p>
+               </td>
+               <td valign="top" width="NaN%">
+                <p>
+                 4 bytes
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td valign="top" width="NaN%">
+                <p>
+                 uncompressed size
+                </p>
+               </td>
+               <td valign="top" width="NaN%">
+                <p>
+                 4 bytes
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td valign="top" width="NaN%">
+                <p>
+                 file name length
+                </p>
+               </td>
+               <td valign="top" width="NaN%">
+                <p>
+                 2 bytes
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td valign="top" width="NaN%">
+                <p>
+                 extra field length
+                </p>
+               </td>
+               <td valign="top" width="NaN%">
+                <p>
+                 2 bytes
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td valign="top" width="NaN%">
+                <p>
+                 file name
+                </p>
+               </td>
+               <td valign="top" width="NaN%">
+                <p>
+                 variable
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td valign="top" width="NaN%">
+                <p>
+                 extra field
+                </p>
+               </td>
+               <td valign="top" width="NaN%">
+                <p>
+                 variable
+                </p>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </div>
+           <p>
+            Following the file header is the actual file data, which can
+be either compressed or uncompressed, depending on the compression
+method flag. The flag is 0 (zero) if the file data is uncompressed,
+8 if the data is compressed using the DEFLATE algorithm, or another
+value for other compression algorithms.
+           </p>
+           <p>
+            The user interface for this example consists of a label and a
+text area (
+            <samp class="codeph">
+             taFiles
+            </samp>
+            ). The application writes the
+following information to the text area for each file it encounters
+in the .zip file: the file name, the compressed size, and the uncompressed
+size. The following MXML document defines the user interface for
+the Flex version of the application:
+           </p>
+           <pre>&lt;?xml version="1.0" encoding="utf-8"?&gt; 
+&lt;mx:WindowedApplication xmlns:mx="http://www.adobe.com/2006/mxml" layout="vertical" creationComplete="init();"&gt; 
+    &lt;mx:Script&gt; 
+        &lt;![CDATA[ 
+            // The application code goes here 
+        ]]&gt; 
+    &lt;/mx:Script&gt; 
+    &lt;mx:Form&gt; 
+        &lt;mx:FormItem label="Output"&gt; 
+            &lt;mx:TextArea id="taFiles" width="320" height="150"/&gt; 
+        &lt;/mx:FormItem&gt; 
+    &lt;/mx:Form&gt; 
+&lt;/mx:WindowedApplication&gt;</pre>
+           <p>
+            The user
+interface for this example consists of a label and a text area (
+            <samp class="codeph">
+             taFiles
+            </samp>
+            ).
+The application writes the following information to the text area
+for each file it encounters in the .zip file: the file name, the compressed
+size, and the uncompressed size. The following HTML page defines the
+user interface for the application:
+           </p>
+           <pre>&lt;html&gt; 
+    &lt;head&gt; 
+        &lt;style type="text/css"&gt; 
+            #taFiles 
+            { 
+                border: 1px solid black; 
+                font-family: Courier, monospace; 
+                white-space: pre; 
+                width: 95%; 
+                height: 95%; 
+                overflow-y: scroll; 
+            } 
+        &lt;/style&gt; 
+        &lt;script type="text/javascript" src="AIRAliases.js"&gt;&lt;/script&gt; 
+        &lt;script type="text/javascript"&gt; 
+            // The application code goes here 
+        &lt;/script&gt; 
+    &lt;/head&gt; 
+    &lt;body onload="init();"&gt; 
+        &lt;div id="taFiles"&gt;&lt;/div&gt; 
+    &lt;/body&gt; 
+&lt;/html&gt;</pre>
+           <p>
+            The beginning of the program performs the following tasks:
+           </p>
+           <ul>
+            <li>
+             <p>
+              Defines the
+              <samp class="codeph">
+               bytes
+              </samp>
+              ByteArray
+             </p>
+             <pre>var bytes = new air.ByteArray();</pre>
+            </li>
+            <li>
+             <p>
+              Defines variables to store metadata from the file header
+             </p>
+             <pre>// variables for reading fixed portion of file header 
+var fileName = new String(); 
+var flNameLength; 
+var xfldLength; 
+var offset; 
+var compSize; 
+var uncompSize; 
+var compMethod; 
+var signature; 
+ 
+var output;</pre>
+            </li>
+            <li>
+             <p>
+              Defines File (
+              <samp class="codeph">
+               zfile
+              </samp>
+              ) and FileStream (
+              <samp class="codeph">
+               zStream
+              </samp>
+              )
+objects to represent the .zip file, and specifies the location of
+the .zip file from which the files are extracted—a file named “HelloAIR.zip”
+in the desktop directory.
+             </p>
+             <pre>// File variables for accessing .zip file 
+var zfile = air.File.desktopDirectory.resolvePath("HelloAIR.zip"); 
+var zStream = new air.FileStream();</pre>
+            </li>
+           </ul>
+           <p>
+            In Flex, the program code starts in the
+            <samp class="codeph">
+             init()
+            </samp>
+            method,
+which is called as the
+            <samp class="codeph">
+             creationComplete
+            </samp>
+            handler
+for the root
+            <samp class="codeph">
+             mx:WindowedApplication
+            </samp>
+            tag.
+           </p>
+           <p>
+            The
+program code starts in the
+            <samp class="codeph">
+             init()
+            </samp>
+            method, which
+is called as the
+            <samp class="codeph">
+             onload
+            </samp>
+            event handler for the
+            <samp class="codeph">
+             body
+            </samp>
+            tag.
+           </p>
+           <pre>function init() 
+{</pre>
+           <p>
+            The program begins by opening the .zip file in READ mode.
+           </p>
+           <pre>    zStream.open(zfile, air.FileMode.READ);</pre>
+           <p>
+            It then sets the
+            <samp class="codeph">
+             endian
+            </samp>
+            property of
+            <samp class="codeph">
+             bytes
+            </samp>
+            to
+            <samp class="codeph">
+             LITTLE_ENDIAN
+            </samp>
+            to
+indicate that the byte order of numeric fields has the least significant
+byte first.
+           </p>
+           <pre>    bytes.endian = air.Endian.LITTLE_ENDIAN;</pre>
+           <p>
+            Next, a
+            <samp class="codeph">
+             while()
+            </samp>
+            statement begins a loop that
+continues until the current position in the file stream is greater
+than or equal to the size of the file.
+           </p>
+           <pre>    while (zStream.position &lt; zfile.size) 
+    {</pre>
+           <p>
+            The first statement inside the loop reads the first 30 bytes
+of the file stream into the ByteArray
+            <samp class="codeph">
+             bytes
+            </samp>
+            . The
+first 30 bytes make up the fixed-size part of the first file header.
+           </p>
+           <pre>        // read fixed metadata portion of local file header 
+        zStream.readBytes(bytes, 0, 30);</pre>
+           <p>
+            Next, the code reads an integer (
+            <samp class="codeph">
+             signature
+            </samp>
+            )
+from the first bytes of the 30-byte header. The ZIP format definition
+specifies that the signature for every file header is the hexadecimal
+value
+            <samp class="codeph">
+             0x04034b50
+            </samp>
+            ; if the signature is different
+it means that the code has moved beyond the file portion of the
+.zip file and there are no more files to extract. In that case the
+code exits the
+            <samp class="codeph">
+             while
+            </samp>
+            loop immediately rather than
+waiting for the end of the byte array.
+           </p>
+           <pre>        bytes.position = 0; 
+        signature = bytes.readInt(); 
+        // if no longer reading data files, quit 
+        if (signature != 0x04034b50) 
+        { 
+            break; 
+        }</pre>
+           <p>
+            The next part of the code reads the header byte at offset position
+8 and stores the value in the variable
+            <samp class="codeph">
+             compMethod
+            </samp>
+            .
+This byte contains a value indicating the compression method that
+was used to compress this file. Several compression methods are
+allowed, but in practice nearly all .zip files use the DEFLATE compression
+algorithm. If the current file is compressed with DEFLATE compression,
+            <samp class="codeph">
+             compMethod
+            </samp>
+            is
+8; if the file is uncompressed,
+            <samp class="codeph">
+             compMethod
+            </samp>
+            is 0.
+           </p>
+           <pre>        bytes.position = 8; 
+        compMethod = bytes.readByte();  // store compression method (8 == Deflate)</pre>
+           <p>
+            Following the first 30 bytes is a variable-length portion of
+the header that contains the file name and, possibly, an extra field.
+The variable
+            <samp class="codeph">
+             offset
+            </samp>
+            stores the size of this portion.
+The size is calculated by adding the file name length and extra
+field length, read from the header at offsets 26 and 28.
+           </p>
+           <pre>        offset = 0;    // stores length of variable portion of metadata  
+        bytes.position = 26;  // offset to file name length 
+        flNameLength = bytes.readShort();    // store file name 
+        offset += flNameLength;     // add length of file name 
+        bytes.position = 28;    // offset to extra field length 
+        xfldLength = bytes.readShort(); 
+        offset += xfldLength;    // add length of extra field</pre>
+           <p>
+            Next the program reads the variable-length portion of the file
+header for the number of bytes stored in the
+            <samp class="codeph">
+             offset
+            </samp>
+            variable.
+           </p>
+           <pre>        // read variable length bytes between fixed-length header and compressed file data 
+        zStream.readBytes(bytes, 30, offset);</pre>
+           <p>
+            The
+program reads the file name from the variable length portion of
+the header and displays it in the text area along with the compressed
+(zipped) and uncompressed (original) sizes of the file.
+           </p>
+           <pre>        bytes.position = 30;  
+        fileName = bytes.readUTFBytes(flNameLength); // read file name 
+        output += fileName + "&lt;br /&gt;"; // write file name to text area 
+        bytes.position = 18; 
+        compSize = bytes.readUnsignedInt();  // store size of compressed portion 
+        output += "\tCompressed size is: " + compSize + '&lt;br /&gt;'; 
+        bytes.position = 22;  // offset to uncompressed size 
+        uncompSize = bytes.readUnsignedInt();  // store uncompressed size 
+        output += "\tUncompressed size is: " + uncompSize + '&lt;br /&gt;';</pre>
+           <p>
+            The example reads the rest of the file from the file stream into
+            <samp class="codeph">
+             bytes
+            </samp>
+            for
+the length specified by the compressed size, overwriting the file
+header in the first 30 bytes. The compressed size is accurate even
+if the file is not compressed because in that case the compressed
+size is equal to the uncompressed size of the file.
+           </p>
+           <pre>    // read compressed file to offset 0 of bytes; for uncompressed files 
+    // the compressed and uncompressed size is the same 
+    if (compSize == 0) continue; 
+    zStream.readBytes(bytes, 0, compSize);</pre>
+           <p>
+            Next, the example uncompresses the compressed file and calls
+the
+            <samp class="codeph">
+             outfile()
+            </samp>
+            function to write it to the output
+file stream. It passes
+            <samp class="codeph">
+             outfile()
+            </samp>
+            the file name and
+the byte array containing the file data.
+           </p>
+           <pre>        if (compMethod == 8) // if file is compressed, uncompress 
+        { 
+            bytes.uncompress(air.CompressionAlgorithm.DEFLATE); 
+        } 
+        outFile(fileName, bytes);   // call outFile() to write out the file </pre>
+           <p>
+            The closing
+braces indicate the end of the
+            <samp class="codeph">
+             while
+            </samp>
+            loop and of
+the
+            <samp class="codeph">
+             init()
+            </samp>
+            method and the application code, except
+for the
+            <samp class="codeph">
+             outFile()
+            </samp>
+            method. Execution loops back
+to the beginning of the
+            <samp class="codeph">
+             while
+            </samp>
+            loop and continues
+processing the next bytes in the .zip file—either extracting another
+file or ending processing of the .zip file if the last file has
+been processed. When all the files have been processed, the example
+writes the contents of the
+            <samp class="codeph">
+             output
+            </samp>
+            variable to the
+            <samp class="codeph">
+             div
+            </samp>
+            element
+            <samp class="codeph">
+             taFiles
+            </samp>
+            to
+display the file information on the screen.
+           </p>
+           <pre>    } // end of while loop 
+     
+    document.getElementById("taFiles").innerHTML = output; 
+} // end of init() method</pre>
+           <p>
+            The
+            <samp class="codeph">
+             outfile()
+            </samp>
+            function
+opens an output file in WRITE mode on the desktop, giving it the
+name supplied by the
+            <samp class="codeph">
+             filename
+            </samp>
+            parameter. It then
+writes the file data from the
+            <samp class="codeph">
+             data
+            </samp>
+            parameter to
+the output file stream (
+            <samp class="codeph">
+             outStream
+            </samp>
+            ) and closes the
+file.
+           </p>
+           <pre>function outFile(fileName, data) 
+{ 
+    var outFile = air.File.desktopDirectory; // dest folder is desktop 
+    outFile = outFile.resolvePath(fileName);  // name of file to write 
+    var outStream = new air.FileStream(); 
+    // open output file stream in WRITE mode 
+    outStream.open(outFile, air.FileMode.WRITE); 
+    // write out the file 
+    outStream.writeBytes(data, 0, data.length); 
+    // close it 
+    outStream.close(); 
+} </pre>
+          </div>
+          <!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+          <!-- END USER PREFERENCES -->
+          <div id="related">
+           <div class="separator">
+           </div>
+          </div>
+          <div id="footer">
+           <!-- BEGIN IONCOMMENTS -->
+           <div id="ionComHere">
+           </div>
+           <!-- END IONCOMMENTS -->
+           
+
+           <p id="creativecommons">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" id="creativecommons_text">
+             <img alt="This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License" id="creativecommons_img" src="images/CC.png"/>
+            </a>
+            Twitter™ and Facebook posts are not covered under the terms of Creative Commons.
+           </p>
+          </div>
+         </td>
+         <td width="10px">
+         </td>
+         <td id="inner_rightcolumn">
+          
+         </td>
+        </tr>
+       </table>
+      </div>
+      <!-- BEGIN BREADCRUMBS -->
+      <div id="breadcrumb">
+       <ul class="navigation">
+        <li class="prev">
+         <a accesskey="p" class="prev" href="WS5b3ccc516d4fbf351e63e3d118666ade46-7d54.html" title="Reading and writing a ByteArray">
+          <img alt="Previous" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+        <li class="next">
+         <a accesskey="n" class="next" href="WS887c509e5469a884909031a11c299fac04-8000.html" title="XML signature validation in AIR">
+          <img alt="Next" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+       </ul>
+       <div class="hierarchy" id="hierarchy">
+        <a href="WS9936fa0d5984e93b-3d590ddd1272a3584c3-8000.html">
+         <b>
+          Home
+         </b>
+        </a>
+        /
+        <a href="WS9936fa0d5984e93b-3d590ddd1272a3584c3-8000.html">
+         <b>
+          HTML Developer’s Guide for Adobe AIR
+         </b>
+        </a>
+        /
+        <a href="WS789ea67d3e73a8b2-56af28411242c603f1f-8000.html">
+         <b>
+          Files and data
+         </b>
+        </a>
+        /
+        <a href="WS5b3ccc516d4fbf351e63e3d118676a5388-8000.html">
+         <b>
+          Working with byte arrays
+         </b>
+        </a>
+       </div>
+      </div>
+      <!-- END BREADCRUMBS -->
+      <!-- END CONTENT WRAPPER -->
+      
+     </td>
+     <td id="col3">
+      <div>
+       <img src="images/adobe-lq.png"/>
+      </div>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!-- END PAGE CONTENT WRAPPER -->
+  <script type="text/javascript">
+   <!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+  </script>
+  <!--
+    Description:
+    This file generates the link to product support in the top right corner
+-->
+
+<style>
+#menutop{
+    position:absolute;
+    top:4px;
+    right:24px;
+    width:auto;    
+    font-size:11px;
+    color:#fff;
+    text-align:right;
+}
+#menutop a{
+    color:#fff;
+}
+#menutop a:hover{
+        text-decoration:underline;
+}
+</style>  
+  
+  
+  
+  
+<div id="productmenu">
+<!--googleoff: index-->
+  <div id="menutop">
+
+
+<script language=javascript type='text/javascript'>
+    // darken menu text for products with light backgrounds
+    var path = document.location.href.toLowerCase();
+    if (path.indexOf("/acrobat/")           	> 0 ||
+        path.indexOf("/acrobat.com/")       	> 0 ||
+        path.indexOf("/acrobatConnectPro/") 	> 0 ||
+        path.indexOf("/connect/")           	> 0 ||
+        path.indexOf("/framemaker/")           	> 0 ||
+        path.indexOf("/livecycledataserviceses/") > 0 ||
+        path.indexOf("/muse/")         	> 0 ||
+		path.indexOf("/presenter/")         	> 0 ||
+        path.indexOf("/scene7/")            	> 0 ||
+        path.indexOf("/flashmediaserver/")  	> 0 ||
+        path.indexOf("/wave/")              	> 0 )
+    {
+        document.write('<style>#menutop a{color:#505050}</style>');
+    }
+    if (typeof('terms_AHV_PRODUCT_SUPPORT') != "undefined" && ! use_robohelp_behavior ){      
+        if (path.indexOf("/muse/") > -1 ){
+            var supportlink = '<a href="http://muse.adobe.com/support.html">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }else{
+            var supportlink = '<a href="http://adobe.com/support">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }
+        document.write( supportlink );
+     }
+
+</script> 
+
+  </div>
+<!--googleon: index-->
+</div>
+
+
+
+  <style>
+#online-privacy-policy{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+<p id="online-privacy-policy">
+<script language="javascript">
+var pageLoc = "en_US";
+var metaElements = document.all ?
+document.all.tags('meta') :
+document.getElementsByTagName ?
+document.getElementsByTagName ('meta') : new Array();
+for (var m = 0; m < metaElements.length; m++) {
+	if (metaElements[m].name == "lang") {
+		pageLoc = metaElements[m].content;
+		break;
+	}
+}
+var ptn = /(..)-(..)/;
+if (ptn.test(pageLoc)) {
+	var languageCode = pageLoc.replace(ptn, "$1");
+	var countryCode = pageLoc.replace(ptn, "$2");
+	pageLoc = languageCode + "_" + countryCode.toUpperCase();
+}
+
+var policyLoc = "en_US";
+var policyText = "Online Privacy Policy";
+var policyPath = "";
+var policyArray=[
+"da_DK", "Online fortrolighedserklæring",
+"de_DE", "Online-Datenschutzrichtlinie",
+"es_ES", "Política de confidencialidad en línea",
+"fi_FI", "Yksityisyyttä koskeva Online-toimintaohjelma",
+"fr_FR", "Confidentialité et sécurité",
+"it_IT", "Informativa sulla privacy online",
+"ja_JP", "プライバシーポリシー",
+"ko_KR", "Adobe 온라인 개인정보 보호정책",
+"pt_BR", "Política de Confidencialidade On-line", 
+"zh_CN", "在线隐私政策",
+"zh_TW", "線上隱私政策"
+];
+var legalLoc = "en_US";
+var legalText = "Legal Notices";
+var legalPath = legalLoc;
+var legalArray=[
+"ar_AE", "إشعارات قانونية",
+"bg_BG", "Юридически бележки",
+"cs_CZ", "Právní upozornění",
+"da_DK", "Juridiske meddelelser",
+"de_DE", "Rechtliche Hinweise",
+"el_GR", "Σημειώσεις νομικού περιεχομένου",
+"es_ES", "Avisos legales",
+"et_EE", "Juriidilised teated",
+"fi_FI", "Lakisääteiset ilmoitukset",
+"fr_FR", "Mentions légales",
+"he_IL", "הצהרות משפטיות",
+"hr_HR", "Pravne napomene",
+"hu_HU", "Jogi közlemények",
+"it_IT", "Informazioni legali",
+"ja_JP", "法律上の注意",
+"ko_KR", "법적 고지 사항",
+"lt_LT", "Teisinės pastabos",
+"lv_LV", "Juridisks paziņojums",
+"nb_NO", "Juridiske merknader",
+"nl_NL", "Juridische kennisgevingen",
+"pl_PL", "Informacje prawne",
+"pt_BR", "Aspectos jurídicos",
+"ro_RO", "Prevederi legale",
+"ru_RU", "Юридическая информация",
+"sk_SK", "Právne upozornenie",
+"sl_SI", "Pravni pouk",
+"sv_SE", "Upphovsrätt",
+"tr_TR", "Yasal uyarılar",
+"uk_UA", "Юридична інформація",
+"zh_CN", "法律声明",
+"zh_TW", "法律注意事項"
+];
+
+ruPolicy = "http://www.adobe.com/ru/misc/privacy.html";
+trPolicy = "http://www.adobe.com/tr/misc/privacy.html";
+
+// Bug 2846992: LOC: RUS, TUR: The link to "Online Privacy Policy" should include language, currently it is not appearing.
+if (pageLoc == "ru_RU") {
+	policyPath = "ru";
+}
+else if (pageLoc == "tr_TR") {
+	policyPath = "tr";
+}
+for (var i = 0; i < policyArray.length; i+=2) {
+	if (pageLoc == policyArray[i]) {
+		policyLoc = pageLoc;
+		policyText = policyArray[i+1];
+		var ptn = /(..)_(..)/;
+		if (ptn.test(policyLoc)) {
+			var countryCode = policyLoc.replace(ptn, "$2");
+			policyPath = countryCode.toLowerCase();
+		}
+		break;
+	}
+}
+
+for (var i = 0; i < legalArray.length; i+=2) {
+	if (pageLoc == legalArray[i]) {
+		legalLoc = pageLoc;
+		legalText = legalArray[i+1];
+		legalPath = legalLoc;
+		break;
+	}
+}
+if(agt.indexOf("community help client") > -1 ){
+	document.write('<a href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+}else{
+	//Open the privacy policy in a new window
+	document.write('<a target="_blank" href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a target="_blank" href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+} 
+
+
+remove_all_cookies();
+
+function remove_all_cookies() {
+	var res = document.cookie;
+    var multiple = res.split(";");
+    for(var i = 0; i < multiple.length; i++) {
+    	var key = multiple[i].split("=");
+        document.cookie = key[0]+" =; expires = Thu, 01 Jan 1970 00:00:00 UTC";
+    }
+}
+
+
+</script>
+</p>
+
+
+  
+<!-- localfooter.ssi -->
+
+<script type="text/javascript">
+    var debug = (top.location.href.indexOf("debug=true") > -1);
+</script>
+
+<script language="javascript">
+document.write('<scr'+'ipt ' +
+               'src="/en_US/ssi/_pod.js" ' +
+               'language="javascript" ' +
+               'charset="UTF-8"> ' +
+               '</scr'+'ipt>');
+</script>
+
+//  Ethnio survey code removed
+  
+  
+ </body>
+</html>

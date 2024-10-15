@@ -1,0 +1,1493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="en-us">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <meta content="en-us" name="lang"/>
+  <meta content="livedocs" name="area"/>
+  <title>
+   Adobe Flash Platform * Building the native library
+  </title>
+  <link href="https://help.adobe.com/en_US/air/extensions/images/FlashRuntimeLinkIndicator.png" rel="shortcut icon"/>
+  <meta content="Developing Native Extensions" name="book"/>
+  <meta content="adobe" name="product"/>
+  <meta content="air" name="product"/>
+  <meta content="flash" name="product"/>
+  <meta content="flex" name="product"/>
+  <meta content="" name="keywords"/>
+  <!--<PageMap><DataObject type="document"><Attribute name="product" value="adobe"></Attribute><Attribute name="product" value="air"></Attribute><Attribute name="product" value="flash"></Attribute><Attribute name="product" value="flex"></Attribute><Attribute name="book" value="Developing Native Extensions"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+  <script charset="UTF-8" language="Javascript" type="text/javascript">
+   <!--[CDATA[
+        var currentTreeNode = "WSf268776665d7970d-2e74ffb4130044f3619-7fff.html";
+// ]]-->
+  </script>
+  <script charset="UTF-8" language="Javascript" src="terms.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="help.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="utilities.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="event.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="treeview.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="toc.js" type="text/javascript">
+   ..
+  </script>
+  <script charset="UTF-8" language="Javascript" src="https://help.adobe.com/en_US/air/extensions/swfobject.js" type="text/javascript">
+   ..
+  </script>
+  <script charset="UTF-8" language="Javascript" src="booklist.js" type="text/javascript">
+   ..
+  </script>
+  <script type="text/javascript">
+   <!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+  </script>
+  
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+  
+  
+  <link href="tree.css" rel="stylesheet" type="text/css"/>
+  <link href="content.css" rel="stylesheet" type="text/css"/>
+  <link href="localeSpecific.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body id="content_body" onload="window.focus();">
+  <a name="top" shape="rect">
+   <!--LeaveCommentHere-->
+  </a>
+  <div id="mnemonic">
+   <!--googleoff: index-->
+   <div class="FlashRuntime" xmlns:adobe="http://www.adobe.com/saxon">
+    <div class="banner">
+     <a href="WSf00ab63af761f170-7e2c8d6712937799c98-8000.html">
+      Adobe Flash Platform
+     </a>
+    </div>
+   </div>
+   <!--googleon: index-->
+  </div>
+  <div id="searchbar">
+   <table id="searchbartable">
+    <tr>
+     <td colspan="2">
+      <!--googleoff: index-->
+      <div xmlns:adobe="http://www.adobe.com/saxon">
+       <div id="pdf">
+        <img height="16" src="images/PDF.gif" width="16"/>
+        <a href="air_extensions.pdf" title="View Help PDF">
+         View Help PDF (
+         2.4M
+         B)
+        </a>
+       </div>
+      </div>
+      <!--googleon: index-->
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!-- BEGIN SEARCH CONTENT -->
+  <form action="https://help.adobe.com/en_US/air/extensions/search.html" id="search" name="search" target="_self">
+   <script type="text/javascript">
+    <!--[CDATA[
+if ( !use_chc_behavior ){
+    if (typeof(terms_AHV_SEARCH_CONSTRAINT) != "undefined" && 
+        terms_AHV_SEARCH_CONSTRAINT.length > 0 && 
+        document.location.href.indexOf(".adobe.com") > 0){
+        if ( typeof(terms_SEARCH_THIS_HELP_ONLY) != "undefined" && terms_SEARCH_THIS_HELP_ONLY == "ON" ) {
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                checked="checked" \
+                value="1" ><\/input>'); 
+                
+        // Leave the "Search this help system only" checkbox unckecked
+        }else{    
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                value="1" ><\/input>'); 
+        }
+        document.write('<span class="gsalabel">' + terms_AHV_SEARCH_CONSTRAINT + '<\/span><\/div>'); 
+    }
+    document.write('<input class="searchinput" \
+        name="q" \
+        id="q" \
+        type="text" \
+        maxlength="256" \
+        value="' + terms_AHV_SEARCH_BUTTON + '" \
+        onclick="clearSearch()"><\/input><input \
+        type="button" \
+        name="searchbutton" \
+        class="searchbutton" \
+        onclick="submit()"><\/input>'); 
+} 
+ 
+/* 
+ * Start Functions 
+ */
+function clearSearch(){
+    if (document.search.q.value == terms_AHV_SEARCH_BUTTON){document.search.q.value = ""}; 
+}
+
+// set search preferences
+function setAHSearchPref(){
+    if (document.search.gsa.checked == 1){
+        setAHSearchCookie( dirname );
+    }else{
+        setAHSearchCookie( "community" );
+    }
+}
+
+// Set search preferences cookie
+function setAHSearchCookie( p ){
+    // set cookie ah_searchpref with a value of the document path
+    var expire=new Date();
+    expire.setDate(expire.getDate()+365); // Cookie expires after 1 year (365 days) 
+}
+
+// ]]-->
+   </script>
+  </form>
+  <!-- END SEARCH CONTENT -->
+  <!-- BEGIN PAGE CONTENT WRAPPER -->
+  <div id="page_content_wrapper">
+   <!-- BEGIN PAGE WRAPPER -->
+   <table id="page_content_table">
+    <tr>
+     
+     <td id="col2">
+      <!-- BEGIN CONTENT WRAPPER -->
+      <!-- BEGIN BREADCRUMBS -->
+      <div id="breadcrumb">
+       <ul class="navigation">
+        <li class="prev">
+         <a accesskey="p" class="prev" href="WSf268776665d7970d-2e74ffb4130044f3619-8000.html" title="Creating the extension descriptor file">
+          <img alt="Previous" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+        <li class="next">
+         <a accesskey="n" class="next" href="WSf268776665d7970d-2482335412ffea65006-8000.html" title="Creating the native extension package">
+          <img alt="Next" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+       </ul>
+       <div class="hierarchy" id="hierarchy">
+        <a href="WSf00ab63af761f170-7e2c8d6712937799c98-8000.html">
+         <b>
+          Home
+         </b>
+        </a>
+        /
+        <a href="WSf00ab63af761f170-7e2c8d6712937799c98-8000.html">
+         <b>
+          Developing Native Extensions
+         </b>
+        </a>
+        /
+        <a href="WSf00ab63af761f170-168f6f2a129378b935d-8000.html">
+         <b>
+          Packaging a native extension
+         </b>
+        </a>
+       </div>
+      </div>
+      <!-- END BREADCRUMBS -->
+      <div id="content_wrapper">
+       <!-- BEGIN PAGE TITLE -->
+       <h1>
+        Building the native library
+       </h1>
+       <!-- END PAGE TITLE -->
+       <!-- BEGIN IONCOMMENTCOUNT -->
+       <div id="ionCount">
+       </div>
+       <!-- END IONCOMMENTCOUNT -->
+       <table border="0" cellpadding="0" cellspacing="0" id="inner_content_table" width="100%">
+        <tr>
+         <td>
+          <div style="border-top:#ccc solid 1px;">
+           <p>
+           </p>
+          </div>
+          <p id="chcPromo" style="display:none;">
+<a id="chcLink" href="http://www.adobe.com/support/chc/">
+<img id="chcImage" src="http://www.adobe.com/support/chc/GetMoreHelpFeatures.png"/>
+</a>
+</p>
+<script type="text/javascript" language="javascript" charset="utf-8">
+<!--
+var cfgArray = [];
+//cfgArray["Acrobat_10.0_Professional.helpcfg"] = "acrobatpro";
+//cfgArray["Acrobat_10.0_Standard.helpcfg"] = "acrobatstd";
+cfgArray["Lightroom_3.0.helpcfg"] = "lightroom";
+cfgArray["PhotoshopElements_8.0_Win.helpcfg"] = "photoshopelements";
+cfgArray["PhotoshopElements_8.0_Mac.helpcfg"] = "photoshopelementsmac";
+cfgArray["PremiereElements_8.0_Win.helpcfg"] = "premiereelements";
+
+//cfgArray["AfterEffects_10.0.helpcfg"] = "aftereffects";
+//cfgArray["AIR.helpcfg"] = "air";
+//cfgArray["ColdFusionBuilder.helpcfg"] = "coldfusion";
+//cfgArray["Contribute_6.0.helpcfg"] = "contribute";
+//cfgArray["DeviceCentral_3.0.helpcfg"] = "devicecentral";
+//cfgArray["Dreamweaver_11.0.helpcfg"] = "dreamweaver";
+//cfgArray["EncoreDVD_5.0.helpcfg"] = "encore";
+//cfgArray["ExtensionManager_3.0.helpcfg"] = "extension";
+//cfgArray["Fireworks_11.0.helpcfg"] = "fireworks";
+//cfgArray["Flash_11.0.helpcfg"] = "flash";
+//cfgArray["Flex_4.0.helpcfg"] = "flashbuilder";
+//cfgArray["FlashCatalyst_1.0.helpcfg"] = "flashcatalyst";
+//cfgArray["Illustrator_15.0.helpcfg"] = "illustrator";
+//cfgArray["InCopy_7.0.helpcfg"] = "incopy";
+//cfgArray["InDesign_7.0.helpcfg"] = "indesign";
+//cfgArray["OnLocation_5.0.helpcfg"] = "onlocation";
+//cfgArray["Photoshop_12.0.helpcfg"] = "photoshop";
+//cfgArray["PremierePro_5.0.helpcfg"] = "premierepro";
+
+function getLangName() {
+    var lang = "en-us";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if (ptn.test(lang)) {
+        var languageCode = lang.replace(ptn, "$1");
+        var countryCode = lang.replace(ptn, "$2");
+        lang = languageCode + "_" + countryCode.toUpperCase();
+    }
+    return lang;
+}
+
+function getCountryName() {
+    var lang = "";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if ((ptn.test(lang)) && (lang != "en-us")) {
+        var countryCode = lang.replace(ptn, "$2");
+        return "/" + countryCode;
+    }
+    return "";
+}
+
+if ( (typeof(terms_HELPCFG) != 'undefined')  && (terms_HELPCFG.indexOf(".helpcfg") != -1) ) {
+    var stage   = (document.location.href.indexOf(".stage.") != -1) ? 'stage.' : '';
+    var baseUrl = 'http://www.' + stage + 'adobe.com';
+    var refpage = document.location.href.replace(/#.*$/, '');
+	
+	if ((!use_robohelp_behavior) && (terms_HELPCFG.length > 0) && (typeof(cfgArray[terms_HELPCFG]) != 'undefined') && (cfgArray[terms_HELPCFG].length > 0)) {
+		if (document.getElementById) { // DOM3 = IE5, NS6
+			var newHref = baseUrl + getCountryName() + "/support/chc/" + "?helpcfg=http://help." + stage + "adobe.com/HelpCfg/" + getLangName() + "/" + terms_HELPCFG + "&url=" + refpage + "&product=" + cfgArray[terms_HELPCFG];
+			var newSrc = baseUrl + getCountryName() + "/support/chc/GetMoreHelpFeatures.png";
+			document.getElementById("chcPromo").style.display = "block";
+			document.getElementById("chcLink").href = newHref;
+			document.getElementById("chcImage").src = newSrc;
+		}
+	}
+}
+
+//-->
+</script>
+
+
+          <div id="minitoc">
+           <div class="t">
+            <div class="b">
+             <div>
+              <ul id="minitoc-links">
+               <li>
+                <p>
+                 <a href="#WSdb11516da818ea8d49ce0fe713341ed67cf-8000">
+                  <span class="topictitle1">
+                   Android native libraries
+                  </span>
+                 </a>
+                </p>
+               </li>
+               <li>
+                <p>
+                 <a href="#WSdb11516da818ea8d49ce0fe713341ed67cf-7fff">
+                  <span class="topictitle1">
+                   iOS native libraries
+                  </span>
+                 </a>
+                </p>
+                <ul>
+                 <li>
+                  <p>
+                   <a href="#WS2f73111e7a180bd05759774f13a75534104-8000">
+                    <span class="topictitle2">
+                     iOS platform options (platform.xml) file
+                    </span>
+                   </a>
+                  </p>
+                 </li>
+                </ul>
+               </li>
+               <li>
+                <p>
+                 <a href="#WSdb11516da818ea8d49ce0fe713341ed67cf-7ffe">
+                  <span class="topictitle1">
+                   Mac OS X native libraries
+                  </span>
+                 </a>
+                </p>
+               </li>
+               <li>
+                <p>
+                 <a href="#WSdb11516da818ea8d49ce0fe713341ed67cf-7ffd">
+                  <span class="topictitle1">
+                   Windows native libraries
+                  </span>
+                 </a>
+                </p>
+               </li>
+              </ul>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div>
+           <p>
+            To build your extension’s native library, use a development
+                    environment appropriate for the target device. For example:
+           </p>
+           <div class="para">
+            <ul>
+             <li id="WSf268776665d7970d-2e74ffb4130044f3619-7fff__WS407c972521fc8eab1e18f08615fe8a1ded9-7d85">
+              <a name="WSf268776665d7970d-2e74ffb4130044f3619-7fff__WS407c972521fc8eab1e18f08615fe8a1ded9-7d85">
+               <!-- -->
+              </a>
+              <p>
+               When developing with the Android SDK, use the Android
+                                Development tools plug-in for the Eclipse Integrated Development
+                                Environment (IDE).
+              </p>
+             </li>
+             <li id="WSf268776665d7970d-2e74ffb4130044f3619-7fff__WS407c972521fc8eab1e18f08615fe8a1ded9-7d84">
+              <a name="WSf268776665d7970d-2e74ffb4130044f3619-7fff__WS407c972521fc8eab1e18f08615fe8a1ded9-7d84">
+               <!-- -->
+              </a>
+              <p>
+               When developing for iOS devices and Mac OS X devices, use
+                                Apple’s Xcode IDE.
+              </p>
+             </li>
+             <li id="WSf268776665d7970d-2e74ffb4130044f3619-7fff__WS407c972521fc8eab1e18f08615fe8a1ded9-7d83">
+              <a name="WSf268776665d7970d-2e74ffb4130044f3619-7fff__WS407c972521fc8eab1e18f08615fe8a1ded9-7d83">
+               <!-- -->
+              </a>
+              <p>
+               When developing for Windows devices, you can use Microsoft
+                                Visual Studio.
+              </p>
+             </li>
+            </ul>
+           </div>
+           <p>
+            For native extension examples using these development environments,
+                    see
+            <a href="http://www.adobe.com/go/learn_native_extension_examples_en" target="_self">
+             Native extensions for Adobe AIR
+            </a>
+            .
+           </p>
+           <p>
+            Build the native side of your extension into a library, not an
+                    application. When you package your native extension into an ANE
+                    file, you specify the native library.
+           </p>
+           <ul class="navlinklist">
+           </ul>
+          </div>
+          <div class="nochunk" id="WSdb11516da818ea8d49ce0fe713341ed67cf-8000">
+           <a name="WSdb11516da818ea8d49ce0fe713341ed67cf-8000">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            Android native libraries
+           </h2>
+           <div>
+            <p>
+             When you use the Android SDK, provide the library as a
+                        JAR file.
+            </p>
+            <p>
+             When you use the Android NDK, provide a shared library with a
+                        filename as follows:
+            </p>
+            <pre>lib<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema"><i>&lt;yourlibraryname&gt;</i></i>.so </pre>
+            <p>
+             This shared library naming convention is required for the application
+                        APK package to install correctly.
+            </p>
+            <p>
+             When you create an ANE package containing shared libraries, the
+                        libraries must be stored in the following directory structure:
+            </p>
+            <pre><i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;Android platform directory&gt;</i>/ 
+                        libs/ 
+                        armeabi/ 
+                        &lt;Android emulator native libraries&gt; 
+                        armeabi-v7a/ 
+                        &lt;Android device native libraries&gt;</pre>
+           </div>
+          </div>
+          <div class="nochunk" id="WSdb11516da818ea8d49ce0fe713341ed67cf-7fff">
+           <a name="WSdb11516da818ea8d49ce0fe713341ed67cf-7fff">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            iOS native libraries
+           </h2>
+           <div>
+            <p>
+             Provide a static library with the .a filename extension.
+                        You can use the Cocoa Touch static library template in the Xcode
+                        IDE to build a .a file. Use the target type
+             <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+              device
+             </i>
+             to create
+                        a native library that runs on the device; use the target type
+             <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+              simulator
+             </i>
+             to
+                        create a native library that runs onthe iOS Simulator (iOS Simulator support
+                        in AIR 3.3 and higher).
+            </p>
+            <p>
+             Each version of AIR bundles a version of the iOS SDK with it.
+                        You can link to any of the public frameworks available in that version
+                        of the iOS SDK in a native extension that targets the corresponding
+                        AIR Version. The following table lists AIR SDK versions and their
+                        bundled iOSs versions, as well as support for additional features:
+            </p>
+            <div class="tablenoborder">
+             <a name="WSdb11516da818ea8d49ce0fe713341ed67cf-7fff__WS407c972521fc8eab1e18f08615fe8a1ded9-7d82">
+              <!-- -->
+             </a>
+             <table border="1" cellpadding="4" cellspacing="0">
+              <thead align="left">
+               <tr>
+                <th id="d17e3618" valign="top" width="NaN%">
+                 <p>
+                  AIR SDK
+                 </p>
+                </th>
+                <th id="d17e3621" valign="top" width="NaN%">
+                 <p>
+                  Included iOS SDK
+                 </p>
+                </th>
+                <th id="d17e3624" valign="top" width="NaN%">
+                 <p>
+                  link to additional libraries
+                 </p>
+                </th>
+                <th id="d17e3627" valign="top" width="NaN%">
+                 <p>
+                  bundle third-party libraries
+                 </p>
+                </th>
+               </tr>
+              </thead>
+              <tbody>
+               <tr>
+                <td headers="d17e3618 " valign="top" width="NaN%">
+                 <p>
+                  3.0 - 3.2
+                 </p>
+                </td>
+                <td headers="d17e3621 " valign="top" width="NaN%">
+                 <p>
+                  4.2
+                 </p>
+                </td>
+                <td headers="d17e3624 " valign="top" width="NaN%">
+                 <p>
+                  no
+                 </p>
+                </td>
+                <td headers="d17e3627 " valign="top" width="NaN%">
+                 <p>
+                  no
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e3618 " valign="top" width="NaN%">
+                 <p>
+                  3.3 - 3.4
+                 </p>
+                </td>
+                <td headers="d17e3621 " valign="top" width="NaN%">
+                 <p>
+                  5.1
+                 </p>
+                </td>
+                <td headers="d17e3624 " valign="top" width="NaN%">
+                 <p>
+                  yes
+                 </p>
+                </td>
+                <td headers="d17e3627 " valign="top" width="NaN%">
+                 <p>
+                  no
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td headers="d17e3618 " valign="top" width="NaN%">
+                 <p>
+                  3.5
+                 </p>
+                </td>
+                <td headers="d17e3621 " valign="top" width="NaN%">
+                 <p>
+                  6.0
+                 </p>
+                </td>
+                <td headers="d17e3624 " valign="top" width="NaN%">
+                 <p>
+                  yes
+                 </p>
+                </td>
+                <td headers="d17e3627 " valign="top" width="NaN%">
+                 <p>
+                  yes
+                 </p>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <p>
+             When targetting a specific AIR SDK version with your extension,
+                        you should not use any iOS frameworks introduced after the corresponding
+                        iOS version. Unless the AIR SDK you’re targetting , you should not
+                        use any other shared libraries or third-party frameworks.
+            </p>
+            <p>
+             As an alternative to using the iOS SDK that’s bundled with the
+                        AIR SDK, in AIR 3.3 and later you can link to an external iOS SDK.
+                        Use the ADT
+             <samp class="codeph">
+              -platformsdk
+             </samp>
+             switch, specifying the
+                        path to the external iOS SDK.
+            </p>
+            <p>
+             AIR links to the following iOS framework libraries by default:
+            </p>
+            <div class="tablenoborder">
+             <a name="WSdb11516da818ea8d49ce0fe713341ed67cf-7fff__WS407c972521fc8eab1e18f08615fe8a1ded9-7d81">
+              <!-- -->
+             </a>
+             <table border="1" cellpadding="4" cellspacing="0">
+              <tbody>
+               <tr>
+                <td valign="top" width="NaN%">
+                 <p>
+                  AudioToolbox
+                 </p>
+                </td>
+                <td valign="top" width="NaN%">
+                 <p>
+                  CoreLocation
+                 </p>
+                </td>
+                <td valign="top" width="NaN%">
+                 <p>
+                  OpenGLES
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td valign="top" width="NaN%">
+                 <p>
+                  AVFoundation
+                 </p>
+                </td>
+                <td valign="top" width="NaN%">
+                 <p>
+                  CoreMedia
+                 </p>
+                </td>
+                <td valign="top" width="NaN%">
+                 <p>
+                  QuartzCore
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td valign="top" width="NaN%">
+                 <p>
+                  CFNetwork
+                 </p>
+                </td>
+                <td valign="top" width="NaN%">
+                 <p>
+                  CoreVideo
+                 </p>
+                </td>
+                <td valign="top" width="NaN%">
+                 <p>
+                  Security
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td valign="top" width="NaN%">
+                 <p>
+                  CoreFoundation
+                 </p>
+                </td>
+                <td valign="top" width="NaN%">
+                 <p>
+                  Foundation
+                 </p>
+                </td>
+                <td valign="top" width="NaN%">
+                 <p>
+                  SystemConfiguration
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td valign="top" width="NaN%">
+                 <p>
+                  CoreGraphics
+                 </p>
+                </td>
+                <td valign="top" width="NaN%">
+                 <p>
+                  MobileCoreServices
+                 </p>
+                </td>
+                <td valign="top" width="NaN%">
+                 <p>
+                  UIKit
+                 </p>
+                </td>
+               </tr>
+               <tr>
+                <td valign="top" width="NaN%">
+                 <p>
+                  GameController
+                 </p>
+                </td>
+                <td valign="top" width="NaN%">
+                 <p>
+                  AssetsLibrary
+                 </p>
+                </td>
+                <td valign="top" width="NaN%">
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <p>
+             When linking to other frameworks and libraries, specify the linkage
+                        options in a platform options XML file.
+            </p>
+            <div class="note">
+             <span class="notetitle">
+              Note:
+             </span>
+             In AIR 3.4 and later, you can use the
+             <samp class="codeph">
+              ADT ‑hideAneSymbols yes
+             </samp>
+             option to
+                        eliminate potential symbol conflicts. For more information, see
+             <a href="../build/WS901d38e593cd1bac1e63e3d128fc240122-7ff0.html" target="_self">
+              Native
+                            extension options
+             </a>
+             .
+            </div>
+           </div>
+           <div class="nochunk" id="WS2f73111e7a180bd05759774f13a75534104-8000">
+            <a name="WS2f73111e7a180bd05759774f13a75534104-8000">
+             <!-- -->
+            </a>
+            <h3 class="topictitle3">
+             iOS platform options (platform.xml) file
+            </h3>
+            <div>
+             <p>
+              You can use a platform options (platform.xml) file to specify
+                            iOS-specific options for linking to additional frameworks and libraries
+                            or for bundling third-party frameworks or libraries in your native
+                            extension. The platform options file is added to the ANE when you
+                            package the extension by specifying the
+              <samp class="codeph">
+               -platformoptions
+              </samp>
+              flag
+                            after the
+              <samp class="codeph">
+               -platform
+              </samp>
+              flag for iOS. Later, when a developer
+                            creates an application IPA file that uses your extension, ADT uses
+                            the options in the platform.xml file to link to the additional libraries
+                            and include the bundled dependencies.
+             </p>
+             <div class="note">
+              <span class="notetitle">
+               Note:
+              </span>
+              The platform options file can have any name. You are not required
+                            to name it “platform.xml.”
+             </div>
+             <p>
+              You can use an iOS platform options file with both the iPhone-ARM
+                            (device) and iPhone-x86 (iOS simulator) platforms.
+             </p>
+             <p>
+              Platform options files require AIR 3.1 or later.
+             </p>
+             <p>
+              When using the
+              <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+               packagedDependencies
+              </i>
+              feature for packaging
+                            the ANE for iOS, add
+             </p>
+             <pre>&lt;option&gt;-rpath @executable_path/Frameworks&lt;/option&gt;</pre>
+             <p>
+              inside the
+              <samp class="codeph">
+               linkerOptions
+              </samp>
+              tag, in
+              <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+               platformoptions.xml
+              </i>
+              .
+             </p>
+             <div class="section" id="WS2f73111e7a180bd05759774f13a75534104-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d80">
+              <a name="WS2f73111e7a180bd05759774f13a75534104-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d80">
+               <!-- -->
+              </a>
+              <h4 class="sectiontitle">
+               iOS linker options
+              </h4>
+              <p>
+               The iOS linker options
+                                provides a way for you to pass arbitrary options to the linker.
+                                The specified options are passed unchanged to the linker. You can
+                                use this to link to additional frameworks and libraries, such as
+                                additional iOS frameworks. To specify linker options, use the
+               <samp class="codeph">
+                &lt;linkerOptions&gt;
+               </samp>
+               tag
+                                in the platform options xml file. Inside the
+               <samp class="codeph">
+                &lt;linkerOptions&gt;
+               </samp>
+               tag,
+                                specify each linkage option wrapped in an
+               <samp class="codeph">
+                &lt;options&gt;
+               </samp>
+               tag
+                                pair, as shown in the following example:
+              </p>
+              <pre>&lt;linkerOptions&gt; 
+                                &lt;option&gt;-ios_version_min 5.0&lt;/option&gt; 
+                                &lt;option&gt;-framework Accelerate&lt;/option&gt; 
+                                &lt;option&gt;-liconv&lt;/option&gt; 
+                                &lt;/linkerOptions&gt;</pre>
+              <p>
+               Any dependency linked in this
+                                way must be distributed to developers who use your native extension
+                                separate from the native extension itself. This is most useful for
+                                using an additional library included with iOS but not linked by
+                                AIR by default. You can also use this option to allow developers
+                                to link to a static library that you provide them separately.
+              </p>
+              <p>
+               The
+               <samp class="codeph">
+                &lt;linkerOptions&gt;
+               </samp>
+               tag
+                                requires AIR 3.3 or later.
+              </p>
+             </div>
+             <div class="section" id="WS2f73111e7a180bd05759774f13a75534104-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d7f">
+              <a name="WS2f73111e7a180bd05759774f13a75534104-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d7f">
+               <!-- -->
+              </a>
+              <h4 class="sectiontitle">
+               Packaged third-party dependencies
+              </h4>
+              <p>
+               In some
+                                cases you want to use a static library (for example, a native third-party library)
+                                in your native extension without having access to the source code
+                                for the library, or without requiring developers to have access
+                                to the library separate from your extension. You can bundle the
+                                static library with your native extension by specifying it as a
+                                packaged dependency. Use the
+               <samp class="codeph">
+                &lt;packagedDependencies&gt;
+               </samp>
+               tag
+                                in the platform options xml file. For each dependency that you want
+                                to include in the extension package, specify its name or relative
+                                path surrounded in a
+               <samp class="codeph">
+                &lt;packagedDependency&gt;
+               </samp>
+               tag
+                                pair, as shown in the following example:
+              </p>
+              <pre>&lt;packagedDependencies&gt; 
+                                &lt;packagedDependency&gt;foo.a&lt;/packagedDependency&gt; 
+                                &lt;packagedDependency&gt;abc/x.framework&lt;/packagedDependency&gt; 
+                                &lt;packagedDependency&gt;lib.o&lt;/packagedDependency&gt; 
+                                &lt;/packagedDependencies&gt;</pre>
+              <p>
+               A packaged dependency
+                                should be a static library with one of the following extensions:
+               <samp class="codeph">
+                .a
+               </samp>
+               ,
+               <samp class="codeph">
+                .framework
+               </samp>
+               ,
+                                or
+               <samp class="codeph">
+                .o
+               </samp>
+               . The library should support the ARMv7 architecture
+                                to be used on a device, and the i386 architecture for use with the
+                                iOS simulator.
+              </p>
+              <p>
+               When packaging the native extension, you must
+                                specify the names of the dependencies as parameters to the
+               <samp class="codeph">
+                -platformoptions
+               </samp>
+               flag.
+                                List the dependencies after the filename of the platform.xml file
+                                and before any following
+               <samp class="codeph">
+                -package
+               </samp>
+               flag, as shown
+                                in the following example:
+              </p>
+              <pre>adt -package &lt;signing options&gt; -target ane MyExtension.ane MyExt.xml -swc MyExtension.swc 
+                                -platform iPhone-ARM -platformoptions platformiOSARM.xml 
+                                foo.a abc/x.framework lib.o -C platform/ios . 
+                                -platform iPhone-x86 -platformoptions platformiOSx86.xml 
+                                -C platform/iosSimulator 
+                                -platform default -C platform/default library.swf</pre>
+              <p>
+               The
+               <samp class="codeph">
+                &lt;packagedDependencies&gt;
+               </samp>
+               tag
+                                requires AIR 3.5 or later.
+              </p>
+             </div>
+             <div class="section" id="WS2f73111e7a180bd05759774f13a75534104-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d7e">
+              <a name="WS2f73111e7a180bd05759774f13a75534104-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d7e">
+               <!-- -->
+              </a>
+              <h4 class="sectiontitle">
+               Using private embebbed frameworks
+              </h4>
+              <p>
+               To create
+                                iOS ANEs with Xcode6 or later, using private frameworks:
+              </p>
+              <ol>
+               <li id="WS2f73111e7a180bd05759774f13a75534104-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d7d">
+                <a name="WS2f73111e7a180bd05759774f13a75534104-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d7d">
+                 <!-- -->
+                </a>
+                <p>
+                 Edit platform.xml to add
+                </p>
+                <pre>&lt;option&gt;-rpath @executable_path/Frameworks&lt;/option&gt;</pre>
+                <p>
+                 inside
+                                        the  the
+                 <samp class="codeph">
+                  linkerOptions
+                 </samp>
+                 tag.
+                </p>
+                <p>
+                 For example,
+                </p>
+                <pre>&lt;/description&gt; 
+                                        &lt;linkerOptions&gt; 
+                                        &lt;option&gt;-ios_version_min 5.1.1&lt;/option&gt; 
+                                        &lt;option&gt;-rpath @executable_path/Frameworks&lt;/option&gt; 
+                                        &lt;/linkerOptions&gt; 
+                                        &lt;packagedDependencies&gt; 
+                                        &lt;packagedDependency&gt;SampleFramework.framework&lt;/packagedDependency&gt; 
+                                        &lt;/packagedDependencies&gt;</pre>
+               </li>
+               <li id="WS2f73111e7a180bd05759774f13a75534104-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d7c">
+                <a name="WS2f73111e7a180bd05759774f13a75534104-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d7c">
+                 <!-- -->
+                </a>
+                <p>
+                 Create a folder named, Frameworks, inside the existing iPhone-ARM
+                                        folder .
+                </p>
+               </li>
+               <li id="WS2f73111e7a180bd05759774f13a75534104-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d7b">
+                <a name="WS2f73111e7a180bd05759774f13a75534104-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d7b">
+                 <!-- -->
+                </a>
+                <p>
+                 Copy the private framework to the Frameworks folder and package
+                                        the framework with the ANE.
+                </p>
+                <div class="fignone" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                 <img alt="" id="copy_framework" src="images/copy_framework.png"/>
+                 <div class="figdesc">
+                  Copy private framework
+                 </div>
+                </div>
+               </li>
+              </ol>
+             </div>
+             <div class="section" id="WS2f73111e7a180bd05759774f13a75534104-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d79">
+              <a name="WS2f73111e7a180bd05759774f13a75534104-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d79">
+               <!-- -->
+              </a>
+              <h4 class="sectiontitle">
+               Platform options (platform.xml) file example
+              </h4>
+              <p>
+               The
+                                following listing shows an example of the structure of a platform
+                                options (platform.xml) file:
+              </p>
+              <pre>&lt;platform xmlns="http://ns.adobe.com/air/extension/3.5"&gt; 
+                                &lt;description&gt;An optional description.&lt;/description&gt; 
+                                &lt;copyright&gt;2011 (optional)&lt;/copyright&gt; 
+                                &lt;sdkVersion&gt;5.0.0&lt;/sdkVersion&gt; 
+                                &lt;linkerOptions&gt; 
+                                &lt;option&gt;-ios_version_min 5.0&lt;/option&gt; 
+                                &lt;option&gt;-framework Accelerate&lt;/option&gt; 
+                                &lt;option&gt;-liconv&lt;/option&gt; 
+                                &lt;/linkerOptions&gt; 
+                                &lt;packagedDependencies&gt; 
+                                &lt;packagedDependency&gt;foo.a&lt;/packagedDependency&gt; 
+                                &lt;packagedDependency&gt;abc/x.framework&lt;/packagedDependency&gt; 
+                                &lt;packagedDependency&gt;lib.o&lt;/packagedDependency&gt; 
+                                &lt;/packagedDependencies&gt; 
+                                &lt;/platform&gt;</pre>
+              <p>
+               To include this platform options
+                                file in the native extension package, you can use an ADT command
+                                such as the following:
+              </p>
+              <pre>adt -package &lt;signing options&gt; -target ane MyExtension.ane MyExt.xml -swc MyExtension.swc 
+                                -platform iPhone-ARM -platformoptions platformiOSARM.xml 
+                                foo.a abc/x.framework lib.o -C platform/ios . 
+                                -platform iPhone-x86 -platformoptions platformiOSx86.xml 
+                                -C platform/iosSimulator 
+                                -platform default -C platform/default library.swf</pre>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="nochunk" id="WSdb11516da818ea8d49ce0fe713341ed67cf-7ffe">
+           <a name="WSdb11516da818ea8d49ce0fe713341ed67cf-7ffe">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            Mac OS X native libraries
+           </h2>
+           <div>
+            <p>
+             For Mac OS X devices, provide a .framework library. When
+                        building the library, make sure that the Xcode project’s setting
+                        for the base SDK is the Mac OS X 10.5 SDK.
+            </p>
+            <p>
+             When compiling Mac OS X frameworks for use as an extension, set
+                        the following options to support correct resolution of the dependency
+                        on the AIR framework in all scenarios:
+            </p>
+            <ul>
+             <li id="WSdb11516da818ea8d49ce0fe713341ed67cf-7ffe__WS407c972521fc8eab1e18f08615fe8a1ded9-7d78">
+              <a name="WSdb11516da818ea8d49ce0fe713341ed67cf-7ffe__WS407c972521fc8eab1e18f08615fe8a1ded9-7d78">
+               <!-- -->
+              </a>
+              <p>
+               Add
+               <samp class="codeph">
+                @executable_path/../runtimes/air/mac
+               </samp>
+               ,
+               <samp class="codeph">
+                @executable_path/../Frameworks
+               </samp>
+               ,
+                                and
+               <samp class="codeph">
+                /Library/Frameworks
+               </samp>
+               to LD_RUNPATH_SEARCH_PATHS.
+              </p>
+             </li>
+             <li id="WSdb11516da818ea8d49ce0fe713341ed67cf-7ffe__WS407c972521fc8eab1e18f08615fe8a1ded9-7d77">
+              <a name="WSdb11516da818ea8d49ce0fe713341ed67cf-7ffe__WS407c972521fc8eab1e18f08615fe8a1ded9-7d77">
+               <!-- -->
+              </a>
+              <p>
+               Use weak framework linking and the flat namespace option.
+              </p>
+             </li>
+            </ul>
+            <p>
+             Together, these option settings allow the application to load
+                        the correct copy of the AIR framework first, and then for the extension
+                        to rely on the already loaded copy.
+            </p>
+           </div>
+          </div>
+          <div class="nochunk" id="WSdb11516da818ea8d49ce0fe713341ed67cf-7ffd">
+           <a name="WSdb11516da818ea8d49ce0fe713341ed67cf-7ffd">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            Windows native libraries
+           </h2>
+           <div>
+            <p>
+             For Windows devices, provide the library as a DLL file.
+                        Dynamically link the library FlashExtensions.lib, located in the
+                        AIR SDK directory in the lib/windows directory, into your DLL. Also,
+                        if your native code library uses any of Microsoft’s C runtime libraries,
+                        link to the multi-thread, static version of the C runtime library.
+                        To specify this type of linking, use the /MT compiler option.
+            </p>
+           </div>
+          </div>
+          <!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+          <!-- END USER PREFERENCES -->
+          <div id="related">
+           <div class="separator">
+            <a href="#top">
+             <img src="images/BTT.jpg"/>
+            </a>
+           </div>
+          </div>
+          <div id="footer">
+           <!-- BEGIN IONCOMMENTS -->
+           <div id="ionComHere">
+           </div>
+           <!-- END IONCOMMENTS -->
+           
+
+           <p id="creativecommons">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" id="creativecommons_text">
+             <img alt="This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License" id="creativecommons_img" src="images/CC.png"/>
+            </a>
+            Twitter™ and Facebook posts are not covered under the terms of Creative Commons.
+           </p>
+          </div>
+         </td>
+         <td width="10px">
+         </td>
+         <td id="inner_rightcolumn">
+          
+         </td>
+        </tr>
+       </table>
+      </div>
+      <!-- BEGIN BREADCRUMBS -->
+      <div id="breadcrumb">
+       <ul class="navigation">
+        <li class="prev">
+         <a accesskey="p" class="prev" href="WSf268776665d7970d-2e74ffb4130044f3619-8000.html" title="Creating the extension descriptor file">
+          <img alt="Previous" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+        <li class="next">
+         <a accesskey="n" class="next" href="WSf268776665d7970d-2482335412ffea65006-8000.html" title="Creating the native extension package">
+          <img alt="Next" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+       </ul>
+       <div class="hierarchy" id="hierarchy">
+        <a href="WSf00ab63af761f170-7e2c8d6712937799c98-8000.html">
+         <b>
+          Home
+         </b>
+        </a>
+        /
+        <a href="WSf00ab63af761f170-7e2c8d6712937799c98-8000.html">
+         <b>
+          Developing Native Extensions
+         </b>
+        </a>
+        /
+        <a href="WSf00ab63af761f170-168f6f2a129378b935d-8000.html">
+         <b>
+          Packaging a native extension
+         </b>
+        </a>
+       </div>
+      </div>
+      <!-- END BREADCRUMBS -->
+      <!-- END CONTENT WRAPPER -->
+      
+     </td>
+     <td id="col3">
+      <div>
+       <img src="images/adobe-lq.png"/>
+      </div>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!-- END PAGE CONTENT WRAPPER -->
+  <script type="text/javascript">
+   <!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+  </script>
+  <!--
+    Description:
+    This file generates the link to product support in the top right corner
+-->
+
+<style>
+#menutop{
+    position:absolute;
+    top:4px;
+    right:24px;
+    width:auto;    
+    font-size:11px;
+    color:#fff;
+    text-align:right;
+}
+#menutop a{
+    color:#fff;
+}
+#menutop a:hover{
+        text-decoration:underline;
+}
+</style>  
+  
+  
+  
+  
+<div id="productmenu">
+<!--googleoff: index-->
+  <div id="menutop">
+
+
+<script language=javascript type='text/javascript'>
+    // darken menu text for products with light backgrounds
+    var path = document.location.href.toLowerCase();
+    if (path.indexOf("/acrobat/")           	> 0 ||
+        path.indexOf("/acrobat.com/")       	> 0 ||
+        path.indexOf("/acrobatConnectPro/") 	> 0 ||
+        path.indexOf("/connect/")           	> 0 ||
+        path.indexOf("/framemaker/")           	> 0 ||
+        path.indexOf("/livecycledataserviceses/") > 0 ||
+        path.indexOf("/muse/")         	> 0 ||
+		path.indexOf("/presenter/")         	> 0 ||
+        path.indexOf("/scene7/")            	> 0 ||
+        path.indexOf("/flashmediaserver/")  	> 0 ||
+        path.indexOf("/wave/")              	> 0 )
+    {
+        document.write('<style>#menutop a{color:#505050}</style>');
+    }
+    if (typeof('terms_AHV_PRODUCT_SUPPORT') != "undefined" && ! use_robohelp_behavior ){      
+        if (path.indexOf("/muse/") > -1 ){
+            var supportlink = '<a href="http://muse.adobe.com/support.html">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }else{
+            var supportlink = '<a href="http://adobe.com/support">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }
+        document.write( supportlink );
+     }
+
+</script> 
+
+  </div>
+<!--googleon: index-->
+</div>
+
+
+
+  <style>
+#online-privacy-policy{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+<p id="online-privacy-policy">
+<script language="javascript">
+var pageLoc = "en_US";
+var metaElements = document.all ?
+document.all.tags('meta') :
+document.getElementsByTagName ?
+document.getElementsByTagName ('meta') : new Array();
+for (var m = 0; m < metaElements.length; m++) {
+	if (metaElements[m].name == "lang") {
+		pageLoc = metaElements[m].content;
+		break;
+	}
+}
+var ptn = /(..)-(..)/;
+if (ptn.test(pageLoc)) {
+	var languageCode = pageLoc.replace(ptn, "$1");
+	var countryCode = pageLoc.replace(ptn, "$2");
+	pageLoc = languageCode + "_" + countryCode.toUpperCase();
+}
+
+var policyLoc = "en_US";
+var policyText = "Online Privacy Policy";
+var policyPath = "";
+var policyArray=[
+"da_DK", "Online fortrolighedserklæring",
+"de_DE", "Online-Datenschutzrichtlinie",
+"es_ES", "Política de confidencialidad en línea",
+"fi_FI", "Yksityisyyttä koskeva Online-toimintaohjelma",
+"fr_FR", "Confidentialité et sécurité",
+"it_IT", "Informativa sulla privacy online",
+"ja_JP", "プライバシーポリシー",
+"ko_KR", "Adobe 온라인 개인정보 보호정책",
+"pt_BR", "Política de Confidencialidade On-line", 
+"zh_CN", "在线隐私政策",
+"zh_TW", "線上隱私政策"
+];
+var legalLoc = "en_US";
+var legalText = "Legal Notices";
+var legalPath = legalLoc;
+var legalArray=[
+"ar_AE", "إشعارات قانونية",
+"bg_BG", "Юридически бележки",
+"cs_CZ", "Právní upozornění",
+"da_DK", "Juridiske meddelelser",
+"de_DE", "Rechtliche Hinweise",
+"el_GR", "Σημειώσεις νομικού περιεχομένου",
+"es_ES", "Avisos legales",
+"et_EE", "Juriidilised teated",
+"fi_FI", "Lakisääteiset ilmoitukset",
+"fr_FR", "Mentions légales",
+"he_IL", "הצהרות משפטיות",
+"hr_HR", "Pravne napomene",
+"hu_HU", "Jogi közlemények",
+"it_IT", "Informazioni legali",
+"ja_JP", "法律上の注意",
+"ko_KR", "법적 고지 사항",
+"lt_LT", "Teisinės pastabos",
+"lv_LV", "Juridisks paziņojums",
+"nb_NO", "Juridiske merknader",
+"nl_NL", "Juridische kennisgevingen",
+"pl_PL", "Informacje prawne",
+"pt_BR", "Aspectos jurídicos",
+"ro_RO", "Prevederi legale",
+"ru_RU", "Юридическая информация",
+"sk_SK", "Právne upozornenie",
+"sl_SI", "Pravni pouk",
+"sv_SE", "Upphovsrätt",
+"tr_TR", "Yasal uyarılar",
+"uk_UA", "Юридична інформація",
+"zh_CN", "法律声明",
+"zh_TW", "法律注意事項"
+];
+
+ruPolicy = "http://www.adobe.com/ru/misc/privacy.html";
+trPolicy = "http://www.adobe.com/tr/misc/privacy.html";
+
+// Bug 2846992: LOC: RUS, TUR: The link to "Online Privacy Policy" should include language, currently it is not appearing.
+if (pageLoc == "ru_RU") {
+	policyPath = "ru";
+}
+else if (pageLoc == "tr_TR") {
+	policyPath = "tr";
+}
+for (var i = 0; i < policyArray.length; i+=2) {
+	if (pageLoc == policyArray[i]) {
+		policyLoc = pageLoc;
+		policyText = policyArray[i+1];
+		var ptn = /(..)_(..)/;
+		if (ptn.test(policyLoc)) {
+			var countryCode = policyLoc.replace(ptn, "$2");
+			policyPath = countryCode.toLowerCase();
+		}
+		break;
+	}
+}
+
+for (var i = 0; i < legalArray.length; i+=2) {
+	if (pageLoc == legalArray[i]) {
+		legalLoc = pageLoc;
+		legalText = legalArray[i+1];
+		legalPath = legalLoc;
+		break;
+	}
+}
+if(agt.indexOf("community help client") > -1 ){
+	document.write('<a href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+}else{
+	//Open the privacy policy in a new window
+	document.write('<a target="_blank" href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a target="_blank" href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+} 
+
+
+remove_all_cookies();
+
+function remove_all_cookies() {
+	var res = document.cookie;
+    var multiple = res.split(";");
+    for(var i = 0; i < multiple.length; i++) {
+    	var key = multiple[i].split("=");
+        document.cookie = key[0]+" =; expires = Thu, 01 Jan 1970 00:00:00 UTC";
+    }
+}
+
+
+</script>
+</p>
+
+
+  
+<!-- localfooter.ssi -->
+
+<script type="text/javascript">
+    var debug = (top.location.href.indexOf("debug=true") > -1);
+</script>
+
+<script language="javascript">
+document.write('<scr'+'ipt ' +
+               'src="/en_US/ssi/_pod.js" ' +
+               'language="javascript" ' +
+               'charset="UTF-8"> ' +
+               '</scr'+'ipt>');
+</script>
+
+//  Ethnio survey code removed
+  
+  
+ </body>
+</html>

@@ -1,0 +1,1120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="en-us">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <meta content="en-us" name="lang"/>
+  <meta content="livedocs" name="area"/>
+  <title>
+   Adobe Flash Platform * Application design for database performance
+  </title>
+  <link href="https://help.adobe.com/en_US/as3/mobile/images/FlashRuntimeLinkIndicator.png" rel="shortcut icon"/>
+  <meta content="Optimizing Performance for the Flash Platform" name="book"/>
+  <meta content="adobe" name="product"/>
+  <meta content="air" name="product"/>
+  <meta content="flash" name="product"/>
+  <meta content="flex" name="product"/>
+  <meta content="" name="keywords"/>
+  <!--<PageMap><DataObject type="document"><Attribute name="product" value="adobe"></Attribute><Attribute name="product" value="air"></Attribute><Attribute name="product" value="flash"></Attribute><Attribute name="product" value="flex"></Attribute><Attribute name="book" value="Optimizing Performance for the Flash Platform"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+  <script charset="UTF-8" language="Javascript" type="text/javascript">
+   <!--[CDATA[
+        var currentTreeNode = "WS948100b6829bd5a6-58fee93d1274eb25dac-7fff.html";
+// ]]-->
+  </script>
+  <script charset="UTF-8" language="Javascript" src="terms.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="help.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="utilities.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="event.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="treeview.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="toc.js" type="text/javascript">
+   ..
+  </script>
+  <script charset="UTF-8" language="Javascript" src="swfobject.js" type="text/javascript">
+   ..
+  </script>
+  <script charset="UTF-8" language="Javascript" src="booklist.js" type="text/javascript">
+   ..
+  </script>
+  <script type="text/javascript">
+   <!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+  </script>
+  
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+  
+  
+  <link href="tree.css" rel="stylesheet" type="text/css"/>
+  <link href="content.css" rel="stylesheet" type="text/css"/>
+  <link href="localeSpecific.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body id="content_body" onload="window.focus();">
+  <a name="top" shape="rect">
+   <!--LeaveCommentHere-->
+  </a>
+  <div id="mnemonic">
+   <!--googleoff: index-->
+   <div class="FlashRuntime" xmlns:adobe="http://www.adobe.com/saxon">
+    <div class="banner">
+     <a href="WS9936fa0d5984e93b3d2e9c9412725f53fd1-8000.html">
+      Adobe Flash Platform
+     </a>
+    </div>
+   </div>
+   <!--googleon: index-->
+  </div>
+  <div id="searchbar">
+   <table id="searchbartable">
+    <tr>
+     <td colspan="2">
+      <!--googleoff: index-->
+      <div xmlns:adobe="http://www.adobe.com/saxon">
+       <div id="pdf">
+        <img height="16" src="images/PDF.gif" width="16"/>
+        <a href="flashplatform_optimizing_content.pdf" title="View Help PDF">
+         View Help PDF (
+         3.4M
+         B)
+        </a>
+       </div>
+      </div>
+      <!--googleon: index-->
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!-- BEGIN SEARCH CONTENT -->
+  <form action="https://help.adobe.com/en_US/as3/mobile/search.html" id="search" name="search" target="_self">
+   <script type="text/javascript">
+    <!--[CDATA[
+if ( !use_chc_behavior ){
+    if (typeof(terms_AHV_SEARCH_CONSTRAINT) != "undefined" && 
+        terms_AHV_SEARCH_CONSTRAINT.length > 0 && 
+        document.location.href.indexOf(".adobe.com") > 0){
+        if ( typeof(terms_SEARCH_THIS_HELP_ONLY) != "undefined" && terms_SEARCH_THIS_HELP_ONLY == "ON" ) {
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                checked="checked" \
+                value="1" ><\/input>'); 
+                
+        // Leave the "Search this help system only" checkbox unckecked
+        }else{    
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                value="1" ><\/input>'); 
+        }
+        document.write('<span class="gsalabel">' + terms_AHV_SEARCH_CONSTRAINT + '<\/span><\/div>'); 
+    }
+    document.write('<input class="searchinput" \
+        name="q" \
+        id="q" \
+        type="text" \
+        maxlength="256" \
+        value="' + terms_AHV_SEARCH_BUTTON + '" \
+        onclick="clearSearch()"><\/input><input \
+        type="button" \
+        name="searchbutton" \
+        class="searchbutton" \
+        onclick="submit()"><\/input>'); 
+} 
+ 
+/* 
+ * Start Functions 
+ */
+function clearSearch(){
+    if (document.search.q.value == terms_AHV_SEARCH_BUTTON){document.search.q.value = ""}; 
+}
+
+// set search preferences
+function setAHSearchPref(){
+    if (document.search.gsa.checked == 1){
+        setAHSearchCookie( dirname );
+    }else{
+        setAHSearchCookie( "community" );
+    }
+}
+
+// Set search preferences cookie
+function setAHSearchCookie( p ){
+    // set cookie ah_searchpref with a value of the document path
+    var expire=new Date();
+    expire.setDate(expire.getDate()+365); // Cookie expires after 1 year (365 days) 
+}
+
+// ]]-->
+   </script>
+  </form>
+  <!-- END SEARCH CONTENT -->
+  <!-- BEGIN PAGE CONTENT WRAPPER -->
+  <div id="page_content_wrapper">
+   <!-- BEGIN PAGE WRAPPER -->
+   <table id="page_content_table">
+    <tr>
+     
+     <td id="col2">
+      <!-- BEGIN CONTENT WRAPPER -->
+      <!-- BEGIN BREADCRUMBS -->
+      <div id="breadcrumb">
+       <ul class="navigation">
+        <li class="prev">
+         <a accesskey="p" class="prev" href="WS948100b6829bd5a623a79aca1274e8b2497-8000.html" title="SQL database performance">
+          <img alt="Previous" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+        <li class="next">
+         <a accesskey="n" class="next" href="WS948100b6829bd5a6-58fee93d1274eb25dac-7ffe.html" title="Database file optimization">
+          <img alt="Next" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+       </ul>
+       <div class="hierarchy" id="hierarchy">
+        <a href="WS9936fa0d5984e93b3d2e9c9412725f53fd1-8000.html">
+         <b>
+          Home
+         </b>
+        </a>
+        /
+        <a href="WS9936fa0d5984e93b3d2e9c9412725f53fd1-8000.html">
+         <b>
+          Optimizing Performance for the Flash Platform
+         </b>
+        </a>
+        /
+        <a href="WS948100b6829bd5a623a79aca1274e8b2497-8000.html">
+         <b>
+          SQL database performance
+         </b>
+        </a>
+       </div>
+      </div>
+      <!-- END BREADCRUMBS -->
+      <div id="content_wrapper">
+       <!-- BEGIN PAGE TITLE -->
+       <h1>
+        Application design for database performance
+       </h1>
+       <!-- END PAGE TITLE -->
+       <!-- BEGIN IONCOMMENTCOUNT -->
+       <div id="ionCount">
+       </div>
+       <!-- END IONCOMMENTCOUNT -->
+       <table border="0" cellpadding="0" cellspacing="0" id="inner_content_table" width="100%">
+        <tr>
+         <td>
+          <div style="border-top:#ccc solid 1px;">
+           <p>
+           </p>
+          </div>
+          <p id="chcPromo" style="display:none;">
+<a id="chcLink" href="http://www.adobe.com/support/chc/">
+<img id="chcImage" src="http://www.adobe.com/support/chc/GetMoreHelpFeatures.png"/>
+</a>
+</p>
+<script type="text/javascript" language="javascript" charset="utf-8">
+<!--
+var cfgArray = [];
+//cfgArray["Acrobat_10.0_Professional.helpcfg"] = "acrobatpro";
+//cfgArray["Acrobat_10.0_Standard.helpcfg"] = "acrobatstd";
+cfgArray["Lightroom_3.0.helpcfg"] = "lightroom";
+cfgArray["PhotoshopElements_8.0_Win.helpcfg"] = "photoshopelements";
+cfgArray["PhotoshopElements_8.0_Mac.helpcfg"] = "photoshopelementsmac";
+cfgArray["PremiereElements_8.0_Win.helpcfg"] = "premiereelements";
+
+//cfgArray["AfterEffects_10.0.helpcfg"] = "aftereffects";
+//cfgArray["AIR.helpcfg"] = "air";
+//cfgArray["ColdFusionBuilder.helpcfg"] = "coldfusion";
+//cfgArray["Contribute_6.0.helpcfg"] = "contribute";
+//cfgArray["DeviceCentral_3.0.helpcfg"] = "devicecentral";
+//cfgArray["Dreamweaver_11.0.helpcfg"] = "dreamweaver";
+//cfgArray["EncoreDVD_5.0.helpcfg"] = "encore";
+//cfgArray["ExtensionManager_3.0.helpcfg"] = "extension";
+//cfgArray["Fireworks_11.0.helpcfg"] = "fireworks";
+//cfgArray["Flash_11.0.helpcfg"] = "flash";
+//cfgArray["Flex_4.0.helpcfg"] = "flashbuilder";
+//cfgArray["FlashCatalyst_1.0.helpcfg"] = "flashcatalyst";
+//cfgArray["Illustrator_15.0.helpcfg"] = "illustrator";
+//cfgArray["InCopy_7.0.helpcfg"] = "incopy";
+//cfgArray["InDesign_7.0.helpcfg"] = "indesign";
+//cfgArray["OnLocation_5.0.helpcfg"] = "onlocation";
+//cfgArray["Photoshop_12.0.helpcfg"] = "photoshop";
+//cfgArray["PremierePro_5.0.helpcfg"] = "premierepro";
+
+function getLangName() {
+    var lang = "en-us";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if (ptn.test(lang)) {
+        var languageCode = lang.replace(ptn, "$1");
+        var countryCode = lang.replace(ptn, "$2");
+        lang = languageCode + "_" + countryCode.toUpperCase();
+    }
+    return lang;
+}
+
+function getCountryName() {
+    var lang = "";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if ((ptn.test(lang)) && (lang != "en-us")) {
+        var countryCode = lang.replace(ptn, "$2");
+        return "/" + countryCode;
+    }
+    return "";
+}
+
+if ( (typeof(terms_HELPCFG) != 'undefined')  && (terms_HELPCFG.indexOf(".helpcfg") != -1) ) {
+    var stage   = (document.location.href.indexOf(".stage.") != -1) ? 'stage.' : '';
+    var baseUrl = 'http://www.' + stage + 'adobe.com';
+    var refpage = document.location.href.replace(/#.*$/, '');
+	
+	if ((!use_robohelp_behavior) && (terms_HELPCFG.length > 0) && (typeof(cfgArray[terms_HELPCFG]) != 'undefined') && (cfgArray[terms_HELPCFG].length > 0)) {
+		if (document.getElementById) { // DOM3 = IE5, NS6
+			var newHref = baseUrl + getCountryName() + "/support/chc/" + "?helpcfg=http://help." + stage + "adobe.com/HelpCfg/" + getLangName() + "/" + terms_HELPCFG + "&url=" + refpage + "&product=" + cfgArray[terms_HELPCFG];
+			var newSrc = baseUrl + getCountryName() + "/support/chc/GetMoreHelpFeatures.png";
+			document.getElementById("chcPromo").style.display = "block";
+			document.getElementById("chcLink").href = newHref;
+			document.getElementById("chcImage").src = newSrc;
+		}
+	}
+}
+
+//-->
+</script>
+
+
+          <div>
+           <div class="section">
+            <div class="tip">
+             <img src="images/tip_help.png"/>
+             Don’t change a SQLStatement object’s
+             <samp class="codeph">
+              text
+             </samp>
+             property
+after executing it. Instead, use one SQLStatement instance for each
+SQL statement and use statement parameters to provide different
+values.
+            </div>
+            <p>
+             Before any SQL statement is executed, the runtime
+prepares (compiles) it to determine the steps that are performed
+internally to carry out the statement. When you call
+             <samp class="codeph">
+              SQLStatement.execute()
+             </samp>
+             on
+a SQLStatement instance that hasn’t executed previously, the statement
+is automatically prepared before it is executed. On subsequent calls
+to the
+             <samp class="codeph">
+              execute()
+             </samp>
+             method, as long as the
+             <samp class="codeph">
+              SQLStatement.text
+             </samp>
+             property
+hasn’t changed the statement is still prepared. Consequently, it
+executes faster.
+            </p>
+            <p>
+             To gain the maximum benefit from reusing
+statements, if values change between statement executions, use statement
+parameters to customize your statement. (Statement parameters are
+specified using the
+             <samp class="codeph">
+              SQLStatement.parameters
+             </samp>
+             associative
+array property.) Unlike changing the SQLStatement instance’s
+             <samp class="codeph">
+              text
+             </samp>
+             property,
+if you change the values of statement parameters the runtime isn’t required
+to prepare the statement again.
+            </p>
+            <p>
+             When you’re reusing a SQLStatement
+instance, your application must store a reference to the SQLStatement
+instance once it has been prepared. To keep a reference to the instance,
+declare the variable as a class-scope variable rather than a function-scope
+variable. One good way to make the SQLStatement a class-scope variable
+is to structure your application so that a SQL statement is wrapped in
+a single class. A group of statements that are executed in combination
+can also be wrapped in a single class. (This technique is known
+as using the Command design pattern.) By defining the instances
+as member variables of the class, they persist as long as the instance
+of the wrapper class exists in the application. At a minimum, you
+can simply define a variable containing the SQLStatement instance
+outside a function so that the instance persists in memory. For
+example, declare the SQLStatement instance as a member variable
+in an ActionScript class or as a non-function variable in a JavaScript
+file. You can then set the statement’s parameter values and call
+its
+             <samp class="codeph">
+              execute()
+             </samp>
+             method when you want to actually run
+the query.
+            </p>
+           </div>
+           <div class="section">
+            <div class="tip">
+             <img src="images/tip_help.png"/>
+             Use database indexes to improve execution
+speed for data comparing and sorting.
+            </div>
+            <p>
+             When you create an
+index for a column, the database stores a copy of that column’s
+data. The copy is kept sorted in numeric or alphabetical order.
+The sorting allows the database to quickly match values (such as
+when using the equality operator) and sort result data using the
+             <samp class="codeph">
+              ORDER BY
+             </samp>
+             clause.
+            </p>
+            <p>
+             Database
+indexes are kept continuously up-to-date, which causes data change operations
+(INSERT or UPDATE) on that table to be slightly slower. However,
+the increase in data retrieval speed can be significant. Because
+of this performance tradeoff, don’t simply index every column of
+every table. Instead, use a strategy for defining your indexes.
+Use the following guidelines to plan your indexing strategy:
+            </p>
+            <ul>
+             <li>
+              <p>
+               Index columns that are used in joining tables, in WHERE clauses,
+or ORDER BY clauses
+              </p>
+             </li>
+             <li>
+              <p>
+               If columns are frequently used together, index them together
+in a single index
+              </p>
+             </li>
+             <li>
+              <p>
+               For a column that contains text data that you retrieve sorted
+alphabetically, specify COLLATE NOCASE collation for the index
+              </p>
+             </li>
+            </ul>
+           </div>
+           <div class="section">
+            <div class="tip">
+             <img src="images/tip_help.png"/>
+             Consider pre-compiling SQL statements
+during application idle times.
+            </div>
+            <p>
+             The first time a SQL statement
+executes, it is slower because the SQL text is prepared (compiled)
+by the database engine. Because preparing and executing a statement
+can be demanding, one strategy is to preload initial data and then execute
+other statements in the background:
+            </p>
+            <ol>
+             <li>
+              <p>
+               Load the data
+that the application needs first.
+              </p>
+             </li>
+             <li>
+              <p>
+               When the initial startup operations of your application have
+completed, or at another “idle” time in the application, execute
+other statements.
+              </p>
+             </li>
+            </ol>
+            <p>
+             For example, suppose your application
+doesn’t access the database at all to display its initial screen.
+In that case, wait until that screen displays before opening the
+database connection. Finally, create the SQLStatement instances and
+execute any that you can.
+            </p>
+            <p>
+             Alternatively, suppose that when
+your application starts up it immediately displays some data, such
+as the result of a particular query. In that case, go ahead and
+execute the SQLStatement instance for that query. After the initial
+data is loaded and displayed, create SQLStatement instances for
+other database operations and if possible execute other statements
+that are needed later.
+            </p>
+            <p>
+             In practice, if you are reusing SQLStatement
+instances, the additional time required to prepare the statement
+is only a one-time cost. It probably doesn’t have a large impact
+on overall performance.
+            </p>
+           </div>
+           <div class="section">
+            <div class="tip">
+             <img src="images/tip_help.png"/>
+             Group multiple SQL data change operations
+in a transaction.
+            </div>
+            <p>
+             Suppose you’re executing many SQL statements
+that involve adding or changing data (
+             <samp class="codeph">
+              INSERT
+             </samp>
+             or
+             <samp class="codeph">
+              UPDATE
+             </samp>
+             statements).
+You can get a significant increase in performance by executing all
+the statements within an explicit transaction. If you don’t explicitly
+begin a transaction, each of the statements runs in its own automatically
+created transaction. After each transaction (each statement) finishes
+executing, the runtime writes the resulting data to the database
+file on the disk.
+            </p>
+            <p>
+             On the other hand, consider what happens
+if you explicitly create a transaction and execute the statements
+in the context of that transaction. The runtime makes all the changes
+in memory, then writes all the changes to the database file at one
+time when the transaction is committed. Writing the data to disk
+is usually the most time-intensive part of the operation. Consequently,
+writing to the disk one time rather than once per SQL statement
+can improve performance significantly.
+            </p>
+           </div>
+           <div class="section">
+            <div class="tip">
+             <img src="images/tip_help.png"/>
+             Process large
+             <samp class="codeph">
+              SELECT
+             </samp>
+             query
+results in parts using the SQLStatement class’s
+             <samp class="codeph">
+              execute()
+             </samp>
+             method
+(with
+             <samp class="codeph">
+              prefetch
+             </samp>
+             parameter) and
+             <samp class="codeph">
+              next()
+             </samp>
+             method.
+            </div>
+            <p>
+             Suppose
+you execute a SQL statement that retrieves a large result set. The
+application then processes each row of data in a loop. For example,
+it formats the data or creates objects from it. Processing that
+data can take a large amount of time, which could cause rendering
+problems such as a frozen or non-responsive screen. As described
+in
+             <a href="WS948100b6829bd5a6-4c2e64612754b0a95b-8000.html">
+              Asynchronous operations
+             </a>
+             , one solution is to divide up the work into chunks.
+The SQL database API makes dividing up data processing easy to do.
+            </p>
+            <p>
+             The
+SQLStatement class’s
+             <samp class="codeph">
+              execute()
+             </samp>
+             method has an optional
+             <samp class="codeph">
+              prefetch
+             </samp>
+             parameter
+(the first parameter). If you provide a value, it specifies the
+maximum number of result rows that the database returns when the
+execution completes:
+            </p>
+            <pre>dbStatement.addEventListener(SQLEvent.RESULT, resultHandler); 
+dbStatement.execute(100); // 100 rows maximum returned in the first set</pre>
+            <p>
+             Once
+the first set of result data returns, you can call the
+             <samp class="codeph">
+              next()
+             </samp>
+             method
+to continue executing the statement and retrieve another set of
+result rows. Like the
+             <samp class="codeph">
+              execute()
+             </samp>
+             method, the
+             <samp class="codeph">
+              next()
+             </samp>
+             method
+accepts a
+             <samp class="codeph">
+              prefetch
+             </samp>
+             parameter to specify a maximum
+number of rows to return:
+            </p>
+            <pre>// This method is called when the execute() or next() method completes 
+function resultHandler(event:SQLEvent):void 
+{ 
+    var result:SQLResult = dbStatement.getResult(); 
+    if (result != null) 
+    { 
+        var numRows:int = result.data.length; 
+        for (var i:int = 0; i &lt; numRows; i++) 
+        { 
+            // Process the result data 
+        } 
+         
+        if (!result.complete) 
+        { 
+            dbStatement.next(100); 
+        } 
+    } 
+}</pre>
+            <p>
+             You can continue calling the
+             <samp class="codeph">
+              next()
+             </samp>
+             method
+until all the data loads. As shown in the previous listing, you
+can determine when the data has all loaded. Check the
+             <samp class="codeph">
+              complete
+             </samp>
+             property
+of the SQLResult object that’s created each time the
+             <samp class="codeph">
+              execute()
+             </samp>
+             or
+             <samp class="codeph">
+              next()
+             </samp>
+             method
+finishes.
+            </p>
+            <div class="note">
+             <span class="notetitle">
+              Note:
+             </span>
+             Use the
+             <samp class="codeph">
+              prefetch
+             </samp>
+             parameter and
+the
+             <samp class="codeph">
+              next()
+             </samp>
+             method to divide up the processing of
+result data. Don’t use this parameter and method to limit a query’s results
+to a portion of its result set. If you only want to retrieve a subset
+of rows in a statement’s result set, use the
+             <samp class="codeph">
+              LIMIT
+             </samp>
+             clause
+of the
+             <samp class="codeph">
+              SELECT
+             </samp>
+             statement. If the result set is large,
+you can still use the
+             <samp class="codeph">
+              prefetch
+             </samp>
+             parameter and
+             <samp class="codeph">
+              next()
+             </samp>
+             method
+to divide up the processing of the results.
+            </div>
+           </div>
+           <div class="section">
+            <div class="tip">
+             <img src="images/tip_help.png"/>
+             Consider using multiple asynchronous
+SQLConnection objects with a single database to execute multiple
+statements simultaneously.
+            </div>
+            <p>
+             When a SQLConnection object
+is connected to a database using the
+             <samp class="codeph">
+              openAsync()
+             </samp>
+             method,
+it runs in the background rather than the main runtime execution
+thread. In addition, each SQLConnection runs in its own background thread.
+By using multiple SQLConnection objects, you can effectively run multiple
+SQL statements simultaneously.
+            </p>
+            <p>
+             There are also potential downsides
+to this approach. Most importantly, each additional SQLStatement
+object requires additional memory. In addition, simultaneous executions
+also cause more work for the processor, especially on machines that
+only have one CPU or CPU core. Because of these concerns, this approach
+is not recommended for use on mobile devices.
+            </p>
+            <p>
+             An additional
+concern is that the potential benefit from reusing SQLStatement objects
+can be lost because a SQLStatement object is linked to a single
+SQLConnection object. Consequently, the SQLStatement object can’t
+be reused if its associated SQLConnection object is already in use.
+            </p>
+            <p>
+             If
+you choose to use multiple SQLConnection objects connected to a
+single database, keep in mind that each one executes its statements
+in its own transaction. Be sure to account for these separate transactions
+in any code that changes data, such as adding, modifying, or deleting
+data.
+            </p>
+            <p>
+             Paul Robertson has created an open-source code library
+that helps you incorporate the benefits of using multiple SQLConnection
+objects while minimizing the potential downsides. The library uses
+a pool of SQLConnection objects and manages the associated SQLStatement
+objects. In this way it ensures that SQLStatement objects are reused,
+and multiple SQLConnection objects are available to execute multiple
+statements simultaneously. For more information and to download
+the library, visit
+             <a href="http://probertson.com/projects/air-sqlite/" target="_self">
+              http://probertson.com/projects/air-sqlite/
+             </a>
+             .
+            </p>
+           </div>
+           <ul class="navlinklist">
+           </ul>
+          </div>
+          <!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+          <!-- END USER PREFERENCES -->
+          <div id="related">
+           <div class="separator">
+           </div>
+          </div>
+          <div id="footer">
+           <!-- BEGIN IONCOMMENTS -->
+           <div id="ionComHere">
+           </div>
+           <!-- END IONCOMMENTS -->
+           
+
+           <p id="creativecommons">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" id="creativecommons_text">
+             <img alt="This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License" id="creativecommons_img" src="images/CC.png"/>
+            </a>
+            Twitter™ and Facebook posts are not covered under the terms of Creative Commons.
+           </p>
+          </div>
+         </td>
+         <td width="10px">
+         </td>
+         <td id="inner_rightcolumn">
+          
+         </td>
+        </tr>
+       </table>
+      </div>
+      <!-- BEGIN BREADCRUMBS -->
+      <div id="breadcrumb">
+       <ul class="navigation">
+        <li class="prev">
+         <a accesskey="p" class="prev" href="WS948100b6829bd5a623a79aca1274e8b2497-8000.html" title="SQL database performance">
+          <img alt="Previous" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+        <li class="next">
+         <a accesskey="n" class="next" href="WS948100b6829bd5a6-58fee93d1274eb25dac-7ffe.html" title="Database file optimization">
+          <img alt="Next" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+       </ul>
+       <div class="hierarchy" id="hierarchy">
+        <a href="WS9936fa0d5984e93b3d2e9c9412725f53fd1-8000.html">
+         <b>
+          Home
+         </b>
+        </a>
+        /
+        <a href="WS9936fa0d5984e93b3d2e9c9412725f53fd1-8000.html">
+         <b>
+          Optimizing Performance for the Flash Platform
+         </b>
+        </a>
+        /
+        <a href="WS948100b6829bd5a623a79aca1274e8b2497-8000.html">
+         <b>
+          SQL database performance
+         </b>
+        </a>
+       </div>
+      </div>
+      <!-- END BREADCRUMBS -->
+      <!-- END CONTENT WRAPPER -->
+      
+     </td>
+     <td id="col3">
+      <div>
+       <img src="images/adobe-lq.png"/>
+      </div>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!-- END PAGE CONTENT WRAPPER -->
+  <script type="text/javascript">
+   <!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+  </script>
+  <!--
+    Description:
+    This file generates the link to product support in the top right corner
+-->
+
+<style>
+#menutop{
+    position:absolute;
+    top:4px;
+    right:24px;
+    width:auto;    
+    font-size:11px;
+    color:#fff;
+    text-align:right;
+}
+#menutop a{
+    color:#fff;
+}
+#menutop a:hover{
+        text-decoration:underline;
+}
+</style>  
+  
+  
+  
+  
+<div id="productmenu">
+<!--googleoff: index-->
+  <div id="menutop">
+
+
+<script language=javascript type='text/javascript'>
+    // darken menu text for products with light backgrounds
+    var path = document.location.href.toLowerCase();
+    if (path.indexOf("/acrobat/")           	> 0 ||
+        path.indexOf("/acrobat.com/")       	> 0 ||
+        path.indexOf("/acrobatConnectPro/") 	> 0 ||
+        path.indexOf("/connect/")           	> 0 ||
+        path.indexOf("/framemaker/")           	> 0 ||
+        path.indexOf("/livecycledataserviceses/") > 0 ||
+        path.indexOf("/muse/")         	> 0 ||
+		path.indexOf("/presenter/")         	> 0 ||
+        path.indexOf("/scene7/")            	> 0 ||
+        path.indexOf("/flashmediaserver/")  	> 0 ||
+        path.indexOf("/wave/")              	> 0 )
+    {
+        document.write('<style>#menutop a{color:#505050}</style>');
+    }
+    if (typeof('terms_AHV_PRODUCT_SUPPORT') != "undefined" && ! use_robohelp_behavior ){      
+        if (path.indexOf("/muse/") > -1 ){
+            var supportlink = '<a href="http://muse.adobe.com/support.html">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }else{
+            var supportlink = '<a href="http://adobe.com/support">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }
+        document.write( supportlink );
+     }
+
+</script> 
+
+  </div>
+<!--googleon: index-->
+</div>
+
+
+
+  <style>
+#online-privacy-policy{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+<p id="online-privacy-policy">
+<script language="javascript">
+var pageLoc = "en_US";
+var metaElements = document.all ?
+document.all.tags('meta') :
+document.getElementsByTagName ?
+document.getElementsByTagName ('meta') : new Array();
+for (var m = 0; m < metaElements.length; m++) {
+	if (metaElements[m].name == "lang") {
+		pageLoc = metaElements[m].content;
+		break;
+	}
+}
+var ptn = /(..)-(..)/;
+if (ptn.test(pageLoc)) {
+	var languageCode = pageLoc.replace(ptn, "$1");
+	var countryCode = pageLoc.replace(ptn, "$2");
+	pageLoc = languageCode + "_" + countryCode.toUpperCase();
+}
+
+var policyLoc = "en_US";
+var policyText = "Online Privacy Policy";
+var policyPath = "";
+var policyArray=[
+"da_DK", "Online fortrolighedserklæring",
+"de_DE", "Online-Datenschutzrichtlinie",
+"es_ES", "Política de confidencialidad en línea",
+"fi_FI", "Yksityisyyttä koskeva Online-toimintaohjelma",
+"fr_FR", "Confidentialité et sécurité",
+"it_IT", "Informativa sulla privacy online",
+"ja_JP", "プライバシーポリシー",
+"ko_KR", "Adobe 온라인 개인정보 보호정책",
+"pt_BR", "Política de Confidencialidade On-line", 
+"zh_CN", "在线隐私政策",
+"zh_TW", "線上隱私政策"
+];
+var legalLoc = "en_US";
+var legalText = "Legal Notices";
+var legalPath = legalLoc;
+var legalArray=[
+"ar_AE", "إشعارات قانونية",
+"bg_BG", "Юридически бележки",
+"cs_CZ", "Právní upozornění",
+"da_DK", "Juridiske meddelelser",
+"de_DE", "Rechtliche Hinweise",
+"el_GR", "Σημειώσεις νομικού περιεχομένου",
+"es_ES", "Avisos legales",
+"et_EE", "Juriidilised teated",
+"fi_FI", "Lakisääteiset ilmoitukset",
+"fr_FR", "Mentions légales",
+"he_IL", "הצהרות משפטיות",
+"hr_HR", "Pravne napomene",
+"hu_HU", "Jogi közlemények",
+"it_IT", "Informazioni legali",
+"ja_JP", "法律上の注意",
+"ko_KR", "법적 고지 사항",
+"lt_LT", "Teisinės pastabos",
+"lv_LV", "Juridisks paziņojums",
+"nb_NO", "Juridiske merknader",
+"nl_NL", "Juridische kennisgevingen",
+"pl_PL", "Informacje prawne",
+"pt_BR", "Aspectos jurídicos",
+"ro_RO", "Prevederi legale",
+"ru_RU", "Юридическая информация",
+"sk_SK", "Právne upozornenie",
+"sl_SI", "Pravni pouk",
+"sv_SE", "Upphovsrätt",
+"tr_TR", "Yasal uyarılar",
+"uk_UA", "Юридична інформація",
+"zh_CN", "法律声明",
+"zh_TW", "法律注意事項"
+];
+
+ruPolicy = "http://www.adobe.com/ru/misc/privacy.html";
+trPolicy = "http://www.adobe.com/tr/misc/privacy.html";
+
+// Bug 2846992: LOC: RUS, TUR: The link to "Online Privacy Policy" should include language, currently it is not appearing.
+if (pageLoc == "ru_RU") {
+	policyPath = "ru";
+}
+else if (pageLoc == "tr_TR") {
+	policyPath = "tr";
+}
+for (var i = 0; i < policyArray.length; i+=2) {
+	if (pageLoc == policyArray[i]) {
+		policyLoc = pageLoc;
+		policyText = policyArray[i+1];
+		var ptn = /(..)_(..)/;
+		if (ptn.test(policyLoc)) {
+			var countryCode = policyLoc.replace(ptn, "$2");
+			policyPath = countryCode.toLowerCase();
+		}
+		break;
+	}
+}
+
+for (var i = 0; i < legalArray.length; i+=2) {
+	if (pageLoc == legalArray[i]) {
+		legalLoc = pageLoc;
+		legalText = legalArray[i+1];
+		legalPath = legalLoc;
+		break;
+	}
+}
+if(agt.indexOf("community help client") > -1 ){
+	document.write('<a href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+}else{
+	//Open the privacy policy in a new window
+	document.write('<a target="_blank" href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a target="_blank" href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+} 
+
+
+remove_all_cookies();
+
+function remove_all_cookies() {
+	var res = document.cookie;
+    var multiple = res.split(";");
+    for(var i = 0; i < multiple.length; i++) {
+    	var key = multiple[i].split("=");
+        document.cookie = key[0]+" =; expires = Thu, 01 Jan 1970 00:00:00 UTC";
+    }
+}
+
+
+</script>
+</p>
+
+
+  
+<!-- localfooter.ssi -->
+
+<script type="text/javascript">
+    var debug = (top.location.href.indexOf("debug=true") > -1);
+</script>
+
+<script language="javascript">
+document.write('<scr'+'ipt ' +
+               'src="/en_US/ssi/_pod.js" ' +
+               'language="javascript" ' +
+               'charset="UTF-8"> ' +
+               '</scr'+'ipt>');
+</script>
+
+//  Ethnio survey code removed
+  
+  
+ </body>
+</html>

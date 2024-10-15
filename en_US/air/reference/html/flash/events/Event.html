@@ -1,0 +1,1578 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"><html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers"><meta name="lang" content="en-us"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="Event,flash.events.Event,ACTIVATE,ADDED,ADDED_TO_STAGE,CANCEL,CHANGE,CLEAR,CLOSE,CLOSING,COMPLETE,CONNECT,CONTEXT3D_CREATE,COPY,CUT,DEACTIVATE,DISPLAYING,ENTER_FRAME,EXITING,EXIT_FRAME,FRAME_CONSTRUCTED,FULLSCREEN,HTML_BOUNDS_CHANGE,HTML_DOM_INITIALIZE,HTML_RENDER,ID3,INIT,LOCATION_CHANGE,MOUSE_LEAVE,NETWORK_CHANGE,OPEN,PASTE,PREPARING,REMOVED,REMOVED_FROM_STAGE,RENDER,RESIZE,SCROLL,SELECT,SELECT_ALL,SOUND_COMPLETE,STANDARD_ERROR_CLOSE,STANDARD_INPUT_CLOSE,STANDARD_OUTPUT_CLOSE,TAB_CHILDREN_CHANGE,TAB_ENABLED_CHANGE,TAB_INDEX_CHANGE,TEXT_INTERACTION_MODE_CHANGE,UNLOAD,USER_IDLE,USER_PRESENT,bubbles,cancelable,currentTarget,eventPhase,target,type,clone,formatToString,isDefaultPrevented,preventDefault,stopImmediatePropagation,stopPropagation,toString"><title>flash.events.Event - Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers</title>
+	<link rel="stylesheet" href="../../jslr-style.css" type="text/css">
+		<script type="text/javascript">
+			
+				var baseRef = "../../";
+				var buildType = 'jslr';
+				var alreadyrunflag=0; //flag to indicate whether target function has already been run
+				var terms_HELPCFG = ".helpcfg";
+
+if (document.addEventListener)
+  document.addEventListener("DOMContentLoaded", function(){alreadyrunflag=1; init()}, false)
+else if (document.all && !window.opera){
+  /* blocks IE from working, as it's fired before dom if ready
+ document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
+  var contentloadtag=document.getElementById("contentloadtag")
+  contentloadtag.onreadystatechange=function(){
+    if (this.readyState=="complete"){
+      alreadyrunflag=1;
+      init();
+    }
+  }*/
+} else if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+  var _timer=setInterval(function(){
+  if(/loaded|complete/.test(document.readyState)){
+    clearInterval(_timer);
+    alreadyrunflag=1;
+    init(); // call target function
+  }}, 10)
+}
+function onLoadFunction() {
+	setTimeout("if (!alreadyrunflag) init();  alreadyrunflag=1; ionReadyLoad(); ", 0);
+}
+
+		</script>
+		<script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+		<script language="javascript" type="text/javascript" src="../../asdoc.js"></script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body onLoad="onLoadFunction()">
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td>
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr>
+				  <td class="titleTableTitleION" align="left" nowrap="true">Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers<br>
+				  <span class="titleTableTopNavION">
+				  <span id="homelink">
+						<a target="_self" href="../../index.html"> Home </a>&nbsp;|&nbsp;
+				  </span>
+				  <a id="showtoc" onClick="showHideTOC(true)" href="#top" style="display:none">Show Classes List</a><a id="hidetoc" onClick="showHideTOC(false)" href="#top" style="display:">Hide Classes List</a>&nbsp;|&nbsp;
+				  <a href="../../all-index-A.html"> Index </a>&nbsp;|&nbsp;
+				  <a href="../../appendixes.html"> Appendixes </a><br>
+				  </span>	
+				  </td>
+				  <td class="titleTableSearchION" align="right" nowrap="true">
+				  <span id="gsa" class="gsa">
+					<form class="searchFormION" method="get" onSubmit="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US');return false;">
+				  <input class="hidden" name="loc" value="" type="hidden">
+				  <input class="hidden" name="termPrefix" value="site:help.adobe.com/en_US/AS3CLR/Flash_10.0" type="hidden">
+				  <input class="hidden" name="title" value="ActionScript 3.0 Reference for the Adobe Flash Platform" type="hidden">
+				  <input class="hidden" name="term" value="" type="hidden">
+				  <input class="hidden" name="area" value="" type="hidden">
+				  <input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text">
+				  <input type="button" name="action" value="" onClick="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US')" class="searchbutton"><br>
+			      <input id="checkBoxId" type="checkbox" name="checkbox" value="checkbox" checked>Language Reference only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  </form>
+				  </span>				  
+				  </td>
+				</tr>
+			  </table>			
+			  </td>
+			<td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logoION.jpg" class="logoImageION" alt=" Adobe Logo " title=" Adobe Logo "></td>
+		  </tr>
+		  <tr>
+			<td colspan="2">
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr class="titleTableRow2">
+				<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+					<convert>Event&nbsp;</convert>
+				</td>
+				<td class="titleTableSubNav" id="subNav" align="right">
+				  <a id="propertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="propertiesBar" style="display:none"> | </span>
+				  <a id="packagePropertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="packagePropertiesBar" style="display:none"> | </span>
+				  <a id="constructorLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+				  <span id="constructorBar" style="display:none"> | </span>
+				  <a id="methodsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Methods </a>
+				  <span id="methodsBar" style="display:none"> | </span>
+				  <a id="packageFunctionsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Functions </a>
+				  <span id="packageFunctionsBar" style="display:none"> | </span>
+				  <a id="eventsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('eventSummary');" style="display:none"> Events </a>
+				  <span id="eventsBar" style="display:none"> | </span>
+				  <a id="stylesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('styleSummary');" style="display:none"> Styles </a>
+				  <span id="stylesBar" style="display:none"> | </span>
+				  <a id="SkinPartLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinPartSummary');" style="display:none"> Skin Parts </a>
+				  <span id="SkinPartBar" style="display:none"> | </span>
+				  <a id="SkinStateLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinStateSummary');" style="display:none"> Skin States </a>
+				  <span id="SkinStateBar" style="display:none"> | </span>
+				  <a id="effectsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('effectSummary');" style="display:none"> Effects </a>
+				  <span id="effectsBar" style="display:none"> | </span>
+				  <a id="constantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="constantsBar" style="display:none"> | </span>
+				  <a id="packageConstantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="packageConstantsBar" style="display:none"> | </span>
+				  <a id="interfacesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('interfaceSummary');" style="display:none"> Interfaces </a>
+				  <span id="interfacesBar" style="display:none"> | </span>
+				  <a id="classesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('classSummary');" style="display:none"> Classes </a>
+				  <span id="classesBar" style="display:none"> | </span>
+				  <a id="packageUseLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('package-use.html');" style="display:none">Use</a>
+				  <span id="packageUseBar" style="display:none"> | </span>
+				  <a id="examplesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('includeExamplesSummary');" style="display:none"> Examples </a>
+				</td>
+				</tr>
+				<tr class="titleTableRow3">
+				  <td colspan="4"></td>
+				</tr>
+			  </table>
+			</td>
+		  </tr>
+		</table>
+        <div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="classlist" class="jslrclasslist">
+					<div class="classlistoutline"></div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content">
+<script language="javascript" type="text/javascript">  <!--  
+         
+        asdocTitle = "Event - Adobe® AIR® API Reference for HTML Developers"; 
+        var baseRef = '../../'; 
+	document.baseRef = '../../'; 
+          -->  </script>
+<script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+<script language="javascript" type="text/javascript"><!--
+function submitValue() {
+var title="Adobe® AIR® API Reference for HTML Developers";
+var searchStr=document.getElementById('search-livedocs').value;
+
+        
+        
+        if(document.getElementById('checkBoxId').checked){
+        window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
++"&site=communityhelp-air-jslr ";
+} 
+
+        else{ 
+window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
+;
+} 
+} 
+--></script><script type="text/javascript"> scrollToNameAnchor(); </script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">window.runtime property</td><td>window.runtime.flash.events.Event</td></tr><tr><td class="classSignature"></td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Event  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><div id="badgeAnchorSupport" class="ionBadgeWrapper"></div><div id="badgeContainerSupport"></div><p></p><p></p>
+
+ The Event class is used as the base class for the creation of Event objects,
+
+ which are passed as parameters to event listeners when an event occurs.
+
+ 
+
+ <p>The properties of the Event class carry basic information about an event, such as 
+
+ the event's type or whether the event's default behavior can be canceled. For many
+
+ events, such as the events represented by the Event class constants, this basic information
+
+ is sufficient. Other events, however, may require more detailed information. <span>The Adobe<sup>&reg;</sup> 
+
+ AIR&trade;</span> API defines several Event subclasses for common
+
+ events that require additional information. Events associated with each of the Event
+
+ subclasses are described in the documentation for each class.</p>
+
+ 
+               <p>The methods of the Event class can be used in event listener functions to affect the
+
+ behavior of the event object. Some events have an associated default behavior.
+
+ <span>For example, the <code>closing</code> event dispatched by a NativeWindow object 
+
+ has an associated default behavior that closes the window.</span> Your event listener can cancel this 
+
+ behavior by calling the <code>preventDefault()</code> method. 
+
+ </p>
+
+               <p>Other sources of information include:</p>
+
+               <ul>
+                  <li>A useful description about the timing of events, code execution, and rendering at runtime in Ted Patrick's blog entry: 
+
+ <a href="http://www.onflex.org/ted/2005/07/flash-player-mental-model-elastic.php" target="external">Flash Player Mental Model - The Elastic Racetrack</a>.</li>
+                  <li>A blog entry by Johannes Tacskovics about the timing of frame events, such as ENTER_FRAME, EXIT_FRAME:
+
+ <a href="http://blog.johannest.com/2009/06/15/the-movieclip-life-cycle-revisited-from-event-added-to-event-removed_from_stage/" target="external">The MovieClip Lifecycle</a>.</li>
+                  <li>An article by Trevor McCauley about the order of ActionScript operations: 
+
+ <a href="http://www.senocular.com/flash/tutorials/orderofoperations/" target="external">Order of Operations in ActionScript</a>.</li>
+                  <li>A blog entry by Matt Przybylski on creating custom events: 
+
+ <a href="http://evolve.reintroducing.com/2007/10/23/as3/as3-custom-events/" target="external">AS3: Custom Events</a>.</li>
+               </ul>
+
+               <p>
+                  <b>Note:</b> Some of the constants in this class are used to define the <code>type</code> 
+
+ property for events that are dispatched by ActionScript 3.0 display list, used in SWF content. However, some
+
+ constants in this class are used to define the <code>type</code> property for events that are <i>not</i>
+
+ related to the ActionScript 3.0 display list and are useful in JavaScript code running in the AIR runtime.</p>
+
+ 
+            <p></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="EventDispatcher.html" target="">EventDispatcher</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Properties</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Properties</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Properties</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th>Defined By</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#bubbles" class="signatureLink">bubbles</a> : Boolean<div class="summaryTableDescription">[read-only] 
+
+	Indicates whether an event is a bubbling event.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#cancelable" class="signatureLink">cancelable</a> : Boolean<div class="summaryTableDescription">[read-only] 
+
+	Indicates whether the behavior associated with the event can be prevented.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">constructor : Object<div class="summaryTableDescription">
+
+	 A reference to the class object or constructor function for a given object instance.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#currentTarget" class="signatureLink">currentTarget</a> : Object<div class="summaryTableDescription">[read-only] 
+
+	The object that is actively processing the Event object with an event listener.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#eventPhase" class="signatureLink">eventPhase</a> : uint<div class="summaryTableDescription">[read-only] 
+
+	The current phase in the event flow.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">prototype : Object<div class="summaryTableDescription">[static] 
+
+	 A reference to the prototype object of a class or function object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#target" class="signatureLink">target</a> : Object<div class="summaryTableDescription">[read-only] 
+
+	The event target.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#type" class="signatureLink">type</a> : String<div class="summaryTableDescription">[read-only] 
+
+	The type of event.</div></td><td class="summaryTableOwnerCol">Event</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Public Methods </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Methods</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th>Defined By</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#Event()" class="signatureLink">Event</a>(type:String, bubbles:Boolean = false, cancelable:Boolean = false)</div><div class="summaryTableDescription">
+
+     Creates an Event object to pass as a parameter to event listeners.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#clone()" class="signatureLink">clone</a>():<a href="Event.html">Event</a></div><div class="summaryTableDescription">
+
+	 Duplicates an instance of an Event subclass.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#formatToString()" class="signatureLink">formatToString</a>(className:String, ... arguments):String</div><div class="summaryTableDescription">
+
+	 A utility function for implementing the toString() method in custom 
+
+	 ActionScript 3.0 Event classes.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">hasOwnProperty(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an object has a specified property defined.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isDefaultPrevented()" class="signatureLink">isDefaultPrevented</a>():Boolean</div><div class="summaryTableDescription">
+
+	Checks whether the preventDefault() method has been called on the event.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">isPrototypeOf(theClass:Object):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+
+	 as the parameter.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#preventDefault()" class="signatureLink">preventDefault</a>():void</div><div class="summaryTableDescription">
+
+	Cancels an event's default behavior if that behavior can be canceled.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">propertyIsEnumerable(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether the specified property exists and is enumerable.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">setPropertyIsEnumerable(name:String, isEnum:Boolean = true):void</div><div class="summaryTableDescription">
+
+     Sets the availability of a dynamic property for loop operations.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#stopImmediatePropagation()" class="signatureLink">stopImmediatePropagation</a>():void</div><div class="summaryTableDescription">
+
+	Prevents processing of any event listeners in the current node and any subsequent nodes in 
+
+	the event flow.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#stopPropagation()" class="signatureLink">stopPropagation</a>():void</div><div class="summaryTableDescription">
+
+	Prevents processing of any event listeners in nodes subsequent to the current node in the 
+
+	event flow.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toLocaleString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of this object, formatted according to locale-specific conventions.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#toString()" class="signatureLink">toString</a>():String</div><div class="summaryTableDescription">
+
+	Returns a string containing all the properties of the Event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">valueOf():Object</div><div class="summaryTableDescription">
+
+	 Returns the primitive value of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="constantSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th>Defined By</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ACTIVATE" class="signatureLink">ACTIVATE</a> : String = "activate"<div class="summaryTableDescription">[static] 
+
+	The ACTIVATE constant defines the value of the type property of an activate event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ADDED" class="signatureLink">ADDED</a> : String = "added"<div class="summaryTableDescription">[static] 
+
+	The Event.ADDED constant defines the value of the type property of 
+
+	an added event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9.0.28.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ADDED_TO_STAGE" class="signatureLink">ADDED_TO_STAGE</a> : String = "addedToStage"<div class="summaryTableDescription">[static] 
+
+	The Event.ADDED_TO_STAGE constant defines the value of the type 
+
+	property of an addedToStage event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#CANCEL" class="signatureLink">CANCEL</a> : String = "cancel"<div class="summaryTableDescription">[static] 
+
+	The Event.CANCEL constant defines the value of the type property of a cancel event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#CHANGE" class="signatureLink">CHANGE</a> : String = "change"<div class="summaryTableDescription">[static] 
+
+	The Event.CHANGE constant defines the value of the type property of a change event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#CLEAR" class="signatureLink">CLEAR</a> : String = "clear"<div class="summaryTableDescription">[static] 
+
+	The Event.CLEAR constant defines the value of the type property 
+
+	of a clear event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#CLOSE" class="signatureLink">CLOSE</a> : String = "close"<div class="summaryTableDescription">[static] 
+
+	The Event.CLOSE constant defines the value of the type property of a close event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#CLOSING" class="signatureLink">CLOSING</a> : String = "closing"<div class="summaryTableDescription">[static] 
+
+	The Event.CLOSING constant defines the value of the 
+
+	type property of a closing event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#COMPLETE" class="signatureLink">COMPLETE</a> : String = "complete"<div class="summaryTableDescription">[static] 
+
+	The Event.COMPLETE constant defines the value of the type property of a complete event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#CONNECT" class="signatureLink">CONNECT</a> : String = "connect"<div class="summaryTableDescription">[static] 
+
+	The Event.CONNECT constant defines the value of the type property of a connect event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#CONTEXT3D_CREATE" class="signatureLink">CONTEXT3D_CREATE</a> : String = "context3DCreate"<div class="summaryTableDescription">[static] 
+
+	 The Event.CONTEXT3D_CREATE constant defines the value of the type 
+
+	 property of a context3Dcreate event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#COPY" class="signatureLink">COPY</a> : String = "copy"<div class="summaryTableDescription">[static] 
+
+	Defines the value of the type property of a copy event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#CUT" class="signatureLink">CUT</a> : String = "cut"<div class="summaryTableDescription">[static] 
+
+	Defines the value of the type property of a cut event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#DEACTIVATE" class="signatureLink">DEACTIVATE</a> : String = "deactivate"<div class="summaryTableDescription">[static] 
+
+	The Event.DEACTIVATE constant defines the value of the type property of a deactivate event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#DISPLAYING" class="signatureLink">DISPLAYING</a> : String = "displaying"<div class="summaryTableDescription">[static] 
+
+	 The Event.DISPLAYING constant defines the value of the type property of a displaying event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ENTER_FRAME" class="signatureLink">ENTER_FRAME</a> : String = "enterFrame"<div class="summaryTableDescription">[static] 
+
+	The Event.ENTER_FRAME constant defines the value of the type property of an enterFrame event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#EXIT_FRAME" class="signatureLink">EXIT_FRAME</a> : String = "exitFrame"<div class="summaryTableDescription">[static] 
+
+	The Event.EXIT_FRAME constant defines the value of the type property of an exitFrame event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#EXITING" class="signatureLink">EXITING</a> : String = "exiting"<div class="summaryTableDescription">[static] 
+
+	The Event.EXITING constant defines the value of the type property of an exiting event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#FRAME_CONSTRUCTED" class="signatureLink">FRAME_CONSTRUCTED</a> : String = "frameConstructed"<div class="summaryTableDescription">[static] 
+
+	The Event.FRAME_CONSTRUCTED constant defines the value of the type property of an frameConstructed event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#FULLSCREEN" class="signatureLink">FULLSCREEN</a> : String = "fullScreen"<div class="summaryTableDescription">[static] 
+
+	The Event.FULL_SCREEN constant defines the value of the type property of a fullScreen event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#HTML_BOUNDS_CHANGE" class="signatureLink">HTML_BOUNDS_CHANGE</a> : String = "htmlBoundsChange"<div class="summaryTableDescription">[static] 
+
+	The Event.HTML_BOUNDS_CHANGE constant defines the value of the type property of an htmlBoundsChange event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#HTML_DOM_INITIALIZE" class="signatureLink">HTML_DOM_INITIALIZE</a> : String = "htmlDOMInitialize"<div class="summaryTableDescription">[static] 
+
+	The Event.HTML_DOM_INITIALIZE constant defines the value of the type property 
+
+	of an htmlDOMInitialize event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#HTML_RENDER" class="signatureLink">HTML_RENDER</a> : String = "htmlRender"<div class="summaryTableDescription">[static] 
+
+	The Event.HTML_RENDER constant defines the value of the type property of an htmlRender event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ID3" class="signatureLink">ID3</a> : String = "id3"<div class="summaryTableDescription">[static] 
+
+	The Event.ID3 constant defines the value of the type property of an id3 event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#INIT" class="signatureLink">INIT</a> : String = "init"<div class="summaryTableDescription">[static] 
+
+	The Event.INIT constant defines the value of the type property of an init event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#LOCATION_CHANGE" class="signatureLink">LOCATION_CHANGE</a> : String = "locationChange"<div class="summaryTableDescription">[static] 
+
+	The Event.LOCATION_CHANGE constant defines the value of the type property of a locationChange event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#MOUSE_LEAVE" class="signatureLink">MOUSE_LEAVE</a> : String = "mouseLeave"<div class="summaryTableDescription">[static] 
+
+	The Event.MOUSE_LEAVE constant defines the value of the type property of a mouseLeave event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#NETWORK_CHANGE" class="signatureLink">NETWORK_CHANGE</a> : String = "networkChange"<div class="summaryTableDescription">[static] 
+
+	The Event.NETWORK_CHANGE constant defines the value of the type property of a networkChange event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#OPEN" class="signatureLink">OPEN</a> : String = "open"<div class="summaryTableDescription">[static] 
+
+	The Event.OPEN constant defines the value of the type property of an open event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#PASTE" class="signatureLink">PASTE</a> : String = "paste"<div class="summaryTableDescription">[static] 
+
+	The Event.PASTE constant defines the value of the type property of a paste event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="AIR::2.6##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#PREPARING" class="signatureLink">PREPARING</a> : String = "preparing"<div class="summaryTableDescription">[static] 
+
+	 The Event.PREPARING constant defines the value of the type property of a preparing event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#REMOVED" class="signatureLink">REMOVED</a> : String = "removed"<div class="summaryTableDescription">[static] 
+
+	The Event.REMOVED constant defines the value of the type property of
+
+	a removed event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9.0.28.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#REMOVED_FROM_STAGE" class="signatureLink">REMOVED_FROM_STAGE</a> : String = "removedFromStage"<div class="summaryTableDescription">[static] 
+
+	The Event.REMOVED_FROM_STAGE constant defines the value of the type 
+
+	property of a removedFromStage event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#RENDER" class="signatureLink">RENDER</a> : String = "render"<div class="summaryTableDescription">[static] 
+
+	The Event.RENDER constant defines the value of the type property of a render event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#RESIZE" class="signatureLink">RESIZE</a> : String = "resize"<div class="summaryTableDescription">[static] 
+
+	The Event.RESIZE constant defines the value of the type property of a resize event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#SCROLL" class="signatureLink">SCROLL</a> : String = "scroll"<div class="summaryTableDescription">[static] 
+
+	The Event.SCROLL constant defines the value of the type property of a scroll event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#SELECT" class="signatureLink">SELECT</a> : String = "select"<div class="summaryTableDescription">[static] 
+
+	The Event.SELECT constant defines the value of the type property of a select event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#SELECT_ALL" class="signatureLink">SELECT_ALL</a> : String = "selectAll"<div class="summaryTableDescription">[static] 
+
+	The Event.SELECT_ALL constant defines the value of the type property of a selectAll event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#SOUND_COMPLETE" class="signatureLink">SOUND_COMPLETE</a> : String = "soundComplete"<div class="summaryTableDescription">[static] 
+
+	The Event.SOUND_COMPLETE constant defines the value of the type property of a soundComplete event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="AIR::2##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#STANDARD_ERROR_CLOSE" class="signatureLink">STANDARD_ERROR_CLOSE</a> : String = "standardErrorClose"<div class="summaryTableDescription">[static] 
+
+	The Event.STANDARD_ERROR_CLOSE constant defines the value of the type property of a standardErrorClose event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="AIR::2##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#STANDARD_INPUT_CLOSE" class="signatureLink">STANDARD_INPUT_CLOSE</a> : String = "standardInputClose"<div class="summaryTableDescription">[static] 
+
+	The Event.STANDARD_INPUT_CLOSE constant defines the value of the type property of a standardInputClose event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="AIR::2##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#STANDARD_OUTPUT_CLOSE" class="signatureLink">STANDARD_OUTPUT_CLOSE</a> : String = "standardOutputClose"<div class="summaryTableDescription">[static] 
+
+	The Event.STANDARD_OUTPUT_CLOSE constant defines the value of the type property of a standardOutputClose event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#TAB_CHILDREN_CHANGE" class="signatureLink">TAB_CHILDREN_CHANGE</a> : String = "tabChildrenChange"<div class="summaryTableDescription">[static] 
+
+	The Event.TAB_CHILDREN_CHANGE constant defines the value of the type property of a tabChildrenChange event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#TAB_ENABLED_CHANGE" class="signatureLink">TAB_ENABLED_CHANGE</a> : String = "tabEnabledChange"<div class="summaryTableDescription">[static] 
+
+	The Event.TAB_ENABLED_CHANGE constant defines the value of the type 
+
+	property of a tabEnabledChange event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#TAB_INDEX_CHANGE" class="signatureLink">TAB_INDEX_CHANGE</a> : String = "tabIndexChange"<div class="summaryTableDescription">[static] 
+
+	The Event.TAB_INDEX_CHANGE constant defines the value of the 
+
+	type property of a tabIndexChange event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::11##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#TEXT_INTERACTION_MODE_CHANGE" class="signatureLink">TEXT_INTERACTION_MODE_CHANGE</a> : String = "textInteractionModeChange"<div class="summaryTableDescription">[static] 
+
+	The Event.TEXT_INTERACTION_MODE_CHANGE constant defines the value of the type property of an interaction mode event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#UNLOAD" class="signatureLink">UNLOAD</a> : String = "unload"<div class="summaryTableDescription">[static] 
+
+	The Event.UNLOAD constant defines the value of the type property of an unload event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#USER_IDLE" class="signatureLink">USER_IDLE</a> : String = "userIdle"<div class="summaryTableDescription">[static] 
+
+	The Event.USER_IDLE constant defines the value of the type property of a userIdle event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr><tr class="" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#USER_PRESENT" class="signatureLink">USER_PRESENT</a> : String = "userPresent"<div class="summaryTableDescription">[static] 
+
+	The Event.USER_PRESENT constant defines the value of the type property of a userPresent event object.</div></td><td class="summaryTableOwnerCol">Event</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Property Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="bubbles"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>bubbles</h2></td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>bubbles:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	Indicates whether an event is a bubbling event. If the event can bubble, 
+
+	this value is <code>true</code>; otherwise it is <code>false</code>.
+
+	
+
+	<p>Event bubbling is defined for display objects in SWF content,
+
+	which uses the ActionScript 3.0 display object model. The <code>bubbles</code> property
+
+	is only relavent in ActionScript 3.0 code.</p>
+
+	
+
+	
+
+	
+
+	
+
+	
+	</p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="cancelable"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>cancelable</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>cancelable:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	Indicates whether the behavior associated with the event can be prevented. 
+
+	If the behavior can be canceled, this value is <code>true</code>; otherwise it is <code>false</code>.
+
+	
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Event.html#preventDefault()" target="">Event.preventDefault()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="currentTarget"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>currentTarget</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>currentTarget:Object</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The object that is actively processing the Event object with an event listener. For example, if a user clicks an OK button, the current target could be the node containing that button or one of its ancestors that has registered an event listener for that event.
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="eventPhase"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>eventPhase</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>eventPhase:uint</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The current phase in the event flow. This property can contain the following numeric values:
+
+	<ul><li> The capture phase (<code>EventPhase.CAPTURING_PHASE</code>).</li><li> The target phase (<code>EventPhase.AT_TARGET</code>).</li><li> The bubbling phase (<code>EventPhase.BUBBLING_PHASE</code>).</li></ul>
+
+	
+	<p>The event flow is defined for display objects in SWF content, which use
+
+	the ActionScript 3.0 display object model. The <code>eventPhase</code> property
+
+	is only relavent in ActionScript 3.0 code.</p>
+
+	
+	</p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="target"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>target</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>target:Object</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The event target. This property contains the target node. For example, if a user clicks an OK button, the target node is the display list node containing that button.
+
+	
+	</p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="type"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>type</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>type:String</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The type of event. The type is case-sensitive.
+
+	
+	</p></div></span><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="Event()"></a><a name="Event(String,Boolean,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>Event</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function Event(type:String, bubbles:Boolean = false, cancelable:Boolean = false)</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p>
+
+     Creates an Event object to pass as a parameter to event listeners.
+
+     
+	 </p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:String</code> &mdash;  The type of the event, accessible as <code>Event.type</code>.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">bubbles</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash;  Determines whether the Event object participates in the bubbling stage of the event flow. The default value is <code>false</code>.
+
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">cancelable</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Determines whether the Event object can be canceled. The default value is <code>false</code>.
+
+     
+     </td></tr></table></div></span><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="clone()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>clone</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function clone():<a href="Event.html">Event</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 Duplicates an instance of an Event subclass.
+
+	 
+     <p>Returns a new Event object that is a copy of the original instance of the Event object. 
+
+	 You do not normally call <code>clone()</code>; the EventDispatcher class calls it automatically
+
+	 when you redispatch an event&mdash;that is, when you call <code>dispatchEvent(event)</code> from a handler
+
+	 that is handling <code>event</code>.</p>
+
+	 
+
+	 <p>The new Event object includes all the properties of the original.</p> 
+
+	 
+	 
+
+	 
+
+	 
+
+	 
+
+	 
+
+	 
+
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Event.html">Event</a></code> &mdash; A new Event object that is identical to the original.
+
+	 </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="formatToString()"></a><a name="formatToString(String,restParam)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>formatToString</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function formatToString(className:String, ... arguments):String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 A utility function for implementing the <code>toString()</code> method in custom 
+
+	 ActionScript 3.0 Event classes. 
+
+	 
+
+	 
+
+	 
+
+	 <p>This method is used in creating ActionScript 3.0 classes 
+
+	 to be used in SWF content.</p>
+
+	 
+
+	 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">className</span>:String</code> &mdash; The name of your custom Event class. 
+
+	 
+
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code>... <span class="label">arguments</span></code> &mdash; The properties of the Event class.
+
+	 
+
+	 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; The name of your custom Event class and the String value of your <code>...arguments</code>
+
+	 parameter.
+
+	 
+
+	 </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="isDefaultPrevented()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>isDefaultPrevented</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function isDefaultPrevented():Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	Checks whether the <code>preventDefault()</code> method has been called on the event. If the
+
+	<code>preventDefault()</code> method has been called,
+
+	returns <code>true</code>; otherwise, returns <code>false</code>.
+
+	
+	</p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; If <code>preventDefault()</code> has been called, returns <code>true</code>; otherwise,
+
+	returns <code>false</code>.
+
+	
+
+	</td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Event.html#preventDefault()" target="">Event.preventDefault()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="preventDefault()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>preventDefault</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function preventDefault():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	Cancels an event's default behavior if that behavior can be canceled.
+
+	
+
+	<p>Many events have associated behaviors that are carried out by default. 
+
+	
+
+	<span>For example, if a user clicks the close box of a window, 
+
+	the default behavior is that the window closes. Because the <code>closing</code> 
+
+	event's default behavior can be canceled, you can use the <code>preventDefault()</code> 
+
+	method to prevent the window from closing.</span>
+
+	</p>
+
+	
+
+    
+
+	
+
+	<p>You can use the <code>Event.cancelable</code> property to check whether you can prevent 
+
+	the default behavior associated with a particular event. If the value of 
+
+	<code>Event.cancelable</code> is <code>true</code>, then <code>preventDefault()</code> can 
+
+	be used to cancel the event; otherwise, <code>preventDefault()</code> has no effect.</p>
+
+	
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Event.html#isDefaultPrevented()" target="">Event.isDefaultPrevented()</a><br/><a href="Event.html#cancelable" target="">Event.cancelable</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="stopImmediatePropagation()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>stopImmediatePropagation</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function stopImmediatePropagation():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	Prevents processing of any event listeners in the current node and any subsequent nodes in 
+
+	the event flow. 
+
+	
+
+	
+
+	
+	<p>The event flow is defined for display objects in SWF content, which use
+
+	the ActionScript 3.0 display object model.</p>
+
+	
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Event.html#stopPropagation()" target="">Event.stopPropagation()</a><br/><a href="Event.html#preventDefault()" target="">Event.preventDefault()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="stopPropagation()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>stopPropagation</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function stopPropagation():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	Prevents processing of any event listeners in nodes subsequent to the current node in the 
+
+	event flow. 
+
+	
+
+	
+
+	
+	<p>The event flow is defined for display objects in SWF content, which use
+
+	the ActionScript 3.0 display object model.</p>
+
+	
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Event.html#stopImmediatePropagation()" target="">Event.stopImmediatePropagation()</a><br/><a href="Event.html#preventDefault()" target="">Event.preventDefault()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="toString()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>toString</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function toString():String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	Returns a string containing all the properties of the Event object. The string is in the following format:
+
+	<p><code>[Event type=<i>value</i> bubbles=<i>value</i> cancelable=<i>value</i>]</code></p>
+
+	
+	</p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; A string containing all the properties of the Event object.
+
+	 
+
+	 </td></tr></table></div></span><div class="detailSectionHeader">Constant Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="ACTIVATE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>ACTIVATE</h2></td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const ACTIVATE:String = "activate"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>ACTIVATE</code> constant defines the value of the <code>type</code> property of an <code>activate</code> event object. 
+
+	<p><b>Note:</b> This event has neither a "capture phase" nor a "bubble phase",
+
+	which means that event listeners must be added directly to any potential targets, 
+
+	whether the target is on the display list or not.</p>
+
+	<p>AIR for TV devices never automatically dispatch this event. You can, however, dispatch it manually.</p>
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>Any DisplayObject instance with a listener registered for the <code>activate</code> event.</td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="EventDispatcher.html#event:activate#event:activate" target="">EventDispatcher.activate</a><br/><a href="Event.html#DEACTIVATE" target="">DEACTIVATE</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="ADDED"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>ADDED</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const ADDED:String = "added"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.ADDED</code> constant defines the value of the <code>type</code> property of 
+
+	an <code>added</code> event object. 
+
+	
+
+	<p>The <code>added</code> event applies to the ActionScript 3.0 display list
+
+	and is not relevant to JavaScript code.</p>
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>true</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The DisplayObject instance being added to the display list.
+
+	The <code>target</code> is not always the object in the display list 
+
+	that registered the event listener. Use the <code>currentTarget</code> 
+
+	property to access the object in the display list that is currently processing the event.</td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Event.html#ADDED_TO_STAGE" target="">ADDED_TO_STAGE</a><br/><a href="Event.html#REMOVED" target="">REMOVED</a><br/><a href="Event.html#REMOVED_FROM_STAGE" target="">REMOVED_FROM_STAGE</a></div></div></span><span id="pageFilter" runtime="Flash::9.0.28.0##Lite::4##"><a name="constantDetail"></a><a name="ADDED_TO_STAGE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>ADDED_TO_STAGE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const ADDED_TO_STAGE:String = "addedToStage"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.ADDED_TO_STAGE</code> constant defines the value of the <code>type</code> 
+
+	property of an <code>addedToStage</code> event object. 
+
+	
+
+	<p>The <code>addedToStage</code> event applies to the ActionScript 3.0 display list
+
+	and is not relevant to JavaScript code.</p>
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The DisplayObject instance being added to the on-stage display list,
+
+	either directly or through the addition of a subtree in which the DisplayObject instance is contained.
+
+	If the DisplayObject instance is being directly added, the <code>added</code> event occurs before this event.</td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Event.html#ADDED" target="">ADDED</a><br/><a href="Event.html#REMOVED" target="">REMOVED</a><br/><a href="Event.html#REMOVED_FROM_STAGE" target="">REMOVED_FROM_STAGE</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="CANCEL"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>CANCEL</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const CANCEL:String = "cancel"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.CANCEL</code> constant defines the value of the <code>type</code> property of a <code>cancel</code> event object. 
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>A reference to the object on which the operation is canceled.</td></tr></table>
+
+	</p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="CHANGE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>CHANGE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const CHANGE:String = "change"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.CHANGE</code> constant defines the value of the <code>type</code> property of a <code>change</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>true</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The object that has had its value modified. 
+
+	The <code>target</code> is not always the object in the display list 
+
+	that registered the event listener. Use the <code>currentTarget</code> 
+
+	property to access the object in the display list that is currently processing the event.</td></tr></table>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="constantDetail"></a><a name="CLEAR"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>CLEAR</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const CLEAR:String = "clear"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.CLEAR</code> constant defines the value of the <code>type</code> property 
+
+	of a <code>clear</code> event object. 
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>Any InteractiveObject instance with a listener registered for the <code>clear</code> event.</td></tr></table>
+
+	
+	<p><b>Note:</b> TextField objects do <i>not</i> dispatch <code>clear</code>, <code>copy</code>, <code>cut</code>, <code>paste</code>,
+
+	or <code>selectAll</code> events. TextField objects always include Cut, Copy, Paste, Clear, and Select All commands in the context menu.
+
+	You cannot remove these commands from the context menu for TextField objects. For TextField objects, selecting these commands 
+
+	(or their keyboard equivalents) does not generate <code>clear</code>, <code>copy</code>, <code>cut</code>, <code>paste</code>, 
+
+	or <code>selectAll</code> events. However, other classes that extend the InteractiveObject class, including components built 
+
+	using the Flash Text Engine (FTE), will dispatch these events in response to user actions such as keyboard shortcuts and context menus.</p>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="CLOSE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>CLOSE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const CLOSE:String = "close"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.CLOSE</code> constant defines the value of the <code>type</code> property of a <code>close</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The object whose connection has been closed.</td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../flash/net/Socket.html#event:close#event:close" target="">Socket.close</a><br/><a href="../../flash/net/XMLSocket.html#event:close#event:close" target="">XMLSocket.close</a><br/><a href="../../flash/display/NativeWindow.html#event:close#event:close" target="">NativeWindow.close</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##Lite::4##"><a name="constantDetail"></a><a name="CLOSING"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>CLOSING</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const CLOSING:String = "closing"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.CLOSING</code> constant defines the value of the 
+
+	<code>type</code> property of a <code>closing</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>true</code>; canceling this event object stops the close operation.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	                                               object with an event listener.</td></tr><tr><td><code>target</code></td><td>The object whose connection is to be closed.</td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../flash/display/NativeWindow.html#event:closing#event:closing" target="">NativeWindow.closing</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="COMPLETE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>COMPLETE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const COMPLETE:String = "complete"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.COMPLETE</code> constant defines the value of the <code>type</code> property of a <code>complete</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The network object that has completed loading. 
+
+	    </td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../flash/media/Sound.html#event:complete#event:complete" target="">Sound.complete</a><br/><a href="../../flash/net/URLLoader.html#event:complete#event:complete" target="">URLLoader.complete</a><br/><a href="../../flash/net/URLStream.html#event:complete#event:complete" target="">URLStream.complete</a><br/><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118a9b90204-7cfd.html" target="_top">Loading external data</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="CONNECT"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>CONNECT</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const CONNECT:String = "connect"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.CONNECT</code> constant defines the value of the <code>type</code> property of a <code>connect</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The Socket or XMLSocket object that has established a network connection.</td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../flash/net/Socket.html#event:connect#event:connect" target="">Socket.connect</a><br/><a href="../../flash/net/XMLSocket.html#event:connect#event:connect" target="">XMLSocket.connect</a></div></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="constantDetail"></a><a name="CONTEXT3D_CREATE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>CONTEXT3D_CREATE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const CONTEXT3D_CREATE:String = "context3DCreate"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+	 The <code>Event.CONTEXT3D_CREATE</code> constant defines the value of the <code>type</code> 
+
+	 property of a <code>context3Dcreate</code> event object.
+
+	 
+
+	 This event is dispatched by Stage3D objects in response to either a call to 
+
+	 <code>Stage3D.requestContext3D()</code> or in response to an OS-triggered reset of the 
+
+	 rendering context of the Stage3D object. Use the <code>context3D</code> property of the Stage3D 
+
+	 object to access the newly created Context3D instance. 
+
+	  
+
+	 
+
+	 </p></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="constantDetail"></a><a name="COPY"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>COPY</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const COPY:String = "copy"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+	Defines the value of the <code>type</code> property of a <code>copy</code> event object. 
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>Any InteractiveObject instance with a listener registered for the <code>copy</code> event.</td></tr></table>
+
+	
+	<p><b>Note:</b> TextField objects do <i>not</i> dispatch <code>clear</code>, <code>copy</code>, <code>cut</code>, <code>paste</code>,
+
+	or <code>selectAll</code> events. TextField objects always include Cut, Copy, Paste, Clear, and Select All commands in the context menu.
+
+	You cannot remove these commands from the context menu for TextField objects. For TextField objects, selecting these commands 
+
+	(or their keyboard equivalents) does not generate <code>clear</code>, <code>copy</code>, <code>cut</code>, <code>paste</code>, 
+
+	or <code>selectAll</code> events. However, other classes that extend the InteractiveObject class, including components built 
+
+	using the Flash Text Engine (FTE), will dispatch these events in response to user actions such as keyboard shortcuts and context menus.</p>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="constantDetail"></a><a name="CUT"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>CUT</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const CUT:String = "cut"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+	Defines the value of the <code>type</code> property of a <code>cut</code> event object. 
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>Any InteractiveObject instance with a listener registered for the <code>cut</code> event.</td></tr></table>
+
+	
+	<p><b>Note:</b> TextField objects do <i>not</i> dispatch <code>clear</code>, <code>copy</code>, <code>cut</code>, <code>paste</code>,
+
+	or <code>selectAll</code> events. TextField objects always include Cut, Copy, Paste, Clear, and Select All commands in the context menu.
+
+	You cannot remove these commands from the context menu for TextField objects. For TextField objects, selecting these commands 
+
+	(or their keyboard equivalents) does not generate <code>clear</code>, <code>copy</code>, <code>cut</code>, <code>paste</code>, 
+
+	or <code>selectAll</code> events. However, other classes that extend the InteractiveObject class, including components built 
+
+	using the Flash Text Engine (FTE), will dispatch these events in response to user actions such as keyboard shortcuts and context menus.</p>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="DEACTIVATE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>DEACTIVATE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const DEACTIVATE:String = "deactivate"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.DEACTIVATE</code> constant defines the value of the <code>type</code> property of a <code>deactivate</code> event object. 
+
+	<p><b>Note:</b> This event has neither a "capture phase" nor a "bubble phase",
+
+	which means that event listeners must be added directly to any potential targets, 
+
+	whether the target is on the display list or not.</p>
+
+    <p>AIR for TV devices never automatically dispatch this event. You can, however, dispatch it manually.</p>
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>Any DisplayObject instance with a listener registered for the <code>deactivate</code> event.</td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="EventDispatcher.html#event:deactivate#event:deactivate" target="">EventDispatcher.deactivate</a><br/><a href="Event.html#ACTIVATE" target="">ACTIVATE</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##Lite::4##"><a name="constantDetail"></a><a name="DISPLAYING"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>DISPLAYING</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const DISPLAYING:String = "displaying"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	 The <code>Event.DISPLAYING</code> constant defines the value of the <code>type</code> property of a <code>displaying</code> event object. 
+
+	 <p><b>Note:</b> This event does not go through a "capture phase" 
+
+	 and is dispatched directly to the target, whether the target is on the display list or not.</p>
+
+	 <p>This event has the following properties:</p>
+
+	 <table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code></td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	 object with an event listener.</td></tr><tr><td><code>target</code></td><td>The object that is about to be displayed.</td></tr></table>
+
+	 
+
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../flash/display/NativeMenu.html#event:displaying#event:displaying" target="">NativeMenu.displaying</a><br/><a href="../../flash/display/NativeMenuItem.html#event:displaying#event:displaying" target="">NativeMenuItem.displaying</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="ENTER_FRAME"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>ENTER_FRAME</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const ENTER_FRAME:String = "enterFrame"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.ENTER_FRAME</code> constant defines the value of the <code>type</code> property of an <code>enterFrame</code> event object. 
+
+	<p><b>Note:</b> This event has neither a "capture phase" nor a "bubble phase",
+
+	which means that event listeners must be added directly to any potential targets, 
+
+	whether the target is on the display list or not.</p>
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>Any DisplayObject instance with a listener registered for the <code>enterFrame</code> event.</td></tr></table>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="EXIT_FRAME"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>EXIT_FRAME</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const EXIT_FRAME:String = "exitFrame"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.EXIT_FRAME</code> constant defines the value of the <code>type</code> property of an <code>exitFrame</code> event object. 
+
+	<p><b>Note:</b> This event has neither a "capture phase" nor a "bubble phase",
+
+	which means that event listeners must be added directly to any potential targets, 
+
+	whether the target is on the display list or not.</p>
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>Any DisplayObject instance with a listener registered for the <code>enterFrame</code> event.</td></tr></table>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="AIR::1.0##Lite::4##"><a name="constantDetail"></a><a name="EXITING"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>EXITING</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const EXITING:String = "exiting"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.EXITING</code> constant defines the value of the <code>type</code> property of an <code>exiting</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>true</code>; canceling this event object stops the exit operation.</td></tr><tr><td><code>currentTarget</code></td><td>The NativeApplication object.</td></tr><tr><td><code>target</code></td><td>The NativeApplication object.</td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../flash/desktop/NativeApplication.html#event:exiting#event:exiting" target="">NativeApplication.exiting</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="FRAME_CONSTRUCTED"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>FRAME_CONSTRUCTED</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const FRAME_CONSTRUCTED:String = "frameConstructed"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.FRAME_CONSTRUCTED</code> constant defines the value of the <code>type</code> property of an <code>frameConstructed</code> event object. 
+
+	
+
+	<p><b>Note:</b> This event has neither a "capture phase" nor a "bubble phase",
+
+	which means that event listeners must be added directly to any potential targets, 
+
+	whether the target is on the display list or not.</p>
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>Any DisplayObject instance with a listener registered for the <code>frameConstructed</code> event.</td></tr></table>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="FULLSCREEN"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>FULLSCREEN</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const FULLSCREEN:String = "fullScreen"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.FULL_SCREEN</code> constant defines the value of the <code>type</code> property of a <code>fullScreen</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The Stage object.</td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../flash/display/Stage.html#event:fullScreen#event:fullScreen" target="">Stage.fullScreen</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##Lite::4##"><a name="constantDetail"></a><a name="HTML_BOUNDS_CHANGE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>HTML_BOUNDS_CHANGE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const HTML_BOUNDS_CHANGE:String = "htmlBoundsChange"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.HTML_BOUNDS_CHANGE</code> constant defines the value of the <code>type</code> property of an <code>htmlBoundsChange</code> event object.
+
+	
+
+	<p>This event has the following properties:</p>
+
+	
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The HTMLLoader object.</td></tr><tr><td><code>target</code></td><td>The HTMLLoader object.</td></tr></table>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="AIR::1.0##Lite::4##"><a name="constantDetail"></a><a name="HTML_DOM_INITIALIZE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>HTML_DOM_INITIALIZE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const HTML_DOM_INITIALIZE:String = "htmlDOMInitialize"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.HTML_DOM_INITIALIZE</code> constant defines the value of the <code>type</code> property 
+
+	of an <code>htmlDOMInitialize</code> event object.
+
+	
+
+	<p>This event has the following properties:</p>
+
+	
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The HTMLLoader object.</td></tr><tr><td><code>target</code></td><td>The HTMLLoader object.</td></tr></table>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="AIR::1.0##Lite::4##"><a name="constantDetail"></a><a name="HTML_RENDER"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>HTML_RENDER</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const HTML_RENDER:String = "htmlRender"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.HTML_RENDER</code> constant defines the value of the <code>type</code> property of an <code>htmlRender</code> event object.
+
+	
+
+	<p>This event has the following properties:</p>
+
+	
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The HTMLLoader object.</td></tr><tr><td><code>target</code></td><td>The HTMLLoader object.</td></tr></table>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="ID3"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>ID3</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const ID3:String = "id3"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.ID3</code> constant defines the value of the <code>type</code> property of an <code>id3</code> event object. 
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The Sound object loading the MP3 for which ID3 data is now available. 
+
+	The <code>target</code> is not always the object in the display list 
+
+	that registered the event listener. Use the <code>currentTarget</code> 
+
+	property to access the object in the display list that is currently processing the event.</td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../flash/media/Sound.html#event:id3#event:id3" target="">Sound.id3</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="INIT"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>INIT</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const INIT:String = "init"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.INIT</code> constant defines the value of the <code>type</code> property of an <code>init</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The LoaderInfo object associated with the SWF file being loaded.</td></tr></table>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="AIR::1.0##Lite::4##"><a name="constantDetail"></a><a name="LOCATION_CHANGE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>LOCATION_CHANGE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const LOCATION_CHANGE:String = "locationChange"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.LOCATION_CHANGE</code> constant defines the value of the <code>type</code> property of a <code>locationChange</code> event object.
+
+	
+
+	<p>This event has the following properties:</p>
+
+	
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The HTMLLoader object.</td></tr><tr><td><code>target</code></td><td>The HTMLLoader object.</td></tr></table>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="MOUSE_LEAVE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>MOUSE_LEAVE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const MOUSE_LEAVE:String = "mouseLeave"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.MOUSE_LEAVE</code> constant defines the value of the <code>type</code> property of a <code>mouseLeave</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The Stage object. 
+
+	The <code>target</code> is not always the object in the display list 
+
+	that registered the event listener. Use the <code>currentTarget</code> 
+
+	property to access the object in the display list that is currently processing the event.</td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../flash/display/Stage.html#event:mouseLeave#event:mouseLeave" target="">Stage.mouseLeave</a><br/><a href="MouseEvent.html" target="">MouseEvent</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##Lite::4##"><a name="constantDetail"></a><a name="NETWORK_CHANGE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>NETWORK_CHANGE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const NETWORK_CHANGE:String = "networkChange"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.NETWORK_CHANGE</code> constant defines the value of the <code>type</code> property of a <code>networkChange</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The NativeApplication object.</td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../flash/desktop/NativeApplication.html#event:networkChange#event:networkChange" target="">NativeApplication.networkChange</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="OPEN"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>OPEN</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const OPEN:String = "open"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.OPEN</code> constant defines the value of the <code>type</code> property of an <code>open</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The network object that has opened a connection. </td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../flash/media/Sound.html#event:open#event:open" target="">Sound.open</a><br/><a href="../../flash/net/URLLoader.html#event:open#event:open" target="">URLLoader.open</a><br/><a href="../../flash/net/URLStream.html#event:open#event:open" target="">URLStream.open</a></div></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="constantDetail"></a><a name="PASTE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>PASTE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const PASTE:String = "paste"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.PASTE</code> constant defines the value of the <code>type</code> property of a <code>paste</code> event object. 
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>Any InteractiveObject instance with a listener registered for the <code>paste</code> event.</td></tr></table>
+
+	
+	<p><b>Note:</b> TextField objects do <i>not</i> dispatch <code>clear</code>, <code>copy</code>, <code>cut</code>, <code>paste</code>,
+
+	or <code>selectAll</code> events. TextField objects always include Cut, Copy, Paste, Clear, and Select All commands in the context menu.
+
+	You cannot remove these commands from the context menu for TextField objects. For TextField objects, selecting these commands 
+
+	(or their keyboard equivalents) does not generate <code>clear</code>, <code>copy</code>, <code>cut</code>, <code>paste</code>, 
+
+	or <code>selectAll</code> events. However, other classes that extend the InteractiveObject class, including components built 
+
+	using the Flash Text Engine (FTE), will dispatch these events in response to user actions such as keyboard shortcuts and context menus.</p>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="AIR::2.6##"><a name="constantDetail"></a><a name="PREPARING"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>PREPARING</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const PREPARING:String = "preparing"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2.6 </td></tr></table><p></p><p></p><p>
+
+	 The <code>Event.PREPARING</code> constant defines the value of the <code>type</code> property of a <code>preparing</code> event object. 
+
+	 <p><b>Note:</b> This event does not go through a "capture phase" 
+
+	 and is dispatched directly to the target, whether the target is on the display list or not.</p>
+
+	 <p>This event has the following properties:</p>
+
+	 <table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code></td></tr><tr><td><code>currentTarget</code></td><td>The object that dispatched this event.</td></tr><tr><td><code>target</code></td><td>The object that dispatched this event.</td></tr></table>
+
+	 
+
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../flash/display/NativeMenu.html#event:preparing#event:preparing" target="">NativeMenu.preparing</a><br/><a href="../../flash/display/NativeMenuItem.html#event:preparing#event:preparing" target="">NativeMenuItem.preparing</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="REMOVED"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>REMOVED</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const REMOVED:String = "removed"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.REMOVED</code> constant defines the value of the <code>type</code> property of
+
+	a <code>removed</code> event object. 
+
+	
+
+	<p>The <code>removed</code> event applies to the ActionScript 3.0 display list
+
+	and is not relevant to JavaScript code.</p>
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>true</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The DisplayObject instance to be removed from the display list. 
+
+	The <code>target</code> is not always the object in the display list 
+
+	that registered the event listener. Use the <code>currentTarget</code> 
+
+	property to access the object in the display list that is currently processing the event.</td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Event.html#ADDED" target="">ADDED</a><br/><a href="Event.html#ADDED_TO_STAGE" target="">ADDED_TO_STAGE</a><br/><a href="Event.html#REMOVED_FROM_STAGE" target="">REMOVED_FROM_STAGE</a></div></div></span><span id="pageFilter" runtime="Flash::9.0.28.0##Lite::4##"><a name="constantDetail"></a><a name="REMOVED_FROM_STAGE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>REMOVED_FROM_STAGE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const REMOVED_FROM_STAGE:String = "removedFromStage"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.REMOVED_FROM_STAGE</code> constant defines the value of the <code>type</code> 
+
+	property of a <code>removedFromStage</code> event object. 
+
+	
+
+	<p>The <code>removedFromStage</code> event applies to the ActionScript 3.0 display list
+
+	and is not relevant to JavaScript code.</p>
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The DisplayObject instance being removed from the on-stage display list,
+
+	either directly or through the removal of a subtree in which the DisplayObject instance is contained.
+
+	If the DisplayObject instance is being directly removed, the <code>removed</code> event occurs before this event.</td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Event.html#ADDED" target="">ADDED</a><br/><a href="Event.html#REMOVED" target="">REMOVED</a><br/><a href="Event.html#ADDED_TO_STAGE" target="">ADDED_TO_STAGE</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="RENDER"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>RENDER</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const RENDER:String = "render"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.RENDER</code> constant defines the value of the <code>type</code> property of a <code>render</code> event object. 
+
+	<p><b>Note:</b> This event has neither a "capture phase" nor a "bubble phase",
+
+	which means that event listeners must be added directly to any potential targets, 
+
+	whether the target is on the display list or not.</p>
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; the default behavior cannot be canceled.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>Any DisplayObject instance with a listener registered for the <code>render</code> event.</td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../display/Stage.html#invalidate()" target="">Stage.invalidate()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="RESIZE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>RESIZE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const RESIZE:String = "resize"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.RESIZE</code> constant defines the value of the <code>type</code> property of a <code>resize</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The Stage object.</td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../flash/display/Stage.html#event:resize#event:resize" target="">Stage.resize</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="SCROLL"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>SCROLL</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const SCROLL:String = "scroll"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.SCROLL</code> constant defines the value of the <code>type</code> property of a <code>scroll</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The TextField object that has been scrolled. 
+
+	The <code>target</code> property is not always the object in the display list 
+
+	that registered the event listener. Use the <code>currentTarget</code> 
+
+	property to access the object in the display list that is currently processing the event.</td></tr></table>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="SELECT"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>SELECT</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const SELECT:String = "select"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.SELECT</code> constant defines the value of the <code>type</code> property of a <code>select</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The object on which an item has been selected.</td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../flash/display/NativeMenu.html#event:select#event:select" target="">NativeMenu.select</a><br/><a href="../../flash/display/NativeMenuItem.html#event:select#event:select" target="">NativeMenuItem.select</a></div></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="constantDetail"></a><a name="SELECT_ALL"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>SELECT_ALL</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const SELECT_ALL:String = "selectAll"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.SELECT_ALL</code> constant defines the value of the <code>type</code> property of a <code>selectAll</code> event object. 
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>Any InteractiveObject instance with a listener registered for the <code>selectAll</code> event.</td></tr></table>
+
+	
+	<p><b>Note:</b> TextField objects do <i>not</i> dispatch <code>clear</code>, <code>copy</code>, <code>cut</code>, <code>paste</code>,
+
+	or <code>selectAll</code> events. TextField objects always include Cut, Copy, Paste, Clear, and Select All commands in the context menu.
+
+	You cannot remove these commands from the context menu for TextField objects. For TextField objects, selecting these commands 
+
+	(or their keyboard equivalents) does not generate <code>clear</code>, <code>copy</code>, <code>cut</code>, <code>paste</code>, 
+
+	or <code>selectAll</code> events. However, other classes that extend the InteractiveObject class, including components built 
+
+	using the Flash Text Engine (FTE), will dispatch these events in response to user actions such as keyboard shortcuts and context menus.</p>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="SOUND_COMPLETE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>SOUND_COMPLETE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const SOUND_COMPLETE:String = "soundComplete"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.SOUND_COMPLETE</code> constant defines the value of the <code>type</code> property of a <code>soundComplete</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The SoundChannel object in which a sound has finished playing.</td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../flash/media/SoundChannel.html#event:soundComplete#event:soundComplete" target="">SoundChannel.soundComplete</a></div></div></span><span id="pageFilter" runtime="AIR::2##Lite::4##"><a name="constantDetail"></a><a name="STANDARD_ERROR_CLOSE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>STANDARD_ERROR_CLOSE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const STANDARD_ERROR_CLOSE:String = "standardErrorClose"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2 </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.STANDARD_ERROR_CLOSE</code> constant defines the value of the <code>type</code> property of a <code>standardErrorClose</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>target</code></td><td>The NativeProcess object.</td></tr></table>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="AIR::2##Lite::4##"><a name="constantDetail"></a><a name="STANDARD_INPUT_CLOSE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>STANDARD_INPUT_CLOSE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const STANDARD_INPUT_CLOSE:String = "standardInputClose"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2 </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.STANDARD_INPUT_CLOSE</code> constant defines the value of the <code>type</code> property of a <code>standardInputClose</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>target</code></td><td>The NativeProcess object.</td></tr></table>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="AIR::2##Lite::4##"><a name="constantDetail"></a><a name="STANDARD_OUTPUT_CLOSE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>STANDARD_OUTPUT_CLOSE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const STANDARD_OUTPUT_CLOSE:String = "standardOutputClose"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2 </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.STANDARD_OUTPUT_CLOSE</code> constant defines the value of the <code>type</code> property of a <code>standardOutputClose</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>target</code></td><td>The NativeProcess object.</td></tr></table>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="TAB_CHILDREN_CHANGE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>TAB_CHILDREN_CHANGE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const TAB_CHILDREN_CHANGE:String = "tabChildrenChange"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.TAB_CHILDREN_CHANGE</code> constant defines the value of the <code>type</code> property of a <code>tabChildrenChange</code> event object. 
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>true</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The object whose tabChildren flag has changed. 
+
+	The <code>target</code> is not always the object in the display list 
+
+	that registered the event listener. Use the <code>currentTarget</code> 
+
+	property to access the object in the display list that is currently processing the event.</td></tr></table>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="TAB_ENABLED_CHANGE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>TAB_ENABLED_CHANGE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const TAB_ENABLED_CHANGE:String = "tabEnabledChange"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.TAB_ENABLED_CHANGE</code> constant defines the value of the <code>type</code> 
+
+	property of a <code>tabEnabledChange</code> event object. 
+
+	
+
+	<p>The <code>tabEnabledChange</code> event applies to the ActionScript 3.0 display list
+
+	and is not relevant to JavaScript code.</p>
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>true</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The InteractiveObject whose tabEnabled flag has changed. 
+
+	The <code>target</code> is not always the object in the display list 
+
+	that registered the event listener. Use the <code>currentTarget</code> 
+
+	property to access the object in the display list that is currently processing the event.</td></tr></table>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="TAB_INDEX_CHANGE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>TAB_INDEX_CHANGE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const TAB_INDEX_CHANGE:String = "tabIndexChange"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.TAB_INDEX_CHANGE</code> constant defines the value of the 
+
+	<code>type</code> property of a <code>tabIndexChange</code> event object. 
+
+	
+
+	<p>The <code>tabIndexChange</code> event applies to the ActionScript 3.0 display list
+
+	and is not relevant to JavaScript code.</p>
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>true</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The object whose tabIndex has changed. 
+
+	The <code>target</code> is not always the object in the display list 
+
+	that registered the event listener. Use the <code>currentTarget</code> 
+
+	property to access the object in the display list that is currently processing the event.</td></tr></table>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="Flash::11##Lite::4##"><a name="constantDetail"></a><a name="TEXT_INTERACTION_MODE_CHANGE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>TEXT_INTERACTION_MODE_CHANGE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const TEXT_INTERACTION_MODE_CHANGE:String = "textInteractionModeChange"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.TEXT_INTERACTION_MODE_CHANGE</code> constant defines the value of the <code>type</code> property of an <code>interaction mode</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The TextField object whose interaction mode property is changed. For example on Android, one can change the interaction mode to SELECTION via context menu. 
+
+	The <code>target</code> property is not always the object in the display list 
+
+	that registered the event listener. Use the <code>currentTarget</code> 
+
+	property to access the object in the display list that is currently processing the event.</td></tr></table>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="UNLOAD"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>UNLOAD</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const UNLOAD:String = "unload"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.UNLOAD</code> constant defines the value of the <code>type</code> property of an <code>unload</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The LoaderInfo object associated with the SWF file being unloaded or replaced.</td></tr></table>
+
+	
+
+	</p></div></span><span id="pageFilter" runtime="AIR::1.0##Lite::4##"><a name="constantDetail"></a><a name="USER_IDLE"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>USER_IDLE</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const USER_IDLE:String = "userIdle"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.USER_IDLE</code> constant defines the value of the <code>type</code> property of a <code>userIdle</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>target</code></td><td>The NativeApplication object.</td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../flash/desktop/NativeApplication.html#event:userIdle#event:userIdle" target="">NativeApplication.userIdle</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##Lite::4##"><a name="constantDetail"></a><a name="USER_PRESENT"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>USER_PRESENT</h2></td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const USER_PRESENT:String = "userPresent"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	The <code>Event.USER_PRESENT</code> constant defines the value of the <code>type</code> property of a <code>userPresent</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>target</code></td><td>The NativeApplication object.</td></tr></table>
+
+	
+
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../flash/desktop/NativeApplication.html#event:userPresent#event:userPresent" target="">NativeApplication.userPresent</a></div></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script><p></p><center class="copyright"> &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><!--BEGIN IONCOMMENTS--><div id="ionComHere"></div><!--END IONCOMMENTS-->[an error occurred while processing this directive][an error occurred while processing this directive]<p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/en_US/legalnotices/index.html">Legal Notices</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online Privacy Policy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html><!-- &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  -->

@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="en-us" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;AIR * Using native extensions for Adobe AIR</title>
+    <link rel="shortcut icon" href="images/AIR.ico" />
+    <meta name="book" content="Building Adobe AIR Applications" />
+    <meta name="product" content="adobe" /><meta name="product" content="air" /><meta name="product" content="flash" /><meta name="product" content="flex" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="adobe"></Attribute><Attribute name="product" value="air"></Attribute><Attribute name="product" value="flash"></Attribute><Attribute name="product" value="flex"></Attribute><Attribute name="book" value="Building Adobe AIR Applications"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WS597e5dadb9cc1e0253f7d2fc1311b491071-8000.html";
+    document.cookie = "topicId=" + "WS597e5dadb9cc1e0253f7d2fc1311b491071-8000.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="https://help.adobe.com/en_US/air/build/swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    <div id="mnemonic">
+      <!--googleoff: index--><div xmlns:adobe="http://www.adobe.com/saxon" class="AIR"><div class="banner"><a href="WS485a42d56cd19641-a9697f4124ef986fac-8000.html">Adobe&#160;AIR</a></div></div><!--googleon: index-->
+    </div>
+    
+    <div id="searchbar">
+<table id="searchbartable">
+<tr>
+<td colspan="2">
+      <!--googleoff: index--><div xmlns:adobe="http://www.adobe.com/saxon"><div id="pdf"><img src="images/PDF.gif" width="16" height="16" /><a title="View Help PDF" href="air_buildingapps.pdf">View Help PDF (5.7MB)</a></div></div><!--googleon: index-->
+</td>
+</tr>
+</table>
+    </div>
+
+<!-- BEGIN SEARCH CONTENT -->
+<form id="search" name="search" action="https://help.adobe.com/en_US/air/build/search.html" target="_self">
+<script type="text/javascript">
+<!--[CDATA[
+if ( !use_chc_behavior ){
+    if (typeof(terms_AHV_SEARCH_CONSTRAINT) != "undefined" && 
+        terms_AHV_SEARCH_CONSTRAINT.length > 0 && 
+        document.location.href.indexOf(".adobe.com") > 0){
+        if ( typeof(terms_SEARCH_THIS_HELP_ONLY) != "undefined" && terms_SEARCH_THIS_HELP_ONLY == "ON" ) {
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                checked="checked" \
+                value="1" ><\/input>'); 
+                
+        // Leave the "Search this help system only" checkbox unckecked
+        }else{    
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                value="1" ><\/input>'); 
+        }
+        document.write('<span class="gsalabel">' + terms_AHV_SEARCH_CONSTRAINT + '<\/span><\/div>'); 
+    }
+    document.write('<input class="searchinput" \
+        name="q" \
+        id="q" \
+        type="text" \
+        maxlength="256" \
+        value="' + terms_AHV_SEARCH_BUTTON + '" \
+        onclick="clearSearch()"><\/input><input \
+        type="button" \
+        name="searchbutton" \
+        class="searchbutton" \
+        onclick="submit()"><\/input>'); 
+} 
+ 
+/* 
+ * Start Functions 
+ */
+function clearSearch(){
+    if (document.search.q.value == terms_AHV_SEARCH_BUTTON){document.search.q.value = ""}; 
+}
+
+// set search preferences
+function setAHSearchPref(){
+    if (document.search.gsa.checked == 1){
+        setAHSearchCookie( dirname );
+    }else{
+        setAHSearchCookie( "community" );
+    }
+}
+
+// Set search preferences cookie
+function setAHSearchCookie( p ){
+    // set cookie ah_searchpref with a value of the document path
+    var expire=new Date();
+    expire.setDate(expire.getDate()+365); // Cookie expires after 1 year (365 days) 
+    document.cookie="ah_searchpref=" +p+ "; expires=" +expire.toGMTString()+ ";";
+}
+
+// ]]-->
+</script> 
+ </form>
+<!-- END SEARCH CONTENT -->    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+<!-- BEGIN BREADCRUMBS -->
+
+      
+      <div id="breadcrumb">
+        
+<ul class="navigation"><li class="prev"><a accesskey="p" class="prev" href="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fd1.html" title="Debugging AIR for TV applications"><img src="images/blank.gif" alt="Previous" width="17" height="17" /></a></li><li class="next"><a accesskey="n" class="next" href="WSfffb011ac560372f2012b5a4128cca83a39-8000.html" title="ActionScript compilers"><img src="images/blank.gif" alt="Next" width="17" height="17" /></a></li></ul><div class="hierarchy" id="hierarchy"><a href="WS485a42d56cd19641-a9697f4124ef986fac-8000.html"><b>Home</b></a> / <a href="WS485a42d56cd19641-a9697f4124ef986fac-8000.html"><b>Building Adobe AIR Applications</b></a></div>
+
+      </div>
+<!-- END BREADCRUMBS -->
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>Using native extensions for Adobe AIR</h1>
+<!-- END PAGE TITLE -->
+<!-- BEGIN IONCOMMENTCOUNT -->
+        <div id="ionCount">
+        </div>
+<!-- END IONCOMMENTCOUNT -->
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<p id="chcPromo" style="display:none;">
+<a id="chcLink" href="http://www.adobe.com/support/chc/">
+<img id="chcImage" src="http://www.adobe.com/support/chc/GetMoreHelpFeatures.png"/>
+</a>
+</p>
+<script type="text/javascript" language="javascript" charset="utf-8">
+<!--
+var cfgArray = [];
+//cfgArray["Acrobat_10.0_Professional.helpcfg"] = "acrobatpro";
+//cfgArray["Acrobat_10.0_Standard.helpcfg"] = "acrobatstd";
+cfgArray["Lightroom_3.0.helpcfg"] = "lightroom";
+cfgArray["PhotoshopElements_8.0_Win.helpcfg"] = "photoshopelements";
+cfgArray["PhotoshopElements_8.0_Mac.helpcfg"] = "photoshopelementsmac";
+cfgArray["PremiereElements_8.0_Win.helpcfg"] = "premiereelements";
+
+//cfgArray["AfterEffects_10.0.helpcfg"] = "aftereffects";
+//cfgArray["AIR.helpcfg"] = "air";
+//cfgArray["ColdFusionBuilder.helpcfg"] = "coldfusion";
+//cfgArray["Contribute_6.0.helpcfg"] = "contribute";
+//cfgArray["DeviceCentral_3.0.helpcfg"] = "devicecentral";
+//cfgArray["Dreamweaver_11.0.helpcfg"] = "dreamweaver";
+//cfgArray["EncoreDVD_5.0.helpcfg"] = "encore";
+//cfgArray["ExtensionManager_3.0.helpcfg"] = "extension";
+//cfgArray["Fireworks_11.0.helpcfg"] = "fireworks";
+//cfgArray["Flash_11.0.helpcfg"] = "flash";
+//cfgArray["Flex_4.0.helpcfg"] = "flashbuilder";
+//cfgArray["FlashCatalyst_1.0.helpcfg"] = "flashcatalyst";
+//cfgArray["Illustrator_15.0.helpcfg"] = "illustrator";
+//cfgArray["InCopy_7.0.helpcfg"] = "incopy";
+//cfgArray["InDesign_7.0.helpcfg"] = "indesign";
+//cfgArray["OnLocation_5.0.helpcfg"] = "onlocation";
+//cfgArray["Photoshop_12.0.helpcfg"] = "photoshop";
+//cfgArray["PremierePro_5.0.helpcfg"] = "premierepro";
+
+function getLangName() {
+    var lang = "en-us";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if (ptn.test(lang)) {
+        var languageCode = lang.replace(ptn, "$1");
+        var countryCode = lang.replace(ptn, "$2");
+        lang = languageCode + "_" + countryCode.toUpperCase();
+    }
+    return lang;
+}
+
+function getCountryName() {
+    var lang = "";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if ((ptn.test(lang)) && (lang != "en-us")) {
+        var countryCode = lang.replace(ptn, "$2");
+        return "/" + countryCode;
+    }
+    return "";
+}
+
+if ( (typeof(terms_HELPCFG) != 'undefined')  && (terms_HELPCFG.indexOf(".helpcfg") != -1) ) {
+    var stage   = (document.location.href.indexOf(".stage.") != -1) ? 'stage.' : '';
+    var baseUrl = 'http://www.' + stage + 'adobe.com';
+    var refpage = document.location.href.replace(/#.*$/, '');
+	
+	if ((!use_robohelp_behavior) && (terms_HELPCFG.length > 0) && (typeof(cfgArray[terms_HELPCFG]) != 'undefined') && (cfgArray[terms_HELPCFG].length > 0)) {
+		if (document.getElementById) { // DOM3 = IE5, NS6
+			var newHref = baseUrl + getCountryName() + "/support/chc/" + "?helpcfg=http://help." + stage + "adobe.com/HelpCfg/" + getLangName() + "/" + terms_HELPCFG + "&url=" + refpage + "&product=" + cfgArray[terms_HELPCFG];
+			var newSrc = baseUrl + getCountryName() + "/support/chc/GetMoreHelpFeatures.png";
+			document.getElementById("chcPromo").style.display = "block";
+			document.getElementById("chcLink").href = newHref;
+			document.getElementById("chcImage").src = newSrc;
+		}
+	}
+}
+
+//-->
+</script>
+
+
+
+          <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WS08cc5e527b0868243ea2ffcd1314dff873a-8000"><span class="topictitle1">AIR Native Extension (ANE) files</span>
+</a></p></li><li><p><a href="#WSb2a114358507af456b18bc461311b6bc0a8-8000"><span class="topictitle1">Native extensions versus the NativeProcess ActionScript class</span>
+</a></p></li><li><p><a href="#WSb2a114358507af454a8fff1e1312a267100-8000"><span class="topictitle1">Native extensions versus ActionScript class libraries (SWC files)</span>
+</a></p></li><li><p><a href="#WSb2a114358507af456b18bc461311b6bc0a8-7fff"><span class="topictitle1">Supported devices</span>
+</a></p></li><li><p><a href="#WSb2a114358507af456b18bc461311b6bc0a8-7ffe"><span class="topictitle1">Supported device profiles</span>
+</a></p></li><li><p><a href="#WS08cc5e527b0868243ea2ffcd1314dff873a-7fff"><span class="topictitle1">Task list for using a native extension</span>
+</a></p></li><li><p><a href="#WS08cc5e527b0868243ea2ffcd1314dff873a-7ffe"><span class="topictitle1">Declaring the extension in your application descriptor file</span>
+</a></p></li><li><p><a href="#WSb2a114358507af456b18bc461311b6bc0a8-7ffd"><span class="topictitle1">Including the ANE file in your application’s library path</span>
+</a></p><ul><li><p><a href="#WS08cc5e527b0868243ea2ffcd1314dff873a-7ffd"><span class="topictitle2">Using the ANE file with Flash Builder</span>
+</a></p></li><li><p><a href="#WS08cc5e527b0868243ea2ffcd1314dff873a-7ffc"><span class="topictitle2">Using the ANE file with Flash Professional</span>
+</a></p></li></ul></li><li><p><a href="#WSb2a114358507af456b18bc461311b6bc0a8-7ffc"><span class="topictitle1">Packaging an application that uses native extensions</span>
+</a></p><ul><li><p><a href="#WS08cc5e527b086824591449d61314ebb3ae7-8000"><span class="topictitle2">Use a native installer package type</span>
+</a></p></li><li><p><a href="#WS08cc5e527b086824591449d61314ebb3ae7-7fff"><span class="topictitle2">Specify the extension directory</span>
+</a></p></li><li><p><a href="#WS08cc5e527b086824591449d61314ebb3ae7-7ffd"><span class="topictitle2">Make sure that the ANE file supports the application’s target device</span>
+</a></p></li></ul></li></ul></div></div></div></div><div><p>Native extensions for Adobe AIR provide ActionScript APIs
+that provide you access to device-specific functionality programmed
+in native code. Native extension developers sometimes work with
+device manufacturers, and sometimes are third-party developers.</p>
+<p>If you are developing a native extension, see <a href="http://www.adobe.com/go/learn_air_as_extensions_en" target="_self">Developing Native Extensions for Adobe AIR</a>.</p>
+<p>A native extension is a combination of:</p>
+<ul><li><p>ActionScript classes.</p>
+</li>
+<li><p>Native code. </p>
+</li>
+</ul>
+<p>However, as an AIR application developer using a native extension,
+you work with only the ActionScript classes.</p>
+<p>Native extensions are useful in the following situations:</p>
+<ul><li><p>The native code implementation provides access to platform-specific
+features. These platform-specific features are not available in
+the built-in ActionScript classes, and are not possible to implement
+in application-specific ActionScript classes. The native code implementation
+can provide such functionality because it has access to device-specific
+hardware and software.</p>
+</li>
+<li><p>A native code implementation can sometimes be faster than
+an implementation that uses only ActionScript.</p>
+</li>
+<li><p>The native code implementation can provide ActionScript access
+to legacy native code.</p>
+</li>
+</ul>
+<p>Some examples of native extensions are on the Adobe Developer
+Center. For example, one native extension provides AIR applications
+access to Android’s vibration feature. See <a href="http://www.adobe.com/go/learn_native_extension_examples_en" target="_self">Native extensions for Adobe AIR</a>.</p>
+<div xmlns:adobe="http://www.adobe.com/saxon" class="CommunityPanel CommunityPanelTable"><table border="0" cellpadding="0" cellspacing="0"><tr><td colspan="2" class="CommunityPanelHeader" style="padding-top: 0pt; padding-bottom: 0pt; height: 30px; vertical-align: middle;"><h2>Adobe recommends</h2></td><td colspan="2" class="CommunityPanelHeader" style="padding-top: 0pt; padding-bottom: 0pt; height: 30px; vertical-align: middle; text-align:right;"><h3><img src="images/TinyBlueTutIcon.png" style="vertical-align: text-bottom; margin-right: 7px;" border="0" /><a href="http://www.adobe.com/community/publishing/download.html" target="_self">Have a tutorial you would like to share?</a></h3></td></tr><tr><td height="10" colspan="4"></td></tr><tr><td style="padding-top: 12px;" width="5%"><span class="CommunityImageShadow"><img src="images/oliver_goldman.png" /></span></td><td width="45%"><h3><a href="http://goo.gl/y8Lu7" target="_self">Extending Adobe AIR</a></h3><span class="CommunityTextName">Oliver Goldman</span></td><td style="padding-top: 12px;" width="5%"><span class="CommunityImageShadow"><img src="images/milkmanGames.png" /></span></td><td width="45%"><h3><a href="http://goo.gl/EPSg6" target="_self">Developing Android Extensions for AIR3: A
+Beginner's Guide</a></h3><span class="CommunityTextName">Milkman Games</span></td></tr></table></div><ul class="navlinklist"></ul>
+</div>
+<div id="WS08cc5e527b0868243ea2ffcd1314dff873a-8000" class="nochunk"><a name="WS08cc5e527b0868243ea2ffcd1314dff873a-8000"><!-- --></a><h2 class="topictitle2">AIR Native Extension (ANE) files</h2><div><p>Native extension developers package a native extension
+into an ANE file. An ANE file is an archive file that contains the
+necessary libraries and resources for the native extension. </p>
+<p>Note for some devices, the ANE file contains the native code
+library that the native extension uses. But for other devices, the
+native code library is installed on the device. In some cases, the
+native extension has no native code at all for a particular device;
+it is implemented with ActionScript only. </p>
+<p>As an AIR application developer, you use the ANE file as follows:</p>
+<div class="para"><ul><li><p>Include the ANE file in the application’s library
+path in the same way you include a SWC file in the library path.
+This action allows the application to reference the extension’s
+ActionScript classes.</p>
+<div class="note"><span class="notetitle">Note:  </span>When compiling your application,
+be sure to use dynamic linking for the ANE. If you use Flash Builder,
+specify External on the ActionScript Builder Path Properties panel;
+if you use the command line, specify -external-library-path.</div>
+</li>
+<li><p>Package the ANE file with the AIR application.</p>
+</li>
+</ul>
+</div>
+<ul class="navlinklist"></ul>
+</div></div>
+<div id="WSb2a114358507af456b18bc461311b6bc0a8-8000" class="nochunk"><a name="WSb2a114358507af456b18bc461311b6bc0a8-8000"><!-- --></a><h2 class="topictitle2">Native extensions versus the NativeProcess ActionScript class</h2><div><p>ActionScript 3.0 provides a NativeProcess class. This class
+lets an AIR application execute native processes on the host operating
+system. This capability is similar to native extensions, which provide
+access to platform-specific features and libraries. When deciding
+on using the NativeProcess class versus using a native extension,
+consider the following:</p>
+<ul><li><p>Only the <samp class="codeph">extendedDesktop</samp> AIR profile
+supports the NativeProcess class. Therefore, for applications with
+the AIR profiles <samp class="codeph">mobileDevice</samp> and <samp class="codeph">extendedMobileDevice</samp>,
+native extensions are the only choice.</p>
+</li>
+<li><p>Native extension developers often provide native implementations
+for various platforms, but the ActionScript API they provide is
+typically the same across platforms. When using the NativeProcess
+class, ActionScript code to start the native process can vary among
+the different platforms.</p>
+</li>
+<li><p>The NativeProcess class starts a separate process, whereas
+a native extension runs in the same process as the AIR application.
+Therefore, if you are concerned about code crashing, using the NativeProcess
+class is safer. However, the separate process means that you possibly
+have interprocess communication handling to implement.</p>
+</li>
+</ul>
+<ul class="navlinklist"></ul>
+</div></div>
+<div id="WSb2a114358507af454a8fff1e1312a267100-8000" class="nochunk"><a name="WSb2a114358507af454a8fff1e1312a267100-8000"><!-- --></a><h2 class="topictitle2">Native extensions versus ActionScript class libraries (SWC files)</h2><div><p>A SWC file is an ActionScript class library in an archive
+format. The SWC file contains a SWF file and other resource files.
+The SWC file is a convenient way to share ActionScript classes instead
+of sharing individual ActionScript code and resource files.</p>
+<p>A native extension package is an ANE file. Like a SWC file, an
+ANE file is also an ActionScript class library, containing a SWF
+file and other resource files in an archive format. However, the
+most important difference between an ANE file and a SWC file is
+that only an ANE file can contain a native code library.</p>
+<div class="note"><span class="notetitle">Note:  </span>When compiling your application, be sure to use dynamic linking
+for the ANE file. If you use Flash Builder, specify External on
+the ActionScript Builder Path Properties panel; if you use the command
+line, specify -external-library-path.</div>
+<ul class="navlinklist"></ul>
+</div></div>
+<div id="WSb2a114358507af456b18bc461311b6bc0a8-7fff" class="nochunk"><a name="WSb2a114358507af456b18bc461311b6bc0a8-7fff"><!-- --></a><h2 class="topictitle2">Supported devices</h2><div><p>Starting in AIR 3, you can use native extensions in applications
+for the following devices:</p>
+<div class="para"><ul><li><p>Android devices, starting with Android 2.2</p>
+</li>
+<li><p>iOS devices, starting with iOS 4.0</p>
+</li>
+<li><p>iOS Simulator, starting with AIR 3.3</p>
+</li>
+<li><p>Blackberry PlayBook</p>
+</li>
+<li><p>Windows desktop devices that support AIR 3.0</p>
+</li>
+<li><p>Mac OS X desktop devices that support AIR 3.0</p>
+</li>
+</ul>
+</div>
+<p>Often, the same native extension targets multiple platforms.
+The extension’s ANE file contains ActionScript and native libraries
+for each supported platform. Usually, the ActionScript libraries
+have the same public interfaces for all the platforms. The native
+libraries are necessarily different.</p>
+<p>Sometimes a native extension supports a default platform. The
+default platform’s implementation has only ActionScript code, but
+no native code. If you package an application for a platform that
+the extension does not specifically support, the application uses
+the default implementation when it executes. For example, consider
+an extension that provides a feature that applies only to mobile
+devices. The extension can also provide a default implementation
+that a desktop application can use to simulate the feature. </p>
+<ul class="navlinklist"></ul>
+</div></div>
+<div id="WSb2a114358507af456b18bc461311b6bc0a8-7ffe" class="nochunk"><a name="WSb2a114358507af456b18bc461311b6bc0a8-7ffe"><!-- --></a><h2 class="topictitle2">Supported device profiles</h2><div><p>The following AIR profiles support native extensions:</p>
+<div class="para"><ul><li><p><samp class="codeph">extendedDesktop</samp>, starting in AIR
+3.0</p>
+</li>
+<li><p><samp class="codeph">mobileDevice</samp>, starting in AIR 3.0</p>
+</li>
+<li><p><samp class="codeph">extendedMobileDevice</samp>, starting in AIR 3.0</p>
+</li>
+</ul>
+</div>
+<ul class="navlinklist"></ul>
+</div></div>
+<div id="WS08cc5e527b0868243ea2ffcd1314dff873a-7fff" class="nochunk"><a name="WS08cc5e527b0868243ea2ffcd1314dff873a-7fff"><!-- --></a><h2 class="topictitle2">Task list for using a native extension</h2><div><p>To use a native extension in your application, do the following
+tasks:</p>
+<ol><li><p>Declare the extension in your application descriptor
+file.</p>
+</li>
+<li><p>Include the ANE file in your application’s library path.</p>
+</li>
+<li><p>Package the application.</p>
+</li>
+</ol>
+<ul class="navlinklist"></ul>
+</div></div>
+<div id="WS08cc5e527b0868243ea2ffcd1314dff873a-7ffe" class="nochunk"><a name="WS08cc5e527b0868243ea2ffcd1314dff873a-7ffe"><!-- --></a><h2 class="topictitle2">Declaring the extension in your application descriptor file</h2><div><p>All AIR applications have an application descriptor file.
+When an application uses a native extension, the application descriptor
+file includes an <samp class="codeph">&lt;extensions&gt;</samp> element. For
+example:</p>
+<pre>&lt;extensions&gt; 
+    &lt;extensionID&gt;com.example.Extension1&lt;/extensionID&gt; 
+    &lt;extensionID&gt;com.example.Extension2&lt;/extensionID&gt; 
+&lt;/extensions&gt;</pre>
+<p>The <samp class="codeph">extensionID</samp> element has the same value as
+the <samp class="codeph">id</samp> element in the extension descriptor file.
+The extension descriptor file is an XML file called extension.xml.
+It is packaged in the ANE file. You can use an archive extractor
+tool to look at the extension.xml file.</p>
+<ul class="navlinklist"></ul>
+</div></div>
+<div id="WSb2a114358507af456b18bc461311b6bc0a8-7ffd" class="nochunk"><a name="WSb2a114358507af456b18bc461311b6bc0a8-7ffd"><!-- --></a><h2 class="topictitle2">Including the ANE file in your application’s library path</h2><div><p>To compile an application that uses a native extension,
+include the ANE file in your library path.</p>
+<ul class="navlinklist"></ul>
+</div><div id="WS08cc5e527b0868243ea2ffcd1314dff873a-7ffd" class="nochunk"><a name="WS08cc5e527b0868243ea2ffcd1314dff873a-7ffd"><!-- --></a><h3 class="topictitle3">Using the ANE file with Flash Builder</h3><div><p>If your application uses a native extension, include the
+ANE file for the native extension in your library path. Then you
+can use Flash Builder to compile your ActionScript code. </p>
+<p>Do the following steps, which use Flash Builder 4.5.1:</p>
+<div class="para"><ol><li><p>Change the filename extension of the ANE file from
+.ane to .swc. This step is necessary so that Flash Builder can find
+the file.</p>
+</li>
+<li><p>Select Project &gt; Properties on your Flash Builder project.</p>
+</li>
+<li><p>Select the Flex Build Path in the Properties dialog box. </p>
+</li>
+<li><p>In the Library Path tab, select Add SWC....</p>
+</li>
+<li><p>Browse to the SWC file and select Open.</p>
+</li>
+<li><p>Select OK in the Add SWC... dialog box.</p>
+<p>The ANE file
+now appears in the Library Path tab in the Properties dialog box.</p>
+</li>
+<li><p>Expand the SWC file entry. Double-click Link Type to open
+the Library Path Item Options dialog box.</p>
+</li>
+<li><p>In the Library Path Item Options dialog box, change the Link
+Type to External.</p>
+</li>
+</ol>
+</div>
+<p>Now you can compile your application using, for example, Project
+&gt; Build Project.</p>
+</div></div><div id="WS08cc5e527b0868243ea2ffcd1314dff873a-7ffc" class="nochunk"><a name="WS08cc5e527b0868243ea2ffcd1314dff873a-7ffc"><!-- --></a><h3 class="topictitle3">Using the ANE file with Flash Professional</h3><div><p>If your application uses a native extension, include the
+ANE file for the native extension in your library path. Then you
+can use Flash Professional CS5.5 to compile your ActionScript code.
+Do the following:</p>
+<div class="para"><ol><li><p>Change the filename extension of the ANE file from
+.ane to .swc. This step is necessary so that Flash Professional
+can find the file.</p>
+</li>
+<li><p>Select File &gt; ActionScript Settings on your FLA file.</p>
+</li>
+<li><p>Select the Library Path tab in the Advanced ActionScript
+3.0 Settings dialog box. </p>
+</li>
+<li><p>Select the Browse To SWC File button.</p>
+</li>
+<li><p>Browse to the SWC file and select Open.</p>
+<p>The SWC file
+now appears in the Library Path tab in the Advanced ActionScript 3.0
+Settings dialog box</p>
+</li>
+<li><p>With the SWC file selected, select the button Select Linkage
+Options For A Library.</p>
+</li>
+<li><p>In the Library Path Item Options dialog box, change the Link
+Type to External.</p>
+</li>
+</ol>
+</div>
+</div></div></div>
+<div id="WSb2a114358507af456b18bc461311b6bc0a8-7ffc" class="nochunk"><a name="WSb2a114358507af456b18bc461311b6bc0a8-7ffc"><!-- --></a><h2 class="topictitle2">Packaging an application that uses native extensions</h2><div><p>Use ADT to package an application that uses native extensions.
+You cannot package the application using Flash Professional CS5.5
+or Flash Builder 4.5.1.</p>
+<p>Details about using ADT are at <a href="http://www.adobe.com/go/learn_fbairdevelopertool_en" target="_self">AIR Developer Tool (ADT)</a>.</p>
+<p>For example, the following ADT command creates a DMG file (a
+native installer file for Mac OS X) for an application that uses
+native extensions:</p>
+<div class="para"><pre>adt -package 
+    -storetype pkcs12 
+    -keystore myCert.pfx 
+    -target native 
+    myApp.dmg 
+    application.xml 
+    index.html resources 
+    -extdir extensionsDir</pre>
+</div>
+<div class="para">The following command creates an APK package for an Android device:<pre>adt -package 
+    -target apk 
+    -storetype pkcs12 -keystore ../codesign.p12 
+    myApp.apk 
+    myApp-app.xml 
+    myApp.swf icons 
+    -extdir extensionsDir</pre>
+</div>
+<p>The following command creates an iOS package for an iPhone application:</p>
+<pre>adt -package 
+    -target ipa-ad-hoc 
+    -storetype pkcs12 -keystore ../AppleDistribution.p12 
+    -provisioning-profile AppleDistribution.mobileprofile 
+    myApp.ipa 
+    myApp-app.xml 
+    myApp.swf icons Default.png 
+    -extdir extensionsDir</pre>
+<p>Note the following:</p>
+<ul><li><p>Use a native installer package type.</p>
+</li>
+<li><p>Specify the extension directory.</p>
+</li>
+<li><p>Make sure that the ANE file supports the application’s target
+device.</p>
+</li>
+</ul>
+<ul class="navlinklist"></ul>
+</div><div id="WS08cc5e527b086824591449d61314ebb3ae7-8000" class="nochunk"><a name="WS08cc5e527b086824591449d61314ebb3ae7-8000"><!-- --></a><h3 class="topictitle3">Use a native installer package type</h3><div><p>The application package must be a native installer. You
+cannot create a cross-platform AIR package (a .air package) for
+an application that uses a native extension, because native extensions
+usually contain native code. However, typically a native extension
+supports multiple native platforms with the same ActionScript APIs.
+In these cases, you can use the same ANE file in different native installer
+packages.</p>
+<p>The following table summarizes the value to use for the <samp class="codeph">-target</samp> option
+of the ADT command:</p>
+<div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d17e14712"><p>Application’s target platform</p>
+</th>
+<th valign="top" width="NaN%" id="d17e14715"><p>-target </p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d17e14712 "><p>Mac OS X or Windows desktop devices</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e14715 "><p>-target native</p>
+<p>-target bundle</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e14712 "><p>Android</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e14715 "><p>-target apk</p>
+<p>or other Android package
+targets.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e14712 "><p>iOS</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e14715 "><p>-target ipa-ad-hoc</p>
+<p>or other iOS package
+targets</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e14712 "><p>iOS Simulator</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e14715 "><p>-target ipa-test-interpreter-simulator</p>
+<p>-target
+ipa-debug-interpreter-simulator</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></div><div id="WS08cc5e527b086824591449d61314ebb3ae7-7fff" class="nochunk"><a name="WS08cc5e527b086824591449d61314ebb3ae7-7fff"><!-- --></a><h3 class="topictitle3">Specify the extension directory</h3><div><p>Use the ADT option <samp class="codeph">-extdir </samp>to tell ADT
+the directory that contains the native extensions (ANE files).</p>
+<p>For details about this option, see <a href="WS901d38e593cd1bac1e63e3d128fc240122-7ff2.html">File and path options</a>.</p>
+</div></div><div id="WS08cc5e527b086824591449d61314ebb3ae7-7ffd" class="nochunk"><a name="WS08cc5e527b086824591449d61314ebb3ae7-7ffd"><!-- --></a><h3 class="topictitle3">Make sure that the ANE file supports the application’s target device</h3><div><p>When providing an ANE file, the native extension developer
+informs you which platforms the extension supports. You can also
+use an archive extractor tool to look at the contents of the ANE
+file. The extracted files include a directory for each supported
+platform.</p>
+<p>Knowing which platforms the extension supports is important when
+packaging the application that uses the ANE file. Consider the following
+rules: </p>
+<ul><li><p>To create an Android application package, the ANE file
+must include the <samp class="codeph">Android-ARM</samp> platform. Alternatively,
+the ANE file must include the default platform and at least one
+other platform.</p>
+</li>
+<li><p>To create an iOS application package, the ANE file must include
+the <samp class="codeph">iPhone-ARM</samp> platform. Alternatively, the ANE
+file must include the default platform and at least one other platform.</p>
+</li>
+<li><p>To create an iOS Simulator application package, the ANE file
+must include the <samp class="codeph">iPhone-x86</samp> platform.</p>
+</li>
+<li><p>To create a Mac OS X application package, the ANE file must
+include the <samp class="codeph">MacOS-x86 </samp>platform. Alternatively,
+the ANE file must include the default platform and at least one
+other platform.</p>
+</li>
+<li><p>To create a Windows application package, the ANE file must
+include the <samp class="codeph">Windows-x86</samp> platform. Alternatively,
+the ANE file must include the default platform and at least one
+other platform.</p>
+</li>
+</ul>
+</div></div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            <div id="relatedlinkinfo">More Help topics</div><div>
+</div>
+            <p xmlns:adobe="http://www.adobe.com/saxon"><a href="http://www.adobe.com/go/learn_about_SWC_files_en" title="http://www.adobe.com/go/learn_about_SWC_files_en">About SWC files</a></p><p xmlns:adobe="http://www.adobe.com/saxon"><a href="http://help.adobe.com/go/learn_air_app_profiles_en" title="http://help.adobe.com/go/learn_air_app_profiles_en">AIR profile support</a></p>
+            <div class="separator"><a href="#top"><img src="images/BTT.jpg" /></a>&#160;</div>
+          </div>
+          <div id="footer">
+<!-- BEGIN IONCOMMENTS -->
+            <div id="ionComHere">
+            </div>
+<!-- END IONCOMMENTS -->
+
+
+            <p id="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" id="creativecommons_text"><img id="creativecommons_img" src="images/CC.png" alt="This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License" /></a>&nbsp;Twitter™ and Facebook posts are not covered under the terms of Creative Commons.</p>
+          </div>
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+
+</td></tr></table>
+      </div>
+<!-- BEGIN BREADCRUMBS -->
+      <div id="breadcrumb">
+        
+<ul class="navigation"><li class="prev"><a accesskey="p" class="prev" href="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fd1.html" title="Debugging AIR for TV applications"><img src="images/blank.gif" alt="Previous" width="17" height="17" /></a></li><li class="next"><a accesskey="n" class="next" href="WSfffb011ac560372f2012b5a4128cca83a39-8000.html" title="ActionScript compilers"><img src="images/blank.gif" alt="Next" width="17" height="17" /></a></li></ul><div class="hierarchy" id="hierarchy"><a href="WS485a42d56cd19641-a9697f4124ef986fac-8000.html"><b>Home</b></a> / <a href="WS485a42d56cd19641-a9697f4124ef986fac-8000.html"><b>Building Adobe AIR Applications</b></a></div>
+
+      </div>
+<!-- END BREADCRUMBS -->
+<!-- END CONTENT WRAPPER -->
+
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--
+    Description:
+    This file generates the link to product support in the top right corner
+-->
+
+<style>
+#menutop{
+    position:absolute;
+    top:4px;
+    right:24px;
+    width:auto;    
+    font-size:11px;
+    color:#fff;
+    text-align:right;
+}
+#menutop a{
+    color:#fff;
+}
+#menutop a:hover{
+        text-decoration:underline;
+}
+</style>  
+  
+  
+  
+  
+<div id="productmenu">
+<!--googleoff: index-->
+  <div id="menutop">
+
+
+<script language=javascript type='text/javascript'>
+    // darken menu text for products with light backgrounds
+    var path = document.location.href.toLowerCase();
+    if (path.indexOf("/acrobat/")           	> 0 ||
+        path.indexOf("/acrobat.com/")       	> 0 ||
+        path.indexOf("/acrobatConnectPro/") 	> 0 ||
+        path.indexOf("/connect/")           	> 0 ||
+        path.indexOf("/framemaker/")           	> 0 ||
+        path.indexOf("/livecycledataserviceses/") > 0 ||
+        path.indexOf("/muse/")         	> 0 ||
+		path.indexOf("/presenter/")         	> 0 ||
+        path.indexOf("/scene7/")            	> 0 ||
+        path.indexOf("/flashmediaserver/")  	> 0 ||
+        path.indexOf("/wave/")              	> 0 )
+    {
+        document.write('<style>#menutop a{color:#505050}</style>');
+    }
+    if (typeof('terms_AHV_PRODUCT_SUPPORT') != "undefined" && ! use_robohelp_behavior ){      
+        if (path.indexOf("/muse/") > -1 ){
+            var supportlink = '<a href="http://muse.adobe.com/support.html">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }else{
+            var supportlink = '<a href="http://adobe.com/support">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }
+        document.write( supportlink );
+     }
+
+</script> 
+
+  </div>
+<!--googleon: index-->
+</div>
+
+
+
+<style>
+#online-privacy-policy{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+<p id="online-privacy-policy">
+<script language="javascript">
+var pageLoc = "en_US";
+var metaElements = document.all ?
+document.all.tags('meta') :
+document.getElementsByTagName ?
+document.getElementsByTagName ('meta') : new Array();
+for (var m = 0; m < metaElements.length; m++) {
+	if (metaElements[m].name == "lang") {
+		pageLoc = metaElements[m].content;
+		break;
+	}
+}
+var ptn = /(..)-(..)/;
+if (ptn.test(pageLoc)) {
+	var languageCode = pageLoc.replace(ptn, "$1");
+	var countryCode = pageLoc.replace(ptn, "$2");
+	pageLoc = languageCode + "_" + countryCode.toUpperCase();
+}
+
+var policyLoc = "en_US";
+var policyText = "Online Privacy Policy";
+var policyPath = "";
+var policyArray=[
+"da_DK", "Online fortrolighedserklæring",
+"de_DE", "Online-Datenschutzrichtlinie",
+"es_ES", "Política de confidencialidad en línea",
+"fi_FI", "Yksityisyyttä koskeva Online-toimintaohjelma",
+"fr_FR", "Confidentialité et sécurité",
+"it_IT", "Informativa sulla privacy online",
+"ja_JP", "プライバシーポリシー",
+"ko_KR", "Adobe 온라인 개인정보 보호정책",
+"pt_BR", "Política de Confidencialidade On-line", 
+"zh_CN", "在线隐私政策",
+"zh_TW", "線上隱私政策"
+];
+var legalLoc = "en_US";
+var legalText = "Legal Notices";
+var legalPath = legalLoc;
+var legalArray=[
+"ar_AE", "إشعارات قانونية",
+"bg_BG", "Юридически бележки",
+"cs_CZ", "Právní upozornění",
+"da_DK", "Juridiske meddelelser",
+"de_DE", "Rechtliche Hinweise",
+"el_GR", "Σημειώσεις νομικού περιεχομένου",
+"es_ES", "Avisos legales",
+"et_EE", "Juriidilised teated",
+"fi_FI", "Lakisääteiset ilmoitukset",
+"fr_FR", "Mentions légales",
+"he_IL", "הצהרות משפטיות",
+"hr_HR", "Pravne napomene",
+"hu_HU", "Jogi közlemények",
+"it_IT", "Informazioni legali",
+"ja_JP", "法律上の注意",
+"ko_KR", "법적 고지 사항",
+"lt_LT", "Teisinės pastabos",
+"lv_LV", "Juridisks paziņojums",
+"nb_NO", "Juridiske merknader",
+"nl_NL", "Juridische kennisgevingen",
+"pl_PL", "Informacje prawne",
+"pt_BR", "Aspectos jurídicos",
+"ro_RO", "Prevederi legale",
+"ru_RU", "Юридическая информация",
+"sk_SK", "Právne upozornenie",
+"sl_SI", "Pravni pouk",
+"sv_SE", "Upphovsrätt",
+"tr_TR", "Yasal uyarılar",
+"uk_UA", "Юридична інформація",
+"zh_CN", "法律声明",
+"zh_TW", "法律注意事項"
+];
+
+ruPolicy = "http://www.adobe.com/ru/misc/privacy.html";
+trPolicy = "http://www.adobe.com/tr/misc/privacy.html";
+
+// Bug 2846992: LOC: RUS, TUR: The link to "Online Privacy Policy" should include language, currently it is not appearing.
+if (pageLoc == "ru_RU") {
+	policyPath = "ru";
+}
+else if (pageLoc == "tr_TR") {
+	policyPath = "tr";
+}
+for (var i = 0; i < policyArray.length; i+=2) {
+	if (pageLoc == policyArray[i]) {
+		policyLoc = pageLoc;
+		policyText = policyArray[i+1];
+		var ptn = /(..)_(..)/;
+		if (ptn.test(policyLoc)) {
+			var countryCode = policyLoc.replace(ptn, "$2");
+			policyPath = countryCode.toLowerCase();
+		}
+		break;
+	}
+}
+
+for (var i = 0; i < legalArray.length; i+=2) {
+	if (pageLoc == legalArray[i]) {
+		legalLoc = pageLoc;
+		legalText = legalArray[i+1];
+		legalPath = legalLoc;
+		break;
+	}
+}
+if(agt.indexOf("community help client") > -1 ){
+	document.write('<a href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+}else{
+	//Open the privacy policy in a new window
+	document.write('<a target="_blank" href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a target="_blank" href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+} 
+
+
+remove_all_cookies();
+
+function remove_all_cookies() {
+	var res = document.cookie;
+    var multiple = res.split(";");
+    for(var i = 0; i < multiple.length; i++) {
+    	var key = multiple[i].split("=");
+        document.cookie = key[0]+" =; expires = Thu, 01 Jan 1970 00:00:00 UTC";
+    }
+}
+
+
+</script>
+</p>
+
+
+
+<!-- localfooter.ssi -->
+
+<script type="text/javascript">
+    var debug = (top.location.href.indexOf("debug=true") > -1);
+</script>
+
+<script language="javascript">
+document.write('<scr'+'ipt ' +
+               'src="/en_US/ssi/_pod.js" ' +
+               'language="javascript" ' +
+               'charset="UTF-8"> ' +
+               '</scr'+'ipt>');
+</script>
+
+//  Ethnio survey code removed
+
+
+  </body>
+</html>

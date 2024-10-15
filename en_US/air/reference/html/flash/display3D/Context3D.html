@@ -1,0 +1,1745 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"><html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers"><meta name="lang" content="en-us"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="Context3D,flash.display3D.Context3D,driverInfo,enableErrorChecking,clear,configureBackBuffer,createCubeTexture,createIndexBuffer,createProgram,createTexture,createVertexBuffer,dispose,drawToBitmapData,drawTriangles,present,setBlendFactors,setColorMask,setCulling,setDepthTest,setProgram,setProgramConstantsFromMatrix,setProgramConstantsFromVector,setRenderToBackBuffer,setRenderToTexture,setScissorRectangle,setStencilActions,setStencilReferenceValue,setTextureAt,setVertexBufferAt"><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" src="../../AC_OETags.js" type="text/javascript"></script><title>flash.display3D.Context3D - Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers</title>
+	<link rel="stylesheet" href="../../jslr-style.css" type="text/css">
+		<script type="text/javascript">
+			
+				var baseRef = "../../";
+				var buildType = 'jslr';
+				var alreadyrunflag=0; //flag to indicate whether target function has already been run
+				var terms_HELPCFG = ".helpcfg";
+
+if (document.addEventListener)
+  document.addEventListener("DOMContentLoaded", function(){alreadyrunflag=1; init()}, false)
+else if (document.all && !window.opera){
+  /* blocks IE from working, as it's fired before dom if ready
+ document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
+  var contentloadtag=document.getElementById("contentloadtag")
+  contentloadtag.onreadystatechange=function(){
+    if (this.readyState=="complete"){
+      alreadyrunflag=1;
+      init();
+    }
+  }*/
+} else if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+  var _timer=setInterval(function(){
+  if(/loaded|complete/.test(document.readyState)){
+    clearInterval(_timer);
+    alreadyrunflag=1;
+    init(); // call target function
+  }}, 10)
+}
+function onLoadFunction() {
+	setTimeout("if (!alreadyrunflag) init();  alreadyrunflag=1; ionReadyLoad(); ", 0);
+}
+
+		</script>
+		<script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+		<script language="javascript" type="text/javascript" src="../../asdoc.js"></script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body onLoad="onLoadFunction()">
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td>
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr>
+				  <td class="titleTableTitleION" align="left" nowrap="true">Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers<br>
+				  <span class="titleTableTopNavION">
+				  <span id="homelink">
+						<a target="_self" href="../../index.html"> Home </a>&nbsp;|&nbsp;
+				  </span>
+				  <a id="showtoc" onClick="showHideTOC(true)" href="#top" style="display:none">Show Classes List</a><a id="hidetoc" onClick="showHideTOC(false)" href="#top" style="display:">Hide Classes List</a>&nbsp;|&nbsp;
+				  <a href="../../all-index-A.html"> Index </a>&nbsp;|&nbsp;
+				  <a href="../../appendixes.html"> Appendixes </a><br>
+				  </span>	
+				  </td>
+				  <td class="titleTableSearchION" align="right" nowrap="true">
+				  <span id="gsa" class="gsa">
+					<form class="searchFormION" method="get" onSubmit="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US');return false;">
+				  <input class="hidden" name="loc" value="" type="hidden">
+				  <input class="hidden" name="termPrefix" value="site:help.adobe.com/en_US/AS3CLR/Flash_10.0" type="hidden">
+				  <input class="hidden" name="title" value="ActionScript 3.0 Reference for the Adobe Flash Platform" type="hidden">
+				  <input class="hidden" name="term" value="" type="hidden">
+				  <input class="hidden" name="area" value="" type="hidden">
+				  <input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text">
+				  <input type="button" name="action" value="" onClick="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US')" class="searchbutton"><br>
+			      <input id="checkBoxId" type="checkbox" name="checkbox" value="checkbox" checked>Language Reference only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  </form>
+				  </span>				  
+				  </td>
+				</tr>
+			  </table>			
+			  </td>
+			<td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logoION.jpg" class="logoImageION" alt=" Adobe Logo " title=" Adobe Logo "></td>
+		  </tr>
+		  <tr>
+			<td colspan="2">
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr class="titleTableRow2">
+				<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+					<convert>Context3D&nbsp;</convert>
+				</td>
+				<td class="titleTableSubNav" id="subNav" align="right">
+				  <a id="propertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="propertiesBar" style="display:none"> | </span>
+				  <a id="packagePropertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="packagePropertiesBar" style="display:none"> | </span>
+				  <a id="constructorLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+				  <span id="constructorBar" style="display:none"> | </span>
+				  <a id="methodsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Methods </a>
+				  <span id="methodsBar" style="display:none"> | </span>
+				  <a id="packageFunctionsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Functions </a>
+				  <span id="packageFunctionsBar" style="display:none"> | </span>
+				  <a id="eventsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('eventSummary');" style="display:none"> Events </a>
+				  <span id="eventsBar" style="display:none"> | </span>
+				  <a id="stylesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('styleSummary');" style="display:none"> Styles </a>
+				  <span id="stylesBar" style="display:none"> | </span>
+				  <a id="SkinPartLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinPartSummary');" style="display:none"> Skin Parts </a>
+				  <span id="SkinPartBar" style="display:none"> | </span>
+				  <a id="SkinStateLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinStateSummary');" style="display:none"> Skin States </a>
+				  <span id="SkinStateBar" style="display:none"> | </span>
+				  <a id="effectsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('effectSummary');" style="display:none"> Effects </a>
+				  <span id="effectsBar" style="display:none"> | </span>
+				  <a id="constantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="constantsBar" style="display:none"> | </span>
+				  <a id="packageConstantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="packageConstantsBar" style="display:none"> | </span>
+				  <a id="interfacesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('interfaceSummary');" style="display:none"> Interfaces </a>
+				  <span id="interfacesBar" style="display:none"> | </span>
+				  <a id="classesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('classSummary');" style="display:none"> Classes </a>
+				  <span id="classesBar" style="display:none"> | </span>
+				  <a id="packageUseLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('package-use.html');" style="display:none">Use</a>
+				  <span id="packageUseBar" style="display:none"> | </span>
+				  <a id="examplesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('includeExamplesSummary');" style="display:none"> Examples </a>
+				</td>
+				</tr>
+				<tr class="titleTableRow3">
+				  <td colspan="4"></td>
+				</tr>
+			  </table>
+			</td>
+		  </tr>
+		</table>
+        <div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="classlist" class="jslrclasslist">
+					<div class="classlistoutline"></div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content">
+<script language="javascript" type="text/javascript">  <!--  
+         
+        asdocTitle = "Context3D - Adobe® AIR® API Reference for HTML Developers"; 
+        var baseRef = '../../'; 
+	document.baseRef = '../../'; 
+          -->  </script>
+<script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+<script language="javascript" type="text/javascript"><!--
+function submitValue() {
+var title="Adobe® AIR® API Reference for HTML Developers";
+var searchStr=document.getElementById('search-livedocs').value;
+
+        
+        
+        if(document.getElementById('checkBoxId').checked){
+        window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
++"&site=communityhelp-air-jslr ";
+} 
+
+        else{ 
+window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
+;
+} 
+} 
+--></script><script type="text/javascript"> scrollToNameAnchor(); </script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">window.runtime property</td><td>window.runtime.flash.display3D.Context3D</td></tr><tr><td class="classSignature"></td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Context3D  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><div id="badgeAnchorSupport" class="ionBadgeWrapper"></div><div id="badgeContainerSupport"></div><p></p><p></p>
+
+     The Context3D class provides a context for rendering geometrically defined graphics.
+
+     
+     <p>A rendering context includes a drawing surface and its associated resources and state. When possible, the 
+
+	 rendering context uses the hardware graphics processing unit (GPU). Otherwise, the rendering context uses software.
+
+	 (If rendering through Context3D is not supported on a platform, the <code>stage3Ds</code> property of the Stage object contains
+
+	 an empty list.)</p>
+
+     
+	              <p>The Context3D rendering context is a programmable pipeline that is very similar to OpenGL ES 2, but is abstracted 
+
+	 so that it is compatible with a range of hardware and GPU interfaces.  Although designed for 3D graphics, 
+
+	 the rendering pipeline does not mandate that the rendering is three dimensional. Thus, you can create a 2D 
+
+	 renderer by supplying the appropriate vertex and pixel fragment programs. In both the 3D and 2D cases, the 
+
+	 only geometric primitive supported is the triangle.</p>
+
+	 
+
+	              <p>Get an instance of the Context3D class by calling the <code>requestContext3D()</code> method of a Stage3D object. 
+
+	 A limited number of Context3D objects can exist per stage; one for each Stage3D in the <code>Stage.stage3Ds</code> list. 
+
+	 When the context is created, the Stage3D object dispatches a <code>context3DCreate</code> event. A rendering context can 
+
+	 be destroyed and recreated at any time, such as when another application that uses the GPU gains focus. 
+
+	 Your code should anticipate receiving multiple <code>context3DCreate</code> events. Position the rendering area on the stage
+
+	 using the <code>x</code> and <code>y</code> properties of the associated Stage3D instance.</p>  
+
+ 	 
+
+	              <p>When the rendering context is attached to the stage of an HTML window,
+
+	 the default background of the HTMLLoader object obscures the 3D viewport. To turn off the
+
+	 default background, set the <code>paintsDefaultBackground</code> property to 
+
+	 <code>false</code>:</p>
+
+	              <p>
+                  <code>window.htmlLoader.paintsDefaultBackground = false;</code>
+               </p>
+
+	 
+
+	              <p>To render and display a scene (after getting a Context3D object), the following steps are typical:</p>
+
+	              <ol>
+                  <li>Configure the main display buffer attributes by calling <code>configureBackBuffer()</code>.</li>
+                  <li>Create and initialize your rendering resources, including:
+
+	 	<ul>
+                        <li>Vertex and index buffers defining the scene geometry</li>
+                        <li>Vertex and pixel programs (shaders) for rendering the scene</li>
+                        <li>Textures</li>
+                     </ul>
+
+	                 </li>
+                  <li>Render a frame:
+
+	 	<ul>
+                        <li>Set the render state as appropriate for an object or collection of objects in the scene.</li>
+                        <li>Call the <code>drawTriangles()</code> method to render a set of triangles.</li>
+                        <li>Change the rendering state for the next group of objects.</li>
+                        <li>Call <code>drawTriangles()</code> to draw the triangles defining the objects.</li>
+                        <li>Repeat until the scene is entirely rendered.</li>
+                        <li>Call the <code>present()</code> method to display the rendered scene on the stage.</li>
+                     </ul>
+
+	                 </li>
+               </ol>
+
+     
+
+	              <p>The following limits apply to rendering:</p>
+
+               <p>Resource limits:
+
+      <table class="innertable" ><tr><th>Resource</th><th>Number allowed</th><th>Total memory</th></tr><tr><td>
+                                 <code>Vertex buffers</code>
+                              </td><td>4096</td><td>256 MB</td></tr><tr><td>
+                                 <code>Index buffers</code>
+                              </td><td>4096</td><td>128 MB</td></tr><tr><td>
+                                 <code>Programs</code>
+                              </td><td>4096</td><td>16 MB</td></tr><tr><td>
+                                 <code>Textures</code>
+                              </td><td>4096</td><td>128 MB¹</td></tr><tr><td>
+                                 <code>Cube textures</code>
+                              </td><td>4096</td><td>256 MB</td></tr></table>
+
+               </p>
+
+	              <p>AGAL limits: 200 opcodes per program.</p>
+
+	 
+
+	              <p>Draw call limits: 32,768 <code>drawTriangles()</code> calls for each <code>present()</code> call.</p>
+
+	 
+	              <p>¹350 MB is the absolute limit for textures, including the texture memory required for mipmaps. 
+
+	 However, many devices do not support this much texture memory. For maximum compatibility, limit texture 
+
+	 memory use to 128 MB, or less.</p>
+
+	 
+
+               <p>You cannot create Context3D objects with the Context3D constructor. It is constructed and available as a property 
+
+	 of a Stage3D instance. 
+
+	 The Context3D class can be used on desktop platforms only, both when running in Flash Player and in AIR.</p>
+
+         
+
+            <p></p><p><a href="#includeExamplesSummary">View the examples</a></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="Context3DBlendFactor.html" target="">Context3DBlendFactor</a><br/><a href="Context3DClearMask.html" target="">Context3DClearMask</a><br/><a href="Context3DCompareMode.html" target="">Context3DCompareMode</a><br/><a href="Context3DProgramType.html" target="">Context3DProgramType</a><br/><a href="Context3DRenderMode.html" target="">Context3DRenderMode</a><br/><a href="Context3DStencilAction.html" target="">Context3DStencilAction</a><br/><a href="Context3DTextureFormat.html" target="">Context3DTextureFormat</a><br/><a href="Context3DTriangleFace.html" target="">Context3DTriangleFace</a><br/><a href="Context3DVertexBufferFormat.html" target="">Context3DVertexBufferFormat</a><br/><a href="textures/Texture.html" target="">Texture</a><br/><a href="textures/CubeTexture.html" target="">CubeTexture</a><br/><a href="IndexBuffer3D.html" target="">IndexBuffer3D</a><br/><a href="Program3D.html" target="">Program3D</a><br/><a href="../display/Stage3D.html" target="">Stage3D</a><br/><a href="VertexBuffer3D.html" target="">VertexBuffer3D</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Properties</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Properties</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Properties</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th>Defined By</th></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">constructor : Object<div class="summaryTableDescription">
+
+	 A reference to the class object or constructor function for a given object instance.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#driverInfo" class="signatureLink">driverInfo</a> : String<div class="summaryTableDescription">[read-only]  
+
+         The type of graphics library driver used by this rendering context.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#enableErrorChecking" class="signatureLink">enableErrorChecking</a> : Boolean<div class="summaryTableDescription"> 
+
+		 Specifies whether errors encountered by the renderer are reported to the application.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">prototype : Object<div class="summaryTableDescription">[static] 
+
+	 A reference to the prototype object of a class or function object.</div></td><td class="summaryTableOwnerCol">Object</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Public Methods </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Methods</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th>Defined By</th></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#addEventListener()" class="signatureLink">addEventListener</a>(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void</div><div class="summaryTableDescription">
+
+	Registers an event listener object with an EventDispatcher object so that the listener 
+
+	receives notification of an event.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#clear()" class="signatureLink">clear</a>(red:Number = 0.0, green:Number = 0.0, blue:Number = 0.0, alpha:Number = 1.0, depth:Number = 1.0, stencil:uint = 0, mask:uint = 0xffffffff):void</div><div class="summaryTableDescription">
+
+		 Clears the color, depth, and stencil buffers associated with this Context3D object and 
+
+		 fills them with the specified values.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#configureBackBuffer()" class="signatureLink">configureBackBuffer</a>(width:int, height:int, antiAlias:int, enableDepthAndStencil:Boolean = true):void</div><div class="summaryTableDescription">
+
+		 Sets the viewport dimensions and other attributes of the rendering buffer.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#createCubeTexture()" class="signatureLink">createCubeTexture</a>(size:int, format:String, optimizeForRenderToTexture:Boolean):<a href="textures/CubeTexture.html">flash.display3D.textures:CubeTexture</a></div><div class="summaryTableDescription">
+
+         Creates a CubeTexture object.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#createIndexBuffer()" class="signatureLink">createIndexBuffer</a>(numIndices:int):<a href="IndexBuffer3D.html">IndexBuffer3D</a></div><div class="summaryTableDescription">
+
+		 Creates an IndexBuffer3D object.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#createProgram()" class="signatureLink">createProgram</a>():<a href="Program3D.html">Program3D</a></div><div class="summaryTableDescription">
+
+         Creates a Program3D object.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#createTexture()" class="signatureLink">createTexture</a>(width:int, height:int, format:String, optimizeForRenderToTexture:Boolean):<a href="textures/Texture.html">flash.display3D.textures:Texture</a></div><div class="summaryTableDescription">
+
+         Creates a Texture object.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#createVertexBuffer()" class="signatureLink">createVertexBuffer</a>(numVertices:int, data32PerVertex:int):<a href="VertexBuffer3D.html">VertexBuffer3D</a></div><div class="summaryTableDescription">
+
+		 Creates a VertexBuffer3D object.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../events/Event.html">Event</a>):Boolean</div><div class="summaryTableDescription">
+
+	Dispatches an event into the event flow.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#dispose()" class="signatureLink">dispose</a>():void</div><div class="summaryTableDescription">
+
+         Frees all resources and internal storage associated with this Context3D.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#drawToBitmapData()" class="signatureLink">drawToBitmapData</a>(destination:<a href="../display/BitmapData.html">BitmapData</a>):void</div><div class="summaryTableDescription">
+
+         Draws the current render buffer to a bitmap.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#drawTriangles()" class="signatureLink">drawTriangles</a>(indexBuffer:<a href="IndexBuffer3D.html">IndexBuffer3D</a>, firstIndex:int = 0, numTriangles:int = -1):void</div><div class="summaryTableDescription">
+
+		 Render the specified triangles using the current buffers and state of this Context3D object.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:String):Boolean</div><div class="summaryTableDescription">
+
+	Checks whether the EventDispatcher object has any listeners registered for a specific type 
+
+	of event.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">hasOwnProperty(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an object has a specified property defined.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">isPrototypeOf(theClass:Object):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+
+	 as the parameter.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#present()" class="signatureLink">present</a>():void</div><div class="summaryTableDescription">
+
+		 Displays the back rendering buffer.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">propertyIsEnumerable(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether the specified property exists and is enumerable.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#removeEventListener()" class="signatureLink">removeEventListener</a>(type:String, listener:Function, useCapture:Boolean = false):void</div><div class="summaryTableDescription">
+
+	Removes a listener from the EventDispatcher object.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setBlendFactors()" class="signatureLink">setBlendFactors</a>(sourceFactor:String, destinationFactor:String):void</div><div class="summaryTableDescription">
+
+		 Specifies the factors used to blend the output color of a drawing operation with the existing color.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setColorMask()" class="signatureLink">setColorMask</a>(red:Boolean, green:Boolean, blue:Boolean, alpha:Boolean):void</div><div class="summaryTableDescription">
+
+         Sets the mask used when writing colors to the render buffer.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setCulling()" class="signatureLink">setCulling</a>(triangleFaceToCull:String):void</div><div class="summaryTableDescription">
+
+		 Sets triangle culling mode.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setDepthTest()" class="signatureLink">setDepthTest</a>(depthMask:Boolean, passCompareMode:String):void</div><div class="summaryTableDescription">
+
+         Sets type of comparison used for depth testing.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setProgram()" class="signatureLink">setProgram</a>(program:<a href="Program3D.html">Program3D</a>):void</div><div class="summaryTableDescription">
+
+         Sets vertex and fragment shader programs to use for subsequent rendering.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setProgramConstantsFromMatrix()" class="signatureLink">setProgramConstantsFromMatrix</a>(programType:String, firstRegister:int, matrix:Matrix3D, transposedMatrix:Boolean = false):void</div><div class="summaryTableDescription">
+
+         Sets constants for use by shader programs using values stored in a Matrix3D.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setProgramConstantsFromVector()" class="signatureLink">setProgramConstantsFromVector</a>(programType:String, firstRegister:int, data:<a href="../../Vector.html">Vector</a>.&lt;Number&gt;, numRegisters:int = -1):void</div><div class="summaryTableDescription">
+
+         Sets the constant inputs for the shader programs.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">setPropertyIsEnumerable(name:String, isEnum:Boolean = true):void</div><div class="summaryTableDescription">
+
+     Sets the availability of a dynamic property for loop operations.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setRenderToBackBuffer()" class="signatureLink">setRenderToBackBuffer</a>():void</div><div class="summaryTableDescription">
+
+		 Sets the back rendering buffer as the render target.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setRenderToTexture()" class="signatureLink">setRenderToTexture</a>(texture:flash.display3D.textures:TextureBase, enableDepthAndStencil:Boolean = false, antiAlias:int = 0, surfaceSelector:int = 0):void</div><div class="summaryTableDescription">
+
+		 Sets the specified texture as the rendering target.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setScissorRectangle()" class="signatureLink">setScissorRectangle</a>(rectangle:<a href="../geom/Rectangle.html">Rectangle</a>):void</div><div class="summaryTableDescription">
+
+		 Sets a scissor rectangle, which is type of drawing mask.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setStencilActions()" class="signatureLink">setStencilActions</a>(triangleFace:String = "frontAndBack", compareMode:String = "always", actionOnBothPass:String = "keep", actionOnDepthFail:String = "keep", actionOnDepthPassStencilFail:String = "keep"):void</div><div class="summaryTableDescription">
+
+		 Sets stencil mode and operation.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setStencilReferenceValue()" class="signatureLink">setStencilReferenceValue</a>(referenceValue:uint, readMask:uint = 255, writeMask:uint = 255):void</div><div class="summaryTableDescription"> 
+
+		 Sets the stencil comparison value used for stencil tests.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setTextureAt()" class="signatureLink">setTextureAt</a>(sampler:int, texture:flash.display3D.textures:TextureBase):void</div><div class="summaryTableDescription">
+
+		 Specifies the texture to use for a texture input register of a fragment program.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setVertexBufferAt()" class="signatureLink">setVertexBufferAt</a>(index:int, buffer:<a href="VertexBuffer3D.html">VertexBuffer3D</a>, bufferOffset:int = 0, format:String = "float4"):void</div><div class="summaryTableDescription">
+
+         Specifies which vertex data components correspond to a single vertex shader program input.</div></td><td class="summaryTableOwnerCol">Context3D</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toLocaleString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of this object, formatted according to locale-specific conventions.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">valueOf():Object</div><div class="summaryTableDescription">
+
+	 Returns the primitive value of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:String):Boolean</div><div class="summaryTableDescription">
+
+	Checks whether an event listener is registered with this EventDispatcher object or any of 
+
+	its ancestors for the specified event type.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Events</div><div class="showHideLinks"><div id="hideInheritedEvent" class="hideInheritedEvent"><a class="showHideLink" href="#eventSummary" onclick="javascript:setInheritedVisible(false,'Event');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Events</a></div><div id="showInheritedEvent" class="showInheritedEvent"><a class="showHideLink" href="#eventSummary" onclick="javascript:setInheritedVisible(true,'Event');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Events</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable hideInheritedEvent" id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th>Defined By</th></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#event:activate#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[broadcast event] Dispatched when the Flash Player or AIR application gains operating system focus and becomes active.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#event:deactivate#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[broadcast event] Dispatched when the Flash Player or AIR application operating loses system focus and is becoming inactive.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Property Detail</div><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="propertyDetail"></a><a name="driverInfo"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>driverInfo</h2></td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>driverInfo:String</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p> 
+
+         The type of graphics library driver used by this rendering context. Indicates whether the rendering is using 
+
+		 software, a DirectX driver, or an OpenGL driver.
+
+		 
+
+		 </p></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="propertyDetail"></a><a name="enableErrorChecking"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>enableErrorChecking</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>enableErrorChecking:Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p> 
+
+		 Specifies whether errors encountered by the renderer are reported to the application.
+
+		  
+
+		 <p>When <code>enableErrorChecking</code> is <code>true</code>, the <code>clear()</code>, 
+
+		 and <code>drawTriangles()</code> methods are synchronous and can throw errors. When 
+
+		 <code>enableErrorChecking</code> is <code>false</code>, the default, the  <code>clear()</code>, 
+
+		 and <code>drawTriangles()</code> methods are asynchronous and errors are not reported. 
+
+		 Enabling error checking reduces rendering performance. You should only enable error checking when debugging.</p>
+
+		 
+
+		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Context3D.html#clear()" target="">clear()</a><br/><a href="Context3D.html#drawTriangles()" target="">drawTriangles()</a></div></div></span><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="clear()"></a><a name="clear(Number,Number,Number,Number,Number,uint,uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>clear</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function clear(red:Number = 0.0, green:Number = 0.0, blue:Number = 0.0, alpha:Number = 1.0, depth:Number = 1.0, stencil:uint = 0, mask:uint = 0xffffffff):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+		 Clears the color, depth, and stencil buffers associated with this Context3D object and 
+
+		 fills them with the specified values.
+
+		 
+		 <p>Set the <code>mask</code> parameter to specify which buffers to clear. Use the constants defined in the 
+
+		 Context3DClearMask class to set the <code>mask</code> parameter. Use the bitwise OR operator, "|", to add
+
+		 multiple buffers to the mask (or use <code>Context3DClearMask.ALL</code>). When rendering to the back buffer,
+
+		 the <code>configureBackBuffer()</code> method must be called before any <code>clear()</code> calls.</p>
+
+		 
+
+		 <p><b>Note:</b> If you specify a parameter value outside the allowed range, Numeric parameter values are silently clamped to the range zero to one.  
+
+		 Likewise, if <code>stencil</code> is greater than 0xff it is set to 0xff. </p> 
+
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">red</span>:Number</code> (default = <code>0.0</code>)<code></code> &mdash; the red component of the color with which to clear the color buffer, in the range zero to one.  		 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">green</span>:Number</code> (default = <code>0.0</code>)<code></code> &mdash; the green component of the color with which to clear the color buffer, in the range zero to one.  
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">blue</span>:Number</code> (default = <code>0.0</code>)<code></code> &mdash; the blue component of the color with which to clear the color buffer, in the range zero to one.  
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">alpha</span>:Number</code> (default = <code>1.0</code>)<code></code> &mdash; the alpha component of the color with which to clear the color buffer, in the range zero to one.  
+
+		 The alpha component is not used for blending. It is written to the buffer alpha directly. 		 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">depth</span>:Number</code> (default = <code>1.0</code>)<code></code> &mdash; the value with which to clear the depth buffer, in the range zero to one.  
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">stencil</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; the 8-bit value with which to clear the stencil buffer, in a range of 0x00 to 0xff.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">mask</span>:uint</code> (default = <code>0xffffffff</code>)<code></code> &mdash; specifies which buffers to clear.
+
+		 
+		 </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; Object Disposed: if this Context3D object has been disposed by a calling <code>dispose()</code> or
+
+		 because the underlying rendering hardware has been lost.
+
+		 
+
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Context3DClearMask.html" target="">Context3DClearMask</a></div></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="configureBackBuffer()"></a><a name="configureBackBuffer(int,int,int,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>configureBackBuffer</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function configureBackBuffer(width:int, height:int, antiAlias:int, enableDepthAndStencil:Boolean = true):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+		 Sets the viewport dimensions and other attributes of the rendering buffer.
+
+		 
+		 <p>Rendering is double-buffered. The back buffer is swapped with the visible, 
+
+		 front buffer when the <code>present()</code> method is called. The minimum size of the buffer is 50x50 pixels.
+
+		 Configuring the buffer is a slow operation. Avoid changing the buffer size or attributes during normal 
+
+		 rendering operations.</p>
+
+		 
+
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">width</span>:int</code> &mdash; width in pixels of the buffer.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">height</span>:int</code> &mdash; height in pixels of the buffer.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">antiAlias</span>:int</code> &mdash; an integer value specifying the requested antialiasing quality. 
+
+		 The value correlates to the number of subsamples used when antialiasing.
+
+		 Using more subsamples requires more calculations to be performed, although 
+
+		 the relative performance impact depends on the specific rendering hardware. The
+
+		 type of antialiasing and whether antialiasing is performed at all is dependent on the
+
+		 device and rendering mode. Antialiasing is not supported at all by the
+
+		 software rendering context.
+
+		 
+		 <table class="+ topic/table adobe-d/adobetable " ><tr><td>0</td><td>No antialiasing</td></tr><tr><td>2</td><td>Minimal antialiasing.</td></tr><tr><td>4</td><td>High-quality antialiasing.</td></tr><tr><td>16</td><td>Very high-quality antialiasing.</td></tr></table>
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">enableDepthAndStencil</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; <code>false</code> indicates no depth or stencil buffer is created, 
+
+		 <code>true</code> creates a depth and a stencil buffer.
+
+		 
+		 </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; Object Disposed: if this Context3D object has been disposed by a calling <code>dispose()</code> or
+
+		 because the underlying rendering hardware has been lost.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; Bad Input Size: The width or height parameter is less than the minimum allowed size.
+
+		 
+
+		 </td></tr></table></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="createCubeTexture()"></a><a name="createCubeTexture(int,String,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>createCubeTexture</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function createCubeTexture(size:int, format:String, optimizeForRenderToTexture:Boolean):<a href="textures/CubeTexture.html">flash.display3D.textures:CubeTexture</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+         Creates a CubeTexture object.
+
+         
+         <p>Use a CubeTexture object to upload cube texture bitmaps to the rendering context and to 
+
+		 reference a cube texture during rendering. A cube texture consists of six equal-sized, square 
+
+		 textures arranged in a cubic topology and are useful for describing environment maps.</p>
+
+		   
+
+         <p>You cannot create CubeTexture objects with a CubeTexture constructor; use this method instead.  After 
+
+         creating a CubeTexture object, upload the texture bitmap data using the CubeTexture <code>uploadFromBitmapData()</code>,
+
+		 <code>uploadFromByteArray()</code>, or <code>uploadCompressedTextureFromByteArray()</code> methods..</p>
+
+         
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">size</span>:int</code> &mdash; the texture edge length in texels
+
+         </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">format</span>:String</code> &mdash; the texel format, of the Context3DTextureFormat enumerated list
+
+         </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">optimizeForRenderToTexture</span>:Boolean</code> &mdash; set as true if texture is likely to be used as a render target
+
+         
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="textures/CubeTexture.html">flash.display3D.textures:CubeTexture</a></code></td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; Object Disposed: if this Context3D object has been disposed by a calling <code>dispose()</code> or
+
+		 because the underlying rendering hardware has been lost.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; Resource Limit Exceeded: if too many Texture objects are created or the amount of 
+
+		 memory allocated to textures is exceeded.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; Depth Texture Not Implemented: if you attempt to create a depth texture.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; Texture Size Is Zero: if the <code>size</code> 
+
+		 parameter is not greater than zero.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; Texture Not Power Of Two: if the <code>size</code>
+
+		 parameter is not a power of two.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; Texture Too Big: if the <code>size</code> 
+
+		 parameter is greater than 2048.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; Texture Creation Failed: if the CubeTexture object could not be created by the
+
+		 rendering context (but information about the reason is not available).
+
+		 
+
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Context3DTextureFormat.html" target="">Context3DTextureFormat</a><br/></div></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="createIndexBuffer()"></a><a name="createIndexBuffer(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>createIndexBuffer</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function createIndexBuffer(numIndices:int):<a href="IndexBuffer3D.html">IndexBuffer3D</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+		 Creates an IndexBuffer3D object.
+
+		 
+         <p>Use an IndexBuffer3D object to upload a set of triangle indices to the rendering context and to 
+
+		 reference that set of indices for rendering. Each index in the index buffer references a corresponding vertex 
+
+		 in a vertex buffer. Each set of three indices identifies a triangle. Pass the IndexBuffer3D object to the 
+
+		 <code>drawTriangles()</code> method to render one or more triangles defined in the index buffer.</p>
+
+		 
+
+         <p>You cannot create IndexBuffer3D objects with the IndexBuffer3D class constructor; use this method instead.  After 
+
+         creating a IndexBuffer3D object, upload the indices using the IndexBuffer3D <code>uploadFromVector()</code> 
+
+		 or <code>uploadFromByteArray()</code> methods.</p>
+
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">numIndices</span>:int</code> &mdash; the number of vertices to be stored in the buffer. The maximum number of indices in a single buffer is 524287. 
+
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="IndexBuffer3D.html">IndexBuffer3D</a></code></td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; Object Disposed: if this Context3D object has been disposed by a calling <code>dispose()</code> or
+
+		 because the underlying rendering hardware has been lost.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; Resource Limit Exceeded: if too many index buffers are created or the amount of
+
+		 memory allocated to index buffers is exceeded.
+
+		 
+
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="IndexBuffer3D.html" target="">IndexBuffer3D</a></div></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="createProgram()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>createProgram</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function createProgram():<a href="Program3D.html">Program3D</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+         Creates a Program3D object.
+
+         
+         <p>Use a Program3D object to upload shader programs to the rendering context and to 
+
+		 reference uploaded programs during rendering. 
+
+         A Program3D object stores two programs, a vertex program and a fragment program (also known as a 
+
+		 pixel program). The programs are written in a binary shader assembly language.</p>
+
+		 
+
+         <p>You cannot create Program3D objects with a Program3D constructor; use this method instead.  After 
+
+         creating a Program3D object, upload the programs using the Program3D <code>upload()</code> method.</p>
+
+         
+         </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Program3D.html">Program3D</a></code></td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; Object Disposed: if this Context3D object has been disposed by a calling <code>dispose()</code> or
+
+		 because the underlying rendering hardware has been lost.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; The number of programs exceeds 4096 or the total memory size exceeds 16MB 
+
+		 (use <code>dispose</code> to free Program3D resources).
+
+		 
+
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Program3D.html" target="">Program3D</a></div></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="createTexture()"></a><a name="createTexture(int,int,String,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>createTexture</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function createTexture(width:int, height:int, format:String, optimizeForRenderToTexture:Boolean):<a href="textures/Texture.html">flash.display3D.textures:Texture</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+         Creates a Texture object.
+
+         
+         <p>Use a Texture object to upload texture bitmaps to the rendering context and to 
+
+		 reference a texture during rendering.</p>
+
+		 
+
+         <p>You cannot create Texture objects with a Texture constructor; use this method instead.  After 
+
+         creating a Texture object, upload the texture bitmaps using the Texture <code>uploadFromBitmapData()</code>,
+
+		 <code>uploadFromByteArray()</code>, or <code>uploadCompressedTextureFromByteArray()</code> methods.</p>
+
+		 
+
+         Note that 32-bit integer textures are stored in a packed BGRA format to match the Flash <code>BitmapData</code> format. 
+
+         Floating point textures use a conventional RGBA format. 
+
+         
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">width</span>:int</code> &mdash; the texture width in texels.
+
+         </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">height</span>:int</code> &mdash; the texture height in texels.
+
+         </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">format</span>:String</code> &mdash; the texel format, of the Context3DTextureFormat enumerated list.
+
+         </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">optimizeForRenderToTexture</span>:Boolean</code> &mdash; set as true if texture is likely to be used as a render target.
+
+         
+
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="textures/Texture.html">flash.display3D.textures:Texture</a></code></td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; Object Disposed: if this Context3D object has been disposed by a calling <code>dispose()</code> or
+
+		 because the underlying rendering hardware has been lost.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; Resource Limit Exceeded: if too many Texture objects are created or the amount of 
+
+		 memory allocated to textures is exceeded.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; Depth Texture Not Implemented: if you attempt to create a depth texture.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; Texture Size Is Zero: if both the <code>width</code> or <code>height</code> 
+
+		 parameters are not greater than zero.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; Texture Not Power Of Two: if both the <code>width</code> and <code>height</code>
+
+		 parameters are not a power of two.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; Texture Too Big: if either the <code>width</code> or the <code>height</code> 
+
+		 parameter is greater than 2048.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; Texture Creation Failed: if the Texture object could not be created by the
+
+		 rendering context (but information about the reason is not available).
+
+		 
+
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Context3DTextureFormat.html" target="">Context3DTextureFormat</a><br/></div></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="createVertexBuffer()"></a><a name="createVertexBuffer(int,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>createVertexBuffer</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function createVertexBuffer(numVertices:int, data32PerVertex:int):<a href="VertexBuffer3D.html">VertexBuffer3D</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+		 Creates a VertexBuffer3D object.
+
+		 
+         <p>Use a VertexBuffer3D object to upload a set of vertex data to the rendering context. 
+
+		 A vertex buffer contains the data needed to render each point in the scene geometry.
+
+		 The data attributes associated with each vertex typically includes position, color, and texture
+
+		 coordinates and serve as the input to the vertex shader program. Identify the data 
+
+		 values that correspond to one of the inputs of the vertex program using the 
+
+		 <code>setVertexBufferAt()</code> method. You can specify up to sixty-four 32-bit values
+
+		 for each vertex. (A shader program can use up to eight inputs.)</p>
+
+		 
+
+         <p>You cannot create VertexBuffer3D objects with a VertexBuffer3D constructor; use this method instead.  After 
+
+         creating a VertexBuffer3D object, upload the vertex data using the VertexBuffer3D <code>uploadFromVector()</code> 
+
+		 or <code>uploadFromByteArray()</code> methods.</p>
+
+		 
+
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">numVertices</span>:int</code> &mdash; the number of vertices to be stored in the buffer. The maximum number of 
+
+		 vertices in a single buffer is 65535. 
+
+         </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">data32PerVertex</span>:int</code> &mdash; the number of 32-bit(4-byte) data values associated with each vertex.  
+
+		 The maximum number of 32-bit data elements per vertex is 64 (or 256 bytes).
+
+		  Note that only eight attribute registers are
+
+		  accessible by a vertex shader program at any given time.  Use <code>SetVertextBufferAt()</code> to select attributes from within
+
+		  a vertex buffer.
+
+		 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="VertexBuffer3D.html">VertexBuffer3D</a></code></td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; Object Disposed: if this Context3D object has been disposed by a calling <code>dispose()</code> or
+
+		 because the underlying rendering hardware has been lost.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; Resource Limit Exceeded: if too many vertex buffer objects are created or the amount of memory alloted to
+
+		 vertex buffers is exceeded.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; Buffer Too Big: when <code>numVertices</code> is greater than 0x10000 or <code>data32PerVertex</code> is greater than 64.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; Buffer Has Zero Size: when <code>numVertices</code> is zero or <code>data32PerVertex</code> is zero.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; Buffer Creation Failed: if the VertexBuffer3D object could not be created 
+
+		 by the rendering context (but additional information about the reason is not available). 
+
+		 
+
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="VertexBuffer3D.html" target="">VertexBuffer3D</a><br/><a href="Context3D.html#setVertexBufferAt()" target="">setVertexBufferAt()</a></div></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="dispose()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>dispose</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function dispose():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+         Frees all resources and internal storage associated with this Context3D.
+
+		  
+
+         <p>All index buffers, vertex buffers, textures, and programs that were created through this Context3D are disposed
+
+         just as if calling <code>dispose()</code> on each of them individually. 
+
+         In addition, the Context3D itself is disposed freeing all temporary buffers and the back buffer. 
+
+         If you call configureBackBuffer(), clear(), drawTriangles(), createCubeTexture(), createTexture(), createProgram(), 
+
+		 createIndexBuffer(), createVertexBuffer(), or drawToBitmapData() after calling dispose(), the runtime throws an exception.</p>                   
+
+		 
+
+         <p><b>Warning</b>: calling <code>dispose()</code> on a Context3D object while the associated Stage3D object still 
+
+		 has a listener for the <code>context3DCreate</code> event, simulates a device loss. The runtime creates a 
+
+		 new Context3D instance for the Stage3D object and dispatches another <code>context3DCreate</code> event. 
+
+         If this is not desired, remove the event listener from the Stage3D object before calling <code>dispose()</code>. </p>
+
+         
+         </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../display/Stage3D.html" target="">Stage3D</a></div></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="drawToBitmapData()"></a><a name="drawToBitmapData(flash.display.BitmapData)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>drawToBitmapData</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function drawToBitmapData(destination:<a href="../display/BitmapData.html">BitmapData</a>):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+         Draws the current render buffer to a bitmap.
+
+         
+         <p>The current contents of the back render buffer are copied to a BitmapData object. This is potentially a very slow 
+
+		 operation that can take up to a second. Use with care. 
+
+         Note that this function does not copy the front render buffer (the one shown on stage), but the buffer being drawn to. 
+
+		 To capture the rendered image as it appears on the stage, call <code>drawToBitmapData()</code> 
+
+		 immediately before you calling <code>present()</code>.</p>
+
+		  
+
+         <p>When the image is drawn, it is not scaled to fit the bitmap. Instead, the contents are 
+
+		 clipped to the size of the destination bitmap.</p>
+
+		 
+		 <p>Flash BitmapData objects store colors  already multiplied by the alpha component. For example, if the "pure" rgb color
+
+		 components of a pixel are (0x0A, 0x12, 0xBB) and the alpha component is 0x7F (.5), then the pixel is stored in the 
+
+		 BitmapData object with the rgba values: (0x05, 0x09, 0x5D, 0x7F). You can set the blend factors so that the colors 
+
+		 rendered to the buffer are multiplied by alpha or perform the operation in the fragment shader. The rendering context 
+
+		 does not validate that the colors are stored in premultiplied format. </p>
+
+		 
+
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">destination</span>:<a href="../display/BitmapData.html">BitmapData</a></code></td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; Object Disposed: if this Context3D object has been disposed by a calling <code>dispose()</code> or
+
+		 because the underlying rendering hardware has been lost.
+
+		 
+
+		 </td></tr></table></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="drawTriangles()"></a><a name="drawTriangles(flash.display3D.IndexBuffer3D,int,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>drawTriangles</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function drawTriangles(indexBuffer:<a href="IndexBuffer3D.html">IndexBuffer3D</a>, firstIndex:int = 0, numTriangles:int = -1):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+		 Render the specified triangles using the current buffers and state of this Context3D object.
+
+		 
+		 <p>For each triangle, the triangle vertices are processed by the vertex shader program and the 
+
+		 triangle surface is processed by the pixel shader program. 
+
+		 The output color from the pixel program for each pixel is drawn to the render target 
+
+		 depending on the stencil operations, depth test, source and destination alpha, and the current blend mode. 
+
+		 The render destination can be the main render buffer or a texture.</p>
+
+		 
+		 <p>If culling is enabled, (with the <code>setCulling()</code> method), then triangles can be discarded from the 
+
+		 scene before the pixel program is run. If stencil and depth testing are enabled, then output 
+
+		 pixels from the pixel program can be discarded without updating the render destination. 
+
+		 In addition, the pixel program can decide not to output a color for a pixel.</p>
+
+		 
+
+		 <p>The rendered triangles are not displayed in the viewport until you call the <code>present()</code> method. 
+
+		 After each <code>present()</code> call, the <code>clear()</code> method must be called before the 
+
+		 first <code>drawTriangles()</code> call or rendering fails.</p>
+
+
+
+		 <p>When <code>enableErrorChecking</code> is <code>false</code>, this function returns immediately, 
+
+		 does not wait for results, and throws exceptions only if this Context3D instance has been disposed 
+
+		 or there are too many draw calls.  If the rendering context state is invalid 
+
+		 rendering fails silently. When the <code>enableErrorChecking</code> property is <code>true</code>, 
+
+		 this function returns after the triangles are drawn and throws exceptions for any drawing errors 
+
+		 or invalid context state.</p> 
+
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">indexBuffer</span>:<a href="IndexBuffer3D.html">IndexBuffer3D</a></code> &mdash; a set of vertex indices referencing the vertices to render.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">firstIndex</span>:int</code> (default = <code>0</code>)<code></code> &mdash; the index of the first vertex index selected to render. Default 0.   
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">numTriangles</span>:int</code> (default = <code>-1</code>)<code></code> &mdash; the number of triangles to render. Each triangle consumes three indices.  
+
+		 	Pass -1 to draw all triangles in the index buffer. Default -1.  
+
+		 
+
+		 </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; Object Disposed: if this Context3D object has been disposed by a calling <code>dispose()</code> or
+
+		 because the underlying rendering hardware has been lost.
+
+		 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; If this method is called too many times between calls to <code>present()</code>. 
+
+		 The maximum number of calls is 32,768. 
+
+		 
+
+		 <p>The following errors are only thrown when <code>enableErrorChecking</code> 
+
+		 property is <code>true</code>:</p>
+
+		 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; Need To Clear Before Draw: If the buffer has not been cleared 
+
+		 since the last <code>present()</code> call.
+
+		 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; If a valid Program3D object is not set.
+
+		 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; No Valid Index Buffer Set: If an IndexBuffer3D object is not set.
+
+		 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; Sanity Check On Parameters Failed: when the number of triangles to be drawn or the 
+
+		 <code>firstIndex</code> exceed allowed values.
+
+		 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>RangeError </code> &mdash; Not Enough Indices In This Buffer: when there aren't enough indices in the buffer to 
+
+		 define the number of triangles to be drawn.
+
+		 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; Sample Binds Texture Also Bound To Render: when the render target is a texture and that 
+
+		 texture assigned to a texture input of the current fragment program.
+
+		 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; Sample Binds Invalid Texture: an invalid texture is specified as the input to the current 
+
+		 fragment program.
+
+		 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; Sampler Format Does Not Match Texture Format: when the texture assigned as the input
+
+		 to the current fragment program has a different format than that specified for the sampler 
+
+		 register. For example, a 2D texture is assigned to a cube texture sampler.
+
+		 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; Sample Binds Undefined Texture: The current fragment program accesses a texture 
+
+		 register that has not been set (using <code>setTextureAt()</code>).
+
+		 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; Same Texture Needs Same Sampler Params: If a texture is used for more than one
+
+		 sampler register, all of the samplers must have the same settings. For example, you cannot
+
+		 set one sampler to clamp and another to wrap.
+
+		 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; Texture Bound But Not Used: A texture is set as a shader input, but
+
+		 it is not used.
+
+		 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; Stream Is Not Used: A vertex buffer is assigned to a vertex attribute input,
+
+		 but the vertex program does not reference the corresponding register.
+
+		 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; Stream Is Invalid: a VertexBuffer3D object assigned to a vertex program input
+
+		 is not a valid object.
+
+		 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>RangeError </code> &mdash; Stream Does Not Have Enough Vertices: A vertex buffer supplying data for drawing
+
+		 the specified triangles does not have enough data.
+
+		 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>RangeError </code> &mdash; Stream Vertex Offset Out Of Bounds: The offset specified in a 
+
+		 <code>setVertexBufferAt()</code> call is negative or past the end of the buffer.
+
+		 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; Stream Read But Not Set: A vertex attribute used by the current vertex program
+
+		 is not set (using <code>setVertexBufferAt()</code>).
+
+		 
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Context3D.html#enableErrorChecking()" target="">enableErrorChecking()</a><br/><a href="VertexBuffer3D.html#upload()" target="">VertexBuffer3D.upload()</a><br/><a href="IndexBuffer3D.html#upload()" target="">IndexBuffer3D.upload()</a><br/><a href="textures/Texture.html" target="">Texture</a><br/><a href="Program3D.html" target="">Program3D</a></div></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="present()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>present</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function present():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+		 Displays the back rendering buffer. 
+
+		 
+
+		 <p>Calling the <code>present()</code> method makes the results of all 
+
+		 rendering operations since the last <code>present()</code> call visible and starts a new rendering cycle. 
+
+		 After calling <code>present</code>, you must call <code>clear()</code> before making another 
+
+		 <code>drawTriangles()</code> call. Otherwise, this function will alternately clear the render buffer 
+
+		 to yellow and green or, if <code>enableErrorChecking</code> has been set to <code>true</code>, 
+
+		 an exception is thrown.</p>
+
+         
+		 <p>Calling <code>present()</code> also resets the render target, just like calling 
+
+		 <code>setRenderToBackBuffer()</code>. </p>  
+
+		 
+		 </p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; Need To Clear Before Draw: If the <code>clear()</code> has not been called since
+
+		 the previous call to <code>present()</code>. (Two consecutive <code>present()</code> calls are not allowed
+
+		 without calling <code>clear()</code> in between.)
+
+		 
+		 
+
+		 </td></tr></table></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="setBlendFactors()"></a><a name="setBlendFactors(String,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>setBlendFactors</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setBlendFactors(sourceFactor:String, destinationFactor:String):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+		 Specifies the factors used to blend the output color of a drawing operation with the existing color.
+
+		 
+		 <p>The output (source) color of the pixel shader program is combined with the existing (destination) color at that pixel
+
+		 according to the following formula:</p> 
+
+		 <p><code>result color = (source color * sourceFactor) + (destination color * destinationFactor)</code></p>
+
+		 <p>The destination color is the current color in the render buffer for that pixel. Thus it is the result of the most recent 
+
+		 <code>clear()</code> call and any intervening <code>drawTriangles()</code> calls. </p>
+
+		  
+
+		 <p>Use <code>setBlendFactors()</code> to set the factors used to multiply the source and destination colors before they are added together.
+
+		 The default blend factors are, <code>sourceFactor = Context3DBlendFactor.ONE</code>, and <code>destinationFactor = Context3DBlendFactor.ZERO</code>, which
+
+		 results in the source color overwriting the destination color (in other words, no blending of the two colors occurs). For normal 
+
+		 alpha blending, use <code>sourceFactor = Context3DBlendFactor.SOURCE_ALPHA</code> and <code>destinationFactor =  Context3DBlendFactor.ONE_MINUS_SOURCE_ALPHA</code>. 
+
+		 </p>
+
+		 
+		 <p>Use the constants defined in the Context3DBlendFactor class to set the parameters of this function.</p>
+
+		 
+
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">sourceFactor</span>:String</code> &mdash; The factor with which to multiply the source color. Defaults to <code>Context3DBlendFactor.ONE</code>.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">destinationFactor</span>:String</code> &mdash; The factor with which to multiply the destination color. Defaults to <code>Context3DBlendFactor.ZERO</code>.
+
+		 
+		 </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; Invalid Enum: when <code>sourceFactor</code> or <code>destinationFactor</code> 
+
+		 is not one of the recognized values, which are defined in the Context3DBlendFactor class.
+
+		 
+
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Context3DBlendFactor.html" target="">Context3DBlendFactor</a></div></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="setColorMask()"></a><a name="setColorMask(Boolean,Boolean,Boolean,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>setColorMask</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setColorMask(red:Boolean, green:Boolean, blue:Boolean, alpha:Boolean):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+         Sets the mask used when writing colors to the render buffer.
+
+         
+         <p>Only color components for which the corresponding color mask parameter is <code>true</code> are updated
+
+		 when a color is written to the render buffer. For example, if you call:
+
+		 <code>setColorMask( true, false, false, false )</code>, only the red component of a color is written to the
+
+		 buffer until you change the color mask again. The color mask does not affect the behavior of the 
+
+		 <code>clear()</code> method.</p>
+
+         
+         </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">red</span>:Boolean</code> &mdash; set <code>false</code> to block changes to the red channel.
+
+         </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">green</span>:Boolean</code> &mdash; set <code>false</code> to block changes to the green channel.
+
+         </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">blue</span>:Boolean</code> &mdash; set <code>false</code> to block changes to the blue channel.
+
+         </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">alpha</span>:Boolean</code> &mdash; set <code>false</code> to block changes to the alpha channel.
+
+		 
+
+		 </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="setCulling()"></a><a name="setCulling(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>setCulling</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setCulling(triangleFaceToCull:String):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+		 Sets triangle culling mode.
+
+		 
+		 <p>Triangles may be excluded from the scene early in the rendering pipeline based on their orientation 
+
+		 relative to the view plane.  Specify	vertex order consistently (clockwise or counter-clockwise) as 
+
+		 seen from the outside of the model to cull correctly.</p>
+
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">triangleFaceToCull</span>:String</code> &mdash; the culling mode.  Use one of the constants defined in the Context3DTriangleFace class.
+
+		 
+		 </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; Invalid Enum Error: when <code>triangleFaceToCull</code> is not one of the values
+
+		 defined in the Context3DTriangleFace class.
+
+		 
+
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Context3DTriangleFace.html" target="">Context3DTriangleFace</a></div></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="setDepthTest()"></a><a name="setDepthTest(Boolean,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>setDepthTest</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setDepthTest(depthMask:Boolean, passCompareMode:String):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+         Sets type of comparison used for depth testing.
+
+         
+		 <p>The depth of the source pixel output from the pixel shader program is compared to the current 
+
+		 value in the depth buffer. If the comparison evaluates as <code>false</code>, then the source pixel
+
+		 is discarded. If <code>true</code>, then the source pixel is processed by the next step in 
+
+		 the rendering pipeline, the stencil test. In addition, the depth buffer is updated with the depth of the source
+
+		 pixel, as long as the <code>depthMask</code> parameter is set to <code>true</code>.</p>
+
+		 
+
+         <p>Sets the test used to compare depth values for source and destination pixels.  The source
+
+         pixel is composited with the destination pixel when the comparison is true.  The comparison 
+
+         operator is applied as an infix operator between the source and destination pixel values, in 
+
+         that order.</p>
+
+         
+         </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">depthMask</span>:Boolean</code> &mdash; the destination depth value will be updated from the source pixel when true.
+
+         </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">passCompareMode</span>:String</code> &mdash; the depth comparison test operation.  One of the values of Context3DCompareMode.
+
+		 
+
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Context3DCompareMode.html" target="">Context3DCompareMode</a></div></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="setProgram()"></a><a name="setProgram(flash.display3D.Program3D)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>setProgram</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setProgram(program:<a href="Program3D.html">Program3D</a>):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+         Sets vertex and fragment shader programs to use for subsequent rendering.
+
+         
+         </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">program</span>:<a href="Program3D.html">Program3D</a></code> &mdash; the Program3D object representing the vertex and fragment programs to use. 
+
+		 
+
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Context3D.html#drawTriangles()" target="">drawTriangles()</a><br/><a href="Program3D.html" target="">Program3D</a></div></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="setProgramConstantsFromMatrix()"></a><a name="setProgramConstantsFromMatrix(String,int,flash.geom.Matrix3D,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>setProgramConstantsFromMatrix</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setProgramConstantsFromMatrix(programType:String, firstRegister:int, matrix:Matrix3D, transposedMatrix:Boolean = false):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+         Sets constants for use by shader programs using values stored in a <code>Matrix3D</code>. 
+
+         
+         <p>Use this function to pass a matrix to a shader program. The function sets 4 constant 
+
+		 registers used by the vertex or fragment program. 
+
+		 The matrix is assigned to registers row by row. The first constant register is assigned the 
+
+		 top row of the matrix. You can set 128 registers for a vertex program and 28 for a 
+
+		 fragment program.</p>
+
+		 
+
+         </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">programType</span>:String</code> &mdash; The type of shader program, either <code>Context3DProgramType.VERTEX</code> or 
+
+		 <code>Context3DProgramType.FRAGMENT</code>.
+
+         </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">firstRegister</span>:int</code> &mdash; the index of the first constant register to set. Since a Matrix3D has 16 values, 
+
+		 four registers are set.
+
+         </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">matrix</span>:Matrix3D</code> &mdash; the matrix containing the constant values.
+
+         </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">transposedMatrix</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; if <code>true</code> the matrix entries are copied to registers in 
+
+		 transposed order.  The default value is <code>false</code>.
+
+		    
+
+		 </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>TypeError </code> &mdash; Null Pointer Error: when <code>matrix</code> is null.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>RangeError </code> &mdash; Constant Register Out Of Bounds: when attempting to set more than 
+
+		 the maximum number of shader constant registers.
+
+		 
+
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Context3DProgramType.html" target="">Context3DProgramType</a><br/></div></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="setProgramConstantsFromVector()"></a><a name="setProgramConstantsFromVector(String,int,Vector$Number,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>setProgramConstantsFromVector</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setProgramConstantsFromVector(programType:String, firstRegister:int, data:<a href="../../Vector.html">Vector</a>.&lt;Number&gt;, numRegisters:int = -1):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+         Sets the constant inputs for the shader programs.
+
+         
+         <p>Sets an array of constants to be accessed by a vertex or fragment shader program. 
+
+		 Constants set in Program3D are accessed within the shader programs as constant registers. 
+
+		 Each constant register is comprised of 4 floating point values (x, y, z, w). 
+
+         Therefore every register requires 4 entries in the data Vector. You can set 128 registers 
+
+		 for a vertex program and 28 for a fragment program.</p>
+
+         
+         </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">programType</span>:String</code> &mdash; The type of shader program, either <code>Context3DProgramType.VERTEX</code> or 
+
+		 <code>Context3DProgramType.FRAGMENT</code>.
+
+         </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">firstRegister</span>:int</code> &mdash; the index of the first constant register to set.
+
+         </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">data</span>:<a href="../../Vector.html">Vector</a>.&lt;Number&gt;</code> &mdash; the floating point constant values. There must be at least <code>numRegisters</code> 4 
+
+		 elements in <code>data</code>.
+
+         </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">numRegisters</span>:int</code> (default = <code>-1</code>)<code></code> &mdash; the number of constants to set. Specify -1, the default value, to set enough
+
+		 registers to use all of the available data.
+
+		 
+		 </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>TypeError </code> &mdash; Null Pointer Error: when <code>data</code> is <code>null</code>.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>RangeError </code> &mdash; Constant Register Out Of Bounds: when attempting to set more 
+
+		 than the maximum number of shader constant registers (128 for vertex programs; 
+
+		 28 for fragment programs).
+
+		 
+
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Context3DProgramType.html" target="">Context3DProgramType</a><br/></div></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="setRenderToBackBuffer()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>setRenderToBackBuffer</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setRenderToBackBuffer():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+		 Sets the back rendering buffer as the render target. Subsequent calls to <code>drawTriangles()</code> 
+
+		 and <code>clear()</code> methods result in updates to the back buffer. Use this method to resume normal rendering
+
+		 after using the <code>setRenderToTexture()</code> method. 
+
+		 
+		 
+
+		 </p></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="setRenderToTexture()"></a><a name="setRenderToTexture(flash.display3D.textures.TextureBase,Boolean,int,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>setRenderToTexture</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setRenderToTexture(texture:flash.display3D.textures:TextureBase, enableDepthAndStencil:Boolean = false, antiAlias:int = 0, surfaceSelector:int = 0):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+		 Sets the specified texture as the rendering target.  
+
+		 
+
+		 <p>Subsequent calls to <code>drawTriangles()</code> 
+
+		 and <code>clear()</code> methods update the specified texture instead of the back buffer. Mip maps
+
+		 are created automatically. Use the <code>setRenderToBackBuffer()</code> to resume normal rendering
+
+		 to the back buffer.</p>
+
+		 
+		 <p>The texture must be cleared before drawing and the <code>clear()</code> method is called 
+
+		 automatically if needed. Calling <code>present()</code> resets the target to the back buffer.</p>
+
+		 
+
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">texture</span>:flash.display3D.textures:TextureBase</code> &mdash; the target texture to render into. Set to <code>null</code> to resume 
+
+		 rendering to the back buffer (<code>setRenderToBackBuffer()</code> and
+
+		 <code>present</code> also reset the target to the back buffer). 		 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">enableDepthAndStencil</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; if <code>true</code>, depth and stencil testing are available. 
+
+		 If <code>false</code>, all depth and stencil state is ignored for subsequent drawing operations. 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">antiAlias</span>:int</code> (default = <code>0</code>)<code></code> &mdash; the antialiasing quality. Use 0 to disable antialiasing; higher values improve
+
+		 antialiasing quality, but require more calculations. The value is currently ignored 
+
+		 by the runtime. 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">surfaceSelector</span>:int</code> (default = <code>0</code>)<code></code> &mdash; specifies which element of the texture to update. Texture objects have one surface, so you must
+
+		 specify 0, the default value. CubeTexture objects have six surfaces, so you can specify an integer from 0 through 5.
+
+		 
+
+		 </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; for a mismatched <code>surfaceSelector</code> parameter. The value must be 0 for 2D textures and 0..5 for cube maps. 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; <code>texture</code> is not derived from the TextureBase class (either Texture or CubeTexture classes).
+
+		 
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Context3D.html#clear()" target="">clear()</a><br/><a href="Context3D.html#setRenderToDisplay()" target="">setRenderToDisplay()</a><br/><a href="Context3D.html#configureBackBuffer()" target="">configureBackBuffer()</a><br/><a href="textures/CubeTexture.html#uploadFromByteArray()" target="">CubeTexture.uploadFromByteArray() for valid surface selector for use with cube map textures.</a></div></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="setScissorRectangle()"></a><a name="setScissorRectangle(flash.geom.Rectangle)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>setScissorRectangle</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setScissorRectangle(rectangle:<a href="../geom/Rectangle.html">Rectangle</a>):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+		 Sets a scissor rectangle, which is type of drawing mask. The renderer only draws to the area inside the 
+
+		 scissor rectangle. Scissoring does not affect clear operations. 
+
+		 
+		 <p>Pass <code>null</code> to turn off scissoring.</p>	 
+
+		 
+
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">rectangle</span>:<a href="../geom/Rectangle.html">Rectangle</a></code> &mdash; The rectangle in which to draw. Specify the rectangle position and dimensions in pixels.
+
+		 The coordinate system origin is the top left corner of the viewport, with positive values increasing down 
+
+		 and to the right (the same as the normal Flash display coordinate system). 
+
+		 
+
+		 </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="setStencilActions()"></a><a name="setStencilActions(String,String,String,String,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>setStencilActions</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setStencilActions(triangleFace:String = "frontAndBack", compareMode:String = "always", actionOnBothPass:String = "keep", actionOnDepthFail:String = "keep", actionOnDepthPassStencilFail:String = "keep"):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+		 Sets stencil mode and operation.
+
+		 
+		 <p>An 8-bit stencil reference value can be associated with each draw call.  
+
+		 During rendering, the reference value can be tested against values stored previously 
+
+		 in the frame buffer.  The result of the test can control the draw action and 
+
+		 whether or how the stored stencil value is updated.  In addition, depth testing 
+
+		 controls whether stencil testing is performed.  A failed depth test can 
+
+		 also be used to control the action taken on the stencil buffer.</p>
+
+		 
+
+		 <p>In the pixel processing pipeline, depth testing is performed first.  
+
+		 If the depth test fails, a stencil buffer update action can be taken, 
+
+		 but no further evaluation of the stencil buffer value can be made.  If the 
+
+		 depth test passes, then the stencil test is performed.  Alternate actions 
+
+		 can be taken depending on the outcome of the stencil test.  </p>
+
+		 
+		 <p>The stencil reference value is set using <code>setStencilReferenceValue()</code>. </p>
+
+		 
+
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">triangleFace</span>:String</code> (default = "<code>frontAndBack</code>")<code></code> &mdash; the triangle orientations allowed to contribute to the stencil operation.  One of Context3DTriangleFace.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">compareMode</span>:String</code> (default = "<code>always</code>")<code></code> &mdash; the test operator used to compare the current stencil reference value and the destination pixel stencil value.  Destination
+
+		 pixel color and depth update is performed when the comparison is true.  The stencil actions are performed as requested in the following action 
+
+		 parameters.  The comparison operator is applied as an infix operator between the current and destination reference values, in 
+
+		 that order (in pseudocode: <code>if stencilReference OPERATOR stencilBuffer then pass</code>).  Use one of the constants defined in the 
+
+		 Context3DCompareMode class.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">actionOnBothPass</span>:String</code> (default = "<code>keep</code>")<code></code> &mdash; action to be taken when both depth and stencil comparisons pass.  Use one of the constants defined in the 
+
+		 Context3DStencilAction class.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">actionOnDepthFail</span>:String</code> (default = "<code>keep</code>")<code></code> &mdash; action to be taken when depth comparison fails. Use one of the constants defined in the Context3DStencilAction class.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">actionOnDepthPassStencilFail</span>:String</code> (default = "<code>keep</code>")<code></code> &mdash; action to be taken when depth comparison passes and the stencil comparison fails. Use one of the constants 
+
+		 defined in the Context3DStencilAction class.
+
+		 
+		 </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; Invalid Enum Error: when <code>triangleFace</code> is not one of the values defined in the Context3DTriangleFace class.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; Invalid Enum Error: when <code>compareMode</code> is not one of the values defined in the Context3DCompareMode class.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; Invalid Enum Error: when <code>actionOnBothPass</code>, <code>actionOnDepthFail</code>, or <code>actionOnDepthPassStencilFail</code>
+
+		  is not one of the values defined in the Context3DStencilAction class.
+
+		 
+
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Context3DTriangleFace.html" target="">Context3DTriangleFace</a><br/><a href="Context3DCompareMode.html" target="">Context3DCompareMode</a><br/><a href="Context3DStencilAction.html" target="">Context3DStencilAction</a><br/><a href="Context3D.html#setStencilReferenceValue()" target="">setStencilReferenceValue()</a></div></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="setStencilReferenceValue()"></a><a name="setStencilReferenceValue(uint,uint,uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>setStencilReferenceValue</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setStencilReferenceValue(referenceValue:uint, readMask:uint = 255, writeMask:uint = 255):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p> 
+
+		 Sets the stencil comparison value used for stencil tests. 
+
+		 
+
+		 <p>Only the lower 8 bits of the reference value are used. The stencil buffer value is also 8 bits in length.
+
+		 Use the <code>readMask</code> and <code>writeMask</code> to use the stencil buffer as a bit field.</p>
+
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">referenceValue</span>:uint</code> &mdash; an 8-bit reference value used in reference value comparison tests.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">readMask</span>:uint</code> (default = <code>255</code>)<code></code> &mdash; an 8-bit mask for applied to both the current stencil buffer value and the reference value before the comparison.  
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">writeMask</span>:uint</code> (default = <code>255</code>)<code></code> &mdash; an 8-bit mask applied to the reference value before updating the stencil buffer.
+
+		 
+
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Context3D.html#setStencilAction()" target="">setStencilAction()</a></div></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="setTextureAt()"></a><a name="setTextureAt(int,flash.display3D.textures.TextureBase)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>setTextureAt</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setTextureAt(sampler:int, texture:flash.display3D.textures:TextureBase):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+		 Specifies the texture to use for a texture input register of a fragment program.
+
+		 
+
+		 <p>A fragment program can read information from up to eight texture objects. 
+
+		 Use this function to assign a Texture or CubeTexture object to one
+
+		 of the sampler registers used by the fragment program. </p>
+
+		 
+
+         <p><b>Note:</b> if you change the active fragment program (with <code>setProgram</code>)
+
+		 to a shader that uses fewer textures, set the unused registers to <code>null</code>:</p>
+
+		 <div class="listing"><pre>
+
+         setTextureAt( 7, null );
+
+         </pre></div>
+
+         
+         </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">sampler</span>:int</code> &mdash; the sampler register index, a value from 0 through 7.
+
+         </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">texture</span>:flash.display3D.textures:TextureBase</code> &mdash; the texture object to make available, either a Texture or a CubeTexture instance.
+
+		 
+
+		 </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="setVertexBufferAt()"></a><a name="setVertexBufferAt(int,flash.display3D.VertexBuffer3D,int,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>setVertexBufferAt</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setVertexBufferAt(index:int, buffer:<a href="VertexBuffer3D.html">VertexBuffer3D</a>, bufferOffset:int = 0, format:String = "float4"):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+         Specifies which vertex data components correspond to a single vertex shader program input.
+
+         
+         <p>Use the <code>setVertexBufferAt</code> method to identify which components of the data 
+
+		 defined for each vertex in a VertexBuffer3D buffer belong to which inputs to the vertex program. The 
+
+         developer of the vertex program determines how much data is needed per vertex. That data is mapped from 1 or more 
+
+         <code>VertexBuffer3D</code> stream(s) to the attribute registers of the vertex shader program.</p>
+
+         
+
+         <p>The smallest unit of data consumed by the vertex shader is a 32-bit data. Offsets into the vertex stream
+
+         are specified in multiples of 32-bits.</p>
+
+         
+         As an example, a programmer might define each vertex with the following data:
+
+<pre>
+
+position:  x    float32
+
+           y    float32
+
+           z    float32
+
+color:     r    unsigned byte
+
+           g    unsigned byte
+
+           b    unsigned byte
+
+           a    unsigned byte
+
+</pre>            
+
+         Assuming the vertex was defined in a VertexBuffer3D object named <code>buffer</code>, it would be assigned to a 
+
+		 vertex shader with the following code:
+
+<pre>
+
+setVertexBufferAt( 0, buffer, 0, Context3DVertexBufferFormat.FLOAT_3 );   // attribute #0 will contain the position information
+
+setVertexBufferAt( 1, buffer, 3, Context3DVertexBufferFormat.BYTES_4 );    // attribute #1 will contain the color information
+
+</pre>
+
+         
+         
+         </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">index</span>:int</code> &mdash; the index of the attribute register in the vertex shader (0 through 7).
+
+         </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">buffer</span>:<a href="VertexBuffer3D.html">VertexBuffer3D</a></code> &mdash; the buffer that contains the source vertex data to be fed to the vertex shader.
+
+         </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">bufferOffset</span>:int</code> (default = <code>0</code>)<code></code> &mdash; an offset from the start of the data for a single vertex at which to start 
+
+		 reading this attribute. In the example above, the position data has an offset of 0 because it is the 
+
+		 first attribute; color has an offset of 3 because the color attribute follows the three 32-bit position values.
+
+		 The offset is specified in units of 32 bits.
+
+         </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">format</span>:String</code> (default = "<code>float4</code>")<code></code> &mdash; a value from the Context3DVertexBufferFormat class specifying the data type of this attribute.  
+
+		 
+		 </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; Invalid Enum: when format is not one of the values defined in the 
+
+		 Context3DVertexBufferFormat class.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>RangeError </code> &mdash; Attribute Register Out Of Bounds: when the <code>index</code> parameter
+
+		 is outside the range from 0 through 7. (A maximum of eight vertex attribute registers can be used by a shader.)
+
+		 
+
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Context3DVertexBufferFormat.html" target="">Context3DVertexBufferFormat</a><br/><a href="Program3D.html#upload()" target="">Program3D.upload()</a><br/></div></div></span><a name="includeExamplesSummary"></a><div class="detailSectionHeader">Examples</div><span id="pageFilter"><br/><div class="detailBody"> The following example illustrates the basic steps for 
+ defining and rendering a 3D object using the Context3D class.
+
+ <p>The example uses an ActionScript library, 3Dutils.swf,
+ that contains the AGALMiniAssembler class for compiling AGAL assembly to bytecode and 
+ the PerspectiveMatrix3D class for creating a prespective projection.</p><div class="listing"><pre>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Spinning cube&lt;/title&gt;
+        &lt;script src="AIRAliases.js" type="text/javascript"&gt;&lt;/script&gt;
+        &lt;script src="3Dutils.swf" type="application/x-shockwave-flash"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript"&gt;
+         const viewWidth = 320;
+         const viewHeight = 200;
+         const zNear = 1;
+         const zFar = 500;
+        
+         const fov = 45;
+        
+         var stage3D;
+         var renderContext;
+         var indexList;
+         var vertexes;
+        
+         var projection = new window.runtime.com.adobe.utils.PerspectiveMatrix3D();
+         var model = new air.Matrix3D();
+         var view = new air.Matrix3D();
+         var finalTransform = new air.Matrix3D();
+        
+        //For rotating the cube
+         var pivot = new air.Vector3D();
+        
+         const VERTEX_SHADER =
+            "m44 op, va0, vc0    \n" +    // 4x4 matrix transform 
+            "mov v0, va1"; //copy color to varying variable v0
+        
+         const FRAGMENT_SHADER = 
+            "mov oc, v0"; //Set the output color to the value interpolated from the three triangle vertices 
+
+         var vertexAssembly = new window.runtime.com.adobe.utils.AGALMiniAssembler();
+         var fragmentAssembly = new window.runtime.com.adobe.utils.AGALMiniAssembler();
+         var programPair;
+        
+         function Context3DExample()
+        {
+                    window.htmlLoader.paintsDefaultBackground = false;
+            window.nativeWindow.activate();
+                         
+            stage3D = window.nativeWindow.stage.stage3Ds[0];
+            stage3D.x = 10;
+            stage3D.y = 10;
+
+            //Add event listener before requesting the context
+            stage3D.addEventListener( air.Event.CONTEXT3D_CREATE, contextCreated );
+            stage3D.addEventListener( air.ErrorEvent.ERROR, contextCreationError );
+            stage3D.requestContext3D( air.Context3DRenderMode.AUTO );
+            
+            //Compile shaders
+            vertexAssembly.assemble( air.Context3DProgramType.VERTEX, VERTEX_SHADER, false );
+            fragmentAssembly.assemble( air.Context3DProgramType.FRAGMENT, FRAGMENT_SHADER, false );            
+        }
+        
+        //Note, context3DCreate event can happen at any time, such as when the hardware resources are taken by another process
+         function contextCreated( event )
+        {
+                renderContext = event.target.context3D;
+                air.trace( "3D driver: " + renderContext.driverInfo );
+                setupScene();
+        }
+        
+         function setupScene()
+        {
+            renderContext.enableErrorChecking = true; //Can slow rendering - only turn on when developing/testing
+            renderContext.configureBackBuffer( viewWidth, viewHeight, 2, false );
+            renderContext.setCulling( air.Context3DTriangleFace.BACK );
+
+            //Create vertex index list for the triangles forming a cube
+            var triangles = air.Vector["&lt;uint&gt;"]([ 
+                2,1,0, //front face
+                3,2,0,
+                4,7,5, //bottom face
+                7,6,5,
+                8,11,9, //back face
+                9,11,10,
+                12,15,13, //top face
+                13,15,14,
+                16,19,17, //left face
+                17,19,18,
+                20,23,21, //right face
+                21,23,22
+            ] );
+            
+            indexList = renderContext.createIndexBuffer( triangles.length );
+            indexList.uploadFromVector( triangles, 0, triangles.length );
+            
+            //Create vertexes - cube faces do not share vertexes
+            const dataPerVertex = 6;
+            var vertexData = air.Vector["&lt;Number&gt;"]([
+                    // x,y,z r,g,b format
+                    0,0,0, 1,0,0, //front face
+                    0,1,0, 1,0,0,
+                    1,1,0, 1,0,0,
+                    1,0,0, 1,0,0,
+                    
+                    0,0,0, 0,1,0, //bottom face
+                    1,0,0, 0,1,0,
+                    1,0,1, 0,1,0,
+                    0,0,1, 0,1,0,
+                    
+                    0,0,1, 1,0,0, //back face
+                    1,0,1, 1,0,0,
+                    1,1,1, 1,0,0,
+                    0,1,1, 1,0,0,
+                    
+                    0,1,1, 0,1,0, //top face
+                    1,1,1, 0,1,0,
+                    1,1,0, 0,1,0,
+                    0,1,0, 0,1,0,
+                    
+                    0,1,1, 0,0,1, //left face
+                    0,1,0, 0,0,1,
+                    0,0,0, 0,0,1,
+                    0,0,1, 0,0,1,
+                    
+                    1,1,0, 0,0,1, //right face
+                    1,1,1, 0,0,1,
+                    1,0,1, 0,0,1,
+                    1,0,0, 0,0,1
+                ]);
+
+            vertexes = renderContext.createVertexBuffer( vertexData.length/dataPerVertex, dataPerVertex );
+            vertexes.uploadFromVector( vertexData, 0, vertexData.length/dataPerVertex );
+            
+            //Identify vertex data inputs for vertex program
+            renderContext.setVertexBufferAt( 0, vertexes, 0, air.Context3DVertexBufferFormat.FLOAT_3 ); //va0 is position
+            renderContext.setVertexBufferAt( 1, vertexes, 3, air.Context3DVertexBufferFormat.FLOAT_3 ); //va1 is color
+            
+            //Upload programs to render context
+            programPair = renderContext.createProgram();
+            programPair.upload( vertexAssembly.agalcode, fragmentAssembly.agalcode );
+            renderContext.setProgram( programPair );
+            
+            //Set up 3D transforms
+            projection.perspectiveFieldOfViewRH( fov, viewWidth/viewHeight, zNear, zFar );            
+            view.appendTranslation( 0, 0, -2 );    //Move view back
+            model.appendTranslation( -.5, -.5, -.5 ); //center cube on origin
+            window.nativeWindow.stage.addEventListener( air.Event.ENTER_FRAME, render );
+        }
+        
+         function render( event )
+        {
+            //Rotate model on each frame
+            model.appendRotation( .5, air.Vector3D.Z_AXIS, pivot );
+            model.appendRotation( .5, air.Vector3D.Y_AXIS, pivot );
+            model.appendRotation( .5, air.Vector3D.X_AXIS, pivot );
+            
+            //Combine transforms
+            finalTransform.identity();
+            finalTransform.append( model );
+            finalTransform.append( view );
+            finalTransform.append( projection );
+            
+            //Pass the final transform to the vertex shader as program constant, vc0
+            renderContext.setProgramConstantsFromMatrix( air.Context3DProgramType.VERTEX, 0, finalTransform, true );
+            
+            //Clear is required before drawTriangles on each frame
+            renderContext.clear( .3,.3,.3 );
+            
+            //Draw the 12 triangles that make up the cube
+            renderContext.drawTriangles( indexList, 0, 12 );
+            
+            //Show the frame
+            renderContext.present();
+        }
+        
+         function contextCreationError( error )
+        {
+            air.trace( error.errorID + ": " + error.text );
+        }
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body onLoad="Context3DExample()"&gt;
+        &lt;p style="background-color:#FFF; width:100px"&gt;3D Example&lt;example&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+</pre></div></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script><p></p><center class="copyright"> &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><!--BEGIN IONCOMMENTS--><div id="ionComHere"></div><!--END IONCOMMENTS-->[an error occurred while processing this directive][an error occurred while processing this directive]<p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/en_US/legalnotices/index.html">Legal Notices</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online Privacy Policy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html><!-- &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  -->
