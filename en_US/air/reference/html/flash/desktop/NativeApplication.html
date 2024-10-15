@@ -1,0 +1,1535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"><html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers"><meta name="lang" content="en-us"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="NativeApplication,flash.desktop.NativeApplication,activeWindow,applicationDescriptor,applicationID,autoExit,icon,idleThreshold,menu,nativeApplication,openedWindows,publisherID,runtimePatchLevel,runtimeVersion,startAtLogin,supportsDefaultApplication,supportsDockIcon,supportsMenu,supportsStartAtLogin,supportsSystemTrayIcon,systemIdleMode,timeSinceLastUserInput,activate,addEventListener,clear,copy,cut,dispatchEvent,exit,getDefaultApplication,isSetAsDefaultApplication,paste,removeAsDefaultApplication,removeEventListener,selectAll,setAsDefaultApplication"><title>flash.desktop.NativeApplication - Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers</title>
+	<link rel="stylesheet" href="../../jslr-style.css" type="text/css">
+		<script type="text/javascript">
+			
+				var baseRef = "../../";
+				var buildType = 'jslr';
+				var alreadyrunflag=0; //flag to indicate whether target function has already been run
+				var terms_HELPCFG = ".helpcfg";
+
+if (document.addEventListener)
+  document.addEventListener("DOMContentLoaded", function(){alreadyrunflag=1; init()}, false)
+else if (document.all && !window.opera){
+  /* blocks IE from working, as it's fired before dom if ready
+ document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
+  var contentloadtag=document.getElementById("contentloadtag")
+  contentloadtag.onreadystatechange=function(){
+    if (this.readyState=="complete"){
+      alreadyrunflag=1;
+      init();
+    }
+  }*/
+} else if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+  var _timer=setInterval(function(){
+  if(/loaded|complete/.test(document.readyState)){
+    clearInterval(_timer);
+    alreadyrunflag=1;
+    init(); // call target function
+  }}, 10)
+}
+function onLoadFunction() {
+	setTimeout("if (!alreadyrunflag) init();  alreadyrunflag=1; ionReadyLoad(); ", 0);
+}
+
+		</script>
+		<script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+		<script language="javascript" type="text/javascript" src="../../asdoc.js"></script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body onLoad="onLoadFunction()">
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td>
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr>
+				  <td class="titleTableTitleION" align="left" nowrap="true">Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers<br>
+				  <span class="titleTableTopNavION">
+				  <span id="homelink">
+						<a target="_self" href="../../index.html"> Home </a>&nbsp;|&nbsp;
+				  </span>
+				  <a id="showtoc" onClick="showHideTOC(true)" href="#top" style="display:none">Show Classes List</a><a id="hidetoc" onClick="showHideTOC(false)" href="#top" style="display:">Hide Classes List</a>&nbsp;|&nbsp;
+				  <a href="../../all-index-A.html"> Index </a>&nbsp;|&nbsp;
+				  <a href="../../appendixes.html"> Appendixes </a><br>
+				  </span>	
+				  </td>
+				  <td class="titleTableSearchION" align="right" nowrap="true">
+				  <span id="gsa" class="gsa">
+					<form class="searchFormION" method="get" onSubmit="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US');return false;">
+				  <input class="hidden" name="loc" value="" type="hidden">
+				  <input class="hidden" name="termPrefix" value="site:help.adobe.com/en_US/AS3CLR/Flash_10.0" type="hidden">
+				  <input class="hidden" name="title" value="ActionScript 3.0 Reference for the Adobe Flash Platform" type="hidden">
+				  <input class="hidden" name="term" value="" type="hidden">
+				  <input class="hidden" name="area" value="" type="hidden">
+				  <input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text">
+				  <input type="button" name="action" value="" onClick="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US')" class="searchbutton"><br>
+			      <input id="checkBoxId" type="checkbox" name="checkbox" value="checkbox" checked>Language Reference only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  </form>
+				  </span>				  
+				  </td>
+				</tr>
+			  </table>			
+			  </td>
+			<td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logoION.jpg" class="logoImageION" alt=" Adobe Logo " title=" Adobe Logo "></td>
+		  </tr>
+		  <tr>
+			<td colspan="2">
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr class="titleTableRow2">
+				<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+					<convert>NativeApplication&nbsp;</convert>
+				</td>
+				<td class="titleTableSubNav" id="subNav" align="right">
+				  <a id="propertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="propertiesBar" style="display:none"> | </span>
+				  <a id="packagePropertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="packagePropertiesBar" style="display:none"> | </span>
+				  <a id="constructorLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+				  <span id="constructorBar" style="display:none"> | </span>
+				  <a id="methodsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Methods </a>
+				  <span id="methodsBar" style="display:none"> | </span>
+				  <a id="packageFunctionsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Functions </a>
+				  <span id="packageFunctionsBar" style="display:none"> | </span>
+				  <a id="eventsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('eventSummary');" style="display:none"> Events </a>
+				  <span id="eventsBar" style="display:none"> | </span>
+				  <a id="stylesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('styleSummary');" style="display:none"> Styles </a>
+				  <span id="stylesBar" style="display:none"> | </span>
+				  <a id="SkinPartLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinPartSummary');" style="display:none"> Skin Parts </a>
+				  <span id="SkinPartBar" style="display:none"> | </span>
+				  <a id="SkinStateLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinStateSummary');" style="display:none"> Skin States </a>
+				  <span id="SkinStateBar" style="display:none"> | </span>
+				  <a id="effectsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('effectSummary');" style="display:none"> Effects </a>
+				  <span id="effectsBar" style="display:none"> | </span>
+				  <a id="constantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="constantsBar" style="display:none"> | </span>
+				  <a id="packageConstantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="packageConstantsBar" style="display:none"> | </span>
+				  <a id="interfacesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('interfaceSummary');" style="display:none"> Interfaces </a>
+				  <span id="interfacesBar" style="display:none"> | </span>
+				  <a id="classesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('classSummary');" style="display:none"> Classes </a>
+				  <span id="classesBar" style="display:none"> | </span>
+				  <a id="packageUseLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('package-use.html');" style="display:none">Use</a>
+				  <span id="packageUseBar" style="display:none"> | </span>
+				  <a id="examplesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('includeExamplesSummary');" style="display:none"> Examples </a>
+				</td>
+				</tr>
+				<tr class="titleTableRow3">
+				  <td colspan="4"></td>
+				</tr>
+			  </table>
+			</td>
+		  </tr>
+		</table>
+        <div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="classlist" class="jslrclasslist">
+					<div class="classlistoutline"></div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content">
+<script language="javascript" type="text/javascript">  <!--  
+         
+        asdocTitle = "NativeApplication - Adobe® AIR® API Reference for HTML Developers"; 
+        var baseRef = '../../'; 
+	document.baseRef = '../../'; 
+          -->  </script>
+<script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+<script language="javascript" type="text/javascript"><!--
+function submitValue() {
+var title="Adobe® AIR® API Reference for HTML Developers";
+var searchStr=document.getElementById('search-livedocs').value;
+
+        
+        
+        if(document.getElementById('checkBoxId').checked){
+        window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
++"&site=communityhelp-air-jslr ";
+} 
+
+        else{ 
+window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
+;
+} 
+} 
+--></script><script type="text/javascript"> scrollToNameAnchor(); </script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">window.runtime property</td><td>window.runtime.flash.desktop.NativeApplication</td></tr><tr><td class="classSignature"></td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">NativeApplication  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><div id="badgeAnchorSupport" class="ionBadgeWrapper"></div><div id="badgeContainerSupport"></div><p></p><p></p>
+
+	 The NativeApplication class represents this AIR application.
+
+	 
+
+	 <p>
+
+	 The NativeApplication class provides application information,
+
+	 application-wide functions, and dispatches application-level events.
+
+	 </p>
+
+	              <p>
+
+	 The NativeApplication object is a singleton object, created automatically at startup.
+
+	 Get the NativeApplication instance of an application with the static property 
+
+	 <code>NativeApplication.nativeApplication</code>.
+
+	 </p>
+
+	 
+
+	           <p></p><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Properties</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Properties</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Properties</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th>Defined By</th></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#activeWindow" class="signatureLink">activeWindow</a> : <a href="../display/NativeWindow.html">NativeWindow</a><div class="summaryTableDescription">[read-only] 
+
+         The active application window.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#applicationDescriptor" class="signatureLink">applicationDescriptor</a> : XML<div class="summaryTableDescription">[read-only]  
+
+		 The contents of the application descriptor file for this AIR application.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#applicationID" class="signatureLink">applicationID</a> : String<div class="summaryTableDescription">[read-only]  
+
+		 The application ID of this application.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#autoExit" class="signatureLink">autoExit</a> : Boolean<div class="summaryTableDescription">
+
+		 Specifies whether the application should automatically terminate when 
+
+		 all windows have been closed.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">constructor : Object<div class="summaryTableDescription">
+
+	 A reference to the class object or constructor function for a given object instance.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#icon" class="signatureLink">icon</a> : <a href="InteractiveIcon.html">InteractiveIcon</a><div class="summaryTableDescription">[read-only] 
+
+		 The application icon.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#idleThreshold" class="signatureLink">idleThreshold</a> : int<div class="summaryTableDescription">
+
+		 The number of seconds that must elapse without user input 
+
+		 before a userIdle event is dispatched.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#menu" class="signatureLink">menu</a> : <a href="../display/NativeMenu.html">NativeMenu</a><div class="summaryTableDescription">
+
+		 The application menu.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#nativeApplication" class="signatureLink">nativeApplication</a> : <a href="NativeApplication.html">NativeApplication</a><div class="summaryTableDescription">[static] [read-only]  
+
+		 The singleton instance of the NativeApplication object.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#openedWindows" class="signatureLink">openedWindows</a> : Array<div class="summaryTableDescription">[read-only] 
+
+		 An array containing all the open native windows of this application.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">prototype : Object<div class="summaryTableDescription">[static] 
+
+	 A reference to the prototype object of a class or function object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#publisherID" class="signatureLink">publisherID</a> : String<div class="summaryTableDescription">[read-only]  
+
+		 The publisher ID of this application.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#runtimePatchLevel" class="signatureLink">runtimePatchLevel</a> : uint<div class="summaryTableDescription">[read-only]  
+
+		 The patch level of the runtime hosting this application.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#runtimeVersion" class="signatureLink">runtimeVersion</a> : String<div class="summaryTableDescription">[read-only]  
+
+		 The version number of the runtime hosting this application.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#startAtLogin" class="signatureLink">startAtLogin</a> : Boolean<div class="summaryTableDescription">
+
+        Specifies whether this application is automatically launched whenever the 
+
+        current user logs in.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#supportsDefaultApplication" class="signatureLink">supportsDefaultApplication</a> : Boolean<div class="summaryTableDescription">[static] [read-only]  
+
+         Indicates whether setAsDefaultApplication(), removeAsDefaultApplication(), and 
+
+         isSetAsDefaultApplication() are supported on the current platform.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#supportsDockIcon" class="signatureLink">supportsDockIcon</a> : Boolean<div class="summaryTableDescription">[static] [read-only]  
+
+	   Indicates whether AIR supports dock-style application icons on the current operating system.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#supportsMenu" class="signatureLink">supportsMenu</a> : Boolean<div class="summaryTableDescription">[static] [read-only]  
+
+	   Specifies whether the current operating system supports a global application menu bar.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#supportsStartAtLogin" class="signatureLink">supportsStartAtLogin</a> : Boolean<div class="summaryTableDescription">[static] [read-only]  
+
+         Indicates whether startAtLogin is supported on the current platform.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#supportsSystemTrayIcon" class="signatureLink">supportsSystemTrayIcon</a> : Boolean<div class="summaryTableDescription">[static] [read-only]  
+
+	  Specifies whether AIR supports system tray icons on the current operating system.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#systemIdleMode" class="signatureLink">systemIdleMode</a> : String<div class="summaryTableDescription">
+
+		 Provides a way for applications to prevent the user interface from going into "idle" mode.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#timeSinceLastUserInput" class="signatureLink">timeSinceLastUserInput</a> : int<div class="summaryTableDescription">[read-only] 
+
+         The time, in seconds, since the last user input.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Public Methods </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Methods</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th>Defined By</th></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#activate()" class="signatureLink">activate</a>(window:<a href="../display/NativeWindow.html">NativeWindow</a> = null):void</div><div class="summaryTableDescription">
+
+         Activates this application.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#addEventListener()" class="signatureLink">addEventListener</a>(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void</div><div class="summaryTableDescription">[override] 
+
+		
+
+	Registers an event listener object with an EventDispatcher object so that the listener 
+
+	receives notification of an event.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#clear()" class="signatureLink">clear</a>():Boolean</div><div class="summaryTableDescription">
+
+         Invokes an internal delete command on the focused display object.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#copy()" class="signatureLink">copy</a>():Boolean</div><div class="summaryTableDescription">
+
+         Invokes an internal copy command on the focused display object.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#cut()" class="signatureLink">cut</a>():Boolean</div><div class="summaryTableDescription">
+
+         Invokes an internal cut command on the focused display object.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../events/Event.html">Event</a>):Boolean</div><div class="summaryTableDescription">[override] 
+
+		
+
+	Dispatches an event into the event flow.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#exit()" class="signatureLink">exit</a>(errorCode:int = 0):void</div><div class="summaryTableDescription">
+
+		 Terminates this application.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getDefaultApplication()" class="signatureLink">getDefaultApplication</a>(extension:String):String</div><div class="summaryTableDescription">
+
+		 Gets the default application for opening files with the specified extension.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:String):Boolean</div><div class="summaryTableDescription">
+
+	Checks whether the EventDispatcher object has any listeners registered for a specific type 
+
+	of event.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">hasOwnProperty(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an object has a specified property defined.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">isPrototypeOf(theClass:Object):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+
+	 as the parameter.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#isSetAsDefaultApplication()" class="signatureLink">isSetAsDefaultApplication</a>(extension:String):Boolean</div><div class="summaryTableDescription">
+
+		 Specifies whether this application is currently the default application 
+
+		 for opening files with the specified extension.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#paste()" class="signatureLink">paste</a>():Boolean</div><div class="summaryTableDescription">
+
+         Invokes an internal paste command on the focused display object.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">propertyIsEnumerable(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether the specified property exists and is enumerable.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeAsDefaultApplication()" class="signatureLink">removeAsDefaultApplication</a>(extension:String):void</div><div class="summaryTableDescription">
+
+		 Removes this application as the default for opening files with the specified extension.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeEventListener()" class="signatureLink">removeEventListener</a>(type:String, listener:Function, useCapture:Boolean = false):void</div><div class="summaryTableDescription">[override] 
+
+		
+
+	Removes a listener from the EventDispatcher object.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#selectAll()" class="signatureLink">selectAll</a>():Boolean</div><div class="summaryTableDescription">
+
+         Invokes an internal selectAll command on the focused display object.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setAsDefaultApplication()" class="signatureLink">setAsDefaultApplication</a>(extension:String):void</div><div class="summaryTableDescription">
+
+		 Sets this application as the default application for opening files with the specified extension.</div></td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">setPropertyIsEnumerable(name:String, isEnum:Boolean = true):void</div><div class="summaryTableDescription">
+
+     Sets the availability of a dynamic property for loop operations.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toLocaleString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of this object, formatted according to locale-specific conventions.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">valueOf():Object</div><div class="summaryTableDescription">
+
+	 Returns the primitive value of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:String):Boolean</div><div class="summaryTableDescription">
+
+	Checks whether an event listener is registered with this EventDispatcher object or any of 
+
+	its ancestors for the specified event type.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th>Defined By</th></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when this application becomes the active desktop application.</td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:browserInvoke" class="signatureLink">browserInvoke</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when an application is invoked by a SWF file running in the user's browser.</td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when the desktop focus is switched to a different application.</td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:exiting" class="signatureLink">exiting</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when the application exit sequence is started.</td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:invoke" class="signatureLink">invoke</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when an application is invoked.</td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:keyDown" class="signatureLink">keyDown</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when the user presses a key.</td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:keyUp" class="signatureLink">keyUp</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when the user releases a key.</td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:networkChange" class="signatureLink">networkChange</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when either a new network connection becomes available or an existing network connection is lost.</td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:userIdle" class="signatureLink">userIdle</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when the user has been idle.</td><td class="summaryTableOwnerCol">NativeApplication</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:userPresent" class="signatureLink">userPresent</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when the operating system detects mouse or keyboard activity after an idle period.</td><td class="summaryTableOwnerCol">NativeApplication</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Property Detail</div><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="activeWindow"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>activeWindow</h2></td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>activeWindow:<a href="../display/NativeWindow.html">NativeWindow</a></code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+         The active application window. 
+
+		 
+
+		 <p>If the active desktop window does not belong
+
+		 to this application, or there is no active window, <code>activeWindow</code> is 
+
+		 <code>null</code>.</p>
+
+		 
+		 <p>This property is not supported on platforms that do not support the NativeWindow class.</p>
+
+		 
+		 </p></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="applicationDescriptor"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>applicationDescriptor</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>applicationDescriptor:XML</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p> 
+
+		 The contents of the application descriptor file for this AIR application.
+
+		 
+
+		 <p>ActionScript 3.0 code in SWF files supports E4X syntax for 
+
+		 for working with XML data. However in HTML-based AIR applications, you will want to 
+
+		 convert the XML value of this property to a DOMParser object, using the 
+
+		 <code>parseFromString()</code> method of a DOMParser object.</p>
+
+		 
+
+		 </p><span id="pageFilter"><br/><span class="label"> Example &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_en"> How to use this example </a></span>)
+            </span><br/><div class="detailBody"> The following example detects the <code>copyright</code> and <code>version</code>
+ properties in the application descriptor file. 
+ 
+ <p><b>Note:</b> To test this example:</p>
+ 
+ <ol><li>Add the AIRAliases.js file to the project directory.</li><li>Create an application descriptor file for the project, and test the project using ADL.</li></ol>
+<div class="listing"><pre>
+&lt;html&gt;
+    &lt;head&gt;
+      &lt;script src="AIRAliases.js" /&gt;
+      &lt;script&gt;
+        function getInfo() {
+            var xmlString = air.NativeApplication.nativeApplication.applicationDescriptor;
+            var appXml = new DOMParser();
+            var xmlObject = appXml.parseFromString(xmlString, "text/xml");
+            var root = xmlObject.getElementsByTagName('application')[0];
+            var appCopyright = root.getElementsByTagName("copyright")[0];
+            var appVersion = root.getElementsByTagName("version")[0];
+            air.trace("copyright:", appCopyright.firstChild.data);
+            air.trace("version:", appVersion.firstChild.data);
+        }
+      &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;button onclick="getInfo()"&gt;Get Info&lt;/button&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div></span></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="applicationID"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>applicationID</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>applicationID:String</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p> 
+
+		 The application ID of this application. 
+
+		 
+
+		 <p>The value of this ID is set in the
+
+		 application descriptor file.</p>
+
+		 
+		 </p></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="autoExit"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>autoExit</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>autoExit:Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+		 Specifies whether the application should automatically terminate when 
+
+		 all windows have been closed.  
+
+		 
+
+		 <p>When <code>autoExit</code> is <code>true</code>, which is the default,
+
+		 the application terminates when all windows are closed. Both
+
+		 <code>exiting</code> and <code>exit</code> events are dispatched.
+
+		 When <code>autoExit</code> is <code>false</code>, you must call
+
+		 <code>NativeApplication.nativeApplication.exit()</code> to terminate the application. </p> 
+
+		 
+		 <p>This property is not supported on platforms that do not support the NativeWindow class.</p>
+
+		 
+
+		 </p></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="icon"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>icon</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>icon:<a href="InteractiveIcon.html">InteractiveIcon</a></code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+		 The application icon.
+
+		 
+
+		 <p>Use <code>NativeApplication.supportsDockIcon</code> and <code>NativeApplication.supportsSystemTrayIcon</code>
+
+		 to determine the icon class. The type will be one
+
+		 of the subclasses of InteractiveIcon. On Mac<sup>&reg;</sup> OS X, <code>NativeApplication.icon</code> 
+
+		 is an object of type <code>DockIcon</code>. On Windows<sup>&reg;</sup>, <code>NativeApplication.icon</code> 
+
+		 is an object of type <code>SystemTrayIcon</code>. When an application icon is not supported, 
+
+		 <code>NativeApplication.supportsDockIcon</code> and <code>NativeApplication.supportsSystemTrayIcon</code> are 
+
+		 both <code>false</code> and the <code>icon</code> property is <code>null</code>.</p>  
+
+		 
+
+		 <p>The <code>icon</code> object is automatically created, but it is not initialized
+
+		 with image data. On some operating systems, such as Mac OS X, a default image is supplied. 
+
+		 On others, such as Windows, the icon is not displayed unless image data is assigned to it. 
+
+		 To assign an icon image, set the <code>icon.bitmaps</code> property with an array 
+
+		 containing at least one BitmapData object. If more than one BitmapData object is included
+
+		 in the array, then the operating system chooses the image that is closest in size to the icon's 
+
+		 display dimensions, scaling the image if necessary.</p>  
+
+   		 
+         </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="NativeApplication.html#supportsDockIcon" target="">supportsDockIcon</a><br/><a href="DockIcon.html" target="">DockIcon</a><br/><a href="NativeApplication.html#supportsSystemTrayIcon" target="">supportsSystemTrayIcon</a><br/><a href="SystemTrayIcon.html" target="">SystemTrayIcon</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="idleThreshold"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>idleThreshold</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>idleThreshold:int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+		 The number of seconds that must elapse without user input 
+
+		 before a userIdle event is dispatched. 
+
+		 
+
+		 <p>By default, the idle threshold is 300 seconds (5 minutes). The acceptable 
+
+		 range of values is from 5 (5 seconds) through 86,400 (1 day), inclusive.</p>
+
+		 
+		 </p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; If you attempt to set the property to an invalid value. 
+
+		 The acceptable range of values is from 5 (5 seconds) through 86,400 (1 day), inclusive.
+
+		 
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="NativeApplication.html#event:userIdle#event:userIdle" target="">userIdle</a><br/><a href="NativeApplication.html#event:userPresent#event:userPresent" target="">userPresent</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="menu"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>menu</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>menu:<a href="../display/NativeMenu.html">NativeMenu</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+		 The application menu.
+
+		 
+
+		 <p>Application menus are supported when <code>NativeApplication.nativeApplication.supportsMenu</code>
+
+		 is <code>true</code>. Not all operating systems support application
+
+		 menus. For example, application menus are supported on Mac OS X, but not on Windows or Linux.
+
+		 Assigning a NativeMenu object to this property when <code>NativeApplication.nativeApplication.supportsMenu</code>
+
+		 is <code>false</code> is allowed, but does nothing. Be sure to use the
+
+	        <code>NativeApplication.nativeApplication.supportsMenu</code> property to determine whether the 
+
+	        operating system supports application menus. Using other means (such as <code>Capabilities.os</code>)
+
+	        to determine support can lead to programming errors (if some possible target operating systems 
+
+	        are not considered).</p>
+
+		 
+
+		 
+
+ 
+
+         <p><b>Note:</b> On Mac OS X, the <code>menu</code> property references the
+
+         operating-system-supplied default application menu. You can modify the 
+
+         existing menu structure by adding and removing items and submenus, and 
+
+		 by adding event listeners. You can also replace the default menus entirely by
+
+		 assigning a new NativeMenu object to this <code>menu</code> property.</p>
+
+		 
+
+		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../display/NativeMenu.html" target="">NativeMenu</a><br/><a href="../display/NativeWindow.html#supportsMenu" target="">NativeWindow.supportsMenu</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="nativeApplication"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>nativeApplication</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>nativeApplication:<a href="NativeApplication.html">NativeApplication</a></code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p> 
+
+		 The singleton instance of the NativeApplication object.
+
+		 
+
+		 </p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; If accessed by content outside the application
+
+		 security sandbox.
+
+		 
+		 </td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="openedWindows"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>openedWindows</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>openedWindows:Array</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+		 An array containing all the open native windows of this application.
+
+		 
+		 <p>This property is not supported on platforms that do not support the NativeWindow class.</p> 
+
+		 </p></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="publisherID"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>publisherID</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>publisherID:String</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p> 
+
+		 The publisher ID of this application. 
+
+		 
+
+		 <p>The value of this ID is set in the
+
+		 application's publisherid file, which is generated at installation from the
+
+		 certificate chain used to sign the application.</p>
+
+		 
+		 </p></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="runtimePatchLevel"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>runtimePatchLevel</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>runtimePatchLevel:uint</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p> 
+
+		 The patch level of the runtime hosting this application.
+
+		 
+		 </p></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="runtimeVersion"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>runtimeVersion</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>runtimeVersion:String</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p> 
+
+		 The version number of the runtime hosting this application.
+
+		 
+		 </p></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="startAtLogin"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>startAtLogin</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>startAtLogin:Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+        Specifies whether this application is automatically launched whenever the 
+
+        current user logs in.
+
+        
+	
+
+	
+
+        <p>
+
+        The <code>startAtLogin</code> property reflects the status of the operating-system-defined mechanism for
+
+        designating that an application should start automatically when a user logs in. The
+
+        user can change the status manually by using the operating system user interface. This
+
+        property reflects the current status, whether the status was last changed
+
+        by the AIR application or by the operating system.   
+
+        </p>
+
+        </p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IllegalOperationError </code> &mdash; On Windows when another application with the same name 
+
+        (but with a different path to the executable) is already set to 
+
+        launch when this user logs in.
+
+        
+        </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IllegalOperationError </code> &mdash; If this application is not installed, which 
+
+        may be the case when launched by the AIR Debug Launcher (ADL).
+
+        
+
+		</td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="NativeApplication.html#supportsStartAtLogin" target="">supportsStartAtLogin</a></div></div></span><span id="pageFilter" runtime="AIR::2##"><a name="propertyDetail"></a><a name="supportsDefaultApplication"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>supportsDefaultApplication</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>supportsDefaultApplication:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2 </td></tr></table><p></p><p></p><p> 
+
+         Indicates whether <code>setAsDefaultApplication()</code>, <code>removeAsDefaultApplication()</code>, and 
+
+         <code>isSetAsDefaultApplication()</code> are supported on the current platform.
+
+         
+
+         <p>If <code>true</code>, then the above methods will work as documented.
+
+         If <code>false</code>, then <code>setAsDefaultApplication()</code> and <code>removeDefaultApplication()</code>
+
+         do nothing and <code>isSetAsDefaultApplication()</code> returns <code>false</code>.</p>
+
+         
+         </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="NativeApplication.html#setAsDefaultApplication()" target="">setAsDefaultApplication()</a><br/><a href="NativeApplication.html#removeAsDefaultApplication()" target="">removeAsDefaultApplication()</a><br/><a href="NativeApplication.html#isSetAsDefaultApplication()" target="">isSetAsDefaultApplication()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="supportsDockIcon"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>supportsDockIcon</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>supportsDockIcon:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p> 
+
+	   Indicates whether AIR supports dock-style application icons on the current operating system.
+
+	  
+
+	  <p>If <code>true</code>, the <code>NativeApplication.icon</code> property is of type 
+
+	  <code>DockIcon</code>.</p>
+
+	  
+
+      <p>The Mac OS X user interface provides an application 
+
+      "dock" containing icons for applications that are running or are frequently used.</p>
+
+	  
+	  <p>Be sure to use the <code>NativeApplication.supportsDockIcon</code> property to determine whether the 
+
+	  operating system supports application dock icons. Using other means (such as <code>Capabilities.os</code>)
+
+	  to determine support can lead to programming errors (if some possible target operating systems 
+
+	  are not considered).</p>
+
+      
+      </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="NativeApplication.html#icon" target="">icon</a><br/><a href="DockIcon.html" target="">DockIcon</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="supportsMenu"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>supportsMenu</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>supportsMenu:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p> 
+
+	   Specifies whether the current operating system supports a global application menu bar.
+
+	  
+
+	  <p>When <code>true</code>, the <code>NativeApplication.menu</code> property can be used to define (or access) a native 
+
+	  application menu.</p> 
+
+	  
+	  <p>Be sure to use the <code>NativeApplication.supportsMenu</code> property to determine whether the 
+
+	  operating system supports the application menu bar. Using other means (such as <code>Capabilities.os</code>)
+
+	  to determine support can lead to programming errors (if some possible target operating systems 
+
+	  are not considered).</p>
+
+	  
+      </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="NativeApplication.html#menu" target="">menu</a><br/><a href="../display/NativeWindow.html#supportsMenu" target="">NativeWindow.supportsMenu</a></div></div></span><span id="pageFilter" runtime="AIR::2##"><a name="propertyDetail"></a><a name="supportsStartAtLogin"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>supportsStartAtLogin</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>supportsStartAtLogin:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2 </td></tr></table><p></p><p></p><p> 
+
+         Indicates whether startAtLogin is supported on the current platform.
+
+         
+
+         <p>If <code>true</code>, then startAtLogin works as documented.
+
+         If <code>false</code>, then startAtLogin has no effect.</p>
+
+         
+         </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="NativeApplication.html#startAtLogin" target="">startAtLogin</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="supportsSystemTrayIcon"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>supportsSystemTrayIcon</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>supportsSystemTrayIcon:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p> 
+
+	  Specifies whether AIR supports system tray icons on the current operating system.
+
+	  
+
+	  <p>If <code>true</code>, the <code>NativeApplication.icon</code> property is of type 
+
+	  <code>SystemTrayIcon</code>.</p>
+
+	  
+      <p>The Windows user interface provides the "system tray" region of the task bar, officially called 
+
+      the <i>Notification Area</i>, in which application icons can be displayed. No default icon is shown. You
+
+      must set the <code>bitmaps</code> array of the icon object to display an icon.</p>
+
+      
+
+	  <p>Be sure to use the <code>NativeApplication.supportsSystemTrayIcon</code> property to determine whether the 
+
+	  operating system supports system tray icons. Using other means (such as <code>Capabilities.os</code>)
+
+	  to determine support can lead to programming errors (if some possible target operating systems 
+
+	  are not considered).</p>
+
+      
+      </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="NativeApplication.html#icon" target="">icon</a><br/><a href="SystemTrayIcon.html" target="">SystemTrayIcon</a></div></div></span><span id="pageFilter" runtime="AIR::2##"><a name="propertyDetail"></a><a name="systemIdleMode"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>systemIdleMode</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>systemIdleMode:String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2 </td></tr></table><p></p><p></p><p>
+
+		 Provides a way for applications to prevent the user interface from going into "idle" mode.
+
+		 
+		 <p>A value from the SystemIdleMode class to influence the host system's idle mode behavior.
+
+		 This property is only effective for the application with input focus and can only be accessed from
+
+		 content running in the application sandbox.</p>
+
+		 
+		 
+
+		 
+		 </p></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="timeSinceLastUserInput"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>timeSinceLastUserInput</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>timeSinceLastUserInput:int</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+         The time, in seconds, since the last user input.
+
+		 
+		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="NativeApplication.html#event:userIdle#event:userIdle" target="">userIdle</a><br/><a href="NativeApplication.html#event:userPresent#event:userPresent" target="">userPresent</a></div></div></span><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><span id="pageFilter" runtime="AIR::1.0##"><a name="activate()"></a><a name="activate(flash.display.NativeWindow)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>activate</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function activate(window:<a href="../display/NativeWindow.html">NativeWindow</a> = null):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+         Activates this application. 
+
+         
+		 <p>This method is not supported on platforms that do not support the NativeWindow class.</p> 
+
+		  
+
+         <p>Under some circumstances determined by the operating system, this method does not 
+
+         activate an application. Most operating systems restrict the ability of an application 
+
+         to activate itself to prevent it from accidentally or maliciously making it impossible 
+
+         for a user to use other applications.</p>
+
+         
+
+         <p>If the operating system allows activation, then the specified window is activated and 
+
+         brought to the desktop foreground; that is, in front of the windows of other applications. 
+
+         (If the <code>window</code> parameter is <code>null</code>, then any
+
+         visible window of this application is activated.)</p>
+
+         
+         <p>The <code>activate()</code> method has no effect if the application has no visible windows.</p>
+
+		 
+
+		 <p>The activate operation is synchronous.</p>
+
+		 
+
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">window</span>:<a href="../display/NativeWindow.html">NativeWindow</a></code> (default = <code>null</code>)<code></code> &mdash; The NativeWindow object of the window to activate along with the application.
+
+		 </td></tr></table></p><br/><span class="label">Events</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>activate</b>:<a href="../events/Event.html"><code>Event</code></a></code> &mdash; Dispatched if the activation state changes.</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="addEventListener()"></a><a name="addEventListener(String,Function,Boolean,int,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>addEventListener</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function addEventListener(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+		
+
+	Registers an event listener object with an EventDispatcher object so that the listener 
+
+	receives notification of an event. 
+
+	
+
+	<p>JavaScript code in the AIR runtime uses this method to register
+
+	event listeners for events defined by the AIR APIs. For other JavaScript events (such as the <code>onload</code>
+
+	event of the DOM <code>body</code> object), you can use standard event handling techniques, as you would 
+
+	for content running in the browser.</p>
+
+	
+
+	<p>After you successfully register an event listener, you cannot change its priority
+
+	through additional calls to <code>addEventListener()</code>. To change a listener's
+
+	priority, you must first call <code>removeListener()</code>. Then you can register the
+
+	listener again with the new priority level. </p>
+
+	
+
+	<p>Keep in mind that after the listener is registered, subsequent calls to
+
+	<code>addEventListener()</code> with a different <code>type</code> or
+
+	<code>useCapture</code> value result in the creation of a separate listener registration. 
+
+	
+
+	</p>
+
+	
+
+	
+
+	
+
+	<p>If you no longer need an event listener, remove it by calling 
+
+	<code>removeEventListener()</code>, or memory problems could result. Event listeners are not automatically
+
+	removed from memory because the garbage
+
+	collector does not remove the listener as long as the dispatching object exists (unless the <code>useWeakReference</code>
+
+	parameter is set to <code>true</code>).</p>
+
+		
+
+	<p>Copying an EventDispatcher instance does not copy the event listeners attached to it. 
+
+	(If your newly created node needs an event listener, you must attach the listener after
+
+    creating the node.) However, if you move an EventDispatcher instance, the event listeners 
+
+    attached to it move along with it.</p>
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:String</code> &mdash; The type of event.
+
+	
+
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">listener</span>:Function</code> &mdash; The listener function that processes the event. This function must accept
+
+    an Event object as its only parameter and must return nothing
+
+	<span>.</span>
+
+	
+
+    
+
+	
+
+	<p>The function can have any name.</p>
+
+	
+
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useCapture</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; <span>This parameter applies to display objects in the
+
+	ActionScript 3.0 display list architecture, used by SWF content.</span>
+
+	
+
+	
+
+	
+
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">priority</span>:int</code> (default = <code>0</code>)<code></code> &mdash; The priority level of the event listener. The priority is designated by
+
+	a signed 32-bit integer. The higher the number, the higher the priority. All listeners
+
+	with priority <i>n</i> are processed before listeners of priority <i>n</i>-1. If two
+
+	or more listeners share the same priority, they are processed in the order in which they
+
+	were added. The default priority is 0.
+
+	
+
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useWeakReference</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Determines whether the reference to the listener is strong or
+
+	weak. A strong reference (the default) prevents your listener from being garbage-collected.
+
+    A weak reference does not. <p>Class-level member functions are not subject to garbage 
+
+    collection, so you can set <code>useWeakReference</code> to <code>true</code> for 
+
+    class-level member functions without subjecting them to garbage collection. If you set
+
+    <code>useWeakReference</code> to <code>true</code> for a listener that is a nested inner 
+
+    function, the function will be garbage-collected and no longer persistent. If you create 
+
+    references to the inner function (save it in another variable) then it is not 
+
+    garbage-collected and stays persistent.</p>
+
+	
+	</td></tr></table></p></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="clear()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>clear</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function clear():Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+         Invokes an internal delete command on the focused display object.
+
+		 
+         <p>This function call is ignored if the 
+
+         focused object does not implement the
+
+         command. Only display objects descending from the TextField or HTMLLoader 
+
+         classes currently implement this command.</p>
+
+         
+
+         <p><b>Note:</b> The <code>clear()</code> command deletes 
+
+         selected text. If nothing is selected, it does not clear all text.</p>
+
+         
+
+         </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code>.
+
+         
+
+		 </td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="copy()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>copy</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function copy():Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+         Invokes an internal copy command on the focused display object.
+
+         
+
+         <p>This function call is ignored if the component does not implement the
+
+         command. Only display objects descending from the TextField or HTMLLoader 
+
+         classes currently implement this command.</p>
+
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="cut()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>cut</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function cut():Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+         Invokes an internal cut command on the focused display object.
+
+		 
+         <p>This function call is ignored if the component does not implement the
+
+         command. Only display objects descending from the TextField or HTMLLoader 
+
+         classes currently implement this commands.</p>
+
+         
+
+         </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code>.
+
+         
+
+		 </td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="dispatchEvent()"></a><a name="dispatchEvent(flash.events.Event)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>dispatchEvent</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function dispatchEvent(event:<a href="../events/Event.html">Event</a>):Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+		
+
+	Dispatches an event into the event flow. The event target is the EventDispatcher 
+
+	object upon which the <code>dispatchEvent()</code> method is called.
+
+	
+	</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">event</span>:<a href="../events/Event.html">Event</a></code> &mdash; The Event object that is dispatched into the event flow.
+
+	If the event is being redispatched, a clone of the event is created automatically.
+
+	After an event is dispatched, its <code>target</code> property cannot be changed, so you
+
+	must create a new copy of the event for redispatching to work.
+
+	
+
+	</td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; A value of <code>true</code> if the event was successfully dispatched. A value of <code>false</code> indicates failure or that <code>preventDefault()</code> was called 
+
+	on the event.
+
+	
+	</td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="exit()"></a><a name="exit(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>exit</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function exit(errorCode:int = 0):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+		 Terminates this application. 
+
+		 
+
+		 
+
+		 <p>The call to the <code>exit()</code> method <i>will</i> return;
+
+		 the shutdown sequence does not begin until the currently executing code
+
+		 (such as a current event handler) has completed. Pending asynchronous
+
+		 operations are canceled and may or may not complete.</p>
+
+		 
+
+		 <p>Note that an <code>exiting</code> event is not dispatched. If an <code>exiting</code> event is required
+
+		 by application logic, call <code>NativeApplication.nativeApplication.dispatchEvent()</code>, passing
+
+		 in an Event object of type <code>exiting</code>. For any open windows, NativeWindow objects do dispatch
+
+		 <code>closing</code> and <code>close</code> events. Calling the <code>preventDefault()</code> method of
+
+		 <code>closing</code> event object prevents the application from exiting.</p>
+
+		 
+		 <p><b>Note:</b> This method is not supported on the iOS operating system.</p>
+
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">errorCode</span>:int</code> (default = <code>0</code>)<code></code> &mdash; The exit code reported to the operating system when this application exits.
+
+		 
+
+		 </td></tr></table></p></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="getDefaultApplication()"></a><a name="getDefaultApplication(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>getDefaultApplication</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getDefaultApplication(extension:String):String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+		 Gets the default application for opening files with the specified extension.
+
+		 
+
+		 <p><b>Note:</b> This method can only be used with file types declared in the 
+
+		 <code>fileTypes</code> statement of the application descriptor.</p>
+
+		 
+
+		 <p>This method is not applicable for AIR for TV devices. If you call it with a file type
+
+		 declared in the application descriptor, it returns <code>null</code>.</p>
+
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">extension</span>:String</code> &mdash; A String containing the extension of the file type of interest (without the ".").
+
+		 
+
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; The path of the default application.
+
+		 
+
+		 </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; If the <code>extension</code> parameter does not contain one of the 
+
+		 file extensions declared in the application descriptor.
+
+		 
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="NativeApplication.html#applicationDescriptor" target="">applicationDescriptor</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="isSetAsDefaultApplication()"></a><a name="isSetAsDefaultApplication(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>isSetAsDefaultApplication</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function isSetAsDefaultApplication(extension:String):Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+		 Specifies whether this application is currently the default application 
+
+		 for opening files with the specified extension.
+
+		 
+
+		 
+
+		 
+
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">extension</span>:String</code> &mdash; A String containing the extension of the file type of interest (without the ".").
+
+		 
+
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if this application is the default.
+
+		 
+
+		 </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; If the <code>extension</code> parameter does not contain one of the 
+
+		 file extensions declared in the application descriptor.
+
+		 
+
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="NativeApplication.html#applicationDescriptor" target="">applicationDescriptor</a><br/><a href="NativeApplication.html#supportsDefaultApplication" target="">supportsDefaultApplication</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="paste()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>paste</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function paste():Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+         Invokes an internal paste command on the focused display object.
+
+		 
+         <p>This function call is ignored if the component does not implement the
+
+         command. Only display objects descending from the TextField or HTMLLoader 
+
+         classes currently implement this command.</p>
+
+         
+
+         </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code>.
+
+         
+
+		 </td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="removeAsDefaultApplication()"></a><a name="removeAsDefaultApplication(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>removeAsDefaultApplication</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function removeAsDefaultApplication(extension:String):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+		 Removes this application as the default for opening files with the specified extension.
+
+		 
+
+		 <p><b>Note:</b> This method can only be used with file types listed in the 
+
+		 <code>fileTypes</code> statement in the application descriptor.</p>
+
+		 
+
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">extension</span>:String</code> &mdash; A String containing the extension of the file type of interest 
+
+		 (without the ".").
+
+         
+
+		 </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; If the <code>extension</code> parameter does not contain one of the 
+
+		 file extensions declared in the application descriptor.
+
+		 
+
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="NativeApplication.html#applicationDescriptor" target="">applicationDescriptor</a><br/><a href="NativeApplication.html#supportsDefaultApplication" target="">supportsDefaultApplication</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="removeEventListener()"></a><a name="removeEventListener(String,Function,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>removeEventListener</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function removeEventListener(type:String, listener:Function, useCapture:Boolean = false):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+		
+
+	Removes a listener from the EventDispatcher object. If there is no matching listener registered with the EventDispatcher object, a call to this method has no effect.
+
+	
+
+	</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:String</code> &mdash; The type of event.
+
+	
+
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">listener</span>:Function</code> &mdash; The listener object to remove.
+
+	
+
+	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useCapture</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; <span>This parameter applies to display objects in the
+
+	ActionScript 3.0 display list architecture, used by SWF content.</span>
+
+	
+
+	
+
+	
+
+	</td></tr></table></p></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="selectAll()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>selectAll</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function selectAll():Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+         Invokes an internal selectAll command on the focused display object.
+
+		 
+         <p>This function call is ignored if the component does not implement the
+
+         command. Only display objects descending from the TextField or HTMLLoader 
+
+         classes currently implement this command.</p>
+
+         
+
+         </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code>.
+
+         
+
+		 </td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="setAsDefaultApplication()"></a><a name="setAsDefaultApplication(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>setAsDefaultApplication</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setAsDefaultApplication(extension:String):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+		 Sets this application as the default application for opening files with the specified extension.
+
+		 
+
+		 <p><b>Note:</b> This method can only be used with file types declared in the 
+
+		 <code>fileTypes</code> statement in the application descriptor.</p>
+
+		 
+
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">extension</span>:String</code> &mdash; A String containing the extension of the file type of interest (without the ".").
+
+		 
+
+		 </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Error </code> &mdash; If the <code>extension</code> parameter does not contain one of the 
+
+		 file extensions declared in the application descriptor.
+
+		 
+
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="NativeApplication.html#applicationDescriptor" target="">applicationDescriptor</a><br/><a href="NativeApplication.html#supportsDefaultApplication" target="">supportsDefaultApplication</a></div></div></span><div class="detailSectionHeader"> Event Detail </div><span id="pageFilter" runtime="AIR::1.0##"><a name="event:activate"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>activate</h2></td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">property Event.type  =  </span><a href="../events/Event.html#ACTIVATE"><code>flash.events.Event.ACTIVATE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	 Dispatched when this application becomes the active desktop application.
+
+	  
+
+	 </p>
+
+	The <code>ACTIVATE</code> constant defines the value of the <code>type</code> property of an <code>activate</code> event object. 
+
+	<p><b>Note:</b> This event has neither a "capture phase" nor a "bubble phase",
+
+	which means that event listeners must be added directly to any potential targets, 
+
+	whether the target is on the display list or not.</p>
+
+	<p>AIR for TV devices never automatically dispatch this event. You can, however, dispatch it manually.</p>
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>Any DisplayObject instance with a listener registered for the <code>activate</code> event.</td></tr></table>
+
+	
+
+	</div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:browserInvoke"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>browserInvoke</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/BrowserInvokeEvent.html"><code>flash.events.BrowserInvokeEvent</code></a><br/><span class="label">property BrowserInvokeEvent.type  =  </span><a href="../events/BrowserInvokeEvent.html#Browser_INVOKE"><code>flash.events.BrowserInvokeEvent.Browser_INVOKE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	 Dispatched when an application is invoked by a SWF file running in the user's browser. 
+
+	 
+
+	 <p>Browser invocation is permitted only if an application specifies the following in
+
+	 the application descriptor file:</p>
+
+	 
+
+	 <div class="listing"><pre>&lt;allowBrowserInvocation&gt;true&lt;/allowBrowserInvocation&gt;</pre></div>
+
+	 
+
+	 </p></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:deactivate"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>deactivate</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">property Event.type  =  </span><a href="../events/Event.html#DEACTIVATE"><code>flash.events.Event.DEACTIVATE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	 Dispatched when the desktop focus is switched to a different application.
+
+	 
+
+	 </p>
+
+	The <code>Event.DEACTIVATE</code> constant defines the value of the <code>type</code> property of a <code>deactivate</code> event object. 
+
+	<p><b>Note:</b> This event has neither a "capture phase" nor a "bubble phase",
+
+	which means that event listeners must be added directly to any potential targets, 
+
+	whether the target is on the display list or not.</p>
+
+    <p>AIR for TV devices never automatically dispatch this event. You can, however, dispatch it manually.</p>
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>Any DisplayObject instance with a listener registered for the <code>deactivate</code> event.</td></tr></table>
+
+	
+
+	</div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:exiting"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>exiting</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">property Event.type  =  </span><a href="../events/Event.html#EXITING"><code>flash.events.Event.EXITING</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	 Dispatched when the application exit sequence is started. 
+
+	 
+	 <p>The <code>exiting</code> event is dispatched when application exit is initiated by
+
+	 the operating system; for example, when a user issues the <code>Cmd-Q</code>
+
+	 key sequence on Mac OS X, or when the <code>autoExit</code> property of
+
+	 the NativeApplication object is <code>true</code> and the last
+
+	 application window is closed. 
+
+	 Canceling this event prevents the application from exiting.</p>
+
+	 
+	 <p>AIR for TV devices never dispatch the <code>exiting</code> event. 
+
+	 </p>
+
+	 
+	 <p><b>Note:</b> Calling the NativeApplication <code>exit()</code> method does not cause an 
+
+	 <code>exiting</code> event to be dispatched. To warn components of an impending exit, 
+
+	 dispatch the <code>exiting</code> event before calling <code>exit().</code></p>
+
+	 
+	 
+
+	 </p>
+
+	The <code>Event.EXITING</code> constant defines the value of the <code>type</code> property of an <code>exiting</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>true</code>; canceling this event object stops the exit operation.</td></tr><tr><td><code>currentTarget</code></td><td>The NativeApplication object.</td></tr><tr><td><code>target</code></td><td>The NativeApplication object.</td></tr></table>
+
+	
+
+	</div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:invoke"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>invoke</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/InvokeEvent.html"><code>flash.events.InvokeEvent</code></a><br/><span class="label">property InvokeEvent.type  =  </span><a href="../events/InvokeEvent.html#INVOKE"><code>flash.events.InvokeEvent.INVOKE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	 Dispatched when an application is invoked. 
+
+	 
+
+	 <p>When an application is invoked a second time,
+
+	 another instance of the application is not started. Instead, the first instance
+
+	 receives an additional invoke event. It is the responsibility of the 
+
+	 application to handle subsequent <code>invoke</code> events appropriately.</p>
+
+	 
+
+	 <p><b>Note:</b> All <code>invoke</code> events are queued. When a listener for this 
+
+	 event is registered, it receives all events in the queue as well as any new events.
+
+	 Queued events may be delivered before or after any new <code>invoke</code> events.</p>
+
+	 
+
+	 </p>
+
+	 The <code>InvokeEvent.INVOKE</code> constant defines the value of the <code>type</code> 
+
+	 property of an InvokeEvent object.
+
+	 
+
+     <p>The InvokeEvent object has the following properties:</p>
+
+ 	 <table class="innertable" ><tr><th>Properties</th><th>Values</th></tr><tr><td><code>arguments</code></td><td>The array of string arguments passed 
+
+	 during this invocation.</td></tr><tr><td><code>currentDirectory</code></td><td>a File object representing the 
+
+	 directory that should be used to resolve any relative paths in the arguments array.</td></tr><tr><td><code>reason</code></td><td>a code indicating whether the invoke event was dispatched 
+
+	 because the application started automatically at login (<code>InvokeEventReason.LOGIN</code>), or 
+
+	 for another reason (<code>InvokeEventReason.STANDARD</code>). Available as of AIR version 1.5.1.</td></tr><tr><td><code>bubbles</code></td><td><code>false</code>.</td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; 
+
+	 there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>Indicates the object that is 
+
+	 actively processing this InvokeEvent object with an event listener.</td></tr><tr><td><code>target</code></td><td>Always the NativeApplication object. 
+
+	    </td></tr></table>
+
+	 
+
+	 </div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:keyDown"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>keyDown</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><code>flash.events.KeyboardEvent</code><br/><span class="label">property KeyboardEvent.type  =  </span><code>flash.events.KeyboardEvent.KEY_DOWN</code><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	 Dispatched when the user presses a key. The NativeApplication instance provides this event to
+
+	 support keyboard accelerators. This keyboard event is dispatched first to the NativeApplication.
+
+	 Canceling this event also cancels NativeWindow menu accelerators.
+
+	 This event occurs before the <code>keyUp</code> event.
+
+	 </p>
+
+	The <code>KeyboardEvent.KEY_DOWN</code> constant defines the value of the <code>type</code> property of a <code>keyDown</code> event object. 
+
+	
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>true</code></td></tr><tr><td><code>cancelable</code></td><td><code>true</code> in AIR, <code>false</code> in Flash Player; 
+
+			in AIR, canceling this event prevents the character from being entered into a text field.</td></tr><tr><td><code>charCode</code></td><td>The character code value of the key pressed or released.</td></tr><tr><td><code>commandKey</code></td><td><code>true</code> on Mac if the Command key is active. Otherwise, <code>false</code></td></tr><tr><td><code>controlKey</code></td><td><code>true</code> on Windows and Linux if the Ctrl key is active. <code>true</code> on Mac if either the Control key is active. Otherwise, <code>false</code></td></tr><tr><td><code>ctrlKey</code></td><td><code>true</code> on Windows and Linux if the Ctrl key is active. <code>true</code> on Mac if either the Ctrl key or the Command key is active. Otherwise, <code>false</code>.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>keyCode</code></td><td>The key code value of the key pressed or released.</td></tr><tr><td><code>keyLocation</code></td><td>The location of the key on the keyboard.</td></tr><tr><td><code>shiftKey</code></td><td><code>true</code> if the Shift key is active; <code>false</code> if it is inactive.</td></tr><tr><td><code>target</code></td><td>The InteractiveObject instance with focus. 
+
+	The <code>target</code> is not always the object in the display list 
+
+	that registered the event listener. Use the <code>currentTarget</code> 
+
+	property to access the object in the display list that is currently processing the event.</td></tr></table>
+
+	
+
+	</div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:keyUp"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>keyUp</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><code>flash.events.KeyboardEvent</code><br/><span class="label">property KeyboardEvent.type  =  </span><code>flash.events.KeyboardEvent.KEY_UP</code><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	 Dispatched when the user releases a key. The NativeApplication instance provides this event to
+
+	 support keyboard accelerators. This keyboard event is dispatched first to the NativeApplication.
+
+	 Canceling this event has no effects on other objects (such as NativeWindow menu accelerators).
+
+	 This event occurs after a <code>keyDown</code> event.
+
+	 </p>
+
+	The <code>KeyboardEvent.KEY_UP</code> constant defines the value of the <code>type</code> property of a <code>keyUp</code> event object. 
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>true</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>charCode</code></td><td>Contains the character code value of the key pressed or released.</td></tr><tr><td><code>commandKey</code></td><td><code>true</code> on Mac if the Command key is active. Otherwise, <code>false</code></td></tr><tr><td><code>controlKey</code></td><td><code>true</code> on Windows and Linux if the Ctrl key is active. <code>true</code> on Mac if either the Control key is active. Otherwise, <code>false</code></td></tr><tr><td><code>ctrlKey</code></td><td><code>true</code> on Windows if the Ctrl key is active. <code>true</code> on Mac if either the Ctrl key or the Command key is active. Otherwise, <code>false</code>.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>keyCode</code></td><td>The key code value of the key pressed or released.</td></tr><tr><td><code>keyLocation</code></td><td>The location of the key on the keyboard.</td></tr><tr><td><code>shiftKey</code></td><td><code>true</code> if the Shift key is active; <code>false</code> if it is inactive.</td></tr><tr><td><code>target</code></td><td>The InteractiveObject instance with focus. 
+
+	The <code>target</code> is not always the object in the display list 
+
+	that registered the event listener. Use the <code>currentTarget</code> 
+
+	property to access the object in the display list that is currently processing the event.</td></tr></table>
+
+	
+
+	</div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:networkChange"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>networkChange</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">property Event.type  =  </span><a href="../events/Event.html#NETWORK_CHANGE"><code>flash.events.Event.NETWORK_CHANGE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	 Dispatched when either a new network connection becomes available or
+
+	 an existing network connection is lost. 
+
+	 
+
+	 <p>A <code>networkChange</code> event does not necessarily mean that the host computer has
+
+	 gone online or offline; it may just be transitioning from one type of 
+
+	 connection to another. Applications can use this event to help optimize the 
+
+	 task of monitoring remote resource availability. The dispatch of a 
+
+	 <code>networkChange</code> event is often a good time to verify the availability of any remote resources.
+
+	 </p> 
+
+	 <p><b>Notes:</b></p> 
+
+	 <ul><li>There may be a short delay between
+
+	 a network change and the delivery of this event.</li><li>On Android, the NativeApplication object may dispatch more than one networkChange 
+
+	 event for each change in a network connection.</li></ul>
+
+	 
+
+	 </p>
+
+	The <code>Event.NETWORK_CHANGE</code> constant defines the value of the <code>type</code> property of a <code>networkChange</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The NativeApplication object.</td></tr></table>
+
+	
+
+	</div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:userIdle"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>userIdle</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">property Event.type  =  </span><a href="../events/Event.html#USER_IDLE"><code>flash.events.Event.USER_IDLE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	 Dispatched when the user has been idle.
+
+	 
+
+	 <p>Specify the period of time for which a user must be idle before this event is dispatched using the 
+
+	 <code>idleThreshold</code> property. The amount of time that the user has been idle can be 
+
+	 determined from the <code>timeSinceLastUserInput</code> property.</p>
+
+	 
+	 <p><b>Note:</b> This event is not dispatched on mobile devices or AIR for TV devices.</p>
+
+	 
+	 
+
+	 </p>
+
+	The <code>Event.USER_IDLE</code> constant defines the value of the <code>type</code> property of a <code>userIdle</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>target</code></td><td>The NativeApplication object.</td></tr></table>
+
+	
+
+	<p><span class="label">See also</span></p><div class="seeAlso"><a href="NativeApplication.html#idleThreshold" target="">idleThreshold</a><br/><a href="NativeApplication.html#timeSinceLastUserInput" target="">timeSinceLastUserInput</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:userPresent"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>userPresent</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">property Event.type  =  </span><a href="../events/Event.html#USER_PRESENT"><code>flash.events.Event.USER_PRESENT</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	 Dispatched when the operating system detects mouse or keyboard activity after an idle period.
+
+	 
+
+	 <p><b>Note:</b> This event is not dispatched on mobile devices or AIR for TV devices.</p>
+
+	 
+	 <p>The period of time that is considered idle is configurable with the <code>idleThreshold</code> 
+
+	 property. The amount of time that the user has been idle can be determined from 
+
+	 the <code>timeSinceLastUserInput</code> property.</p>
+
+	 
+
+	 </p>
+
+	The <code>Event.USER_PRESENT</code> constant defines the value of the <code>type</code> property of a <code>userPresent</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>target</code></td><td>The NativeApplication object.</td></tr></table>
+
+	
+
+	<p><span class="label">See also</span></p><div class="seeAlso"><a href="NativeApplication.html#idleThreshold" target="">idleThreshold</a><br/><a href="NativeApplication.html#timeSinceLastUserInput" target="">timeSinceLastUserInput</a></div></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script><p></p><center class="copyright"> &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><!--BEGIN IONCOMMENTS--><div id="ionComHere"></div><!--END IONCOMMENTS-->[an error occurred while processing this directive][an error occurred while processing this directive]<p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/en_US/legalnotices/index.html">Legal Notices</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online Privacy Policy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html><!-- &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  -->

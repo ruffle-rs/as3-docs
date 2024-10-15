@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="en-us" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;AIR * Packaging a desktop AIR installation file</title>
+    <link rel="shortcut icon" href="images/AIR.ico" />
+    <meta name="book" content="Building Adobe AIR Applications" />
+    <meta name="product" content="adobe" /><meta name="product" content="air" /><meta name="product" content="flash" /><meta name="product" content="flex" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="adobe"></Attribute><Attribute name="product" value="air"></Attribute><Attribute name="product" value="flash"></Attribute><Attribute name="product" value="flex"></Attribute><Attribute name="book" value="Building Adobe AIR Applications"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WS5b3ccc516d4fbf351e63e3d118666ade46-7f66.html";
+    document.cookie = "topicId=" + "WS5b3ccc516d4fbf351e63e3d118666ade46-7f66.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="https://help.adobe.com/en_US/air/build/swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    <div id="mnemonic">
+      <!--googleoff: index--><div xmlns:adobe="http://www.adobe.com/saxon" class="AIR"><div class="banner"><a href="WS485a42d56cd19641-a9697f4124ef986fac-8000.html">Adobe&#160;AIR</a></div></div><!--googleon: index-->
+    </div>
+    
+    <div id="searchbar">
+<table id="searchbartable">
+<tr>
+<td colspan="2">
+      <!--googleoff: index--><div xmlns:adobe="http://www.adobe.com/saxon"><div id="pdf"><img src="images/PDF.gif" width="16" height="16" /><a title="View Help PDF" href="air_buildingapps.pdf">View Help PDF (5.7MB)</a></div></div><!--googleon: index-->
+</td>
+</tr>
+</table>
+    </div>
+
+<!-- BEGIN SEARCH CONTENT -->
+<form id="search" name="search" action="https://help.adobe.com/en_US/air/build/search.html" target="_self">
+<script type="text/javascript">
+<!--[CDATA[
+if ( !use_chc_behavior ){
+    if (typeof(terms_AHV_SEARCH_CONSTRAINT) != "undefined" && 
+        terms_AHV_SEARCH_CONSTRAINT.length > 0 && 
+        document.location.href.indexOf(".adobe.com") > 0){
+        if ( typeof(terms_SEARCH_THIS_HELP_ONLY) != "undefined" && terms_SEARCH_THIS_HELP_ONLY == "ON" ) {
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                checked="checked" \
+                value="1" ><\/input>'); 
+                
+        // Leave the "Search this help system only" checkbox unckecked
+        }else{    
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                value="1" ><\/input>'); 
+        }
+        document.write('<span class="gsalabel">' + terms_AHV_SEARCH_CONSTRAINT + '<\/span><\/div>'); 
+    }
+    document.write('<input class="searchinput" \
+        name="q" \
+        id="q" \
+        type="text" \
+        maxlength="256" \
+        value="' + terms_AHV_SEARCH_BUTTON + '" \
+        onclick="clearSearch()"><\/input><input \
+        type="button" \
+        name="searchbutton" \
+        class="searchbutton" \
+        onclick="submit()"><\/input>'); 
+} 
+ 
+/* 
+ * Start Functions 
+ */
+function clearSearch(){
+    if (document.search.q.value == terms_AHV_SEARCH_BUTTON){document.search.q.value = ""}; 
+}
+
+// set search preferences
+function setAHSearchPref(){
+    if (document.search.gsa.checked == 1){
+        setAHSearchCookie( dirname );
+    }else{
+        setAHSearchCookie( "community" );
+    }
+}
+
+// Set search preferences cookie
+function setAHSearchCookie( p ){
+    // set cookie ah_searchpref with a value of the document path
+    var expire=new Date();
+    expire.setDate(expire.getDate()+365); // Cookie expires after 1 year (365 days) 
+    document.cookie="ah_searchpref=" +p+ "; expires=" +expire.toGMTString()+ ";";
+}
+
+// ]]-->
+</script> 
+ </form>
+<!-- END SEARCH CONTENT -->    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+<!-- BEGIN BREADCRUMBS -->
+
+      
+      <div id="breadcrumb">
+        
+<ul class="navigation"><li class="prev"><a accesskey="p" class="prev" href="WSfffb011ac560372f20b57e08128cc91aa2f-7ffe.html" title="Debugging a desktop AIR application"><img src="images/blank.gif" alt="Previous" width="17" height="17" /></a></li><li class="next"><a accesskey="n" class="next" href="WS789ea67d3e73a8b22388411123785d839c-8000.html" title="Packaging a desktop native installer"><img src="images/blank.gif" alt="Next" width="17" height="17" /></a></li></ul><div class="hierarchy" id="hierarchy"><a href="WS485a42d56cd19641-a9697f4124ef986fac-8000.html"><b>Home</b></a> / <a href="WS485a42d56cd19641-a9697f4124ef986fac-8000.html"><b>Building Adobe AIR Applications</b></a> / <a href="WSfffb011ac560372f20b57e08128cc91aa2f-8000.html"><b>Developing AIR applications for the desktop</b></a> 
+     </div>
+
+      </div>
+<!-- END BREADCRUMBS -->
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>Packaging a desktop AIR installation file</h1>
+<!-- END PAGE TITLE -->
+<!-- BEGIN IONCOMMENTCOUNT -->
+        <div id="ionCount">
+        </div>
+<!-- END IONCOMMENTCOUNT -->
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<p id="chcPromo" style="display:none;">
+<a id="chcLink" href="http://www.adobe.com/support/chc/">
+<img id="chcImage" src="http://www.adobe.com/support/chc/GetMoreHelpFeatures.png"/>
+</a>
+</p>
+<script type="text/javascript" language="javascript" charset="utf-8">
+<!--
+var cfgArray = [];
+//cfgArray["Acrobat_10.0_Professional.helpcfg"] = "acrobatpro";
+//cfgArray["Acrobat_10.0_Standard.helpcfg"] = "acrobatstd";
+cfgArray["Lightroom_3.0.helpcfg"] = "lightroom";
+cfgArray["PhotoshopElements_8.0_Win.helpcfg"] = "photoshopelements";
+cfgArray["PhotoshopElements_8.0_Mac.helpcfg"] = "photoshopelementsmac";
+cfgArray["PremiereElements_8.0_Win.helpcfg"] = "premiereelements";
+
+//cfgArray["AfterEffects_10.0.helpcfg"] = "aftereffects";
+//cfgArray["AIR.helpcfg"] = "air";
+//cfgArray["ColdFusionBuilder.helpcfg"] = "coldfusion";
+//cfgArray["Contribute_6.0.helpcfg"] = "contribute";
+//cfgArray["DeviceCentral_3.0.helpcfg"] = "devicecentral";
+//cfgArray["Dreamweaver_11.0.helpcfg"] = "dreamweaver";
+//cfgArray["EncoreDVD_5.0.helpcfg"] = "encore";
+//cfgArray["ExtensionManager_3.0.helpcfg"] = "extension";
+//cfgArray["Fireworks_11.0.helpcfg"] = "fireworks";
+//cfgArray["Flash_11.0.helpcfg"] = "flash";
+//cfgArray["Flex_4.0.helpcfg"] = "flashbuilder";
+//cfgArray["FlashCatalyst_1.0.helpcfg"] = "flashcatalyst";
+//cfgArray["Illustrator_15.0.helpcfg"] = "illustrator";
+//cfgArray["InCopy_7.0.helpcfg"] = "incopy";
+//cfgArray["InDesign_7.0.helpcfg"] = "indesign";
+//cfgArray["OnLocation_5.0.helpcfg"] = "onlocation";
+//cfgArray["Photoshop_12.0.helpcfg"] = "photoshop";
+//cfgArray["PremierePro_5.0.helpcfg"] = "premierepro";
+
+function getLangName() {
+    var lang = "en-us";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if (ptn.test(lang)) {
+        var languageCode = lang.replace(ptn, "$1");
+        var countryCode = lang.replace(ptn, "$2");
+        lang = languageCode + "_" + countryCode.toUpperCase();
+    }
+    return lang;
+}
+
+function getCountryName() {
+    var lang = "";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if ((ptn.test(lang)) && (lang != "en-us")) {
+        var countryCode = lang.replace(ptn, "$2");
+        return "/" + countryCode;
+    }
+    return "";
+}
+
+if ( (typeof(terms_HELPCFG) != 'undefined')  && (terms_HELPCFG.indexOf(".helpcfg") != -1) ) {
+    var stage   = (document.location.href.indexOf(".stage.") != -1) ? 'stage.' : '';
+    var baseUrl = 'http://www.' + stage + 'adobe.com';
+    var refpage = document.location.href.replace(/#.*$/, '');
+	
+	if ((!use_robohelp_behavior) && (terms_HELPCFG.length > 0) && (typeof(cfgArray[terms_HELPCFG]) != 'undefined') && (cfgArray[terms_HELPCFG].length > 0)) {
+		if (document.getElementById) { // DOM3 = IE5, NS6
+			var newHref = baseUrl + getCountryName() + "/support/chc/" + "?helpcfg=http://help." + stage + "adobe.com/HelpCfg/" + getLangName() + "/" + terms_HELPCFG + "&url=" + refpage + "&product=" + cfgArray[terms_HELPCFG];
+			var newSrc = baseUrl + getCountryName() + "/support/chc/GetMoreHelpFeatures.png";
+			document.getElementById("chcPromo").style.display = "block";
+			document.getElementById("chcLink").href = newHref;
+			document.getElementById("chcImage").src = newSrc;
+		}
+	}
+}
+
+//-->
+</script>
+
+
+
+          <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WSfffb011ac560372f-3dac4f2312bad084129-8000"><span class="topictitle1">Packaging with ADT</span>
+</a></p></li></ul></div></div></div></div><div><p>Every AIR application must, at a minimum,
+have an application descriptor file and a main SWF or HTML file.
+Any other assets to be installed with the application must be packaged
+in the AIR file as well. </p>
+<p>This article discusses packaging an AIR application using the
+command-line tools included with the SDK. For information about
+package an application using one of the Adobe authoring tools, see
+the following:</p>
+<div class="para"><ul><li><p>Adobe® Flex® Builder™, see <a href="http://livedocs.adobe.com/flex/3/html/UsingFB_1.html#1084848#1084848" target="_self">Packaging AIR applications with Flex Builder</a>.</p>
+</li>
+<li><p>Adobe® Flash® Builder™, see <a href="http://help.adobe.com/en_US/Flex/4.0/UsingFlashBuilder/WS6b84a753ecd210fd-7fb8a08d12114b6a4cf-8000.html#WS6b84a753ecd210fd-7fb8a08d12114b6a4cf-7ffd#WS6b84a753ecd210fd-7fb8a08d12114b6a4cf-7ffd" target="_self">Packaging AIR applications with Flash Builder</a>.</p>
+</li>
+<li><p>Adobe® Flash® Professional, see <a href="http://help.adobe.com/en_US/Flash/CS5/Using/WSF0126B20-BFF4-4c50-9978-BCA47C8C3C3F.html" target="_self">Publishing for Adobe AIR</a>.</p>
+</li>
+</ul>
+<ul><li><p>Adobe® Dreamweaver® see <a href="http://help.adobe.com/en_US/Dreamweaver/CS5/Using/WS6463f310bbfa3de2-1eb2a492126f73db0f1-8000.html#WS6463f310bbfa3de2-1eb2a492126f73db0f1-7fff#WS6463f310bbfa3de2-1eb2a492126f73db0f1-7fff" target="_self">Creating an AIR application in Dreamweaver</a>.</p>
+</li>
+</ul>
+</div>
+<p>All AIR installer files must be signed using a digital certificate.
+The AIR installer uses the signature to verify that your application
+file has not been altered since you signed it. You can use a code
+signing certificate from a certification authority or a self-signed
+certificate. </p>
+<p>When you use a certificate issued by a trusted certification
+authority, you give users of your application some assurance of
+your identity as publisher. The installation dialog reflects the
+fact that your identity is verified by the certificate authority:</p>
+<div xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema" class="fignone"><img alt="" id="CaSigned" src="images/CaSigned.png" /><div class="figdesc">Installation confirmation dialog for application signed by
+a trusted certificate</div></div><p>When you use a self-signed certificate, users cannot verify your
+identity as the signer. A self-signed certificate also weakens the
+assurance that the package hasn’t been altered. (This is because
+a legitimate installation file could be substituted with a forgery
+before it reaches the user.) The installation dialog reflects the fact
+that the publisher’s identity cannot be verified. Users are taking
+a greater security risk when they install your application:</p>
+<div xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema" class="fignone"><img alt="" id="SelfSigned" src="images/SelfSigned.png" /><div class="figdesc">Installation confirmation dialog for application signed by
+a self-signed certificate</div></div><p>You can package and sign an AIR file in a single step using the
+ADT <samp class="codeph">-package</samp> command. You can also create an intermediate,
+unsigned package with the <samp class="codeph">-prepare</samp> command, and
+sign the intermediate package with the <samp class="codeph">-sign</samp> command
+in a separate step. </p>
+<div class="note"><span class="notetitle">Note:  </span>Java versions 1.5 and above do not accept high-ASCII characters
+in passwords used to protect PKCS12 certificate files. When you
+create or export your code signing certificate file, use only regular
+ASCII characters in the password. </div>
+<p>When signing the installation package, ADT automatically contacts
+a time-stamp authority server to verify the time. The time-stamp
+information is included in the AIR file. An AIR file that includes
+a verified time stamp can be installed at any point in the future.
+If ADT cannot connect to the time-stamp server, then packaging is
+canceled. You can override the time-stamping option, but without a
+time stamp, an AIR application ceases to be installable after the
+certificate used to sign the installation file expires. </p>
+<p>If you are creating a package to update an existing AIR application,
+the package must be signed with the same certificate as the original
+application. If the original certificate has been renewed or has
+expired within the last 180 days, or if you want to change to a
+new certificate, you can apply a migration signature. A migration
+signature involves signing the application AIR file with both the
+new and the old certificate. Use the <samp class="codeph">-migrate</samp> command
+to apply the migration signature as described in <a href="WS901d38e593cd1bac1e63e3d128fc240122-7ffd.html">ADT migrate command</a>.</p>
+<div class="important"><span class="importanttitle">Important:  </span>There is a strict 180 day grace period
+for applying a migration signature after the original certificate
+expires. Without a migration signature, existing users must uninstall
+their existing application before installing your new version. The
+grace period only applies to applications that specify AIR version
+1.5.3, or above, in the application descriptor namespace. There
+is no grace period when targeting earlier versions of the AIR runtime.</div>
+<p>Before AIR 1.1, migration signatures were not supported. You
+must package an application with an SDK of version 1.1 or later
+to apply a migration signature.</p>
+<p>Applications deployed using AIR files are known as desktop profile
+applications. You cannot use ADT to package a native installer for
+an AIR application if the application descriptor file does not support
+the desktop profile. You can restrict this profile using the <samp class="codeph">supportedProfiles</samp> element
+in the application descriptor file. See <a href="WS144092a96ffef7cc16ddeea2126bb46b82f-8000.html">Device profiles</a> and <a href="WSfffb011ac560372f2fea1812938a6e463-7fe2.html">supportedProfiles</a>.</p>
+<div class="note"><span class="notetitle">Note:  </span>The settings in the application descriptor file
+determine the identity of an AIR application and its default installation
+path. See <a href="WS5b3ccc516d4fbf351e63e3d118666ade46-7ff1.html">AIR application descriptor files</a>. </div>
+<div class="section"><h4 class="sectiontitle">Publisher IDs</h4><p>As of AIR 1.5.3, publisher
+IDs are deprecated. New applications (originally published with
+AIR 1.5.3 or later) do not need and should not specify a publisher ID. </p>
+<p>When
+updating applications published with earlier versions of AIR, you
+must specify the original publisher ID in the application descriptor
+file. Otherwise, the installed version of your application and the
+update version are treated as different applications. If you use
+a different ID or omit the publisherID tag, a user must uninstall
+the earlier version before installing the new version. </p>
+<p>To
+determine the original publisher ID, find the <samp class="codeph">publisherid</samp> file
+in the META-INF/AIR subdirectory where the original application
+is installed. The string within this file is the publisher ID. Your
+application descriptor must specify the AIR 1.5.3 runtime (or later)
+in the namespace declaration of the application descriptor file in
+order to specify the publisher ID manually.</p>
+<p>For applications
+published before AIR 1.5.3 — or that are published with the AIR 1.5.3
+SDK, while specifying an earlier version of AIR in the application
+descriptor namespace — a publisher ID is computed based on the signing
+certificate. This ID is used, along with the application ID, to
+determine the identity of an application. The publisher ID, when
+present, is used for the following purposes:</p>
+<ul><li><p>Verifying
+that an AIR file is an update rather than a new application to install</p>
+</li>
+<li><p>As part of the encryption key for the encrypted local store</p>
+</li>
+<li><p>As part of the path for the application storage directory</p>
+</li>
+<li><p>As part of the connection string for local connections</p>
+</li>
+<li><p>As part of the identity string used to invoke an application
+with the AIR in-browser API</p>
+</li>
+<li><p>As part of the OSID (used when creating custom install/uninstall
+programs)</p>
+</li>
+</ul>
+<p>Before AIR 1.5.3, the publisher ID of
+an application could change if you signed an application update
+with migration signature using a new or renewed certificate. When
+a publisher ID changes, the behavior of any AIR features relying
+on the ID also changes. For example, data in the existing encrypted
+local store can no longer be accessed and any Flash or AIR instances
+that create a local connection to the application must use the new
+ID in the connection string. </p>
+<p>In AIR 1.5.3, or later, the
+publisher ID is not based on the signing certificate and is only
+assigned if the publisherID tag is included in the application descriptor.
+An application cannot be updated if the publisher ID specified for
+the update AIR package does not match its current publisher ID.</p>
+</div>
+<ul class="navlinklist"></ul>
+</div>
+<div id="WSfffb011ac560372f-3dac4f2312bad084129-8000" class="nochunk"><a name="WSfffb011ac560372f-3dac4f2312bad084129-8000"><!-- --></a><h2 class="topictitle2">Packaging with ADT</h2><div><p>You can use the AIR ADT command-line tool to package an
+AIR application. Before packaging, all your ActionScript, MXML,
+and any extension code must be compiled. You must also have a code
+signing certificate. </p>
+<p>For a detailed reference on ADT commands and options see <a href="WS5b3ccc516d4fbf351e63e3d118666ade46-7fd9.html">AIR Developer Tool (ADT)</a>.</p>
+<div class="section"><h4 class="sectiontitle">Creating an AIR package</h4><p>To create an AIR
+package, use the ADT package command, setting the target type to <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">air</i> for
+release builds. </p>
+<pre>adt -package -target air -storetype pkcs12 -keystore ../codesign.p12 myApp.air myApp-app.xml myApp.swf icons</pre>
+<p>The
+example assumes that the path to the ADT tool is on your command-line shell’s
+path definition. (See <a href="WSfffb011ac560372f-71994050128cca87097-8000.html">Path environment variables</a> for help.)</p>
+<p>You must run the command
+from the directory containing the application files. The application
+files in the example are myApp-app.xml (the application descriptor
+file), myApp.swf, and an icons directory.</p>
+<p>When you run the
+command as shown, ADT will prompt you for the keystore password.
+(The password characters you type are not always displayed; just
+press Enter when you are done typing.) </p>
+</div>
+<div class="section"><h4 class="sectiontitle">Creating an AIR package from an AIRI file</h4><p>You
+can create sign an AIRI file to create an installable AIR package:</p>
+<pre>adt -sign -storetype pkcs12 -keystore ../codesign.p12 myApp.airi myApp.air</pre>
+</div>
+</div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator"><a href="#top"><img src="images/BTT.jpg" /></a>&#160;</div>
+          </div>
+          <div id="footer">
+<!-- BEGIN IONCOMMENTS -->
+            <div id="ionComHere">
+            </div>
+<!-- END IONCOMMENTS -->
+
+
+            <p id="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" id="creativecommons_text"><img id="creativecommons_img" src="images/CC.png" alt="This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License" /></a>&nbsp;Twitter™ and Facebook posts are not covered under the terms of Creative Commons.</p>
+          </div>
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+
+</td></tr></table>
+      </div>
+<!-- BEGIN BREADCRUMBS -->
+      <div id="breadcrumb">
+        
+<ul class="navigation"><li class="prev"><a accesskey="p" class="prev" href="WSfffb011ac560372f20b57e08128cc91aa2f-7ffe.html" title="Debugging a desktop AIR application"><img src="images/blank.gif" alt="Previous" width="17" height="17" /></a></li><li class="next"><a accesskey="n" class="next" href="WS789ea67d3e73a8b22388411123785d839c-8000.html" title="Packaging a desktop native installer"><img src="images/blank.gif" alt="Next" width="17" height="17" /></a></li></ul><div class="hierarchy" id="hierarchy"><a href="WS485a42d56cd19641-a9697f4124ef986fac-8000.html"><b>Home</b></a> / <a href="WS485a42d56cd19641-a9697f4124ef986fac-8000.html"><b>Building Adobe AIR Applications</b></a> / <a href="WSfffb011ac560372f20b57e08128cc91aa2f-8000.html"><b>Developing AIR applications for the desktop</b></a> 
+     </div>
+
+      </div>
+<!-- END BREADCRUMBS -->
+<!-- END CONTENT WRAPPER -->
+
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--
+    Description:
+    This file generates the link to product support in the top right corner
+-->
+
+<style>
+#menutop{
+    position:absolute;
+    top:4px;
+    right:24px;
+    width:auto;    
+    font-size:11px;
+    color:#fff;
+    text-align:right;
+}
+#menutop a{
+    color:#fff;
+}
+#menutop a:hover{
+        text-decoration:underline;
+}
+</style>  
+  
+  
+  
+  
+<div id="productmenu">
+<!--googleoff: index-->
+  <div id="menutop">
+
+
+<script language=javascript type='text/javascript'>
+    // darken menu text for products with light backgrounds
+    var path = document.location.href.toLowerCase();
+    if (path.indexOf("/acrobat/")           	> 0 ||
+        path.indexOf("/acrobat.com/")       	> 0 ||
+        path.indexOf("/acrobatConnectPro/") 	> 0 ||
+        path.indexOf("/connect/")           	> 0 ||
+        path.indexOf("/framemaker/")           	> 0 ||
+        path.indexOf("/livecycledataserviceses/") > 0 ||
+        path.indexOf("/muse/")         	> 0 ||
+		path.indexOf("/presenter/")         	> 0 ||
+        path.indexOf("/scene7/")            	> 0 ||
+        path.indexOf("/flashmediaserver/")  	> 0 ||
+        path.indexOf("/wave/")              	> 0 )
+    {
+        document.write('<style>#menutop a{color:#505050}</style>');
+    }
+    if (typeof('terms_AHV_PRODUCT_SUPPORT') != "undefined" && ! use_robohelp_behavior ){      
+        if (path.indexOf("/muse/") > -1 ){
+            var supportlink = '<a href="http://muse.adobe.com/support.html">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }else{
+            var supportlink = '<a href="http://adobe.com/support">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }
+        document.write( supportlink );
+     }
+
+</script> 
+
+  </div>
+<!--googleon: index-->
+</div>
+
+
+
+<style>
+#online-privacy-policy{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+<p id="online-privacy-policy">
+<script language="javascript">
+var pageLoc = "en_US";
+var metaElements = document.all ?
+document.all.tags('meta') :
+document.getElementsByTagName ?
+document.getElementsByTagName ('meta') : new Array();
+for (var m = 0; m < metaElements.length; m++) {
+	if (metaElements[m].name == "lang") {
+		pageLoc = metaElements[m].content;
+		break;
+	}
+}
+var ptn = /(..)-(..)/;
+if (ptn.test(pageLoc)) {
+	var languageCode = pageLoc.replace(ptn, "$1");
+	var countryCode = pageLoc.replace(ptn, "$2");
+	pageLoc = languageCode + "_" + countryCode.toUpperCase();
+}
+
+var policyLoc = "en_US";
+var policyText = "Online Privacy Policy";
+var policyPath = "";
+var policyArray=[
+"da_DK", "Online fortrolighedserklæring",
+"de_DE", "Online-Datenschutzrichtlinie",
+"es_ES", "Política de confidencialidad en línea",
+"fi_FI", "Yksityisyyttä koskeva Online-toimintaohjelma",
+"fr_FR", "Confidentialité et sécurité",
+"it_IT", "Informativa sulla privacy online",
+"ja_JP", "プライバシーポリシー",
+"ko_KR", "Adobe 온라인 개인정보 보호정책",
+"pt_BR", "Política de Confidencialidade On-line", 
+"zh_CN", "在线隐私政策",
+"zh_TW", "線上隱私政策"
+];
+var legalLoc = "en_US";
+var legalText = "Legal Notices";
+var legalPath = legalLoc;
+var legalArray=[
+"ar_AE", "إشعارات قانونية",
+"bg_BG", "Юридически бележки",
+"cs_CZ", "Právní upozornění",
+"da_DK", "Juridiske meddelelser",
+"de_DE", "Rechtliche Hinweise",
+"el_GR", "Σημειώσεις νομικού περιεχομένου",
+"es_ES", "Avisos legales",
+"et_EE", "Juriidilised teated",
+"fi_FI", "Lakisääteiset ilmoitukset",
+"fr_FR", "Mentions légales",
+"he_IL", "הצהרות משפטיות",
+"hr_HR", "Pravne napomene",
+"hu_HU", "Jogi közlemények",
+"it_IT", "Informazioni legali",
+"ja_JP", "法律上の注意",
+"ko_KR", "법적 고지 사항",
+"lt_LT", "Teisinės pastabos",
+"lv_LV", "Juridisks paziņojums",
+"nb_NO", "Juridiske merknader",
+"nl_NL", "Juridische kennisgevingen",
+"pl_PL", "Informacje prawne",
+"pt_BR", "Aspectos jurídicos",
+"ro_RO", "Prevederi legale",
+"ru_RU", "Юридическая информация",
+"sk_SK", "Právne upozornenie",
+"sl_SI", "Pravni pouk",
+"sv_SE", "Upphovsrätt",
+"tr_TR", "Yasal uyarılar",
+"uk_UA", "Юридична інформація",
+"zh_CN", "法律声明",
+"zh_TW", "法律注意事項"
+];
+
+ruPolicy = "http://www.adobe.com/ru/misc/privacy.html";
+trPolicy = "http://www.adobe.com/tr/misc/privacy.html";
+
+// Bug 2846992: LOC: RUS, TUR: The link to "Online Privacy Policy" should include language, currently it is not appearing.
+if (pageLoc == "ru_RU") {
+	policyPath = "ru";
+}
+else if (pageLoc == "tr_TR") {
+	policyPath = "tr";
+}
+for (var i = 0; i < policyArray.length; i+=2) {
+	if (pageLoc == policyArray[i]) {
+		policyLoc = pageLoc;
+		policyText = policyArray[i+1];
+		var ptn = /(..)_(..)/;
+		if (ptn.test(policyLoc)) {
+			var countryCode = policyLoc.replace(ptn, "$2");
+			policyPath = countryCode.toLowerCase();
+		}
+		break;
+	}
+}
+
+for (var i = 0; i < legalArray.length; i+=2) {
+	if (pageLoc == legalArray[i]) {
+		legalLoc = pageLoc;
+		legalText = legalArray[i+1];
+		legalPath = legalLoc;
+		break;
+	}
+}
+if(agt.indexOf("community help client") > -1 ){
+	document.write('<a href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+}else{
+	//Open the privacy policy in a new window
+	document.write('<a target="_blank" href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a target="_blank" href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+} 
+
+
+remove_all_cookies();
+
+function remove_all_cookies() {
+	var res = document.cookie;
+    var multiple = res.split(";");
+    for(var i = 0; i < multiple.length; i++) {
+    	var key = multiple[i].split("=");
+        document.cookie = key[0]+" =; expires = Thu, 01 Jan 1970 00:00:00 UTC";
+    }
+}
+
+
+</script>
+</p>
+
+
+
+<!-- localfooter.ssi -->
+
+<script type="text/javascript">
+    var debug = (top.location.href.indexOf("debug=true") > -1);
+</script>
+
+<script language="javascript">
+document.write('<scr'+'ipt ' +
+               'src="/en_US/ssi/_pod.js" ' +
+               'language="javascript" ' +
+               'charset="UTF-8"> ' +
+               '</scr'+'ipt>');
+</script>
+
+//  Ethnio survey code removed
+
+
+  </body>
+</html>

@@ -1,0 +1,1565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="en-us">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <meta content="en-us" name="lang"/>
+  <meta content="livedocs" name="area"/>
+  <title>
+   Adobe Flash Platform * Creating the native extension package
+  </title>
+  <link href="https://help.adobe.com/en_US/air/extensions/images/FlashRuntimeLinkIndicator.png" rel="shortcut icon"/>
+  <meta content="Developing Native Extensions" name="book"/>
+  <meta content="adobe" name="product"/>
+  <meta content="air" name="product"/>
+  <meta content="flash" name="product"/>
+  <meta content="flex" name="product"/>
+  <meta content="" name="keywords"/>
+  <!--<PageMap><DataObject type="document"><Attribute name="product" value="adobe"></Attribute><Attribute name="product" value="air"></Attribute><Attribute name="product" value="flash"></Attribute><Attribute name="product" value="flex"></Attribute><Attribute name="book" value="Developing Native Extensions"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+  <script charset="UTF-8" language="Javascript" type="text/javascript">
+   <!--[CDATA[
+        var currentTreeNode = "WSf268776665d7970d-2482335412ffea65006-8000.html";
+// ]]-->
+  </script>
+  <script charset="UTF-8" language="Javascript" src="terms.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="help.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="utilities.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="event.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="treeview.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="toc.js" type="text/javascript">
+   ..
+  </script>
+  <script charset="UTF-8" language="Javascript" src="https://help.adobe.com/en_US/air/extensions/swfobject.js" type="text/javascript">
+   ..
+  </script>
+  <script charset="UTF-8" language="Javascript" src="booklist.js" type="text/javascript">
+   ..
+  </script>
+  <script type="text/javascript">
+   <!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+  </script>
+  
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+  
+  
+  <link href="tree.css" rel="stylesheet" type="text/css"/>
+  <link href="content.css" rel="stylesheet" type="text/css"/>
+  <link href="localeSpecific.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body id="content_body" onload="window.focus();">
+  <a name="top" shape="rect">
+   <!--LeaveCommentHere-->
+  </a>
+  <div id="mnemonic">
+   <!--googleoff: index-->
+   <div class="FlashRuntime" xmlns:adobe="http://www.adobe.com/saxon">
+    <div class="banner">
+     <a href="WSf00ab63af761f170-7e2c8d6712937799c98-8000.html">
+      Adobe Flash Platform
+     </a>
+    </div>
+   </div>
+   <!--googleon: index-->
+  </div>
+  <div id="searchbar">
+   <table id="searchbartable">
+    <tr>
+     <td colspan="2">
+      <!--googleoff: index-->
+      <div xmlns:adobe="http://www.adobe.com/saxon">
+       <div id="pdf">
+        <img height="16" src="images/PDF.gif" width="16"/>
+        <a href="air_extensions.pdf" title="View Help PDF">
+         View Help PDF (
+         2.4M
+         B)
+        </a>
+       </div>
+      </div>
+      <!--googleon: index-->
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!-- BEGIN SEARCH CONTENT -->
+  <form action="https://help.adobe.com/en_US/air/extensions/search.html" id="search" name="search" target="_self">
+   <script type="text/javascript">
+    <!--[CDATA[
+if ( !use_chc_behavior ){
+    if (typeof(terms_AHV_SEARCH_CONSTRAINT) != "undefined" && 
+        terms_AHV_SEARCH_CONSTRAINT.length > 0 && 
+        document.location.href.indexOf(".adobe.com") > 0){
+        if ( typeof(terms_SEARCH_THIS_HELP_ONLY) != "undefined" && terms_SEARCH_THIS_HELP_ONLY == "ON" ) {
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                checked="checked" \
+                value="1" ><\/input>'); 
+                
+        // Leave the "Search this help system only" checkbox unckecked
+        }else{    
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                value="1" ><\/input>'); 
+        }
+        document.write('<span class="gsalabel">' + terms_AHV_SEARCH_CONSTRAINT + '<\/span><\/div>'); 
+    }
+    document.write('<input class="searchinput" \
+        name="q" \
+        id="q" \
+        type="text" \
+        maxlength="256" \
+        value="' + terms_AHV_SEARCH_BUTTON + '" \
+        onclick="clearSearch()"><\/input><input \
+        type="button" \
+        name="searchbutton" \
+        class="searchbutton" \
+        onclick="submit()"><\/input>'); 
+} 
+ 
+/* 
+ * Start Functions 
+ */
+function clearSearch(){
+    if (document.search.q.value == terms_AHV_SEARCH_BUTTON){document.search.q.value = ""}; 
+}
+
+// set search preferences
+function setAHSearchPref(){
+    if (document.search.gsa.checked == 1){
+        setAHSearchCookie( dirname );
+    }else{
+        setAHSearchCookie( "community" );
+    }
+}
+
+// Set search preferences cookie
+function setAHSearchCookie( p ){
+    // set cookie ah_searchpref with a value of the document path
+    var expire=new Date();
+    expire.setDate(expire.getDate()+365); // Cookie expires after 1 year (365 days) 
+}
+
+// ]]-->
+   </script>
+  </form>
+  <!-- END SEARCH CONTENT -->
+  <!-- BEGIN PAGE CONTENT WRAPPER -->
+  <div id="page_content_wrapper">
+   <!-- BEGIN PAGE WRAPPER -->
+   <table id="page_content_table">
+    <tr>
+     
+     <td id="col2">
+      <!-- BEGIN CONTENT WRAPPER -->
+      <!-- BEGIN BREADCRUMBS -->
+      <div id="breadcrumb">
+       <ul class="navigation">
+        <li class="prev">
+         <a accesskey="p" class="prev" href="WSf268776665d7970d-2e74ffb4130044f3619-7fff.html" title="Building the native library">
+          <img alt="Previous" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+        <li class="next">
+         <a accesskey="n" class="next" href="WSf268776665d7970d-2e74ffb4130044f3619-7ff8.html" title="Including resources in your native extension package">
+          <img alt="Next" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+       </ul>
+       <div class="hierarchy" id="hierarchy">
+        <a href="WSf00ab63af761f170-7e2c8d6712937799c98-8000.html">
+         <b>
+          Home
+         </b>
+        </a>
+        /
+        <a href="WSf00ab63af761f170-7e2c8d6712937799c98-8000.html">
+         <b>
+          Developing Native Extensions
+         </b>
+        </a>
+        /
+        <a href="WSf00ab63af761f170-168f6f2a129378b935d-8000.html">
+         <b>
+          Packaging a native extension
+         </b>
+        </a>
+       </div>
+      </div>
+      <!-- END BREADCRUMBS -->
+      <div id="content_wrapper">
+       <!-- BEGIN PAGE TITLE -->
+       <h1>
+        Creating the native extension package
+       </h1>
+       <!-- END PAGE TITLE -->
+       <!-- BEGIN IONCOMMENTCOUNT -->
+       <div id="ionCount">
+       </div>
+       <!-- END IONCOMMENTCOUNT -->
+       <table border="0" cellpadding="0" cellspacing="0" id="inner_content_table" width="100%">
+        <tr>
+         <td>
+          <div style="border-top:#ccc solid 1px;">
+           <p>
+           </p>
+          </div>
+          <p id="chcPromo" style="display:none;">
+<a id="chcLink" href="http://www.adobe.com/support/chc/">
+<img id="chcImage" src="http://www.adobe.com/support/chc/GetMoreHelpFeatures.png"/>
+</a>
+</p>
+<script type="text/javascript" language="javascript" charset="utf-8">
+<!--
+var cfgArray = [];
+//cfgArray["Acrobat_10.0_Professional.helpcfg"] = "acrobatpro";
+//cfgArray["Acrobat_10.0_Standard.helpcfg"] = "acrobatstd";
+cfgArray["Lightroom_3.0.helpcfg"] = "lightroom";
+cfgArray["PhotoshopElements_8.0_Win.helpcfg"] = "photoshopelements";
+cfgArray["PhotoshopElements_8.0_Mac.helpcfg"] = "photoshopelementsmac";
+cfgArray["PremiereElements_8.0_Win.helpcfg"] = "premiereelements";
+
+//cfgArray["AfterEffects_10.0.helpcfg"] = "aftereffects";
+//cfgArray["AIR.helpcfg"] = "air";
+//cfgArray["ColdFusionBuilder.helpcfg"] = "coldfusion";
+//cfgArray["Contribute_6.0.helpcfg"] = "contribute";
+//cfgArray["DeviceCentral_3.0.helpcfg"] = "devicecentral";
+//cfgArray["Dreamweaver_11.0.helpcfg"] = "dreamweaver";
+//cfgArray["EncoreDVD_5.0.helpcfg"] = "encore";
+//cfgArray["ExtensionManager_3.0.helpcfg"] = "extension";
+//cfgArray["Fireworks_11.0.helpcfg"] = "fireworks";
+//cfgArray["Flash_11.0.helpcfg"] = "flash";
+//cfgArray["Flex_4.0.helpcfg"] = "flashbuilder";
+//cfgArray["FlashCatalyst_1.0.helpcfg"] = "flashcatalyst";
+//cfgArray["Illustrator_15.0.helpcfg"] = "illustrator";
+//cfgArray["InCopy_7.0.helpcfg"] = "incopy";
+//cfgArray["InDesign_7.0.helpcfg"] = "indesign";
+//cfgArray["OnLocation_5.0.helpcfg"] = "onlocation";
+//cfgArray["Photoshop_12.0.helpcfg"] = "photoshop";
+//cfgArray["PremierePro_5.0.helpcfg"] = "premierepro";
+
+function getLangName() {
+    var lang = "en-us";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if (ptn.test(lang)) {
+        var languageCode = lang.replace(ptn, "$1");
+        var countryCode = lang.replace(ptn, "$2");
+        lang = languageCode + "_" + countryCode.toUpperCase();
+    }
+    return lang;
+}
+
+function getCountryName() {
+    var lang = "";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if ((ptn.test(lang)) && (lang != "en-us")) {
+        var countryCode = lang.replace(ptn, "$2");
+        return "/" + countryCode;
+    }
+    return "";
+}
+
+if ( (typeof(terms_HELPCFG) != 'undefined')  && (terms_HELPCFG.indexOf(".helpcfg") != -1) ) {
+    var stage   = (document.location.href.indexOf(".stage.") != -1) ? 'stage.' : '';
+    var baseUrl = 'http://www.' + stage + 'adobe.com';
+    var refpage = document.location.href.replace(/#.*$/, '');
+	
+	if ((!use_robohelp_behavior) && (terms_HELPCFG.length > 0) && (typeof(cfgArray[terms_HELPCFG]) != 'undefined') && (cfgArray[terms_HELPCFG].length > 0)) {
+		if (document.getElementById) { // DOM3 = IE5, NS6
+			var newHref = baseUrl + getCountryName() + "/support/chc/" + "?helpcfg=http://help." + stage + "adobe.com/HelpCfg/" + getLangName() + "/" + terms_HELPCFG + "&url=" + refpage + "&product=" + cfgArray[terms_HELPCFG];
+			var newSrc = baseUrl + getCountryName() + "/support/chc/GetMoreHelpFeatures.png";
+			document.getElementById("chcPromo").style.display = "block";
+			document.getElementById("chcLink").href = newHref;
+			document.getElementById("chcImage").src = newSrc;
+		}
+	}
+}
+
+//-->
+</script>
+
+
+          <div id="minitoc">
+           <div class="t">
+            <div class="b">
+             <div>
+              <ul id="minitoc-links">
+               <li>
+                <p>
+                 <a href="#WSf268776665d7970d-6be13ace1308aaebeca-8000">
+                  <span class="topictitle1">
+                   ADT example for packaging an extension
+                  </span>
+                 </a>
+                </p>
+               </li>
+               <li>
+                <p>
+                 <a href="#WS412056e602857f203fc141d0130e782c0ee-8000">
+                  <span class="topictitle1">
+                   The SWC file and SWF files in the ANE package
+                  </span>
+                 </a>
+                </p>
+               </li>
+               <li>
+                <p>
+                 <a href="#WS08cc5e527b086824-62c809401313e3eb58f-8000">
+                  <span class="topictitle1">
+                   ANE file rules for application packaging
+                  </span>
+                 </a>
+                </p>
+               </li>
+               <li>
+                <p>
+                 <a href="#WSf268776665d7970d-6be13ace1308aaebeca-7fff">
+                  <span class="topictitle1">
+                   Including additional Android shared .so libraries in the ANE package
+                  </span>
+                 </a>
+                </p>
+               </li>
+              </ul>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div>
+           <p>
+            To provide your native extension to application developers,
+                    you package all the related files into an ANE file. The ANE file
+                    is an archive file that contains:
+           </p>
+           <div class="para">
+            <ul>
+             <li id="WSf268776665d7970d-2482335412ffea65006-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d76">
+              <a name="WSf268776665d7970d-2482335412ffea65006-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d76">
+               <!-- -->
+              </a>
+              <p>
+               The extension’s ActionScript library
+              </p>
+             </li>
+             <li id="WSf268776665d7970d-2482335412ffea65006-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d75">
+              <a name="WSf268776665d7970d-2482335412ffea65006-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d75">
+               <!-- -->
+              </a>
+              <p>
+               The extension’s native code library
+              </p>
+             </li>
+             <li id="WSf268776665d7970d-2482335412ffea65006-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d74">
+              <a name="WSf268776665d7970d-2482335412ffea65006-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d74">
+               <!-- -->
+              </a>
+              <p>
+               The extension descriptor file
+              </p>
+             </li>
+             <li id="WSf268776665d7970d-2482335412ffea65006-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d73">
+              <a name="WSf268776665d7970d-2482335412ffea65006-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d73">
+               <!-- -->
+              </a>
+              <p>
+               The extension’s certificate
+              </p>
+             </li>
+             <li id="WSf268776665d7970d-2482335412ffea65006-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d72">
+              <a name="WSf268776665d7970d-2482335412ffea65006-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d72">
+               <!-- -->
+              </a>
+              <p>
+               The extension’s resources, such as images.
+              </p>
+             </li>
+            </ul>
+           </div>
+           <p>
+            Use the AIR Developer Tool (ADT) to create the ANE file. Complete
+                    documentation for ADT is at
+            <a href="http://www.adobe.com/go/learn_fbairdevelopertool_en" target="_self">
+             AIR Developer Tool
+            </a>
+            .
+           </p>
+           <ul class="navlinklist">
+           </ul>
+          </div>
+          <div class="nochunk" id="WSf268776665d7970d-6be13ace1308aaebeca-8000">
+           <a name="WSf268776665d7970d-6be13ace1308aaebeca-8000">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            ADT example for packaging an extension
+           </h2>
+           <div>
+            <p>
+             The following example illustrates how to package an ANE
+                        file with ADT. The example packages the ANE file to use with applications
+                        that:
+            </p>
+            <ul>
+             <li id="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d71">
+              <a name="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d71">
+               <!-- -->
+              </a>
+              <p>
+               Run on Android devices.
+              </p>
+             </li>
+             <li id="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d70">
+              <a name="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d70">
+               <!-- -->
+              </a>
+              <p>
+               Run on Android x86 devices.
+              </p>
+             </li>
+             <li id="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d6f">
+              <a name="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d6f">
+               <!-- -->
+              </a>
+              <p>
+               Run on iOS devices.
+              </p>
+             </li>
+             <li id="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d6e">
+              <a name="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d6e">
+               <!-- -->
+              </a>
+              <p>
+               Run on the iOS Simulator.
+              </p>
+             </li>
+             <li id="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d6d">
+              <a name="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d6d">
+               <!-- -->
+              </a>
+              <p>
+               Run on tvOS devices.
+              </p>
+             </li>
+             <li id="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d6c">
+              <a name="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d6c">
+               <!-- -->
+              </a>
+              <p>
+               Run on the tvOS Simulator.
+              </p>
+             </li>
+             <li id="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d6b">
+              <a name="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d6b">
+               <!-- -->
+              </a>
+              <p>
+               Run on other devices using the default ActionScript-only
+                                implementation.
+              </p>
+             </li>
+            </ul>
+            <pre>adt -package <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;signing options&gt;</i> -target ane MyExtension.ane MyExt.xml -swc MyExtension.swc     -platform Android-ARM -C platform/Android . 
+                        -platform Android-x86 -C platform/Android-x86 . 
+                        -platform iPhone-ARM -platformoptions platform.xml 
+                        abc/x.framework lib.o -C platform/ios . 
+                        -platform iPhone-x86 -C platform/iosSimulator .
+                        -platform appleTV-ARM -platformoptions platformtv.xml
+                        abc/x.framework lib.o -C platform/tvos .
+                        -platform appleTV-x86 -C platform/tvosSimulator .
+                        -platform default -C platform/default library.swf</pre>
+            <p>
+             In this example, the following command-line options are used
+                        to create the ANE package:
+            </p>
+            <ul>
+             <li id="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d6a">
+              <a name="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d6a">
+               <!-- -->
+              </a>
+              <p>
+               <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                &lt;signing options&gt;
+               </i>
+              </p>
+              <p>
+               You can optionally
+                                sign the ANE file. For more information, see
+               <a href="WSf268776665d7970d-2831ae3d12ffeabfdf5-8000.html">
+                Creating a signed certificate for a native extension
+               </a>
+               .
+              </p>
+             </li>
+             <li id="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d69">
+              <a name="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d69">
+               <!-- -->
+              </a>
+              <p>
+               <samp class="codeph">
+                -target ane
+               </samp>
+              </p>
+              <p>
+               The
+               <samp class="codeph">
+                -target
+               </samp>
+               flag
+                                specifies which type of package to create. Use the
+               <samp class="codeph">
+                ane
+               </samp>
+               target
+                                to package a native extension.
+              </p>
+             </li>
+             <li id="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d68">
+              <a name="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d68">
+               <!-- -->
+              </a>
+              <p>
+               <samp class="codeph">
+                MyExtension.ane
+               </samp>
+              </p>
+              <p>
+               Specify the name
+                                of the package file to create. Use the .ane filename extension.
+              </p>
+             </li>
+             <li id="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d67">
+              <a name="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d67">
+               <!-- -->
+              </a>
+              <p>
+               <samp class="codeph">
+                MyExt.xml
+               </samp>
+              </p>
+              <p>
+               Specify the extension descriptor
+                                file. The file specifies the extension ID and supported platforms.
+                                AIR uses this information to locate and load an extension for an
+                                application. In this example, the extension descriptor is:
+              </p>
+              <pre>&lt;extension xmlns="http://ns.adobe.com/air/extension/3.1"&gt; 
+                                &lt;id&gt;com.sample.ext.MyExtension&lt;/id&gt; 
+                                &lt;versionNumber&gt;0.0.1&lt;/versionNumber&gt; 
+                                &lt;platforms&gt; 
+                                &lt;platform name="Android-ARM"&gt; 
+                                &lt;applicationDeployment&gt; 
+                                &lt;nativeLibrary&gt;MyExtension.jar&lt;/nativeLibrary&gt; 
+                                &lt;initializer&gt;com.sample.ext.MyExtension&lt;/initializer&gt; 
+                                &lt;/applicationDeployment&gt; 
+                                &lt;/platform&gt; 
+                                &lt;platform name="Android-x86"&gt; 
+                                &lt;applicationDeployment&gt; 
+                                &lt;nativeLibrary&gt;MyExtension.jar&lt;/nativeLibrary&gt; 
+                                &lt;initializer&gt;com.sample.ext.MyExtension&lt;/initializer&gt; 
+                                &lt;/applicationDeployment&gt; 
+                                &lt;/platform&gt;  
+                                &lt;platform name="iPhone-ARM"&gt; 
+                                &lt;applicationDeployment&gt; 
+                                &lt;nativeLibrary&gt;MyExtension.a&lt;/nativeLibrary&gt; 
+                                &lt;initializer&gt;InitMyExtension&gt;&lt;/initializer&gt; 
+                                &lt;/applicationDeployment&gt; 
+                                &lt;/platform&gt; 
+                                &lt;platform name="iPhone-x86"&gt; 
+                                &lt;applicationDeployment&gt; 
+                                &lt;nativeLibrary&gt;MyExtension.a&lt;/nativeLibrary&gt; 
+                                &lt;initializer&gt;InitMyExtension&gt;&lt;/initializer&gt; 
+                                &lt;/applicationDeployment&gt; 
+                                &lt;/platform&gt;
+                                &lt;platform name="appleTV-ARM"&gt; 
+                                &lt;applicationDeployment&gt;
+                                &lt;nativeLibrary&gt;MyExtension.a&lt;/nativeLibrary&gt;
+                                &lt;initializer&gt;InitMyExtension&gt;&lt;/initializer&gt; 
+                                &lt;/applicationDeployment&gt; 
+                                &lt;/platform&gt; 
+                                &lt;platform name="appleTV-x86"&gt; 
+                                &lt;applicationDeployment&gt; 
+                                &lt;nativeLibrary&gt;MyExtension.a&lt;/nativeLibrary&gt;
+                                &lt;initializer&gt;InitMyExtension&gt;&lt;/initializer&gt; 
+                                &lt;/applicationDeployment&gt; 
+                                &lt;/platform&gt;
+                                &lt;platform name="default"&gt; 
+                                &lt;applicationDeployment/&gt; 
+                                &lt;/platform&gt; 
+                                &lt;/platforms&gt; 
+                                &lt;/extension&gt;</pre>
+              <p>
+               See
+               <a href="WS901d38e593cd1bac-3004221412afa24c001-8000.html">
+                Native extension descriptor files
+               </a>
+               for more information.
+              </p>
+             </li>
+             <li id="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d66">
+              <a name="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d66">
+               <!-- -->
+              </a>
+              <p>
+               <samp class="codeph">
+                MyExtension.swc
+               </samp>
+              </p>
+              <p>
+               Specify the SWC file
+                                that contains the ActionScript side of the extension.
+              </p>
+             </li>
+             <li id="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d65">
+              <a name="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d65">
+               <!-- -->
+              </a>
+              <p>
+               <samp class="codeph">
+                platform Android-ARM -C platform/Android . -platform Android-x86 -C platform/Android-x86 . -platform iPhone-ARM -platformoptions platform.xml -C platform/iOS . -platform appleTV-ARM -platformoptions platformtv.xml -C platform/tvos .
+               </samp>
+              </p>
+              <p>
+               The
+               <samp class="codeph">
+                -platform
+               </samp>
+               flag
+                                names a platform that this ANE file supports. The options that follow
+                                the name specify where to find the platform-specific libraries and
+                                resources. In this case, the
+               <samp class="codeph">
+                -C
+               </samp>
+               option for the
+               <samp class="codeph">
+                Android-ARM
+               </samp>
+               platform
+                                indicates to make the relative directory
+               <samp class="codeph">
+                platform/Android
+               </samp>
+               the working
+                                directory. The directories and files that follow are relative to
+                                the new working directory.
+              </p>
+              <p>
+               Therefore, in this example, the
+                                relative directory
+               <samp class="codeph">
+                platform/Android
+               </samp>
+               contains all
+                                the Android native code library and resources. It also contains
+                                the Android platform-specific library.swf file and any other Android
+                                platform-specific SWF files.
+              </p>
+              <p>
+               The
+               <samp class="codeph">
+                -platformoptions
+               </samp>
+               flag
+                                for the iPhone-ARM/appleTV-ARM platform is an optional entry that lets you specify
+                                platform-specific options. These options include options for linking
+                                to iOS/tvOS frameworks (other than the default ones) as well as bundling
+                                third-party static libraries with your native extension. See
+               <a href="WSdb11516da818ea8d49ce0fe713341ed67cf-7fff.html">
+                iOS native libraries
+               </a>
+               .
+              </p>
+             </li>
+             <li id="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d64">
+              <a name="WSf268776665d7970d-6be13ace1308aaebeca-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d64">
+               <!-- -->
+              </a>
+              <p>
+               <samp class="codeph">
+                -platform default -C platform/default library.swf
+               </samp>
+              </p>
+              <p>
+               When
+                                the
+               <samp class="codeph">
+                -platform
+               </samp>
+               option names the
+               <samp class="codeph">
+                default
+               </samp>
+               platform,
+                                do not specify any native code files. Specify only a library.swf
+                                file, as well as other SWF files, if any.
+              </p>
+             </li>
+            </ul>
+           </div>
+          </div>
+          <div class="nochunk" id="WS412056e602857f203fc141d0130e782c0ee-8000">
+           <a name="WS412056e602857f203fc141d0130e782c0ee-8000">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            The SWC file and SWF files in the ANE package
+           </h2>
+           <div>
+            <p>
+             You specify a SWC file in the
+             <samp class="codeph">
+              -swc
+             </samp>
+             option
+                        of the ADT packaging command. This SWC file is your ActionScript
+                        library. It contains a file called library.swf. ADT puts the library.swf
+                        from the SWC file into the ANE file. When an AIR application uses a
+                        native extension, it includes the extension’s ANE file in its library
+                        path so that the application can compile. In fact, the application
+                        compiles against the public interfaces in library.swf.
+            </p>
+            <p>
+             Sometimes you create a different ActionScript implementation
+                        for each target platform. In this case, compile a SWC file for each
+                        platform and put the library.swf file from each SWC file in the
+                        appropriate platform directory before using the ADT packaging command.
+                        You can extract library.swf from a SWC file with extraction tools
+                        such as WinZip.
+            </p>
+            <p>
+             Consider the case when your extension’s public interfaces are
+                        the same across all platforms. In this case, it doesn’t matter which
+                        of the platform-specific SWC files you use in the
+             <samp class="codeph">
+              -swc
+             </samp>
+             option
+                        of the ADT command. It doesn’t matter because the SWF file in the
+                        SWC file is used only for application compilation. The SWF file
+                        that you put in the platform directory is the file that the native
+                        extension uses when it runs.
+            </p>
+            <p>
+             Note the following about the library.swf file:
+            </p>
+            <ul>
+             <li id="WS412056e602857f203fc141d0130e782c0ee-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d63">
+              <a name="WS412056e602857f203fc141d0130e782c0ee-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d63">
+               <!-- -->
+              </a>
+              <p>
+               ADT requires that you provide a main SWF file named library.swf
+                                for each platform. When you create a SWC file, library.swf is the
+                                name of the SWF file.
+              </p>
+             </li>
+             <li id="WS412056e602857f203fc141d0130e782c0ee-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d62">
+              <a name="WS412056e602857f203fc141d0130e782c0ee-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d62">
+               <!-- -->
+              </a>
+              <p>
+               The library.swf file for each platform can be different.
+              </p>
+             </li>
+             <li id="WS412056e602857f203fc141d0130e782c0ee-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d61">
+              <a name="WS412056e602857f203fc141d0130e782c0ee-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d61">
+               <!-- -->
+              </a>
+              <p>
+               The library.swf file for each platform can be the same if
+                                the ActionScript side has no platform dependencies.
+              </p>
+             </li>
+             <li id="WS412056e602857f203fc141d0130e782c0ee-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d60">
+              <a name="WS412056e602857f203fc141d0130e782c0ee-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d60">
+               <!-- -->
+              </a>
+              <p>
+               The library.swf for each platform can load other SWF files
+                                that you include in the platform-specific directory. These other
+                                SWF files can have any name.
+              </p>
+             </li>
+            </ul>
+           </div>
+          </div>
+          <div class="nochunk" id="WS08cc5e527b086824-62c809401313e3eb58f-8000">
+           <a name="WS08cc5e527b086824-62c809401313e3eb58f-8000">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            ANE file rules for application packaging
+           </h2>
+           <div>
+            <p>
+             Use ADT to package applications that use native extensions.
+                        When you package an application that uses an extension, ADT verifies
+                        that there is a platform specified in the ANE file that matches
+                        the application packaging target . For example, the platform
+             <samp class="codeph">
+              Android-ARM
+             </samp>
+             matches
+                        an Android apk package.
+            </p>
+            <p>
+             Furthermore, ADT matches the
+             <samp class="codeph">
+              default
+             </samp>
+             platform
+                        with
+             <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+              any
+             </i>
+             target package. The
+             <samp class="codeph">
+              default
+             </samp>
+             platform
+                        specifies an ActionScript-only version of the extension. Consider
+                        an AIR application that uses an application-bundled extension. AIR loads
+                        the ActionScript library of the
+             <samp class="codeph">
+              default
+             </samp>
+             platform
+                        extension only if none of the extension’s specified platforms correspond
+                        to the device.
+            </p>
+            <p>
+             For example, consider an application-bundled extension that specifies
+                        the platforms
+             <samp class="codeph">
+              iPhone-ARM
+             </samp>
+             ,
+             <samp class="codeph">
+              Android-ARM
+             </samp>
+             ,
+                        and
+             <samp class="codeph">
+              default
+             </samp>
+             . When the application using the extension
+                        runs on a Windows platform, it uses the extension’s
+             <samp class="codeph">
+              default
+             </samp>
+             platform
+                        library.
+            </p>
+            <p>
+             Therefore, when you create an ANE file for application-bundling,
+                        consider the following rules that ADT uses when packaging an application
+                        that uses the ANE file:
+            </p>
+            <ul>
+             <li id="WS08cc5e527b086824-62c809401313e3eb58f-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d5f">
+              <a name="WS08cc5e527b086824-62c809401313e3eb58f-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d5f">
+               <!-- -->
+              </a>
+              <p>
+               To create an Android application package, the ANE file
+                                must include the
+               <samp class="codeph">
+                Android-ARM
+               </samp>
+               platform. Alternatively,
+                                the ANE file must include the default platform and at least one
+                                other platform.
+              </p>
+             </li>
+             <li id="WS08cc5e527b086824-62c809401313e3eb58f-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d5e">
+              <a name="WS08cc5e527b086824-62c809401313e3eb58f-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d5e">
+               <!-- -->
+              </a>
+              <p>
+               To create an iOS application package, the ANE file must include
+                                the
+               <samp class="codeph">
+                iPhone-ARM
+               </samp>
+               platform. Alternatively, the ANE
+                                file must include the default platform and at least one other platform.
+              </p>
+             </li>
+             <li id="WS08cc5e527b086824-62c809401313e3eb58f-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d5d">
+              <a name="WS08cc5e527b086824-62c809401313e3eb58f-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d5d">
+               <!-- -->
+              </a>
+              <p>
+               To create an iOS Simulator application package, the ANE file
+                                must include the
+               <samp class="codeph">
+                iPhone-x86
+               </samp>
+               platform. Alternatively,
+                                the ANE file must include the default platform and at least one
+                                other platform.
+              </p>
+             </li>
+             <li id="WS08cc5e527b086824-62c809401313e3eb58f-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d5c">
+              <a name="WS08cc5e527b086824-62c809401313e3eb58f-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d5c">
+               <!-- -->
+              </a>
+              <p>
+               To create a tvOS application package, the ANE file
+                                must include the
+               <samp class="codeph">
+                appleTV-ARM
+               </samp>
+               platform. Alternatively,
+                                the ANE file must include the default platform and at least one
+                                other platform.
+              </p>
+             </li>
+             <li id="WS08cc5e527b086824-62c809401313e3eb58f-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d5b">
+              <a name="WS08cc5e527b086824-62c809401313e3eb58f-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d5b">
+               <!-- -->
+              </a>
+              <p>
+               To create a tvOS Simulator application package, the ANE file
+                                must include the
+               <samp class="codeph">
+                appleTV-x86
+               </samp>
+               platform. Alternatively,
+                                the ANE file must include the default platform and at least one
+                                other platform.
+              </p>
+             </li>
+             <li id="WS08cc5e527b086824-62c809401313e3eb58f-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d5a">
+              <a name="WS08cc5e527b086824-62c809401313e3eb58f-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d5a">
+               <!-- -->
+              </a>
+              <p>
+               To create a Mac OS X application package, the ANE file must
+                                include the
+               <samp class="codeph">
+                MacOS-x86-64
+               </samp>
+               platform. Alternatively,
+                                the ANE file must include the default platform and at least one
+                                other platform.
+              </p>
+             </li>
+             <li id="WS08cc5e527b086824-62c809401313e3eb58f-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d59">
+              <a name="WS08cc5e527b086824-62c809401313e3eb58f-8000__WS407c972521fc8eab1e18f08615fe8a1ded9-7d59">
+               <!-- -->
+              </a>
+              <p>
+               To create a Windows application package, the ANE file must
+                                include the
+               <samp class="codeph">
+                Windows-x86
+               </samp>
+               platform. Alternatively,
+                                the ANE file must include the default platform and at least one
+                                other platform.
+              </p>
+             </li>
+            </ul>
+            <p>
+             Only one platform implementation is ever bundled with an application.
+                        However, when you test an application containing an extension using
+                        the ADL utility, then the implementation is chosen at run time.
+                        This run-time selection can lead to differences in behavior depending
+                        on the test platform and the ANE package. For example, if the ANE
+                        includes implementations for the
+             <samp class="codeph">
+              Android-ARM
+             </samp>
+             ,
+             <samp class="codeph">
+              Windows-x86
+             </samp>
+             ,
+                        and
+             <samp class="codeph">
+              default
+             </samp>
+             platforms, the implementation used
+                        when testing is different depending on whether the test computer
+                        is running Windows or OS X. On Windows, the
+             <samp class="codeph">
+              Windows-x86
+             </samp>
+             platform
+                        implementation is used (even when testing under the mobile profile);
+                        on OS X, the
+             <samp class="codeph">
+              default
+             </samp>
+             implementation is used.
+            </p>
+           </div>
+          </div>
+          <div class="nochunk" id="WSf268776665d7970d-6be13ace1308aaebeca-7fff">
+           <a name="WSf268776665d7970d-6be13ace1308aaebeca-7fff">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            Including additional Android shared .so libraries in the ANE package
+           </h2>
+           <div>
+            <p>
+             Consider a native extension that targets the platform
+             <samp class="codeph">
+              Android-ARM
+             </samp>
+             .
+                        The primary library of the native side of the extension is either:
+            </p>
+            <div class="para">
+             <ul>
+              <li id="WSf268776665d7970d-6be13ace1308aaebeca-7fff__WS407c972521fc8eab1e18f08615fe8a1ded9-7d58">
+               <a name="WSf268776665d7970d-6be13ace1308aaebeca-7fff__WS407c972521fc8eab1e18f08615fe8a1ded9-7d58">
+                <!-- -->
+               </a>
+               <p>
+                a .so library if you use the Android NDK
+               </p>
+              </li>
+              <li id="WSf268776665d7970d-6be13ace1308aaebeca-7fff__WS407c972521fc8eab1e18f08615fe8a1ded9-7d57">
+               <a name="WSf268776665d7970d-6be13ace1308aaebeca-7fff__WS407c972521fc8eab1e18f08615fe8a1ded9-7d57">
+                <!-- -->
+               </a>
+               <p>
+                a JAR file if you use the Android SDK
+               </p>
+              </li>
+             </ul>
+             Sometimes,
+                        however, the native side requires more native libraries (.so libraries) than
+                        the primary .so library or JAR file for the extension.
+            </div>
+            <p>
+             For example:
+            </p>
+            <div class="para">
+             <ul>
+              <li id="WSf268776665d7970d-6be13ace1308aaebeca-7fff__WS407c972521fc8eab1e18f08615fe8a1ded9-7d56">
+               <a name="WSf268776665d7970d-6be13ace1308aaebeca-7fff__WS407c972521fc8eab1e18f08615fe8a1ded9-7d56">
+                <!-- -->
+               </a>
+               <p>
+                You are using the Java API to develop your native
+                                    extension. However, you want to use the JNI (Java Native Interface)
+                                    to access native .so libraries from your Java code.
+               </p>
+              </li>
+              <li id="WSf268776665d7970d-6be13ace1308aaebeca-7fff__WS407c972521fc8eab1e18f08615fe8a1ded9-7d55">
+               <a name="WSf268776665d7970d-6be13ace1308aaebeca-7fff__WS407c972521fc8eab1e18f08615fe8a1ded9-7d55">
+                <!-- -->
+               </a>
+               <p>
+                You are using the C API to develop your native extension.
+                                    However, you want to partition your code into multiple shared libraries.
+                                    Based on your extension’s logic, you want to load the appropriate
+                                    shared .so library at runtime.
+               </p>
+              </li>
+             </ul>
+            </div>
+            <p>
+             When you create the ANE package, use the following directory
+                        structure:
+            </p>
+            <pre><i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;Android platform directory&gt;</i>/ 
+                        libs/ 
+                        armeabi/ 
+                        &lt;Android emulator native libraries&gt; 
+                        armeabi-v7a/ 
+                        &lt;Android device native libraries&gt;</pre>
+            <p>
+             When you use ADT to create the ANE package, set the
+             <samp class="codeph">
+              -platform
+             </samp>
+             option
+                        to specify the Android platform directory contents:
+            </p>
+            <pre>-platform Android-ARM -C <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema"><i>&lt;Android platform directory&gt;</i></i> .</pre>
+            <p>
+             When an application developer uses ADT to include the ANE package
+                        in an APK package, the APK package includes the following libraries:
+            </p>
+            <ul>
+             <li id="WSf268776665d7970d-6be13ace1308aaebeca-7fff__WS407c972521fc8eab1e18f08615fe8a1ded9-7d54">
+              <a name="WSf268776665d7970d-6be13ace1308aaebeca-7fff__WS407c972521fc8eab1e18f08615fe8a1ded9-7d54">
+               <!-- -->
+              </a>
+              <p>
+               The libraries in
+               <samp class="codeph">
+                libs/armeabi-v7a
+               </samp>
+               if
+                                the ADT target is
+               <samp class="codeph">
+                apk
+               </samp>
+               or
+               <samp class="codeph">
+                apk-captive-runtime
+               </samp>
+               .
+              </p>
+             </li>
+             <li id="WSf268776665d7970d-6be13ace1308aaebeca-7fff__WS407c972521fc8eab1e18f08615fe8a1ded9-7d53">
+              <a name="WSf268776665d7970d-6be13ace1308aaebeca-7fff__WS407c972521fc8eab1e18f08615fe8a1ded9-7d53">
+               <!-- -->
+              </a>
+              <p>
+               The libraries in
+               <samp class="codeph">
+                libs/armeabi
+               </samp>
+               if the ADT
+                                target is
+               <samp class="codeph">
+                apk-emulator
+               </samp>
+               ,
+               <samp class="codeph">
+                apk-debug
+               </samp>
+               ,
+                                or
+               <samp class="codeph">
+                apk-profile
+               </samp>
+               .
+              </p>
+             </li>
+            </ul>
+            <div class="note">
+             <span class="notetitle">
+              Note:
+             </span>
+             For the iPhone-ARM platform, you cannot include shared libraries
+                        in your ANE file. For more information, see
+             <a href="WSf268776665d7970d-2e74ffb4130044f3619-7fff.html">
+              Building the native library
+             </a>
+             .
+            </div>
+           </div>
+          </div>
+          <!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+          <!-- END USER PREFERENCES -->
+          <div id="related">
+           <div class="separator">
+            <a href="#top">
+             <img src="images/BTT.jpg"/>
+            </a>
+           </div>
+          </div>
+          <div id="footer">
+           <!-- BEGIN IONCOMMENTS -->
+           <div id="ionComHere">
+           </div>
+           <!-- END IONCOMMENTS -->
+           
+
+           <p id="creativecommons">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" id="creativecommons_text">
+             <img alt="This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License" id="creativecommons_img" src="images/CC.png"/>
+            </a>
+            Twitter™ and Facebook posts are not covered under the terms of Creative Commons.
+           </p>
+          </div>
+         </td>
+         <td width="10px">
+         </td>
+         <td id="inner_rightcolumn">
+          
+         </td>
+        </tr>
+       </table>
+      </div>
+      <!-- BEGIN BREADCRUMBS -->
+      <div id="breadcrumb">
+       <ul class="navigation">
+        <li class="prev">
+         <a accesskey="p" class="prev" href="WSf268776665d7970d-2e74ffb4130044f3619-7fff.html" title="Building the native library">
+          <img alt="Previous" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+        <li class="next">
+         <a accesskey="n" class="next" href="WSf268776665d7970d-2e74ffb4130044f3619-7ff8.html" title="Including resources in your native extension package">
+          <img alt="Next" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+       </ul>
+       <div class="hierarchy" id="hierarchy">
+        <a href="WSf00ab63af761f170-7e2c8d6712937799c98-8000.html">
+         <b>
+          Home
+         </b>
+        </a>
+        /
+        <a href="WSf00ab63af761f170-7e2c8d6712937799c98-8000.html">
+         <b>
+          Developing Native Extensions
+         </b>
+        </a>
+        /
+        <a href="WSf00ab63af761f170-168f6f2a129378b935d-8000.html">
+         <b>
+          Packaging a native extension
+         </b>
+        </a>
+       </div>
+      </div>
+      <!-- END BREADCRUMBS -->
+      <!-- END CONTENT WRAPPER -->
+      
+     </td>
+     <td id="col3">
+      <div>
+       <img src="images/adobe-lq.png"/>
+      </div>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!-- END PAGE CONTENT WRAPPER -->
+  <script type="text/javascript">
+   <!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+  </script>
+  <!--
+    Description:
+    This file generates the link to product support in the top right corner
+-->
+
+<style>
+#menutop{
+    position:absolute;
+    top:4px;
+    right:24px;
+    width:auto;    
+    font-size:11px;
+    color:#fff;
+    text-align:right;
+}
+#menutop a{
+    color:#fff;
+}
+#menutop a:hover{
+        text-decoration:underline;
+}
+</style>  
+  
+  
+  
+  
+<div id="productmenu">
+<!--googleoff: index-->
+  <div id="menutop">
+
+
+<script language=javascript type='text/javascript'>
+    // darken menu text for products with light backgrounds
+    var path = document.location.href.toLowerCase();
+    if (path.indexOf("/acrobat/")           	> 0 ||
+        path.indexOf("/acrobat.com/")       	> 0 ||
+        path.indexOf("/acrobatConnectPro/") 	> 0 ||
+        path.indexOf("/connect/")           	> 0 ||
+        path.indexOf("/framemaker/")           	> 0 ||
+        path.indexOf("/livecycledataserviceses/") > 0 ||
+        path.indexOf("/muse/")         	> 0 ||
+		path.indexOf("/presenter/")         	> 0 ||
+        path.indexOf("/scene7/")            	> 0 ||
+        path.indexOf("/flashmediaserver/")  	> 0 ||
+        path.indexOf("/wave/")              	> 0 )
+    {
+        document.write('<style>#menutop a{color:#505050}</style>');
+    }
+    if (typeof('terms_AHV_PRODUCT_SUPPORT') != "undefined" && ! use_robohelp_behavior ){      
+        if (path.indexOf("/muse/") > -1 ){
+            var supportlink = '<a href="http://muse.adobe.com/support.html">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }else{
+            var supportlink = '<a href="http://adobe.com/support">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }
+        document.write( supportlink );
+     }
+
+</script> 
+
+  </div>
+<!--googleon: index-->
+</div>
+
+
+
+  <style>
+#online-privacy-policy{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+<p id="online-privacy-policy">
+<script language="javascript">
+var pageLoc = "en_US";
+var metaElements = document.all ?
+document.all.tags('meta') :
+document.getElementsByTagName ?
+document.getElementsByTagName ('meta') : new Array();
+for (var m = 0; m < metaElements.length; m++) {
+	if (metaElements[m].name == "lang") {
+		pageLoc = metaElements[m].content;
+		break;
+	}
+}
+var ptn = /(..)-(..)/;
+if (ptn.test(pageLoc)) {
+	var languageCode = pageLoc.replace(ptn, "$1");
+	var countryCode = pageLoc.replace(ptn, "$2");
+	pageLoc = languageCode + "_" + countryCode.toUpperCase();
+}
+
+var policyLoc = "en_US";
+var policyText = "Online Privacy Policy";
+var policyPath = "";
+var policyArray=[
+"da_DK", "Online fortrolighedserklæring",
+"de_DE", "Online-Datenschutzrichtlinie",
+"es_ES", "Política de confidencialidad en línea",
+"fi_FI", "Yksityisyyttä koskeva Online-toimintaohjelma",
+"fr_FR", "Confidentialité et sécurité",
+"it_IT", "Informativa sulla privacy online",
+"ja_JP", "プライバシーポリシー",
+"ko_KR", "Adobe 온라인 개인정보 보호정책",
+"pt_BR", "Política de Confidencialidade On-line", 
+"zh_CN", "在线隐私政策",
+"zh_TW", "線上隱私政策"
+];
+var legalLoc = "en_US";
+var legalText = "Legal Notices";
+var legalPath = legalLoc;
+var legalArray=[
+"ar_AE", "إشعارات قانونية",
+"bg_BG", "Юридически бележки",
+"cs_CZ", "Právní upozornění",
+"da_DK", "Juridiske meddelelser",
+"de_DE", "Rechtliche Hinweise",
+"el_GR", "Σημειώσεις νομικού περιεχομένου",
+"es_ES", "Avisos legales",
+"et_EE", "Juriidilised teated",
+"fi_FI", "Lakisääteiset ilmoitukset",
+"fr_FR", "Mentions légales",
+"he_IL", "הצהרות משפטיות",
+"hr_HR", "Pravne napomene",
+"hu_HU", "Jogi közlemények",
+"it_IT", "Informazioni legali",
+"ja_JP", "法律上の注意",
+"ko_KR", "법적 고지 사항",
+"lt_LT", "Teisinės pastabos",
+"lv_LV", "Juridisks paziņojums",
+"nb_NO", "Juridiske merknader",
+"nl_NL", "Juridische kennisgevingen",
+"pl_PL", "Informacje prawne",
+"pt_BR", "Aspectos jurídicos",
+"ro_RO", "Prevederi legale",
+"ru_RU", "Юридическая информация",
+"sk_SK", "Právne upozornenie",
+"sl_SI", "Pravni pouk",
+"sv_SE", "Upphovsrätt",
+"tr_TR", "Yasal uyarılar",
+"uk_UA", "Юридична інформація",
+"zh_CN", "法律声明",
+"zh_TW", "法律注意事項"
+];
+
+ruPolicy = "http://www.adobe.com/ru/misc/privacy.html";
+trPolicy = "http://www.adobe.com/tr/misc/privacy.html";
+
+// Bug 2846992: LOC: RUS, TUR: The link to "Online Privacy Policy" should include language, currently it is not appearing.
+if (pageLoc == "ru_RU") {
+	policyPath = "ru";
+}
+else if (pageLoc == "tr_TR") {
+	policyPath = "tr";
+}
+for (var i = 0; i < policyArray.length; i+=2) {
+	if (pageLoc == policyArray[i]) {
+		policyLoc = pageLoc;
+		policyText = policyArray[i+1];
+		var ptn = /(..)_(..)/;
+		if (ptn.test(policyLoc)) {
+			var countryCode = policyLoc.replace(ptn, "$2");
+			policyPath = countryCode.toLowerCase();
+		}
+		break;
+	}
+}
+
+for (var i = 0; i < legalArray.length; i+=2) {
+	if (pageLoc == legalArray[i]) {
+		legalLoc = pageLoc;
+		legalText = legalArray[i+1];
+		legalPath = legalLoc;
+		break;
+	}
+}
+if(agt.indexOf("community help client") > -1 ){
+	document.write('<a href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+}else{
+	//Open the privacy policy in a new window
+	document.write('<a target="_blank" href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a target="_blank" href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+} 
+
+
+remove_all_cookies();
+
+function remove_all_cookies() {
+	var res = document.cookie;
+    var multiple = res.split(";");
+    for(var i = 0; i < multiple.length; i++) {
+    	var key = multiple[i].split("=");
+        document.cookie = key[0]+" =; expires = Thu, 01 Jan 1970 00:00:00 UTC";
+    }
+}
+
+
+</script>
+</p>
+
+
+  
+<!-- localfooter.ssi -->
+
+<script type="text/javascript">
+    var debug = (top.location.href.indexOf("debug=true") > -1);
+</script>
+
+<script language="javascript">
+document.write('<scr'+'ipt ' +
+               'src="/en_US/ssi/_pod.js" ' +
+               'language="javascript" ' +
+               'charset="UTF-8"> ' +
+               '</scr'+'ipt>');
+</script>
+
+//  Ethnio survey code removed
+  
+  
+ </body>
+</html>

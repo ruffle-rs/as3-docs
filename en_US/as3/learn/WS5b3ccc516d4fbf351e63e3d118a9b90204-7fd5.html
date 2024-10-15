@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="en-us" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;Flash&#160;Platform * Creating your own classes</title>
+    <link rel="shortcut icon" href="images/FlashRuntime.ico" />
+    <meta name="book" content="Learning ActionScript 3.0" />
+    <meta name="product" content="adobe" /><meta name="product" content="air" /><meta name="product" content="flash" /><meta name="product" content="flex" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="adobe"></Attribute><Attribute name="product" value="air"></Attribute><Attribute name="product" value="flash"></Attribute><Attribute name="product" value="flex"></Attribute><Attribute name="book" value="Learning ActionScript 3.0"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WS5b3ccc516d4fbf351e63e3d118a9b90204-7fd5.html";
+    document.cookie = "topicId=" + "WS5b3ccc516d4fbf351e63e3d118a9b90204-7fd5.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content-fonts.css" />
+    <link rel="stylesheet" type="text/css" href="content-hyperlinks.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    <div id="mnemonic">
+      <!--googleoff: index--><div xmlns:adobe="http://www.adobe.com/saxon" class="FlashRuntime"><div class="banner"><a href="WS9936fa0d5984e93b81cbf5a1272b824570-8000.html">Adobe&#160;Flash&#160;Platform</a></div></div><!--googleon: index-->
+    </div>
+    
+    <div id="searchbar">
+<table id="searchbartable">
+<tr>
+<td colspan="2">
+      <!--googleoff: index--><div xmlns:adobe="http://www.adobe.com/saxon"><div id="pdf"><img src="images/PDF.gif" width="16" height="16" /><a title="View Help PDF" href="as3_learning.pdf">View Help PDF (2.1MB)</a></div></div><!--googleon: index-->
+</td>
+</tr>
+</table>
+    </div>
+
+<!-- BEGIN SEARCH CONTENT -->
+<form id="search" name="search" action="https://help.adobe.com/en_US/as3/learn/search.html" target="_self">
+<script type="text/javascript">
+<!--[CDATA[
+if ( !use_chc_behavior ){
+    if (typeof(terms_AHV_SEARCH_CONSTRAINT) != "undefined" && 
+        terms_AHV_SEARCH_CONSTRAINT.length > 0 && 
+        document.location.href.indexOf(".adobe.com") > 0){
+        if ( typeof(terms_SEARCH_THIS_HELP_ONLY) != "undefined" && terms_SEARCH_THIS_HELP_ONLY == "ON" ) {
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                checked="checked" \
+                value="1" ><\/input>'); 
+                
+        // Leave the "Search this help system only" checkbox unckecked
+        }else{    
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                value="1" ><\/input>'); 
+        }
+        document.write('<span class="gsalabel">' + terms_AHV_SEARCH_CONSTRAINT + '<\/span><\/div>'); 
+    }
+    document.write('<input class="searchinput" \
+        name="q" \
+        id="q" \
+        type="text" \
+        maxlength="256" \
+        value="' + terms_AHV_SEARCH_BUTTON + '" \
+        onclick="clearSearch()"><\/input><input \
+        type="button" \
+        name="searchbutton" \
+        class="searchbutton" \
+        onclick="submit()"><\/input>'); 
+} 
+ 
+/* 
+ * Start Functions 
+ */
+function clearSearch(){
+    if (document.search.q.value == terms_AHV_SEARCH_BUTTON){document.search.q.value = ""}; 
+}
+
+// set search preferences
+function setAHSearchPref(){
+    if (document.search.gsa.checked == 1){
+        setAHSearchCookie( dirname );
+    }else{
+        setAHSearchCookie( "community" );
+    }
+}
+
+// Set search preferences cookie
+function setAHSearchCookie( p ){
+    // set cookie ah_searchpref with a value of the document path
+    var expire=new Date();
+    expire.setDate(expire.getDate()+365); // Cookie expires after 1 year (365 days) 
+    document.cookie="ah_searchpref=" +p+ "; expires=" +expire.toGMTString()+ ";";
+}
+
+// ]]-->
+</script> 
+ </form>
+<!-- END SEARCH CONTENT -->    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+<!-- BEGIN BREADCRUMBS -->
+
+      
+      <div id="breadcrumb">
+        
+<ul class="navigation"><li class="prev"><a accesskey="p" class="prev" href="WS5b3ccc516d4fbf351e63e3d118a9b90204-7fd6.html" title="Building applications with ActionScript"><img src="images/blank.gif" alt="Previous" width="17" height="17" /></a></li><li class="next"><a accesskey="n" class="next" href="WS5b3ccc516d4fbf351e63e3d118a9b90204-7fdf.html" title="Example: Creating a basic application"><img src="images/blank.gif" alt="Next" width="17" height="17" /></a></li></ul><div class="hierarchy" id="hierarchy"><a href="WS9936fa0d5984e93b81cbf5a1272b824570-8000.html"><b>Home</b></a> / <a href="WS9936fa0d5984e93b81cbf5a1272b824570-8000.html"><b>Learning ActionScript 3.0</b></a> / <a href="WS5b3ccc516d4fbf351e63e3d118a9b8cf79-8000.html"><b>Getting started with ActionScript</b></a> 
+     </div>
+
+      </div>
+<!-- END BREADCRUMBS -->
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>
+          Creating your own classes
+        </h1>
+<!-- END PAGE TITLE -->
+<!-- BEGIN IONCOMMENTCOUNT -->
+        <div id="ionCount">
+        </div>
+<!-- END IONCOMMENTCOUNT -->
+<p id="chcPromo" style="display:none;">
+<a id="chcLink" href="http://www.adobe.com/support/chc/">
+<img id="chcImage" src="http://www.adobe.com/support/chc/GetMoreHelpFeatures.png"/>
+</a>
+</p>
+<script type="text/javascript" language="javascript" charset="utf-8">
+<!--
+var cfgArray = [];
+//cfgArray["Acrobat_10.0_Professional.helpcfg"] = "acrobatpro";
+//cfgArray["Acrobat_10.0_Standard.helpcfg"] = "acrobatstd";
+cfgArray["Lightroom_3.0.helpcfg"] = "lightroom";
+cfgArray["PhotoshopElements_8.0_Win.helpcfg"] = "photoshopelements";
+cfgArray["PhotoshopElements_8.0_Mac.helpcfg"] = "photoshopelementsmac";
+cfgArray["PremiereElements_8.0_Win.helpcfg"] = "premiereelements";
+
+//cfgArray["AfterEffects_10.0.helpcfg"] = "aftereffects";
+//cfgArray["AIR.helpcfg"] = "air";
+//cfgArray["ColdFusionBuilder.helpcfg"] = "coldfusion";
+//cfgArray["Contribute_6.0.helpcfg"] = "contribute";
+//cfgArray["DeviceCentral_3.0.helpcfg"] = "devicecentral";
+//cfgArray["Dreamweaver_11.0.helpcfg"] = "dreamweaver";
+//cfgArray["EncoreDVD_5.0.helpcfg"] = "encore";
+//cfgArray["ExtensionManager_3.0.helpcfg"] = "extension";
+//cfgArray["Fireworks_11.0.helpcfg"] = "fireworks";
+//cfgArray["Flash_11.0.helpcfg"] = "flash";
+//cfgArray["Flex_4.0.helpcfg"] = "flashbuilder";
+//cfgArray["FlashCatalyst_1.0.helpcfg"] = "flashcatalyst";
+//cfgArray["Illustrator_15.0.helpcfg"] = "illustrator";
+//cfgArray["InCopy_7.0.helpcfg"] = "incopy";
+//cfgArray["InDesign_7.0.helpcfg"] = "indesign";
+//cfgArray["OnLocation_5.0.helpcfg"] = "onlocation";
+//cfgArray["Photoshop_12.0.helpcfg"] = "photoshop";
+//cfgArray["PremierePro_5.0.helpcfg"] = "premierepro";
+
+function getLangName() {
+    var lang = "en-us";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if (ptn.test(lang)) {
+        var languageCode = lang.replace(ptn, "$1");
+        var countryCode = lang.replace(ptn, "$2");
+        lang = languageCode + "_" + countryCode.toUpperCase();
+    }
+    return lang;
+}
+
+function getCountryName() {
+    var lang = "";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if ((ptn.test(lang)) && (lang != "en-us")) {
+        var countryCode = lang.replace(ptn, "$2");
+        return "/" + countryCode;
+    }
+    return "";
+}
+
+if ( (typeof(terms_HELPCFG) != 'undefined')  && (terms_HELPCFG.indexOf(".helpcfg") != -1) ) {
+    var stage   = (document.location.href.indexOf(".stage.") != -1) ? 'stage.' : '';
+    var baseUrl = 'http://www.' + stage + 'adobe.com';
+    var refpage = document.location.href.replace(/#.*$/, '');
+	
+	if ((!use_robohelp_behavior) && (terms_HELPCFG.length > 0) && (typeof(cfgArray[terms_HELPCFG]) != 'undefined') && (cfgArray[terms_HELPCFG].length > 0)) {
+		if (document.getElementById) { // DOM3 = IE5, NS6
+			var newHref = baseUrl + getCountryName() + "/support/chc/" + "?helpcfg=http://help." + stage + "adobe.com/HelpCfg/" + getLangName() + "/" + terms_HELPCFG + "&url=" + refpage + "&product=" + cfgArray[terms_HELPCFG];
+			var newSrc = baseUrl + getCountryName() + "/support/chc/GetMoreHelpFeatures.png";
+			document.getElementById("chcPromo").style.display = "block";
+			document.getElementById("chcLink").href = newHref;
+			document.getElementById("chcImage").src = newSrc;
+		}
+	}
+}
+
+//-->
+</script>
+
+
+        <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WS5b3ccc516d4fbf351e63e3d118a9b90204-7fb3"><span class="topictitle1">Strategies for designing a class</span>
+</a></p></li><li><p><a href="#WS5b3ccc516d4fbf351e63e3d118a9b90204-7fb2"><span class="topictitle1">Writing the code for a class</span>
+</a></p></li></ul></div></div></div></div><div><p>The process of creating classes for use in
+your projects can seem daunting. However, the more difficult part
+of creating a class is the task of designing the class’s methods,
+properties, and events.</p>
+<ul class="navlinklist"></ul>
+</div>
+<div id="WS5b3ccc516d4fbf351e63e3d118a9b90204-7fb3" class="nochunk"><a name="WS5b3ccc516d4fbf351e63e3d118a9b90204-7fb3"><!-- --></a><h2 class="topictitle2">Strategies for designing a class</h2><div><p>The topic of object-oriented design is a complex one; entire
+careers have been devoted to the academic study and professional
+practice of this discipline. Nevertheless, here are a few suggested
+approaches that can help you get started.</p>
+<ol><li><p>Think about the role that the instances of this class
+play in the application. Generally, objects serve one of these three
+roles:</p>
+<ul><li><p>Value object: These objects serve primarily
+as containers of data. They probably have several properties and
+fewer methods (or sometimes no methods). They are generally code
+representations of clearly defined items. For example, a music player
+application could include a Song class representing a single real-world
+song and a Playlist class representing a conceptual group of songs.</p>
+</li>
+<li><p>Display object: These are objects that actually appear on
+the screen. Examples include user-interface elements like a drop-down
+list or status readout, graphical elements like creatures in a video
+game, and so on.</p>
+</li>
+<li><p>Application structure: These objects play a broad range of
+supporting roles in the logic or processing performed by applications.
+For example, you can make an object to perform certain calculations
+in a biology simulation. You can make one that’s responsible for
+synchronizing values between a dial control and a volume readout
+in a music player application. Another one can manage the rules
+in a video game. Or you can make a class to load a saved picture
+in a drawing application.</p>
+</li>
+</ul>
+</li>
+<li><p>Decide the specific functionality that the class needs. The
+different types of functionality often become the methods of the
+class.</p>
+</li>
+<li><p>If the class is intended to serve as a value object, decide
+the data that the instances include. These items are good candidates
+for properties.</p>
+</li>
+<li><p>Since your class is being designed specifically for your
+project, what’s most important is that you provide the functionality
+that your application needs. Try to answer these questions for yourself:</p>
+<ul><li><p>What pieces of information is your application storing, tracking,
+and manipulating? Answering this question helps you identify any
+value objects and properties you need.</p>
+</li>
+<li><p>What sets of actions does the application perform? For example,
+what happens when the application first loads, when a particular
+button is clicked, when a movie stops playing, and so on? These
+are good candidates for methods. They can also be properties if
+the “actions” involve changing individual values.</p>
+</li>
+<li><p>For any given action, what information is necessary to perform
+that action? Those pieces of information become the parameters of
+the method.</p>
+</li>
+<li><p>As the application proceeds to do its work, what things change
+in your class that other parts of your application need to know
+about? These are good candidates for events.</p>
+</li>
+</ul>
+</li>
+<li><p>Is there is an existing object that is similar to the object
+you need except that it’s lacking some additional functionality
+you want to add? Consider creating a subclass. (A <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">subclass</i> is
+a class which builds on the functionality of an existing class,
+rather than defining all of its own functionality.) For example,
+to create a class that is a visual object on the screen, use the
+behavior of an existing display object as a basis for your class.
+In that case, the display object (such as MovieClip or Sprite) would
+be the <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">base class</i>, and your class would extend that class.</p>
+</li>
+</ol>
+</div></div>
+<div id="WS5b3ccc516d4fbf351e63e3d118a9b90204-7fb2" class="nochunk"><a name="WS5b3ccc516d4fbf351e63e3d118a9b90204-7fb2"><!-- --></a><h2 class="topictitle2">Writing the code for a class</h2><div><p>Once
+you have a design for your class, or at least some idea of what
+information it stores and what actions it carries out, the actual
+syntax of writing a class is fairly straightforward.</p>
+<p>Here are the minimum steps to create your own ActionScript class:</p>
+<ol><li><p>Open a new text document in your ActionScript text editor
+program.</p>
+</li>
+<li><p>Enter a <samp class="codeph">class</samp> statement to define the name
+of the class. To add a <samp class="codeph">class</samp> statement, enter the
+words <samp class="codeph">public class</samp> and then the class’s name. Add opening
+and closing curly brackets to contain the contents of the class
+(the method and property definitions). For example:</p>
+<pre>public class MyClass 
+{ 
+}</pre>
+<p>The word <samp class="codeph">public</samp> indicates that
+the class can be accessed from any other code. For other alternatives,
+see <a href="WS5b3ccc516d4fbf351e63e3d118a9b90204-7fcc.html">Access control namespace attributes</a>.</p>
+</li>
+<li><p>Type a <samp class="codeph">package</samp> statement to indicate the
+name of the package that contains your class. The syntax is the
+word <samp class="codeph">package</samp>, followed by the full package name,
+followed by opening and closing curly brackets around the <samp class="codeph">class</samp> statement
+block) For example, change the code in the previous step to the following:</p>
+<pre>package mypackage 
+{ 
+    public class MyClass 
+    { 
+    } 
+<strong>}</strong></pre>
+</li>
+<li><p>Define each property in the class using the <samp class="codeph">var</samp> statement
+within the class body. The syntax is the same as you use to declare
+any variable (with the addition of the <samp class="codeph">public</samp> modifier).
+For example, adding these lines between the opening and closing
+curly brackets of the class definition creates properties named <samp class="codeph">textProperty</samp>, <samp class="codeph">numericProperty</samp>,
+and <samp class="codeph">dateProperty</samp>:</p>
+<pre>public var textProperty:String = "some default value"; 
+public var numericProperty:Number = 17; 
+public var dateProperty:Date;</pre>
+</li>
+<li><p>Define each method in the class using the same syntax that’s
+used to define a function. For example:</p>
+<ul><li><p>To create
+a <samp class="codeph">myMethod()</samp> method, enter:</p>
+<pre>public function myMethod(param1:String, param2:Number):void 
+{ 
+    // do something with parameters 
+}</pre>
+</li>
+<li><p>To create a constructor (the special method that is called
+as part of the process of creating an instance of a class), create
+a method whose name matches exactly the name of the class:</p>
+<pre>public function MyClass() 
+{ 
+    // do stuff to set initial values for properties 
+    // and otherwise set up the object 
+    textVariable = "Hello there!"; 
+    dateVariable = new Date(2001, 5, 11); 
+}</pre>
+<p>If you don’t include a constructor method in your
+class, the compiler automatically creates an empty constructor in
+your class. (In other words, a constructor with no parameters and
+no statements.)</p>
+</li>
+</ul>
+<p>There are a few more class elements
+that you can define. These elements are more complex.</p>
+<ul><li><p><i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">Accessors</i> are a special cross between a method and
+a property. When you write the code to define the class, you write
+the accessor like a method. You can perform multiple actions rather
+than just reading or assigning a value, which is all you can do
+when you define a property. However, when you create an instance
+of your class, you treat the accessor like a property and use the
+name to read or assign the value.</p>
+</li>
+<li><p>Events in ActionScript aren’t defined using a specific syntax.
+Instead, you define events in your class using the functionality
+of the EventDispatcher class.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+        <div id="userprefs">
+        </div>
+<!-- END USER PREFERENCES -->
+
+        <div id="related">
+          <div id="relatedlinkinfo">More Help topics</div><div><p><a href="WS5b3ccc516d4fbf351e63e3d118a9b90204-7fcd.html">Inheritance</a></p><p><a href="WS5b3ccc516d4fbf351e63e3d118a9b90204-7f31.html">Variables</a></p><p><a href="WS5b3ccc516d4fbf351e63e3d118a9b90204-7f30.html">Methods</a></p><p><a href="WS5b3ccc516d4fbf351e63e3d118a9b90204-7fcb.html">Get and set accessor methods</a></p>
+</div>
+          <p xmlns:adobe="http://www.adobe.com/saxon"><img class="linkIndicator" src="images/as3LinkIndicator.png" />&#160;
+                      <a href="../dev/WS5b3ccc516d4fbf351e63e3d118a9b90204-7fca.html" title="http://help.adobe.com/en_US/as3/dev/WS5b3ccc516d4fbf351e63e3d118a9b90204-7fca.html">Handling events</a></p>
+          <div class="separator"><a href="#top"><img src="images/BTT.jpg" /></a>&#160;</div>
+        </div>
+        <div id="footer">
+<!-- BEGIN IONCOMMENTS -->
+          <div id="ionComHere">
+          </div>
+<!-- END IONCOMMENTS -->
+
+
+
+
+
+          <p id="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" id="creativecommons_text"><img id="creativecommons_img" src="images/CC.png" alt="This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License" /></a></p>
+        </div>
+      </div>
+<!-- BEGIN BREADCRUMBS -->
+      <div id="breadcrumb">
+        
+<ul class="navigation"><li class="prev"><a accesskey="p" class="prev" href="WS5b3ccc516d4fbf351e63e3d118a9b90204-7fd6.html" title="Building applications with ActionScript"><img src="images/blank.gif" alt="Previous" width="17" height="17" /></a></li><li class="next"><a accesskey="n" class="next" href="WS5b3ccc516d4fbf351e63e3d118a9b90204-7fdf.html" title="Example: Creating a basic application"><img src="images/blank.gif" alt="Next" width="17" height="17" /></a></li></ul><div class="hierarchy" id="hierarchy"><a href="WS9936fa0d5984e93b81cbf5a1272b824570-8000.html"><b>Home</b></a> / <a href="WS9936fa0d5984e93b81cbf5a1272b824570-8000.html"><b>Learning ActionScript 3.0</b></a> / <a href="WS5b3ccc516d4fbf351e63e3d118a9b8cf79-8000.html"><b>Getting started with ActionScript</b></a> 
+     </div>
+
+      </div>
+<!-- END BREADCRUMBS -->
+<!-- END CONTENT WRAPPER -->
+
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--
+    Description:
+    This file generates the link to product support in the top right corner
+-->
+
+<style>
+#menutop{
+    position:absolute;
+    top:4px;
+    right:24px;
+    width:auto;    
+    font-size:11px;
+    color:#fff;
+    text-align:right;
+}
+#menutop a{
+    color:#fff;
+}
+#menutop a:hover{
+        text-decoration:underline;
+}
+</style>  
+  
+  
+  
+  
+<div id="productmenu">
+<!--googleoff: index-->
+  <div id="menutop">
+
+
+<script language=javascript type='text/javascript'>
+    // darken menu text for products with light backgrounds
+    var path = document.location.href.toLowerCase();
+    if (path.indexOf("/acrobat/")           	> 0 ||
+        path.indexOf("/acrobat.com/")       	> 0 ||
+        path.indexOf("/acrobatConnectPro/") 	> 0 ||
+        path.indexOf("/connect/")           	> 0 ||
+        path.indexOf("/framemaker/")           	> 0 ||
+        path.indexOf("/livecycledataserviceses/") > 0 ||
+        path.indexOf("/muse/")         	> 0 ||
+		path.indexOf("/presenter/")         	> 0 ||
+        path.indexOf("/scene7/")            	> 0 ||
+        path.indexOf("/flashmediaserver/")  	> 0 ||
+        path.indexOf("/wave/")              	> 0 )
+    {
+        document.write('<style>#menutop a{color:#505050}</style>');
+    }
+    if (typeof('terms_AHV_PRODUCT_SUPPORT') != "undefined" && ! use_robohelp_behavior ){      
+        if (path.indexOf("/muse/") > -1 ){
+            var supportlink = '<a href="http://muse.adobe.com/support.html">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }else{
+            var supportlink = '<a href="http://adobe.com/support">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }
+        document.write( supportlink );
+     }
+
+</script> 
+
+  </div>
+<!--googleon: index-->
+</div>
+
+
+
+<style>
+#online-privacy-policy{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+<p id="online-privacy-policy">
+<script language="javascript">
+var pageLoc = "en_US";
+var metaElements = document.all ?
+document.all.tags('meta') :
+document.getElementsByTagName ?
+document.getElementsByTagName ('meta') : new Array();
+for (var m = 0; m < metaElements.length; m++) {
+	if (metaElements[m].name == "lang") {
+		pageLoc = metaElements[m].content;
+		break;
+	}
+}
+var ptn = /(..)-(..)/;
+if (ptn.test(pageLoc)) {
+	var languageCode = pageLoc.replace(ptn, "$1");
+	var countryCode = pageLoc.replace(ptn, "$2");
+	pageLoc = languageCode + "_" + countryCode.toUpperCase();
+}
+
+var policyLoc = "en_US";
+var policyText = "Online Privacy Policy";
+var policyPath = "";
+var policyArray=[
+"da_DK", "Online fortrolighedserklæring",
+"de_DE", "Online-Datenschutzrichtlinie",
+"es_ES", "Política de confidencialidad en línea",
+"fi_FI", "Yksityisyyttä koskeva Online-toimintaohjelma",
+"fr_FR", "Confidentialité et sécurité",
+"it_IT", "Informativa sulla privacy online",
+"ja_JP", "プライバシーポリシー",
+"ko_KR", "Adobe 온라인 개인정보 보호정책",
+"pt_BR", "Política de Confidencialidade On-line", 
+"zh_CN", "在线隐私政策",
+"zh_TW", "線上隱私政策"
+];
+var legalLoc = "en_US";
+var legalText = "Legal Notices";
+var legalPath = legalLoc;
+var legalArray=[
+"ar_AE", "إشعارات قانونية",
+"bg_BG", "Юридически бележки",
+"cs_CZ", "Právní upozornění",
+"da_DK", "Juridiske meddelelser",
+"de_DE", "Rechtliche Hinweise",
+"el_GR", "Σημειώσεις νομικού περιεχομένου",
+"es_ES", "Avisos legales",
+"et_EE", "Juriidilised teated",
+"fi_FI", "Lakisääteiset ilmoitukset",
+"fr_FR", "Mentions légales",
+"he_IL", "הצהרות משפטיות",
+"hr_HR", "Pravne napomene",
+"hu_HU", "Jogi közlemények",
+"it_IT", "Informazioni legali",
+"ja_JP", "法律上の注意",
+"ko_KR", "법적 고지 사항",
+"lt_LT", "Teisinės pastabos",
+"lv_LV", "Juridisks paziņojums",
+"nb_NO", "Juridiske merknader",
+"nl_NL", "Juridische kennisgevingen",
+"pl_PL", "Informacje prawne",
+"pt_BR", "Aspectos jurídicos",
+"ro_RO", "Prevederi legale",
+"ru_RU", "Юридическая информация",
+"sk_SK", "Právne upozornenie",
+"sl_SI", "Pravni pouk",
+"sv_SE", "Upphovsrätt",
+"tr_TR", "Yasal uyarılar",
+"uk_UA", "Юридична інформація",
+"zh_CN", "法律声明",
+"zh_TW", "法律注意事項"
+];
+
+ruPolicy = "http://www.adobe.com/ru/misc/privacy.html";
+trPolicy = "http://www.adobe.com/tr/misc/privacy.html";
+
+// Bug 2846992: LOC: RUS, TUR: The link to "Online Privacy Policy" should include language, currently it is not appearing.
+if (pageLoc == "ru_RU") {
+	policyPath = "ru";
+}
+else if (pageLoc == "tr_TR") {
+	policyPath = "tr";
+}
+for (var i = 0; i < policyArray.length; i+=2) {
+	if (pageLoc == policyArray[i]) {
+		policyLoc = pageLoc;
+		policyText = policyArray[i+1];
+		var ptn = /(..)_(..)/;
+		if (ptn.test(policyLoc)) {
+			var countryCode = policyLoc.replace(ptn, "$2");
+			policyPath = countryCode.toLowerCase();
+		}
+		break;
+	}
+}
+
+for (var i = 0; i < legalArray.length; i+=2) {
+	if (pageLoc == legalArray[i]) {
+		legalLoc = pageLoc;
+		legalText = legalArray[i+1];
+		legalPath = legalLoc;
+		break;
+	}
+}
+if(agt.indexOf("community help client") > -1 ){
+	document.write('<a href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+}else{
+	//Open the privacy policy in a new window
+	document.write('<a target="_blank" href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a target="_blank" href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+} 
+
+
+remove_all_cookies();
+
+function remove_all_cookies() {
+	var res = document.cookie;
+    var multiple = res.split(";");
+    for(var i = 0; i < multiple.length; i++) {
+    	var key = multiple[i].split("=");
+        document.cookie = key[0]+" =; expires = Thu, 01 Jan 1970 00:00:00 UTC";
+    }
+}
+
+
+</script>
+</p>
+
+
+
+<!-- localfooter.ssi -->
+
+<script type="text/javascript">
+    var debug = (top.location.href.indexOf("debug=true") > -1);
+</script>
+
+<script language="javascript">
+document.write('<scr'+'ipt ' +
+               'src="/en_US/ssi/_pod.js" ' +
+               'language="javascript" ' +
+               'charset="UTF-8"> ' +
+               '</scr'+'ipt>');
+</script>
+
+//  Ethnio survey code removed
+
+
+  </body>
+</html>

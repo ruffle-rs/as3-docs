@@ -1,0 +1,1866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="en-us">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <meta content="en-us" name="lang"/>
+  <meta content="livedocs" name="area"/>
+  <title>
+   Adobe Flash Platform * Building an AIR for TV native extension
+  </title>
+  <link href="https://help.adobe.com/en_US/air/extensions/images/FlashRuntimeLinkIndicator.png" rel="shortcut icon"/>
+  <meta content="Developing Native Extensions" name="book"/>
+  <meta content="adobe" name="product"/>
+  <meta content="air" name="product"/>
+  <meta content="flash" name="product"/>
+  <meta content="flex" name="product"/>
+  <meta content="" name="keywords"/>
+  <!--<PageMap><DataObject type="document"><Attribute name="product" value="adobe"></Attribute><Attribute name="product" value="air"></Attribute><Attribute name="product" value="flash"></Attribute><Attribute name="product" value="flex"></Attribute><Attribute name="book" value="Developing Native Extensions"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+  <script charset="UTF-8" language="Javascript" type="text/javascript">
+   <!--[CDATA[
+        var currentTreeNode = "WScf70a6590b37508c129b011c12b886e40dc-8000.html";
+// ]]-->
+  </script>
+  <script charset="UTF-8" language="Javascript" src="terms.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="help.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="utilities.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="event.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="treeview.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="toc.js" type="text/javascript">
+   ..
+  </script>
+  <script charset="UTF-8" language="Javascript" src="https://help.adobe.com/en_US/air/extensions/swfobject.js" type="text/javascript">
+   ..
+  </script>
+  <script charset="UTF-8" language="Javascript" src="booklist.js" type="text/javascript">
+   ..
+  </script>
+  <script type="text/javascript">
+   <!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+  </script>
+  
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+  
+  
+  <link href="tree.css" rel="stylesheet" type="text/css"/>
+  <link href="content.css" rel="stylesheet" type="text/css"/>
+  <link href="localeSpecific.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body id="content_body" onload="window.focus();">
+  <a name="top" shape="rect">
+   <!--LeaveCommentHere-->
+  </a>
+  <div id="mnemonic">
+   <!--googleoff: index-->
+   <div class="FlashRuntime" xmlns:adobe="http://www.adobe.com/saxon">
+    <div class="banner">
+     <a href="WSf00ab63af761f170-7e2c8d6712937799c98-8000.html">
+      Adobe Flash Platform
+     </a>
+    </div>
+   </div>
+   <!--googleon: index-->
+  </div>
+  <div id="searchbar">
+   <table id="searchbartable">
+    <tr>
+     <td colspan="2">
+      <!--googleoff: index-->
+      <div xmlns:adobe="http://www.adobe.com/saxon">
+       <div id="pdf">
+        <img height="16" src="images/PDF.gif" width="16"/>
+        <a href="air_extensions.pdf" title="View Help PDF">
+         View Help PDF (
+         2.4M
+         B)
+        </a>
+       </div>
+      </div>
+      <!--googleon: index-->
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!-- BEGIN SEARCH CONTENT -->
+  <form action="https://help.adobe.com/en_US/air/extensions/search.html" id="search" name="search" target="_self">
+   <script type="text/javascript">
+    <!--[CDATA[
+if ( !use_chc_behavior ){
+    if (typeof(terms_AHV_SEARCH_CONSTRAINT) != "undefined" && 
+        terms_AHV_SEARCH_CONSTRAINT.length > 0 && 
+        document.location.href.indexOf(".adobe.com") > 0){
+        if ( typeof(terms_SEARCH_THIS_HELP_ONLY) != "undefined" && terms_SEARCH_THIS_HELP_ONLY == "ON" ) {
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                checked="checked" \
+                value="1" ><\/input>'); 
+                
+        // Leave the "Search this help system only" checkbox unckecked
+        }else{    
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                value="1" ><\/input>'); 
+        }
+        document.write('<span class="gsalabel">' + terms_AHV_SEARCH_CONSTRAINT + '<\/span><\/div>'); 
+    }
+    document.write('<input class="searchinput" \
+        name="q" \
+        id="q" \
+        type="text" \
+        maxlength="256" \
+        value="' + terms_AHV_SEARCH_BUTTON + '" \
+        onclick="clearSearch()"><\/input><input \
+        type="button" \
+        name="searchbutton" \
+        class="searchbutton" \
+        onclick="submit()"><\/input>'); 
+} 
+ 
+/* 
+ * Start Functions 
+ */
+function clearSearch(){
+    if (document.search.q.value == terms_AHV_SEARCH_BUTTON){document.search.q.value = ""}; 
+}
+
+// set search preferences
+function setAHSearchPref(){
+    if (document.search.gsa.checked == 1){
+        setAHSearchCookie( dirname );
+    }else{
+        setAHSearchCookie( "community" );
+    }
+}
+
+// Set search preferences cookie
+function setAHSearchCookie( p ){
+    // set cookie ah_searchpref with a value of the document path
+    var expire=new Date();
+    expire.setDate(expire.getDate()+365); // Cookie expires after 1 year (365 days) 
+}
+
+// ]]-->
+   </script>
+  </form>
+  <!-- END SEARCH CONTENT -->
+  <!-- BEGIN PAGE CONTENT WRAPPER -->
+  <div id="page_content_wrapper">
+   <!-- BEGIN PAGE WRAPPER -->
+   <table id="page_content_table">
+    <tr>
+     
+     <td id="col2">
+      <!-- BEGIN CONTENT WRAPPER -->
+      <!-- BEGIN BREADCRUMBS -->
+      <div id="breadcrumb">
+       <ul class="navigation">
+        <li class="prev">
+         <a accesskey="p" class="prev" href="WScf70a6590b37508c58b053df12b8905d138-8000.html" title="Check for extension support">
+          <img alt="Previous" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+        <li class="next">
+         <a accesskey="n" class="next" href="WSf268776665d7970d-5bd3ed1912ee48fc962-8000.html" title="Adding resources to your AIR for TV native extension">
+          <img alt="Next" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+       </ul>
+       <div class="hierarchy" id="hierarchy">
+        <a href="WSf00ab63af761f170-7e2c8d6712937799c98-8000.html">
+         <b>
+          Home
+         </b>
+        </a>
+        /
+        <a href="WSf00ab63af761f170-7e2c8d6712937799c98-8000.html">
+         <b>
+          Developing Native Extensions
+         </b>
+        </a>
+        /
+        <a href="WSf00ab63af761f1707ce5bf691293789e4b8-8000.html">
+         <b>
+          Building and installing native extensions for AIR for TV
+         </b>
+        </a>
+       </div>
+      </div>
+      <!-- END BREADCRUMBS -->
+      <div id="content_wrapper">
+       <!-- BEGIN PAGE TITLE -->
+       <h1>
+        Building an AIR for TV native extension
+       </h1>
+       <!-- END PAGE TITLE -->
+       <!-- BEGIN IONCOMMENTCOUNT -->
+       <div id="ionCount">
+       </div>
+       <!-- END IONCOMMENTCOUNT -->
+       <table border="0" cellpadding="0" cellspacing="0" id="inner_content_table" width="100%">
+        <tr>
+         <td>
+          <div style="border-top:#ccc solid 1px;">
+           <p>
+           </p>
+          </div>
+          <p id="chcPromo" style="display:none;">
+<a id="chcLink" href="http://www.adobe.com/support/chc/">
+<img id="chcImage" src="http://www.adobe.com/support/chc/GetMoreHelpFeatures.png"/>
+</a>
+</p>
+<script type="text/javascript" language="javascript" charset="utf-8">
+<!--
+var cfgArray = [];
+//cfgArray["Acrobat_10.0_Professional.helpcfg"] = "acrobatpro";
+//cfgArray["Acrobat_10.0_Standard.helpcfg"] = "acrobatstd";
+cfgArray["Lightroom_3.0.helpcfg"] = "lightroom";
+cfgArray["PhotoshopElements_8.0_Win.helpcfg"] = "photoshopelements";
+cfgArray["PhotoshopElements_8.0_Mac.helpcfg"] = "photoshopelementsmac";
+cfgArray["PremiereElements_8.0_Win.helpcfg"] = "premiereelements";
+
+//cfgArray["AfterEffects_10.0.helpcfg"] = "aftereffects";
+//cfgArray["AIR.helpcfg"] = "air";
+//cfgArray["ColdFusionBuilder.helpcfg"] = "coldfusion";
+//cfgArray["Contribute_6.0.helpcfg"] = "contribute";
+//cfgArray["DeviceCentral_3.0.helpcfg"] = "devicecentral";
+//cfgArray["Dreamweaver_11.0.helpcfg"] = "dreamweaver";
+//cfgArray["EncoreDVD_5.0.helpcfg"] = "encore";
+//cfgArray["ExtensionManager_3.0.helpcfg"] = "extension";
+//cfgArray["Fireworks_11.0.helpcfg"] = "fireworks";
+//cfgArray["Flash_11.0.helpcfg"] = "flash";
+//cfgArray["Flex_4.0.helpcfg"] = "flashbuilder";
+//cfgArray["FlashCatalyst_1.0.helpcfg"] = "flashcatalyst";
+//cfgArray["Illustrator_15.0.helpcfg"] = "illustrator";
+//cfgArray["InCopy_7.0.helpcfg"] = "incopy";
+//cfgArray["InDesign_7.0.helpcfg"] = "indesign";
+//cfgArray["OnLocation_5.0.helpcfg"] = "onlocation";
+//cfgArray["Photoshop_12.0.helpcfg"] = "photoshop";
+//cfgArray["PremierePro_5.0.helpcfg"] = "premierepro";
+
+function getLangName() {
+    var lang = "en-us";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if (ptn.test(lang)) {
+        var languageCode = lang.replace(ptn, "$1");
+        var countryCode = lang.replace(ptn, "$2");
+        lang = languageCode + "_" + countryCode.toUpperCase();
+    }
+    return lang;
+}
+
+function getCountryName() {
+    var lang = "";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if ((ptn.test(lang)) && (lang != "en-us")) {
+        var countryCode = lang.replace(ptn, "$2");
+        return "/" + countryCode;
+    }
+    return "";
+}
+
+if ( (typeof(terms_HELPCFG) != 'undefined')  && (terms_HELPCFG.indexOf(".helpcfg") != -1) ) {
+    var stage   = (document.location.href.indexOf(".stage.") != -1) ? 'stage.' : '';
+    var baseUrl = 'http://www.' + stage + 'adobe.com';
+    var refpage = document.location.href.replace(/#.*$/, '');
+	
+	if ((!use_robohelp_behavior) && (terms_HELPCFG.length > 0) && (typeof(cfgArray[terms_HELPCFG]) != 'undefined') && (cfgArray[terms_HELPCFG].length > 0)) {
+		if (document.getElementById) { // DOM3 = IE5, NS6
+			var newHref = baseUrl + getCountryName() + "/support/chc/" + "?helpcfg=http://help." + stage + "adobe.com/HelpCfg/" + getLangName() + "/" + terms_HELPCFG + "&url=" + refpage + "&product=" + cfgArray[terms_HELPCFG];
+			var newSrc = baseUrl + getCountryName() + "/support/chc/GetMoreHelpFeatures.png";
+			document.getElementById("chcPromo").style.display = "block";
+			document.getElementById("chcLink").href = newHref;
+			document.getElementById("chcImage").src = newSrc;
+		}
+	}
+}
+
+//-->
+</script>
+
+
+          <div id="minitoc">
+           <div class="t">
+            <div class="b">
+             <div>
+              <ul id="minitoc-links">
+               <li>
+                <p>
+                 <a href="#WS29ede1834d385bd17eb7798912fff2fbc7b-8000">
+                  <span class="topictitle1">
+                   Creating a signed certificate for the extension
+                  </span>
+                 </a>
+                </p>
+               </li>
+               <li>
+                <p>
+                 <a href="#WScf70a6590b37508c-8c0aedd12b88a31e99-8000">
+                  <span class="topictitle1">
+                   Writing the native implementation
+                  </span>
+                 </a>
+                </p>
+               </li>
+               <li>
+                <p>
+                 <a href="#WScf70a6590b37508c-8c0aedd12b88a31e99-7fff">
+                  <span class="topictitle1">
+                   Placing ActionScript and native code in the directory structure
+                  </span>
+                 </a>
+                </p>
+               </li>
+               <li>
+                <p>
+                 <a href="#WScf70a6590b37508c-8c0aedd12b88a31e99-7ffe">
+                  <span class="topictitle1">
+                   Creating the .mk file
+                  </span>
+                 </a>
+                </p>
+               </li>
+               <li>
+                <p>
+                 <a href="#WScf70a6590b37508c7f51d4e112c9e23650c-8000">
+                  <span class="topictitle1">
+                   Install third-party libraries
+                  </span>
+                 </a>
+                </p>
+               </li>
+               <li>
+                <p>
+                 <a href="#WScf70a6590b37508c18d0cd0e12b88b5fec0-8000">
+                  <span class="topictitle1">
+                   Running the make utility
+                  </span>
+                 </a>
+                </p>
+               </li>
+               <li>
+                <p>
+                 <a href="#WS5d37564e2b3bb78e-14de4e1612e9c44b8d7-8000">
+                  <span class="topictitle1">
+                   Make utility extension output
+                  </span>
+                 </a>
+                </p>
+               </li>
+               <li>
+                <p>
+                 <a href="#WScf70a6590b37508c-1986dce12b88f635b8-7ffe">
+                  <span class="topictitle1">
+                   Building both a stub and simulator extension
+                  </span>
+                 </a>
+                </p>
+               </li>
+              </ul>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div>
+           <p>
+            When you build an AIR for TV native extension, you build
+two versions of the extension:
+           </p>
+           <div class="para">
+            <ul>
+             <li>
+              <p>
+               The device-bundled extension.
+              </p>
+             </li>
+             <li>
+              <p>
+               The stub or simulator extension.
+              </p>
+             </li>
+            </ul>
+           </div>
+           <p>
+            The device-bundled extension includes:
+           </p>
+           <ul>
+            <li>
+             <p>
+              A native implementation, typically written in C or C++.
+             </p>
+            </li>
+            <li>
+             <p>
+              The real ActionScript implementation that calls functions
+of the native implementation.
+             </p>
+            </li>
+           </ul>
+           <p>
+            The stub or simulator extension is an ActionScript-only implementation.
+           </p>
+           <p>
+            For more information on the real, stub, and simulator ActionScript
+implementations, see
+            <a href="WScf70a6590b37508c-1986dce12b88f635b8-8000.html">
+             The device-bundled extension and the stub extension
+            </a>
+            .
+           </p>
+           <ul class="navlinklist">
+           </ul>
+          </div>
+          <div class="nochunk" id="WS29ede1834d385bd17eb7798912fff2fbc7b-8000">
+           <a name="WS29ede1834d385bd17eb7798912fff2fbc7b-8000">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            Creating a signed certificate for the extension
+           </h2>
+           <div>
+            <p>
+             You can choose to digitally sign your native extension. Signing
+an extension is optional.
+            </p>
+            <p>
+             The AIR for TV make utility uses a phony certificate by default.
+This phony certificate is useful only for testing. For information
+about creating a certificate authority certificate, see
+             <a href="WSf268776665d7970d-2831ae3d12ffeabfdf5-8000.html">
+              Creating a signed certificate for a native extension
+             </a>
+             .
+            </p>
+           </div>
+          </div>
+          <div class="nochunk" id="WScf70a6590b37508c-8c0aedd12b88a31e99-8000">
+           <a name="WScf70a6590b37508c-8c0aedd12b88a31e99-8000">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            Writing the native implementation
+           </h2>
+           <div>
+            <p>
+             For AIR for TV, the native implementation of your extension
+is an AIR for TV module. See
+             <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+              <a href="http://www.adobe.com/go/OptimizingAndIntegratingAdobeAIRForTV" target="_self">
+               Optimizing and Integrating Adobe AIR for
+TV (PDF)
+              </a>
+             </i>
+             for general information about AIR for TV modules,
+including details about building the modules.
+            </p>
+            <p>
+             The AIR for TV distribution provides an extension development
+kit (EDK) for writing and building the native implementation of
+your extension.
+            </p>
+            <p>
+             The EDK includes the following:
+            </p>
+            <ul>
+             <li>
+              <p>
+               The C extension API header file:
+              </p>
+              <pre><i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;AIR for TV installation directory&gt;</i>/products/stagecraft/include/ae/edk/FlashRuntimeExtensions.h</pre>
+              <p>
+               This
+header file declares the C types and functions that the native implementation
+uses.
+              </p>
+             </li>
+             <li>
+              <p>
+               An extension module implementation in the following source
+file:
+              </p>
+              <pre><i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;AIR for TV installation directory&gt;</i>/products/stagecraft/source/ae/edk/ExtensionBridge.cpp</pre>
+              <p>
+               Do
+not modify this extension module implementation. When you build
+your native implementation, you must include this source file in
+your build.
+              </p>
+             </li>
+             <li>
+              <p>
+               Makefile support to build your device-bundled extension.
+For more information, see
+               <a href="WScf70a6590b37508c-8c0aedd12b88a31e99-7ffe.html">
+                Creating the .mk file
+               </a>
+               and
+               <a href="WScf70a6590b37508c18d0cd0e12b88b5fec0-8000.html">
+                Running the make utility
+               </a>
+               .
+              </p>
+             </li>
+            </ul>
+            <div class="note">
+             <span class="notetitle">
+              Note:
+             </span>
+             The AIR for TV EDK requires that the
+             <samp class="codeph">
+              FREInitializer()
+             </samp>
+             method
+is named
+             <samp class="codeph">
+              Initializer()
+             </samp>
+             and that the
+             <samp class="codeph">
+              FREFinalizer()
+             </samp>
+             method
+is named
+             <samp class="codeph">
+              Finalizer()
+             </samp>
+             . For more information about
+these methods, see
+             <a href="WS460ee381960520ad-866f9c112aa6e1ad46-7fff.html">
+              Extension initialization
+             </a>
+             and
+             <a href="WS460ee381960520ad-866f9c112aa6e1ad46-7ffc.html">
+              Extension finalization
+             </a>
+             .
+            </div>
+           </div>
+          </div>
+          <div class="nochunk" id="WScf70a6590b37508c-8c0aedd12b88a31e99-7fff">
+           <a name="WScf70a6590b37508c-8c0aedd12b88a31e99-7fff">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            Placing ActionScript and native code in the directory structure
+           </h2>
+           <div>
+            <p>
+             Device-bundled extensions are specific to a hardware platform.
+When you develop a device-bundled extension, place your files in
+a subdirectory for your platform. This subdirectory is in the following
+directory:
+            </p>
+            <pre>&lt;<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">AIR for TV installation directory</i>&gt;/products/stagecraft/thirdparty-private/<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;yourCompany&gt;</i>/stagecraft-platforms/<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;yourPlatform&gt;</i>/edk</pre>
+            <p>
+             For example, CompanyA uses the following subdirectory for development targeting
+their PlatformB:
+            </p>
+            <pre>&lt;<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">AIR for TV installation directory</i>&gt;/products/stagecraft/thirdparty-private/CompanyA/stagecraft-platforms/PlatformB/edk</pre>
+            <p>
+             Put the header and source files for your C implementation in
+the
+             <samp class="codeph">
+              <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+               &lt;yourPlatform&gt;
+              </i>
+              /edk
+             </samp>
+             directory or
+its subdirectories. For example, put your extension .cpp and .h
+files in the following directory:
+            </p>
+            <pre>&lt;<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">AIR for TV installation directory</i>&gt;/products/stagecraft/thirdparty-private/CompanyA/stagecraft-platforms/PlatformB/edk/myExtension/native</pre>
+            <p>
+             Similarly, put the .as files for your real ActionScript implementation
+in the
+             <samp class="codeph">
+              <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+               &lt;yourPlatform&gt;
+              </i>
+              /edk
+             </samp>
+             directory
+or its subdirectories. For example:
+            </p>
+            <pre>&lt;<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">AIR for TV installation directory</i>&gt;/products/stagecraft/thirdparty-private/CompanyA/stagecraft-platforms/PlatformB/edk/myExtension/as/real</pre>
+            <p>
+             Also, put the .as files for your stub or simulator ActionScript
+implementation in the
+             <samp class="codeph">
+              <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+               &lt;yourPlatform&gt;
+              </i>
+              /edk
+             </samp>
+             directory
+or its subdirectories. For example:
+            </p>
+            <pre>&lt;<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">AIR for TV installation directory</i>&gt;/products/stagecraft/thirdparty-private/CompanyA/stagecraft-platforms/PlatformB/edk/myExtension/as/stub 
+&lt;<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">AIR for TV installation directory</i>&gt;/products/stagecraft/thirdparty-private/CompanyA/stagecraft-platforms/PlatformB/edk/myExtension/as/simulator </pre>
+            <div class="note">
+             <span class="notetitle">
+              Note:
+             </span>
+             The sample extensions that AIR for TV provides are in the
+directory
+             <samp class="codeph">
+              <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+               &lt;AIR for TV installation directory&gt;
+              </i>
+              /products/stagecraft/source/edk
+             </samp>
+             .
+Do not put your extension files in this directory.
+            </div>
+           </div>
+          </div>
+          <div class="nochunk" id="WScf70a6590b37508c-8c0aedd12b88a31e99-7ffe">
+           <a name="WScf70a6590b37508c-8c0aedd12b88a31e99-7ffe">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            Creating the .mk file
+           </h2>
+           <div>
+            <p>
+             As with other AIR for TV modules, to build your extensions
+module, you first create a .mk file. The primary purpose of the
+.mk file is to specify the source files to build.
+            </p>
+            <p>
+             To create the .mk file:
+            </p>
+            <ol>
+             <li>
+              <p>
+               Copy the PlatformEDKExtension_HelloWorld.mk file or PlatformEDKExtension_Process.mk
+file from:
+              </p>
+              <pre>&lt;<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">AIR for TV installation directory</i>&gt;/products/stagecraft/source/ae/edk/helloworld/</pre>
+              <p>
+               or
+              </p>
+              <pre>&lt;<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">AIR for TV installation directory</i>&gt;/products/stagecraft/source/ae/edk/process/</pre>
+              <p>
+               Copy
+it to:
+              </p>
+              <pre>&lt;<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">AIR for TV installation directory</i>&gt;/products/stagecraft/thirdparty-private/<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;yourCompany&gt;</i>/stagecraft-platforms/<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;yourPlatform&gt;</i></pre>
+              <p>
+               This
+directory is the same directory that contains your platform’s Makefile.config
+file. See
+               <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                Creating your platform Makefile.config
+               </i>
+               in the chapter
+               <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                Coding, building, and testing
+               </i>
+               in
+               <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <a href="http://www.adobe.com/go/OptimizingAndIntegratingAdobeAIRForTV" target="_self">
+                 Optimizing and Integrating Adobe AIR for
+TV (PDF)
+                </a>
+               </i>
+               .
+              </p>
+             </li>
+             <li>
+              <p>
+               Rename the .mk file to PlatformEDKExtension_
+               <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                &lt;your extension name&gt;
+               </i>
+               .mk.
+The AIR for TV make utility automatically discovers .mk files with
+this naming convention.
+              </p>
+              <p>
+               Always start the .mk file’s name with
+PlatformEDKExtension_.
+              </p>
+             </li>
+             <li>
+              <p>
+               Edit the sections of the .mk file that are marked “REQUIRED”.
+              </p>
+             </li>
+            </ol>
+            <p>
+             Make the following required modifications:
+            </p>
+            <div class="para">
+             <ul>
+              <li>
+               <p>
+                Set
+                <samp class="codeph">
+                 SC_EDK_EXTENSION_NAME
+                </samp>
+                to the
+extension name. Set this variable to the value of
+                <samp class="codeph">
+                 <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                  &lt;your extension name&gt;
+                 </i>
+                </samp>
+                in
+PlatformEDKExtension_
+                <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                 &lt;your extension name&gt;
+                </i>
+                .mk.
+               </p>
+              </li>
+              <li>
+               <p>
+                Set
+                <samp class="codeph">
+                 SC_EDK_EXTENSION_PACKAGE
+                </samp>
+                to the extension
+package name. Set this value to the package name you use in the
+ActionScript side of your extension.
+               </p>
+               <p>
+                The make utility uses
+this value as the value of the
+                <samp class="codeph">
+                 &lt;id&gt;
+                </samp>
+                element
+in the extension’s extension descriptor file. It also names the
+resulting ANE file with this value and the .ane filename extension.
+               </p>
+               <p>
+                For
+more information about the extension descriptor file, see
+                <a href="WS901d38e593cd1bac-3004221412afa24c001-8000.html">
+                 Native extension descriptor files
+                </a>
+                .
+               </p>
+              </li>
+              <li>
+               <p>
+                Set
+                <samp class="codeph">
+                 SC_EDK_EXTENSION_VERSION
+                </samp>
+                to the version
+number of the extension.
+               </p>
+               <p>
+                The make utility uses this value
+as the value of the
+                <samp class="codeph">
+                 &lt;versionNumber&gt;
+                </samp>
+                element
+in the extension’s extension descriptor file.
+               </p>
+              </li>
+              <li>
+               <p>
+                Set
+                <samp class="codeph">
+                 SC_MODULE_SOURCE_DIR
+                </samp>
+                ,
+                <samp class="codeph">
+                 SC_MODULE_SOURCE_FILES
+                </samp>
+                ,
+and
+                <samp class="codeph">
+                 SC_ADDITIONAL_MODULE_OBJ_SUBDIRS
+                </samp>
+                to specify
+the native implementation files that AIR for TV provides.
+               </p>
+               <div class="note">
+                <span class="notetitle">
+                 Note:
+                </span>
+                Do
+not remove ExtensionBridge.cpp from this list. Remove the HelloWorld
+or Process extension implementation files. Typically, you do not
+add your extension’s source files to this list.
+               </div>
+               <p>
+                For example:
+               </p>
+               <pre>SC_MODULE_SOURCE_DIR := $(SC_SOURCE_DIR_EDK) 
+SC_MODULE_SOURCE_FILES := ExtensionBridge.cpp</pre>
+              </li>
+              <li>
+               <p>
+                Set
+                <samp class="codeph">
+                 SC_PLATFORM_SOURCE_DIR
+                </samp>
+                and
+                <samp class="codeph">
+                 SC_PLATFORM_SOURCE_FILES
+                </samp>
+                to
+specify the native implementation files of your extension. For example:
+               </p>
+               <pre>SC_PLATFORM_SOURCE_DIR                    := $(SC_PLATFORM_MAKEFILE_DIR)/edk/myExtension/native 
+SC_PLATFORM_SOURCE_FILES                     := \ 
+                MyExtension.cpp \ 
+                helper\MyHelperClass1.cpp \ 
+                helper\MyHelperClass2.cpp</pre>
+              </li>
+              <li>
+               <p>
+                Set
+                <samp class="codeph">
+                 SC_EDK_AS_SOURCE_DIR
+                </samp>
+                to the directory
+that contains the ActionScript files for the real (not the stub)
+implementation of your extension. For example:
+               </p>
+               <pre>SC_EDK_AS_SOURCE_DIR := $(SC_PLATFORM_MAKEFILE_DIR)/edk/myExtension/as/real </pre>
+               <div class="note">
+                <span class="notetitle">
+                 Note:
+                </span>
+                This
+directory is the base directory for your ActionScript package. For example,
+consider an ActionScript package named
+                <samp class="codeph">
+                 tv.adobe.extension.example
+                </samp>
+                .
+The directories
+                <samp class="codeph">
+                 tv
+                </samp>
+                ,
+                <samp class="codeph">
+                 adobe
+                </samp>
+                ,
+                <samp class="codeph">
+                 extension
+                </samp>
+                ,
+and
+                <samp class="codeph">
+                 example
+                </samp>
+                are successive subdirectories of
+                <samp class="codeph">
+                 SC_EDK_AS_SOURCE_DIR
+                </samp>
+                .
+               </div>
+              </li>
+              <li>
+               <p>
+                Set
+                <samp class="codeph">
+                 SC_EDK_AS_CLASSES
+                </samp>
+                to list every ActionScript
+class that the real ActionScript implementation defines. For example:
+               </p>
+               <pre>SC_EDK_AS_CLASSES := MyExtension \ 
+                    MyHelperClass1 \ 
+                    MyHelperClass2</pre>
+              </li>
+              <li>
+               <p>
+                Set
+                <samp class="codeph">
+                 SC_EDK_AS_SOURCE_DIR_AUTHORING
+                </samp>
+                to the
+directory that contains the ActionScript files for the stub or simulator
+implementation of your extension. For example:
+               </p>
+               <pre>SC_EDK_AS_SOURCE_DIR_AUTHORING := $(SC_PLATFORM_MAKEFILE_DIR)/edk/myExtension/as/stub </pre>
+               <div class="note">
+                <span class="notetitle">
+                 Note:
+                </span>
+                This
+directory is the base directory for your ActionScript package. For example,
+consider an ActionScript package named
+                <samp class="codeph">
+                 tv.adobe.extension.example
+                </samp>
+                .
+The directories
+                <samp class="codeph">
+                 tv
+                </samp>
+                ,
+                <samp class="codeph">
+                 adobe
+                </samp>
+                ,
+                <samp class="codeph">
+                 extension
+                </samp>
+                ,
+and
+                <samp class="codeph">
+                 example
+                </samp>
+                are successive subdirectories of
+                <samp class="codeph">
+                 SC_EDK_AS_SOURCE_DIR_AUTHORING
+                </samp>
+                .
+               </div>
+              </li>
+              <li>
+               <p>
+                Set
+                <samp class="codeph">
+                 SC_EDK_AS_CLASSES_AUTHORING
+                </samp>
+                to list
+every ActionScript class that the stub or simulator ActionScript
+implementation defines. For example:
+               </p>
+               <pre>SC_EDK_AS_CLASSES_AUTHORING := MyExtension \ 
+                    MyHelperClass1 \ 
+                    MyHelperClass2</pre>
+              </li>
+             </ul>
+            </div>
+           </div>
+          </div>
+          <div class="nochunk" id="WScf70a6590b37508c7f51d4e112c9e23650c-8000">
+           <a name="WScf70a6590b37508c7f51d4e112c9e23650c-8000">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            Install third-party libraries
+           </h2>
+           <div>
+            <p>
+             Building AIR for TV requires some third-party libraries.
+Details on these libraries are in
+             <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+              Install third-party software
+             </i>
+             in
+             <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+              <a href="http://www.adobe.com/go/GettingStartedWithAdobeAIRForTV" target="_self">
+               Getting Started with Adobe AIR for TV (PDF)
+              </a>
+             </i>
+             .
+            </p>
+            <p>
+             If you are building only your extension module, and not building
+all of AIR for TV, the necessary libraries are:
+            </p>
+            <div class="para">
+             <ul>
+              <li>
+               <p>
+                The AIR 3 SDK
+               </p>
+               <p>
+                Select the Mac OS X download from
+                <a href="http://www.adobe.com/products/air/sdk/" target="_self">
+                 http://www.adobe.com/products/air/sdk/
+                </a>
+                .
+               </p>
+               <p>
+                Create
+a directory to contain the .tbz2 file’s contents. For example:
+               </p>
+               <pre>/usr/AIRSDK</pre>
+               <p>
+                Extract
+the .tbz2 file’s contents into the directory.
+               </p>
+               <pre>tar jxf AdobeAIRSDK.tbz2</pre>
+               <p>
+                Set
+the
+                <samp class="codeph">
+                 PATH
+                </samp>
+                environment variable to include the AIR
+SDK bin directory. In this example, the bin directory is /usr/AIRSDK/bin.
+               </p>
+              </li>
+              <li>
+               <p>
+                The Open Source Flex® SDK.
+               </p>
+               <p>
+                Download the ZIP file of
+the latest release build of the Open Source Flex SDK from
+                <a href="http://opensource.adobe.com/wiki/display/flexsdk/Downloads" target="_self">
+                 http://opensource.adobe.com/wiki/display/flexsdk/Downloads
+                </a>
+                .
+               </p>
+               <p>
+                Create
+a directory to contain the ZIP file’s contents. For example:
+               </p>
+               <pre>/usr/flexSDK</pre>
+               <p>
+                Extract
+the ZIP file’s contents into the directory.
+               </p>
+               <pre>unzip flex_sdk_4.5.1.21328_mpl.zip</pre>
+               <p>
+                Set
+the
+                <samp class="codeph">
+                 PATH
+                </samp>
+                environment variable to include the Flex
+SDK bin directory. In this example, the bin directory is /usr/flexSDK/bin.
+               </p>
+              </li>
+              <li>
+               <p>
+                The Java™ runtime. The Flex SDK requires a recent Java runtime.
+If your development system does not yet have a Java runtime, downloads
+and installation instructions are at
+                <a href="http://www.java.com/en/download/manual.jsp" target="_self">
+                 http://www.java.com/en/download/manual.jsp.
+                </a>
+               </p>
+               <p>
+                Set
+the
+                <samp class="codeph">
+                 PATH
+                </samp>
+                environment variable to include the Java
+bin directory.
+               </p>
+              </li>
+             </ul>
+            </div>
+           </div>
+          </div>
+          <div class="nochunk" id="WScf70a6590b37508c18d0cd0e12b88b5fec0-8000">
+           <a name="WScf70a6590b37508c18d0cd0e12b88b5fec0-8000">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            Running the make utility
+           </h2>
+           <div>
+            <p>
+             Details on using the AIR for TV make utility are in:
+            </p>
+            <ul>
+             <li>
+              <p>
+               <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <a href="http://www.adobe.com/go/GettingStartedWithAdobeAIRForTV" target="_self">
+                 Getting Started with Adobe AIR for TV (PDF)
+                </a>
+               </i>
+               in
+the chapter
+               <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                Installing and building the source distribution
+               </i>
+               .
+              </p>
+             </li>
+             <li>
+              <p>
+               <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <a href="http://www.adobe.com/go/OptimizingAndIntegratingAdobeAIRForTV" target="_self">
+                 Optimizing and Integrating Adobe AIR for
+TV (PDF)
+                </a>
+               </i>
+               in the chapter
+               <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                Coding, building, and testing.
+               </i>
+               Follow
+the instructions in the section called
+               <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                Creating your platform Makefile.config
+               </i>
+               to
+set the various build variables.
+              </p>
+             </li>
+            </ul>
+            <p>
+             In particular, the make utility uses the following build variables
+in Makefile.config when building extensions:
+            </p>
+            <div class="para">
+             <ul>
+              <li>
+               <p>
+                <samp class="codeph">
+                 SC_ZIP
+                </samp>
+               </p>
+              </li>
+              <li>
+               <p>
+                <samp class="codeph">
+                 SC_UNZIP
+                </samp>
+               </p>
+              </li>
+              <li>
+               <p>
+                <samp class="codeph">
+                 SC_PLATFORM_NAME
+                </samp>
+               </p>
+              </li>
+              <li>
+               <p>
+                <samp class="codeph">
+                 SC_PLATFORM_ARCH
+                </samp>
+               </p>
+              </li>
+             </ul>
+            </div>
+            <p>
+             After you have created your platform’s Makefile.config file and
+your extension’s .mk file, you can use the make utility to do the
+following:
+            </p>
+            <div class="para">
+             <ul>
+              <li>
+               <p>
+                Build all of AIR for TV.
+               </p>
+              </li>
+              <li>
+               <p>
+                Build only your extension module.
+               </p>
+              </li>
+             </ul>
+             To build all
+of AIR for TV, do the following:
+            </div>
+            <ol>
+             <li>
+              <p>
+               Make sure the environment variables
+               <samp class="codeph">
+                SC_BUILD_MODE
+               </samp>
+               and
+               <samp class="codeph">
+                SC_PLATFORM
+               </samp>
+               are
+set.
+              </p>
+             </li>
+             <li>
+              <p>
+               If you are using a certificate that you created to sign your
+extension, set the environment variables
+               <samp class="codeph">
+                SC_EDK_ANE_CERT_FILE
+               </samp>
+               and
+               <samp class="codeph">
+                SC_EDK_ANE_CERT_PASSWD
+               </samp>
+               .
+              </p>
+              <p>
+               Set
+               <samp class="codeph">
+                SC_EDK_ANE_CERT_FILE
+               </samp>
+               to
+the relative or absolute path to your certificate. The relative
+path is relative to the build directory &lt;
+               <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                AIR for TV installation directory
+               </i>
+               &gt;/stagecraft/build/linux.
+              </p>
+              <p>
+               Set
+               <samp class="codeph">
+                SC_EDK_ANE_CERT_PASSWD
+               </samp>
+               to
+the password of the certificate.
+              </p>
+              <p>
+               If you do not set these environment
+variables, the make utility uses a default phony certificate, and
+displays a warning message. This phony certificate is appropriate
+only for your testing.
+              </p>
+             </li>
+             <li>
+              <p>
+               Change to the directory:
+              </p>
+              <pre>&lt;<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">AIR for TV installation directory</i>&gt;/products/stagecraft/build/linux</pre>
+             </li>
+             <li>
+              <p>
+               Enter the following command:
+              </p>
+              <pre>make</pre>
+             </li>
+            </ol>
+            <p>
+             To build only your extension module, do the following:
+            </p>
+            <ol>
+             <li>
+              <p>
+               Make sure the environment variables
+               <samp class="codeph">
+                SC_BUILD_MODE
+               </samp>
+               and
+               <samp class="codeph">
+                SC_PLATFORM
+               </samp>
+               are
+set.
+              </p>
+             </li>
+             <li>
+              <p>
+               If you are using a certificate that you created to sign your
+extension, set the environment variables
+               <samp class="codeph">
+                SC_EDK_ANE_CERT_FILE
+               </samp>
+               and
+               <samp class="codeph">
+                SC_EDK_ANE_CERT_PASSWD
+               </samp>
+               as
+described in the previous steps.
+              </p>
+             </li>
+             <li>
+              <p>
+               Change to the directory stagecraft/build/linux.
+              </p>
+             </li>
+             <li>
+              <p>
+               Enter the following command:
+              </p>
+              <pre>make PlatformEDKExtension_<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;your extension name&gt;</i></pre>
+             </li>
+            </ol>
+            <p>
+             You can remove all objects previously built for your extension
+with the following command:
+            </p>
+            <pre>make clean-PlatformEDKExtension_<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;your extension name&gt;</i></pre>
+            <p>
+             You can remove all objects previously built for your extension
+and then rebuild them with the following command:
+            </p>
+            <pre>make rebuild-PlatformEDKExtension_<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;your extension name&gt;</i></pre>
+            <div class="important">
+             <span class="importanttitle">
+              Important:
+             </span>
+             The make utility sometimes fails if your
+build machine is behind a firewall. A firewall can prohibit access
+to the time-stamp server that ADT uses when it packages the native
+extension into an ANE file. This failure results in the following error
+output:
+            </div>
+            <pre>Could not generate timestamp: Connection timed out</pre>
+            <p>
+             To work around this failure, modify the ADT command that the
+make utility uses. Edit the file extension.mk in the following directory:
+            </p>
+            <pre>&lt;<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">AIR for TV installation directory</i>&gt;/stagecraft/source/ae/edk/</pre>
+            <p>
+             Find the following line:
+            </p>
+            <pre>$(SC_EXEC_CMD) $(SC_ADT) -package \</pre>
+            <p>
+             Add the parameter
+             <samp class="codeph">
+              -tsa none
+             </samp>
+             to the command as
+follows:
+            </p>
+            <div class="para">
+             <pre>$(SC_EXEC_CMD) $(SC_ADT) -package -tsa none\</pre>
+            </div>
+           </div>
+          </div>
+          <div class="nochunk" id="WS5d37564e2b3bb78e-14de4e1612e9c44b8d7-8000">
+           <a name="WS5d37564e2b3bb78e-14de4e1612e9c44b8d7-8000">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            Make utility extension output
+           </h2>
+           <div>
+            <p>
+             The make utility creates two files for your extension.
+It puts the files in one of the following directories depending
+on whether you specified debug or release for
+             <samp class="codeph">
+              SC_BUILD_MODE
+             </samp>
+             :
+            </p>
+            <pre>&lt;AIR for TV <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">installation directory</i>&gt;/build/stagecraft/linux/<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;yourPlatform&gt;</i>/debug/bin 
+&lt;AIR for TV <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">installation directory</i>&gt;/build/stagecraft/linux/<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;yourPlatform&gt;</i>/release/bin</pre>
+            <p>
+             The files that the make utility creates for your extension are:
+            </p>
+            <div class="para">
+             <ul>
+              <li>
+               <p>
+                A ZIP file that contains the device-bundled extension
+to deploy on the device.
+               </p>
+              </li>
+              <li>
+               <p>
+                An ANE file that contains the stub or simulator extension.
+AIR application developers use this ANE file to build their applications.
+They also use it to test their applications on a desktop computer
+using ADL. They also package this ANE file with their application
+into an AIRN package.
+               </p>
+              </li>
+             </ul>
+            </div>
+           </div>
+          </div>
+          <div class="nochunk" id="WScf70a6590b37508c-1986dce12b88f635b8-7ffe">
+           <a name="WScf70a6590b37508c-1986dce12b88f635b8-7ffe">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            Building both a stub and simulator extension
+           </h2>
+           <div>
+            <p>
+             Sometimes you want to build both a stub and a simulator
+extension, in addition to the real extension. Typically, you instruct
+the AIR application developers to do the following:
+            </p>
+            <div class="para">
+             <ul>
+              <li>
+               <p>
+                Test on the desktop using the simulator extension.
+               </p>
+              </li>
+              <li>
+               <p>
+                Package the stub extension with their application into an
+AIRN package.
+               </p>
+              </li>
+             </ul>
+            </div>
+            <p>
+             To build both a stub and simulator extension, do the following:
+            </p>
+            <ol>
+             <li>
+              <p>
+               Create the stub extension and its .mk file. Make sure
+you can build the stub extension and the real extension.
+              </p>
+             </li>
+             <li>
+              <p>
+               Create a directory for your simulator implementation that
+is a sibling of your stub implementation directory. For example:
+              </p>
+              <pre>&lt;<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">AIR for TV installation directory</i>&gt;/products/stagecraft/thirdparty-private/CompanyA/stagecraft-platforms/PlatformB/edk/myExtension/as/stub 
+&lt;<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">AIR for TV installation directory</i>&gt;/products/stagecraft/thirdparty-private/CompanyA/stagecraft-platforms/PlatformB/edk/myExtension/as/simulator</pre>
+             </li>
+             <li>
+              <p>
+               Make a copy of the .mk file for your extension.
+              </p>
+             </li>
+             <li>
+              <p>
+               In the copy, edit the values of
+               <samp class="codeph">
+                SC_EDK_AS_SOURCE_DIR_AUTHORING
+               </samp>
+               and
+               <samp class="codeph">
+                SC_EDK_AS_CLASSES_AUTHORING
+               </samp>
+               .
+Set the values to reflect your simulator implementation directory
+and classes.
+              </p>
+             </li>
+             <li>
+              <p>
+               Rename the original .mk file for your extension to keep it
+safe. Then, rename the copy to the .mk filename for your extension:
+PlatformEDKExtension_
+               <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                &lt;your extension name&gt;
+               </i>
+               .mk.
+              </p>
+             </li>
+             <li>
+              <p>
+               Move the stub ANE file in your platform’s bin directory to
+a safe place. Otherwise, the next step overwrites it.
+              </p>
+             </li>
+             <li>
+              <p>
+               Run the make utility to build the real extension and your
+simulator extension.
+              </p>
+             </li>
+            </ol>
+           </div>
+          </div>
+          <!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+          <!-- END USER PREFERENCES -->
+          <div id="related">
+           <div class="separator">
+            <a href="#top">
+             <img src="images/BTT.jpg"/>
+            </a>
+           </div>
+          </div>
+          <div id="footer">
+           <!-- BEGIN IONCOMMENTS -->
+           <div id="ionComHere">
+           </div>
+           <!-- END IONCOMMENTS -->
+           
+
+           <p id="creativecommons">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" id="creativecommons_text">
+             <img alt="This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License" id="creativecommons_img" src="images/CC.png"/>
+            </a>
+            Twitter™ and Facebook posts are not covered under the terms of Creative Commons.
+           </p>
+          </div>
+         </td>
+         <td width="10px">
+         </td>
+         <td id="inner_rightcolumn">
+          
+         </td>
+        </tr>
+       </table>
+      </div>
+      <!-- BEGIN BREADCRUMBS -->
+      <div id="breadcrumb">
+       <ul class="navigation">
+        <li class="prev">
+         <a accesskey="p" class="prev" href="WScf70a6590b37508c58b053df12b8905d138-8000.html" title="Check for extension support">
+          <img alt="Previous" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+        <li class="next">
+         <a accesskey="n" class="next" href="WSf268776665d7970d-5bd3ed1912ee48fc962-8000.html" title="Adding resources to your AIR for TV native extension">
+          <img alt="Next" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+       </ul>
+       <div class="hierarchy" id="hierarchy">
+        <a href="WSf00ab63af761f170-7e2c8d6712937799c98-8000.html">
+         <b>
+          Home
+         </b>
+        </a>
+        /
+        <a href="WSf00ab63af761f170-7e2c8d6712937799c98-8000.html">
+         <b>
+          Developing Native Extensions
+         </b>
+        </a>
+        /
+        <a href="WSf00ab63af761f1707ce5bf691293789e4b8-8000.html">
+         <b>
+          Building and installing native extensions for AIR for TV
+         </b>
+        </a>
+       </div>
+      </div>
+      <!-- END BREADCRUMBS -->
+      <!-- END CONTENT WRAPPER -->
+      
+     </td>
+     <td id="col3">
+      <div>
+       <img src="images/adobe-lq.png"/>
+      </div>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!-- END PAGE CONTENT WRAPPER -->
+  <script type="text/javascript">
+   <!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+  </script>
+  <!--
+    Description:
+    This file generates the link to product support in the top right corner
+-->
+
+<style>
+#menutop{
+    position:absolute;
+    top:4px;
+    right:24px;
+    width:auto;    
+    font-size:11px;
+    color:#fff;
+    text-align:right;
+}
+#menutop a{
+    color:#fff;
+}
+#menutop a:hover{
+        text-decoration:underline;
+}
+</style>  
+  
+  
+  
+  
+<div id="productmenu">
+<!--googleoff: index-->
+  <div id="menutop">
+
+
+<script language=javascript type='text/javascript'>
+    // darken menu text for products with light backgrounds
+    var path = document.location.href.toLowerCase();
+    if (path.indexOf("/acrobat/")           	> 0 ||
+        path.indexOf("/acrobat.com/")       	> 0 ||
+        path.indexOf("/acrobatConnectPro/") 	> 0 ||
+        path.indexOf("/connect/")           	> 0 ||
+        path.indexOf("/framemaker/")           	> 0 ||
+        path.indexOf("/livecycledataserviceses/") > 0 ||
+        path.indexOf("/muse/")         	> 0 ||
+		path.indexOf("/presenter/")         	> 0 ||
+        path.indexOf("/scene7/")            	> 0 ||
+        path.indexOf("/flashmediaserver/")  	> 0 ||
+        path.indexOf("/wave/")              	> 0 )
+    {
+        document.write('<style>#menutop a{color:#505050}</style>');
+    }
+    if (typeof('terms_AHV_PRODUCT_SUPPORT') != "undefined" && ! use_robohelp_behavior ){      
+        if (path.indexOf("/muse/") > -1 ){
+            var supportlink = '<a href="http://muse.adobe.com/support.html">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }else{
+            var supportlink = '<a href="http://adobe.com/support">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }
+        document.write( supportlink );
+     }
+
+</script> 
+
+  </div>
+<!--googleon: index-->
+</div>
+
+
+
+  <style>
+#online-privacy-policy{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+<p id="online-privacy-policy">
+<script language="javascript">
+var pageLoc = "en_US";
+var metaElements = document.all ?
+document.all.tags('meta') :
+document.getElementsByTagName ?
+document.getElementsByTagName ('meta') : new Array();
+for (var m = 0; m < metaElements.length; m++) {
+	if (metaElements[m].name == "lang") {
+		pageLoc = metaElements[m].content;
+		break;
+	}
+}
+var ptn = /(..)-(..)/;
+if (ptn.test(pageLoc)) {
+	var languageCode = pageLoc.replace(ptn, "$1");
+	var countryCode = pageLoc.replace(ptn, "$2");
+	pageLoc = languageCode + "_" + countryCode.toUpperCase();
+}
+
+var policyLoc = "en_US";
+var policyText = "Online Privacy Policy";
+var policyPath = "";
+var policyArray=[
+"da_DK", "Online fortrolighedserklæring",
+"de_DE", "Online-Datenschutzrichtlinie",
+"es_ES", "Política de confidencialidad en línea",
+"fi_FI", "Yksityisyyttä koskeva Online-toimintaohjelma",
+"fr_FR", "Confidentialité et sécurité",
+"it_IT", "Informativa sulla privacy online",
+"ja_JP", "プライバシーポリシー",
+"ko_KR", "Adobe 온라인 개인정보 보호정책",
+"pt_BR", "Política de Confidencialidade On-line", 
+"zh_CN", "在线隐私政策",
+"zh_TW", "線上隱私政策"
+];
+var legalLoc = "en_US";
+var legalText = "Legal Notices";
+var legalPath = legalLoc;
+var legalArray=[
+"ar_AE", "إشعارات قانونية",
+"bg_BG", "Юридически бележки",
+"cs_CZ", "Právní upozornění",
+"da_DK", "Juridiske meddelelser",
+"de_DE", "Rechtliche Hinweise",
+"el_GR", "Σημειώσεις νομικού περιεχομένου",
+"es_ES", "Avisos legales",
+"et_EE", "Juriidilised teated",
+"fi_FI", "Lakisääteiset ilmoitukset",
+"fr_FR", "Mentions légales",
+"he_IL", "הצהרות משפטיות",
+"hr_HR", "Pravne napomene",
+"hu_HU", "Jogi közlemények",
+"it_IT", "Informazioni legali",
+"ja_JP", "法律上の注意",
+"ko_KR", "법적 고지 사항",
+"lt_LT", "Teisinės pastabos",
+"lv_LV", "Juridisks paziņojums",
+"nb_NO", "Juridiske merknader",
+"nl_NL", "Juridische kennisgevingen",
+"pl_PL", "Informacje prawne",
+"pt_BR", "Aspectos jurídicos",
+"ro_RO", "Prevederi legale",
+"ru_RU", "Юридическая информация",
+"sk_SK", "Právne upozornenie",
+"sl_SI", "Pravni pouk",
+"sv_SE", "Upphovsrätt",
+"tr_TR", "Yasal uyarılar",
+"uk_UA", "Юридична інформація",
+"zh_CN", "法律声明",
+"zh_TW", "法律注意事項"
+];
+
+ruPolicy = "http://www.adobe.com/ru/misc/privacy.html";
+trPolicy = "http://www.adobe.com/tr/misc/privacy.html";
+
+// Bug 2846992: LOC: RUS, TUR: The link to "Online Privacy Policy" should include language, currently it is not appearing.
+if (pageLoc == "ru_RU") {
+	policyPath = "ru";
+}
+else if (pageLoc == "tr_TR") {
+	policyPath = "tr";
+}
+for (var i = 0; i < policyArray.length; i+=2) {
+	if (pageLoc == policyArray[i]) {
+		policyLoc = pageLoc;
+		policyText = policyArray[i+1];
+		var ptn = /(..)_(..)/;
+		if (ptn.test(policyLoc)) {
+			var countryCode = policyLoc.replace(ptn, "$2");
+			policyPath = countryCode.toLowerCase();
+		}
+		break;
+	}
+}
+
+for (var i = 0; i < legalArray.length; i+=2) {
+	if (pageLoc == legalArray[i]) {
+		legalLoc = pageLoc;
+		legalText = legalArray[i+1];
+		legalPath = legalLoc;
+		break;
+	}
+}
+if(agt.indexOf("community help client") > -1 ){
+	document.write('<a href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+}else{
+	//Open the privacy policy in a new window
+	document.write('<a target="_blank" href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a target="_blank" href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+} 
+
+
+remove_all_cookies();
+
+function remove_all_cookies() {
+	var res = document.cookie;
+    var multiple = res.split(";");
+    for(var i = 0; i < multiple.length; i++) {
+    	var key = multiple[i].split("=");
+        document.cookie = key[0]+" =; expires = Thu, 01 Jan 1970 00:00:00 UTC";
+    }
+}
+
+
+</script>
+</p>
+
+
+  
+<!-- localfooter.ssi -->
+
+<script type="text/javascript">
+    var debug = (top.location.href.indexOf("debug=true") > -1);
+</script>
+
+<script language="javascript">
+document.write('<scr'+'ipt ' +
+               'src="/en_US/ssi/_pod.js" ' +
+               'language="javascript" ' +
+               'charset="UTF-8"> ' +
+               '</scr'+'ipt>');
+</script>
+
+//  Ethnio survey code removed
+  
+  
+ </body>
+</html>

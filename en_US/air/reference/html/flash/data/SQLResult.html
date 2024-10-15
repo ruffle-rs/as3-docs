@@ -1,0 +1,572 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"><html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers"><meta name="lang" content="en-us"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="SQLResult,flash.data.SQLResult,complete,data,lastInsertRowID,rowsAffected"><title>flash.data.SQLResult - Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers</title>
+	<link rel="stylesheet" href="../../jslr-style.css" type="text/css">
+		<script type="text/javascript">
+			
+				var baseRef = "../../";
+				var buildType = 'jslr';
+				var alreadyrunflag=0; //flag to indicate whether target function has already been run
+				var terms_HELPCFG = ".helpcfg";
+
+if (document.addEventListener)
+  document.addEventListener("DOMContentLoaded", function(){alreadyrunflag=1; init()}, false)
+else if (document.all && !window.opera){
+  /* blocks IE from working, as it's fired before dom if ready
+ document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
+  var contentloadtag=document.getElementById("contentloadtag")
+  contentloadtag.onreadystatechange=function(){
+    if (this.readyState=="complete"){
+      alreadyrunflag=1;
+      init();
+    }
+  }*/
+} else if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+  var _timer=setInterval(function(){
+  if(/loaded|complete/.test(document.readyState)){
+    clearInterval(_timer);
+    alreadyrunflag=1;
+    init(); // call target function
+  }}, 10)
+}
+function onLoadFunction() {
+	setTimeout("if (!alreadyrunflag) init();  alreadyrunflag=1; ionReadyLoad(); ", 0);
+}
+
+		</script>
+		<script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+		<script language="javascript" type="text/javascript" src="../../asdoc.js"></script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body onLoad="onLoadFunction()">
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td>
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr>
+				  <td class="titleTableTitleION" align="left" nowrap="true">Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers<br>
+				  <span class="titleTableTopNavION">
+				  <span id="homelink">
+						<a target="_self" href="../../index.html"> Home </a>&nbsp;|&nbsp;
+				  </span>
+				  <a id="showtoc" onClick="showHideTOC(true)" href="#top" style="display:none">Show Classes List</a><a id="hidetoc" onClick="showHideTOC(false)" href="#top" style="display:">Hide Classes List</a>&nbsp;|&nbsp;
+				  <a href="../../all-index-A.html"> Index </a>&nbsp;|&nbsp;
+				  <a href="../../appendixes.html"> Appendixes </a><br>
+				  </span>	
+				  </td>
+				  <td class="titleTableSearchION" align="right" nowrap="true">
+				  <span id="gsa" class="gsa">
+					<form class="searchFormION" method="get" onSubmit="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US');return false;">
+				  <input class="hidden" name="loc" value="" type="hidden">
+				  <input class="hidden" name="termPrefix" value="site:help.adobe.com/en_US/AS3CLR/Flash_10.0" type="hidden">
+				  <input class="hidden" name="title" value="ActionScript 3.0 Reference for the Adobe Flash Platform" type="hidden">
+				  <input class="hidden" name="term" value="" type="hidden">
+				  <input class="hidden" name="area" value="" type="hidden">
+				  <input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text">
+				  <input type="button" name="action" value="" onClick="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US')" class="searchbutton"><br>
+			      <input id="checkBoxId" type="checkbox" name="checkbox" value="checkbox" checked>Language Reference only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  </form>
+				  </span>				  
+				  </td>
+				</tr>
+			  </table>			
+			  </td>
+			<td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logoION.jpg" class="logoImageION" alt=" Adobe Logo " title=" Adobe Logo "></td>
+		  </tr>
+		  <tr>
+			<td colspan="2">
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr class="titleTableRow2">
+				<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+					<convert>SQLResult&nbsp;</convert>
+				</td>
+				<td class="titleTableSubNav" id="subNav" align="right">
+				  <a id="propertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="propertiesBar" style="display:none"> | </span>
+				  <a id="packagePropertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="packagePropertiesBar" style="display:none"> | </span>
+				  <a id="constructorLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+				  <span id="constructorBar" style="display:none"> | </span>
+				  <a id="methodsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Methods </a>
+				  <span id="methodsBar" style="display:none"> | </span>
+				  <a id="packageFunctionsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Functions </a>
+				  <span id="packageFunctionsBar" style="display:none"> | </span>
+				  <a id="eventsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('eventSummary');" style="display:none"> Events </a>
+				  <span id="eventsBar" style="display:none"> | </span>
+				  <a id="stylesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('styleSummary');" style="display:none"> Styles </a>
+				  <span id="stylesBar" style="display:none"> | </span>
+				  <a id="SkinPartLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinPartSummary');" style="display:none"> Skin Parts </a>
+				  <span id="SkinPartBar" style="display:none"> | </span>
+				  <a id="SkinStateLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinStateSummary');" style="display:none"> Skin States </a>
+				  <span id="SkinStateBar" style="display:none"> | </span>
+				  <a id="effectsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('effectSummary');" style="display:none"> Effects </a>
+				  <span id="effectsBar" style="display:none"> | </span>
+				  <a id="constantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="constantsBar" style="display:none"> | </span>
+				  <a id="packageConstantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="packageConstantsBar" style="display:none"> | </span>
+				  <a id="interfacesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('interfaceSummary');" style="display:none"> Interfaces </a>
+				  <span id="interfacesBar" style="display:none"> | </span>
+				  <a id="classesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('classSummary');" style="display:none"> Classes </a>
+				  <span id="classesBar" style="display:none"> | </span>
+				  <a id="packageUseLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('package-use.html');" style="display:none">Use</a>
+				  <span id="packageUseBar" style="display:none"> | </span>
+				  <a id="examplesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('includeExamplesSummary');" style="display:none"> Examples </a>
+				</td>
+				</tr>
+				<tr class="titleTableRow3">
+				  <td colspan="4"></td>
+				</tr>
+			  </table>
+			</td>
+		  </tr>
+		</table>
+        <div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="classlist" class="jslrclasslist">
+					<div class="classlistoutline"></div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content">
+<script language="javascript" type="text/javascript">  <!--  
+         
+        asdocTitle = "SQLResult - Adobe® AIR® API Reference for HTML Developers"; 
+        var baseRef = '../../'; 
+	document.baseRef = '../../'; 
+          -->  </script>
+<script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+<script language="javascript" type="text/javascript"><!--
+function submitValue() {
+var title="Adobe® AIR® API Reference for HTML Developers";
+var searchStr=document.getElementById('search-livedocs').value;
+
+        
+        
+        if(document.getElementById('checkBoxId').checked){
+        window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
++"&site=communityhelp-air-jslr ";
+} 
+
+        else{ 
+window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
+;
+} 
+} 
+--></script><script type="text/javascript"> scrollToNameAnchor(); </script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">window.runtime property</td><td>window.runtime.flash.data.SQLResult</td></tr><tr><td class="classSignature"></td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">SQLResult  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><div id="badgeAnchorSupport" class="ionBadgeWrapper"></div><div id="badgeContainerSupport"></div><p></p><p></p>
+
+ The SQLResult class provides access to data returned in response to the execution of a
+
+ SQL statement (a SQLStatement instance).
+
+ 
+ <p>The SQLResult instance for a SQL statement is accessed by calling the
+
+ <code>SQLStatement.getResult()</code> method or
+
+ as an argument passed to the result handler of a Responder instance specified in a call to
+
+ <code>SQLStatement.execute()</code> or <code>SQLStatement.next()</code>. Generally, developer
+
+ code does not construct SQLResult instances directly.</p>
+
+ 
+               <p>You use a SQLResult object to access the rows of data returned from a
+
+ <code>SELECT</code> statement (using the <code>data</code> property), to get
+
+ row identifier information for an <code>INSERT</code> statement (using the
+
+ <code>lastInsertRowID</code> property), to determine the number of rows affected
+
+ by an <code>INSERT</code>, <code>UPDATE</code>, or <code>DELETE</code> statement
+
+ (using the <code>rowsAffected</code> property), or to determine whether there are
+
+ additional <code>SELECT</code> result rows that haven't been retrieved (using the
+
+ <code>complete</code> property).</p>
+
+ 
+            <p></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="SQLStatement.html#getResult()" target="">SQLStatement.getResult()</a><br/><a href="SQLStatement.html#execute()" target="">SQLStatement.execute()</a><br/><a href="SQLStatement.html#next()" target="">SQLStatement.next()</a><br/><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118666ade46-7d16.html" target="_top">Accessing SELECT statement result
+data</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Properties</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Properties</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Properties</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th>Defined By</th></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#complete" class="signatureLink">complete</a> : Boolean<div class="summaryTableDescription">[read-only] 
+
+     Indicates whether all the resulting data from a statement execution has been returned.</div></td><td class="summaryTableOwnerCol">SQLResult</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">constructor : Object<div class="summaryTableDescription">
+
+	 A reference to the class object or constructor function for a given object instance.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#data" class="signatureLink">data</a> : Array<div class="summaryTableDescription">[read-only] 
+
+     The data returned as a result of the statement execution, specifically when
+
+     a SQL SELECT statement is executed.</div></td><td class="summaryTableOwnerCol">SQLResult</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#lastInsertRowID" class="signatureLink">lastInsertRowID</a> : Number<div class="summaryTableDescription">[read-only] 
+
+     The last generated row identifier generated by a SQL INSERT
+
+	 statement.</div></td><td class="summaryTableOwnerCol">SQLResult</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">prototype : Object<div class="summaryTableDescription">[static] 
+
+	 A reference to the prototype object of a class or function object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#rowsAffected" class="signatureLink">rowsAffected</a> : Number<div class="summaryTableDescription">[read-only] 
+
+     Indicates how many rows were affected by the operation.</div></td><td class="summaryTableOwnerCol">SQLResult</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Public Methods </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Methods</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th>Defined By</th></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#SQLResult()" class="signatureLink">SQLResult</a>(data:Array = null, rowsAffected:Number = 0, complete:Boolean = true, rowID:Number = 0)</div><div class="summaryTableDescription">
+
+     Creates a SQLResult instance.</div></td><td class="summaryTableOwnerCol">SQLResult</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">hasOwnProperty(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an object has a specified property defined.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">isPrototypeOf(theClass:Object):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+
+	 as the parameter.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">propertyIsEnumerable(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether the specified property exists and is enumerable.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">setPropertyIsEnumerable(name:String, isEnum:Boolean = true):void</div><div class="summaryTableDescription">
+
+     Sets the availability of a dynamic property for loop operations.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toLocaleString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of this object, formatted according to locale-specific conventions.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">valueOf():Object</div><div class="summaryTableDescription">
+
+	 Returns the primitive value of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Property Detail</div><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="complete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>complete</h2></td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>complete:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+     Indicates whether all the resulting data from a statement execution has been returned.
+
+     
+     <p>When a statement returns one or more rows this property indicates
+
+     whether all of the rows have been returned. When a SQLStatement object's <code>execute()</code>
+
+     method is called with a <code>prefetch</code> argument value, only the specified number of
+
+     rows of the resulting
+
+     data are returned in the SQLResult object's <code>data</code> property. Subsequent calls
+
+     to <code>SQLStatement.next()</code> cause additional data to become available. This property
+
+     is used to determine when the final results have been returned.</p>
+
+     
+     <p>Note that because the number of rows is unknown at execution time, the database cursor must move beyond
+
+     the last row before a statement's execution is considered complete. When the
+
+	 <code>SQLStatement.execute()</code> method is called with a <code>prefetch</code> argument, at least one
+
+	 row more than the total number of rows in the result set must be requested before
+
+	 the resulting SQLResult instance's <code>complete</code> property is <code>true</code>.</p>
+
+	 
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="SQLStatement.html#execute()" target="">SQLStatement.execute()</a><br/><a href="SQLStatement.html#next()" target="">SQLStatement.next()</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="data"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>data</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>data:Array</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+     The data returned as a result of the statement execution, specifically when
+
+     a SQL <code>SELECT</code> statement is executed.
+
+     
+     <p>When a statement returns one or more rows this property is an array containing objects 
+
+	 that represent the rows of result data. Each object in the array has 
+
+     property names that correspond to the result data set's column names.</p>
+
+	 
+
+	 <p>For example, suppose you execute the following SQL <code>SELECT</code> statement:</p>
+
+	 
+
+	 <div class="listing"><pre>
+
+     SELECT lastName, firstName
+
+     FROM employees
+
+     </pre></div>
+
+	 
+
+	 <p>Assuming the <code>employees</code> table contains 10 rows, the 
+
+	 <code>SQLResult.data</code> property is an Array with 10 elements. Each element 
+
+	 is an object with two properties, <code>lastName</code> and <code>firstName</code>.</p>
+
+	 
+
+	 <p>The situation is more complex when you are using a <code>SELECT</code> statement
+
+	 with a complex result column, such as an aggregate function. For example,
+
+	 suppose you execute the following SQL:</p>
+
+	 
+
+	 <div class="listing"><pre>
+
+     SELECT departmentId, SUM(salary)
+
+     FROM employees
+
+     GROUP BY departmentId
+
+     </pre></div>
+
+	 
+
+	 <p>In the results from this statement, each object in the <code>data</code> Array has 
+
+	 two properties named <code>departmentId</code> and <code>SUM(salary)</code>. However, 
+
+	 "SUM(salary)" is not a valid identifier. If you are using a computed column such as an 
+
+	 aggregate or other function, specify an alias for the computed column in your SQL 
+
+	 statement. The alias is used as the property name in the result data objects. For 
+
+	 example, consider this alternative to the previous statement:</p>
+
+	 
+
+	 <div class="listing"><pre>
+
+     SELECT departmentId, SUM(salary) AS salarySubtotal
+
+     FROM employees
+
+     GROUP BY departmentId
+
+     </pre></div>
+
+	 
+
+	 <p>In this statement's <code>data</code> array, the result objects have two 
+
+	 properties named <code>departmentId</code> and <code>salarySubtotal</code>.</p>
+
+	 
+
+	 <p>The <code>data</code> property is always an Array regardless of how many rows
+
+	 and columns are in the result set. For example, the following <code>SELECT</code> statement
+
+	 results in one row and one column, which is essentially a single value:</p>
+
+	 
+
+	 <div class="listing"><pre>
+
+     SELECT COUNT(*) AS numEmployees
+
+     FROM employees
+
+     </pre></div>
+
+	 
+
+	 <p>After executing the query the <code>data</code> property contains an Array object
+
+	 with one element. That element is an object with a single property, 
+
+	 <code>numEmployees</code>.</p>
+
+	 
+
+	 <p>If there are duplicate column names in the result data, for example if the 
+
+	 <code>SELECT</code> statement includes an two different <code>id</code> columns 
+
+	 from two different tables, the duplicate names are given property names according 
+
+	 to the value of the <code>SQLConnection.columnNameStyle</code> property. By default, 
+
+	 each column's name is used as the property name, but if there is are multiple columns 
+
+	 in the result set with the same name, the long name format 
+
+	 <code>[table-name]_[column-name]</code> is used for the identically named columns. 
+
+	 This behavior can be changed by setting the <code>SQLConnection.columnNameStyle</code> 
+
+	 property.</p>
+
+	 
+
+	 <p>By default the objects in the <code>data</code> Array are Object instances. 
+
+	 However, by setting the value of the <code>SQLStatement.itemClass</code> property 
+
+	 to a class, the <code>data</code> Array elements are created as instances of 
+
+	 that class instead. For every column in the result data set, the 
+
+	 <code>itemClass</code> class must have a property whose name exactly matches the 
+
+	 column name.</p> 
+
+	 
+
+	 <p>If a statement does not return any data this property is <code>null</code>. 
+
+	 This is the case if the statement is not a <code>SELECT</code> statement, or if 
+
+	 it is a <code>SELECT</code> statement that returns 0 rows.</p>
+
+     
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="SQLConnection.html#columnNameStyle" target="">SQLConnection.columnNameStyle</a><br/><a href="SQLStatement.html#itemClass" target="">SQLStatement.itemClass</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="lastInsertRowID"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>lastInsertRowID</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>lastInsertRowID:Number</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+     The last generated row identifier generated by a SQL <code>INSERT</code>
+
+	 statement.
+
+	 
+     <p>The value is 0 if the executed statement was not an
+
+	 <code>INSERT</code> statement.</p>
+
+	 
+	 <p>A row identifier is used to uniquely identify a row in a table within
+
+     the database. The value is frequently generated by the database.</p>
+
+	 
+	 <p>For more information about primary keys and generated row identifiers,
+
+	 see the "CREATE TABLE" and
+
+	 "Expressions" sections in the appendix
+
+	 "<a href="http://adobe.com/go/learn_as3_sqlsupportdb_en" >SQL support in local databases</a>."</p>
+
+     
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="SQLConnection.html#lastInsertRowID" target="">SQLConnection.lastInsertRowID</a><br/><a href="../events/SQLUpdateEvent.html#rowID" target="">SQLUpdateEvent.rowID</a><br/><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118666ade46-7d12.html" target="_top">Retrieving a database-generated
+primary key of an inserted row</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="rowsAffected"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>rowsAffected</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>rowsAffected:Number</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+     Indicates how many rows were affected by the operation.
+
+     Only changes that are directly specified by an <code>INSERT</code>,
+
+     <code>UPDATE</code>, or <code>DELETE</code> statement are counted.
+
+     
+     <p>Auxiliary changes caused by triggers are not counted.
+
+     Use the <code>SQLConnection.totalChanges</code> property to find the total
+
+     number of changes including changes caused by triggers.</p>
+
+	 
+	 <p>Note that when the related SQL operation is a <code>DELETE</code> statement
+
+	 with no <code>WHERE</code> clause (that is, the statement deletes all the rows in the table),
+
+	 the <code>rowsAffected</code> property is always 0, regardless of the number of rows
+
+	 that were deleted. If you need to know the number of rows that are deleted, you can
+
+	 include the <code>WHERE</code> clause <code>WHERE 1 = 1</code>, in which case all
+
+	 the rows are deleted, and the <code>rowsAffected</code> property accurately
+
+	 reflects the number of rows that were deleted. However, depending on the number of
+
+	 rows being deleted, doing so may have a negative impact on the statement's performance.</p>
+
+     
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="SQLConnection.html#totalChanges" target="">SQLConnection.totalChanges</a></div></div></span><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><span id="pageFilter" runtime="AIR::1.0##"><a name="SQLResult()"></a><a name="SQLResult(Array,Number,Boolean,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>SQLResult</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function SQLResult(data:Array = null, rowsAffected:Number = 0, complete:Boolean = true, rowID:Number = 0)</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p>
+
+     Creates a SQLResult instance. Generally, developer code does not call the SQLResult
+
+     constructor directly. To retrieve a SQLResult instance associated with a particular SQLStatement
+
+     instance, call the instance's <code>getResult()</code> method. A SQLResult
+
+	 instance is also passed as an argument to the result handler function when
+
+	 a Responder instance is specified for an <code>execute()</code> or <code>next()</code>
+
+	 method call.
+
+     
+     </p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">data</span>:Array</code> (default = <code>null</code>)<code></code> &mdash; The array of rows returned from the execution of a statement. If
+
+     the statement doesn't return any rows this value should be null.
+
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">rowsAffected</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; Indicates how many rows the executed statement affected.
+
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">complete</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; Indicates whether there are additional rows that can
+
+     be fetched or whether all data has been returned.
+
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">rowID</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; If the statement was a SQL <code>INSERT</code> operation this is the new
+
+     unique identifier for the row.
+
+     
+     </td></tr></table></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script><p></p><center class="copyright"> &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><!--BEGIN IONCOMMENTS--><div id="ionComHere"></div><!--END IONCOMMENTS-->[an error occurred while processing this directive][an error occurred while processing this directive]<p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/en_US/legalnotices/index.html">Legal Notices</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online Privacy Policy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html><!-- &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  -->

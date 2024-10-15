@@ -1,0 +1,468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"><html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers"><meta name="lang" content="en-us"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="StatusEvent,flash.events.StatusEvent,STATUS,code,level,clone,toString"><title>flash.events.StatusEvent - Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers</title>
+	<link rel="stylesheet" href="../../jslr-style.css" type="text/css">
+		<script type="text/javascript">
+			
+				var baseRef = "../../";
+				var buildType = 'jslr';
+				var alreadyrunflag=0; //flag to indicate whether target function has already been run
+				var terms_HELPCFG = ".helpcfg";
+
+if (document.addEventListener)
+  document.addEventListener("DOMContentLoaded", function(){alreadyrunflag=1; init()}, false)
+else if (document.all && !window.opera){
+  /* blocks IE from working, as it's fired before dom if ready
+ document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
+  var contentloadtag=document.getElementById("contentloadtag")
+  contentloadtag.onreadystatechange=function(){
+    if (this.readyState=="complete"){
+      alreadyrunflag=1;
+      init();
+    }
+  }*/
+} else if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+  var _timer=setInterval(function(){
+  if(/loaded|complete/.test(document.readyState)){
+    clearInterval(_timer);
+    alreadyrunflag=1;
+    init(); // call target function
+  }}, 10)
+}
+function onLoadFunction() {
+	setTimeout("if (!alreadyrunflag) init();  alreadyrunflag=1; ionReadyLoad(); ", 0);
+}
+
+		</script>
+		<script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+		<script language="javascript" type="text/javascript" src="../../asdoc.js"></script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body onLoad="onLoadFunction()">
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td>
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr>
+				  <td class="titleTableTitleION" align="left" nowrap="true">Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers<br>
+				  <span class="titleTableTopNavION">
+				  <span id="homelink">
+						<a target="_self" href="../../index.html"> Home </a>&nbsp;|&nbsp;
+				  </span>
+				  <a id="showtoc" onClick="showHideTOC(true)" href="#top" style="display:none">Show Classes List</a><a id="hidetoc" onClick="showHideTOC(false)" href="#top" style="display:">Hide Classes List</a>&nbsp;|&nbsp;
+				  <a href="../../all-index-A.html"> Index </a>&nbsp;|&nbsp;
+				  <a href="../../appendixes.html"> Appendixes </a><br>
+				  </span>	
+				  </td>
+				  <td class="titleTableSearchION" align="right" nowrap="true">
+				  <span id="gsa" class="gsa">
+					<form class="searchFormION" method="get" onSubmit="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US');return false;">
+				  <input class="hidden" name="loc" value="" type="hidden">
+				  <input class="hidden" name="termPrefix" value="site:help.adobe.com/en_US/AS3CLR/Flash_10.0" type="hidden">
+				  <input class="hidden" name="title" value="ActionScript 3.0 Reference for the Adobe Flash Platform" type="hidden">
+				  <input class="hidden" name="term" value="" type="hidden">
+				  <input class="hidden" name="area" value="" type="hidden">
+				  <input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text">
+				  <input type="button" name="action" value="" onClick="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US')" class="searchbutton"><br>
+			      <input id="checkBoxId" type="checkbox" name="checkbox" value="checkbox" checked>Language Reference only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  </form>
+				  </span>				  
+				  </td>
+				</tr>
+			  </table>			
+			  </td>
+			<td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logoION.jpg" class="logoImageION" alt=" Adobe Logo " title=" Adobe Logo "></td>
+		  </tr>
+		  <tr>
+			<td colspan="2">
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr class="titleTableRow2">
+				<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+					<convert>StatusEvent&nbsp;</convert>
+				</td>
+				<td class="titleTableSubNav" id="subNav" align="right">
+				  <a id="propertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="propertiesBar" style="display:none"> | </span>
+				  <a id="packagePropertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="packagePropertiesBar" style="display:none"> | </span>
+				  <a id="constructorLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+				  <span id="constructorBar" style="display:none"> | </span>
+				  <a id="methodsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Methods </a>
+				  <span id="methodsBar" style="display:none"> | </span>
+				  <a id="packageFunctionsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Functions </a>
+				  <span id="packageFunctionsBar" style="display:none"> | </span>
+				  <a id="eventsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('eventSummary');" style="display:none"> Events </a>
+				  <span id="eventsBar" style="display:none"> | </span>
+				  <a id="stylesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('styleSummary');" style="display:none"> Styles </a>
+				  <span id="stylesBar" style="display:none"> | </span>
+				  <a id="SkinPartLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinPartSummary');" style="display:none"> Skin Parts </a>
+				  <span id="SkinPartBar" style="display:none"> | </span>
+				  <a id="SkinStateLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinStateSummary');" style="display:none"> Skin States </a>
+				  <span id="SkinStateBar" style="display:none"> | </span>
+				  <a id="effectsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('effectSummary');" style="display:none"> Effects </a>
+				  <span id="effectsBar" style="display:none"> | </span>
+				  <a id="constantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="constantsBar" style="display:none"> | </span>
+				  <a id="packageConstantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="packageConstantsBar" style="display:none"> | </span>
+				  <a id="interfacesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('interfaceSummary');" style="display:none"> Interfaces </a>
+				  <span id="interfacesBar" style="display:none"> | </span>
+				  <a id="classesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('classSummary');" style="display:none"> Classes </a>
+				  <span id="classesBar" style="display:none"> | </span>
+				  <a id="packageUseLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('package-use.html');" style="display:none">Use</a>
+				  <span id="packageUseBar" style="display:none"> | </span>
+				  <a id="examplesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('includeExamplesSummary');" style="display:none"> Examples </a>
+				</td>
+				</tr>
+				<tr class="titleTableRow3">
+				  <td colspan="4"></td>
+				</tr>
+			  </table>
+			</td>
+		  </tr>
+		</table>
+        <div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="classlist" class="jslrclasslist">
+					<div class="classlistoutline"></div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content">
+<script language="javascript" type="text/javascript">  <!--  
+         
+        asdocTitle = "StatusEvent - Adobe® AIR® API Reference for HTML Developers"; 
+        var baseRef = '../../'; 
+	document.baseRef = '../../'; 
+          -->  </script>
+<script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+<script language="javascript" type="text/javascript"><!--
+function submitValue() {
+var title="Adobe® AIR® API Reference for HTML Developers";
+var searchStr=document.getElementById('search-livedocs').value;
+
+        
+        
+        if(document.getElementById('checkBoxId').checked){
+        window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
++"&site=communityhelp-air-jslr ";
+} 
+
+        else{ 
+window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
+;
+} 
+} 
+--></script><script type="text/javascript"> scrollToNameAnchor(); </script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">window.runtime property</td><td>window.runtime.flash.events.StatusEvent</td></tr><tr><td class="classSignature"></td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">StatusEvent  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="Event.html">Event</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><div id="badgeAnchorSupport" class="ionBadgeWrapper"></div><div id="badgeContainerSupport"></div><p></p><p></p>
+
+ An object dispatches a StatusEvent object when a device, such as a camera or microphone, or an object such as a LocalConnection object reports its status. There is only one type of status event: <code>StatusEvent.STATUS</code>.
+
+ 
+
+ <p></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="../media/Microphone.html" target="">Microphone</a><br/><a href="../net/LocalConnection.html" target="">LocalConnection</a><br/><a href="../../air/net/ServiceMonitor.html" target="">ServiceMonitor</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Properties</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Properties</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Properties</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th>Defined By</th></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#bubbles" class="signatureLink">bubbles</a> : Boolean<div class="summaryTableDescription">[read-only] 
+
+	Indicates whether an event is a bubbling event.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#cancelable" class="signatureLink">cancelable</a> : Boolean<div class="summaryTableDescription">[read-only] 
+
+	Indicates whether the behavior associated with the event can be prevented.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#code" class="signatureLink">code</a> : String<div class="summaryTableDescription">
+
+	 A description of the object's status.</div></td><td class="summaryTableOwnerCol">StatusEvent</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">constructor : Object<div class="summaryTableDescription">
+
+	 A reference to the class object or constructor function for a given object instance.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#currentTarget" class="signatureLink">currentTarget</a> : Object<div class="summaryTableDescription">[read-only] 
+
+	The object that is actively processing the Event object with an event listener.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#eventPhase" class="signatureLink">eventPhase</a> : uint<div class="summaryTableDescription">[read-only] 
+
+	The current phase in the event flow.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#level" class="signatureLink">level</a> : String<div class="summaryTableDescription">
+
+ 	 The category of the message, such as "status", "warning" or "error".</div></td><td class="summaryTableOwnerCol">StatusEvent</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">prototype : Object<div class="summaryTableDescription">[static] 
+
+	 A reference to the prototype object of a class or function object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#target" class="signatureLink">target</a> : Object<div class="summaryTableDescription">[read-only] 
+
+	The event target.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#type" class="signatureLink">type</a> : String<div class="summaryTableDescription">[read-only] 
+
+	The type of event.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Public Methods </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Methods</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th>Defined By</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#StatusEvent()" class="signatureLink">StatusEvent</a>(type:String, bubbles:Boolean = false, cancelable:Boolean = false, code:String = "", level:String = "")</div><div class="summaryTableDescription">
+
+	 Creates an Event object that contains information about status events.</div></td><td class="summaryTableOwnerCol">StatusEvent</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#clone()" class="signatureLink">clone</a>():<a href="Event.html">Event</a></div><div class="summaryTableDescription">[override] 
+
+	 Creates a copy of the StatusEvent object and sets the value of each property to match that of the original.</div></td><td class="summaryTableOwnerCol">StatusEvent</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Event.html#formatToString()" class="signatureLink">formatToString</a>(className:String, ... arguments):String</div><div class="summaryTableDescription">
+
+	 A utility function for implementing the toString() method in custom 
+
+	 ActionScript 3.0 Event classes.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">hasOwnProperty(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an object has a specified property defined.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Event.html#isDefaultPrevented()" class="signatureLink">isDefaultPrevented</a>():Boolean</div><div class="summaryTableDescription">
+
+	Checks whether the preventDefault() method has been called on the event.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">isPrototypeOf(theClass:Object):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+
+	 as the parameter.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Event.html#preventDefault()" class="signatureLink">preventDefault</a>():void</div><div class="summaryTableDescription">
+
+	Cancels an event's default behavior if that behavior can be canceled.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">propertyIsEnumerable(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether the specified property exists and is enumerable.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">setPropertyIsEnumerable(name:String, isEnum:Boolean = true):void</div><div class="summaryTableDescription">
+
+     Sets the availability of a dynamic property for loop operations.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Event.html#stopImmediatePropagation()" class="signatureLink">stopImmediatePropagation</a>():void</div><div class="summaryTableDescription">
+
+	Prevents processing of any event listeners in the current node and any subsequent nodes in 
+
+	the event flow.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="Event.html#stopPropagation()" class="signatureLink">stopPropagation</a>():void</div><div class="summaryTableDescription">
+
+	Prevents processing of any event listeners in nodes subsequent to the current node in the 
+
+	event flow.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toLocaleString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of this object, formatted according to locale-specific conventions.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#toString()" class="signatureLink">toString</a>():String</div><div class="summaryTableDescription">[override] 
+
+	 Returns a string that contains all the properties of the StatusEvent object.</div></td><td class="summaryTableOwnerCol">StatusEvent</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">valueOf():Object</div><div class="summaryTableDescription">
+
+	 Returns the primitive value of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="constantSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Constants</div><div class="showHideLinks"><div id="hideInheritedConstant" class="hideInheritedConstant"><a class="showHideLink" href="#constantSummary" onclick="javascript:setInheritedVisible(false,'Constant');"></a></div><div id="showInheritedConstant" class="showInheritedConstant"><a class="showHideLink" href="#constantSummary" onclick="javascript:setInheritedVisible(true,'Constant');"></a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th>Defined By</th></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#ACTIVATE" class="signatureLink">ACTIVATE</a> : String = "activate"<div class="summaryTableDescription">[static] 
+
+	The ACTIVATE constant defines the value of the type property of an activate event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#ADDED" class="signatureLink">ADDED</a> : String = "added"<div class="summaryTableDescription">[static] 
+
+	The Event.ADDED constant defines the value of the type property of 
+
+	an added event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9.0.28.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#ADDED_TO_STAGE" class="signatureLink">ADDED_TO_STAGE</a> : String = "addedToStage"<div class="summaryTableDescription">[static] 
+
+	The Event.ADDED_TO_STAGE constant defines the value of the type 
+
+	property of an addedToStage event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#CANCEL" class="signatureLink">CANCEL</a> : String = "cancel"<div class="summaryTableDescription">[static] 
+
+	The Event.CANCEL constant defines the value of the type property of a cancel event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#CHANGE" class="signatureLink">CHANGE</a> : String = "change"<div class="summaryTableDescription">[static] 
+
+	The Event.CHANGE constant defines the value of the type property of a change event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#CLEAR" class="signatureLink">CLEAR</a> : String = "clear"<div class="summaryTableDescription">[static] 
+
+	The Event.CLEAR constant defines the value of the type property 
+
+	of a clear event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#CLOSE" class="signatureLink">CLOSE</a> : String = "close"<div class="summaryTableDescription">[static] 
+
+	The Event.CLOSE constant defines the value of the type property of a close event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#CLOSING" class="signatureLink">CLOSING</a> : String = "closing"<div class="summaryTableDescription">[static] 
+
+	The Event.CLOSING constant defines the value of the 
+
+	type property of a closing event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#COMPLETE" class="signatureLink">COMPLETE</a> : String = "complete"<div class="summaryTableDescription">[static] 
+
+	The Event.COMPLETE constant defines the value of the type property of a complete event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#CONNECT" class="signatureLink">CONNECT</a> : String = "connect"<div class="summaryTableDescription">[static] 
+
+	The Event.CONNECT constant defines the value of the type property of a connect event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#CONTEXT3D_CREATE" class="signatureLink">CONTEXT3D_CREATE</a> : String = "context3DCreate"<div class="summaryTableDescription">[static] 
+
+	 The Event.CONTEXT3D_CREATE constant defines the value of the type 
+
+	 property of a context3Dcreate event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#COPY" class="signatureLink">COPY</a> : String = "copy"<div class="summaryTableDescription">[static] 
+
+	Defines the value of the type property of a copy event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#CUT" class="signatureLink">CUT</a> : String = "cut"<div class="summaryTableDescription">[static] 
+
+	Defines the value of the type property of a cut event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#DEACTIVATE" class="signatureLink">DEACTIVATE</a> : String = "deactivate"<div class="summaryTableDescription">[static] 
+
+	The Event.DEACTIVATE constant defines the value of the type property of a deactivate event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#DISPLAYING" class="signatureLink">DISPLAYING</a> : String = "displaying"<div class="summaryTableDescription">[static] 
+
+	 The Event.DISPLAYING constant defines the value of the type property of a displaying event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#ENTER_FRAME" class="signatureLink">ENTER_FRAME</a> : String = "enterFrame"<div class="summaryTableDescription">[static] 
+
+	The Event.ENTER_FRAME constant defines the value of the type property of an enterFrame event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#EXIT_FRAME" class="signatureLink">EXIT_FRAME</a> : String = "exitFrame"<div class="summaryTableDescription">[static] 
+
+	The Event.EXIT_FRAME constant defines the value of the type property of an exitFrame event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#EXITING" class="signatureLink">EXITING</a> : String = "exiting"<div class="summaryTableDescription">[static] 
+
+	The Event.EXITING constant defines the value of the type property of an exiting event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#FRAME_CONSTRUCTED" class="signatureLink">FRAME_CONSTRUCTED</a> : String = "frameConstructed"<div class="summaryTableDescription">[static] 
+
+	The Event.FRAME_CONSTRUCTED constant defines the value of the type property of an frameConstructed event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#FULLSCREEN" class="signatureLink">FULLSCREEN</a> : String = "fullScreen"<div class="summaryTableDescription">[static] 
+
+	The Event.FULL_SCREEN constant defines the value of the type property of a fullScreen event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#HTML_BOUNDS_CHANGE" class="signatureLink">HTML_BOUNDS_CHANGE</a> : String = "htmlBoundsChange"<div class="summaryTableDescription">[static] 
+
+	The Event.HTML_BOUNDS_CHANGE constant defines the value of the type property of an htmlBoundsChange event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#HTML_DOM_INITIALIZE" class="signatureLink">HTML_DOM_INITIALIZE</a> : String = "htmlDOMInitialize"<div class="summaryTableDescription">[static] 
+
+	The Event.HTML_DOM_INITIALIZE constant defines the value of the type property 
+
+	of an htmlDOMInitialize event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#HTML_RENDER" class="signatureLink">HTML_RENDER</a> : String = "htmlRender"<div class="summaryTableDescription">[static] 
+
+	The Event.HTML_RENDER constant defines the value of the type property of an htmlRender event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#ID3" class="signatureLink">ID3</a> : String = "id3"<div class="summaryTableDescription">[static] 
+
+	The Event.ID3 constant defines the value of the type property of an id3 event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#INIT" class="signatureLink">INIT</a> : String = "init"<div class="summaryTableDescription">[static] 
+
+	The Event.INIT constant defines the value of the type property of an init event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#LOCATION_CHANGE" class="signatureLink">LOCATION_CHANGE</a> : String = "locationChange"<div class="summaryTableDescription">[static] 
+
+	The Event.LOCATION_CHANGE constant defines the value of the type property of a locationChange event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#MOUSE_LEAVE" class="signatureLink">MOUSE_LEAVE</a> : String = "mouseLeave"<div class="summaryTableDescription">[static] 
+
+	The Event.MOUSE_LEAVE constant defines the value of the type property of a mouseLeave event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#NETWORK_CHANGE" class="signatureLink">NETWORK_CHANGE</a> : String = "networkChange"<div class="summaryTableDescription">[static] 
+
+	The Event.NETWORK_CHANGE constant defines the value of the type property of a networkChange event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#OPEN" class="signatureLink">OPEN</a> : String = "open"<div class="summaryTableDescription">[static] 
+
+	The Event.OPEN constant defines the value of the type property of an open event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#PASTE" class="signatureLink">PASTE</a> : String = "paste"<div class="summaryTableDescription">[static] 
+
+	The Event.PASTE constant defines the value of the type property of a paste event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="AIR::2.6##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#PREPARING" class="signatureLink">PREPARING</a> : String = "preparing"<div class="summaryTableDescription">[static] 
+
+	 The Event.PREPARING constant defines the value of the type property of a preparing event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#REMOVED" class="signatureLink">REMOVED</a> : String = "removed"<div class="summaryTableDescription">[static] 
+
+	The Event.REMOVED constant defines the value of the type property of
+
+	a removed event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9.0.28.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#REMOVED_FROM_STAGE" class="signatureLink">REMOVED_FROM_STAGE</a> : String = "removedFromStage"<div class="summaryTableDescription">[static] 
+
+	The Event.REMOVED_FROM_STAGE constant defines the value of the type 
+
+	property of a removedFromStage event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#RENDER" class="signatureLink">RENDER</a> : String = "render"<div class="summaryTableDescription">[static] 
+
+	The Event.RENDER constant defines the value of the type property of a render event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#RESIZE" class="signatureLink">RESIZE</a> : String = "resize"<div class="summaryTableDescription">[static] 
+
+	The Event.RESIZE constant defines the value of the type property of a resize event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#SCROLL" class="signatureLink">SCROLL</a> : String = "scroll"<div class="summaryTableDescription">[static] 
+
+	The Event.SCROLL constant defines the value of the type property of a scroll event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#SELECT" class="signatureLink">SELECT</a> : String = "select"<div class="summaryTableDescription">[static] 
+
+	The Event.SELECT constant defines the value of the type property of a select event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#SELECT_ALL" class="signatureLink">SELECT_ALL</a> : String = "selectAll"<div class="summaryTableDescription">[static] 
+
+	The Event.SELECT_ALL constant defines the value of the type property of a selectAll event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#SOUND_COMPLETE" class="signatureLink">SOUND_COMPLETE</a> : String = "soundComplete"<div class="summaryTableDescription">[static] 
+
+	The Event.SOUND_COMPLETE constant defines the value of the type property of a soundComplete event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="AIR::2##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#STANDARD_ERROR_CLOSE" class="signatureLink">STANDARD_ERROR_CLOSE</a> : String = "standardErrorClose"<div class="summaryTableDescription">[static] 
+
+	The Event.STANDARD_ERROR_CLOSE constant defines the value of the type property of a standardErrorClose event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="AIR::2##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#STANDARD_INPUT_CLOSE" class="signatureLink">STANDARD_INPUT_CLOSE</a> : String = "standardInputClose"<div class="summaryTableDescription">[static] 
+
+	The Event.STANDARD_INPUT_CLOSE constant defines the value of the type property of a standardInputClose event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="AIR::2##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#STANDARD_OUTPUT_CLOSE" class="signatureLink">STANDARD_OUTPUT_CLOSE</a> : String = "standardOutputClose"<div class="summaryTableDescription">[static] 
+
+	The Event.STANDARD_OUTPUT_CLOSE constant defines the value of the type property of a standardOutputClose event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#STATUS" class="signatureLink">STATUS</a> : String = "status"<div class="summaryTableDescription">[static] 
+
+     Defines the value of the type property of a status event object.</div></td><td class="summaryTableOwnerCol">StatusEvent</td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#TAB_CHILDREN_CHANGE" class="signatureLink">TAB_CHILDREN_CHANGE</a> : String = "tabChildrenChange"<div class="summaryTableDescription">[static] 
+
+	The Event.TAB_CHILDREN_CHANGE constant defines the value of the type property of a tabChildrenChange event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#TAB_ENABLED_CHANGE" class="signatureLink">TAB_ENABLED_CHANGE</a> : String = "tabEnabledChange"<div class="summaryTableDescription">[static] 
+
+	The Event.TAB_ENABLED_CHANGE constant defines the value of the type 
+
+	property of a tabEnabledChange event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#TAB_INDEX_CHANGE" class="signatureLink">TAB_INDEX_CHANGE</a> : String = "tabIndexChange"<div class="summaryTableDescription">[static] 
+
+	The Event.TAB_INDEX_CHANGE constant defines the value of the 
+
+	type property of a tabIndexChange event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::11##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#TEXT_INTERACTION_MODE_CHANGE" class="signatureLink">TEXT_INTERACTION_MODE_CHANGE</a> : String = "textInteractionModeChange"<div class="summaryTableDescription">[static] 
+
+	The Event.TEXT_INTERACTION_MODE_CHANGE constant defines the value of the type property of an interaction mode event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#UNLOAD" class="signatureLink">UNLOAD</a> : String = "unload"<div class="summaryTableDescription">[static] 
+
+	The Event.UNLOAD constant defines the value of the type property of an unload event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#USER_IDLE" class="signatureLink">USER_IDLE</a> : String = "userIdle"<div class="summaryTableDescription">[static] 
+
+	The Event.USER_IDLE constant defines the value of the type property of a userIdle event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr><tr class="hideInheritedConstant" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><a href="Event.html#USER_PRESENT" class="signatureLink">USER_PRESENT</a> : String = "userPresent"<div class="summaryTableDescription">[static] 
+
+	The Event.USER_PRESENT constant defines the value of the type property of a userPresent event object.</div></td><td class="summaryTableOwnerCol"><a href="Event.html">Event</a></td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Property Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="code"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>code</h2></td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>code:String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 A description of the object's status.
+
+	 
+
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../media/Microphone.html" target="">Microphone</a><br/><a href="../net/LocalConnection.html" target="">LocalConnection</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="level"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>level</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>level:String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ 	 The category of the message, such as <code>"status"</code>, <code>"warning"</code> or <code>"error"</code>.
+
+	 
+
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../media/Microphone.html" target="">Microphone</a><br/><a href="../net/LocalConnection.html" target="">LocalConnection</a></div></div></span><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="StatusEvent()"></a><a name="StatusEvent(String,Boolean,Boolean,String,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>StatusEvent</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function StatusEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, code:String = "", level:String = "")</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p>
+
+	 Creates an Event object that contains information about status events.
+
+	 Event objects are passed as parameters to event listeners.
+
+	 
+	 </p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:String</code> &mdash;  The type of the event. Event listeners can access this information through the inherited <code>type</code> property. There is only one type of status event: <code>StatusEvent.STATUS</code>.
+
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">bubbles</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Determines whether the Event object participates in the bubbling stage of the event flow. Event listeners can access this information through the inherited <code>bubbles</code> property.  
+
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">cancelable</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Determines whether the Event object can be canceled. Event listeners can access this information through the inherited <code>cancelable</code> property. 
+
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">code</span>:String</code> (default = "<code></code>")<code></code> &mdash; A description of the object's status. Event listeners can access this information through the <code>code</code> property.
+
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">level</span>:String</code> (default = "<code></code>")<code></code> &mdash; The category of the message, such as <code>"status"</code>, <code>"warning"</code> or <code>"error"</code>. Event listeners can access this information through the <code>level</code> property.
+
+	 
+	 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="StatusEvent.html#STATUS" target="">STATUS</a></div></div></span><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="clone()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>clone</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function clone():<a href="Event.html">Event</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 Creates a copy of the StatusEvent object and sets the value of each property to match that of the original. 
+
+	 
+
+	 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Event.html">Event</a></code> &mdash; A new StatusEvent object with property values that match those of the original.
+
+	  
+
+	  </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="toString()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>toString</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function toString():String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 Returns a string that contains all the properties of the StatusEvent object. The string is in the following format:
+
+	 <p><code>[StatusEvent type=<i>value</i> bubbles=<i>value</i> cancelable=<i>value</i> code=<i>value</i> level=<i>value</i>]</code></p>
+
+	 
+
+	 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; A string that contains all the properties of the StatusEvent object.
+
+	  
+
+	  </td></tr></table></div></span><div class="detailSectionHeader">Constant Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="constantDetail"></a><a name="STATUS"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>STATUS</h2></td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const STATUS:String = "status"</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Defines the value of the <code>type</code> property of a <code>status</code> event object.
+
+	 <p>This event has the following properties:</p>
+
+	 <table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>code</code></td><td>A description of the object's status.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	 object with an event listener.</td></tr><tr><td><code>level</code></td><td>The category of the message, such as <code>"status"</code>, <code>"warning"</code> or <code>"error"</code>.</td></tr><tr><td><code>target</code></td><td>The object reporting its status.</td></tr></table>
+
+	 
+
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../flash/media/Microphone.html#event:status#event:status" target="">Microphone.status</a><br/><a href="../../flash/net/LocalConnection.html#event:status#event:status" target="">LocalConnection.status</a><br/></div></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script><p></p><center class="copyright"> &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><!--BEGIN IONCOMMENTS--><div id="ionComHere"></div><!--END IONCOMMENTS-->[an error occurred while processing this directive][an error occurred while processing this directive]<p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/en_US/legalnotices/index.html">Legal Notices</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online Privacy Policy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html><!-- &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  -->

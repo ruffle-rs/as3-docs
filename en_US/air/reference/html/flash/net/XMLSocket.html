@@ -1,0 +1,721 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"><html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers"><meta name="lang" content="en-us"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="XMLSocket,flash.net.XMLSocket,connected,timeout,close,connect,send"><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" src="../../AC_OETags.js" type="text/javascript"></script><title>flash.net.XMLSocket - Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers</title>
+	<link rel="stylesheet" href="../../jslr-style.css" type="text/css">
+		<script type="text/javascript">
+			
+				var baseRef = "../../";
+				var buildType = 'jslr';
+				var alreadyrunflag=0; //flag to indicate whether target function has already been run
+				var terms_HELPCFG = ".helpcfg";
+
+if (document.addEventListener)
+  document.addEventListener("DOMContentLoaded", function(){alreadyrunflag=1; init()}, false)
+else if (document.all && !window.opera){
+  /* blocks IE from working, as it's fired before dom if ready
+ document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
+  var contentloadtag=document.getElementById("contentloadtag")
+  contentloadtag.onreadystatechange=function(){
+    if (this.readyState=="complete"){
+      alreadyrunflag=1;
+      init();
+    }
+  }*/
+} else if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+  var _timer=setInterval(function(){
+  if(/loaded|complete/.test(document.readyState)){
+    clearInterval(_timer);
+    alreadyrunflag=1;
+    init(); // call target function
+  }}, 10)
+}
+function onLoadFunction() {
+	setTimeout("if (!alreadyrunflag) init();  alreadyrunflag=1; ionReadyLoad(); ", 0);
+}
+
+		</script>
+		<script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+		<script language="javascript" type="text/javascript" src="../../asdoc.js"></script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body onLoad="onLoadFunction()">
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td>
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr>
+				  <td class="titleTableTitleION" align="left" nowrap="true">Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers<br>
+				  <span class="titleTableTopNavION">
+				  <span id="homelink">
+						<a target="_self" href="../../index.html"> Home </a>&nbsp;|&nbsp;
+				  </span>
+				  <a id="showtoc" onClick="showHideTOC(true)" href="#top" style="display:none">Show Classes List</a><a id="hidetoc" onClick="showHideTOC(false)" href="#top" style="display:">Hide Classes List</a>&nbsp;|&nbsp;
+				  <a href="../../all-index-A.html"> Index </a>&nbsp;|&nbsp;
+				  <a href="../../appendixes.html"> Appendixes </a><br>
+				  </span>	
+				  </td>
+				  <td class="titleTableSearchION" align="right" nowrap="true">
+				  <span id="gsa" class="gsa">
+					<form class="searchFormION" method="get" onSubmit="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US');return false;">
+				  <input class="hidden" name="loc" value="" type="hidden">
+				  <input class="hidden" name="termPrefix" value="site:help.adobe.com/en_US/AS3CLR/Flash_10.0" type="hidden">
+				  <input class="hidden" name="title" value="ActionScript 3.0 Reference for the Adobe Flash Platform" type="hidden">
+				  <input class="hidden" name="term" value="" type="hidden">
+				  <input class="hidden" name="area" value="" type="hidden">
+				  <input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text">
+				  <input type="button" name="action" value="" onClick="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US')" class="searchbutton"><br>
+			      <input id="checkBoxId" type="checkbox" name="checkbox" value="checkbox" checked>Language Reference only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  </form>
+				  </span>				  
+				  </td>
+				</tr>
+			  </table>			
+			  </td>
+			<td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logoION.jpg" class="logoImageION" alt=" Adobe Logo " title=" Adobe Logo "></td>
+		  </tr>
+		  <tr>
+			<td colspan="2">
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr class="titleTableRow2">
+				<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+					<convert>XMLSocket&nbsp;</convert>
+				</td>
+				<td class="titleTableSubNav" id="subNav" align="right">
+				  <a id="propertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="propertiesBar" style="display:none"> | </span>
+				  <a id="packagePropertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="packagePropertiesBar" style="display:none"> | </span>
+				  <a id="constructorLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+				  <span id="constructorBar" style="display:none"> | </span>
+				  <a id="methodsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Methods </a>
+				  <span id="methodsBar" style="display:none"> | </span>
+				  <a id="packageFunctionsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Functions </a>
+				  <span id="packageFunctionsBar" style="display:none"> | </span>
+				  <a id="eventsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('eventSummary');" style="display:none"> Events </a>
+				  <span id="eventsBar" style="display:none"> | </span>
+				  <a id="stylesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('styleSummary');" style="display:none"> Styles </a>
+				  <span id="stylesBar" style="display:none"> | </span>
+				  <a id="SkinPartLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinPartSummary');" style="display:none"> Skin Parts </a>
+				  <span id="SkinPartBar" style="display:none"> | </span>
+				  <a id="SkinStateLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinStateSummary');" style="display:none"> Skin States </a>
+				  <span id="SkinStateBar" style="display:none"> | </span>
+				  <a id="effectsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('effectSummary');" style="display:none"> Effects </a>
+				  <span id="effectsBar" style="display:none"> | </span>
+				  <a id="constantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="constantsBar" style="display:none"> | </span>
+				  <a id="packageConstantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="packageConstantsBar" style="display:none"> | </span>
+				  <a id="interfacesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('interfaceSummary');" style="display:none"> Interfaces </a>
+				  <span id="interfacesBar" style="display:none"> | </span>
+				  <a id="classesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('classSummary');" style="display:none"> Classes </a>
+				  <span id="classesBar" style="display:none"> | </span>
+				  <a id="packageUseLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('package-use.html');" style="display:none">Use</a>
+				  <span id="packageUseBar" style="display:none"> | </span>
+				  <a id="examplesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('includeExamplesSummary');" style="display:none"> Examples </a>
+				</td>
+				</tr>
+				<tr class="titleTableRow3">
+				  <td colspan="4"></td>
+				</tr>
+			  </table>
+			</td>
+		  </tr>
+		</table>
+        <div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="classlist" class="jslrclasslist">
+					<div class="classlistoutline"></div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content">
+<script language="javascript" type="text/javascript">  <!--  
+         
+        asdocTitle = "XMLSocket - Adobe® AIR® API Reference for HTML Developers"; 
+        var baseRef = '../../'; 
+	document.baseRef = '../../'; 
+          -->  </script>
+<script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+<script language="javascript" type="text/javascript"><!--
+function submitValue() {
+var title="Adobe® AIR® API Reference for HTML Developers";
+var searchStr=document.getElementById('search-livedocs').value;
+
+        
+        
+        if(document.getElementById('checkBoxId').checked){
+        window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
++"&site=communityhelp-air-jslr ";
+} 
+
+        else{ 
+window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
+;
+} 
+} 
+--></script><script type="text/javascript"> scrollToNameAnchor(); </script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">window.runtime property</td><td>window.runtime.flash.net.XMLSocket</td></tr><tr><td class="classSignature"></td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">XMLSocket  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><div id="badgeAnchorSupport" class="ionBadgeWrapper"></div><div id="badgeContainerSupport"></div><p></p><p></p>
+
+ 
+ The XMLSocket class implements client sockets that let the 
+
+  AIR application communicate
+
+ with a server computer identified by an IP address or domain name. The XMLSocket class is useful for
+
+ client-server applications that require low latency, such as real-time chat systems. A traditional 
+
+ HTTP-based chat solution frequently polls the server and downloads new messages using an HTTP 
+
+ request. In contrast, an XMLSocket chat solution maintains an open connection to the server, which
+
+ lets the server immediately send incoming messages without a request from the client.
+
+ To use the XMLSocket class, the server computer must run a daemon that understands the protocol used
+
+ by the XMLSocket class. The protocol is described in the following list: 
+
+ <ul>
+                  <li>XML messages are sent over a full-duplex TCP/IP stream socket connection.</li>
+                  <li>Each XML message is a complete XML document, terminated by a zero (0) byte.</li>
+                  <li>An unlimited number of XML messages can be sent and received over a single XMLSocket 
+
+ connection.</li>
+               </ul>
+
+ 
+
+               <p>Setting up a server to communicate with the XMLSocket object can be challenging. If your application
+
+ does not require real-time interactivity, use the URLLoader class instead of the XMLSocket class. </p>
+
+ 
+               <p>To use the methods of the XMLSocket class, first use the constructor, <code>new XMLSocket</code>,
+
+ to create an XMLSocket object.</p>
+
+ 
+               <p>SWF files in the local-with-filesystem sandbox may not use sockets.</p>
+
+      
+
+               <p> 
+                  <i>Socket policy files</i> on the target host specify the hosts from which SWF files
+
+  can make socket connections, and the ports to which those connections can be made.
+
+  The security requirements with regard to socket policy files have become more stringent
+
+  in the last several releases of Flash Player. 
+
+  In all versions of Flash Player, Adobe recommends the use of a socket policy file; 
+
+  in some circumstances, a socket policy file is required. Therefore, if you
+
+  are using XMLSocket objects, make sure that the target host provides a socket policy file
+
+  if necessary. </p>
+
+ 
+
+               <p>The following list summarizes the requirements for socket policy files
+
+  in different versions of Flash Player:</p>
+
+ 
+               <ul>
+                  <li> In Flash Player 9.0.124.0 and later, a socket policy file is required for any XMLSocket connection.
+
+      That is, a socket policy file on the target host is required no matter what port 
+
+      you are connecting to, and is required even if you are connecting 
+
+      to a port on the same host that is serving the SWF file. </li>
+                  <li> In Flash Player versions 9.0.115.0 and earlier, if you want to connect to a port number below 1024,
+
+      or if you want to connect to a host other than the one serving the SWF file, 
+
+      a socket policy file on the target host is required. </li>
+                  <li> In Flash Player 9.0.115.0, even if a socket policy file isn't required, 
+
+      a warning is displayed when using the Flash Debug Player if the target host
+
+      doesn't serve a socket policy file. </li>
+               </ul>
+
+ 
+
+               <p>However, in Adobe AIR, content in the <code>application</code> security sandbox (content
+
+ installed with the AIR application) are not restricted by these security limitations.</p>
+
+ 
+
+               <p>For more information related to security, see the Flash Player Developer Center Topic: 
+
+ <a href="http://www.adobe.com/go/devnet_security_en" target="external">Security</a>.</p>
+
+ 
+            <p></p><p><a href="#includeExamplesSummary">View the examples</a></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="URLLoader.html#load()" target="">URLLoader.load()</a><br/><a href="URLLoader.html" target="">URLLoader</a><br/><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118a9b90204-7cfb.html" target="_top">Binary client sockets</a><br/><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118a9b90204-7c63.html" target="_top">Connecting to sockets</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Properties</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Properties</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Properties</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th>Defined By</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#connected" class="signatureLink">connected</a> : Boolean<div class="summaryTableDescription">[read-only] 
+
+     Indicates whether this XMLSocket object is currently connected.</div></td><td class="summaryTableOwnerCol">XMLSocket</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">constructor : Object<div class="summaryTableDescription">
+
+	 A reference to the class object or constructor function for a given object instance.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">prototype : Object<div class="summaryTableDescription">[static] 
+
+	 A reference to the prototype object of a class or function object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#timeout" class="signatureLink">timeout</a> : int<div class="summaryTableDescription">
+
+     Indicates the number of milliseconds to wait for a connection.</div></td><td class="summaryTableOwnerCol">XMLSocket</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Public Methods </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Methods</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th>Defined By</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#XMLSocket()" class="signatureLink">XMLSocket</a>(host:String = null, port:int = 0)</div><div class="summaryTableDescription">
+
+    Creates a new XMLSocket object.</div></td><td class="summaryTableOwnerCol">XMLSocket</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#addEventListener()" class="signatureLink">addEventListener</a>(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void</div><div class="summaryTableDescription">
+
+	Registers an event listener object with an EventDispatcher object so that the listener 
+
+	receives notification of an event.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#close()" class="signatureLink">close</a>():void</div><div class="summaryTableDescription">
+
+     Closes the connection specified by the XMLSocket object.</div></td><td class="summaryTableOwnerCol">XMLSocket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#connect()" class="signatureLink">connect</a>(host:String, port:int):void</div><div class="summaryTableDescription">
+
+     Establishes a connection to the specified Internet host using the specified TCP port.</div></td><td class="summaryTableOwnerCol">XMLSocket</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../events/Event.html">Event</a>):Boolean</div><div class="summaryTableDescription">
+
+	Dispatches an event into the event flow.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:String):Boolean</div><div class="summaryTableDescription">
+
+	Checks whether the EventDispatcher object has any listeners registered for a specific type 
+
+	of event.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">hasOwnProperty(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an object has a specified property defined.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">isPrototypeOf(theClass:Object):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+
+	 as the parameter.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">propertyIsEnumerable(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether the specified property exists and is enumerable.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#removeEventListener()" class="signatureLink">removeEventListener</a>(type:String, listener:Function, useCapture:Boolean = false):void</div><div class="summaryTableDescription">
+
+	Removes a listener from the EventDispatcher object.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#send()" class="signatureLink">send</a>(object:*):void</div><div class="summaryTableDescription">
+
+     Converts the XML object or data specified in the object parameter
+
+     to a string and transmits it to the server, followed by a zero (0) byte.</div></td><td class="summaryTableOwnerCol">XMLSocket</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">setPropertyIsEnumerable(name:String, isEnum:Boolean = true):void</div><div class="summaryTableDescription">
+
+     Sets the availability of a dynamic property for loop operations.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toLocaleString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of this object, formatted according to locale-specific conventions.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">valueOf():Object</div><div class="summaryTableDescription">
+
+	 Returns the primitive value of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:String):Boolean</div><div class="summaryTableDescription">
+
+	Checks whether an event listener is registered with this EventDispatcher object or any of 
+
+	its ancestors for the specified event type.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Events</div><div class="showHideLinks"><div id="hideInheritedEvent" class="hideInheritedEvent"><a class="showHideLink" href="#eventSummary" onclick="javascript:setInheritedVisible(false,'Event');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Events</a></div><div id="showInheritedEvent" class="showInheritedEvent"><a class="showHideLink" href="#eventSummary" onclick="javascript:setInheritedVisible(true,'Event');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Events</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th>Defined By</th></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#event:activate#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[broadcast event] Dispatched when the Flash Player or AIR application gains operating system focus and becomes active.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:close" class="signatureLink">close</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when the server closes the socket connection.</td><td class="summaryTableOwnerCol">XMLSocket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:connect" class="signatureLink">connect</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched after a successful call to the XMLSocket.connect() method.</td><td class="summaryTableOwnerCol">XMLSocket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:data" class="signatureLink">data</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched after raw data is sent or received.</td><td class="summaryTableOwnerCol">XMLSocket</td></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#event:deactivate#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[broadcast event] Dispatched when the Flash Player or AIR application operating loses system focus and is becoming inactive.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:ioError" class="signatureLink">ioError</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when an input/output error occurs that causes a send or receive operation to fail.</td><td class="summaryTableOwnerCol">XMLSocket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:securityError" class="signatureLink">securityError</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched if a call to the XMLSocket.connect() method attempts to connect either to a server outside the caller's security sandbox or to a port lower than 1024.</td><td class="summaryTableOwnerCol">XMLSocket</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Property Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="connected"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>connected</h2></td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>connected:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Indicates whether this XMLSocket object is currently connected. You can also check 
+
+     whether the connection succeeded by registering for the <code>connect</code> 
+
+     event and <code>ioError</code> event.
+
+     
+
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="XMLSocket.html#event:connect#event:connect" target="">connect</a><br/><a href="XMLSocket.html#event:ioError#event:ioError" target="">ioError</a></div></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="propertyDetail"></a><a name="timeout"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>timeout</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>timeout:int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Indicates the number of milliseconds to wait for a connection.
+
+     
+     <p>If the connection doesn't succeed within the specified time, the connection fails.
+
+     The default value is 20,000 (twenty seconds).</p>
+
+     
+
+     </p></div></span><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="XMLSocket()"></a><a name="XMLSocket(String,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>XMLSocket</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function XMLSocket(host:String = null, port:int = 0)</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p>
+
+    Creates a new XMLSocket object. If no parameters are specified, an initially disconnected socket 
+
+    is created. If parameters are specified, a connection is attempted to the specified host and port.
+
+    
+    <p><b>Note:</b> It is strongly advised to use the constructor form <b>without parameters</b>, then
+
+    add any event listeners, then call the <code>connect</code> method with <code>host</code>
+
+    and <code>port</code> parameters. This sequence guarantees that all event listeners will work
+
+    properly.</p>
+
+    
+    </p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">host</span>:String</code> (default = <code>null</code>)<code></code> &mdash; A fully qualified DNS domain name or an IP address in the form 
+
+    <i>.222.333.444</i>. In Flash Player 9.0.115.0 and AIR 1.0 and later, 
+
+    you can specify IPv6 addresses, such as rtmp://[2001:db8:ccc3:ffff:0:444d:555e:666f]. 
+
+    You can also specify <code>null</code> to connect to the host server
+
+    on which the SWF file resides.  If the SWF file issuing this call is running in a web browser, 
+
+    <code>host</code> must be in the same domain as the SWF file.
+
+    
+
+    </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">port</span>:int</code> (default = <code>0</code>)<code></code> &mdash; The TCP port number on the target host used to establish a connection. 
+
+      In Flash Player 9.0.124.0 and later, the target host must serve a socket policy file
+
+      specifying that socket connections are permitted from the host serving the SWF file
+
+      to the specified port. In earlier versions of Flash Player, a socket policy file is required
+
+      only if you want to connect to a port number below 1024,
+
+      or if you want to connect to a host other than the one serving the SWF file.
+
+    
+    
+    </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="XMLSocket.html#connect()" target="">connect()</a></div></div></span><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="close()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>close</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function close():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Closes the connection specified by the XMLSocket object. 
+
+     The <code>close</code> event is dispatched only when the server
+
+     closes the connection; it is not dispatched when you call the <code>close()</code> method.
+
+     
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="XMLSocket.html#connect()" target="">connect()</a><br/><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118a9b90204-7cfb.html" target="_top">Binary client sockets</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="connect()"></a><a name="connect(String,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>connect</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function connect(host:String, port:int):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Establishes a connection to the specified Internet host using the specified TCP port.
+
+     
+     <p>If you specify <code>null</code> for the <code>host</code> parameter, the host 
+
+     contacted is the one where the file calling <code>XMLSocket.connect()</code> resides. 
+
+     For example, if the calling file was downloaded from www.adobe.com, specifying <code>null</code>
+
+     for the host parameter means you are connecting to www.adobe.com.</p>
+
+     
+
+     
+
+     
+
+     
+
+     <p>For more information, see the Flash Player Developer Center Topic: 
+
+     <a href="http://www.adobe.com/go/devnet_security_en" target="external">Security</a>.</p>
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">host</span>:String</code> &mdash; A fully qualified DNS domain name or an IP address in the form 
+
+     <i>111.222.333.444</i>. You can also specify <code>null</code> to connect to the host server
+
+     on which the SWF file resides. If the calling file is a SWF file running in a web browser,
+
+     <code>host</code> must be in the same domain as the file.
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">port</span>:int</code> &mdash; The TCP port number on the target host used to establish a connection. 
+
+       In Flash Player 9.0.124.0 and later, the target host must serve a socket policy file
+
+       specifying that socket connections are permitted from the host serving the SWF file
+
+       to the specified port. In earlier versions of Flash Player, a socket policy file is required
+
+       only if you want to connect to a port number below 1024,
+
+       or if you want to connect to a host other than the one serving the SWF file.
+
+     
+     
+     </td></tr></table></p><br/><span class="label">Events</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>securityError</b>:<a href="../events/SecurityErrorEvent.html"><code>SecurityErrorEvent</code></a></code> &mdash; A connect operation attempted
+
+     to connect to a host outside the caller's security sandbox, or
+
+     to a port that requires a socket policy file.  Work around either problem by using
+
+     a socket policy file on the target host.</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>data</b>:<a href="../events/DataEvent.html"><code>DataEvent</code></a></code> &mdash; Dispatched when raw data has been received.</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>connect</b>:<a href="../events/Event.html"><code>Event</code></a></code> &mdash; Dispatched when network connection has been established.</td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>SecurityError </code> &mdash; Local untrusted files may not communicate with
+
+     the Internet. Work around this limitation by reclassifying the file
+
+     as local-with-networking or trusted.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>SecurityError </code> &mdash; You may not specify a socket port higher than
+
+     65535.
+
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="../events/Event.html#CONNECT" target="">Event.CONNECT</a><br/><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118a9b90204-7cfb.html" target="_top">Binary client sockets</a><br/><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118a9b90204-7c63.html" target="_top">Connecting to sockets</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="send()"></a><a name="send(any)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>send</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function send(object:*):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Converts the XML object or data specified in the <code>object</code> parameter
+
+     to a string and transmits it to the server, followed by a zero (0) byte. If <code>object</code> 
+
+     is an XML object, the string is the XML textual representation of the XML object. The 
+
+     send operation is asynchronous; it returns immediately, but the data may be transmitted at a 
+
+     later time. The <code>XMLSocket.send()</code> method does not return a value indicating whether
+
+     the data was successfully transmitted.
+
+     
+
+     <p>If you do not connect the XMLSocket object to the server using 
+
+     <code>XMLSocket.connect()</code>), the <code>XMLSocket.send()</code> 
+
+     operation fails.</p>
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">object</span>:*</code> &mdash; An XML object or other data to transmit to the server.
+
+     
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IOError </code> &mdash; The XMLSocket object is not connected to the server.
+
+     
+     
+
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="XMLSocket.html#connect()" target="">connect()</a><br/><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118a9b90204-7cfb.html" target="_top">Binary client sockets</a></div></div></span><div class="detailSectionHeader"> Event Detail </div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:close"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>close</h2></td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">property Event.type  =  </span><a href="../events/Event.html#CLOSE"><code>flash.events.Event.CLOSE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ Dispatched when the server closes the socket connection. 
+
+ The <code>close</code> event is dispatched only when the server
+
+ closes the connection; it is not dispatched when you call the <code>XMLSocket.close()</code> method.
+
+ </p>
+
+	The <code>Event.CLOSE</code> constant defines the value of the <code>type</code> property of a <code>close</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The object whose connection has been closed.</td></tr></table>
+
+	
+
+	</div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:connect"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>connect</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">property Event.type  =  </span><a href="../events/Event.html#CONNECT"><code>flash.events.Event.CONNECT</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ Dispatched after a successful call to the <code>XMLSocket.connect()</code> method.
+
+ </p>
+
+	The <code>Event.CONNECT</code> constant defines the value of the <code>type</code> property of a <code>connect</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The Socket or XMLSocket object that has established a network connection.</td></tr></table>
+
+	
+
+	</div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:data"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>data</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/DataEvent.html"><code>flash.events.DataEvent</code></a><br/><span class="label">property DataEvent.type  =  </span><a href="../events/DataEvent.html#DATA"><code>flash.events.DataEvent.DATA</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ Dispatched after raw data is sent or received.
+
+ </p>
+
+	Defines the value of the <code>type</code> property of a <code>data</code> event object.  
+
+	<p>This event has the following properties:</p>
+
+	
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>data</code></td><td>The raw data loaded into Flash Player or Adobe AIR.</td></tr><tr><td><code>target</code></td><td>The XMLSocket object receiving data.</td></tr></table>
+
+	
+
+	</div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:ioError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>ioError</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/IOErrorEvent.html"><code>flash.events.IOErrorEvent</code></a><br/><span class="label">property IOErrorEvent.type  =  </span><a href="../events/IOErrorEvent.html#IO_ERROR"><code>flash.events.IOErrorEvent.IO_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ Dispatched when an input/output error occurs that causes a send or receive operation to fail. 
+
+ </p>
+
+	Defines the value of the <code>type</code> property of an <code>ioError</code> event object.
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>errorID</code></td><td>A reference number associated with the specific error (AIR only).</td></tr><tr><td><code>target</code></td><td>The network object experiencing the input/output error.</td></tr><tr><td><code>text</code></td><td>Text to be displayed as an error message.</td></tr></table>
+
+	
+
+	</div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:securityError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>securityError</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/SecurityErrorEvent.html"><code>flash.events.SecurityErrorEvent</code></a><br/><span class="label">property SecurityErrorEvent.type  =  </span><a href="../events/SecurityErrorEvent.html#SECURITY_ERROR"><code>flash.events.SecurityErrorEvent.SECURITY_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ Dispatched if a call to the <code>XMLSocket.connect()</code> method
+
+ attempts to connect either to a server outside the caller's security sandbox or to a port lower than 1024.
+
+ </p>
+
+	The <code>SecurityErrorEvent.SECURITY_ERROR</code> constant defines the value of the <code>type</code> property of a <code>securityError</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The network object reporting the security error.</td></tr><tr><td><code>text</code></td><td>Text to be displayed as an error message.</td></tr></table>
+
+	
+
+	<p><span class="label">See also</span></p><div class="seeAlso"><a href="XMLSocket.html#connect()" target="">XMLSocket.connect()</a></div></div></span><a name="includeExamplesSummary"></a><div class="detailSectionHeader">Examples</div><span id="pageFilter"><br/><div class="detailBody"> The following example demonstrates sending data using 
+ an XMLSocket and printing information during XMLSocket events.  This is accomplished using
+ the following steps:
+ <ol><li>The <code>init()</code> creates a XMLSocket instance named <code>socket</code> and
+  passes <code>socket</code> to <code>configureListeners()</code> (described below) and then calls the
+  XMLSocket object's <code>connect()</code> method using your domain as the host name and port
+  number <code>8080</code>.</li><li>The <code>configureListeners()</code> method adds listeners for each of the 
+  supported XMLSocket events:
+  <ul><li><code>closeHandler()</code>: listens for the <code>close</code> event, which is dispatched
+      after the network connection has been closed.</li><li><code>connectHandler()</code>: listens for the <code>connect</code> event, dispatched when the network
+      connection has been established.</li><li><code>dataHandler()</code>: listens for the <code>data</code> events, dispatched every time
+      the XMLSocket receives new data.</li><li><code>progressHandler()</code>: listens for the <code>progress</code> events, dispatched when a call to
+      <code>send()</code> has been made and while the send is ongoing.</li><li><code>securityErrorHandler()</code>: listens for <code>securityError</code> events, which would be
+      dispatched if an attempt was made to access the XMLSocket with the wrong local playback security setting or 
+      using a port lower than 1024.</li><li><code>ioErrorHandler()</code>: listens for <code>ioError</code> events, which would happen only
+      if an operation to send or receive data failed.</li></ul></li></ol>
+
+ <p><b>Notes:</b></p>
+ <ul><li>You need a server running on your domain using port 8080 for this example to work.</li><li>If you are running Flash Player 9.0.124.0 or later, you need to place a socket policy file on your server 
+    that permits socket connections from your domain to port 8080. For information on serving socket policy files, 
+	see the Flash Player Developer Center Topic: 
+  <a href="http://www.adobe.com/devnet/flashplayer/articles/socket_policy_files.html" target="external">
+  Setting up a socket policy file server</a>.</li></ul>
+<div class="listing"><pre>
+&lt;html&gt;
+    &lt;head&gt;
+      &lt;script src="AIRAliases.js" /&gt;
+      &lt;script&gt;
+        var hostName = "[yourDomain]"; // String
+        var port = 8080; // Number
+        var socket; // XMLSocket
+
+        function init() {
+            socket = new air.XMLSocket();
+            configureListeners(socket);
+            if (hostName && port) {
+                socket.connect(hostName, port);
+            }
+        }
+
+        function send(data) {
+            socket.send(data);
+        }
+
+        function configureListeners(dispatcher) {
+            dispatcher.addEventListener(air.Event.CLOSE, closeHandler);
+            dispatcher.addEventListener(air.Event.CONNECT, connectHandler);
+            dispatcher.addEventListener(air.DataEvent.DATA, dataHandler);
+            dispatcher.addEventListener(air.IOErrorEvent.IO_ERROR, ioErrorHandler);
+            dispatcher.addEventListener(air.ProgressEvent.PROGRESS, progressHandler);
+            dispatcher.addEventListener(air.SecurityErrorEvent.SECURITY_ERROR, securityErrorHandler);
+        }
+
+        function closeHandler(event) {
+            air.trace("closeHandler: " + event);
+        }
+
+        function connectHandler(event) {
+            air.trace("connectHandler: " + event);
+        }
+
+        function dataHandler(event) {
+            air.trace("dataHandler: " + event);
+        }
+
+        function ioErrorHandler(event) {
+            air.trace("ioErrorHandler: " + event);
+        }
+
+        function progressHandler(event) {
+            air.trace("progressHandler loaded:" + event.bytesLoaded + " total: " + event.bytesTotal);
+        }
+
+        function securityErrorHandler(event) {
+            air.trace("securityErrorHandler: " + event);
+        }
+      &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body onload="init()"&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre></div></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script><p></p><center class="copyright"> &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><!--BEGIN IONCOMMENTS--><div id="ionComHere"></div><!--END IONCOMMENTS-->[an error occurred while processing this directive][an error occurred while processing this directive]<p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/en_US/legalnotices/index.html">Legal Notices</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online Privacy Policy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html><!-- &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  -->

@@ -1,0 +1,1536 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"><html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers"><meta name="lang" content="en-us"><link rel="stylesheet" href="style.css" type="text/css" media="screen"><link rel="stylesheet" href="print.css" type="text/css" media="print"><link rel="stylesheet" href="override.css" type="text/css"><link rel="stylesheet" href="ion.css" type="text/css"><meta name="keywords" content="Vector,globalClassifier.Vector,fixed,length,concat,every,filter,forEach,indexOf,join,lastIndexOf,map,pop,push,reverse,shift,slice,some,sort,splice,toLocaleString,toString,unshift"><title>Vector - Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers</title>
+	<link rel="stylesheet" href="jslr-style.css" type="text/css">
+		<script type="text/javascript">
+			
+				var baseRef = "";
+				var buildType = 'jslr';
+				var alreadyrunflag=0; //flag to indicate whether target function has already been run
+				var terms_HELPCFG = ".helpcfg";
+
+if (document.addEventListener)
+  document.addEventListener("DOMContentLoaded", function(){alreadyrunflag=1; init()}, false)
+else if (document.all && !window.opera){
+  /* blocks IE from working, as it's fired before dom if ready
+ document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
+  var contentloadtag=document.getElementById("contentloadtag")
+  contentloadtag.onreadystatechange=function(){
+    if (this.readyState=="complete"){
+      alreadyrunflag=1;
+      init();
+    }
+  }*/
+} else if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+  var _timer=setInterval(function(){
+  if(/loaded|complete/.test(document.readyState)){
+    clearInterval(_timer);
+    alreadyrunflag=1;
+    init(); // call target function
+  }}, 10)
+}
+function onLoadFunction() {
+	setTimeout("if (!alreadyrunflag) init();  alreadyrunflag=1; ionReadyLoad(); ", 0);
+}
+
+		</script>
+		<script language="javascript" type="text/javascript" src="cookies.js"></script>
+		<script language="javascript" type="text/javascript" src="asdoc.js"></script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body onLoad="onLoadFunction()">
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td>
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr>
+				  <td class="titleTableTitleION" align="left" nowrap="true">Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers<br>
+				  <span class="titleTableTopNavION">
+				  <span id="homelink">
+						<a target="_self" href="index.html"> Home </a>&nbsp;|&nbsp;
+				  </span>
+				  <a id="showtoc" onClick="showHideTOC(true)" href="#top" style="display:none">Show Classes List</a><a id="hidetoc" onClick="showHideTOC(false)" href="#top" style="display:">Hide Classes List</a>&nbsp;|&nbsp;
+				  <a href="all-index-A.html"> Index </a>&nbsp;|&nbsp;
+				  <a href="appendixes.html"> Appendixes </a><br>
+				  </span>	
+				  </td>
+				  <td class="titleTableSearchION" align="right" nowrap="true">
+				  <span id="gsa" class="gsa">
+					<form class="searchFormION" method="get" onSubmit="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US');return false;">
+				  <input class="hidden" name="loc" value="" type="hidden">
+				  <input class="hidden" name="termPrefix" value="site:help.adobe.com/en_US/AS3CLR/Flash_10.0" type="hidden">
+				  <input class="hidden" name="title" value="ActionScript 3.0 Reference for the Adobe Flash Platform" type="hidden">
+				  <input class="hidden" name="term" value="" type="hidden">
+				  <input class="hidden" name="area" value="" type="hidden">
+				  <input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text">
+				  <input type="button" name="action" value="" onClick="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US')" class="searchbutton"><br>
+			      <input id="checkBoxId" type="checkbox" name="checkbox" value="checkbox" checked>Language Reference only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  </form>
+				  </span>				  
+				  </td>
+				</tr>
+			  </table>			
+			  </td>
+			<td class="titleTableLogo" align="right" rowspan="3"><img src="images/logoION.jpg" class="logoImageION" alt=" Adobe Logo " title=" Adobe Logo "></td>
+		  </tr>
+		  <tr>
+			<td colspan="2">
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr class="titleTableRow2">
+				<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+					<convert>Vector&nbsp;</convert>
+				</td>
+				<td class="titleTableSubNav" id="subNav" align="right">
+				  <a id="propertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="propertiesBar" style="display:none"> | </span>
+				  <a id="packagePropertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="packagePropertiesBar" style="display:none"> | </span>
+				  <a id="constructorLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+				  <span id="constructorBar" style="display:none"> | </span>
+				  <a id="methodsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Methods </a>
+				  <span id="methodsBar" style="display:none"> | </span>
+				  <a id="packageFunctionsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Functions </a>
+				  <span id="packageFunctionsBar" style="display:none"> | </span>
+				  <a id="eventsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('eventSummary');" style="display:none"> Events </a>
+				  <span id="eventsBar" style="display:none"> | </span>
+				  <a id="stylesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('styleSummary');" style="display:none"> Styles </a>
+				  <span id="stylesBar" style="display:none"> | </span>
+				  <a id="SkinPartLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinPartSummary');" style="display:none"> Skin Parts </a>
+				  <span id="SkinPartBar" style="display:none"> | </span>
+				  <a id="SkinStateLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinStateSummary');" style="display:none"> Skin States </a>
+				  <span id="SkinStateBar" style="display:none"> | </span>
+				  <a id="effectsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('effectSummary');" style="display:none"> Effects </a>
+				  <span id="effectsBar" style="display:none"> | </span>
+				  <a id="constantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="constantsBar" style="display:none"> | </span>
+				  <a id="packageConstantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="packageConstantsBar" style="display:none"> | </span>
+				  <a id="interfacesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('interfaceSummary');" style="display:none"> Interfaces </a>
+				  <span id="interfacesBar" style="display:none"> | </span>
+				  <a id="classesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('classSummary');" style="display:none"> Classes </a>
+				  <span id="classesBar" style="display:none"> | </span>
+				  <a id="packageUseLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('package-use.html');" style="display:none">Use</a>
+				  <span id="packageUseBar" style="display:none"> | </span>
+				  <a id="examplesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('includeExamplesSummary');" style="display:none"> Examples </a>
+				</td>
+				</tr>
+				<tr class="titleTableRow3">
+				  <td colspan="4"></td>
+				</tr>
+			  </table>
+			</td>
+		  </tr>
+		</table>
+        <div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="classlist" class="jslrclasslist">
+					<div class="classlistoutline"></div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content">
+<script language="javascript" type="text/javascript">  <!--  
+         
+        asdocTitle = "Vector - Adobe® AIR® API Reference for HTML Developers"; 
+        var baseRef = ''; 
+	document.baseRef = ''; 
+          -->  </script>
+<script language="javascript" type="text/javascript" src="asdoc.js"></script><script language="javascript" type="text/javascript" src="help.js"></script><script language="javascript" type="text/javascript" src="cookies.js"></script>
+<script language="javascript" type="text/javascript"><!--
+function submitValue() {
+var title="Adobe® AIR® API Reference for HTML Developers";
+var searchStr=document.getElementById('search-livedocs').value;
+
+        
+        
+        if(document.getElementById('checkBoxId').checked){
+        window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
++"&site=communityhelp-air-jslr ";
+} 
+
+        else{ 
+window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
+;
+} 
+} 
+--></script><script type="text/javascript"> scrollToNameAnchor(); </script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">window.runtime property</td><td>window.runtime.__Global__.Vector</td></tr><tr><td class="classSignature"></td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Vector  <img src="images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><div id="badgeAnchorSupport" class="ionBadgeWrapper"></div><div id="badgeContainerSupport"></div><p></p><p></p>
+
+ The Vector class lets you access and manipulate a vector &mdash; an array whose elements
+
+ all have the same data type. The data type of a Vector's elements is 
+
+ known as the Vector's <i>base type</i>. The base type can be any class, 
+
+ including built in classes and custom classes. The base type is specified when 
+
+ declaring a Vector variable as well as when creating an instance by calling 
+
+ the class constructor.
+
+ 
+
+ <p>As with an Array, you can use the array access operator (<code>[]</code>) to 
+
+ set or retrieve the value of a Vector element. Several Vector methods also 
+
+ provide mechanisms for setting and retrieving element values. These include 
+
+ <code>push()</code>, <code>pop()</code>, <code>shift()</code>, <code>unshift()</code>, 
+
+ and others. The properties 
+
+ and methods of a Vector object are similar &mdash; in most cases identical &mdash; to 
+
+ the properties and methods of an Array. In most cases where you would use 
+
+ an Array in which all the elements have the same data type, a Vector instance 
+
+ is preferable. However, Vector instances are dense arrays, meaning it must have a value
+
+ (or <code>null</code>) in each index. Array instances
+
+ don't have this same restriction.</p>
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+               <p>Use brackets to define a vector's base type when calling 
+
+ the Vector constructor function. The string included in the brackets is a sequence consisting of 
+
+ a left angle bracket (<code>&lt;</code>), the base class name, then a right angle bracket (<code>></code>), 
+
+ as shown in this example:</p>
+
+ 
+
+               <div class="listing"><pre>
+
+ var v = new air.Vector["&lt;String&gt;"]();
+
+ </pre></div> 
+
+ 
+               <p>To add items to a Vector, you can use the <code>push()</code>
+
+ method. For example, the following code adds content to a Vector of String objects:</p>
+
+ 
+
+               <div class="listing"><pre>
+
+ var v = new air.Vector["&lt;String&gt;"]();
+
+ v.push("a", "b", "c");
+
+ </pre></div> 
+
+ 
+               <p>In this API reference for AIR HTML developers, 
+
+ properties that are defined as Vector types are listed using
+
+ <code>Vector.&lt;T&gt;</code> syntax. In this syntax, <code>T</code> represents
+
+ the data type of the elements in the Vector. For example, the  
+
+ NativeProcessStartupInfo class includes an <code>arguments</code>
+
+ property. The API reference lists this property as having the type
+
+ <code>Vector.&lt;String&gt;</code>, meaning that the property is a Vector
+
+ containing String objects. Other references to Vector objects in this
+
+ documentation also uses this syntax, which is used in ActionScript 3.0.</p>
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+               <p>In addition to the data type restriction, the Vector class has other restrictions 
+
+ that distinguish it from the Array class:</p>
+
+ 
+
+               <ul>
+                  <li>A Vector is a dense array. Unlike an Array, which may have values in indices 
+
+       0 and 7 even if there are no values in positions 1 through 6, a Vector must have 
+
+       a value (or <code>null</code>) in each index.</li>
+                  <li>A Vector can optionally be fixed-length, meaning the number of elements 
+
+       it contains can't change.</li>
+                  <li>Access to a Vector's elements is bounds-checked. You can never read a value 
+
+       from an index greater than the final element (<code>length - 1</code>). You 
+
+       can never set a value with an index more than one beyond the current final 
+
+       index (in other words, you can only set a value at an existing index or 
+
+       at index <code>[length]</code>).</li>
+               </ul>
+
+ 
+
+               <p>As a result of its restrictions, a Vector has three primary benefits over 
+
+ an Array instance whose elements are all instances of a single class:</p>
+
+               <ul>
+                  <li>Performance: array element access and iteration are much faster when 
+
+       using a Vector instance than they are when using an Array.</li>
+                  <li>Type safety: in strict mode the compiler can identify data type errors. Examples
+
+       of data type errors include assigning a value of the incorrect data type to a Vector 
+
+       or expecting the wrong data type when reading a value from a Vector. 
+
+       Note, however, that when using the 
+
+       <code>push()</code> method or <code>unshift()</code> method to add values to a Vector, the 
+
+       arguments' data types are not checked at compile time. Instead, they are checked at run time.</li>
+                  <li>Reliability: runtime range checking (or fixed-length checking) increases reliability 
+
+       significantly over Arrays.</li>
+               </ul> 
+
+ 
+            <p></p><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Properties</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="images/expanded.gif"> Hide Inherited Public Properties</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="images/collapsed.gif"> Show Inherited Properties</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th>Defined By</th></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">constructor : Object<div class="summaryTableDescription">
+
+	 A reference to the class object or constructor function for a given object instance.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#fixed" class="signatureLink">fixed</a> : Boolean<div class="summaryTableDescription">
+
+     Indicates whether the length property of the Vector can 
+
+     be changed.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#length" class="signatureLink">length</a> : uint<div class="summaryTableDescription">
+
+     The range of valid indices available in the Vector.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">prototype : Object<div class="summaryTableDescription">[static] 
+
+	 A reference to the prototype object of a class or function object.</div></td><td class="summaryTableOwnerCol">Object</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Public Methods </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="images/expanded.gif"> Hide Inherited Public Methods</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="images/collapsed.gif"> Show Inherited Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th>Defined By</th></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#Vector()" class="signatureLink">Vector</a>(length:uint = 0, fixed:Boolean = false)</div><div class="summaryTableDescription">
+
+     Creates a Vector with the specified base type.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#concat()" class="signatureLink">concat</a>(... args):<a href="Vector.html">Vector</a>.&lt;T&gt;</div><div class="summaryTableDescription">
+
+     Concatenates the elements specified in the parameters with the elements 
+
+     in the Vector and creates a new Vector.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#every()" class="signatureLink">every</a>(callback:Function, thisObject:Object = null):Boolean</div><div class="summaryTableDescription">
+
+    Executes a test function on each item in the Vector until an item is 
+
+    reached that returns false for the specified function.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#filter()" class="signatureLink">filter</a>(callback:Function, thisObject:Object = null):<a href="Vector.html">Vector</a>.&lt;T&gt;</div><div class="summaryTableDescription">
+
+     Executes a test function on each item in the Vector and returns 
+
+     a new Vector containing all items that return true for the 
+
+     specified function.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#forEach()" class="signatureLink">forEach</a>(callback:Function, thisObject:Object = null):void</div><div class="summaryTableDescription">
+
+     Executes a function on each item in the Vector.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">hasOwnProperty(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an object has a specified property defined.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#indexOf()" class="signatureLink">indexOf</a>(searchElement:T, fromIndex:int = 0):int</div><div class="summaryTableDescription">
+
+     Searches for an item in the Vector and returns the index position of the item.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">isPrototypeOf(theClass:Object):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+
+	 as the parameter.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#join()" class="signatureLink">join</a>(sep:String = ","):String</div><div class="summaryTableDescription">
+
+     Converts the elements in the Vector to strings, inserts the specified separator between the 
+
+     elements, concatenates them, and returns the resulting string.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#lastIndexOf()" class="signatureLink">lastIndexOf</a>(searchElement:T, fromIndex:int = 0x7fffffff):int</div><div class="summaryTableDescription">
+
+     Searches for an item in the Vector, working backward from the specified 
+
+     index position, and returns the index position of the matching item.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#map()" class="signatureLink">map</a>(callback:Function, thisObject:Object = null):<a href="Vector.html">Vector</a>.&lt;T&gt;</div><div class="summaryTableDescription">
+
+     Executes a function on each item in the Vector, and returns a new Vector 
+
+     of items corresponding to the results of calling the function on 
+
+     each item in this Vector.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#pop()" class="signatureLink">pop</a>():T</div><div class="summaryTableDescription">
+
+     Removes the last element from the Vector and returns that element.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">propertyIsEnumerable(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether the specified property exists and is enumerable.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#push()" class="signatureLink">push</a>(... args):uint</div><div class="summaryTableDescription">
+
+     Adds one or more elements to the end of the Vector and returns 
+
+     the new length of the Vector.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#reverse()" class="signatureLink">reverse</a>():<a href="Vector.html">Vector</a>.&lt;T&gt;</div><div class="summaryTableDescription">
+
+     Reverses the order of the elements in the Vector.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">setPropertyIsEnumerable(name:String, isEnum:Boolean = true):void</div><div class="summaryTableDescription">
+
+     Sets the availability of a dynamic property for loop operations.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#shift()" class="signatureLink">shift</a>():T</div><div class="summaryTableDescription">
+
+     Removes the first element from the Vector and returns that element.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#slice()" class="signatureLink">slice</a>(startIndex:int = 0, endIndex:int = 16777215):<a href="Vector.html">Vector</a>.&lt;T&gt;</div><div class="summaryTableDescription">
+
+     Returns a new Vector that consists of a range of elements from 
+
+     the original Vector, without modifying the original Vector.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#some()" class="signatureLink">some</a>(callback:Function, thisObject:Object = null):Boolean</div><div class="summaryTableDescription">
+
+     Executes a test function on each item in the Vector until an 
+
+     item is reached that returns true.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#sort()" class="signatureLink">sort</a>(compareFunction:Function):<a href="Vector.html">Vector</a>.&lt;T&gt;</div><div class="summaryTableDescription">
+
+     Sorts the elements in the Vector.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#splice()" class="signatureLink">splice</a>(startIndex:int, deleteCount:uint = 4294967295, ... items):<a href="Vector.html">Vector</a>.&lt;T&gt;</div><div class="summaryTableDescription">
+
+     Adds elements to and removes elements from the Vector.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#toLocaleString()" class="signatureLink">toLocaleString</a>():String</div><div class="summaryTableDescription">
+
+     Returns a string that represents the elements in the specified Vector.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#toString()" class="signatureLink">toString</a>():String</div><div class="summaryTableDescription">
+
+     Returns a string that represents the elements in the Vector.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#unshift()" class="signatureLink">unshift</a>(... args):uint</div><div class="summaryTableDescription">
+
+     Adds one or more elements to the beginning of the Vector and returns 
+
+     the new length of the Vector.</div></td><td class="summaryTableOwnerCol">Vector</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">valueOf():Object</div><div class="summaryTableDescription">
+
+	 Returns the primitive value of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Property Detail</div><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="propertyDetail"></a><a name="fixed"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>fixed</h2></td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>fixed:Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Indicates whether the <code>length</code> property of the Vector can 
+
+     be changed. If the value is <code>true</code>, the <code>length</code>
+
+     property can't be changed. This means the following operations are not 
+
+     allowed when <code>fixed</code> is <code>true</code>:
+
+     
+
+     <ul><li>setting the <code>length</code> property directly</li><li>assigning a value to index position <code>length</code></li><li>calling a method that changes the <code>length</code> property, including:
+
+         <ul><li><code>pop()</code></li><li><code>push()</code></li><li><code>shift()</code></li><li><code>unshift()</code></li><li><code>splice()</code> (if the <code>splice()</code> call changes 
+
+               the <code>length</code> of the Vector).</li></ul>
+
+       </li></ul>
+
+     
+
+     </p></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="propertyDetail"></a><a name="length"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>length</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>length:uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     The range of valid indices available in the Vector. 
+
+     A Vector instance has index positions up to but not including 
+
+     the <code>length</code> value.
+
+     
+
+     <p>Every Vector element always has a value that is either an 
+
+     instance of the base type or <code>null</code>. When the 
+
+     <code>length</code> property is set to a value 
+
+     that's larger than its previous value, additional elements are 
+
+     created and populated with the default value appropriate to 
+
+     the base type (<code>null</code> for reference types).</p>
+
+     
+
+     <p>When the <code>length</code> property is set to a value 
+
+     that's smaller than its previous value, all the elements 
+
+     at index positions greater than or equal to the new <code>length</code> 
+
+     value are removed from the Vector.</p>
+
+     
+
+     </p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>RangeError </code> &mdash; If this property is changed 
+
+     while <code>fixed</code> is <code>true</code>.
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>RangeError </code> &mdash; If this property is set to a value larger 
+
+     than the maximum allowable index (2<sup>32</sup>).
+
+     
+
+     </td></tr></table></div></span><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="Vector()"></a><a name="Vector(uint,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>Vector</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function Vector(length:uint = 0, fixed:Boolean = false)</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p>
+
+     Creates a Vector with the specified base type.
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     <p>When calling the <code>Vector()</code> constructor, use brackets
+
+     to specify the base type as a string using type parameter syntax. Type parameter syntax is a 
+
+     a string consisting of a left angle bracket (<code>&lt;</code>), class name, then 
+
+     a right angle bracket (<code>></code>), as shown in this example:</p>
+
+     
+
+     <div class="listing"><pre>
+
+     var v = new air.Vector["&lt;String&gt;"]();
+
+     </pre></div>
+
+     
+
+     
+
+       
+
+     
+
+     
+     
+
+     
+     
+
+     
+
+     </p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">length</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; The initial length (number of elements) of the Vector. If 
+
+     this parameter is greater than zero, the specified number of Vector elements 
+
+     are created and populated with the default value appropriate to 
+
+     the base type (<code>null</code> for reference types).
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">fixed</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Whether the Vector's length is fixed (<code>true</code>) or 
+
+     can be changed (<code>false</code>). This value can also be set using 
+
+     the <code>fixed</code> property.
+
+     
+     </td></tr></table></div></span><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="concat()"></a><a name="concat(restParam)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>concat</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> AS3 function concat(... args):<a href="Vector.html">Vector</a>.&lt;T&gt;</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Concatenates the elements specified in the parameters with the elements 
+
+     in the Vector and creates a new Vector. If the parameters specify a Vector, 
+
+     the elements of that Vector are concatenated. If you don't pass any parameters, 
+
+     the new Vector is a duplicate (shallow clone) of the original Vector.
+
+     
+
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code>... <span class="label">args</span></code> &mdash; One or more values of the base type of this Vector 
+
+     to be concatenated in a new Vector. 
+
+     
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Vector.html">Vector</a>.&lt;T&gt;</code> &mdash; A Vector with the same base type as this Vector that contains 
+
+     the elements from this Vector followed by elements from the parameters.
+
+     
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>TypeError </code> &mdash; If any argument is not an instance of the base type 
+
+     and can't be converted to the base type.
+
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="every()"></a><a name="every(Function,Object)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>every</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> AS3 function every(callback:Function, thisObject:Object = null):Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+    Executes a test function on each item in the Vector until an item is 
+
+    reached that returns <code>false</code> for the specified function. 
+
+    You use this method to determine whether all items in a Vector meet 
+
+    a criterion, such as having values less than a particular number.
+
+    
+    <p>For this method, the second parameter, 
+
+    <code>thisObject</code>, must be <code>null</code> if the
+
+    first parameter, <code>callback</code>, is a method closure. That is 
+
+    the most common way of using this method.</p>
+
+    
+
+    <p>However, suppose you create a function on a frame on the main timeline using Flash Professional, 
+
+    but you want it to be called in a different <code>this</code> context:</p>
+
+    
+
+    <pre class="flash">
+
+    function myFunction(item:T, index:int, vector:Vector.&lt;T>):Boolean {
+
+       // your code here
+
+    }
+
+    </pre>
+
+    
+
+    <p>Suppose you then use the <code>every()</code> 
+
+    method on a Vector called <code>myVector</code>:</p>
+
+    
+
+    <pre class="flash">
+
+    myVector.every(myFunction, someObject);
+
+    </pre>
+
+    
+
+    <p>Because <code>myFunction</code> is a member of the 
+
+    main class of the SWF file, it cannot be executed in a different <code>this</code> context. Flash 
+
+    runtimes throw an exception when this code runs. You can avoid this runtime error 
+
+    by assigning the function to a variable, as follows:</p>
+
+    
+
+    <pre class="flash">
+
+    var myFunction:Function = function(item:T, index:int, vector:Vector.&lt;T>):Boolean {
+
+        //your code here
+
+    };
+
+    myVector.every(myFunction, someObject);
+
+    </pre>
+
+    
+
+    </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">callback</span>:Function</code> &mdash; The function to run on each item in the Vector. 
+
+    This function is invoked 
+
+    with three arguments: the current item from the Vector, the index of the item, 
+
+    and the Vector object:
+
+    <pre>function callback(item:T, index:int, vector:Vector.&lt;T>):Boolean {
+
+       // your code here
+
+    }
+
+    </pre> 
+
+    
+    <p>The callback function should return a Boolean value.</p>
+
+    
+    </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">thisObject</span>:Object</code> (default = <code>null</code>)<code></code> &mdash; The object that the identifer <code>this</code> in the 
+
+    callback function refers to when the function is called.
+
+    
+
+    </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; A Boolean value of <code>true</code> if the specified function returns 
+
+    <code>true</code> when called on all items in the Vector; otherwise, <code>false</code>.
+
+    
+    </td></tr></table></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="filter()"></a><a name="filter(Function,Object)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>filter</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> AS3 function filter(callback:Function, thisObject:Object = null):<a href="Vector.html">Vector</a>.&lt;T&gt;</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Executes a test function on each item in the Vector and returns 
+
+     a new Vector containing all items that return <code>true</code> for the 
+
+     specified function. If an item returns <code>false</code>, 
+
+     it is not included in the result Vector. The base type of the return 
+
+     Vector matches the base type of the Vector on which the method is called.
+
+     
+
+     <p>For this method, the second parameter, 
+
+     <code>thisObject</code>, must be <code>null</code> if the
+
+     first parameter, <code>callback</code>, is a method closure. That is 
+
+     the most common way of using this method.</p>
+
+     
+
+     <p>However, suppose you create a function on a frame on the main timeline using Flash Professional, 
+
+     but you want it to be called in a different <code>this</code> context:</p>
+
+     
+
+     <pre class="flash">
+
+     function myFunction(item:T, index:int, vector:Vector.&lt;T>):Boolean {
+
+        // your code here
+
+     }
+
+     </pre>
+
+     
+
+     <p>Suppose you then use the <code>filter()</code> 
+
+     method on a Vector called <code>myVector</code>:</p>
+
+     
+
+     <pre class="flash">
+
+     var result:Vector.&lt;T> = myVector.filter(myFunction, someObject);
+
+     </pre>
+
+     
+
+     <p>Because <code>myFunction</code> is a member of the 
+
+     main class of the SWF file, it cannot be executed in a different <code>this</code> context. Flash 
+
+     runtimes throw an exception when this code runs. You can avoid this runtime error 
+
+     by assigning the function to a variable, as follows:</p>
+
+     
+
+     <pre class="flash">
+
+     var myFunction:Function = function(item:T, index:int, vector:Vector.&lt;T>):Boolean {
+
+         //your code here
+
+     };
+
+     myVector.filter(myFunction, someObject);
+
+     </pre>
+
+     
+
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">callback</span>:Function</code> &mdash; The function to run on each item in the Vector. 
+
+     This function is invoked 
+
+     with three arguments: the current item from the Vector, the index of the item, 
+
+     and the Vector object:
+
+     <pre>function callback(item:T, index:int, vector:Vector.&lt;T>):Boolean;</pre> 
+
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">thisObject</span>:Object</code> (default = <code>null</code>)<code></code> &mdash; The object that the identifer <code>this</code> in the 
+
+     callback function refers to when the function is called.
+
+     
+
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Vector.html">Vector</a>.&lt;T&gt;</code> &mdash; A new Vector that contains all items from the original Vector 
+
+     for which the <code>callback</code> function returned <code>true</code>.
+
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="forEach()"></a><a name="forEach(Function,Object)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>forEach</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> AS3 function forEach(callback:Function, thisObject:Object = null):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Executes a function on each item in the Vector.
+
+     
+
+     <p>For this method, the second parameter, 
+
+     <code>thisObject</code>, must be <code>null</code> if the
+
+     first parameter, <code>callback</code>, is a method closure. That is 
+
+     the most common way of using this method.</p>
+
+     
+
+     <p>However, suppose you create a function on a frame on the main timeline using Flash Professional, 
+
+     but you want it to be called in a different <code>this</code> context:</p>
+
+     
+
+     <pre class="flash">
+
+     function myFunction(item:T, index:int, vector:Vector.&lt;T>):void {
+
+        // your code here
+
+     }
+
+     </pre>
+
+     
+
+     <p>Suppose you then use the <code>forEach()</code> 
+
+     method on a Vector called <code>myVector</code>:</p>
+
+     
+
+     <pre class="flash">
+
+     myVector.forEach(myFunction, someObject);
+
+     </pre>
+
+     
+
+     <p>Because <code>myFunction</code> is a member of the 
+
+     main class of the SWF file, it cannot be executed in a different <code>this</code> context. Flash 
+
+     runtimes throw an exception when this code runs. You can avoid this runtime error 
+
+     by assigning the function to a variable, as follows:</p>
+
+     
+
+     <pre class="flash">
+
+     var myFunction:Function = function(item:T, index:int, vector:Vector.&lt;T>):void {
+
+         //your code here
+
+     };
+
+     myVector.forEach(myFunction, someObject);
+
+     </pre>
+
+     
+
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">callback</span>:Function</code> &mdash; The function to run on each item in the Vector. 
+
+     This function is invoked 
+
+     with three arguments: the current item from the Vector, the index of the item, 
+
+     and the Vector object:
+
+     <pre>function callback(item:T, index:int, vector:Vector.&lt;T>):void;</pre>
+
+     <p>Any return value from the function call is discarded.</p>
+
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">thisObject</span>:Object</code> (default = <code>null</code>)<code></code> &mdash; The object that the identifer <code>this</code> in the 
+
+     callback function refers to when the function is called.
+
+     
+     </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="indexOf()"></a><a name="indexOf(T,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>indexOf</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> AS3 function indexOf(searchElement:T, fromIndex:int = 0):int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Searches for an item in the Vector and returns the index position of the item.
+
+     The item is compared to the Vector elements using strict equality (<code>===</code>).
+
+     
+
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">searchElement</span>:T</code> &mdash; The item to find in the Vector.
+
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">fromIndex</span>:int</code> (default = <code>0</code>)<code></code> &mdash; The location in the Vector from which to start searching 
+
+     for the item. If this parameter is negative, it is treated as <code>length 
+
+     + fromIndex</code>, meaning the search starts <code>-fromIndex</code> items 
+
+     from the end and searches from that position forward to the end of the Vector.
+
+     
+
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; A zero-based index position of the item in the Vector. 
+
+     If the <code>searchElement</code> argument is not found, 
+
+     the return value is -1.
+
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="join()"></a><a name="join(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>join</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> AS3 function join(sep:String = ","):String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Converts the elements in the Vector to strings, inserts the specified separator between the 
+
+     elements, concatenates them, and returns the resulting string. A nested Vector is always 
+
+     separated by a comma (,), not by the separator passed to the <code>join()</code> method.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">sep</span>:String</code> (default = "<code>,</code>")<code></code> &mdash; A character or string that separates Vector elements in 
+
+     the returned string. If you omit this parameter, a comma is used as the default 
+
+     separator. 
+
+     
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; A string consisting of the elements of the Vector
+
+     converted to strings and separated by the specified string.
+
+     
+
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="lastIndexOf()"></a><a name="lastIndexOf(T,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>lastIndexOf</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> AS3 function lastIndexOf(searchElement:T, fromIndex:int = 0x7fffffff):int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Searches for an item in the Vector, working backward from the specified 
+
+     index position, and returns the index position of the matching item. The 
+
+     item is compared to the Vector elements using strict equality (<code>===</code>).
+
+     
+
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">searchElement</span>:T</code> &mdash; The item to find in the Vector.
+
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">fromIndex</span>:int</code> (default = <code>0x7fffffff</code>)<code></code> &mdash; The location in the Vector from which to start searching 
+
+     for the item. The default is the maximum allowable index value, meaning 
+
+     that the search starts at the last item in the Vector.
+
+     <p>If this parameter is negative, it is treated as 
+
+     <code>length + fromIndex</code>, meaning the search starts 
+
+     <code>-fromIndex</code> items from the end and searches from that 
+
+     position backward to index 0.</p>
+
+     
+
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; A zero-based index position of the item in the Vector. 
+
+     If the <code>searchElement</code> argument is not found, 
+
+     the return value is -1.
+
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="map()"></a><a name="map(Function,Object)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>map</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> AS3 function map(callback:Function, thisObject:Object = null):<a href="Vector.html">Vector</a>.&lt;T&gt;</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Executes a function on each item in the Vector, and returns a new Vector 
+
+     of items corresponding to the results of calling the function on 
+
+     each item in this Vector. The result Vector has the same base 
+
+     type and <code>length</code> as the original Vector. 
+
+     The element at index <code>i</code> in the result Vector is the result of 
+
+     the call on the element at index <code>i</code> in the original Vector.
+
+     
+
+     <p>For this method, the second parameter, 
+
+     <code>thisObject</code>, must be <code>null</code> if the
+
+     first parameter, <code>callback</code>, is a method closure. That is 
+
+     the most common way of using this method.</p>
+
+     
+
+     <p>However, suppose you create a function on a frame on the main timeline, using Flash Professional
+
+     but you want it to be called in a different <code>this</code> context:</p>
+
+     
+
+     <pre class="flash">
+
+     function myFunction(item:Object, index:int, vector:Vector.&lt;T>):T {
+
+        // your code here
+
+     }
+
+     </pre>
+
+     
+
+     <p>Suppose you then use the <code>map()</code> 
+
+     method on a Vector called <code>myVector</code>:</p>
+
+     
+
+     <pre class="flash">
+
+     myVector.map(myFunction, someObject);
+
+     </pre>
+
+     
+
+     <p>Because <code>myFunction</code> is a member of the 
+
+     main class of the SWF file, it cannot be executed in a different <code>this</code> context. Flash 
+
+     runtimes throw an exception when this code runs. You can avoid this runtime error 
+
+     by assigning the function to a variable, as follows:</p>
+
+     
+
+     <pre class="flash">
+
+     var myFunction:Function = function(item:T, index:int, vector:Vector.&lt;T>):void {
+
+         //your code here
+
+     };
+
+     myVector.map(myFunction, someObject);
+
+     </pre>
+
+     
+
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">callback</span>:Function</code> &mdash; The function to run on each item in the Vector. 
+
+     This function is invoked 
+
+     with three arguments: the current item from the Vector, the index of the item, 
+
+     and the Vector object:
+
+     <pre>function callback(item:T, index:int, vector:Vector.&lt;T>):T;</pre> 
+
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">thisObject</span>:Object</code> (default = <code>null</code>)<code></code> &mdash; The object that the identifer <code>this</code> in the 
+
+     callback function refers to when the function is called.
+
+     
+
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Vector.html">Vector</a>.&lt;T&gt;</code> &mdash; A new Vector that contains the results of calling the function
+
+     on each item in this Vector. The result Vector has the same base type 
+
+     and <code>length</code> as the original.
+
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="pop()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>pop</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> AS3 function pop():T</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Removes the last element from the Vector and returns that element. The 
+
+     <code>length</code> property of the Vector is decreased by one when 
+
+     this function is called.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>T</code> &mdash; The value of the last element in the specified Vector.
+
+     
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>RangeError </code> &mdash; If this method is called while <code>fixed</code> is <code>true</code>.
+
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="push()"></a><a name="push(restParam)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>push</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> AS3 function push(... args):uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Adds one or more elements to the end of the Vector and returns 
+
+     the new length of the Vector.
+
+     
+
+     <p>Because this function can accept 
+
+     multiple arguments, the data type of the arguments is not 
+
+     checked at compile time even in strict mode. However, if an 
+
+     argument is passed that is not an instance of the base type, 
+
+     an exception occurs at run time.</p>
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code>... <span class="label">args</span></code> &mdash; One or more values to append to the Vector.
+
+     
+
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>uint</code> &mdash; The length of the Vector after the new elements are added.
+
+     
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>TypeError </code> &mdash; If any argument is not an instance of the 
+
+     base type <code>T</code> of the Vector.
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>RangeError </code> &mdash; If this method is called while <code>fixed</code> is <code>true</code>.
+
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="reverse()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>reverse</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> AS3 function reverse():<a href="Vector.html">Vector</a>.&lt;T&gt;</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Reverses the order of the elements in the Vector. This method 
+
+     alters the Vector on which it is called.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Vector.html">Vector</a>.&lt;T&gt;</code> &mdash; The Vector with the elements in reverse order.
+
+     
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="shift()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>shift</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> AS3 function shift():T</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Removes the first element from the Vector and returns that element. 
+
+     The remaining Vector elements are moved from their original position, 
+
+     i, to i - 1.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>T</code> &mdash; The first element in the Vector.
+
+     
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>RangeError </code> &mdash; If <code>fixed</code> is <code>true</code>.
+
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="slice()"></a><a name="slice(int,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>slice</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> AS3 function slice(startIndex:int = 0, endIndex:int = 16777215):<a href="Vector.html">Vector</a>.&lt;T&gt;</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Returns a new Vector that consists of a range of elements from 
+
+     the original Vector, without modifying the original Vector. The 
+
+     returned Vector includes the <code>startIndex</code> element and 
+
+     all elements up to, but not including, the <code>endIndex</code> element.
+
+     
+
+     <p> If you don't pass any parameters, the new Vector is a duplicate (shallow clone) of the original Vector.
+
+     If you pass a value of 0 for both parameters, a new, empty Vector is created of the same type 
+
+     as the original Vector.</p>
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">startIndex</span>:int</code> (default = <code>0</code>)<code></code> &mdash; A number specifying the index of the starting point 
+
+     for the slice. If <code>startIndex</code> is a negative number, the starting 
+
+     point begins at the end of the Vector, where -1 is the last element.  
+
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">endIndex</span>:int</code> (default = <code>16777215</code>)<code></code> &mdash; A number specifying the index of the ending point for 
+
+     the slice. If you omit this parameter, the slice includes all elements from the 
+
+     starting point to the end of the Vector. If <code>endIndex</code> is a negative 
+
+     number, the ending point is specified from the end of the Vector, where -1 is the 
+
+     last element.
+
+     
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Vector.html">Vector</a>.&lt;T&gt;</code> &mdash; a Vector that consists of a range of elements from the original Vector.
+
+     
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="some()"></a><a name="some(Function,Object)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>some</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> AS3 function some(callback:Function, thisObject:Object = null):Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Executes a test function on each item in the Vector until an 
+
+     item is reached that returns <code>true</code>. Use this method 
+
+     to determine whether any items in a Vector meet a criterion, such as 
+
+     having a value less than a particular number.
+
+     
+
+     <p>For this method, the second parameter, 
+
+     <code>thisObject</code>, must be <code>null</code> if the
+
+     first parameter, <code>callback</code>, is a method closure. That is 
+
+     the most common way of using this method.</p>
+
+     
+
+     <p>However, suppose you create a function on a frame on the main timeline, 
+
+     but you want it to be called in a different <code>this</code> context:</p>
+
+     
+
+     <pre class="flash">
+
+     function myFunction(item:Object, index:int, vector:Vector.&lt;T>):Boolean {
+
+        // your code here
+
+     }
+
+     </pre>
+
+     
+
+     <p>Suppose you then use the <code>some()</code> 
+
+     method on a Vector called <code>myVector</code>:</p>
+
+     
+
+     <pre class="flash">
+
+     myVector.some(myFunction, someObject);
+
+     </pre>
+
+     
+
+     <p>Because <code>myFunction</code> is a member of the 
+
+     main class of the SWF file, it cannot be executed in a different <code>this</code> context. Flash 
+
+     runtimes throw an exception when this code runs. You can avoid this runtime error 
+
+     by assigning the function to a variable, as follows:</p>
+
+     
+
+     <pre class="flash">
+
+     var myFunction:Function = function(item:T, index:int, vector:Vector.&lt;T>):Boolean {
+
+         //your code here
+
+     };
+
+     myVector.some(myFunction, someObject);
+
+     </pre>
+
+     
+
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">callback</span>:Function</code> &mdash; The function to run on each item in the Vector. 
+
+     This function is invoked 
+
+     with three arguments: the current item from the Vector, the index of the item, 
+
+     and the Vector object:
+
+     <pre>function callback(item:T, index:int, vector:Vector.&lt;T>):Boolean</pre> 
+
+     
+     <p>The callback function should return a Boolean value.</p>
+
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">thisObject</span>:Object</code> (default = <code>null</code>)<code></code> &mdash; The object that the identifer <code>this</code> in the 
+
+     callback function refers to when the function is called.
+
+     
+
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; A Boolean value of <code>true</code> if any items in the Vector return 
+
+     <code>true</code> for the specified function; otherwise, <code>false</code>.
+
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="sort()"></a><a name="sort(Function)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>sort</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> AS3 function sort(compareFunction:Function):<a href="Vector.html">Vector</a>.&lt;T&gt;</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Sorts the elements in the Vector. This method sorts according to the function 
+
+     provided as the <code>compareFunction</code> parameter.
+
+     
+
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">compareFunction</span>:Function</code> &mdash; A comparison method that determines 
+
+     the behavior of the sort.
+
+     
+
+     <p>The specified method must take two arguments of the base type (<code>T</code>) 
+
+     of the Vector and return a Number:</p>
+
+     
+
+     <div class="listing"><pre>function compare(x:T, y:T):Number {}</pre></div>
+
+     
+
+     <p>The logic of the <code>compareFunction</code> function is that, given two 
+
+     elements <code>x</code> and <code>y</code>, the function returns one of the 
+
+     following three values:</p>
+
+     
+
+     <ul><li>a negative number, if <code>x</code> should appear before <code>y</code> 
+
+       in the sorted sequence</li><li>0, if <code>x</code> equals <code>y</code></li><li>a positive number, if <code>x</code> should appear after <code>y</code> 
+
+       in the sorted sequence</li></ul>
+
+     
+
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Vector.html">Vector</a>.&lt;T&gt;</code> &mdash; This Vector, with elements in the new order.
+
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="splice()"></a><a name="splice(int,uint,restParam)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>splice</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> AS3 function splice(startIndex:int, deleteCount:uint = 4294967295, ... items):<a href="Vector.html">Vector</a>.&lt;T&gt;</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Adds elements to and removes elements from the Vector. This method modifies 
+
+     the Vector without making a copy.
+
+     
+
+     <p><b>Note:</b> To override this method in a subclass of Vector, 
+
+     use <code>...args</code> for the parameters, as this example shows:</p>
+
+     
+
+     <pre>
+
+     public override function splice(...args) {
+
+       // your statements here
+
+     }
+
+     </pre>
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">startIndex</span>:int</code> &mdash; An integer that specifies the index of the element 
+
+     in the Vector where the insertion or deletion begins. You can use a 
+
+     negative integer to specify a position relative to the end of the Vector
+
+     (for example, -1 for the last element of the Vector).
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">deleteCount</span>:uint</code> (default = <code>4294967295</code>)<code></code> &mdash; An integer that specifies the number of elements 
+
+     to be deleted. This number includes the element specified in the 
+
+     <code>startIndex</code> parameter. If you do not specify a value for the 
+
+     <code>deleteCount</code> parameter, the method deletes all of the values 
+
+     from the <code>startIndex</code> element to the last element in the Vector. 
+
+     (The default value is <code>uint.MAX_VALUE</code>.)
+
+     If the value is 0, no elements are deleted.
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code>... <span class="label">items</span></code> &mdash; An optional list of one or more comma-separated values
+
+     to insert into the Vector at the position specified in the <code>startIndex</code> parameter.
+
+     
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Vector.html">Vector</a>.&lt;T&gt;</code> &mdash; a Vector containing the elements that were removed from the original Vector.
+
+     
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>RangeError </code> &mdash; If the <code>startIndex</code> and <code>deleteCount</code> 
+
+     arguments specify an index to be deleted that's outside the Vector's bounds.
+
+     
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>RangeError </code> &mdash; If this method is called while <code>fixed</code> is <code>true</code> and the 
+
+     <code>splice()</code> operation changes the <code>length</code> of the Vector.
+
+     
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="toLocaleString()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>toLocaleString</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function toLocaleString():String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Returns a string that represents the elements in the specified Vector. 
+
+     Every element in the Vector, starting with index 0 and ending with the 
+
+     highest index, is converted to a concatenated string and separated by 
+
+     commas. In the ActionScript 3.0 implementation, this method returns 
+
+     the same value as the <code>Vector.toString()</code> method.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; A string of Vector elements.
+
+     
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="toString()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>toString</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function toString():String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Returns a string that represents the elements in the Vector. Every element in the 
+
+     Vector, starting with index 0 and ending with the highest index, is converted to a 
+
+     concatenated string and separated by commas. To specify a custom separator, 
+
+     use the <code>Vector.join()</code> method.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; A string of Vector elements.
+
+     
+
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="unshift()"></a><a name="unshift(restParam)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>unshift</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> AS3 function unshift(... args):uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Adds one or more elements to the beginning of the Vector and returns 
+
+     the new length of the Vector. The other elements in the Vector are moved 
+
+     from their original position, i, to i + the number of new elements.
+
+     
+     <p>Because this function can accept 
+
+     multiple arguments, the data type of the arguments is not 
+
+     checked at compile time even in strict mode. However, if an 
+
+     argument is passed that is not an instance of the base type, 
+
+     an exception occurs at run time.</p>
+
+     
+
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code>... <span class="label">args</span></code> &mdash; One or more instances of the base type of the Vector 
+
+     to be inserted at the beginning of the Vector.  
+
+     
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>uint</code> &mdash; An integer representing the new length of the Vector.
+
+     
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>TypeError </code> &mdash; If any argument is not an instance of the 
+
+     base type <code>T</code> of the Vector.
+
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>RangeError </code> &mdash; If this method is called while <code>fixed</code> is <code>true</code>.
+
+     
+     </td></tr></table></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script><p></p><center class="copyright"> &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><!--BEGIN IONCOMMENTS--><div id="ionComHere"></div><!--END IONCOMMENTS-->[an error occurred while processing this directive][an error occurred while processing this directive]<p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/en_US/legalnotices/index.html">Legal Notices</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online Privacy Policy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html><!-- &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  -->

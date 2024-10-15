@@ -1,0 +1,1723 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="en-us" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;AIR * AIR for TV application design considerations</title>
+    <link rel="shortcut icon" href="images/AIR.ico" />
+    <meta name="book" content="Building Adobe AIR Applications" />
+    <meta name="product" content="adobe" /><meta name="product" content="air" /><meta name="product" content="flash" /><meta name="product" content="flex" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="adobe"></Attribute><Attribute name="product" value="air"></Attribute><Attribute name="product" value="flash"></Attribute><Attribute name="product" value="flex"></Attribute><Attribute name="book" value="Building Adobe AIR Applications"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff7.html";
+    document.cookie = "topicId=" + "WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff7.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="https://help.adobe.com/en_US/air/build/swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    <div id="mnemonic">
+      <!--googleoff: index--><div xmlns:adobe="http://www.adobe.com/saxon" class="AIR"><div class="banner"><a href="WS485a42d56cd19641-a9697f4124ef986fac-8000.html">Adobe&#160;AIR</a></div></div><!--googleon: index-->
+    </div>
+    
+    <div id="searchbar">
+<table id="searchbartable">
+<tr>
+<td colspan="2">
+      <!--googleoff: index--><div xmlns:adobe="http://www.adobe.com/saxon"><div id="pdf"><img src="images/PDF.gif" width="16" height="16" /><a title="View Help PDF" href="air_buildingapps.pdf">View Help PDF (5.7MB)</a></div></div><!--googleon: index-->
+</td>
+</tr>
+</table>
+    </div>
+
+<!-- BEGIN SEARCH CONTENT -->
+<form id="search" name="search" action="https://help.adobe.com/en_US/air/build/search.html" target="_self">
+<script type="text/javascript">
+<!--[CDATA[
+if ( !use_chc_behavior ){
+    if (typeof(terms_AHV_SEARCH_CONSTRAINT) != "undefined" && 
+        terms_AHV_SEARCH_CONSTRAINT.length > 0 && 
+        document.location.href.indexOf(".adobe.com") > 0){
+        if ( typeof(terms_SEARCH_THIS_HELP_ONLY) != "undefined" && terms_SEARCH_THIS_HELP_ONLY == "ON" ) {
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                checked="checked" \
+                value="1" ><\/input>'); 
+                
+        // Leave the "Search this help system only" checkbox unckecked
+        }else{    
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                value="1" ><\/input>'); 
+        }
+        document.write('<span class="gsalabel">' + terms_AHV_SEARCH_CONSTRAINT + '<\/span><\/div>'); 
+    }
+    document.write('<input class="searchinput" \
+        name="q" \
+        id="q" \
+        type="text" \
+        maxlength="256" \
+        value="' + terms_AHV_SEARCH_BUTTON + '" \
+        onclick="clearSearch()"><\/input><input \
+        type="button" \
+        name="searchbutton" \
+        class="searchbutton" \
+        onclick="submit()"><\/input>'); 
+} 
+ 
+/* 
+ * Start Functions 
+ */
+function clearSearch(){
+    if (document.search.q.value == terms_AHV_SEARCH_BUTTON){document.search.q.value = ""}; 
+}
+
+// set search preferences
+function setAHSearchPref(){
+    if (document.search.gsa.checked == 1){
+        setAHSearchCookie( dirname );
+    }else{
+        setAHSearchCookie( "community" );
+    }
+}
+
+// Set search preferences cookie
+function setAHSearchCookie( p ){
+    // set cookie ah_searchpref with a value of the document path
+    var expire=new Date();
+    expire.setDate(expire.getDate()+365); // Cookie expires after 1 year (365 days) 
+    document.cookie="ah_searchpref=" +p+ "; expires=" +expire.toGMTString()+ ";";
+}
+
+// ]]-->
+</script> 
+ </form>
+<!-- END SEARCH CONTENT -->    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+<!-- BEGIN BREADCRUMBS -->
+
+      
+      <div id="breadcrumb">
+        
+<ul class="navigation"><li class="prev"><a accesskey="p" class="prev" href="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fff.html" title="AIR capabilities for TVs"><img src="images/blank.gif" alt="Previous" width="17" height="17" /></a></li><li class="next"><a accesskey="n" class="next" href="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fe9.html" title="Workflow for developing an AIR for TV application"><img src="images/blank.gif" alt="Next" width="17" height="17" /></a></li></ul><div class="hierarchy" id="hierarchy"><a href="WS485a42d56cd19641-a9697f4124ef986fac-8000.html"><b>Home</b></a> / <a href="WS485a42d56cd19641-a9697f4124ef986fac-8000.html"><b>Building Adobe AIR Applications</b></a> / <a href="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-8000.html"><b>Developing AIR applications for television devices</b></a> 
+     </div>
+
+      </div>
+<!-- END BREADCRUMBS -->
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>AIR for TV application design considerations</h1>
+<!-- END PAGE TITLE -->
+<!-- BEGIN IONCOMMENTCOUNT -->
+        <div id="ionCount">
+        </div>
+<!-- END IONCOMMENTCOUNT -->
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<p id="chcPromo" style="display:none;">
+<a id="chcLink" href="http://www.adobe.com/support/chc/">
+<img id="chcImage" src="http://www.adobe.com/support/chc/GetMoreHelpFeatures.png"/>
+</a>
+</p>
+<script type="text/javascript" language="javascript" charset="utf-8">
+<!--
+var cfgArray = [];
+//cfgArray["Acrobat_10.0_Professional.helpcfg"] = "acrobatpro";
+//cfgArray["Acrobat_10.0_Standard.helpcfg"] = "acrobatstd";
+cfgArray["Lightroom_3.0.helpcfg"] = "lightroom";
+cfgArray["PhotoshopElements_8.0_Win.helpcfg"] = "photoshopelements";
+cfgArray["PhotoshopElements_8.0_Mac.helpcfg"] = "photoshopelementsmac";
+cfgArray["PremiereElements_8.0_Win.helpcfg"] = "premiereelements";
+
+//cfgArray["AfterEffects_10.0.helpcfg"] = "aftereffects";
+//cfgArray["AIR.helpcfg"] = "air";
+//cfgArray["ColdFusionBuilder.helpcfg"] = "coldfusion";
+//cfgArray["Contribute_6.0.helpcfg"] = "contribute";
+//cfgArray["DeviceCentral_3.0.helpcfg"] = "devicecentral";
+//cfgArray["Dreamweaver_11.0.helpcfg"] = "dreamweaver";
+//cfgArray["EncoreDVD_5.0.helpcfg"] = "encore";
+//cfgArray["ExtensionManager_3.0.helpcfg"] = "extension";
+//cfgArray["Fireworks_11.0.helpcfg"] = "fireworks";
+//cfgArray["Flash_11.0.helpcfg"] = "flash";
+//cfgArray["Flex_4.0.helpcfg"] = "flashbuilder";
+//cfgArray["FlashCatalyst_1.0.helpcfg"] = "flashcatalyst";
+//cfgArray["Illustrator_15.0.helpcfg"] = "illustrator";
+//cfgArray["InCopy_7.0.helpcfg"] = "incopy";
+//cfgArray["InDesign_7.0.helpcfg"] = "indesign";
+//cfgArray["OnLocation_5.0.helpcfg"] = "onlocation";
+//cfgArray["Photoshop_12.0.helpcfg"] = "photoshop";
+//cfgArray["PremierePro_5.0.helpcfg"] = "premierepro";
+
+function getLangName() {
+    var lang = "en-us";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if (ptn.test(lang)) {
+        var languageCode = lang.replace(ptn, "$1");
+        var countryCode = lang.replace(ptn, "$2");
+        lang = languageCode + "_" + countryCode.toUpperCase();
+    }
+    return lang;
+}
+
+function getCountryName() {
+    var lang = "";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if ((ptn.test(lang)) && (lang != "en-us")) {
+        var countryCode = lang.replace(ptn, "$2");
+        return "/" + countryCode;
+    }
+    return "";
+}
+
+if ( (typeof(terms_HELPCFG) != 'undefined')  && (terms_HELPCFG.indexOf(".helpcfg") != -1) ) {
+    var stage   = (document.location.href.indexOf(".stage.") != -1) ? 'stage.' : '';
+    var baseUrl = 'http://www.' + stage + 'adobe.com';
+    var refpage = document.location.href.replace(/#.*$/, '');
+	
+	if ((!use_robohelp_behavior) && (terms_HELPCFG.length > 0) && (typeof(cfgArray[terms_HELPCFG]) != 'undefined') && (cfgArray[terms_HELPCFG].length > 0)) {
+		if (document.getElementById) { // DOM3 = IE5, NS6
+			var newHref = baseUrl + getCountryName() + "/support/chc/" + "?helpcfg=http://help." + stage + "adobe.com/HelpCfg/" + getLangName() + "/" + terms_HELPCFG + "&url=" + refpage + "&product=" + cfgArray[terms_HELPCFG];
+			var newSrc = baseUrl + getCountryName() + "/support/chc/GetMoreHelpFeatures.png";
+			document.getElementById("chcPromo").style.display = "block";
+			document.getElementById("chcLink").href = newHref;
+			document.getElementById("chcImage").src = newSrc;
+		}
+	}
+}
+
+//-->
+</script>
+
+
+
+          <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff6"><span class="topictitle1">Video considerations</span>
+</a></p></li><li><p><a href="#WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff5"><span class="topictitle1">Audio considerations</span>
+</a></p></li><li><p><a href="#WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff4"><span class="topictitle1">Graphics hardware acceleration</span>
+</a></p></li><li><p><a href="#WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff3"><span class="topictitle1">PNG and JPEG image usage</span>
+</a></p></li><li><p><a href="#WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff2"><span class="topictitle1">The stage in AIR for TV applications</span>
+</a></p></li><li><p><a href="#WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff1"><span class="topictitle1">Remote control input handling</span>
+</a></p></li><li><p><a href="#WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff0"><span class="topictitle1">Managing focus</span>
+</a></p></li><li><p><a href="#WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fef"><span class="topictitle1">User interface design</span>
+</a></p></li><li><p><a href="#WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fee"><span class="topictitle1">Fonts and text</span>
+</a></p></li><li><p><a href="#WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fed"><span class="topictitle1">File system security</span>
+</a></p></li><li><p><a href="#WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fec"><span class="topictitle1">The AIR application sandbox</span>
+</a></p></li><li><p><a href="#WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7feb"><span class="topictitle1">Application life cycle</span>
+</a></p></li><li><p><a href="#WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fea"><span class="topictitle1">HTTP cookies</span>
+</a></p></li></ul></div></div></div></div><div><ul class="navlinklist"></ul>
+</div>
+<div id="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff6" class="nochunk"><a name="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff6"><!-- --></a><h2 class="topictitle2">Video considerations</h2><div><div class="section"><h4 class="sectiontitle">Video encoding guidelines</h4><div class="para">When streaming
+video to a TV device, Adobe recommends the following encoding guidelines:
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><tbody><tr><td valign="top" width="NaN%"><p>Video codec:</p>
+</td>
+<td valign="top" width="NaN%"><p>H.264, Main or High profile,
+progressive encoding</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%"><p>Resolution:</p>
+</td>
+<td valign="top" width="NaN%"><p>720i, 720p, 1080i, or 1080p</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%"><p>Frame rate:</p>
+</td>
+<td valign="top" width="NaN%"><p>24 frames per second or 30
+frames per second</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%"><p>Audio codec:</p>
+</td>
+<td valign="top" width="NaN%"><p>AAC-LC or AC-3, 44.1 kHz, stereo,
+or these multichannel audio codecs: E-AC-3, DTS, DTS Express, DTS-HD
+High Resolution Audio, or DTS-HD Master Audio</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%"><p>Combined bit rate:</p>
+</td>
+<td valign="top" width="NaN%"><p>up to 8M bps depending on available
+bandwidth</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%"><p>Audio bit rate:</p>
+</td>
+<td valign="top" width="NaN%"><p>up to 192 Kbps</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%"><p>Pixel aspect ratio:</p>
+</td>
+<td valign="top" width="NaN%"><p>1 × 1</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Adobe recommends that you use the H.264
+codec for video delivered to AIR for TV devices.</p>
+<div class="note"><span class="notetitle">Note:  </span>AIR for
+TV also supports video that is encoded with Sorenson Spark or On2
+VP6 codecs. However, the hardware does not decode and present these
+codecs. Instead, the runtime decodes and presents these codecs using
+software, and therefore, the video plays at a much lower frame rate.
+Therefore, use H.264 if at all possible.</div>
+</div>
+<div class="section"><h4 class="sectiontitle">The StageVideo class</h4><p>AIR for TV supports
+hardware decoding and presentation of H.264-encoded video. Use the
+StageVideo class to enable this feature.</p>
+<p>See <a href="http://www.adobe.com/go/learn_as3_stageVideo_en" target="_self">Using the StageVideo class for hardware accelerated
+presentation </a>in the <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">ActionScript 3.0 Developer’s Guide</i> for
+details about:</p>
+<div class="para"><ul><li><p>the API of the StageVideo class
+and related classes.</p>
+</li>
+<li><p>limitations of using the StageVideo class.</p>
+</li>
+</ul>
+</div>
+<p>To
+best support existing AIR applications that use the Video object
+for H.264-encoded video, AIR for TV <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">internally</i> uses a StageVideo
+object. Doing so means the video playback benefits from hardware
+decoding and presentation. However, the Video object is subject
+to the same restrictions as a StageVideo object. For example, if
+the application tries to rotate the video, no rotation occurs, since
+the hardware, not the runtime, is presenting the video.</p>
+<p>However,
+when you write new applications, use the StageVideo object for H.264-encoded
+video.</p>
+<p>For an example of using the StageVideo class, see <a href="http://www.adobe.com/go/learn_air_for_tv_article_en" target="_self">Delivering video and content for the Flash
+Platform on TV</a>.</p>
+</div>
+<div class="section"><h4 class="sectiontitle">Video delivery guidelines</h4><p>On an AIR for
+TV device, the network’s available bandwidth can vary during video playback.
+These variations can occur, for example, when another user starts
+to use the same Internet connection.</p>
+<p>Therefore, Adobe recommends
+that your video delivery system use adaptive bitrate capabilities.
+For example, on the server side, Flash Media Server supports adaptive
+bitrate capabilities. On the client side, you can use the Open Source Media
+Framework (OSMF).</p>
+<div class="para">The following protocols are available to
+deliver video content over the network to an AIR for TV application:<ul><li><p>HTTP and HTTPS Dynamic Streaming (F4F format)</p>
+</li>
+<li><p>RTMP, RTMPE, RTMFP, RTMPT, and RTMPTE Streaming</p>
+</li>
+<li><p>HTTP and HTTPS Progressive Download</p>
+</li>
+</ul>
+</div>
+<p>For
+more information, see the following:</p>
+<div class="para"><ul><li><p><a href="http://www.adobe.com/go/learn_fms_devguide_en" target="_self">Adobe Flash Media Server Developer's Guide</a></p>
+</li>
+<li><p><a href="http://www.opensourcemediaframework.com/" target="_self">Open Source Media Framework</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div></div>
+<div id="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff5" class="nochunk"><a name="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff5"><!-- --></a><h2 class="topictitle2">Audio considerations</h2><div><p>The ActionScript for playing sound is no different in AIR
+for TV applications than in other AIR applications. For information,
+see <a href="http://www.adobe.com/go/learn_as3_sound_en" target="_self">Working with sound</a> in the <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">ActionScript 3.0 Developer’s Guide</i>. </p>
+<p>Regarding multichannel audio support in AIR for TV, consider
+the following:</p>
+<div class="para"><ul><li><p>AIR for TV supports multichannel audio for videos
+that are progressively downloaded from an HTTP server. Support for
+multichannel audio in videos streamed from an Adobe Flash Media
+Server is not yet available.</p>
+</li>
+<li><p>Although AIR for TV supports many audio codecs, not all AIR
+for TV <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema"><i>devices</i></i> support the entire set. Use the <a href="../../FlashPlatform/reference/actionscript/3/flash/system/Capabilities.html" target="_self">flash.system.Capabilities</a> method <samp class="codeph">hasMultiChannelAudio()</samp>to
+check whether an AIR for TV device supports a particular multichannel
+audio codec such as AC-3. </p>
+<p>For example, consider an application
+that progressively downloads a video file from a server. The server
+has different H.264 video files that support different multichannel
+audio codecs. The application can use <samp class="codeph">hasMultiChannelAudio()</samp>to
+determine which video file to request from the server. Alternatively,
+the application can send a server the string contained in <samp class="codeph">Capabilities.serverString</samp>.
+The string indicates which multichannel audio codecs are available,
+allowing the server to select the appropriate video file.</p>
+</li>
+<li><p>When using one of the DTS audio codecs, scenarios exist in
+which <samp class="codeph">hasMultiChannelAudio()</samp> returns <samp class="codeph">true</samp>,
+but the DTS audio is not played.</p>
+<p> For example, consider a
+Blu-ray player with an S/PDIF output, connected to an old amplifier.
+The old amplifier does not support DTS, but S/PDIF has no protocol
+to notify the Blu-ray player. If the Blu-ray player sends the DTS
+stream to the old amplifier, the user hears nothing. Therefore,
+as a best practice when using DTS, provide a user interface so that
+the user can indicate if no sound is playing. Then, your application
+can revert to a different codec.</p>
+</li>
+</ul>
+</div>
+<p>The following table summarizes when to use different audio codecs
+in AIR for TV applications. The table also indicates when AIR for
+TV devices use hardware accelerators to decode an audio codec. Hardware
+decoding improves performance and offloads the CPU. </p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d17e11925"><p>Audio codec</p>
+</th>
+<th valign="top" width="NaN%" id="d17e11928"><p>Availability on AIR for TV device</p>
+</th>
+<th valign="top" width="NaN%" id="d17e11931"><p>Hardware decoding </p>
+</th>
+<th valign="top" width="NaN%" id="d17e11934"><p>When to use this audio codec</p>
+</th>
+<th valign="top" width="NaN%" id="d17e11937"><p>More information</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d17e11925 "><p>AAC</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e11928 "><p>Always</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e11931 "><p>Always</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e11934 "><p>In videos encoded with H.264.</p>
+<p>For
+audio streaming, such as an Internet music streaming service.</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e11937 "><p>When using an audio-only AAC stream, encapsulate
+the audio stream in an MP4 container.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e11925 "><p>mp3</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e11928 "><p>Always</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e11931 "><p>No</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e11934 "><p>For sounds in the application’s SWF files.</p>
+<p>In
+videos encoded with Sorenson Spark or On2 VP6.</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e11937 "><p>An H.264 video that uses mp3 for the audio does
+not play on AIR for TV devices.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e11925 "><p>AC-3 (Dolby Digital)</p>
+<p>E-AC-3 (Enhanced
+Dolby Digital)</p>
+<p>DTS Digital Surround</p>
+<p>DTS Express</p>
+<p>DTS-HD
+High Resolution Audio</p>
+<p>DTS-HD Master Audio</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e11928 "><p>Check</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e11931 "><p>Yes</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e11934 "><p>In videos encoded with H.264.</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e11937 "><p>Typically, AIR for TV passes a multichannel audio
+stream to an external audio/video receiver which decodes and plays
+the audio.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e11925 "><p>Speex</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e11928 "><p>Always</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e11931 "><p>No</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e11934 "><p>Receiving a live voice stream.</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e11937 "><p>An H.264 video that uses Speex for audio does
+not play on AIR for TV devices. Use Speex only with Sorenson Spark
+or On2 VP6 encoded videos.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e11925 "><p>NellyMoser</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e11928 "><p>Always</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e11931 "><p>No</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e11934 "><p>Receiving a live voice stream. </p>
+</td>
+<td valign="top" width="NaN%" headers="d17e11937 "><p>An H.264 video that uses NellyMoser for audio
+does not play on AIR for TV devices. Use NellyMoser only with Sorenson
+Spark or On2 VP6 encoded videos.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note"><span class="notetitle">Note:  </span>Some video files contain two audio streams. For example, a
+video file can contain both an AAC stream and an AC3 stream. AIR
+for TV does not support such video files, and using such a file
+can result in no sound for the video.</div>
+</div></div>
+<div id="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff4" class="nochunk"><a name="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff4"><!-- --></a><h2 class="topictitle2">Graphics hardware acceleration</h2><div><div class="section"><h4 class="sectiontitle">Using hardware graphics acceleration</h4><p>AIR
+for TV devices provide hardware acceleration for 2D graphics operations.
+The device’s hardware graphics accelerators off-load the CPU to
+perform the following operations:</p>
+<div class="para"><ul><li><p>Bitmap rendering</p>
+</li>
+<li><p>Bitmap scaling</p>
+</li>
+<li><p>Bitmap blending</p>
+</li>
+<li><p>Solid rectangle filling</p>
+</li>
+</ul>
+</div>
+<p>This hardware
+graphics acceleration means many graphics operations in an AIR for
+TV application can be high performing. Some of these operations
+include:</p>
+<div class="para"><ul><li><p>Sliding transitions</p>
+</li>
+<li><p>Scaling transitions</p>
+</li>
+<li><p>Fading in and out</p>
+</li>
+<li><p>Compositing multiple images with alpha</p>
+</li>
+</ul>
+</div>
+<p>To
+get the performance benefits of hardware graphics acceleration for
+these types of operations, use one of the following techniques:</p>
+<div class="para"><ul><li><p>Set the <samp class="codeph">cacheAsBitmap</samp> property to <samp class="codeph">true</samp> on
+MovieClip objects and other display objects that have content that
+is mostly unchanging. Then perform sliding transitions, fading transitions,
+and alpha blending on these objects.</p>
+</li>
+<li><p>Use the <samp class="codeph">cacheAsBitmapMatrix</samp> property on
+display objects you want to scale or translate (apply x and y repositioning). </p>
+<p>By
+using Matrix class operations for scaling and translation, the device’s hardware
+accelerators perform the operations. Alternatively, consider the scenario
+where you change the dimensions of a display object that has its <samp class="codeph">cacheAsBitmap</samp> property
+set to <samp class="codeph">true</samp>. When the dimensions change, the runtime’s
+software redraws the bitmap. Redrawing with software yields poorer performance
+than scaling with hardware acceleration by using a Matrix operation.</p>
+<p>For
+example, consider an application that displays an image that expands when
+an end user selects it. Use the Matrix scale operation multiple
+times to give the illusion of the image expanding. However, depending
+on the size of the original image and final image, the quality of
+the final image can be unacceptable. Therefore, reset the dimensions
+of the display object after the expanding operations are completed.
+Because <samp class="codeph">cacheAsBitmap</samp> is <samp class="codeph">true</samp>, the
+runtime software redraws the display object, but only once, and
+it renders a high-quality image.</p>
+<div class="note"><span class="notetitle">Note:  </span>Typically, AIR for TV
+devices do not support hardware-accelerated rotation and skewing.
+Therefore, if you specify rotation and skewing in the Matrix class,
+AIR for TV performs all the Matrix operations in the software. These
+software operations can have a detrimental impact to performance.</div>
+</li>
+<li><p>Use the BitmapData class to create custom bitmap caching
+behavior.</p>
+</li>
+</ul>
+</div>
+<p>For more information about bitmap
+caching, see the following:</p>
+<div class="para"><ul><li><p><a href="http://www.adobe.com/go/learn_caching_display_objects_en" target="_self">Caching display objects</a></p>
+</li>
+<li><p><a href="http://www.adobe.com/go/learn_bitmap_caching_OptPerf_en" target="_self">Bitmap caching</a></p>
+</li>
+<li><p><a href="http://www.adobe.com/go/learn_manual_bitmap_caching_OptPerf_en" target="_self">Manual bitmap caching</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section"><h4 class="sectiontitle">Managing graphics memory</h4><p>To perform the
+accelerated graphics operations, hardware accelerators use special
+graphics memory. If your application uses all the graphics memory,
+the application runs more slowly because AIR for TV reverts to using
+software for the graphics operations. </p>
+<p>To manage your application’s
+use of graphics memory:</p>
+<ul><li><p>When you are done using an
+image or other bitmap data, release its associated graphics memory.
+To do so, call the <samp class="codeph">dispose()</samp> method of the <samp class="codeph">bitmapData</samp> property
+of the Bitmap object. For example:</p>
+<pre>myBitmap.bitmapData.dispose();</pre>
+<div class="note"><span class="notetitle">Note:  </span>Releasing
+the reference to the BitmapData object does not immediately free the
+graphics memory. The runtime’s garbage collector eventually frees
+the graphics memory, but calling <samp class="codeph">dispose() </samp>gives
+your application more control.</div>
+</li>
+<li><p>Use PerfMaster Deluxe, an AIR application that Adobe provides,
+to better understand hardware graphics acceleration on your target
+device. This application shows the frames per second to execute
+various operations. Use PerfMaster Deluxe to compare different implementations
+of the same operation. For example, compare moving a bitmap image
+versus moving a vector image. PerfMaster Deluxe is available at <a href="http://www.adobe.com/go/learn_flashplatform_tv_en" target="_self">Flash Platform for TV</a>.</p>
+</li>
+</ul>
+</div>
+<div class="section"><h4 class="sectiontitle">Managing the display list</h4><p>To make a display
+object invisible, set the object’s <samp class="codeph">visible</samp> property
+to <samp class="codeph">false</samp>.  Then, the object is still on the display
+list, but AIR for TV does not render or display it.  This technique
+is useful for objects that frequently come and go from view, because
+it incurs only a little processing overhead. However, setting the <samp class="codeph">visible</samp> property
+to <samp class="codeph">false</samp> does not release any of the object’s resources. Therefore,
+when you are done displaying an object, or at least done with it
+for a long time, remove the object from the display list. Also,
+set all references to the object to <samp class="codeph">null</samp>. These
+actions allow the garbage collector to release the object’s resources.</p>
+</div>
+</div></div>
+<div id="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff3" class="nochunk"><a name="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff3"><!-- --></a><h2 class="topictitle2">PNG and JPEG image usage</h2><div><p>Two common image formats in applications are PNG and JPEG.
+Regarding these image formats in AIR for TV applications, consider
+the following:</p>
+<ul><li><p>AIR for TV typically uses hardware acceleration to decode
+JPEG files.</p>
+</li>
+<li><p>AIR for TV typically uses software to decode PNG files. Decoding
+PNG files in software is fast.</p>
+</li>
+<li><p>PNG is the only cross-platform bitmap format that supports
+transparency (an alpha channel).</p>
+</li>
+</ul>
+<p>Therefore, use these image formats as follows in your applications:</p>
+<ul><li><p>Use JPEG files for photographs to benefit from the hardware
+accelerated decoding.</p>
+</li>
+<li><p>Use PNG image files for user interface elements. The user
+interface elements can have an alpha setting, and the software decoding
+provides fast enough performance for user interface elements.</p>
+</li>
+</ul>
+</div></div>
+<div id="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff2" class="nochunk"><a name="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff2"><!-- --></a><h2 class="topictitle2">The stage in AIR for TV applications</h2><div><p>When authoring an AIR for TV application, consider the
+following when working with the Stage class:</p>
+<div class="para"><ul><li><p>Screen resolution</p>
+</li>
+<li><p>The safe viewing area</p>
+</li>
+<li><p>The stage scale mode</p>
+</li>
+<li><p>The stage alignment</p>
+</li>
+<li><p>The stage display state</p>
+</li>
+<li><p>Designing for multiple screen sizes</p>
+</li>
+<li><p>The stage quality setting</p>
+</li>
+</ul>
+</div>
+<div class="section"><h4 class="sectiontitle">Screen resolution</h4><p>Currently, TV devices
+typically have one of these screen resolutions: 540p, 720p, and
+1080p. These screen resolutions result in the following values in
+the ActionScript Capabilities class:</p>
+<div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d17e12255"><p>Screen resolution</p>
+</th>
+<th valign="top" width="NaN%" id="d17e12258"><p><samp class="codeph">Capabilities.screenResolutionX</samp></p>
+</th>
+<th valign="top" width="NaN%" id="d17e12262"><p><samp class="codeph">Capabilities.screenResolutionY</samp></p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d17e12255 "><p>540p</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12258 "><p>960</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12262 "><p>540</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e12255 "><p>720p</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12258 "><p>1280</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12262 "><p>720</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e12255 "><p>1080p</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12258 "><p>1920</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12262 "><p>1080</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>To write a full-screen AIR for TV application
+for a specific device, hard code <samp class="codeph">Stage.stageWidth</samp> and <samp class="codeph">Stage.stageHeight</samp> to
+the device’s screen resolution. However, to write a full-screen
+application that runs on multiple devices, use the <samp class="codeph">Capabilities.screenResolutionX</samp> and <samp class="codeph">Capabilities.screenResolutionY</samp> properties
+to set your Stage dimensions. </p>
+<p>For example:</p>
+<pre>stage.stageWidth = Capabilities.screenResolutionX; 
+stage.stageHeight = Capabilities.screenResolutionY;</pre>
+</div>
+<div class="section"><h4 class="sectiontitle">The safe viewing area</h4><p>The <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">safe viewing area</i> on
+a television is an area of the screen that is inset from the screen’s
+edges. This area is inset far enough that the end user can see the
+entire area, without the TV’s bezel obscuring any part of the area.
+Because the bezel, which is the physical frame around the screen,
+varies among manufacturers, the necessary inset varies. The safe
+viewing area attempts to guarantee the area of the screen that is
+visible. The safe viewing area is also known as the <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">title safe area</i>.</p>
+<p><i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">Overscan</i> is
+the area of the screen that is not visible because it is behind
+the bezel. </p>
+<p>Adobe recommends an inset of 7.5% on each edge
+of the screen. For example:</p>
+<p><div xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema" class="fignone"><a href="#" onclick="return showHideImage('dt_safe_viewing_area', this);">View full size graphic</a><img alt="" id="dt_safe_viewing_area" src="images/dt_safe_viewing_area.png" /><div class="figdesc">Safe viewing area for a screen resolution of 1920 x 1080</div></div></p>
+<p>Always
+consider the safe viewing area when designing a full-screen AIR
+for TV application: </p>
+<div class="para"><ul><li><p>Use the entire screen for
+backgrounds, such as background images or background colors.</p>
+</li>
+<li><p>Use only the safe viewing area for critical application elements
+such as text, graphics, video, and user interface items such as
+buttons.</p>
+</li>
+</ul>
+</div>
+<p>The following table shows the dimensions
+of the safe viewing area for each of the typical screen resolutions,
+using an inset of 7.5%.</p>
+<div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d17e12360"><p>Screen resolution</p>
+</th>
+<th valign="top" width="NaN%" id="d17e12363"><p>Width and height of safe viewing area</p>
+</th>
+<th valign="top" width="NaN%" id="d17e12366"><p>Left and right inset width</p>
+</th>
+<th valign="top" width="NaN%" id="d17e12369"><p>Top and bottom inset height</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d17e12360 "><p>960 x 540</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12363 "><p>816 x 460</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12366 "><p>72</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12369 "><p>40</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e12360 "><p>1280 x 720</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12363 "><p>1088 x 612</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12366 "><p>96</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12369 "><p>54</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e12360 "><p>1920 x 1080</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12363 "><p>1632 x 918</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12366 "><p>144</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12369 "><p>81</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>However, a best practice is to always
+dynamically calculate the safe viewing area. For example:</p>
+<pre>var horizontalInset, verticalInset, safeAreaWidth, safeAreaHeight:int; 
+ 
+horizontalInset = .075 * Capabilities.screenResolutionX; 
+verticalInset = .075 * Capabilities.screenResolutionY; 
+safeAreaWidth = Capabilities.screenResolutionX - (2 * horizontalInset); 
+safeAreaHeight = Capabilities.screenResolutionY - (2 * verticalInset);</pre>
+</div>
+<div class="section"><h4 class="sectiontitle">Stage scale mode</h4><p>Set <samp class="codeph">Stage.scaleMod</samp>e
+to <samp class="codeph">StageScaleMode.NO_SCALE</samp>, and listen for stage
+resize events.</p>
+<pre>stage.scaleMode = StageScaleMode.NO_SCALE; 
+stage.addEventListener(Event.RESIZE, layoutHandler);</pre>
+<p>This
+setting makes stage coordinates the same as pixel coordinates. Along
+with <samp class="codeph">FULL_SCREEN_INTERACTIVE</samp> display state and
+the <samp class="codeph">TOP_LEFT</samp> stage alignment, this setting allows
+you to effectively use the safe viewing area.</p>
+<p>Specifically,
+in full-screen applications, this scale mode means that the <samp class="codeph">stageWidth</samp> and <samp class="codeph">stageHeight</samp> properties
+of the Stage class correspond to the <samp class="codeph">screenResolutionX</samp> and <samp class="codeph">screenResolutionY</samp> properties
+of the Capabilities class.</p>
+<p>Furthermore, when the application’s
+window changes size, the stage contents maintain their defined size.
+The runtime performs no automatic layout or scaling. Also, the runtime
+dispatches the Stage class’s <samp class="codeph">resize</samp> event when
+the window changes size. Therefore, you have full control over how
+to adjust the application’s contents when the application begins
+and when the application window resizes.</p>
+<div class="note"><span class="notetitle">Note:  </span>The <samp class="codeph">NO_SCALE</samp> behavior
+is the same as with any AIR application. In AIR for TV applications,
+however, using this setting is critical to using the safe viewing
+area.</div>
+</div>
+<div class="section"><h4 class="sectiontitle">Stage alignment</h4><p>Set <samp class="codeph">Stage.align </samp>to <samp class="codeph">StageAlign.TOP_LEFT</samp>: </p>
+<pre>stage.align = StageAlign.TOP_LEFT; </pre>
+<p>This
+alignment places the <samp class="codeph">0,0</samp> coordinate in the upper-left
+corner of the screen, which is convenient for content placement
+using ActionScript.</p>
+<p>Along with the <samp class="codeph">NO_SCALE</samp> scale
+mode and the <samp class="codeph">FULL_SCREEN_INTERACTIVE</samp> display state,
+this setting allows you to effectively use the safe viewing area.</p>
+</div>
+<div class="section"><h4 class="sectiontitle">Stage display state</h4><p>Set <samp class="codeph">Stage.displayState </samp>in
+a full-screen AIR for TV application to <samp class="codeph">StageDisplayState.FULL_SCREEN_INTERACTIVE</samp>: </p>
+<pre>stage.displayState = StageDisplayState.FULL_SCREEN_INTERACTIVE; </pre>
+<p>This
+value sets the AIR application to expand the stage over the entire
+screen, with user input allowed.</p>
+<p>Adobe recommends that you
+use the <samp class="codeph">FULL_SCREEN_INTERACTIVE</samp> setting. Along
+with the <samp class="codeph">NO_SCALE</samp> scale mode and the <samp class="codeph">TOP_LEFT</samp> stage
+alignment, this setting allows you to effectively use the safe viewing
+area.</p>
+<p>Therefore, for full screen applications, in a handler
+for the <samp class="codeph">ADDED_TO_STAGE</samp> event on the main document
+class, do the following:</p>
+<pre>private function onStage(evt:Event):void 
+{ 
+    stage.scaleMode = StageScaleMode.NO_SCALE; 
+    stage.align = StageAlign.TOP_LEFT; 
+    stage.addEventListener(Event.RESIZE, onResize); 
+    stage.displayState = StageDisplayState.FULL_SCREEN_INTERACTIVE; 
+}</pre>
+<p>Then, in the handler for the <samp class="codeph">RESIZE</samp> event:</p>
+<div class="para"><ul><li><p>Compare the screen resolution sizes with the stage width
+and height. If they are the same, the <samp class="codeph">RESIZE</samp> event
+occurred because the stage display state changed to <samp class="codeph">FULL_SCREEN_INTERACTIVE</samp>.</p>
+</li>
+<li><p>Calculate and save the dimensions of the safe viewing area
+and corresponding insets.</p>
+</li>
+</ul>
+</div>
+<pre>private function onResize(evt:Event):void 
+{ 
+    if ((Capabilities.screenResolutionX == stage.stageWidth) &amp;&amp; 
+        (Capabilities.screenResolutionY == stage.stageHeight)) 
+    { 
+         
+        // Calculate and save safe viewing area dimensions. 
+    } 
+}</pre>
+<p>When the stage dimensions equal <samp class="codeph">Capabilities.screenResolutionX</samp> and <samp class="codeph">screenResolutionY</samp>,
+AIR for TV causes the hardware to deliver the best possible fidelity
+for your video and graphics. </p>
+<div class="note"><span class="notetitle">Note:  </span>The fidelity at which graphics
+and video are displayed on a TV screen can differ from the <samp class="codeph">Capabilities.screenResolutionX</samp> and <samp class="codeph">screenResolutionY</samp> values,
+which depend on the device running AIR for TV. For example, a set-top
+box running AIR for TV can have a screen resolution of 1280 x 720 and
+the connected TV can have a screen resolution of 1920 x 1080. However,
+AIR for TV causes the hardware to deliver the best possible fidelity.
+Therefore, in this example, the hardware displays a 1080p video
+using a 1920 x 1080 screen resolution.</div>
+</div>
+<div class="section"><h4 class="sectiontitle">Designing for multiple screen sizes</h4><p>You
+can develop the same full-screen AIR for TV application to work
+and look good on multiple AIR for TV devices. Do the following:</p>
+<ol><li><p>Set the stage properties <samp class="codeph">scaleMode</samp>, <samp class="codeph">align</samp>,
+and <samp class="codeph">displayState</samp> to the recommended values: <samp class="codeph">StageScaleMode.NO_SCALE</samp>, <samp class="codeph">StageAlign.TOP_LEFT</samp>,
+and <samp class="codeph">StageDisplayState.FULL_SCREEN_INTERACTIVE</samp>,
+respectively.</p>
+</li>
+<li><p>Set up the safe viewing area based on <samp class="codeph">Capabilities.screenResolutionX</samp> and<samp class="codeph"> Capabilities.screenResolutionY</samp>.</p>
+</li>
+<li><p>Adjust the size and layout of your content according to width
+and height of the safe viewing area.</p>
+<p>Although your content’s
+objects are large, especially compared to mobile device applications,
+concepts such as dynamic layout, relative positioning, and adaptive
+content are the same. For further information about ActionScript to
+support these concepts, see <a href="http://www.adobe.com/go/learn_multiple_screen_sizes_en" target="_self">Authoring mobile Flash content for multiple screen
+sizes</a>.</p>
+</li>
+</ol>
+</div>
+<div class="section"><h4 class="sectiontitle">Stage quality</h4><p>The <samp class="codeph">Stage.quality</samp> property
+for an AIR for TV application is always <samp class="codeph">StageQuality.High</samp>.
+You cannot change it.</p>
+<p>This property specifies the rendering
+quality for all Stage objects. </p>
+</div>
+</div></div>
+<div id="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff1" class="nochunk"><a name="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff1"><!-- --></a><h2 class="topictitle2">Remote control input handling</h2><div><p>Users typically interact with your AIR for TV application
+using a remote control. However, handle key input the same way you
+handle key input from a keyboard on a desktop application. Specifically,
+handle the event <samp class="codeph">KeyboardEvent.KEY_DOWN</samp>. For more
+information, see <a href="http://www.adobe.com/go/learn_air_keyboard_input_en" target="_self">Capturing keyboard input</a> in the<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema"> ActionScript 3.0 Developer’s Guide</i>.</p>
+<p>The keys on the remote control map to ActionScript constants.
+For example, the keys on the directional keypad on a remote control
+map as follows:</p>
+<div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d17e12642"><p>Remote control’s directional keypad key</p>
+</th>
+<th valign="top" width="NaN%" id="d17e12645"><p>ActionScript 3.0 constant</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d17e12642 "><p>Up</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12645 "><p><samp class="codeph">Keyboard.UP</samp></p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e12642 "><p>Down</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12645 "><p><samp class="codeph">Keyboard.DOWN</samp></p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e12642 "><p>Left</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12645 "><p><samp class="codeph">Keyboard.LEFT</samp></p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e12642 "><p>Right</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12645 "><p><samp class="codeph">Keyboard.RIGHT</samp></p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e12642 "><p>OK or Select</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12645 "><p><samp class="codeph">Keyboard.ENTER</samp></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>AIR 2.5 added many other Keyboard constants to support remote
+control input. For a complete list, see the <a href="http://www.adobe.com/go/learn_keyboard_class_en" target="_self">Keyboard class</a> in the<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema"> ActionScript 3.0 Reference for the Adobe Flash Platform</i>.</p>
+<p>To ensure your application works on as many devices as possible,
+Adobe recommends the following:</p>
+<div class="para"><ul><li><p>Use only the directional keypad keys, if possible.</p>
+<p>Different
+remote control devices have different sets of keys. However, they typically
+always have the directional keypad keys.</p>
+<p>For example, a remote
+control for a Blu-ray player does not typically have a “channel
+up” and “channel down” key. Even keys for play, pause, and stop
+are not on all remote controls.</p>
+</li>
+<li><p>Use the Menu and Info keys if the application needs more
+than the directional keypad keys. </p>
+<p>The Menu and Info keys
+are the next most common keys on remote controls.</p>
+</li>
+<li><p>Consider the frequent usage of universal remote controls.</p>
+<p>Even
+if you are creating an application for a particular device, realize
+that many users do not use the remote control that comes with the
+device. Instead, they use a universal remote control. Also, users
+do not always program their universal remote control to match all
+the keys on the device’s remote control. Therefore, using only the
+most common keys is advisable.</p>
+</li>
+<li><p>Make sure that the user can always escape a situation using
+one of the directional keypad keys.</p>
+<p>Sometimes your application
+has a good reason to use a key that is not one of the most common
+keys on remote controls. Providing an escape route with one of the
+directional keypad keys makes your application behave gracefully on
+all devices.</p>
+</li>
+<li><p>Do not require pointer input unless you know the target AIR
+for TV device has a pointer input capability.</p>
+<p>Although many
+desktop applications expect mouse input, most televisions do not
+support pointer input. Therefore, if you are converting desktop
+applications to run on televisions, make sure that you modify the
+application to not expect mouse input. These modifications include
+changes to event handling and changes to instructions to the user.
+For example, when an application’s startup screen displays, do not
+display text that says “Click to start”.</p>
+</li>
+</ul>
+</div>
+</div></div>
+<div id="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff0" class="nochunk"><a name="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff0"><!-- --></a><h2 class="topictitle2">Managing focus</h2><div><p>When a user interface element has the focus in a desktop
+application, it is the target of user input events such as keyboard
+and mouse events. Furthermore, an application highlights the user
+interface element with the focus. Managing focus in an AIR for TV
+application is different from managing focus in a desktop application
+because:</p>
+<ul><li><p>Desktop applications often use the tab key to change
+focus to the next user interface element. Using the tab key doesn’t
+apply to AIR for TV applications. Remote control devices do not
+typically have a tab key. Therefore, managing focus with the <samp class="codeph">tabEnabled</samp> property
+of a DisplayObject like on the desktop does not apply. </p>
+</li>
+<li><p>Desktop applications often expect the user to use the mouse
+to give focus to a user interface element. </p>
+</li>
+</ul>
+<p>Therefore, in your application, do the following:</p>
+<div class="para"><ul><li><p>Add an event listener to the Stage that listens for
+Keyboard events such as <samp class="codeph">KeyboardEvent.KEY_DOWN</samp>.</p>
+</li>
+<li><p>Provide application logic to determine which user interface
+element to highlight to the end user. Be sure to highlight a user
+interface element when the application starts.</p>
+</li>
+<li><p>Based on your application logic, dispatch the Keyboard event
+that the Stage received to the appropriate user interface element
+object. </p>
+<p>You can also use <samp class="codeph">Stage.focus</samp> or <samp class="codeph">Stage.assignFocus()</samp> to
+assign the focus to a user interface element. You can then add an
+event listener to that DisplayObject so that it receives keyboard
+events.</p>
+</li>
+</ul>
+</div>
+</div></div>
+<div id="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fef" class="nochunk"><a name="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fef"><!-- --></a><h2 class="topictitle2">User interface design</h2><div><p>Make the user interface of an AIR for TV application work
+well on televisions by incorporating these recommendations regarding:</p>
+<ul><li><p>the application’s responsiveness</p>
+</li>
+<li><p>the application’s usability</p>
+</li>
+<li><p>the user’s personality and expectations</p>
+</li>
+</ul>
+<div class="section"><h4 class="sectiontitle">Responsiveness</h4><p>Use the following tips
+to make an AIR for TV application as responsive as possible.</p>
+<div class="para"><ul><li><p>Make the application’s initial SWF file as small as possible. </p>
+<p>In
+the initial SWF file, load only the necessary resources to start
+the application. For example, load only the application’s startup
+screen image.</p>
+<p>Although this recommendation is valid for desktop
+AIR applications, it is more important on AIR for TV devices. For
+example, AIR for TV devices do not have the equivalent processing
+power of desktop computers. Also, they store the application in
+flash memory, which is not as fast to access as hard disks on desktop
+computers.</p>
+</li>
+<li><p>Make the application run at a frame rate of at least 20 frames
+per second. </p>
+<p>Design your graphics to achieve this goal. The
+complexity of your graphics operations can affect your frames per
+second. For tips on improving rendering performance, see <a href="http://www.adobe.com/go/learn_optimizing_fp_en" target="_self">Optimizing Performance for the Adobe Flash
+Platform</a>.</p>
+<div class="note"><span class="notetitle">Note:  </span>The graphics hardware on AIR for TV devices
+typically updates the screen at a rate of 60 Hz or 120 Hz (60 or
+120 times per second). The hardware scans the stage for updates
+at, for example, 30 frames per second or 60 frames per second for display
+on the 60-Hz or 120-Hz screen. However, whether the user experiences these
+higher frame rates depends on the complexity of the application’s
+graphics operations.</div>
+</li>
+<li><p>Update the screen within 100 - 200 milliseconds of user input. </p>
+<p>Users
+become impatient if updates take longer, often resulting in multiple keypresses.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section"><h4 class="sectiontitle">Usability</h4><p>Users of AIR for TV applications
+are in a “living room” environment. They are sitting across the
+room from the TV, some 10 feet away. The room is sometimes dark.
+They typically use a remote control device for input. More than
+one person can be using the application, sometimes together, sometimes
+serially. </p>
+<p>Therefore, to design your user interface for usability
+on a TV, consider the following:</p>
+<div class="para"><ul><li><p>Make the user
+interface elements large.</p>
+<p>When designing text, buttons, or
+any other user interface elements, consider that the user is sitting
+across the room. Make everything easy to see and read from, for
+example, 10 feet away. Do not be tempted to crowd the screen just because
+the screen is large.</p>
+</li>
+<li><p>Use good contrast to make the content easy to see and read
+from across the room.</p>
+</li>
+<li><p>Make obvious which user interface element has the focus by
+making that element bright.</p>
+</li>
+<li><p>Use motion only as necessary. For example, sliding from one
+screen to the next for continuity can work well. However, motion
+can be distracting if it does not help the user navigate or if it
+is not intrinsic to the application.</p>
+</li>
+<li><p>Always provide an obvious way for the user to go back through
+the user interface. </p>
+</li>
+</ul>
+</div>
+<p>For more information about
+using the remote control, see <a href="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff1.html">Remote control input handling</a>.</p>
+</div>
+<div class="section"><h4 class="sectiontitle">User’s personality and expectations</h4><p>Consider
+that users of AIR for TV applications are typically seeking TV quality entertainment
+in a fun and relaxed environment. They are not necessarily knowledgeable
+about computers or technology.</p>
+<p>Therefore, design AIR for TV
+applications with the following characteristics:</p>
+<div class="para"><ul><li><p>Do not use technical terms. </p>
+</li>
+<li><p>Avoid modal dialogs. </p>
+</li>
+<li><p>Use friendly, informal instructions appropriate for a living
+room environment, not for a work or technical environment. </p>
+</li>
+<li><p>Use graphics that have the high production quality that TV
+watchers expect.</p>
+</li>
+<li><p>Create a user interface that works easily with a remote control
+device. Do not use user interface or design elements that are better
+suited to a desktop or mobile application. For example, user interfaces
+on desktop and mobile devices often involve pointing and clicking
+buttons with a mouse or a finger. </p>
+</li>
+</ul>
+</div>
+</div>
+</div></div>
+<div id="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fee" class="nochunk"><a name="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fee"><!-- --></a><h2 class="topictitle2">Fonts and text</h2><div><p>You can use either device fonts or embedded fonts in your
+AIR for TV application.</p>
+<p>Device fonts are fonts that are installed on a device. All AIR
+for TV devices have the following device fonts:</p>
+<div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d17e12890"><p>Font name</p>
+</th>
+<th valign="top" width="NaN%" id="d17e12893"><p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d17e12890 "><p><samp class="codeph">_sans</samp></p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12893 "><p>The <samp class="codeph">_sans</samp> device font is
+a sans-serif typeface. The <samp class="codeph">_sans </samp>device font. installed
+on all AIR for TV devices is Myriad Pro. Typically, a sans-serif
+typeface looks better on a TV than serif typefaces, because of the
+viewing distance.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e12890 "><p><samp class="codeph">_serif</samp></p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12893 "><p>The <samp class="codeph">_serif</samp> device font
+is a serif typeface. The <samp class="codeph">_serif </samp>device font installed
+on all AIR for TV devices is Minion Pro.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e12890 "><p><samp class="codeph">_typewriter</samp></p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12893 "><p>The <samp class="codeph">_typewriter</samp> device
+font is a monospace font. The <samp class="codeph">_typewriter </samp>device
+font installed on all AIR for TV devices is Courier Std.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>All AIR for TV devices also have the following Asian device fonts:</p>
+<div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d17e12950"><p>Font name</p>
+</th>
+<th valign="top" width="NaN%" id="d17e12953"><p>Language</p>
+</th>
+<th valign="top" width="NaN%" id="d17e12956"><p>Typeface category</p>
+</th>
+<th valign="top" width="NaN%" id="d17e12959"><p>locale code</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d17e12950 "><p>RyoGothicPlusN-Regular</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12953 "><p>Japanese</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12956 "><p>sans</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12959 "><p>ja</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e12950 "><p>RyoTextPlusN-Regular</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12953 "><p>Japanese</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12956 "><p>serif</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12959 "><p>ja</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e12950 "><p>AdobeGothicStd-Light     </p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12953 "><p>Korean</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12956 "><p>sans</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12959 "><p>ko</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e12950 "><p>AdobeHeitiStd-Regular </p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12953 "><p>Simplified Chinese</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12956 "><p>sans</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12959 "><p>zh_CN</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e12950 "><p>AdobeSongStd-Light</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12953 "><p>Simplified Chinese</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12956 "><p>serif</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12959 "><p>zh_CN</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d17e12950 "><p>AdobeMingStd-Light</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12953 "><p>Traditional Chinese</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12956 "><p>serif</p>
+</td>
+<td valign="top" width="NaN%" headers="d17e12959 "><p>zh_TW and zh_HK</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>These AIR for TV device fonts are:</p>
+<div class="para"><ul><li><p>From the Adobe® Type Library</p>
+</li>
+<li><p>Look good on televisions</p>
+</li>
+<li><p>Designed for video titling</p>
+</li>
+<li><p>Are font outlines, not bitmap fonts</p>
+</li>
+</ul>
+</div>
+<div class="note"><span class="notetitle">Note:  </span>Device manufacturers often include other device fonts on the
+device. These manufacturer-provided device fonts are installed in
+addition to the AIR for TV device fonts.</div>
+<p>Adobe provides an application called FontMaster Deluxe that displays
+all the device fonts on the device. The application is available
+at <a href="http://www.adobe.com/go/learn_flashplatform_tv_en" target="_self">Flash Platform for TV</a>.</p>
+<p>    You can also embed fonts in your AIR for TV application. For
+information on embedded fonts, see <a href="http://www.adobe.com/go/learn_advancedTextRendering_en" target="_self">Advanced text rendering</a> in the <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">ActionScript 3.0 Developer’s Guide</i>.</p>
+<p>Adobe recommends the following regarding using TLF text fields:</p>
+<div class="para"><ul><li><p>Use TLF text fields for Asian language text to take
+advantage of the locale in which the application is running. Set
+the <samp class="codeph">locale</samp> property of the TextLayoutFormat object
+associated with the TLFTextField object. To determine the current
+locale, see <a href="http://www.adobe.com/go/learn_choosingLocale_en" target="_self">Choosing a locale</a> in the <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">ActionScript 3.0 Developer’s Guide</i>.</p>
+</li>
+<li><p>Specify the font name in the <samp class="codeph">fontFamily</samp> property
+in the TextLayoutFormat object if the font is not one of the AIR
+for TV device fonts. AIR for TV uses the font if it is available
+on the device. If the font you request is not on the device, based
+on the <samp class="codeph">locale</samp> setting, AIR for TV substitutes the
+appropriate AIR for TV device font.</p>
+</li>
+<li><p>Specify <samp class="codeph">_sans</samp>, <samp class="codeph">_serif,</samp> or <samp class="codeph">_typewriter</samp> for
+the <samp class="codeph">fontFamily</samp> property, along with setting the <samp class="codeph">locale</samp> property,
+to cause AIR for TV to choose the correct AIR for TV device font.
+Depending on the locale, AIR for TV chooses from its set of Asian
+device fonts or its set of non-Asian device fonts. These settings
+provide an easy way for you to automatically use the correct font
+for the four major Asian locales and English.</p>
+</li>
+</ul>
+</div>
+<div class="note"><span class="notetitle">Note:  </span>If you use classic text fields for Asian language text, specify
+a font name of an AIR for TV device font to guarantee proper rendering.
+If you know that another font is installed on your target device,
+you can also specify it.</div>
+<p>Regarding application performance, consider the following:</p>
+<div class="para"><ul><li><p>Classic text fields provide faster performance than
+TLF text fields.</p>
+</li>
+<li><p>A classic text field that uses bitmap fonts provides the
+fastest performance. </p>
+<p>Bitmap fonts provide a bitmap for each
+character, unlike outline fonts, which provide only outline data
+about each character. Both device fonts and embedded fonts can be
+bitmap fonts.</p>
+</li>
+<li><p>If you specify a device font, make sure that the device font
+is installed on your target device. If it is not installed on the
+device, AIR for TV finds and uses another font that is installed
+on the device. However, this behavior slows the application’s performance.</p>
+</li>
+<li><p>As with any display object, if a TextField object is mostly
+unchanging, set the object’s <samp class="codeph">cacheAsBitmap</samp> property
+to <samp class="codeph">true</samp>. This setting improves performance for
+transitions such as fading, sliding, and alpha blending. Use <samp class="codeph">cacheAsBitmapMatrix</samp> for
+scaling and translation. For more information, see <a href="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7ff4.html">Graphics hardware acceleration</a>.</p>
+</li>
+</ul>
+</div>
+</div></div>
+<div id="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fed" class="nochunk"><a name="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fed"><!-- --></a><h2 class="topictitle2">File system security</h2><div><p>AIR for TV applications are AIR applications, and, therefore,
+can access the device’s filesystem. However, on a “living room”
+device it is critically important that an application cannot access
+the device’s system files or the files of other applications. Users
+of TVs and associated devices do not expect or tolerate any device
+failures — they are watching TV, after all.</p>
+<p>Therefore, an AIR for TV application has a limited view of the
+device’s filesystem. Using ActionScript 3.0, your application can
+access only specific directories (and their subdirectories). Furthermore,
+the directory names that you use in ActionScript are not the actual
+directory names on the device. This extra layer protects AIR for
+TV applications from maliciously or inadvertently accessing local
+files that do not belong to them.</p>
+<p>For details, see <a href="http://www.adobe.com/go/learn_air_tv_directory_view_en" target="_self">Directory view for AIR for TV applications</a>.</p>
+</div></div>
+<div id="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fec" class="nochunk"><a name="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fec"><!-- --></a><h2 class="topictitle2">The AIR application sandbox</h2><div><p>AIR for TV applications run in the AIR application sandbox,
+described in <a href="http://www.adobe.com/go/learn_air_app_sandbox_en" target="_self">The AIR application sandbox</a>.</p>
+<p>The only difference for AIR for TV applications is that they
+have limited access to the file system as described in <a href="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fed.html">File system security</a>. </p>
+</div></div>
+<div id="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7feb" class="nochunk"><a name="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7feb"><!-- --></a><h2 class="topictitle2">Application life cycle</h2><div><p>Unlike on a desktop environment, the end user cannot close
+the window in which your AIR for TV application is running. Therefore,
+provide a user interface mechanism for exiting the application.</p>
+<p>Typically, a device allows the end user to unconditionally exit
+an application with the exit key on the remote control. However,
+AIR for TV does not dispatch the event <samp class="codeph">flash.events.Event.EXITING</samp> to
+the application. Therefore, save the application state frequently
+so that the application can restore itself to a reasonable state
+when it next starts.</p>
+</div></div>
+<div id="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fea" class="nochunk"><a name="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fea"><!-- --></a><h2 class="topictitle2">HTTP cookies</h2><div><p>AIR for TV supports HTTP persistent cookies and session
+cookies. AIR for TV stores each AIR application’s cookies in an
+application-specific directory:</p>
+<pre>/app-storage/<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;app id&gt;</i>/Local Store</pre>
+<p>The cookie file is named <samp class="codeph">cookies</samp>.</p>
+<div class="note"><span class="notetitle">Note:  </span>AIR on other devices, such as desktop devices, does not store
+cookies separately for each application. Application-specific cookie
+storage supports the application and system security model of AIR
+for TV.</div>
+<p>Use the ActionScript property<samp class="codeph"> URLRequest.manageCookies</samp> as
+follows:</p>
+<div class="para"><ul><li><p>Set <samp class="codeph">manageCookies</samp> to <samp class="codeph">true</samp>.
+This value is the default. It means that AIR for TV automatically
+adds cookies to HTTP requests and remembers cookies in the HTTP
+response.</p>
+<div class="note"><span class="notetitle">Note:  </span>Even when <samp class="codeph">manageCookies</samp> is <samp class="codeph">true</samp>,
+the application can manually add a cookie to an HTTP request using <samp class="codeph">URLRequest.requestHeaders</samp>.
+If this cookie has the same name as a cookie that AIR for TV is
+managing, the request contains two cookies with the same name. The
+values of the two cookies can be different.</div>
+</li>
+<li><p>Set <samp class="codeph">manageCookies</samp> to <samp class="codeph">false</samp>.
+This value means that the application is responsible for sending
+cookies in HTTP requests, and for remembering the cookies in the
+HTTP response.</p>
+</li>
+</ul>
+</div>
+<p>For more information, see <a href="http://www.adobe.com/go/learn_url_request_en" target="_self">URLRequest</a>.</p>
+</div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator"><a href="#top"><img src="images/BTT.jpg" /></a>&#160;</div>
+          </div>
+          <div id="footer">
+<!-- BEGIN IONCOMMENTS -->
+            <div id="ionComHere">
+            </div>
+<!-- END IONCOMMENTS -->
+
+
+            <p id="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" id="creativecommons_text"><img id="creativecommons_img" src="images/CC.png" alt="This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License" /></a>&nbsp;Twitter™ and Facebook posts are not covered under the terms of Creative Commons.</p>
+          </div>
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+
+</td></tr></table>
+      </div>
+<!-- BEGIN BREADCRUMBS -->
+      <div id="breadcrumb">
+        
+<ul class="navigation"><li class="prev"><a accesskey="p" class="prev" href="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fff.html" title="AIR capabilities for TVs"><img src="images/blank.gif" alt="Previous" width="17" height="17" /></a></li><li class="next"><a accesskey="n" class="next" href="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-7fe9.html" title="Workflow for developing an AIR for TV application"><img src="images/blank.gif" alt="Next" width="17" height="17" /></a></li></ul><div class="hierarchy" id="hierarchy"><a href="WS485a42d56cd19641-a9697f4124ef986fac-8000.html"><b>Home</b></a> / <a href="WS485a42d56cd19641-a9697f4124ef986fac-8000.html"><b>Building Adobe AIR Applications</b></a> / <a href="WS62b4b4caef5f7931-1f86f0fb1328dba45c2-8000.html"><b>Developing AIR applications for television devices</b></a> 
+     </div>
+
+      </div>
+<!-- END BREADCRUMBS -->
+<!-- END CONTENT WRAPPER -->
+
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--
+    Description:
+    This file generates the link to product support in the top right corner
+-->
+
+<style>
+#menutop{
+    position:absolute;
+    top:4px;
+    right:24px;
+    width:auto;    
+    font-size:11px;
+    color:#fff;
+    text-align:right;
+}
+#menutop a{
+    color:#fff;
+}
+#menutop a:hover{
+        text-decoration:underline;
+}
+</style>  
+  
+  
+  
+  
+<div id="productmenu">
+<!--googleoff: index-->
+  <div id="menutop">
+
+
+<script language=javascript type='text/javascript'>
+    // darken menu text for products with light backgrounds
+    var path = document.location.href.toLowerCase();
+    if (path.indexOf("/acrobat/")           	> 0 ||
+        path.indexOf("/acrobat.com/")       	> 0 ||
+        path.indexOf("/acrobatConnectPro/") 	> 0 ||
+        path.indexOf("/connect/")           	> 0 ||
+        path.indexOf("/framemaker/")           	> 0 ||
+        path.indexOf("/livecycledataserviceses/") > 0 ||
+        path.indexOf("/muse/")         	> 0 ||
+		path.indexOf("/presenter/")         	> 0 ||
+        path.indexOf("/scene7/")            	> 0 ||
+        path.indexOf("/flashmediaserver/")  	> 0 ||
+        path.indexOf("/wave/")              	> 0 )
+    {
+        document.write('<style>#menutop a{color:#505050}</style>');
+    }
+    if (typeof('terms_AHV_PRODUCT_SUPPORT') != "undefined" && ! use_robohelp_behavior ){      
+        if (path.indexOf("/muse/") > -1 ){
+            var supportlink = '<a href="http://muse.adobe.com/support.html">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }else{
+            var supportlink = '<a href="http://adobe.com/support">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }
+        document.write( supportlink );
+     }
+
+</script> 
+
+  </div>
+<!--googleon: index-->
+</div>
+
+
+
+<style>
+#online-privacy-policy{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+<p id="online-privacy-policy">
+<script language="javascript">
+var pageLoc = "en_US";
+var metaElements = document.all ?
+document.all.tags('meta') :
+document.getElementsByTagName ?
+document.getElementsByTagName ('meta') : new Array();
+for (var m = 0; m < metaElements.length; m++) {
+	if (metaElements[m].name == "lang") {
+		pageLoc = metaElements[m].content;
+		break;
+	}
+}
+var ptn = /(..)-(..)/;
+if (ptn.test(pageLoc)) {
+	var languageCode = pageLoc.replace(ptn, "$1");
+	var countryCode = pageLoc.replace(ptn, "$2");
+	pageLoc = languageCode + "_" + countryCode.toUpperCase();
+}
+
+var policyLoc = "en_US";
+var policyText = "Online Privacy Policy";
+var policyPath = "";
+var policyArray=[
+"da_DK", "Online fortrolighedserklæring",
+"de_DE", "Online-Datenschutzrichtlinie",
+"es_ES", "Política de confidencialidad en línea",
+"fi_FI", "Yksityisyyttä koskeva Online-toimintaohjelma",
+"fr_FR", "Confidentialité et sécurité",
+"it_IT", "Informativa sulla privacy online",
+"ja_JP", "プライバシーポリシー",
+"ko_KR", "Adobe 온라인 개인정보 보호정책",
+"pt_BR", "Política de Confidencialidade On-line", 
+"zh_CN", "在线隐私政策",
+"zh_TW", "線上隱私政策"
+];
+var legalLoc = "en_US";
+var legalText = "Legal Notices";
+var legalPath = legalLoc;
+var legalArray=[
+"ar_AE", "إشعارات قانونية",
+"bg_BG", "Юридически бележки",
+"cs_CZ", "Právní upozornění",
+"da_DK", "Juridiske meddelelser",
+"de_DE", "Rechtliche Hinweise",
+"el_GR", "Σημειώσεις νομικού περιεχομένου",
+"es_ES", "Avisos legales",
+"et_EE", "Juriidilised teated",
+"fi_FI", "Lakisääteiset ilmoitukset",
+"fr_FR", "Mentions légales",
+"he_IL", "הצהרות משפטיות",
+"hr_HR", "Pravne napomene",
+"hu_HU", "Jogi közlemények",
+"it_IT", "Informazioni legali",
+"ja_JP", "法律上の注意",
+"ko_KR", "법적 고지 사항",
+"lt_LT", "Teisinės pastabos",
+"lv_LV", "Juridisks paziņojums",
+"nb_NO", "Juridiske merknader",
+"nl_NL", "Juridische kennisgevingen",
+"pl_PL", "Informacje prawne",
+"pt_BR", "Aspectos jurídicos",
+"ro_RO", "Prevederi legale",
+"ru_RU", "Юридическая информация",
+"sk_SK", "Právne upozornenie",
+"sl_SI", "Pravni pouk",
+"sv_SE", "Upphovsrätt",
+"tr_TR", "Yasal uyarılar",
+"uk_UA", "Юридична інформація",
+"zh_CN", "法律声明",
+"zh_TW", "法律注意事項"
+];
+
+ruPolicy = "http://www.adobe.com/ru/misc/privacy.html";
+trPolicy = "http://www.adobe.com/tr/misc/privacy.html";
+
+// Bug 2846992: LOC: RUS, TUR: The link to "Online Privacy Policy" should include language, currently it is not appearing.
+if (pageLoc == "ru_RU") {
+	policyPath = "ru";
+}
+else if (pageLoc == "tr_TR") {
+	policyPath = "tr";
+}
+for (var i = 0; i < policyArray.length; i+=2) {
+	if (pageLoc == policyArray[i]) {
+		policyLoc = pageLoc;
+		policyText = policyArray[i+1];
+		var ptn = /(..)_(..)/;
+		if (ptn.test(policyLoc)) {
+			var countryCode = policyLoc.replace(ptn, "$2");
+			policyPath = countryCode.toLowerCase();
+		}
+		break;
+	}
+}
+
+for (var i = 0; i < legalArray.length; i+=2) {
+	if (pageLoc == legalArray[i]) {
+		legalLoc = pageLoc;
+		legalText = legalArray[i+1];
+		legalPath = legalLoc;
+		break;
+	}
+}
+if(agt.indexOf("community help client") > -1 ){
+	document.write('<a href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+}else{
+	//Open the privacy policy in a new window
+	document.write('<a target="_blank" href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a target="_blank" href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+} 
+
+
+remove_all_cookies();
+
+function remove_all_cookies() {
+	var res = document.cookie;
+    var multiple = res.split(";");
+    for(var i = 0; i < multiple.length; i++) {
+    	var key = multiple[i].split("=");
+        document.cookie = key[0]+" =; expires = Thu, 01 Jan 1970 00:00:00 UTC";
+    }
+}
+
+
+</script>
+</p>
+
+
+
+<!-- localfooter.ssi -->
+
+<script type="text/javascript">
+    var debug = (top.location.href.indexOf("debug=true") > -1);
+</script>
+
+<script language="javascript">
+document.write('<scr'+'ipt ' +
+               'src="/en_US/ssi/_pod.js" ' +
+               'language="javascript" ' +
+               'charset="UTF-8"> ' +
+               '</scr'+'ipt>');
+</script>
+
+//  Ethnio survey code removed
+
+
+  </body>
+</html>

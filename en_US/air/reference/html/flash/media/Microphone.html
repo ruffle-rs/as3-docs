@@ -1,0 +1,1014 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"><html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers"><meta name="lang" content="en-us"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="Microphone,flash.media.Microphone,activityLevel,codec,enableVAD,encodeQuality,enhancedOptions,framesPerPacket,gain,index,isSupported,muted,name,names,noiseSuppressionLevel,rate,silenceLevel,silenceTimeout,soundTransform,useEchoSuppression,getEnhancedMicrophone,getMicrophone,setLoopBack,setSilenceLevel,setUseEchoSuppression"><title>flash.media.Microphone - Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers</title>
+	<link rel="stylesheet" href="../../jslr-style.css" type="text/css">
+		<script type="text/javascript">
+			
+				var baseRef = "../../";
+				var buildType = 'jslr';
+				var alreadyrunflag=0; //flag to indicate whether target function has already been run
+				var terms_HELPCFG = ".helpcfg";
+
+if (document.addEventListener)
+  document.addEventListener("DOMContentLoaded", function(){alreadyrunflag=1; init()}, false)
+else if (document.all && !window.opera){
+  /* blocks IE from working, as it's fired before dom if ready
+ document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
+  var contentloadtag=document.getElementById("contentloadtag")
+  contentloadtag.onreadystatechange=function(){
+    if (this.readyState=="complete"){
+      alreadyrunflag=1;
+      init();
+    }
+  }*/
+} else if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+  var _timer=setInterval(function(){
+  if(/loaded|complete/.test(document.readyState)){
+    clearInterval(_timer);
+    alreadyrunflag=1;
+    init(); // call target function
+  }}, 10)
+}
+function onLoadFunction() {
+	setTimeout("if (!alreadyrunflag) init();  alreadyrunflag=1; ionReadyLoad(); ", 0);
+}
+
+		</script>
+		<script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+		<script language="javascript" type="text/javascript" src="../../asdoc.js"></script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body onLoad="onLoadFunction()">
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td>
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr>
+				  <td class="titleTableTitleION" align="left" nowrap="true">Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers<br>
+				  <span class="titleTableTopNavION">
+				  <span id="homelink">
+						<a target="_self" href="../../index.html"> Home </a>&nbsp;|&nbsp;
+				  </span>
+				  <a id="showtoc" onClick="showHideTOC(true)" href="#top" style="display:none">Show Classes List</a><a id="hidetoc" onClick="showHideTOC(false)" href="#top" style="display:">Hide Classes List</a>&nbsp;|&nbsp;
+				  <a href="../../all-index-A.html"> Index </a>&nbsp;|&nbsp;
+				  <a href="../../appendixes.html"> Appendixes </a><br>
+				  </span>	
+				  </td>
+				  <td class="titleTableSearchION" align="right" nowrap="true">
+				  <span id="gsa" class="gsa">
+					<form class="searchFormION" method="get" onSubmit="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US');return false;">
+				  <input class="hidden" name="loc" value="" type="hidden">
+				  <input class="hidden" name="termPrefix" value="site:help.adobe.com/en_US/AS3CLR/Flash_10.0" type="hidden">
+				  <input class="hidden" name="title" value="ActionScript 3.0 Reference for the Adobe Flash Platform" type="hidden">
+				  <input class="hidden" name="term" value="" type="hidden">
+				  <input class="hidden" name="area" value="" type="hidden">
+				  <input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text">
+				  <input type="button" name="action" value="" onClick="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US')" class="searchbutton"><br>
+			      <input id="checkBoxId" type="checkbox" name="checkbox" value="checkbox" checked>Language Reference only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  </form>
+				  </span>				  
+				  </td>
+				</tr>
+			  </table>			
+			  </td>
+			<td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logoION.jpg" class="logoImageION" alt=" Adobe Logo " title=" Adobe Logo "></td>
+		  </tr>
+		  <tr>
+			<td colspan="2">
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr class="titleTableRow2">
+				<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+					<convert>Microphone&nbsp;</convert>
+				</td>
+				<td class="titleTableSubNav" id="subNav" align="right">
+				  <a id="propertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="propertiesBar" style="display:none"> | </span>
+				  <a id="packagePropertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="packagePropertiesBar" style="display:none"> | </span>
+				  <a id="constructorLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+				  <span id="constructorBar" style="display:none"> | </span>
+				  <a id="methodsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Methods </a>
+				  <span id="methodsBar" style="display:none"> | </span>
+				  <a id="packageFunctionsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Functions </a>
+				  <span id="packageFunctionsBar" style="display:none"> | </span>
+				  <a id="eventsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('eventSummary');" style="display:none"> Events </a>
+				  <span id="eventsBar" style="display:none"> | </span>
+				  <a id="stylesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('styleSummary');" style="display:none"> Styles </a>
+				  <span id="stylesBar" style="display:none"> | </span>
+				  <a id="SkinPartLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinPartSummary');" style="display:none"> Skin Parts </a>
+				  <span id="SkinPartBar" style="display:none"> | </span>
+				  <a id="SkinStateLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinStateSummary');" style="display:none"> Skin States </a>
+				  <span id="SkinStateBar" style="display:none"> | </span>
+				  <a id="effectsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('effectSummary');" style="display:none"> Effects </a>
+				  <span id="effectsBar" style="display:none"> | </span>
+				  <a id="constantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="constantsBar" style="display:none"> | </span>
+				  <a id="packageConstantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="packageConstantsBar" style="display:none"> | </span>
+				  <a id="interfacesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('interfaceSummary');" style="display:none"> Interfaces </a>
+				  <span id="interfacesBar" style="display:none"> | </span>
+				  <a id="classesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('classSummary');" style="display:none"> Classes </a>
+				  <span id="classesBar" style="display:none"> | </span>
+				  <a id="packageUseLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('package-use.html');" style="display:none">Use</a>
+				  <span id="packageUseBar" style="display:none"> | </span>
+				  <a id="examplesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('includeExamplesSummary');" style="display:none"> Examples </a>
+				</td>
+				</tr>
+				<tr class="titleTableRow3">
+				  <td colspan="4"></td>
+				</tr>
+			  </table>
+			</td>
+		  </tr>
+		</table>
+        <div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="classlist" class="jslrclasslist">
+					<div class="classlistoutline"></div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content">
+<script language="javascript" type="text/javascript">  <!--  
+         
+        asdocTitle = "Microphone - Adobe® AIR® API Reference for HTML Developers"; 
+        var baseRef = '../../'; 
+	document.baseRef = '../../'; 
+          -->  </script>
+<script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+<script language="javascript" type="text/javascript"><!--
+function submitValue() {
+var title="Adobe® AIR® API Reference for HTML Developers";
+var searchStr=document.getElementById('search-livedocs').value;
+
+        
+        
+        if(document.getElementById('checkBoxId').checked){
+        window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
++"&site=communityhelp-air-jslr ";
+} 
+
+        else{ 
+window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
+;
+} 
+} 
+--></script><script type="text/javascript"> scrollToNameAnchor(); </script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">window.runtime property</td><td>window.runtime.flash.media.Microphone</td></tr><tr><td class="classSignature"></td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Microphone  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><div id="badgeAnchorSupport" class="ionBadgeWrapper"></div><div id="badgeContainerSupport"></div><p></p><p></p>
+
+ Use the Microphone class to monitor or capture audio from a microphone.
+
+ 
+
+ <p>
+
+ To get a reference to a Microphone instance, use the <code>Microphone.getMicrophone()</code> method 
+
+ or the <code>Microphone.getEnhancedMicrophone()</code> method. An enhanced microphone instance can 
+
+ perform acoustic echo cancellation. Use acoustic echo cancellation to create real-time audio/video applications
+
+ that don't require headsets. 
+
+ </p>
+
+ 
+
+               <p>
+                  <b>Create a real-time chat application</b>
+               </p>
+
+               <p>To create a real-time chat application, capture audio and send it to Flash Media Server.
+
+ Use the NetConnection and NetStream classes to send the audio stream to Flash Media Server. 
+
+ Flash Media Server can broadcast the audio to other clients.
+
+ To create a chat application that doesn't require headsets, use acoustic echo
+
+ cancellation. Acoustic echo cancellation prevents the feedback loop that occurs when audio enters a microphone, 
+
+ travels out the speakers, and enters the microphone again. To use acoustic echo cancellation, call 
+
+ the <code>Microphone.getEnhancedMicrophone()</code> method to get a reference to a Microphone instance.
+
+ Set <code>Microphone.enhancedOptions</code> to an instance of the <code>MicrophoneEnhancedOptions</code> class to 
+
+ configure settings.</p>
+
+ 
+               <p>
+                  <b>Play microphone audio locally</b>
+               </p>
+
+               <p>Call the Microphone <code>setLoopback()</code> method to route the microphone audio directly to
+
+ the local computer or device audio output. Uncontrolled audio feedback is an inherent danger and is likely
+
+ to occur whenever the audio output can be picked up by the microphone input. The 
+
+ <code>setUseEchoSuppression()</code> method can reduce, but not eliminate, the risk of feedback
+
+ amplification.</p>
+
+ 
+
+               <p>
+                  <b>Capture microphone audio for local recording or processing</b>
+               </p>
+
+               <p>To capture microphone audio, listen for the <code>sampleData</code> events dispatched by a
+
+ Microphone instance. The SampleDataEvent object dispatched for this event contains the audio data.</p>
+
+ 
+
+               <p>For information about capturing video, see the Camera class.</p>
+
+ 
+
+               <p>
+                  <b>Runtime microphone support</b>
+               </p>
+
+               <p>The Microphone class is not supported in Flash Player running in a mobile browser.</p>
+
+ 
+ 
+
+ 
+               <p>You can test for support at run time using the <code>Microphone.isSupported</code> property.
+
+ Note that for AIR for TV devices, <code>Microphone.isSupported</code> is <code>true</code> but
+
+ <code>Microphone.getMicrophone()</code> always returns <code>null</code>.</p>
+
+ 
+               <p>
+                  <b>Privacy controls</b>
+               </p>
+
+               <p>
+
+ Flash Player displays a Privacy dialog
+
+ box that lets the user choose whether to allow or deny access to
+
+ the microphone. Your application window size must be at least 215 x 138
+
+ pixels, the minimum size required to display the dialog box, or access is denied automatically.
+
+ </p>
+
+               <p>Content running in the AIR application sandbox does not need permission to access the microphone
+
+ and no dialog is displayed. AIR content running outside the application sandbox does require permission
+
+ and the Privacy dialog is displayed.</p>
+
+ 
+
+            <p></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="MicrophoneEnhancedMode.html" target="">MicrophoneEnhancedMode</a><br/><a href="MicrophoneEnhancedOptions.html" target="">MicrophoneEnhancedOptions</a><br/></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Properties</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Properties</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Properties</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th>Defined By</th></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#activityLevel" class="signatureLink">activityLevel</a> : Number<div class="summaryTableDescription">[read-only] 
+
+	 The amount of sound the microphone is detecting.</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="" runtime="Flash::10##AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#codec" class="signatureLink">codec</a> : String<div class="summaryTableDescription">
+
+	 
+	 </div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">constructor : Object<div class="summaryTableDescription">
+
+	 A reference to the class object or constructor function for a given object instance.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::10.1##AIR::2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#enableVAD" class="signatureLink">enableVAD</a> : Boolean<div class="summaryTableDescription">
+
+	 Enable Speex voice activity detection.</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="" runtime="Flash::10##AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#encodeQuality" class="signatureLink">encodeQuality</a> : int<div class="summaryTableDescription">
+
+	 The encoded speech quality when using the Speex codec.</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="" runtime="Flash::10.3##AIR::2.7##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#enhancedOptions" class="signatureLink">enhancedOptions</a> : <a href="MicrophoneEnhancedOptions.html">MicrophoneEnhancedOptions</a><div class="summaryTableDescription">	
+
+	 Controls enhanced microphone options.</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="" runtime="Flash::10##AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#framesPerPacket" class="signatureLink">framesPerPacket</a> : int<div class="summaryTableDescription">
+
+	 Number of Speex speech frames transmitted in a packet (message).</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#gain" class="signatureLink">gain</a> : Number<div class="summaryTableDescription">
+
+	 The amount by which the microphone boosts the signal.</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#index" class="signatureLink">index</a> : int<div class="summaryTableDescription">[read-only] 
+
+	 The index of the microphone, as reflected in the array returned by 
+
+	 Microphone.names.</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="" runtime="Flash::10.1##AIR::2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isSupported" class="signatureLink">isSupported</a> : Boolean<div class="summaryTableDescription">[static] [read-only] 
+
+    The isSupported property is set to true if the 
+
+    Microphone class is supported on the current platform, otherwise it is
+
+    set to false.</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#muted" class="signatureLink">muted</a> : Boolean<div class="summaryTableDescription">[read-only] 
+
+	 Specifies whether the user has denied access to the microphone (true) 
+
+	 or allowed access (false).</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#name" class="signatureLink">name</a> : String<div class="summaryTableDescription">[read-only] 
+
+	 The name of the current sound capture device, as returned by the sound capture hardware.</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#names" class="signatureLink">names</a> : Array<div class="summaryTableDescription">[static] [read-only] 
+
+	 An array of strings containing the names of all available sound capture devices.</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="" runtime="Flash::10.1##AIR::2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#noiseSuppressionLevel" class="signatureLink">noiseSuppressionLevel</a> : int<div class="summaryTableDescription">
+
+	 Maximum attenuation of the noise in dB (negative number) used for Speex encoder.</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">prototype : Object<div class="summaryTableDescription">[static] 
+
+	 A reference to the prototype object of a class or function object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#rate" class="signatureLink">rate</a> : int<div class="summaryTableDescription">
+
+	 The rate at which the microphone is capturing sound, in kHz.</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#silenceLevel" class="signatureLink">silenceLevel</a> : Number<div class="summaryTableDescription">[read-only] 
+
+	 The amount of sound required to activate the microphone and dispatch 
+
+	 the activity event.</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#silenceTimeout" class="signatureLink">silenceTimeout</a> : int<div class="summaryTableDescription">[read-only] 
+
+	 The number of milliseconds between the time the microphone stops 
+
+	 detecting sound and the time the activity event is dispatched.</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#soundTransform" class="signatureLink">soundTransform</a> : <a href="SoundTransform.html">flash.media:SoundTransform</a><div class="summaryTableDescription">
+
+	 Controls the sound of this microphone object when it is in loopback mode.</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#useEchoSuppression" class="signatureLink">useEchoSuppression</a> : Boolean<div class="summaryTableDescription">[read-only] 
+
+	 Set to true if echo suppression is enabled; false otherwise.</div></td><td class="summaryTableOwnerCol">Microphone</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Public Methods </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Methods</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th>Defined By</th></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#addEventListener()" class="signatureLink">addEventListener</a>(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void</div><div class="summaryTableDescription">
+
+	Registers an event listener object with an EventDispatcher object so that the listener 
+
+	receives notification of an event.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../events/Event.html">Event</a>):Boolean</div><div class="summaryTableDescription">
+
+	Dispatches an event into the event flow.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::10.3##AIR::2.7##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getEnhancedMicrophone()" class="signatureLink">getEnhancedMicrophone</a>(index:int = -1):<a href="Microphone.html">Microphone</a></div><div class="summaryTableDescription">[static] 
+
+	 Returns a reference to an enhanced Microphone object that can 
+
+	 perform acoustic echo cancellation.</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getMicrophone()" class="signatureLink">getMicrophone</a>(index:int = -1):<a href="Microphone.html">Microphone</a></div><div class="summaryTableDescription">[static] 
+
+	 
+
+	 Returns a reference to a Microphone object for capturing audio.</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:String):Boolean</div><div class="summaryTableDescription">
+
+	Checks whether the EventDispatcher object has any listeners registered for a specific type 
+
+	of event.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">hasOwnProperty(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an object has a specified property defined.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">isPrototypeOf(theClass:Object):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+
+	 as the parameter.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">propertyIsEnumerable(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether the specified property exists and is enumerable.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#removeEventListener()" class="signatureLink">removeEventListener</a>(type:String, listener:Function, useCapture:Boolean = false):void</div><div class="summaryTableDescription">
+
+	Removes a listener from the EventDispatcher object.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setLoopBack()" class="signatureLink">setLoopBack</a>(state:Boolean = true):void</div><div class="summaryTableDescription">
+
+	 Routes audio captured by a microphone to the local speakers.</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">setPropertyIsEnumerable(name:String, isEnum:Boolean = true):void</div><div class="summaryTableDescription">
+
+     Sets the availability of a dynamic property for loop operations.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setSilenceLevel()" class="signatureLink">setSilenceLevel</a>(silenceLevel:Number, timeout:int = -1):void</div><div class="summaryTableDescription">
+
+	 Sets the minimum input level that should be considered sound and (optionally) the amount
+
+	 of silent time signifying that silence has actually begun.</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setUseEchoSuppression()" class="signatureLink">setUseEchoSuppression</a>(useEchoSuppression:Boolean):void</div><div class="summaryTableDescription">
+
+	 Specifies whether to use the echo suppression feature of the audio codec.</div></td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toLocaleString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of this object, formatted according to locale-specific conventions.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">valueOf():Object</div><div class="summaryTableDescription">
+
+	 Returns the primitive value of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:String):Boolean</div><div class="summaryTableDescription">
+
+	Checks whether an event listener is registered with this EventDispatcher object or any of 
+
+	its ancestors for the specified event type.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Events</div><div class="showHideLinks"><div id="hideInheritedEvent" class="hideInheritedEvent"><a class="showHideLink" href="#eventSummary" onclick="javascript:setInheritedVisible(false,'Event');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Events</a></div><div id="showInheritedEvent" class="showInheritedEvent"><a class="showHideLink" href="#eventSummary" onclick="javascript:setInheritedVisible(true,'Event');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Events</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th>Defined By</th></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#event:activate#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[broadcast event] Dispatched when the Flash Player or AIR application gains operating system focus and becomes active.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:activity" class="signatureLink">activity</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when a microphone starts or stops recording due to detected silence.</td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#event:deactivate#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[broadcast event] Dispatched when the Flash Player or AIR application operating loses system focus and is becoming inactive.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::10.1##AIR::2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:sampleData" class="signatureLink">sampleData</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when the microphone has sound data in the buffer.</td><td class="summaryTableOwnerCol">Microphone</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:status" class="signatureLink">status</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when a microphone reports its status.</td><td class="summaryTableOwnerCol">Microphone</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Property Detail</div><span id="pageFilter" runtime="Flash::9##"><a name="propertyDetail"></a><a name="activityLevel"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>activityLevel</h2></td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>activityLevel:Number</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 The amount of sound the microphone is detecting. Values range from 
+
+	 0 (no sound is detected) to 100 (very loud sound is detected). The value of this property can 
+
+	 help you determine a good value to pass to the <code>Microphone.setSilenceLevel()</code> method.
+
+	 
+
+	 <p>If the microphone <code>muted</code> property is <code>true</code>, the value of this property is always -1.</p>
+
+	 
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Microphone.html#getMicrophone()" target="">Microphone.getMicrophone()</a><br/><a href="Microphone.html#setSilenceLevel()" target="">Microphone.setSilenceLevel()</a><br/><a href="Microphone.html#gain" target="">Microphone.gain</a></div></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##"><a name="propertyDetail"></a><a name="codec"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>codec</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>codec:String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+	 
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Microphone.html#setSilenceLevel()" target="">setSilenceLevel()</a></div></div></span><span id="pageFilter" runtime="Flash::10.1##AIR::2##"><a name="propertyDetail"></a><a name="enableVAD"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>enableVAD</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>enableVAD:Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2 </td></tr></table><p></p><p></p><p>
+
+	 Enable Speex voice activity detection. 
+
+	 
+	 </p></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##"><a name="propertyDetail"></a><a name="encodeQuality"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>encodeQuality</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>encodeQuality:int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+	 The encoded speech quality when using the Speex codec. Possible values are from 0 to 10. The default value is 6. 
+
+	 Higher numbers represent higher quality but require more bandwidth, as shown in the following table. The bit rate values that are listed 
+
+	 represent net bit rates and do not include packetization overhead.
+
+	 <p>
+
+	  <table class="innertable" ><tr><th>Quality value</th><th>Required bit rate (kilobits per second)</th></tr><tr><td>0</td><td> 3.95</td></tr><tr><td>1</td><td>5.75</td></tr><tr><td>2</td><td>7.75</td></tr><tr><td>3</td><td>9.80</td></tr><tr><td>4</td><td>12.8</td></tr><tr><td>5</td><td>16.8</td></tr><tr><td>6</td><td>20.6</td></tr><tr><td>7</td><td>23.8</td></tr><tr><td>8</td><td>27.8</td></tr><tr><td>9</td><td>34.2</td></tr><tr><td>10</td><td>42.2</td></tr></table>
+
+	 </p>
+
+	 
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Microphone.html#codec" target="">codec</a></div></div></span><span id="pageFilter" runtime="Flash::10.3##AIR::2.7##"><a name="propertyDetail"></a><a name="enhancedOptions"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>enhancedOptions</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>enhancedOptions:<a href="MicrophoneEnhancedOptions.html">MicrophoneEnhancedOptions</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2.7 </td></tr></table><p></p><p></p><p>	
+
+	 Controls enhanced microphone options. For more information, see	
+
+	 <code>MicrophoneEnhancedOptions</code> class. This property is ignored for non-enhanced Microphone instances.
+
+	 
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="MicrophoneEnhancedOptions.html" target="">MicrophoneEnhancedOptions</a></div></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##"><a name="propertyDetail"></a><a name="framesPerPacket"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>framesPerPacket</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>framesPerPacket:int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+	 Number of Speex speech frames transmitted in a packet (message). 
+
+	 Each frame is 20 ms long. The default value is two frames per packet.
+
+	 
+	 <p>The more Speex frames in a message, the lower the bandwidth required but the longer the delay in sending the
+
+	 message. Fewer Speex frames increases bandwidth required but reduces delay.</p>
+
+	 
+	 </p></div></span><span id="pageFilter" runtime="Flash::9##"><a name="propertyDetail"></a><a name="gain"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>gain</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>gain:Number</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 The amount by which the microphone boosts the signal. Valid values are 0 to 100. The default value is 50.
+
+	 
+	 
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Microphone.html#gain" target="">Microphone.gain</a></div></div></span><span id="pageFilter" runtime="Flash::9##"><a name="propertyDetail"></a><a name="index"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>index</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>index:int</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 The index of the microphone, as reflected in the array returned by 
+
+	 <code>Microphone.names</code>.
+
+	 
+	 
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Microphone.html#getMicrophone()" target="">Microphone.getMicrophone()</a><br/><a href="Microphone.html#names" target="">Microphone.names</a></div></div></span><span id="pageFilter" runtime="Flash::10.1##AIR::2##"><a name="propertyDetail"></a><a name="isSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>isSupported</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isSupported:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2 </td></tr></table><p></p><p></p><p>
+
+    The <code>isSupported</code> property is set to <code>true</code> if the 
+
+    Microphone class is supported on the current platform, otherwise it is
+
+    set to <code>false</code>. 
+
+    
+    </p></div></span><span id="pageFilter" runtime="Flash::9##"><a name="propertyDetail"></a><a name="muted"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>muted</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>muted:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 Specifies whether the user has denied access to the microphone (<code>true</code>) 
+
+	 or allowed access (<code>false</code>). When this value changes, 
+
+	 a <code>status</code> event is dispatched.
+
+	 For more information, see <code>Microphone.getMicrophone()</code>. 
+
+	 
+	 
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Microphone.html#getMicrophone()" target="">Microphone.getMicrophone()</a><br/><a href="Microphone.html#event:status#event:status" target="">Microphone.status</a></div></div></span><span id="pageFilter" runtime="Flash::9##"><a name="propertyDetail"></a><a name="name"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>name</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>name:String</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 The name of the current sound capture device, as returned by the sound capture hardware.
+
+	 
+	 
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Microphone.html#getMicrophone()" target="">Microphone.getMicrophone()</a><br/><a href="Microphone.html#names" target="">Microphone.names</a></div></div></span><span id="pageFilter" runtime="Flash::9##"><a name="propertyDetail"></a><a name="names"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>names</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>names:Array</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 An array of strings containing the names of all available sound capture devices. 
+
+	 The names are returned without 
+
+	 having to display the Flash Player Privacy Settings panel to the user. This array 
+
+	 provides the zero-based index of each sound capture device and the 
+
+	 number of sound capture devices on the system, through the <code>Microphone.names.length</code> property. 
+
+	 For more information, see the Array class entry.
+
+	 
+
+	 <p>Calling <code>Microphone.names</code> requires an extensive examination of the hardware, and it
+
+	 may take several seconds to build the array. In most cases, you can just use the default microphone.</p>
+
+	 
+	 <p><b>Note:</b> To determine the name of the current microphone, 
+
+	 use the <code>name</code> property.</p>
+
+	 
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Microphone.html#name" target="">Microphone.name</a><br/><a href="Microphone.html#getMicrophone()" target="">Microphone.getMicrophone()</a></div></div></span><span id="pageFilter" runtime="Flash::10.1##AIR::2##"><a name="propertyDetail"></a><a name="noiseSuppressionLevel"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>noiseSuppressionLevel</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>noiseSuppressionLevel:int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2 </td></tr></table><p></p><p></p><p>
+
+	 Maximum attenuation of the noise in dB (negative number) used for Speex encoder. If enabled, noise suppression is applied to sound captured from Microphone before
+
+	 Speex compression. Set to 0 to disable noise suppression. Noise suppression is enabled by default with maximum attenuation of -30 dB. Ignored when Nellymoser
+
+	 codec is selected.
+
+	 
+	 </p></div></span><span id="pageFilter" runtime="Flash::9##"><a name="propertyDetail"></a><a name="rate"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>rate</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>rate:int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 The rate at which the microphone is capturing sound, in kHz. Acceptable values are 5, 8, 11, 22, and 44. The default value is 8 
+
+	 kHz if your sound capture device supports this value. Otherwise, the default value is the next available capture level above 8 kHz
+
+	 that your sound capture device supports, usually 11 kHz.
+
+	 
+	 <p><b>Note:</b> The actual rate differs slightly from the <code>rate</code> value, as noted
+
+	 in the following table:</p>
+
+	 
+	 <table class="+ topic/table adobe-d/adobetable " ><tr><th><code>rate</code> value</th><th>Actual frequency</th></tr><tr><td>44</td><td>44,100 Hz</td></tr><tr><td>22</td><td>22,050 Hz</td></tr><tr><td>11</td><td>11,025 Hz</td></tr><tr><td>8</td><td>8,000 Hz</td></tr><tr><td>5</td><td>5,512 Hz</td></tr></table>
+
+	 
+
+	 
+	 
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Microphone.html#rate" target="">Microphone.rate</a></div></div></span><span id="pageFilter" runtime="Flash::9##"><a name="propertyDetail"></a><a name="silenceLevel"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>silenceLevel</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>silenceLevel:Number</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 The amount of sound required to activate the microphone and dispatch 
+
+	 the <code>activity</code> event. The default value is 10.
+
+	 
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Microphone.html#gain" target="">Microphone.gain</a><br/><a href="Microphone.html#setSilenceLevel()" target="">Microphone.setSilenceLevel()</a></div></div></span><span id="pageFilter" runtime="Flash::9##"><a name="propertyDetail"></a><a name="silenceTimeout"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>silenceTimeout</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>silenceTimeout:int</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 The number of milliseconds between the time the microphone stops 
+
+	 detecting sound and the time the <code>activity</code> event is dispatched. The default 
+
+	 value is 2000 (2 seconds).
+
+	 
+
+	 <p>To set this value, use the <code>Microphone.setSilenceLevel()</code> method.</p>
+
+	 
+	 
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Microphone.html#setSilenceLevel()" target="">Microphone.setSilenceLevel()</a></div></div></span><span id="pageFilter" runtime="Flash::9##"><a name="propertyDetail"></a><a name="soundTransform"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>soundTransform</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>soundTransform:<a href="SoundTransform.html">flash.media:SoundTransform</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 Controls the sound of this microphone object when it is in loopback mode.
+
+	 
+
+	 </p></div></span><span id="pageFilter" runtime="Flash::9##"><a name="propertyDetail"></a><a name="useEchoSuppression"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>useEchoSuppression</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>useEchoSuppression:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 Set to <code>true</code> if echo suppression is enabled; <code>false</code> otherwise. The default value is 
+
+	 <code>false</code> unless the user has selected Reduce Echo in the Flash Player Microphone Settings panel.
+
+	 
+	 
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Microphone.html#setUseEchoSuppression()" target="">Microphone.setUseEchoSuppression()</a></div></div></span><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><span id="pageFilter" runtime="Flash::10.3##AIR::2.7##"><a name="getEnhancedMicrophone()"></a><a name="getEnhancedMicrophone(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>getEnhancedMicrophone</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function getEnhancedMicrophone(index:int = -1):<a href="Microphone.html">Microphone</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2.7 </td></tr></table><p></p><p></p><p>
+
+	 Returns a reference to an enhanced Microphone object that can 
+
+	 perform acoustic echo cancellation. Use acoustic echo cancellation to create audio/video chat applications
+
+	 that don't require headsets.
+
+	 
+	 <p>The <code>index</code> parameter for the <code>Microphone.getEnhancedMicrophone()</code> method and the <code>Microphone.getMicrophone()</code>
+
+	 method work the same way.</p>
+
+	 
+
+	 <p><b>Important:</b> At any given time you can have only a single instance of enhanced microphone device.
+
+	 All other Microphone instances stop providing audio data and receive a <code>StatusEvent</code> with the 
+
+	 <code>code</code> property <code>Microphone.Unavailable</code>. When enhanced audio fails to initialize, 
+
+	 calls to this method return <code>null</code>, setting a value for <code>Microphone.enhancedOptions</code> has no effect, 
+
+	 and all existing Microphone instances function as before.</p>
+
+	 
+	 <p>To configure an enhanced Microphone object, set the <code>Microphone.enhancedOptions</code> property. The following
+
+	 code uses an enhanced Microphone object and full-duplex acoustic echo cancellation in a local test:</p>
+
+	 
+	 <pre>
+
+	     var mic:Microphone = Microphone.getEnhancedMicrophone();
+
+	     var options:MicrophoneEnhancedOptions = new MicrophoneEnhancedOptions();
+
+	     options.mode = MicrophoneEnhancedMode.FULL_DUPLEX;
+
+	     mic.enhancedOptions = options;
+
+	     mic.setLoopBack(true);
+
+	 </pre>
+
+	 
+	 <p>The <code>setUseEchoSuppression()</code> method is ignored when using acoustic echo cancellation.
+
+	 </p>
+
+	 
+	 
+
+	 
+	 
+
+	 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">index</span>:int</code> (default = <code>-1</code>)<code></code> &mdash; The index value of the microphone.
+
+	 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Microphone.html">Microphone</a></code> &mdash; A reference to a Microphone object for capturing audio. If enhanced audio fails to initialize, returns <code>null</code>.
+
+	 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Microphone.html#getMicrophone()" target="">Microphone.getMicrophone()</a><br/><a href="Microphone.html#enhancedOptions" target="">Microphone.enhancedOptions</a><br/><a href="Microphone.html#event:status#event:status" target="">Microphone.status</a></div></div></span><span id="pageFilter" runtime="Flash::9##"><a name="getMicrophone()"></a><a name="getMicrophone(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>getMicrophone</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getMicrophone(index:int = -1):<a href="Microphone.html">Microphone</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 
+
+	 Returns a reference to a Microphone object for capturing audio.
+
+	 To begin capturing the audio, you must attach the Microphone
+
+	 object to a NetStream object (see <code>NetStream.attachAudio()</code>).
+
+	 
+
+	 <p>
+
+	 Multiple calls to <code>Microphone.getMicrophone()</code> reference the same microphone. 
+
+	 Thus, if your code contains the lines  
+
+	  and
+
+	   
+
+	 <code>mic2 = air.Microphone.getMicrophone()</code>, both <code>mic1</code> and <code>mic2</code> 
+
+	 reference the same (default) microphone.</p>
+
+	 
+
+	 <p>
+
+	 In general, you should not pass a value for <code>index</code>. Simply call 
+
+	 
+
+	 <code>Microphone.getMicrophone()</code> to return a reference to the default microphone. 
+
+	 Using the Microphone Settings section in the Flash Player settings panel, the user can specify the default 
+
+	 microphone the application should use. (The user access the Flash Player settings panel by right-clicking
+
+	 Flash Player content running in a web browser.) If you pass a value for <code>index</code>, you can 
+
+	 reference a microphone other than the one the user chooses. You can use <code>index</code> in 
+
+	 rare cases&mdash;for example, if your application is capturing audio from two microphones 
+
+	 at the same time. Content running in Adobe AIR also uses the Flash Player setting for the default 
+
+	 microphone.</p>
+
+	 
+	 <p>
+
+	 Use the <code>Microphone.index</code> property to get the index value of the current
+
+	 Microphone object. You can then pass this value to other methods of the
+
+	 Microphone class.
+
+	 </p>
+
+	 
+
+	 
+
+	 
+
+	 <p>
+
+         When the user responds to this dialog box, a <code>status</code> event is dispatched
+
+         that indicates the user's response. You can also check the <code>Microphone.muted</code>
+
+         property to determine if the user has allowed or denied access to the microphone. 
+
+	 </p>
+
+	 
+
+	 <p>
+
+	 If <code>Microphone.getMicrophone()</code> returns <code>null</code>, either the microphone is in use 
+
+	 by another application, or there are no microphones installed on the system. To determine 
+
+	 whether any microphones are installed, use <code>Microphones.names.length</code>. To display 
+
+	 the Flash Player Microphone Settings panel, which lets the user choose the microphone to be 
+
+	 referenced by <code>Microphone.getMicrophone</code>, use <code>Security.showSettings()</code>. 
+
+	 
+
+	 </p>
+
+	 
+
+	 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">index</span>:int</code> (default = <code>-1</code>)<code></code> &mdash; The index value of the microphone.
+
+	 
+
+	 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="Microphone.html">Microphone</a></code> &mdash; A reference to a Microphone object for capturing audio.
+
+	 
+
+ 	 </td></tr></table><br/><span class="label">Events</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>status</b>:<a href="../events/StatusEvent.html"><code>StatusEvent</code></a></code> &mdash; Dispatched when a microphone reports its status. 
+
+	 If the value of the <code>code</code> property is <code>"Microphone.Muted"</code>,
+
+	 the user has refused to allow the SWF file access to the user's microphone.
+
+	 If the value of the <code>code</code> property is <code>"Microphone.Unmuted"</code>,
+
+	 the user has allowed the SWF file access to the user's microphone.</td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Microphone.html#event:status#event:status" target="">Microphone.status</a><br/><a href="../system/Security.html#showSettings()" target="">Security.showSettings()</a></div></div></span><span id="pageFilter" runtime="Flash::9##"><a name="setLoopBack()"></a><a name="setLoopBack(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>setLoopBack</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setLoopBack(state:Boolean = true):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 Routes audio captured by a microphone to the local speakers.
+
+	 
+
+	 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">state</span>:Boolean</code> (default = <code>true</code>)<code></code></td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9##"><a name="setSilenceLevel()"></a><a name="setSilenceLevel(Number,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>setSilenceLevel</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setSilenceLevel(silenceLevel:Number, timeout:int = -1):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 Sets the minimum input level that should be considered sound and (optionally) the amount
+
+	 of silent time signifying that silence has actually begun.
+
+	 <ul><li>To prevent the microphone from detecting sound at all, pass a value of 100 for 
+
+	     <code>silenceLevel</code>; the <code>activity</code> event is never dispatched. </li><li>To determine the amount of sound the microphone is currently detecting, use <code>Microphone.activityLevel</code>. </li></ul>
+
+	 
+
+	 <p>Speex includes voice activity detection (VAD) and automatically reduces bandwidth when no voice is detected. 
+
+	 When using the Speex codec, Adobe recommends that you set the silence level to 0.</p>
+
+	 
+	 <p>Activity detection is the ability to detect when audio levels suggest that a person is talking. 
+
+	 When someone is not talking, bandwidth can be saved because there is no need to send the associated
+
+	 audio stream. This information can also be used for visual feedback so that users know 
+
+	 they (or others) are silent.</p>
+
+	 
+
+	 <p>Silence values correspond directly to activity values. Complete silence is an activity value of 0. 
+
+	 Constant loud noise (as loud as can be registered based on the current gain setting) is an activity value 
+
+	 of 100. After gain is appropriately adjusted, your activity value is less than your silence value when
+
+	 you're not talking; when you are talking, the activity value exceeds your silence value.</p>
+
+	 
+
+	 <p>This method is similar to <code>Camera.setMotionLevel()</code>; both methods are used to
+
+	 specify when the <code>activity</code> event is dispatched. However, these methods have 
+
+	 a significantly different impact on publishing streams:</p>
+
+	 
+
+	 <ul><li><code>Camera.setMotionLevel()</code> is designed to detect motion and does not affect bandwidth
+
+	     usage. Even if a video stream does not detect motion, video is still sent.</li><li><code>Microphone.setSilenceLevel()</code> is designed to optimize bandwidth. When an audio
+
+	     stream is considered silent, no audio data is sent. Instead, a single message is sent, indicating 
+
+	     that silence has started. </li></ul>
+
+	 
+	 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">silenceLevel</span>:Number</code> &mdash; The amount of sound required to activate the microphone
+
+	 and dispatch the <code>activity</code> event. Acceptable values range from 0 to 100. 
+
+	 
+
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">timeout</span>:int</code> (default = <code>-1</code>)<code></code> &mdash; The number of milliseconds that must elapse without
+
+	 activity before Flash Player or Adobe AIR considers sound to have stopped and dispatches the 
+
+	 <code>dispatch</code> event. The default value is 2000 (2 seconds). 
+
+	 (<b>Note</b>: The default value shown 
+
+	 in the signature, -1, is an internal value that indicates to Flash Player or Adobe AIR to use 2000.)
+
+	 
+	 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Microphone.html#activityLevel" target="">Microphone.activityLevel</a><br/><a href="Microphone.html#event:activity#event:activity" target="">Microphone.activity</a><br/><a href="Microphone.html#gain" target="">Microphone.gain</a><br/><a href="Microphone.html#silenceLevel" target="">Microphone.silenceLevel</a><br/><a href="Microphone.html#silenceTimeout" target="">Microphone.silenceTimeout</a></div></div></span><span id="pageFilter" runtime="Flash::9##"><a name="setUseEchoSuppression()"></a><a name="setUseEchoSuppression(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>setUseEchoSuppression</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setUseEchoSuppression(useEchoSuppression:Boolean):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 Specifies whether to use the echo suppression feature of the audio codec. The default value is 
+
+	 <code>false</code> unless the user has selected Reduce Echo in the Flash Player Microphone 
+
+	 Settings panel.
+
+	 
+
+	 <p>Echo suppression is an effort to reduce the effects of audio feedback, which is caused when
+
+	 sound going out the speaker is picked up by the microphone on the same system. (This is different
+
+	 from acoustic echo cancellation, which completely removes the feedback. The <code>setUseEchoSuppression()</code> method
+
+	 is ignored when you call the <code>getEnhancedMicrophone()</code> method to use acoustic echo cancellation.)</p>
+
+	 
+
+	 <p>Generally, echo suppression is advisable when the sound being captured is played through 
+
+	 speakers &mdash; instead of a headset &mdash;. If your SWF file allows users to specify the
+
+	 sound output device, you may want to call <code>Microphone.setUseEchoSuppression(true)</code> 
+
+	 if they indicate they are using speakers and will be using the microphone as well. </p>
+
+	 
+
+	 <p>Users can also adjust these settings in the Flash Player Microphone Settings panel.</p>
+
+	 
+	 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">useEchoSuppression</span>:Boolean</code> &mdash; A Boolean value indicating whether to use echo suppression 
+
+	 (<code>true</code>) or not (<code>false</code>). 	 
+
+	 
+	 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Microphone.html#setUseEchoSuppression()" target="">Microphone.setUseEchoSuppression()</a><br/><a href="Microphone.html#useEchoSuppression" target="">Microphone.useEchoSuppression</a></div></div></span><div class="detailSectionHeader"> Event Detail </div><span id="pageFilter" runtime="Flash::9##"><a name="event:activity"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>activity</h2></td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/ActivityEvent.html"><code>flash.events.ActivityEvent</code></a><br/><span class="label">property ActivityEvent.type  =  </span><a href="../events/ActivityEvent.html#ACTIVITY"><code>flash.events.ActivityEvent.ACTIVITY</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ Dispatched when a microphone starts or stops recording due to detected silence. 
+
+ 
+
+ <p>
+
+ To specify the amount of sound required to trigger this event
+
+ with an <code>activating</code> property of <code>true</code>,
+
+ or the amount of time that must elapse without sound to
+
+ trigger this event with an <code>activating</code> property of
+
+ <code>false</code>, use <code>Microphone.setSilenceLevel()</code>.
+
+ </p>
+
+ <p>For a Microphone object to dispatch activity events, the application must be monitoring 
+
+ the input, either by calling <code>setLoopback( true )</code>, by listening for
+
+ sampleData events, or by attaching the microphone to a NetStream object.</p>
+
+ 
+
+ </p>
+
+	The <code>ActivityEvent.ACTIVITY</code> constant defines the value of the <code>type</code> property of an <code>activity</code> event object. 
+
+	<p>This event has the following properties:</p>
+
+	 <table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>activating</code></td><td><code>true</code> if the device is activating or <code>false</code> if it is deactivating.</td></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The object beginning or ending a session, such as a Camera or 
+
+	Microphone object.</td></tr></table>
+
+	
+
+	<p><span class="label">See also</span></p><div class="seeAlso"><a href="Microphone.html#setSilenceLevel()" target="">setSilenceLevel()</a></div></div></span><span id="pageFilter" runtime="Flash::10.1##AIR::2##"><a name="event:sampleData"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>sampleData</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/SampleDataEvent.html"><code>flash.events.SampleDataEvent</code></a><br/><span class="label">property SampleDataEvent.type  =  </span><a href="../events/SampleDataEvent.html#SAMPLE_DATA"><code>flash.events.SampleDataEvent.SAMPLE_DATA</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2 </td></tr></table><p></p><p></p><p>
+
+  Dispatched when the microphone has sound data in the buffer. 
+
+ <p>
+
+ The <code>Microphone.rate</code> property determines the number of samples generated 
+
+ per second. The number of samples per event is a factor of the number of samples 
+
+ per second and the latency between event calls.
+
+ </p>
+
+ 
+ </p>
+
+		Defines the value of the <code>type</code> property of a <code>SampleDataEvent</code> event object. 
+
+		<p>This event has the following properties:</p>
+
+		<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>position</code></td><td>The point from which audio data is provided.</td></tr></table>
+
+		
+
+		<p><span class="label">See also</span></p><div class="seeAlso"><a href="../events/SampleDataEvent.html" target="">SampleDataEvent</a></div></div></span><span id="pageFilter" runtime="Flash::9##"><a name="event:status"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>status</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/StatusEvent.html"><code>flash.events.StatusEvent</code></a><br/><span class="label">property StatusEvent.type  =  </span><a href="../events/StatusEvent.html#STATUS"><code>flash.events.StatusEvent.STATUS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ Dispatched when a microphone reports its status. 
+
+ If the value of the <code>code</code> property is <code>"Microphone.Muted"</code>,
+
+ the user has refused to allow the SWF file access to the microphone.
+
+ If the value of the <code>code</code> property is <code>"Microphone.Unmuted"</code>,
+
+ the user has allowed the SWF file access to the microphone.
+
+ 
+
+ <p>Status events are not dispatched in Adobe AIR applications; access to the microphone 
+
+ cannot be changed dynamically. On most platforms, AIR applications can always access the microphone.
+
+ On Android, an application must specify the Android RECORD_AUDIO permission in the application
+
+ descriptor. Otherwise, Android denies access to the microphone altogether.</p>
+
+ 
+
+ </p>
+
+     Defines the value of the <code>type</code> property of a <code>status</code> event object.
+
+	 <p>This event has the following properties:</p>
+
+	 <table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>code</code></td><td>A description of the object's status.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	 object with an event listener.</td></tr><tr><td><code>level</code></td><td>The category of the message, such as <code>"status"</code>, <code>"warning"</code> or <code>"error"</code>.</td></tr><tr><td><code>target</code></td><td>The object reporting its status.</td></tr></table>
+
+	 
+
+	 <p><span class="label">See also</span></p><div class="seeAlso"><a href="Microphone.html#getMicrophone()" target="">Microphone.getMicrophone()</a></div></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script><p></p><center class="copyright"> &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><!--BEGIN IONCOMMENTS--><div id="ionComHere"></div><!--END IONCOMMENTS-->[an error occurred while processing this directive][an error occurred while processing this directive]<p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/en_US/legalnotices/index.html">Legal Notices</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online Privacy Policy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html><!-- &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  -->

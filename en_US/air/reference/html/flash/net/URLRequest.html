@@ -1,0 +1,927 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"><html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers"><meta name="lang" content="en-us"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="URLRequest,flash.net.URLRequest,authenticate,cacheResponse,contentType,data,digest,followRedirects,idleTimeout,manageCookies,method,requestHeaders,url,useCache,userAgent"><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" src="../../AC_OETags.js" type="text/javascript"></script><title>flash.net.URLRequest - Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers</title>
+	<link rel="stylesheet" href="../../jslr-style.css" type="text/css">
+		<script type="text/javascript">
+			
+				var baseRef = "../../";
+				var buildType = 'jslr';
+				var alreadyrunflag=0; //flag to indicate whether target function has already been run
+				var terms_HELPCFG = ".helpcfg";
+
+if (document.addEventListener)
+  document.addEventListener("DOMContentLoaded", function(){alreadyrunflag=1; init()}, false)
+else if (document.all && !window.opera){
+  /* blocks IE from working, as it's fired before dom if ready
+ document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
+  var contentloadtag=document.getElementById("contentloadtag")
+  contentloadtag.onreadystatechange=function(){
+    if (this.readyState=="complete"){
+      alreadyrunflag=1;
+      init();
+    }
+  }*/
+} else if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+  var _timer=setInterval(function(){
+  if(/loaded|complete/.test(document.readyState)){
+    clearInterval(_timer);
+    alreadyrunflag=1;
+    init(); // call target function
+  }}, 10)
+}
+function onLoadFunction() {
+	setTimeout("if (!alreadyrunflag) init();  alreadyrunflag=1; ionReadyLoad(); ", 0);
+}
+
+		</script>
+		<script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+		<script language="javascript" type="text/javascript" src="../../asdoc.js"></script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body onLoad="onLoadFunction()">
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td>
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr>
+				  <td class="titleTableTitleION" align="left" nowrap="true">Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers<br>
+				  <span class="titleTableTopNavION">
+				  <span id="homelink">
+						<a target="_self" href="../../index.html"> Home </a>&nbsp;|&nbsp;
+				  </span>
+				  <a id="showtoc" onClick="showHideTOC(true)" href="#top" style="display:none">Show Classes List</a><a id="hidetoc" onClick="showHideTOC(false)" href="#top" style="display:">Hide Classes List</a>&nbsp;|&nbsp;
+				  <a href="../../all-index-A.html"> Index </a>&nbsp;|&nbsp;
+				  <a href="../../appendixes.html"> Appendixes </a><br>
+				  </span>	
+				  </td>
+				  <td class="titleTableSearchION" align="right" nowrap="true">
+				  <span id="gsa" class="gsa">
+					<form class="searchFormION" method="get" onSubmit="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US');return false;">
+				  <input class="hidden" name="loc" value="" type="hidden">
+				  <input class="hidden" name="termPrefix" value="site:help.adobe.com/en_US/AS3CLR/Flash_10.0" type="hidden">
+				  <input class="hidden" name="title" value="ActionScript 3.0 Reference for the Adobe Flash Platform" type="hidden">
+				  <input class="hidden" name="term" value="" type="hidden">
+				  <input class="hidden" name="area" value="" type="hidden">
+				  <input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text">
+				  <input type="button" name="action" value="" onClick="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US')" class="searchbutton"><br>
+			      <input id="checkBoxId" type="checkbox" name="checkbox" value="checkbox" checked>Language Reference only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  </form>
+				  </span>				  
+				  </td>
+				</tr>
+			  </table>			
+			  </td>
+			<td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logoION.jpg" class="logoImageION" alt=" Adobe Logo " title=" Adobe Logo "></td>
+		  </tr>
+		  <tr>
+			<td colspan="2">
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr class="titleTableRow2">
+				<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+					<convert>URLRequest&nbsp;</convert>
+				</td>
+				<td class="titleTableSubNav" id="subNav" align="right">
+				  <a id="propertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="propertiesBar" style="display:none"> | </span>
+				  <a id="packagePropertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="packagePropertiesBar" style="display:none"> | </span>
+				  <a id="constructorLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+				  <span id="constructorBar" style="display:none"> | </span>
+				  <a id="methodsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Methods </a>
+				  <span id="methodsBar" style="display:none"> | </span>
+				  <a id="packageFunctionsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Functions </a>
+				  <span id="packageFunctionsBar" style="display:none"> | </span>
+				  <a id="eventsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('eventSummary');" style="display:none"> Events </a>
+				  <span id="eventsBar" style="display:none"> | </span>
+				  <a id="stylesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('styleSummary');" style="display:none"> Styles </a>
+				  <span id="stylesBar" style="display:none"> | </span>
+				  <a id="SkinPartLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinPartSummary');" style="display:none"> Skin Parts </a>
+				  <span id="SkinPartBar" style="display:none"> | </span>
+				  <a id="SkinStateLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinStateSummary');" style="display:none"> Skin States </a>
+				  <span id="SkinStateBar" style="display:none"> | </span>
+				  <a id="effectsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('effectSummary');" style="display:none"> Effects </a>
+				  <span id="effectsBar" style="display:none"> | </span>
+				  <a id="constantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="constantsBar" style="display:none"> | </span>
+				  <a id="packageConstantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="packageConstantsBar" style="display:none"> | </span>
+				  <a id="interfacesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('interfaceSummary');" style="display:none"> Interfaces </a>
+				  <span id="interfacesBar" style="display:none"> | </span>
+				  <a id="classesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('classSummary');" style="display:none"> Classes </a>
+				  <span id="classesBar" style="display:none"> | </span>
+				  <a id="packageUseLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('package-use.html');" style="display:none">Use</a>
+				  <span id="packageUseBar" style="display:none"> | </span>
+				  <a id="examplesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('includeExamplesSummary');" style="display:none"> Examples </a>
+				</td>
+				</tr>
+				<tr class="titleTableRow3">
+				  <td colspan="4"></td>
+				</tr>
+			  </table>
+			</td>
+		  </tr>
+		</table>
+        <div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="classlist" class="jslrclasslist">
+					<div class="classlistoutline"></div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content">
+<script language="javascript" type="text/javascript">  <!--  
+         
+        asdocTitle = "URLRequest - Adobe® AIR® API Reference for HTML Developers"; 
+        var baseRef = '../../'; 
+	document.baseRef = '../../'; 
+          -->  </script>
+<script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+<script language="javascript" type="text/javascript"><!--
+function submitValue() {
+var title="Adobe® AIR® API Reference for HTML Developers";
+var searchStr=document.getElementById('search-livedocs').value;
+
+        
+        
+        if(document.getElementById('checkBoxId').checked){
+        window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
++"&site=communityhelp-air-jslr ";
+} 
+
+        else{ 
+window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
+;
+} 
+} 
+--></script><script type="text/javascript"> scrollToNameAnchor(); </script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">window.runtime property</td><td>window.runtime.flash.net.URLRequest</td></tr><tr><td class="classSignature"></td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">URLRequest  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><div id="badgeAnchorSupport" class="ionBadgeWrapper"></div><div id="badgeContainerSupport"></div><p></p><p></p>
+
+  The URLRequest class captures all of the information in a single HTTP request. URLRequest
+
+  objects are passed to the <code>load()</code> methods of the Loader, URLStream,
+
+  and URLLoader classes, and to other loading operations, to initiate URL downloads.
+
+  They are also passed to the <code>upload()</code> and <code>download()</code> methods
+
+  of the FileReference class.
+
+ 
+  
+
+ 
+  <p>By default, the calling file
+
+  and the URL you load must be in the same domain. For example, a file
+
+  at www.adobe.com can load data only from sources that are also at www.adobe.com.
+
+  </p>
+
+ 
+               <p> However, in Adobe AIR, content in the application security sandbox (content
+
+  installed with the AIR application) is not restricted by these security limitations.
+
+  For content running in Adobe AIR, files in the application security sandbox
+
+  can access URLs using any of the following URL schemes:</p>
+
+
+
+               <p> Files in the application security domain
+
+  &mdash; files installed with the AIR application &mdash; can access URLs using any of the
+
+  following URL schemes:</p>
+
+ 
+               <ul>
+                  <li>
+                     <code>http</code> and <code>https</code> 
+                  </li>
+                  <li>
+                     <code>file</code> 
+                  </li>
+                  <li>
+                     <code>app-storage</code> 
+                  </li>
+                  <li>
+                     <code>app</code> 
+                  </li>
+               </ul>
+
+ 
+               <p>In AIR 3 or later, AIR applications can launch other applications using an arbitrary URI scheme
+
+ and the <code>navigateToURL()</code> function. Prior to AIR 3, applications can only use the
+
+ standard URI schemes.</p>
+
+ 
+
+               <p>Content that is not in the application security
+
+  sandbox observes the same restrictions as content running in the browser
+
+  , and loading is
+
+  governed by the content's domain.</p>
+
+ 
+               <p>For more information related to security, see the Flash Player Developer Center Topic:
+
+ <a href="http://www.adobe.com/go/devnet_security_en" target="external">Security</a>.</p>
+
+ 
+ 
+            <p></p><p><a href="#includeExamplesSummary">View the examples</a></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="URLRequestHeader.html" target="">URLRequestHeader</a><br/><a href="URLRequestDefaults.html" target="">URLRequestDefaults</a><br/><a href="URLLoader.html" target="">URLLoader</a><br/><a href="URLStream.html" target="">URLStream</a><br/><br/><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118a9b8f6c0-7ffe.html" target="_top">Basics of networking and communication</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Properties</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Properties</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Properties</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th>Defined By</th></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#authenticate" class="signatureLink">authenticate</a> : Boolean<div class="summaryTableDescription">
+
+    Specifies whether authentication requests should be handled (true
+
+    or not (false) for this request.</div></td><td class="summaryTableOwnerCol">URLRequest</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#cacheResponse" class="signatureLink">cacheResponse</a> : Boolean<div class="summaryTableDescription">
+
+    Specifies whether successful response data should be cached for this request.</div></td><td class="summaryTableOwnerCol">URLRequest</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">constructor : Object<div class="summaryTableDescription">
+
+	 A reference to the class object or constructor function for a given object instance.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#contentType" class="signatureLink">contentType</a> : String<div class="summaryTableDescription">
+
+     The MIME content type of the content in the the data property.</div></td><td class="summaryTableOwnerCol">URLRequest</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#data" class="signatureLink">data</a> : Object<div class="summaryTableDescription">
+
+     An object containing data to be transmitted with the URL request.</div></td><td class="summaryTableOwnerCol">URLRequest</td></tr><tr class="" runtime="Flash::9.0.115.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#digest" class="signatureLink">digest</a> : String<div class="summaryTableDescription">
+
+     A string that uniquely identifies the signed Adobe platform component to be stored
+
+     to (or retrieved from) the Flash Player cache.</div></td><td class="summaryTableOwnerCol">URLRequest</td></tr><tr class="" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#followRedirects" class="signatureLink">followRedirects</a> : Boolean<div class="summaryTableDescription">
+
+    Specifies whether redirects are to be followed (true)
+
+    or not (false).</div></td><td class="summaryTableOwnerCol">URLRequest</td></tr><tr class="" runtime="AIR::2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#idleTimeout" class="signatureLink">idleTimeout</a> : Number<div class="summaryTableDescription">
+
+	    Specifies the idle timeout value (in milliseconds) for this request.</div></td><td class="summaryTableOwnerCol">URLRequest</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#manageCookies" class="signatureLink">manageCookies</a> : Boolean<div class="summaryTableDescription">
+
+    Specifies whether the HTTP protocol stack should manage cookies for this
+
+    request.</div></td><td class="summaryTableOwnerCol">URLRequest</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#method" class="signatureLink">method</a> : String<div class="summaryTableDescription">
+
+     Controls the HTTP form submission method.</div></td><td class="summaryTableOwnerCol">URLRequest</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">prototype : Object<div class="summaryTableDescription">[static] 
+
+	 A reference to the prototype object of a class or function object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#requestHeaders" class="signatureLink">requestHeaders</a> : Array<div class="summaryTableDescription">
+
+     The array of HTTP request headers to be appended to the
+
+     HTTP request.</div></td><td class="summaryTableOwnerCol">URLRequest</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#url" class="signatureLink">url</a> : String<div class="summaryTableDescription">
+
+     The URL to be requested.</div></td><td class="summaryTableOwnerCol">URLRequest</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#useCache" class="signatureLink">useCache</a> : Boolean<div class="summaryTableDescription">
+
+    Specifies whether the local cache should be consulted before this URLRequest
+
+    fetches data.</div></td><td class="summaryTableOwnerCol">URLRequest</td></tr><tr class="" runtime="AIR::1.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#userAgent" class="signatureLink">userAgent</a> : String<div class="summaryTableDescription">
+
+    Specifies the user-agent string to be used in the HTTP request.</div></td><td class="summaryTableOwnerCol">URLRequest</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Public Methods </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Methods</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th>Defined By</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#URLRequest()" class="signatureLink">URLRequest</a>(url:String = null)</div><div class="summaryTableDescription">
+
+     Creates a URLRequest object.</div></td><td class="summaryTableOwnerCol">URLRequest</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">hasOwnProperty(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an object has a specified property defined.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">isPrototypeOf(theClass:Object):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+
+	 as the parameter.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">propertyIsEnumerable(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether the specified property exists and is enumerable.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">setPropertyIsEnumerable(name:String, isEnum:Boolean = true):void</div><div class="summaryTableDescription">
+
+     Sets the availability of a dynamic property for loop operations.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toLocaleString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of this object, formatted according to locale-specific conventions.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">valueOf():Object</div><div class="summaryTableDescription">
+
+	 Returns the primitive value of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Property Detail</div><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="authenticate"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>authenticate</h2></td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>authenticate:Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+    Specifies whether authentication requests should be handled (<code>true</code>
+
+    or not (<code>false</code>) for this request. If <code>false</code>, authentication
+
+    challenges return an HTTP error.
+
+    
+    <p>The supported authentication methods are:</p>
+
+    
+    <ul><li>Windows&mdash;HTTP Basic/Digest, Windows Integrated Authentication
+
+          (including NTLM and Kerberos), SSL Certificate Authentication.</li><li>Mac&mdash;HTTP Basic/Digest, NTLM, SSL Certificate Authentication.</li></ul>
+
+    
+    <p><b>Note</b>:The <code>FileReference.upload()</code>,
+
+    <code>FileReference.download()</code>, and <code>HTMLLoader.load()</code>
+
+    methods do not support the <code>URLRequest.authenticate</code> property.</p>
+
+    
+    </p><p> The default value is <code>true.</code></p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>SecurityError </code> &mdash; The caller is not in the AIR application security sandbox.
+
+    
+    </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="URLRequestDefaults.html#authenticate" target="">URLRequestDefaults.authenticate</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="cacheResponse"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>cacheResponse</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>cacheResponse:Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+    Specifies whether successful response data should be cached for this request.
+
+    When set to <code>true</code>, the AIR application uses the operating system's
+
+    HTTP cache.
+
+    
+    <p><b>Note</b>:The <code>HTMLLoader.load()</code> method
+
+    does not support the <code>URLRequest.cacheResponse</code> property.</p>
+
+    
+    </p><p> The default value is <code>true.</code></p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>SecurityError </code> &mdash; The caller is not in the AIR application security sandbox.
+
+    
+    </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="URLRequestDefaults.html#cacheResponse" target="">URLRequestDefaults.cacheResponse</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="contentType"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>contentType</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>contentType:String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     The MIME content type of the content in the the <code>data</code> property.
+
+     
+     <p>The default value is <code>application/x-www-form-urlencoded</code>.</p>
+
+     
+     <p><b>Note</b>:The <code>FileReference.upload()</code>,
+
+     <code>FileReference.download()</code>, and <code>HTMLLoader.load()</code> methods do not
+
+     support the <code>URLRequest.contentType</code> property.</p>
+
+     
+     <p>When sending a POST request, the values of the <code>contentType</code>
+
+     and <code>data</code> properties must correspond properly. The value of the <code>contentType</code>
+
+     property instructs servers on how to interpret the value of the <code>data</code> property. </p>
+
+     
+     <ul><li>If the value of the <code>data</code> property is a URLVariables object, the value of
+
+     <code>contentType</code> must be <code>application/x-www-form-urlencoded</code>. </li><li> If the value of the <code>data</code> property is any other type, the value of <code>contentType</code>
+
+     should indicate the type of the POST data that will be sent (which is the binary or string data
+
+     contained in the value of the <code>data</code> property). </li><li>For <code>FileReference.upload()</code>,
+
+     the Content-Type of the request is set automatically to <code>multipart/form-data</code>,
+
+     and the value of the <code>contentType</code> property is ignored.</li></ul>
+
+     
+     <p> In Flash Player 10 and later, if you use a multipart Content-Type (for example "multipart/form-data")
+
+     that contains an upload (indicated by a "filename" parameter in a "content-disposition" header within the POST body),
+
+     the POST operation is subject to the security rules applied to uploads:</p>
+
+     <ul><li>The POST operation must be performed in response to a user-initiated action, such as a mouse click or key press.</li><li>If the POST operation is cross-domain (the POST target is not on the same server as the SWF file
+
+     that is sending the POST request),
+
+     the target server must provide a URL policy file that permits cross-domain access.</li></ul>
+
+     <p>Also, for any multipart Content-Type, the syntax must be valid (according to the RFC2046 standards).
+
+     If the syntax appears to be invalid, the POST operation is subject to the security rules applied to uploads.</p>
+
+     
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="URLRequest.html#data" target="">data</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="data"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>data</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>data:Object</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     An object containing data to be transmitted with the URL request.
+
+     
+     <p>This property is used in conjunction with the <code>method</code> property.
+
+     When the value of <code>method</code> is <code>GET</code>,
+
+     the value of <code>data</code> is appended to the value of <code>URLRequest.url</code>,
+
+     using HTTP query-string syntax. When the <code>method</code> value is <code>POST</code>
+
+     (or any value other than <code>GET</code>), the value
+
+     of <code>data</code> is transmitted in the body of the HTTP request.</p>
+
+     
+     <p>The URLRequest API offers binary <code>POST</code> support and support for URL-encoded variables,
+
+     as well as support for strings. The data object can be a ByteArray, URLVariables,
+
+     or String object.</p>
+
+     
+     <p>The way in which the data is used depends on the type of object used:</p>
+
+     
+     <ul><li>If the object is a ByteArray object, the binary
+
+     data of the ByteArray object is used as <code>POST</code> data. For <code>GET</code>, data of ByteArray type
+
+     is not supported. Also, data of ByteArray type is not supported for
+
+     <code>FileReference.upload()</code> and <code>FileReference.download()</code>.</li><li>If the object is a URLVariables object and the method is <code>POST</code>,
+
+     the variables are encoded using <i>x-www-form-urlencoded</i> format
+
+     and the resulting string is used as <code>POST</code> data. An exception is a call to
+
+     <code>FileReference.upload()</code>, in which the variables are sent as separate fields in
+
+     a <code>multipart/form-data</code> post.</li><li>If the object is a URLVariables object and the method is <code>GET</code>,
+
+     the URLVariables object defines variables to be sent with the URLRequest object.</li><li>Otherwise, the object is converted to a string, and the string
+
+     is used as the <code>POST</code> or <code>GET</code> data.</li></ul>
+
+     
+     <p>This data is not sent until a method, such as <code>navigateToURL()</code>
+
+     or <code>FileReference.upload()</code>, uses the URLRequest object.</p>
+
+     
+     <p><b>Note</b>: The value of <code>contentType</code> must correspond to the type of data
+
+     in the <code>data</code> property. See the note in the description of the
+
+     <code>contentType</code> property.</p>
+
+     
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="URLRequest.html#method" target="">URLRequest.method</a><br/><a href="URLRequestMethod.html" target="">URLRequestMethod</a><br/><a href="URLVariables.html" target="">URLVariables</a><br/><a href="../utils/ByteArray.html" target="">ByteArray</a><br/><a href="URLRequest.html#contentType" target="">contentType</a></div></div></span><span id="pageFilter" runtime="Flash::9.0.115.0##Lite::4##"><a name="propertyDetail"></a><a name="digest"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>digest</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>digest:String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     A string that uniquely identifies the signed Adobe platform component to be stored
+
+     to (or retrieved from) the Flash Player cache. <span>This property applies to
+
+     SWF content only; it does not apply to JavaScript code running in AIR.</span>
+
+     
+     
+
+     
+     
+
+     
+     
+
+     
+     </p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; The digest provided does not match the digest of the file that is
+
+     extracted from the downloaded signed file or the signed file loaded out of the cache. The
+
+     application also throws this error if the provided digest is the wrong length or contains invalid
+
+     (nonhexadecimal) characters.
+
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##Lite::4##"><a name="propertyDetail"></a><a name="followRedirects"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>followRedirects</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>followRedirects:Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+    Specifies whether redirects are to be followed (<code>true</code>)
+
+    or not (<code>false</code>).
+
+    
+    <p><b>Note</b>:The <code>FileReference.upload()</code>,
+
+    <code>FileReference.download()</code>, and <code>HTMLLoader.load()</code> methods do not
+
+    support the <code>URLRequest.followRedirects</code> property.</p>
+
+    
+    </p><p> The default value is <code>true.</code></p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>SecurityError </code> &mdash; The caller is not in the AIR application security sandbox.
+
+    
+    </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="URLRequestDefaults.html#followRedirects" target="">URLRequestDefaults.followRedirects</a></div></div></span><span id="pageFilter" runtime="AIR::2##"><a name="propertyDetail"></a><a name="idleTimeout"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>idleTimeout</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>idleTimeout:Number</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2 </td></tr></table><p></p><p></p><p>
+
+	    Specifies the idle timeout value (in milliseconds) for this request.
+
+	    
+	    <p>The idle timeout is the amount of time the client waits for a response from the server, after the connection is established,
+
+	    before abandoning the request.</p>
+
+	    
+	    <p><b>Note</b>: The <code>HTMLLoader.load()</code> method
+
+	    does not support the <code>URLRequest.idleTimeout</code> property.
+
+	    The HTMLLoader class defines its own <code>idleTimeout</code> property.</p>
+
+	    
+	    </p><p> The default value is <code>initialized from the URLRequestDefaults.idleTimeout property.</code></p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>SecurityError </code> &mdash; The caller is not in the AIR application security sandbox.
+
+	    
+	    </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="URLRequestDefaults.html#idleTimeout" target="">URLRequestDefaults.idleTimeout</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="manageCookies"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>manageCookies</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>manageCookies:Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+    Specifies whether the HTTP protocol stack should manage cookies for this
+
+    request. When <code>true</code>, cookies are added to the request
+
+    and response cookies are remembered. If <code>false</code>, cookies are
+
+    <i>not</i> added to the request and response cookies are <i>not</i>
+
+    remembered, but users can manage cookies themselves by direct header
+
+    manipulation.
+
+    
+
+    <b>Note:</b> On Windows, you cannot add cookies to a URL request manually
+
+    when <code>manageCookies</code> is set to <code>true</code>. On other operating systems,
+
+    adding cookies to a request is permitted irrespective of whether <code>manageCookies</code>
+
+    is set to <code>true</code> or <code>false</code>. When permitted, you can add cookies
+
+    to a request manually by adding a <code>URLRequestHeader</code> object containing the
+
+    cookie data to the <code>requestHeaders</code> array.
+
+      
+
+    <p>On Mac OS, cookies are shared with Safari. To clear cookies on Mac OS:</p>
+
+    
+    <ol><li>Open Safari.</li><li>Select Safari > Preferences, and click the Security panel.</li><li>Click the Show Cookies button.</li><li>Click the Reomove All button.</li></ol>
+
+    
+    <p>To clear cookies on Windows:</p>
+
+    
+    <ol><li>Open the Internet Properties control panel, and click the General tab.</li><li>Click the Delete Cookies button. </li></ol>
+
+    
+    </p><p> The default value is <code>true.</code></p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>SecurityError </code> &mdash; The caller is not in the AIR application security sandbox.
+
+    
+    </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="URLRequestDefaults.html#manageCookies" target="">URLRequestDefaults.manageCookies</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="method"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>method</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>method:String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Controls the HTTP form submission method.
+
+     
+     <p></p>
+
+     
+     <p>
+
+     <span>You </span>can use any string value
+
+     if the content is in the application security sandbox. Otherwise,
+
+     
+
+     you are restricted to using GET or POST operations<span>, and valid values are
+
+     <code>URLRequestMethod.GET</code> or <code>URLRequestMethod.POST</code></span>.</p>
+
+     
+     <p><span>When </span>
+
+     using the <code>navigateToURL()</code> function, the runtime treats a URLRequest that uses the POST
+
+     method (one that has its <code>method</code> property set to <code>URLRequestMethod.POST</code>)
+
+     as using the GET method.</p>
+
+     
+     <p></p>
+
+     
+     </p><p> The default value is <code>URLRequestMethod.GET.</code></p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; If the <code>value</code> parameter is not
+
+     <code>URLRequestMethod.GET</code> or <code>URLRequestMethod.POST</code>.
+
+     
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="URLRequestMethod.html" target="">URLRequestMethod class</a><br/><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118a9b90204-7cfd.html" target="_top">Loading external data</a></div><span id="pageFilter"><br/><span class="label"> Example &nbsp;(
+                <span class="usage"><a href="http://www.adobe.com/go/learn_as3_usingexamples_en"> How to use this example </a></span>)
+            </span><br/><div class="detailBody"> The following example opens the remote application hosted at 
+ http://www.[yourDomain].com/application.jsp in a new browser window and passes 
+ data about a user session, captured in a URLVariables object, to the application. 
+ It explicitly sets the value of the <code>URLRequest.method</code> property to 
+ <code>URLRequestMethod.POST</code>.
+ <p>Highlights of the example follow:</p>
+ <ol><li>The constructor function creates a URLRequest
+	instance named <code>request</code>, taking the URL of the remote application as a parameter.</li><li>A URLVariables object is created and two of its properties are assigned values.</li><li>The URLVariables object is assigned to the <code>data</code> property of the URLRequest object.</li><li>The value of the <code>URLRequest.method</code> property is set to 
+ <code>URLRequestMethod.POST</code>.</li><li>The example calls <code>navigateToURL</code>, which opens a new browser window
+	to the remote application's URL.</li></ol>
+
+ <p> <b>Note:</b> To run the example, the remote application URL in the example 
+ must be replaced with a working URL. Additionally, you would need server code  to process
+ the information captured by the AIR application in the URLVariables object.</p>
+<div class="listing"><pre>
+&lt;html&gt;
+    &lt;head&gt;
+      &lt;script src="AIRAliases.js" /&gt;
+      &lt;script&gt;
+        function init() {
+            var url = "http://www.[yourDomain].com/application.jsp";
+            var request = new air.URLRequest(url);
+            
+            var variables = new air.URLVariables();
+            variables.exampleSessionId = new Date().getTime();
+            variables.exampleUserLabel = "guest";
+            request.data = variables;
+            request.method = air.URLRequestMethod.POST;
+            
+            air.navigateToURL(request);
+        }
+      &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body onload='init()'&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div></span></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="requestHeaders"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>requestHeaders</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>requestHeaders:Array</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     The array of HTTP request headers to be appended to the
+
+     HTTP request. The array is composed of URLRequestHeader objects.
+
+     Each object in the array must be a URLRequestHeader object that
+
+     contains a name string and a value string, as follows:
+
+     <div class="listing"><pre>
+
+     var rhArray:Array = new Array(new URLRequestHeader("Content-Type", "text/html"));
+
+     </pre></div>
+
+     
+     <p>
+
+     <span>The AIR runtime imposes</span> certain restrictions on request headers;
+
+     for more information, see the URLRequestHeader class description.</p>
+
+     
+     <p>Not all methods that accept URLRequest parameters support the <code>requestHeaders</code> property,
+
+     consult the documentation for the method you are calling. For example, the <code>FileReference.upload()</code>
+
+     and <code>FileReference.download()</code> methods do not
+
+     support the <code>URLRequest.requestHeaders</code> property.</p>
+
+     <p>Due to browser limitations, custom HTTP request headers are only supported for <code>POST</code> requests,
+
+     not for <code>GET</code> requests.</p>
+
+     
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="URLRequestHeader.html" target="">URLRequestHeader</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="url"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>url</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>url:String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     The URL to be requested.
+
+     
+     <p>Be sure to encode any characters that are either described as unsafe in the Uniform Resource Locator
+
+     specification (see http://www.faqs.org/rfcs/rfc1738.html) or that are reserved in the
+
+     URL scheme of the URLRequest object (when not used for their reserved purpose). For example,
+
+     use <code>"%25"</code> for the percent (%) symbol and <code>"%23"</code> for the number sign (#), as in
+
+     <code>"http://www.example.com/orderForm.cfm?item=%23B-3&discount=50%25"</code>.</p>
+
+     
+      <p>By default, the URL must be in the same domain as the calling file,
+
+      unless the content is running in the application
+
+      security sandbox. . For more information,
+
+      see the description of the URLRequest class.</p>
+
+     
+     <p>
+
+     <span>Files</span> in the application security sandobx
+
+     &mdash; files installed with the AIR application &mdash; can access URLs using any of the
+
+     following URL schemes:</p>
+
+     
+     <ul><li><code>http</code> and <code>https</code> </li><li><code>file</code> </li><li><code>app-storage</code> </li><li><code>app</code> </li></ul>
+
+     
+	 <p><b>Note:</b> In AIR 3 and later, AIR applications can launch other applications that are registered 
+
+	 to handle an arbitrary URI scheme with the <code>navigateToURL()</code> function. Prior to AIR 3,
+
+	 only the standard URI schemes could be used. For example, you can use the http: scheme to launch the
+
+	 default web browser and mailto: to launch the default email application.</p>
+
+	 
+
+     <p><b>Note:</b> IPv6 (Internet Protocol version 6) is supported.
+
+     
+     IPv6 is a version of Internet Protocol that supports
+
+     128-bit addresses (an improvement on the earlier IPv4 protocol that supports 32-bit
+
+     addresses). You might need to activate IPv6 on your networking interfaces. For more
+
+     information, see the Help for the operating system hosting the data.
+
+     If IPv6 is supported on the hosting system, you can specify numeric IPv6 literal addresses
+
+     in URLs enclosed in brackets ([]). </p>
+
+     
+     
+
+     
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118a9b8f6c0-7fe1.html" target="_top">IPv6 addresses</a><br/><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118a9b8f6c0-7ffe.html" target="_top">Basics of networking and communication</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="useCache"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>useCache</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>useCache:Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+    Specifies whether the local cache should be consulted before this URLRequest
+
+    fetches data.
+
+    
+    <p><b>Note</b>:The <code>HTMLLoader.load()</code> method
+
+    does not support the <code>URLRequest.useCache</code> property.</p>
+
+    
+    </p><p> The default value is <code>true.</code></p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>SecurityError </code> &mdash; The caller is not in the AIR application security sandbox.
+
+    
+    </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="URLRequestDefaults.html#useCache" target="">URLRequestDefaults.useCache</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##Lite::4##"><a name="propertyDetail"></a><a name="userAgent"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>userAgent</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>userAgent:String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+    Specifies the user-agent string to be used in the HTTP request.
+
+    
+    
+
+    
+    <p><i>Note:</i> This property does not affect the user agent string when
+
+    the URLRequest object is used with the <code>load()</code> method of an
+
+    HTMLLoader object. To set the user agent string for an HTMLLoader object,
+
+    set the <code>userAgent</code> property of the HTMLLoader object or set
+
+    the static <code>URLRequestDefaults.userAgent</code> property.</p>
+
+    
+    </p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>SecurityError </code> &mdash; The caller is not in the AIR application security sandbox.
+
+    
+    </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="URLRequestDefaults.html#userAgent" target="">URLRequestDefaults.userAgent</a><br/></div></div></span><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="URLRequest()"></a><a name="URLRequest(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>URLRequest</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function URLRequest(url:String = null)</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p>
+
+     Creates a URLRequest object.
+
+     
+     If <code>System.useCodePage</code> is <code>true</code>, the request is encoded using the
+
+     system code page, rather than Unicode.
+
+     
+     If <code>System.useCodePage</code> is <code>false</code>, the request is encoded using Unicode, rather than the
+
+     system code page.
+
+     
+     </p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">url</span>:String</code> (default = <code>null</code>)<code></code> &mdash; The URL to be requested. You can set the URL later by using the <code>url</code> property.
+
+     
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="../system/System.html#useCodePage" target="">System.useCodePage</a></div></div></span><a name="includeExamplesSummary"></a><div class="detailSectionHeader">Examples</div><span id="pageFilter"><br/><div class="detailBody"> The following example creates a new Loader object and passes it
+ a URLRequest object that contains the path to an XML file. If the loading operation is
+ successful, a <code>complete</code> event is dispatched and the data in the XML
+ file traces to the output. Additional event handlers capture other events, including error
+ events.
+
+ <p>To run this example, place the AIRAliases.js file and an XML file named XMLFile.xml in the same directory
+ as the HTML file.</p>
+<div class="listing"><pre>
+
+&lt;html&gt;
+    &lt;head&gt;
+      &lt;script src="AIRAliases.js" /&gt;
+      &lt;script&gt;
+        function init() {
+            var loader = new air.URLLoader();
+            configureListeners(loader);
+
+            var request = new air.URLRequest("XMLFile.xml");
+            try {
+                loader.load(request);
+            } catch (error) {
+                air.trace("Unable to load requested document.");
+            }
+        }
+
+        function configureListeners(dispatcher) {
+            dispatcher.addEventListener(air.Event.COMPLETE, completeHandler);
+            dispatcher.addEventListener(air.Event.OPEN, openHandler);
+            dispatcher.addEventListener(air.ProgressEvent.PROGRESS, progressHandler);
+            dispatcher.addEventListener(air.SecurityErrorEvent.SECURITY_ERROR, securityErrorHandler);
+            dispatcher.addEventListener(air.HTTPStatusEvent.HTTP_STATUS, httpStatusHandler);
+            dispatcher.addEventListener(air.IOErrorEvent.IO_ERROR, ioErrorHandler);
+        }
+
+        function completeHandler(event) {
+            var loader = air.URLLoader(event.target);
+            air.trace("completeHandler: " + loader.data);
+        }
+
+        function openHandler(event) {
+            air.trace("openHandler: " + event);
+        }
+
+        function progressHandler(event) {
+            air.trace("progressHandler loaded:" + event.bytesLoaded + " total: " + event.bytesTotal);
+        }
+
+        function securityErrorHandler(event) {
+            air.trace("securityErrorHandler: " + event);
+        }
+
+        function httpStatusHandler(event) {
+            air.trace("httpStatusHandler: " + event);
+        }
+
+        function ioErrorHandler(event) {
+            air.trace("ioErrorHandler: " + event);
+        }
+      &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body onload='init()'&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script><p></p><center class="copyright"> &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><!--BEGIN IONCOMMENTS--><div id="ionComHere"></div><!--END IONCOMMENTS-->[an error occurred while processing this directive][an error occurred while processing this directive]<p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/en_US/legalnotices/index.html">Legal Notices</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online Privacy Policy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html><!-- &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  -->

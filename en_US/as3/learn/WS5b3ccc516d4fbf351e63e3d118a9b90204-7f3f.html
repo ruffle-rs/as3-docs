@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="en-us" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;Flash&#160;Platform * Advanced topics</title>
+    <link rel="shortcut icon" href="images/FlashRuntime.ico" />
+    <meta name="book" content="Learning ActionScript 3.0" />
+    <meta name="product" content="adobe" /><meta name="product" content="air" /><meta name="product" content="flash" /><meta name="product" content="flex" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="adobe"></Attribute><Attribute name="product" value="air"></Attribute><Attribute name="product" value="flash"></Attribute><Attribute name="product" value="flex"></Attribute><Attribute name="book" value="Learning ActionScript 3.0"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WS5b3ccc516d4fbf351e63e3d118a9b90204-7f3f.html";
+    document.cookie = "topicId=" + "WS5b3ccc516d4fbf351e63e3d118a9b90204-7f3f.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content-fonts.css" />
+    <link rel="stylesheet" type="text/css" href="content-hyperlinks.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    <div id="mnemonic">
+      <!--googleoff: index--><div xmlns:adobe="http://www.adobe.com/saxon" class="FlashRuntime"><div class="banner"><a href="WS9936fa0d5984e93b81cbf5a1272b824570-8000.html">Adobe&#160;Flash&#160;Platform</a></div></div><!--googleon: index-->
+    </div>
+    
+    <div id="searchbar">
+<table id="searchbartable">
+<tr>
+<td colspan="2">
+      <!--googleoff: index--><div xmlns:adobe="http://www.adobe.com/saxon"><div id="pdf"><img src="images/PDF.gif" width="16" height="16" /><a title="View Help PDF" href="as3_learning.pdf">View Help PDF (2.1MB)</a></div></div><!--googleon: index-->
+</td>
+</tr>
+</table>
+    </div>
+
+<!-- BEGIN SEARCH CONTENT -->
+<form id="search" name="search" action="https://help.adobe.com/en_US/as3/learn/search.html" target="_self">
+<script type="text/javascript">
+<!--[CDATA[
+if ( !use_chc_behavior ){
+    if (typeof(terms_AHV_SEARCH_CONSTRAINT) != "undefined" && 
+        terms_AHV_SEARCH_CONSTRAINT.length > 0 && 
+        document.location.href.indexOf(".adobe.com") > 0){
+        if ( typeof(terms_SEARCH_THIS_HELP_ONLY) != "undefined" && terms_SEARCH_THIS_HELP_ONLY == "ON" ) {
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                checked="checked" \
+                value="1" ><\/input>'); 
+                
+        // Leave the "Search this help system only" checkbox unckecked
+        }else{    
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                value="1" ><\/input>'); 
+        }
+        document.write('<span class="gsalabel">' + terms_AHV_SEARCH_CONSTRAINT + '<\/span><\/div>'); 
+    }
+    document.write('<input class="searchinput" \
+        name="q" \
+        id="q" \
+        type="text" \
+        maxlength="256" \
+        value="' + terms_AHV_SEARCH_BUTTON + '" \
+        onclick="clearSearch()"><\/input><input \
+        type="button" \
+        name="searchbutton" \
+        class="searchbutton" \
+        onclick="submit()"><\/input>'); 
+} 
+ 
+/* 
+ * Start Functions 
+ */
+function clearSearch(){
+    if (document.search.q.value == terms_AHV_SEARCH_BUTTON){document.search.q.value = ""}; 
+}
+
+// set search preferences
+function setAHSearchPref(){
+    if (document.search.gsa.checked == 1){
+        setAHSearchCookie( dirname );
+    }else{
+        setAHSearchCookie( "community" );
+    }
+}
+
+// Set search preferences cookie
+function setAHSearchCookie( p ){
+    // set cookie ah_searchpref with a value of the document path
+    var expire=new Date();
+    expire.setDate(expire.getDate()+365); // Cookie expires after 1 year (365 days) 
+    document.cookie="ah_searchpref=" +p+ "; expires=" +expire.toGMTString()+ ";";
+}
+
+// ]]-->
+</script> 
+ </form>
+<!-- END SEARCH CONTENT -->    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+<!-- BEGIN BREADCRUMBS -->
+
+      
+      <div id="breadcrumb">
+        
+<ul class="navigation"><li class="prev"><a accesskey="p" class="prev" href="WS5b3ccc516d4fbf351e63e3d118a9b90204-7fcd.html" title="Inheritance"><img src="images/blank.gif" alt="Previous" width="17" height="17" /></a></li><li class="next"><a accesskey="n" class="next" href="WS5b3ccc516d4fbf351e63e3d118a9b90204-7f38.html" title="Example: GeometricShapes"><img src="images/blank.gif" alt="Next" width="17" height="17" /></a></li></ul><div class="hierarchy" id="hierarchy"><a href="WS9936fa0d5984e93b81cbf5a1272b824570-8000.html"><b>Home</b></a> / <a href="WS9936fa0d5984e93b81cbf5a1272b824570-8000.html"><b>Learning ActionScript 3.0</b></a> / <a href="WS5b3ccc516d4fbf351e63e3d118a9b90204-7ec0.html"><b>Object-oriented programming in ActionScript</b></a> 
+     </div>
+
+      </div>
+<!-- END BREADCRUMBS -->
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>
+          Advanced topics
+        </h1>
+<!-- END PAGE TITLE -->
+<!-- BEGIN IONCOMMENTCOUNT -->
+        <div id="ionCount">
+        </div>
+<!-- END IONCOMMENTCOUNT -->
+<p id="chcPromo" style="display:none;">
+<a id="chcLink" href="http://www.adobe.com/support/chc/">
+<img id="chcImage" src="http://www.adobe.com/support/chc/GetMoreHelpFeatures.png"/>
+</a>
+</p>
+<script type="text/javascript" language="javascript" charset="utf-8">
+<!--
+var cfgArray = [];
+//cfgArray["Acrobat_10.0_Professional.helpcfg"] = "acrobatpro";
+//cfgArray["Acrobat_10.0_Standard.helpcfg"] = "acrobatstd";
+cfgArray["Lightroom_3.0.helpcfg"] = "lightroom";
+cfgArray["PhotoshopElements_8.0_Win.helpcfg"] = "photoshopelements";
+cfgArray["PhotoshopElements_8.0_Mac.helpcfg"] = "photoshopelementsmac";
+cfgArray["PremiereElements_8.0_Win.helpcfg"] = "premiereelements";
+
+//cfgArray["AfterEffects_10.0.helpcfg"] = "aftereffects";
+//cfgArray["AIR.helpcfg"] = "air";
+//cfgArray["ColdFusionBuilder.helpcfg"] = "coldfusion";
+//cfgArray["Contribute_6.0.helpcfg"] = "contribute";
+//cfgArray["DeviceCentral_3.0.helpcfg"] = "devicecentral";
+//cfgArray["Dreamweaver_11.0.helpcfg"] = "dreamweaver";
+//cfgArray["EncoreDVD_5.0.helpcfg"] = "encore";
+//cfgArray["ExtensionManager_3.0.helpcfg"] = "extension";
+//cfgArray["Fireworks_11.0.helpcfg"] = "fireworks";
+//cfgArray["Flash_11.0.helpcfg"] = "flash";
+//cfgArray["Flex_4.0.helpcfg"] = "flashbuilder";
+//cfgArray["FlashCatalyst_1.0.helpcfg"] = "flashcatalyst";
+//cfgArray["Illustrator_15.0.helpcfg"] = "illustrator";
+//cfgArray["InCopy_7.0.helpcfg"] = "incopy";
+//cfgArray["InDesign_7.0.helpcfg"] = "indesign";
+//cfgArray["OnLocation_5.0.helpcfg"] = "onlocation";
+//cfgArray["Photoshop_12.0.helpcfg"] = "photoshop";
+//cfgArray["PremierePro_5.0.helpcfg"] = "premierepro";
+
+function getLangName() {
+    var lang = "en-us";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if (ptn.test(lang)) {
+        var languageCode = lang.replace(ptn, "$1");
+        var countryCode = lang.replace(ptn, "$2");
+        lang = languageCode + "_" + countryCode.toUpperCase();
+    }
+    return lang;
+}
+
+function getCountryName() {
+    var lang = "";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if ((ptn.test(lang)) && (lang != "en-us")) {
+        var countryCode = lang.replace(ptn, "$2");
+        return "/" + countryCode;
+    }
+    return "";
+}
+
+if ( (typeof(terms_HELPCFG) != 'undefined')  && (terms_HELPCFG.indexOf(".helpcfg") != -1) ) {
+    var stage   = (document.location.href.indexOf(".stage.") != -1) ? 'stage.' : '';
+    var baseUrl = 'http://www.' + stage + 'adobe.com';
+    var refpage = document.location.href.replace(/#.*$/, '');
+	
+	if ((!use_robohelp_behavior) && (terms_HELPCFG.length > 0) && (typeof(cfgArray[terms_HELPCFG]) != 'undefined') && (cfgArray[terms_HELPCFG].length > 0)) {
+		if (document.getElementById) { // DOM3 = IE5, NS6
+			var newHref = baseUrl + getCountryName() + "/support/chc/" + "?helpcfg=http://help." + stage + "adobe.com/HelpCfg/" + getLangName() + "/" + terms_HELPCFG + "&url=" + refpage + "&product=" + cfgArray[terms_HELPCFG];
+			var newSrc = baseUrl + getCountryName() + "/support/chc/GetMoreHelpFeatures.png";
+			document.getElementById("chcPromo").style.display = "block";
+			document.getElementById("chcLink").href = newHref;
+			document.getElementById("chcImage").src = newSrc;
+		}
+	}
+}
+
+//-->
+</script>
+
+
+        <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WS5b3ccc516d4fbf351e63e3d118a9b90204-7f1b"><span class="topictitle1">History of ActionScript OOP support</span>
+</a></p></li><li><p><a href="#WS5b3ccc516d4fbf351e63e3d118a9b90204-7f1a"><span class="topictitle1">The ActionScript 3.0 class object</span>
+</a></p></li><li><p><a href="#WS5b3ccc516d4fbf351e63e3d118a9b90204-7f19"><span class="topictitle1">The traits object</span>
+</a></p></li><li><p><a href="#WS5b3ccc516d4fbf351e63e3d118a9b90204-7fa3"><span class="topictitle1">The prototype object</span>
+</a></p></li><li><p><a href="#WS5b3ccc516d4fbf351e63e3d118a9b90204-7f17"><span class="topictitle1">The AS3 namespace</span>
+</a></p></li></ul></div></div></div></div><div><ul class="navlinklist"></ul>
+</div>
+<div id="WS5b3ccc516d4fbf351e63e3d118a9b90204-7f1b" class="nochunk"><a name="WS5b3ccc516d4fbf351e63e3d118a9b90204-7f1b"><!-- --></a><h2 class="topictitle2">History of ActionScript OOP support</h2><div><p>Because
+ActionScript 3.0 builds upon previous versions of ActionScript,
+it may be helpful to understand how the ActionScript object model
+has evolved. ActionScript began as a simple scripting mechanism
+for early versions of Flash Professional. Later, programmers began
+building increasingly complex applications with ActionScript. In
+response to the needs of such programmers, each subsequent release
+has added language features that facilitate the creation of complex applications.</p>
+<div class="section" id="WS5b3ccc516d4fbf351e63e3d118a9b90204-7f1b__WS5b3ccc516d4fbf351e63e3d118a9b90204-7f46"><a name="WS5b3ccc516d4fbf351e63e3d118a9b90204-7f1b__WS5b3ccc516d4fbf351e63e3d118a9b90204-7f46"><!-- --></a><h4 class="sectiontitle">ActionScript 1.0</h4><p>ActionScript 1.0 is the version of the language
+used in Flash Player 6 and earlier. Even at this early stage of
+development, the ActionScript object model was based on the concept
+of the object as a fundamental data type. An ActionScript object
+is a compound data type with a group of <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">properties</i>. When
+discussing the object model, the term <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">properties</i> includes
+everything that is attached to an object, such as variables, functions,
+or methods. </p>
+<p>Although this first generation of ActionScript
+does not support the definition of classes with a <samp class="codeph">class</samp> keyword,
+you can define a class using a special kind of object called a prototype
+object. Instead of using a <samp class="codeph">class</samp> keyword to create
+an abstract class definition that you instantiate into concrete
+objects, as you do in class-based languages like Java and C++, prototype-based
+languages like ActionScript 1.0 use an existing object as a model
+(or prototype) for other objects. While objects in a class-based
+language may point to a class that serves as its template, objects
+in a prototype-based language point instead to another object, its
+prototype, that serves as its template. </p>
+<p>To create a class in ActionScript
+1.0, you define a constructor function for that class. In ActionScript,
+functions are actual objects, not just abstract definitions. The
+constructor function that you create serves as the prototypical
+object for instances of that class. The following code creates a
+class named Shape and defines one property named <samp class="codeph">visible</samp> that
+is set to <samp class="codeph">true</samp> by default:</p>
+<pre>// base class 
+function Shape() {} 
+// Create a property named visible. 
+Shape.prototype.visible = true;</pre>
+<p>This constructor
+function defines a Shape class that you can instantiate with the <samp class="codeph">new</samp> operator,
+as follows:</p>
+<pre>myShape = new Shape();</pre>
+<p>Just
+as the <samp class="codeph">Shape()</samp> constructor function object serves
+as the prototype for instances of the Shape class, it can also serve
+as the prototype for subclasses of Shape—that is, other classes
+that extend the Shape class.</p>
+<p>The creation of a class that
+is a subclass of the Shape class is a two-step process. First, create
+the class by defining a constructor function for the class, as follows:</p>
+<pre>// child class 
+function Circle(id, radius) 
+{ 
+this.id = id; 
+this.radius = radius; 
+}</pre>
+<p>Second, use the <samp class="codeph">new</samp> operator to
+declare that the Shape class is the prototype for the Circle class.
+By default, any class you create uses the Object class as its prototype,
+which means that <samp class="codeph">Circle.prototype</samp> currently contains
+a generic object (an instance of the Object class). To specify that
+Circle’s prototype is Shape instead of Object, use the following
+code to change the value of <samp class="codeph">Circle.prototype</samp> so
+that it contains a Shape object instead of a generic object:</p>
+<pre>// Make Circle a subclass of Shape. 
+Circle.prototype = new Shape();</pre>
+<p>The Shape class and the Circle class are now
+linked together in an inheritance relationship that is commonly
+known as the <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">prototype chain</i>. The diagram illustrates the
+relationships in a prototype chain:</p>
+<div xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema" class="fignone"><img alt="" id="op_prototype_chain" src="images/op_prototype_chain.png" /></div><p>The base class at the end
+of every prototype chain is the Object class. The Object class contains
+a static property named <samp class="codeph">Object.prototype</samp> that points
+to the base prototype object for all objects created in ActionScript
+1.0. The next object in the example prototype chain is the Shape
+object. This is because the <samp class="codeph">Shape.prototype</samp> property
+was never explicitly set, so it still holds a generic object (an
+instance of the Object class). The final link in this chain is the
+Circle class, which is linked to its prototype, the Shape class
+(the <samp class="codeph">Circle.prototype</samp> property holds a Shape object).</p>
+<p>If
+you create an instance of the Circle class, as in the following
+example, the instance inherits the prototype chain of the Circle
+class: </p>
+<pre>// Create an instance of the Circle class. 
+myCircle = new Circle();</pre>
+<p>Recall that the example
+included a property named <samp class="codeph">visible</samp> as a member of the
+Shape class. In this example, the <samp class="codeph">visible</samp> property
+does not exist as a part of the <samp class="codeph">myCircle</samp> object,
+only as a member of the Shape object, yet the following line of
+code outputs <samp class="codeph">true</samp>:</p>
+<pre>trace(myCircle.visible); // output: true</pre>
+<p>The
+runtime is able to ascertain that the <samp class="codeph">myCircle</samp> object
+inherits the <samp class="codeph">visible</samp> property by walking up the
+prototype chain. When executing this code, the runtime first searches
+through the properties of the <samp class="codeph">myCircle</samp> object for
+a property named <samp class="codeph">visible</samp>, but does not find such
+a property. It looks next in the <samp class="codeph">Circle.prototype</samp> object,
+but still does not find a property named <samp class="codeph">visible</samp>.
+Continuing up the prototype chain, it finally finds the <samp class="codeph">visible</samp> property
+defined on the <samp class="codeph">Shape.prototype</samp> object and outputs
+the value of that property.</p>
+<p>In the interest of simplicity,
+many of the details and intricacies of the prototype chain are omitted.
+Instead the goal is to provide enough information to help you understand
+the ActionScript 3.0 object model.</p>
+</div>
+<div class="section" id="WS5b3ccc516d4fbf351e63e3d118a9b90204-7f1b__WS5b3ccc516d4fbf351e63e3d118a9b8d39f-7fd8"><a name="WS5b3ccc516d4fbf351e63e3d118a9b90204-7f1b__WS5b3ccc516d4fbf351e63e3d118a9b8d39f-7fd8"><!-- --></a><h4 class="sectiontitle">ActionScript 2.0</h4><p>ActionScript
+2.0 introduced new keywords such as <samp class="codeph">class</samp>, <samp class="codeph">extends</samp>, <samp class="codeph">public</samp>, and <samp class="codeph">private</samp>,
+that allowed you to define classes in a way that is familiar to anyone
+who works with class-based languages like Java and C++. It’s important to
+understand that the underlying inheritance mechanism did not change between
+ActionScript 1.0 and ActionScript 2.0. ActionScript 2.0 merely added
+a new syntax for defining classes. The prototype chain works the
+same way in both versions of the language.</p>
+<p>The new syntax
+introduced by ActionScript 2.0, shown in the following excerpt, allows
+you to define classes in a way that many programmers find more intuitive:</p>
+<pre>// base class 
+class Shape 
+{ 
+var visible:Boolean = true; 
+}</pre>
+<p>Note that ActionScript 2.0 also introduced type
+annotations for use with compile-time type checking. This allows
+you to declare that the <samp class="codeph">visible</samp> property in the
+previous example should contain only a Boolean value. The new <samp class="codeph">extends</samp> keyword
+also simplifies the process of creating a subclass. In the following
+example, the two-step process necessary in ActionScript 1.0 is accomplished
+in one step with the <samp class="codeph">extends</samp> keyword:</p>
+<pre>// child class 
+class Circle extends Shape 
+{ 
+    var id:Number; 
+    var radius:Number; 
+    function Circle(id, radius) 
+    { 
+        this.id = id; 
+        this.radius = radius; 
+        } 
+}</pre>
+<p>The constructor is now declared as part of the
+class definition, and the class properties <samp class="codeph">id</samp> and <samp class="codeph">radius</samp> must
+also be declared explicitly.</p>
+<p>ActionScript 2.0 also added support
+for the definition of interfaces, which allow you to further refine
+your object-oriented programs with formally defined protocols for
+inter-object communication.</p>
+</div>
+</div></div>
+<div id="WS5b3ccc516d4fbf351e63e3d118a9b90204-7f1a" class="nochunk"><a name="WS5b3ccc516d4fbf351e63e3d118a9b90204-7f1a"><!-- --></a><h2 class="topictitle2">The ActionScript 3.0 class object</h2><div><p>A common object-oriented
+programming paradigm, most commonly associated with Java and C++,
+uses classes to define types of objects. Programming languages that
+adopt this paradigm also tend to use classes to construct instances
+of the data type that the class defines. ActionScript uses classes
+for both of these purposes, but its roots as a prototype-based language
+add an interesting characteristic. ActionScript creates for each
+class definition a special class object that allows sharing of both
+behavior and state. For many ActionScript programmers, however,
+this distinction may have no practical coding implications. ActionScript
+3.0 is designed such that you can create sophisticated object-oriented
+ActionScript applications without using, or even understanding,
+these special class objects.</p>
+<p>The following diagram shows the structure of a class object that
+represents a simple class named A that is defined with the statement <samp class="codeph">class A {}</samp>:</p>
+<div xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema" class="fignone"><a href="#" onclick="return showHideImage('op_class_objec_a', this);">View full size graphic</a><img alt="" id="op_class_objec_a" src="images/op_class_objec_a.png" /></div><p>Each rectangle in the diagram represents an object. Each object
+in the diagram has a subscript character A to represent that it
+belongs to class A. The class object (CA) contains references to
+a number of other important objects. An instance traits object (TA)
+stores the instance properties that are defined within a class definition.
+A class traits object (TCA) represents the internal type of the
+class and stores the static properties defined by the class (the
+subscript character C stands for “class”). The prototype object
+(PA) always means the class object to which it was originally attached
+through the <samp class="codeph">constructor</samp> property.</p>
+</div></div>
+<div id="WS5b3ccc516d4fbf351e63e3d118a9b90204-7f19" class="nochunk"><a name="WS5b3ccc516d4fbf351e63e3d118a9b90204-7f19"><!-- --></a><h2 class="topictitle2">The traits object</h2><div><p>The traits
+object, which is new in ActionScript 3.0, was implemented with performance
+in mind. In previous versions of ActionScript, name lookup could
+be a time-consuming process as Flash Player walked the prototype
+chain. In ActionScript 3.0, name lookup is much more efficient and
+less time consuming, because inherited properties are copied down
+from superclasses into the traits object of subclasses.</p>
+<p>The traits object
+is not directly accessible to programmer code, but its presence can
+be felt by the improvements in performance and memory usage. The
+traits object provides the AVM2 with detailed information about
+the layout and contents of a class. With such knowledge, the AVM2
+is able to significantly reduce execution time, because it can often
+generate direct machine instructions to access properties or call
+methods directly without a time-consuming name lookup.</p>
+<p>Thanks to the traits object, an object’s memory footprint can
+be significantly smaller than a similar object in previous versions
+of ActionScript. For example, if a class is sealed (that is, the
+class is not declared dynamic), an instance of the class does not
+need a hash table for dynamically added properties, and can hold
+little more than a pointer to the traits objects and some slots
+for the fixed properties defined in the class. As a result, an object
+that required 100 bytes of memory in ActionScript 2.0 could require
+as little as 20 bytes of memory in ActionScript 3.0.</p>
+<div class="note"><span class="notetitle">Note:  </span>The traits object is an internal implementation
+detail, and there is no guarantee that it will not change or even
+disappear in future versions of ActionScript.</div>
+</div></div>
+<div id="WS5b3ccc516d4fbf351e63e3d118a9b90204-7fa3" class="nochunk"><a name="WS5b3ccc516d4fbf351e63e3d118a9b90204-7fa3"><!-- --></a><h2 class="topictitle2">The prototype object</h2><div><p>Every
+ActionScript class object has a property named <samp class="codeph">prototype</samp>,
+which is a reference to the class’s prototype object. The prototype
+object is a legacy of ActionScript’s roots as prototype-based language.
+For more information, see <a href="WS5b3ccc516d4fbf351e63e3d118a9b90204-7f1b.html">History of ActionScript OOP support</a>.</p>
+<p>The <samp class="codeph">prototype </samp>property is read-only, which means
+that it cannot be modified to point to different objects. This differs
+from the class <samp class="codeph">prototype</samp> property in previous versions
+of ActionScript, where the prototype could be reassigned so that
+it pointed to a different class. Although the <samp class="codeph">prototype</samp> property
+is read-only, the prototype object that it references is not. In
+other words, new properties can be added to the prototype object.
+Properties added to the prototype object are shared among all instances
+of the class.</p>
+<p>The
+prototype chain, which was the only inheritance mechanism in previous versions
+of ActionScript, serves only a secondary role in ActionScript 3.0.
+The primary inheritance mechanism, fixed property inheritance, is
+handled internally by the traits object. A fixed property is a variable
+or method that is defined as part of a class definition. Fixed property
+inheritance is also called class inheritance, because it is the
+inheritance mechanism that is associated with keywords such as <samp class="codeph">class</samp>, <samp class="codeph">extends</samp>,
+and <samp class="codeph">override</samp>. </p>
+<p>The prototype chain provides
+an alternative inheritance mechanism that is more dynamic than fixed
+property inheritance. You can add properties to a class’s prototype
+object not only as part of the class definition, but also at run
+time through the class object’s <samp class="codeph">prototype</samp> property.
+Note, however, that if you set the compiler to strict mode, you
+may not be able to access properties added to a prototype object
+unless you declare a class with the <samp class="codeph">dynamic</samp> keyword. </p>
+<p>A good example of a class with several properties attached to
+the prototype object is the Object class. The Object class’s <samp class="codeph">toString()</samp> and <samp class="codeph">valueOf()</samp> methods
+are actually functions assigned to properties of the Object class’s prototype
+object. The following is an example of how the declaration of these methods
+could, in theory, look (the actual implementation differs slightly because
+of implementation details):</p>
+<pre>public dynamic class Object 
+{ 
+    prototype.toString = function() 
+    { 
+        // statements 
+    }; 
+    prototype.valueOf = function() 
+    { 
+        // statements 
+    }; 
+}</pre>
+<p>As mentioned previously, you can attach a property to a class’s
+prototype object outside the class definition. For example, the <samp class="codeph">toString()</samp> method
+can also be defined outside the Object class definition, as follows:</p>
+<pre>Object.prototype.toString = function() 
+{ 
+    // statements 
+};</pre>
+<p>Unlike fixed property inheritance,
+however, prototype inheritance does not require the <samp class="codeph">override</samp> keyword
+if you want to redefine a method in a subclass. For example. if
+you want to redefine the <samp class="codeph">valueOf()</samp> method in a
+subclass of the Object class, you have three options. First, you
+can define a <samp class="codeph">valueOf()</samp> method on the subclass’s
+prototype object inside the class definition. The following code creates
+a subclass of Object named Foo and redefines the <samp class="codeph">valueOf()</samp> method on
+Foo’s prototype object as part of the class definition. Because
+every class inherits from Object, it is not necessary to use the <samp class="codeph">extends</samp> keyword.</p>
+<pre>dynamic class Foo 
+{ 
+    prototype.valueOf = function() 
+    { 
+        return "Instance of Foo"; 
+    }; 
+}</pre>
+<p>Second, you can define a <samp class="codeph">valueOf()</samp> method on
+Foo’s prototype object outside the class definition, as shown in
+the following code:</p>
+<pre>Foo.prototype.valueOf = function() 
+{ 
+    return "Instance of Foo"; 
+};</pre>
+<p>Third, you can define a fixed property named <samp class="codeph">valueOf()</samp> as
+part of the Foo class. This technique differs from the others in
+that it mixes fixed property inheritance with prototype inheritance.
+Any subclass of Foo that wants to redefine <samp class="codeph">valueOf()</samp> must
+use the <samp class="codeph">override</samp> keyword. The following code shows <samp class="codeph">valueOf()</samp> defined
+as a fixed property in Foo:</p>
+<pre>class Foo 
+{ 
+    function valueOf():String 
+    { 
+        return "Instance of Foo"; 
+    } 
+}</pre>
+</div></div>
+<div id="WS5b3ccc516d4fbf351e63e3d118a9b90204-7f17" class="nochunk"><a name="WS5b3ccc516d4fbf351e63e3d118a9b90204-7f17"><!-- --></a><h2 class="topictitle2">The AS3 namespace</h2><div><p>The existence of two separate inheritance
+mechanisms, fixed property inheritance and prototype inheritance,
+creates an interesting compatibility challenge with respect to the
+properties and methods of the core classes. Compatibility with the
+ECMAScript language specification on which ActionScript is based requires
+the use of prototype inheritance, which means that the properties
+and methods of a core class are defined on the prototype object
+of that class. On the other hand, compatibility with ActionScript
+3.0 calls for the use of fixed property inheritance, which means
+that the properties and methods of a core class are defined in the
+class definition using the <samp class="codeph">const</samp>, <samp class="codeph">var</samp>,
+and <samp class="codeph">function</samp> keywords. Moreover, the use of fixed
+properties instead of the prototype versions can lead to significant
+increases in run-time performance.</p>
+<p>ActionScript 3.0 solves this problem by using both prototype
+inheritance and fixed property inheritance for the core classes.
+Each core class contains two sets of properties and methods. One
+set is defined on the prototype object for compatibility with the
+ECMAScript specification, and the other set is defined with fixed
+properties and the AS3 namespace for compatibility with ActionScript
+3.0. </p>
+<p>The AS3 namespace provides a convenient mechanism for choosing
+between the two sets of properties and methods. If you do not use
+the AS3 namespace, an instance of a core class inherits the properties
+and methods defined on the core class’s prototype object. If you
+decide to use the AS3 namespace, an instance of a core class inherits
+the AS3 versions because fixed properties are always preferred over
+prototype properties. In other words, whenever a fixed property
+is available, it is always used instead of an identically named
+prototype property.</p>
+<p>You can selectively use the AS3 namespace version of a property
+or method by qualifying it with the AS3 namespace. For example,
+the following code uses the AS3 version of the <samp class="codeph">Array.pop()</samp> method:</p>
+<pre>var nums:Array = new Array(1, 2, 3); 
+nums.AS3::pop(); 
+trace(nums); // output: 1,2</pre>
+<p>Alternatively, you can use the <samp class="codeph">use namespace</samp> directive
+to open the AS3 namespace for all the definitions within a block
+of code. For example, the following code uses the <samp class="codeph">use namespace</samp> directive
+to open the AS3 namespace for both the <samp class="codeph">pop()</samp> and <samp class="codeph">push()</samp> methods: </p>
+<pre>use namespace AS3; 
+ 
+var nums:Array = new Array(1, 2, 3); 
+nums.pop(); 
+nums.push(5); 
+trace(nums) // output: 1,2,5</pre>
+<p>ActionScript
+3.0 also provides compiler options for each set of properties so
+that you can apply the AS3 namespace to your entire program. The <samp class="codeph">-as3</samp> compiler option
+represents the AS3 namespace, and the <samp class="codeph">-es</samp> compiler
+option represents the prototype inheritance option (<samp class="codeph">es</samp> stands
+for ECMAScript). To open the AS3 namespace for your entire program,
+set the <samp class="codeph">-as3</samp> compiler option to <samp class="codeph">true</samp> and the <samp class="codeph">-es</samp> compiler
+option to <samp class="codeph">false</samp>. To use the prototype versions,
+set the compiler options to the opposite values. The default compiler
+settings for Flash Builder and Flash Professional are <samp class="codeph">-as3 = true</samp> and <samp class="codeph">-es = false</samp>.</p>
+<p>If you plan to extend any of the core classes and override any
+methods, you should understand how the AS3 namespace can affect
+how you must declare an overridden method. If you are using the
+AS3 namespace, any method override of a core class method must also
+use the AS3 namespace along with the <samp class="codeph">override</samp> attribute.
+If you are not using the AS3 namespace and want to redefine a core class
+method in a subclass, you should not use the AS3 namespace or the <samp class="codeph">override</samp> keyword.</p>
+</div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+        <div id="userprefs">
+        </div>
+<!-- END USER PREFERENCES -->
+
+        <div id="related">
+          
+          
+          <div class="separator"><a href="#top"><img src="images/BTT.jpg" /></a>&#160;</div>
+        </div>
+        <div id="footer">
+<!-- BEGIN IONCOMMENTS -->
+          <div id="ionComHere">
+          </div>
+<!-- END IONCOMMENTS -->
+
+
+
+
+
+          <p id="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" id="creativecommons_text"><img id="creativecommons_img" src="images/CC.png" alt="This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License" /></a></p>
+        </div>
+      </div>
+<!-- BEGIN BREADCRUMBS -->
+      <div id="breadcrumb">
+        
+<ul class="navigation"><li class="prev"><a accesskey="p" class="prev" href="WS5b3ccc516d4fbf351e63e3d118a9b90204-7fcd.html" title="Inheritance"><img src="images/blank.gif" alt="Previous" width="17" height="17" /></a></li><li class="next"><a accesskey="n" class="next" href="WS5b3ccc516d4fbf351e63e3d118a9b90204-7f38.html" title="Example: GeometricShapes"><img src="images/blank.gif" alt="Next" width="17" height="17" /></a></li></ul><div class="hierarchy" id="hierarchy"><a href="WS9936fa0d5984e93b81cbf5a1272b824570-8000.html"><b>Home</b></a> / <a href="WS9936fa0d5984e93b81cbf5a1272b824570-8000.html"><b>Learning ActionScript 3.0</b></a> / <a href="WS5b3ccc516d4fbf351e63e3d118a9b90204-7ec0.html"><b>Object-oriented programming in ActionScript</b></a> 
+     </div>
+
+      </div>
+<!-- END BREADCRUMBS -->
+<!-- END CONTENT WRAPPER -->
+
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--
+    Description:
+    This file generates the link to product support in the top right corner
+-->
+
+<style>
+#menutop{
+    position:absolute;
+    top:4px;
+    right:24px;
+    width:auto;    
+    font-size:11px;
+    color:#fff;
+    text-align:right;
+}
+#menutop a{
+    color:#fff;
+}
+#menutop a:hover{
+        text-decoration:underline;
+}
+</style>  
+  
+  
+  
+  
+<div id="productmenu">
+<!--googleoff: index-->
+  <div id="menutop">
+
+
+<script language=javascript type='text/javascript'>
+    // darken menu text for products with light backgrounds
+    var path = document.location.href.toLowerCase();
+    if (path.indexOf("/acrobat/")           	> 0 ||
+        path.indexOf("/acrobat.com/")       	> 0 ||
+        path.indexOf("/acrobatConnectPro/") 	> 0 ||
+        path.indexOf("/connect/")           	> 0 ||
+        path.indexOf("/framemaker/")           	> 0 ||
+        path.indexOf("/livecycledataserviceses/") > 0 ||
+        path.indexOf("/muse/")         	> 0 ||
+		path.indexOf("/presenter/")         	> 0 ||
+        path.indexOf("/scene7/")            	> 0 ||
+        path.indexOf("/flashmediaserver/")  	> 0 ||
+        path.indexOf("/wave/")              	> 0 )
+    {
+        document.write('<style>#menutop a{color:#505050}</style>');
+    }
+    if (typeof('terms_AHV_PRODUCT_SUPPORT') != "undefined" && ! use_robohelp_behavior ){      
+        if (path.indexOf("/muse/") > -1 ){
+            var supportlink = '<a href="http://muse.adobe.com/support.html">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }else{
+            var supportlink = '<a href="http://adobe.com/support">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }
+        document.write( supportlink );
+     }
+
+</script> 
+
+  </div>
+<!--googleon: index-->
+</div>
+
+
+
+<style>
+#online-privacy-policy{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+<p id="online-privacy-policy">
+<script language="javascript">
+var pageLoc = "en_US";
+var metaElements = document.all ?
+document.all.tags('meta') :
+document.getElementsByTagName ?
+document.getElementsByTagName ('meta') : new Array();
+for (var m = 0; m < metaElements.length; m++) {
+	if (metaElements[m].name == "lang") {
+		pageLoc = metaElements[m].content;
+		break;
+	}
+}
+var ptn = /(..)-(..)/;
+if (ptn.test(pageLoc)) {
+	var languageCode = pageLoc.replace(ptn, "$1");
+	var countryCode = pageLoc.replace(ptn, "$2");
+	pageLoc = languageCode + "_" + countryCode.toUpperCase();
+}
+
+var policyLoc = "en_US";
+var policyText = "Online Privacy Policy";
+var policyPath = "";
+var policyArray=[
+"da_DK", "Online fortrolighedserklæring",
+"de_DE", "Online-Datenschutzrichtlinie",
+"es_ES", "Política de confidencialidad en línea",
+"fi_FI", "Yksityisyyttä koskeva Online-toimintaohjelma",
+"fr_FR", "Confidentialité et sécurité",
+"it_IT", "Informativa sulla privacy online",
+"ja_JP", "プライバシーポリシー",
+"ko_KR", "Adobe 온라인 개인정보 보호정책",
+"pt_BR", "Política de Confidencialidade On-line", 
+"zh_CN", "在线隐私政策",
+"zh_TW", "線上隱私政策"
+];
+var legalLoc = "en_US";
+var legalText = "Legal Notices";
+var legalPath = legalLoc;
+var legalArray=[
+"ar_AE", "إشعارات قانونية",
+"bg_BG", "Юридически бележки",
+"cs_CZ", "Právní upozornění",
+"da_DK", "Juridiske meddelelser",
+"de_DE", "Rechtliche Hinweise",
+"el_GR", "Σημειώσεις νομικού περιεχομένου",
+"es_ES", "Avisos legales",
+"et_EE", "Juriidilised teated",
+"fi_FI", "Lakisääteiset ilmoitukset",
+"fr_FR", "Mentions légales",
+"he_IL", "הצהרות משפטיות",
+"hr_HR", "Pravne napomene",
+"hu_HU", "Jogi közlemények",
+"it_IT", "Informazioni legali",
+"ja_JP", "法律上の注意",
+"ko_KR", "법적 고지 사항",
+"lt_LT", "Teisinės pastabos",
+"lv_LV", "Juridisks paziņojums",
+"nb_NO", "Juridiske merknader",
+"nl_NL", "Juridische kennisgevingen",
+"pl_PL", "Informacje prawne",
+"pt_BR", "Aspectos jurídicos",
+"ro_RO", "Prevederi legale",
+"ru_RU", "Юридическая информация",
+"sk_SK", "Právne upozornenie",
+"sl_SI", "Pravni pouk",
+"sv_SE", "Upphovsrätt",
+"tr_TR", "Yasal uyarılar",
+"uk_UA", "Юридична інформація",
+"zh_CN", "法律声明",
+"zh_TW", "法律注意事項"
+];
+
+ruPolicy = "http://www.adobe.com/ru/misc/privacy.html";
+trPolicy = "http://www.adobe.com/tr/misc/privacy.html";
+
+// Bug 2846992: LOC: RUS, TUR: The link to "Online Privacy Policy" should include language, currently it is not appearing.
+if (pageLoc == "ru_RU") {
+	policyPath = "ru";
+}
+else if (pageLoc == "tr_TR") {
+	policyPath = "tr";
+}
+for (var i = 0; i < policyArray.length; i+=2) {
+	if (pageLoc == policyArray[i]) {
+		policyLoc = pageLoc;
+		policyText = policyArray[i+1];
+		var ptn = /(..)_(..)/;
+		if (ptn.test(policyLoc)) {
+			var countryCode = policyLoc.replace(ptn, "$2");
+			policyPath = countryCode.toLowerCase();
+		}
+		break;
+	}
+}
+
+for (var i = 0; i < legalArray.length; i+=2) {
+	if (pageLoc == legalArray[i]) {
+		legalLoc = pageLoc;
+		legalText = legalArray[i+1];
+		legalPath = legalLoc;
+		break;
+	}
+}
+if(agt.indexOf("community help client") > -1 ){
+	document.write('<a href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+}else{
+	//Open the privacy policy in a new window
+	document.write('<a target="_blank" href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a target="_blank" href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+} 
+
+
+remove_all_cookies();
+
+function remove_all_cookies() {
+	var res = document.cookie;
+    var multiple = res.split(";");
+    for(var i = 0; i < multiple.length; i++) {
+    	var key = multiple[i].split("=");
+        document.cookie = key[0]+" =; expires = Thu, 01 Jan 1970 00:00:00 UTC";
+    }
+}
+
+
+</script>
+</p>
+
+
+
+<!-- localfooter.ssi -->
+
+<script type="text/javascript">
+    var debug = (top.location.href.indexOf("debug=true") > -1);
+</script>
+
+<script language="javascript">
+document.write('<scr'+'ipt ' +
+               'src="/en_US/ssi/_pod.js" ' +
+               'language="javascript" ' +
+               'charset="UTF-8"> ' +
+               '</scr'+'ipt>');
+</script>
+
+//  Ethnio survey code removed
+
+
+  </body>
+</html>

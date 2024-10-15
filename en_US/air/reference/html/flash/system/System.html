@@ -1,0 +1,599 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"><html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers"><meta name="lang" content="en-us"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="System,flash.system.System,freeMemory,ime,privateMemory,totalMemory,totalMemoryNumber,useCodePage,disposeXML,exit,gc,pause,pauseForGCIfCollectionImminent,resume,setClipboard"><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" src="../../AC_OETags.js" type="text/javascript"></script><title>flash.system.System - Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers</title>
+	<link rel="stylesheet" href="../../jslr-style.css" type="text/css">
+		<script type="text/javascript">
+			
+				var baseRef = "../../";
+				var buildType = 'jslr';
+				var alreadyrunflag=0; //flag to indicate whether target function has already been run
+				var terms_HELPCFG = ".helpcfg";
+
+if (document.addEventListener)
+  document.addEventListener("DOMContentLoaded", function(){alreadyrunflag=1; init()}, false)
+else if (document.all && !window.opera){
+  /* blocks IE from working, as it's fired before dom if ready
+ document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
+  var contentloadtag=document.getElementById("contentloadtag")
+  contentloadtag.onreadystatechange=function(){
+    if (this.readyState=="complete"){
+      alreadyrunflag=1;
+      init();
+    }
+  }*/
+} else if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+  var _timer=setInterval(function(){
+  if(/loaded|complete/.test(document.readyState)){
+    clearInterval(_timer);
+    alreadyrunflag=1;
+    init(); // call target function
+  }}, 10)
+}
+function onLoadFunction() {
+	setTimeout("if (!alreadyrunflag) init();  alreadyrunflag=1; ionReadyLoad(); ", 0);
+}
+
+		</script>
+		<script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+		<script language="javascript" type="text/javascript" src="../../asdoc.js"></script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body onLoad="onLoadFunction()">
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td>
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr>
+				  <td class="titleTableTitleION" align="left" nowrap="true">Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers<br>
+				  <span class="titleTableTopNavION">
+				  <span id="homelink">
+						<a target="_self" href="../../index.html"> Home </a>&nbsp;|&nbsp;
+				  </span>
+				  <a id="showtoc" onClick="showHideTOC(true)" href="#top" style="display:none">Show Classes List</a><a id="hidetoc" onClick="showHideTOC(false)" href="#top" style="display:">Hide Classes List</a>&nbsp;|&nbsp;
+				  <a href="../../all-index-A.html"> Index </a>&nbsp;|&nbsp;
+				  <a href="../../appendixes.html"> Appendixes </a><br>
+				  </span>	
+				  </td>
+				  <td class="titleTableSearchION" align="right" nowrap="true">
+				  <span id="gsa" class="gsa">
+					<form class="searchFormION" method="get" onSubmit="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US');return false;">
+				  <input class="hidden" name="loc" value="" type="hidden">
+				  <input class="hidden" name="termPrefix" value="site:help.adobe.com/en_US/AS3CLR/Flash_10.0" type="hidden">
+				  <input class="hidden" name="title" value="ActionScript 3.0 Reference for the Adobe Flash Platform" type="hidden">
+				  <input class="hidden" name="term" value="" type="hidden">
+				  <input class="hidden" name="area" value="" type="hidden">
+				  <input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text">
+				  <input type="button" name="action" value="" onClick="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US')" class="searchbutton"><br>
+			      <input id="checkBoxId" type="checkbox" name="checkbox" value="checkbox" checked>Language Reference only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  </form>
+				  </span>				  
+				  </td>
+				</tr>
+			  </table>			
+			  </td>
+			<td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logoION.jpg" class="logoImageION" alt=" Adobe Logo " title=" Adobe Logo "></td>
+		  </tr>
+		  <tr>
+			<td colspan="2">
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr class="titleTableRow2">
+				<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+					<convert>System&nbsp;</convert>
+				</td>
+				<td class="titleTableSubNav" id="subNav" align="right">
+				  <a id="propertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="propertiesBar" style="display:none"> | </span>
+				  <a id="packagePropertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="packagePropertiesBar" style="display:none"> | </span>
+				  <a id="constructorLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+				  <span id="constructorBar" style="display:none"> | </span>
+				  <a id="methodsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Methods </a>
+				  <span id="methodsBar" style="display:none"> | </span>
+				  <a id="packageFunctionsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Functions </a>
+				  <span id="packageFunctionsBar" style="display:none"> | </span>
+				  <a id="eventsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('eventSummary');" style="display:none"> Events </a>
+				  <span id="eventsBar" style="display:none"> | </span>
+				  <a id="stylesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('styleSummary');" style="display:none"> Styles </a>
+				  <span id="stylesBar" style="display:none"> | </span>
+				  <a id="SkinPartLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinPartSummary');" style="display:none"> Skin Parts </a>
+				  <span id="SkinPartBar" style="display:none"> | </span>
+				  <a id="SkinStateLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinStateSummary');" style="display:none"> Skin States </a>
+				  <span id="SkinStateBar" style="display:none"> | </span>
+				  <a id="effectsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('effectSummary');" style="display:none"> Effects </a>
+				  <span id="effectsBar" style="display:none"> | </span>
+				  <a id="constantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="constantsBar" style="display:none"> | </span>
+				  <a id="packageConstantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="packageConstantsBar" style="display:none"> | </span>
+				  <a id="interfacesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('interfaceSummary');" style="display:none"> Interfaces </a>
+				  <span id="interfacesBar" style="display:none"> | </span>
+				  <a id="classesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('classSummary');" style="display:none"> Classes </a>
+				  <span id="classesBar" style="display:none"> | </span>
+				  <a id="packageUseLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('package-use.html');" style="display:none">Use</a>
+				  <span id="packageUseBar" style="display:none"> | </span>
+				  <a id="examplesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('includeExamplesSummary');" style="display:none"> Examples </a>
+				</td>
+				</tr>
+				<tr class="titleTableRow3">
+				  <td colspan="4"></td>
+				</tr>
+			  </table>
+			</td>
+		  </tr>
+		</table>
+        <div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="classlist" class="jslrclasslist">
+					<div class="classlistoutline"></div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content">
+<script language="javascript" type="text/javascript">  <!--  
+         
+        asdocTitle = "System - Adobe® AIR® API Reference for HTML Developers"; 
+        var baseRef = '../../'; 
+	document.baseRef = '../../'; 
+          -->  </script>
+<script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+<script language="javascript" type="text/javascript"><!--
+function submitValue() {
+var title="Adobe® AIR® API Reference for HTML Developers";
+var searchStr=document.getElementById('search-livedocs').value;
+
+        
+        
+        if(document.getElementById('checkBoxId').checked){
+        window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
++"&site=communityhelp-air-jslr ";
+} 
+
+        else{ 
+window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
+;
+} 
+} 
+--></script><script type="text/javascript"> scrollToNameAnchor(); </script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">window.runtime property</td><td>window.runtime.flash.system.System</td></tr><tr><td class="classSignature"></td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">System  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><div id="badgeAnchorSupport" class="ionBadgeWrapper"></div><div id="badgeContainerSupport"></div><p></p><p></p>
+
+ The System class contains properties related to local settings and operations. Among these are  the use of the Clipboard.
+
+ 
+
+ <p>Additional properties and methods are in other classes within the flash.system package:
+
+ the Capabilities class,  and the 
+
+ Security class.</p>
+
+ 
+               <p>This class contains only static methods and properties. You cannot 
+
+ create new instances of the System class.</p>
+
+ 
+
+            <p></p><p><a href="#includeExamplesSummary">View the examples</a></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="Security.html" target="">Security</a><br/><br/><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118a9b90204-7cd6.html" target="_top">Using the System class</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Properties</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Properties</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Properties</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th>Defined By</th></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">constructor : Object<div class="summaryTableDescription">
+
+	 A reference to the class object or constructor function for a given object instance.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::10.1##AIR::2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#freeMemory" class="signatureLink">freeMemory</a> : Number<div class="summaryTableDescription">[static] [read-only] 
+
+	 The amount of memory (in bytes) that is allocated to 
+
+	 Adobe&reg; Flash&reg; Player or 
+
+	 Adobe&reg; AIR&reg; and that is not in use.</div></td><td class="summaryTableOwnerCol">System</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#ime" class="signatureLink">ime</a> : IME<div class="summaryTableDescription">[static] [read-only] 
+
+	 The currently installed system IME.</div></td><td class="summaryTableOwnerCol">System</td></tr><tr class="" runtime="Flash::10.1##AIR::2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#privateMemory" class="signatureLink">privateMemory</a> : Number<div class="summaryTableDescription">[static] [read-only] 
+
+	 The entire amount of memory (in bytes) used by an application.</div></td><td class="summaryTableOwnerCol">System</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">prototype : Object<div class="summaryTableDescription">[static] 
+
+	 A reference to the prototype object of a class or function object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#totalMemory" class="signatureLink">totalMemory</a> : uint<div class="summaryTableDescription">[static] [read-only] 
+
+	The amount of memory (in bytes) currently in use that has been directly allocated by 
+
+	Flash Player or AIR.</div></td><td class="summaryTableOwnerCol">System</td></tr><tr class="" runtime="Flash::10.1##AIR::2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#totalMemoryNumber" class="signatureLink">totalMemoryNumber</a> : Number<div class="summaryTableDescription">[static] [read-only] 
+
+	The amount of memory (in bytes) currently in use that has been directly allocated by 
+
+	Flash Player or AIR.</div></td><td class="summaryTableOwnerCol">System</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#useCodePage" class="signatureLink">useCodePage</a> : Boolean<div class="summaryTableDescription">[static] 
+
+	 A Boolean value that determines which code page to use to interpret external text files.</div></td><td class="summaryTableOwnerCol">System</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Public Methods </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Methods</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th>Defined By</th></tr><tr class="" runtime="Flash::10.1##AIR::1.5.2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#disposeXML()" class="signatureLink">disposeXML</a>(node:XML):void</div><div class="summaryTableDescription">[static] 
+
+	 Makes the specified XML object immediately available for garbage collection.</div></td><td class="summaryTableOwnerCol">System</td></tr><tr class="" runtime="Flash::9.0.115.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#exit()" class="signatureLink">exit</a>(code:uint):void</div><div class="summaryTableDescription">[static]  
+
+     Closes Flash Player.</div></td><td class="summaryTableOwnerCol">System</td></tr><tr class="" runtime="Flash::9.0.115.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#gc()" class="signatureLink">gc</a>():void</div><div class="summaryTableDescription">[static] 
+
+     Forces the garbage collection process.</div></td><td class="summaryTableOwnerCol">System</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">hasOwnProperty(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an object has a specified property defined.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">isPrototypeOf(theClass:Object):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+
+	 as the parameter.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9.0.115.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#pause()" class="signatureLink">pause</a>():void</div><div class="summaryTableDescription">[static]  
+
+     Pauses Flash Player or the AIR Debug Launcher (ADL).</div></td><td class="summaryTableOwnerCol">System</td></tr><tr class="" runtime="Flash::11##AIR::3##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#pauseForGCIfCollectionImminent()" class="signatureLink">pauseForGCIfCollectionImminent</a>(imminence:Number = 0.75):void</div><div class="summaryTableDescription">[static] 
+
+	 Advise the garbage collector that if the collector's imminence exceeds the function's imminence parameter then the 
+
+	 collector should finish the incremental collection cycle.</div></td><td class="summaryTableOwnerCol">System</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">propertyIsEnumerable(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether the specified property exists and is enumerable.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9.0.115.0##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#resume()" class="signatureLink">resume</a>():void</div><div class="summaryTableDescription">[static]  
+
+     Resumes the application after calling System.pause().</div></td><td class="summaryTableOwnerCol">System</td></tr><tr class="" runtime="Flash::9##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setClipboard()" class="signatureLink">setClipboard</a>(string:String):void</div><div class="summaryTableDescription">[static] 
+
+	 Replaces the contents of the Clipboard with a specified text string.</div></td><td class="summaryTableOwnerCol">System</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">setPropertyIsEnumerable(name:String, isEnum:Boolean = true):void</div><div class="summaryTableDescription">
+
+     Sets the availability of a dynamic property for loop operations.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toLocaleString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of this object, formatted according to locale-specific conventions.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">valueOf():Object</div><div class="summaryTableDescription">
+
+	 Returns the primitive value of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Property Detail</div><span id="pageFilter" runtime="Flash::10.1##AIR::2##"><a name="propertyDetail"></a><a name="freeMemory"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>freeMemory</h2></td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>freeMemory:Number</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2 </td></tr></table><p></p><p></p><p>
+
+	 The amount of memory (in bytes) that is allocated to 
+
+	  
+
+	 Adobe<sup>&reg;</sup> AIR<sup>&reg;</sup> and that is not in use. This unused portion of 
+
+	 allocated memory (<code>System.totalMemory</code>) fluctuates as garbage collection takes place.
+
+	 Use this property to monitor garbage collection.
+
+	 
+
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="System.html#privateMemory" target="">privateMemory</a><br/><a href="System.html#totalMemory" target="">totalMemory</a><br/><a href="System.html#totalMemoryNumber" target="">totalMemoryNumber</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="ime"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>ime</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>ime:IME</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 The currently installed system IME. 
+
+	 To register for imeComposition events, call 
+
+	 <code>addEventListener()</code> on this instance.
+
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><br/><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118a9b90204-7cd6.html" target="_top">Using the System class</a></div></div></span><span id="pageFilter" runtime="Flash::10.1##AIR::2##"><a name="propertyDetail"></a><a name="privateMemory"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>privateMemory</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>privateMemory:Number</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2 </td></tr></table><p></p><p></p><p>
+
+	 The entire amount of memory (in bytes) used by an application. This is the amount of resident private memory for the entire process.
+
+	 
+	 <p>AIR developers should use this property to determine the entire memory consumption of an application.</p>
+
+	 
+	 
+
+	 
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="System.html#freeMemory" target="">freeMemory</a><br/><a href="System.html#totalMemory" target="">totalMemory</a><br/><a href="System.html#totalMemoryNumber" target="">totalMemoryNumber</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="totalMemory"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>totalMemory</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>totalMemory:uint</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	The amount of memory (in bytes) currently in use that has been directly allocated by 
+
+	 AIR.  
+
+	
+	<p>This property does not return <i>all</i> memory used by an Adobe AIR application . The  
+
+	operating system may consume other memory. The <code>System.privateMemory</code> property reflects <i>all</i> memory used by 
+
+	an application.</p>
+
+	
+	<p>If the amount of memory allocated is greater than the maximum value for a uint object (<code>uint.MAX_VALUE</code>,
+
+	or 4,294,967,295), then this property is set to 0. The <code>System.totalMemoryNumber</code> property allows
+
+	larger values.</p>
+
+	
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="System.html#freeMemory" target="">freeMemory</a><br/><a href="System.html#privateMemory" target="">privateMemory</a><br/><a href="System.html#totalMemoryNumber" target="">totalMemoryNumber</a><br/><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118a9b90204-7cd6.html" target="_top">Using the System class</a></div></div></span><span id="pageFilter" runtime="Flash::10.1##AIR::2##"><a name="propertyDetail"></a><a name="totalMemoryNumber"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>totalMemoryNumber</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>totalMemoryNumber:Number</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2 </td></tr></table><p></p><p></p><p>
+
+	The amount of memory (in bytes) currently in use that has been directly allocated by 
+
+	 AIR.  
+
+	
+	<p>This property is expressed as a Number, which allows higher values than the 
+
+	<code>System.totalMemory</code> property, which is of type int.</p>
+
+	
+	<p>This property does not return <i>all</i> memory used by an Adobe AIR application . The  
+
+	operating system may consume other memory. The <code>System.privateMemory</code> property reflects <i>all</i> memory used by 
+
+	an application.</p>
+
+	
+	</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="System.html#freeMemory" target="">freeMemory</a><br/><a href="System.html#privateMemory" target="">privateMemory</a><br/><a href="System.html#totalMemory" target="">totalMemory</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="useCodePage"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>useCodePage</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>useCodePage:Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 A Boolean value that determines which code page to use to interpret external text files. 
+
+	 When the property is set to <code>false</code>, external text files are interpretted as Unicode. 
+
+	 (These files must be encoded as Unicode when you save them.) When the property is set to 
+
+	 <code>true</code>, external text files are interpretted using the traditional code page of the 
+
+	 operating system running the application. The default value of <code>useCodePage</code> is <code>false</code>.
+
+	 
+
+	 <p>Text that you load as an external file (using <code>Loader.load()</code>, the URLLoader class or
+
+	 URLStream) must have been saved as Unicode in order for the application to recognize it 
+
+	 as Unicode. To encode external files as Unicode, save the files in an application that 
+
+	 supports Unicode, such as Notepad on Windows.</p>
+
+	 
+
+	 <p>If you load external text files that are not Unicode-encoded, set <code>useCodePage</code> to <code>true</code>. 
+
+	 Add the following as the first line of code of the file that 
+
+	 is loading the data (for Flash Professional, add it to the first frame):</p>
+
+	 
+
+	 <pre><code>System.useCodePage = true;</code></pre>
+
+	 
+
+	 <p>When this code is present, the application interprets external text 
+
+	 using the traditional code page of the operating system. 
+
+	 For example, this is generally CP1252 for an English Windows operating 
+
+	 system and Shift-JIS for a Japanese operating system.</p> 
+
+	 
+
+	 <p></p>
+
+	 
+
+	 <p>If you set <code>useCodePage</code> to <code>true</code>, remember that the 
+
+	 traditional code page of the operating system running the application must include 
+
+	 the characters used in your external text file in order to display your text. 
+
+	 For example, if you load an external text file that contains Chinese characters, 
+
+	 those characters cannot display on a system that uses the CP1252 code page because 
+
+	 that code page does not include Chinese characters.</p>
+
+	 
+	 <p>To ensure that users on all platforms can view external text files used in your 
+
+	 application, you should encode all external text files as Unicode and leave 
+
+	 <code>useCodePage</code> set to <code>false</code>. This way, the application
+
+	  interprets the text as Unicode.</p>
+
+	 
+	 </p><p><span class="label">See also</span></p><div class="seeAlso"><br/><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118a9b90204-7cd6.html" target="_top">Using the System class</a></div></div></span><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><span id="pageFilter" runtime="Flash::10.1##AIR::1.5.2##"><a name="disposeXML()"></a><a name="disposeXML(XML)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>disposeXML</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function disposeXML(node:XML):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5.2 </td></tr></table><p></p><p></p><p>
+
+	 Makes the specified XML object immediately available for garbage collection. 
+
+	 This method will remove parent and child connections between all the nodes
+
+	 for the specified XML node.
+
+	 
+	 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">node</span>:XML</code> &mdash; XML reference that should be made available for garbage collection.
+
+	 </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9.0.115.0##"><a name="exit()"></a><a name="exit(uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>exit</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function exit(code:uint):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p> 
+
+     Closes Flash Player.
+
+	 
+
+     <p><i>For the standalone Flash Player debugger version only.</i></p> 
+
+	 
+
+     <p>AIR applications should call the <code>NativeApplication.exit()</code> method to exit the application.</p> 
+
+	 
+
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">code</span>:uint</code> &mdash; A value to pass to the operating system. Typically, if
+
+     the process exits normally, the value is 0.
+
+	 
+
+     </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../desktop/NativeApplication.html#exit()" target="">NativeApplication.exit()</a></div></div></span><span id="pageFilter" runtime="Flash::9.0.115.0##Lite::4##"><a name="gc()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>gc</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function gc():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Forces the garbage collection process.
+
+	 
+
+     <p>
+
+	 In an AIR application, the <code>System.gc()</code> method is only enabled in content running in the AIR Debug Launcher
+
+	 (ADL) or, in an installed applcation, in content in the application security sandbox.</p>
+
+	 
+
+     </p></div></span><span id="pageFilter" runtime="Flash::9.0.115.0##Lite::4##"><a name="pause()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>pause</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function pause():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p> 
+
+     Pauses  the AIR Debug Launcher (ADL). 
+
+	 After calling this method, nothing in the application continues except the delivery of Socket events.
+
+	 
+
+     
+
+     
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="System.html#resume()" target="">resume()</a></div></div></span><span id="pageFilter" runtime="Flash::11##AIR::3##"><a name="pauseForGCIfCollectionImminent()"></a><a name="pauseForGCIfCollectionImminent(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>pauseForGCIfCollectionImminent</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function pauseForGCIfCollectionImminent(imminence:Number = 0.75):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+	 Advise the garbage collector that if the collector's imminence exceeds the function's imminence parameter then the 
+
+	 collector should finish the incremental collection cycle.  
+
+	 
+
+	 <p>The Flash Runtime garbage collector algorithm runs incrementally while marking memory in use. It pauses application execution 
+
+	 when collecting unused portions of memory. The pause that occurs as the incremental collection cycle finishes can be longer 
+
+	 than desired and can be observable or audible in some programs. This function allows the application to advise the runtime 
+
+	 that it is a good time to both complete the marking and perform collection. Scheduling potential pauses for times when the user 
+
+	 won't notice them makes for a better user experience. For example, a game might call this function upon the completion 
+
+	 of a level in a game, thus reducing the chances of a pause occurring during gameplay.</p>
+
+	 
+
+	 <p>Imminence is defined as how far through marking the collector believes it is, and therefore how close it is to triggering 
+
+	 a collection pause. The imminence argument to this function is a threshold: the garbage collector will be invoked only if 
+
+	 the actual imminence exceeds the threshold value. Otherwise, this call returns immediately without taking action.</p>
+
+	 
+
+	 <p>By calling this function with a low imminence value, the application indicates that it is willing to accept that a relatively 
+
+	 large amount of marking&nbsp;must be completed. A high imminence value, on the other hand, indicates that the application&nbsp;should be paused 
+
+	 only if marking is nearly complete. &nbsp;Typically, pauses are longer in the former case than in the latter.</p>
+
+	 
+
+	 <p>The amount of memory being freed does not depend on the imminence parameter. It only depends on the number of freeable objects. If 
+
+	 the application has recently released references to large data structures or to a large number of objects, a low imminence 
+
+	 parameter will tend to trigger a collection that will free those objects immediately.</p>
+
+	 
+
+	 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">imminence</span>:Number</code> (default = <code>0.75</code>)<code></code> &mdash;  A number between 0 and 1, where 0 means less imminent and 1 means most imminent. Values less than 0 default to 0.25. Values greater than 1.0 default to 1.0. NaN defaults to 0.75
+
+	 
+
+	 </td></tr></table></p></div></span><span id="pageFilter" runtime="Flash::9.0.115.0##Lite::4##"><a name="resume()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>resume</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function resume():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p> 
+
+     Resumes the application after calling <code>System.pause()</code>.
+
+	 
+
+       
+
+     
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="System.html#pause()" target="">pause()</a></div></div></span><span id="pageFilter" runtime="Flash::9##"><a name="setClipboard()"></a><a name="setClipboard(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>setClipboard</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setClipboard(string:String):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+	 Replaces the contents of the Clipboard with a specified text string. This method works from any security
+
+	 context when called as a result of a user event (such as a keyboard or input device event handler).
+
+	 
+	 <p>This method is provided for SWF content running in Flash Player 9. It allows only adding 
+
+	 String content to the Clipboard.</p> 
+
+	 
+
+	 <p>Flash Player 10 content and content in the application security sandbox in an AIR application can call 
+
+	 the <code>Clipboard.setData()</code> method.</p>
+
+	 
+	 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">string</span>:String</code> &mdash; A plain-text string of characters to put on the system Clipboard, replacing its current contents (if any).
+
+	 
+	 
+	 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../desktop/Clipboard.html" target="">Clipboard</a><br/><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118a9b90204-7cd6.html" target="_top">Using the System class</a></div></div></span><a name="includeExamplesSummary"></a><div class="detailSectionHeader">Examples</div><span id="pageFilter"><br/><div class="detailBody"> The following example shows how to copy information about your system's total memory to the
+ system Clipboard using a call to <code>System.totalMemory</code> within a call to the
+ <code>System.setClipboard()</code> method.
+ 
+ <p><b>Note:</b> To test this example:</p>
+ 
+ <ol><li>Add the AIRAliases.js file to the project directory.</li><li>Create an application descriptor file for the project, and test the project using ADL.</li></ol>
+<div class="listing"><pre>
+&lt;html&gt;
+    &lt;head&gt;
+      &lt;script src="AIRAliases.js" /&gt;
+      &lt;script&gt;
+        function init() {
+            air.System.setClipboard("air.System.totalMemory: " + air.System.totalMemory);
+        }
+      &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body onload='init()'&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script><p></p><center class="copyright"> &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><!--BEGIN IONCOMMENTS--><div id="ionComHere"></div><!--END IONCOMMENTS-->[an error occurred while processing this directive][an error occurred while processing this directive]<p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/en_US/legalnotices/index.html">Legal Notices</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online Privacy Policy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html><!-- &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  -->

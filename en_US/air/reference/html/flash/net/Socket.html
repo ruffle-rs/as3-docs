@@ -1,0 +1,1585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"><html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers"><meta name="lang" content="en-us"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="Socket,flash.net.Socket,bytesAvailable,bytesPending,connected,endian,localAddress,localPort,objectEncoding,remoteAddress,remotePort,timeout,close,connect,flush,readBoolean,readByte,readBytes,readDouble,readFloat,readInt,readMultiByte,readObject,readShort,readUTF,readUTFBytes,readUnsignedByte,readUnsignedInt,readUnsignedShort,writeBoolean,writeByte,writeBytes,writeDouble,writeFloat,writeInt,writeMultiByte,writeObject,writeShort,writeUTF,writeUTFBytes,writeUnsignedInt"><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" src="../../AC_OETags.js" type="text/javascript"></script><title>flash.net.Socket - Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers</title>
+	<link rel="stylesheet" href="../../jslr-style.css" type="text/css">
+		<script type="text/javascript">
+			
+				var baseRef = "../../";
+				var buildType = 'jslr';
+				var alreadyrunflag=0; //flag to indicate whether target function has already been run
+				var terms_HELPCFG = ".helpcfg";
+
+if (document.addEventListener)
+  document.addEventListener("DOMContentLoaded", function(){alreadyrunflag=1; init()}, false)
+else if (document.all && !window.opera){
+  /* blocks IE from working, as it's fired before dom if ready
+ document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
+  var contentloadtag=document.getElementById("contentloadtag")
+  contentloadtag.onreadystatechange=function(){
+    if (this.readyState=="complete"){
+      alreadyrunflag=1;
+      init();
+    }
+  }*/
+} else if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+  var _timer=setInterval(function(){
+  if(/loaded|complete/.test(document.readyState)){
+    clearInterval(_timer);
+    alreadyrunflag=1;
+    init(); // call target function
+  }}, 10)
+}
+function onLoadFunction() {
+	setTimeout("if (!alreadyrunflag) init();  alreadyrunflag=1; ionReadyLoad(); ", 0);
+}
+
+		</script>
+		<script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+		<script language="javascript" type="text/javascript" src="../../asdoc.js"></script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body onLoad="onLoadFunction()">
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td>
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr>
+				  <td class="titleTableTitleION" align="left" nowrap="true">Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers<br>
+				  <span class="titleTableTopNavION">
+				  <span id="homelink">
+						<a target="_self" href="../../index.html"> Home </a>&nbsp;|&nbsp;
+				  </span>
+				  <a id="showtoc" onClick="showHideTOC(true)" href="#top" style="display:none">Show Classes List</a><a id="hidetoc" onClick="showHideTOC(false)" href="#top" style="display:">Hide Classes List</a>&nbsp;|&nbsp;
+				  <a href="../../all-index-A.html"> Index </a>&nbsp;|&nbsp;
+				  <a href="../../appendixes.html"> Appendixes </a><br>
+				  </span>	
+				  </td>
+				  <td class="titleTableSearchION" align="right" nowrap="true">
+				  <span id="gsa" class="gsa">
+					<form class="searchFormION" method="get" onSubmit="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US');return false;">
+				  <input class="hidden" name="loc" value="" type="hidden">
+				  <input class="hidden" name="termPrefix" value="site:help.adobe.com/en_US/AS3CLR/Flash_10.0" type="hidden">
+				  <input class="hidden" name="title" value="ActionScript 3.0 Reference for the Adobe Flash Platform" type="hidden">
+				  <input class="hidden" name="term" value="" type="hidden">
+				  <input class="hidden" name="area" value="" type="hidden">
+				  <input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text">
+				  <input type="button" name="action" value="" onClick="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US')" class="searchbutton"><br>
+			      <input id="checkBoxId" type="checkbox" name="checkbox" value="checkbox" checked>Language Reference only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  </form>
+				  </span>				  
+				  </td>
+				</tr>
+			  </table>			
+			  </td>
+			<td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logoION.jpg" class="logoImageION" alt=" Adobe Logo " title=" Adobe Logo "></td>
+		  </tr>
+		  <tr>
+			<td colspan="2">
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr class="titleTableRow2">
+				<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+					<convert>Socket&nbsp;</convert>
+				</td>
+				<td class="titleTableSubNav" id="subNav" align="right">
+				  <a id="propertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="propertiesBar" style="display:none"> | </span>
+				  <a id="packagePropertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="packagePropertiesBar" style="display:none"> | </span>
+				  <a id="constructorLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+				  <span id="constructorBar" style="display:none"> | </span>
+				  <a id="methodsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Methods </a>
+				  <span id="methodsBar" style="display:none"> | </span>
+				  <a id="packageFunctionsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Functions </a>
+				  <span id="packageFunctionsBar" style="display:none"> | </span>
+				  <a id="eventsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('eventSummary');" style="display:none"> Events </a>
+				  <span id="eventsBar" style="display:none"> | </span>
+				  <a id="stylesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('styleSummary');" style="display:none"> Styles </a>
+				  <span id="stylesBar" style="display:none"> | </span>
+				  <a id="SkinPartLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinPartSummary');" style="display:none"> Skin Parts </a>
+				  <span id="SkinPartBar" style="display:none"> | </span>
+				  <a id="SkinStateLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinStateSummary');" style="display:none"> Skin States </a>
+				  <span id="SkinStateBar" style="display:none"> | </span>
+				  <a id="effectsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('effectSummary');" style="display:none"> Effects </a>
+				  <span id="effectsBar" style="display:none"> | </span>
+				  <a id="constantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="constantsBar" style="display:none"> | </span>
+				  <a id="packageConstantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="packageConstantsBar" style="display:none"> | </span>
+				  <a id="interfacesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('interfaceSummary');" style="display:none"> Interfaces </a>
+				  <span id="interfacesBar" style="display:none"> | </span>
+				  <a id="classesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('classSummary');" style="display:none"> Classes </a>
+				  <span id="classesBar" style="display:none"> | </span>
+				  <a id="packageUseLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('package-use.html');" style="display:none">Use</a>
+				  <span id="packageUseBar" style="display:none"> | </span>
+				  <a id="examplesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('includeExamplesSummary');" style="display:none"> Examples </a>
+				</td>
+				</tr>
+				<tr class="titleTableRow3">
+				  <td colspan="4"></td>
+				</tr>
+			  </table>
+			</td>
+		  </tr>
+		</table>
+        <div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="classlist" class="jslrclasslist">
+					<div class="classlistoutline"></div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content">
+<script language="javascript" type="text/javascript">  <!--  
+         
+        asdocTitle = "Socket - Adobe® AIR® API Reference for HTML Developers"; 
+        var baseRef = '../../'; 
+	document.baseRef = '../../'; 
+          -->  </script>
+<script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+<script language="javascript" type="text/javascript"><!--
+function submitValue() {
+var title="Adobe® AIR® API Reference for HTML Developers";
+var searchStr=document.getElementById('search-livedocs').value;
+
+        
+        
+        if(document.getElementById('checkBoxId').checked){
+        window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
++"&site=communityhelp-air-jslr ";
+} 
+
+        else{ 
+window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
+;
+} 
+} 
+--></script><script type="text/javascript"> scrollToNameAnchor(); </script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">window.runtime property</td><td>window.runtime.flash.net.Socket</td></tr><tr><td class="classSignature"></td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Socket  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><div id="badgeAnchorSupport" class="ionBadgeWrapper"></div><div id="badgeContainerSupport"></div><p></p><p></p>
+
+ The Socket class enables code to establish Transport Control Protocol (TCP) socket
+
+ connections for sending and receiving binary data asynchronously.
+
+ 
+ <p>
+
+ This class is useful for communicating with servers that use binary protocols. For example, you can use this class to 
+
+ connect to mail and news servers.
+
+ </p>
+
+ 
+
+               <p>
+
+                  <b>Working With Sockets</b>
+
+               </p>
+
+ 
+               <p>
+
+ To use the Socket class, begin by creating a Socket object (<code>new Socket()</code>).
+
+ The best practice is to create the socket object with no parameters, then set up your listeners, and finally call <code>connect()</code> 
+
+ with the host and port parameters of your socket server.
+
+ </p>
+
+ 
+               <p>
+
+ Events drive socket operations. For example, when data is ready for reading from a socket, the socket 
+
+ fires a <code>ProgressEvent.SOCKET_DATA</code> event. You create your own event handlers to process each
+
+ type of socket event. Sockets send notifications for the following events: 
+
+ <ul>
+                     <li>
+
+  Connection established with a socket server
+
+  </li>
+                     <li>
+
+  Socket closed by a socket server 
+
+  </li>
+                     <li>
+
+  Data is available for reading from the read buffer 
+
+  </li>
+                     <li>
+
+  Data is waiting to be transferred from the write buffer to the network
+
+  </li>
+                     <li>
+
+  An error occurred
+
+  </li>
+                  </ul>
+
+               </p>
+
+ 
+               <p>
+
+                  <b>Reading Socket Data:</b> The socket fires a <code>flash.events.ProgressEvent.SOCKET_DATA</code> event when data is ready to be read.  
+
+ Do not sit on a socket in a tight polling loop waiting for data to arrive. Read data only after receiving the 
+
+ <code>ProgressEvent.SOCKET_DATA</code> event. You can read some or all of the available data from the socket.
+
+ </p>
+
+ 
+
+               <p>
+
+                  <b>Writing Socket Data:</b> On some operating systems, <code>flush()</code> is called automatically between execution frames. On other operating systems, such
+
+ as Windows, the data is never sent unless you call <code>flush()</code> explicitly. It is a good practice to call the <code>flush()</code> 
+
+ method after writing each message (or related group of data) to the socket.
+
+ </p>
+
+ 
+
+               <p>
+
+ In Adobe AIR, Socket objects are also created when a listening ServerSocket receives a connection from an external process.
+
+ The Socket representing the connection is dispatched in a <code>ServerSocketConnectEvent</code>. You are responsible for
+
+ maintaining a reference to this Socket object. If you do not maintain that reference, the Socket object becomes eligible for 
+
+ garbage collection. The runtime destroys objects that are eligible for garbage collection without warning.
+
+ </p>
+
+ 
+               <p>
+
+                  <b>Socket Security and Policy Files</b>
+
+               </p>
+
+               <p>
+
+ SWF content running in the local-with-filesystem security sandbox cannot use sockets.
+
+ </p>
+
+ 
+               <p> 
+
+                  <i>Socket policy files</i> on the target host specify the hosts from which SWF files
+
+ can make socket connections. These policy files also specify the ports to which SWF files can connect.
+
+ The security requirements with regard to socket policy files have become more stringent
+
+ in the last several releases of Flash Player. In all versions of Flash Player, Adobe recommends 
+
+ the use of a socket policy file. In some circumstances, a socket policy file is required. 
+
+ Therefore, if you are using Socket objects, make sure that the target host provides a socket 
+
+ policy file if necessary. 
+
+ </p>
+
+ 
+               <p>
+
+ The following list summarizes the requirements for socket policy files
+
+ in different versions of Flash Player:
+
+ </p>
+
+ 
+               <ul>
+                  <li>
+
+   In Flash Player 9.0.124.0 and later, a socket policy file is required for any socket connection.
+
+   That is, a socket policy file on the target host is required no matter what port
+
+   you specify. The policy file is required even if you are connecting
+
+   to a port on the host serving the SWF file. 
+
+   </li>
+                  <li>
+
+   In Flash Player versions 9.0.115.0 and earlier, a socket policy file is required to connect to a port below 1024.
+
+   A socket policy file is also required to connect to a host other than the one serving the SWF file.
+
+   </li>
+                  <li> 
+
+   In Flash Player 9.0.115.0, even if a socket policy file isn't required,
+
+   a warning is displayed when using the Flash Debug Player if the target host
+
+   doesn't serve a socket policy file. 
+
+   </li>
+                  <li>
+
+   In AIR, a socket policy file is not required for content running in the application
+
+   security sandbox. Socket policy files are required for any socket connection established
+
+   by content running outside the AIR application security sandbox.
+
+   </li>
+               </ul>
+
+ 
+               <p>
+
+ For more information related to security, see the Flash Player Developer Center Topic:
+
+ <a href="http://www.adobe.com/go/devnet_security_en" target="external">Security</a>
+
+               </p>
+
+ 
+            <p></p><p><a href="#includeExamplesSummary">View the examples</a></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="ServerSocket.html" target="">ServerSocket</a><br/><a href="DatagramSocket.html" target="">DatagramSocket</a><br/><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118a9b90204-7cfb.html" target="_top">Binary client sockets</a><br/><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118a9b90204-7c63.html" target="_top">Connecting to sockets</a></div><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Properties</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Properties</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Properties</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th>Defined By</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#bytesAvailable" class="signatureLink">bytesAvailable</a> : uint<div class="summaryTableDescription">[read-only] 
+
+     The number of bytes of data available for reading in the input buffer.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="AIR::3##Flash::11##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#bytesPending" class="signatureLink">bytesPending</a> : uint<div class="summaryTableDescription">[read-only] 
+
+     Indicates the amount of data (in bytes) awaiting transfer from the socket's 
+
+     write buffer to the network transport layer.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#connected" class="signatureLink">connected</a> : Boolean<div class="summaryTableDescription">[read-only] 
+
+     Indicates whether this Socket object is currently connected.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">constructor : Object<div class="summaryTableDescription">
+
+	 A reference to the class object or constructor function for a given object instance.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#endian" class="signatureLink">endian</a> : String<div class="summaryTableDescription">
+
+     Indicates the byte order for the data.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="AIR::2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#localAddress" class="signatureLink">localAddress</a> : String<div class="summaryTableDescription">[read-only] 
+
+     The IP address this socket is bound to on the local machine.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="AIR::2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#localPort" class="signatureLink">localPort</a> : int<div class="summaryTableDescription">[read-only] 
+
+     The port this socket is bound to on the local machine.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#objectEncoding" class="signatureLink">objectEncoding</a> : uint<div class="summaryTableDescription">
+
+     Controls the version of AMF used when writing or reading an object.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">prototype : Object<div class="summaryTableDescription">[static] 
+
+	 A reference to the prototype object of a class or function object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="AIR::2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#remoteAddress" class="signatureLink">remoteAddress</a> : String<div class="summaryTableDescription">[read-only] 
+
+     The IP address of the remote machine to which this socket is connected.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="AIR::2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#remotePort" class="signatureLink">remotePort</a> : int<div class="summaryTableDescription">[read-only] 
+
+     The port on the remote machine to which this socket is connected.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::10##AIR::1.5##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#timeout" class="signatureLink">timeout</a> : uint<div class="summaryTableDescription">
+
+     Indicates the number of milliseconds to wait for a connection.</div></td><td class="summaryTableOwnerCol">Socket</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Public Methods </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Methods</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th>Defined By</th></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#Socket()" class="signatureLink">Socket</a>(host:String = null, port:int = 0)</div><div class="summaryTableDescription">
+
+    Creates a Socket object.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#addEventListener()" class="signatureLink">addEventListener</a>(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void</div><div class="summaryTableDescription">
+
+	Registers an event listener object with an EventDispatcher object so that the listener 
+
+	receives notification of an event.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#close()" class="signatureLink">close</a>():void</div><div class="summaryTableDescription">
+
+     Closes the socket.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#connect()" class="signatureLink">connect</a>(host:String, port:int):void</div><div class="summaryTableDescription">
+
+     Connects the socket to the specified host and port.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../events/Event.html">Event</a>):Boolean</div><div class="summaryTableDescription">
+
+	Dispatches an event into the event flow.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#flush()" class="signatureLink">flush</a>():void</div><div class="summaryTableDescription">
+
+     Flushes any accumulated data in the socket's output buffer.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:String):Boolean</div><div class="summaryTableDescription">
+
+	Checks whether the EventDispatcher object has any listeners registered for a specific type 
+
+	of event.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">hasOwnProperty(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an object has a specified property defined.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">isPrototypeOf(theClass:Object):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+
+	 as the parameter.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">propertyIsEnumerable(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether the specified property exists and is enumerable.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readBoolean()" class="signatureLink">readBoolean</a>():Boolean</div><div class="summaryTableDescription">
+
+     Reads a Boolean value from the socket.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readByte()" class="signatureLink">readByte</a>():int</div><div class="summaryTableDescription">
+
+     Reads a signed byte from the socket.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readBytes()" class="signatureLink">readBytes</a>(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:uint = 0, length:uint = 0):void</div><div class="summaryTableDescription">
+
+     Reads the number of data bytes specified by the length
+
+     parameter from the socket.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readDouble()" class="signatureLink">readDouble</a>():Number</div><div class="summaryTableDescription">
+
+     Reads an IEEE 754 double-precision floating-point number from the socket.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readFloat()" class="signatureLink">readFloat</a>():Number</div><div class="summaryTableDescription">
+
+     Reads an IEEE 754 single-precision floating-point number from the socket.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readInt()" class="signatureLink">readInt</a>():int</div><div class="summaryTableDescription">
+
+     Reads a signed 32 bit integer from the socket.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readMultiByte()" class="signatureLink">readMultiByte</a>(length:uint, charSet:String):String</div><div class="summaryTableDescription">
+
+     Reads a multibyte string from the byte stream, using the specified character set.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readObject()" class="signatureLink">readObject</a>():*</div><div class="summaryTableDescription">
+
+     Reads an object from the socket, encoded in AMF serialized format.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readShort()" class="signatureLink">readShort</a>():int</div><div class="summaryTableDescription">
+
+     Reads a signed 16 bit integer from the socket.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readUnsignedByte()" class="signatureLink">readUnsignedByte</a>():uint</div><div class="summaryTableDescription">
+
+     Reads an unsigned byte from the socket.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readUnsignedInt()" class="signatureLink">readUnsignedInt</a>():uint</div><div class="summaryTableDescription">
+
+     Reads an unsigned 32 bit integer from the socket.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readUnsignedShort()" class="signatureLink">readUnsignedShort</a>():uint</div><div class="summaryTableDescription">
+
+     Reads an unsigned 16 bit integer from the socket.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readUTF()" class="signatureLink">readUTF</a>():String</div><div class="summaryTableDescription">
+
+     Reads a UTF-8 string from the socket.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readUTFBytes()" class="signatureLink">readUTFBytes</a>(length:uint):String</div><div class="summaryTableDescription">
+
+     Reads the number of UTF-8 data bytes specified by the length
+
+     parameter from the socket, and returns a string.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#removeEventListener()" class="signatureLink">removeEventListener</a>(type:String, listener:Function, useCapture:Boolean = false):void</div><div class="summaryTableDescription">
+
+	Removes a listener from the EventDispatcher object.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">setPropertyIsEnumerable(name:String, isEnum:Boolean = true):void</div><div class="summaryTableDescription">
+
+     Sets the availability of a dynamic property for loop operations.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toLocaleString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of this object, formatted according to locale-specific conventions.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">valueOf():Object</div><div class="summaryTableDescription">
+
+	 Returns the primitive value of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:String):Boolean</div><div class="summaryTableDescription">
+
+	Checks whether an event listener is registered with this EventDispatcher object or any of 
+
+	its ancestors for the specified event type.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeBoolean()" class="signatureLink">writeBoolean</a>(value:Boolean):void</div><div class="summaryTableDescription">
+
+     Writes a Boolean value to the socket.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeByte()" class="signatureLink">writeByte</a>(value:int):void</div><div class="summaryTableDescription">
+
+     Writes a byte to the socket.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeBytes()" class="signatureLink">writeBytes</a>(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:uint = 0, length:uint = 0):void</div><div class="summaryTableDescription">
+
+     Writes a sequence of bytes from the specified byte array.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeDouble()" class="signatureLink">writeDouble</a>(value:Number):void</div><div class="summaryTableDescription">
+
+     Writes an IEEE 754 double-precision floating-point number to the socket.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeFloat()" class="signatureLink">writeFloat</a>(value:Number):void</div><div class="summaryTableDescription">
+
+     Writes an IEEE 754 single-precision floating-point number to the socket.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeInt()" class="signatureLink">writeInt</a>(value:int):void</div><div class="summaryTableDescription">
+
+     Writes a 32 bit signed integer to the socket.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeMultiByte()" class="signatureLink">writeMultiByte</a>(value:String, charSet:String):void</div><div class="summaryTableDescription">
+
+     Writes a multibyte string from the byte stream, using the specified character set.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeObject()" class="signatureLink">writeObject</a>(object:*):void</div><div class="summaryTableDescription">
+
+     Writes an object to the socket in AMF serialized format.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeShort()" class="signatureLink">writeShort</a>(value:int):void</div><div class="summaryTableDescription">
+
+     Writes a 16 bit integer to the socket.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeUnsignedInt()" class="signatureLink">writeUnsignedInt</a>(value:uint):void</div><div class="summaryTableDescription">
+
+     Writes a 32 bit unsigned integer to the socket.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeUTF()" class="signatureLink">writeUTF</a>(value:String):void</div><div class="summaryTableDescription">
+
+     Writes the following data to the socket: 
+
+     
+
+      
+
+      A 16 bit unsigned integer.</div></td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#writeUTFBytes()" class="signatureLink">writeUTFBytes</a>(value:String):void</div><div class="summaryTableDescription">
+
+     Writes a UTF-8 string to the socket.</div></td><td class="summaryTableOwnerCol">Socket</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Events</div><div class="showHideLinks"><div id="hideInheritedEvent" class="hideInheritedEvent"><a class="showHideLink" href="#eventSummary" onclick="javascript:setInheritedVisible(false,'Event');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Events</a></div><div id="showInheritedEvent" class="showInheritedEvent"><a class="showHideLink" href="#eventSummary" onclick="javascript:setInheritedVisible(true,'Event');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Events</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th>Defined By</th></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#event:activate#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[broadcast event] Dispatched when the Flash Player or AIR application gains operating system focus and becomes active.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:close" class="signatureLink">close</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when the server closes the socket connection.</td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:connect" class="signatureLink">connect</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when a network connection is established.</td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#event:deactivate#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[broadcast event] Dispatched when the Flash Player or AIR application operating loses system focus and is becoming inactive.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:ioError" class="signatureLink">ioError</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when an IO error causes a send or load operation to fail.</td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="AIR::3##Flash::11##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:outputProgress" class="signatureLink">outputProgress</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when a socket moves data from its write buffer to the networking transport layer.</td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:securityError" class="signatureLink">securityError</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched if a call to Socket.connect() attempts to connect to a server prohibited by the caller's security sandbox.</td><td class="summaryTableOwnerCol">Socket</td></tr><tr class="" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:socketData" class="signatureLink">socketData</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when a socket receives data.</td><td class="summaryTableOwnerCol">Socket</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Property Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="bytesAvailable"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>bytesAvailable</h2></td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>bytesAvailable:uint</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     The number of bytes of data available for reading in the input buffer.
+
+     
+     <p>
+
+     Your code must access <code>bytesAvailable</code> to ensure
+
+     that sufficient data is available before trying to read
+
+     it with one of the <code>read</code> methods.
+
+     </p>
+
+     
+     </p></div></span><span id="pageFilter" runtime="AIR::3##Flash::11##"><a name="propertyDetail"></a><a name="bytesPending"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>bytesPending</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>bytesPending:uint</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+     Indicates the amount of data (in bytes) awaiting transfer from the socket's 
+
+     write buffer to the network transport layer.
+
+     
+     <p>
+
+     The following operations affect the value of <code>bytesPending</code>:
+
+     <ul><li>
+
+       A call to <code>Socket.connect()</code> sets <code>bytesPending</code> to zero.
+
+       </li><li>
+
+       Adding data to the write buffer via a call to one of the <code>Socket.write*()</code> 
+
+       methods updates <code>bytesPending</code>.
+
+       </li><li>
+
+       When the operating system moves data from the write buffer to the network transport 
+
+       layer socket, the system updates <code>bytesPending</code>.
+
+       </li><li>
+
+       A call to <code>Socket.close()</code> sets <code>bytesPending</code> to zero (the
+
+       write buffer is destroyed when you close the socket).
+
+       </li></ul>
+
+     </p>
+
+     </p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="connected"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>connected</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>connected:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Indicates whether this Socket object is currently connected.
+
+     A call to this property returns a value of <code>true</code> if the socket
+
+     is currently connected, or <code>false</code> otherwise.
+
+     
+     </p></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="endian"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>endian</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>endian:String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Indicates the byte order for the data. Possible values are
+
+     constants from the flash.utils.Endian class,
+
+     <code>Endian.BIG_ENDIAN</code> or <code>Endian.LITTLE_ENDIAN</code>.
+
+     </p><p> The default value is <code>Endian.BIG_ENDIAN.</code></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="../utils/Endian.html" target="">Endian</a></div></div></span><span id="pageFilter" runtime="AIR::2##"><a name="propertyDetail"></a><a name="localAddress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>localAddress</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>localAddress:String</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2 </td></tr></table><p></p><p></p><p>
+
+     The IP address this socket is bound to on the local machine.
+
+
+
+     
+
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Socket.html#bind()" target="">bind()</a></div></div></span><span id="pageFilter" runtime="AIR::2##"><a name="propertyDetail"></a><a name="localPort"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>localPort</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>localPort:int</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2 </td></tr></table><p></p><p></p><p>
+
+     The port this socket is bound to on the local machine.
+
+     
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Socket.html#bind()" target="">bind()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="propertyDetail"></a><a name="objectEncoding"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>objectEncoding</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>objectEncoding:uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Controls the version of AMF used when writing or reading an object.
+
+     
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="ObjectEncoding.html" target="">ObjectEncoding class</a><br/><a href="Socket.html#readObject()" target="">readObject()</a><br/><a href="Socket.html#writeObject()" target="">writeObject()</a></div></div></span><span id="pageFilter" runtime="AIR::2##"><a name="propertyDetail"></a><a name="remoteAddress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>remoteAddress</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>remoteAddress:String</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2 </td></tr></table><p></p><p></p><p>
+
+     The IP address of the remote machine to which this socket is connected.
+
+     
+     <p>
+
+     You can use this property to determine the IP address of a client socket
+
+     dispatched in a <code>ServerSocketConnectEvent</code> by a ServerSocket object. 
+
+     You can use the DNSResolver class to convert an IP address to a domain name.
+
+     </p>
+
+     
+
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Socket.html#connect()" target="">connect()</a><br/><a href="ServerSocket.html" target="">ServerSocket</a><br/><a href="../events/ServerSocketConnectEvent.html" target="">ServerSocketConnectEvent</a><br/><a href="dns/DNSResolver.html" target="">DNSResolver</a></div></div></span><span id="pageFilter" runtime="AIR::2##"><a name="propertyDetail"></a><a name="remotePort"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>remotePort</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>remotePort:int</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2 </td></tr></table><p></p><p></p><p>
+
+     The port on the remote machine to which this socket is connected.
+
+     
+     <p>
+
+     You can use this property to determine the port number of a client socket
+
+     dispatched in a ServerSocketConnectEvent by a ServerSocket object.
+
+     </p>
+
+     
+
+     </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Socket.html#connect()" target="">connect()</a><br/><a href="ServerSocket.html" target="">ServerSocket</a><br/><a href="../events/ServerSocketConnectEvent.html" target="">ServerSocketConnectEvent</a></div></div></span><span id="pageFilter" runtime="Flash::10##AIR::1.5##Lite::4##"><a name="propertyDetail"></a><a name="timeout"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>timeout</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>timeout:uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+     Indicates the number of milliseconds to wait for a connection.
+
+     
+     <p>
+
+     If the connection doesn't succeed within the specified time, the connection fails.
+
+     The default value is 20,000 (20 seconds).
+
+     </p>
+
+     
+     </p></div></span><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="Socket()"></a><a name="Socket(String,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>Socket</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function Socket(host:String = null, port:int = 0)</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p>
+
+    Creates a Socket object. If no parameters are specified, an initially disconnected socket
+
+    is created. If parameters are specified, a connection is attempted to the specified host and port.
+
+    
+    <p>
+
+    <b>Note:</b> It is strongly advised to use the constructor form <i>without parameters</i>. Next,
+
+    add event listeners, then call the <code>connect</code> method with <code>host</code>
+
+    and <code>port</code> parameters. This sequence guarantees that all event listeners work
+
+    properly.
+
+    </p>
+
+    
+    </p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">host</span>:String</code> (default = <code>null</code>)<code></code> &mdash; A fully qualified DNS domain name or an IP address. IPv4 addresses are specified in
+
+    dot-decimal notation, such as <i>192.0.2.0</i>. In Flash Player 9.0.115.0, and AIR 1.0 and later,
+
+    you can specify IPv6 addresses using hexadecimal-colon notation. This is an example
+
+    of an IPv6 address: <i>2001:db8:ccc3:ffff:0:444d:555e:666f</i>.
+
+    You can also specify <code>null</code> to connect to the host server
+
+    on which the SWF file resides.  If the SWF file issuing this call is running in a web browser,
+
+    <code>host</code> must be in the domain from which the SWF file originated.
+
+    
+    </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">port</span>:int</code> (default = <code>0</code>)<code></code> &mdash; The TCP port number on the target host used to establish a connection.
+
+      In Flash Player 9.0.124.0 and later, the target host must serve a socket policy file.
+
+      The policy file specifies that socket connections are permitted from the host serving the SWF file
+
+      to the specified port. In earlier versions of Flash Player, a socket policy file is required
+
+      if you want to connect to a port number below 1024, or if you want to connect to a host other 
+
+      than the host serving the SWF file.
+
+    
+    
+    </td></tr></table><br/><span class="label">Events</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>connect</b>:<a href="../events/Event.html"><code>Event</code></a></code> &mdash; Dispatched when a network connection has been established.</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Dispatched when an input/output error
+
+    occurs that causes the connection to fail.</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>securityError</b>:<a href="../events/SecurityErrorEvent.html"><code>SecurityErrorEvent</code></a></code> &mdash; <span platform="javascript">This error occurs in SWF content.</span>
+
+    <span platform="actionscript"> Dispatched if a call to <code>Socket.connect()</code> attempts
+
+    to connect either to a server that doesn't serve a socket policy file,
+
+    or to a server whose policy file doesn't grant the calling host access to the specified port.
+
+     For more information on policy files, see "Website controls (policy files)" in
+
+     the <em>ActionScript 3.0 Developer's Guide</em> and the Flash Player Developer Center Topic:
+
+     <a href="http://www.adobe.com/go/devnet_security_en" target="external">Security</a>.</span></td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>SecurityError </code> &mdash; This error occurs in SWF content<span>.</span>
+
+    
+
+    
+    
+
+    
+    </td></tr></table></div></span><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="close()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>close</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function close():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Closes the socket. You cannot read or write any data after the <code>close()</code> method
+
+     has been called.
+
+     
+     <p>
+
+     The <code>close</code> event is dispatched only when the server
+
+     closes the connection; it is not dispatched when you call the <code>close()</code> method.
+
+     </p>
+
+     
+     <p>
+
+     You can reuse the Socket object by calling the <code>connect()</code> method on it again.
+
+     </p>
+
+     
+     </p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IOError </code> &mdash; The socket could not be closed, or the socket was not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="connect()"></a><a name="connect(String,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>connect</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function connect(host:String, port:int):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Connects the socket to the specified host and port.
+
+     
+
+     <p>
+
+     If the connection fails immediately, either an event is dispatched
+
+     or an exception is thrown. An error event is dispatched if a host was
+
+     specified, and an exception is thrown if no host was specified.
+
+     Otherwise, an event reports the status of the connection.
+
+     If the socket is already connected, the existing connection is closed first.
+
+     </p>
+
+     
+     <p>
+
+     <b>Note:</b> For best practices on connecting to a socket, see the Socket 
+
+     class description.
+
+     </p>
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">host</span>:String</code> &mdash; The name or IP address of the host to connect to. If no host is specified,
+
+          the host that is contacted is the host where the calling file
+
+          resides. If you do not specify a host, use an event listener to
+
+          determine whether the connection was successful.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">port</span>:int</code> &mdash; The port number to connect to.
+
+     
+     </td></tr></table></p><br/><span class="label">Events</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>connect</b>:<a href="../events/Event.html"><code>Event</code></a></code> &mdash; Dispatched when a network connection has been
+
+          established.</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>ioError</b>:<a href="../events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Dispatched if a host is specified and an
+
+          input/output error occurs that causes the connection to fail.</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>securityError</b>:<a href="../events/SecurityErrorEvent.html"><code>SecurityErrorEvent</code></a></code> &mdash; Dispatched if a call to
+
+          <code>Socket.connect()</code> attempts to connect
+
+         either to a server that doesn't serve a socket policy file,
+
+         or to a server whose policy file doesn't grant the calling host access to the specified port.
+
+     For more information on policy files, see "Website controls (policy files)" in
+
+     the <em>ActionScript 3.0 Developer's Guide</em> and the Flash Player Developer Center Topic:
+
+     <a href="http://www.adobe.com/go/devnet_security_en" target="external">Security</a>.</td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IOError </code> &mdash; No host was specified and the connection failed.
+
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>SecurityError </code> &mdash; This error occurs in SWF content<span>.</span>
+
+     
+
+     
+          
+
+     
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="../../../../html/dev/WS5b3ccc516d4fbf351e63e3d118a9b90204-7c63.html" target="_top">Connecting to sockets</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="flush()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>flush</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function flush():void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Flushes any accumulated data in the socket's output buffer.
+
+     
+     <p>
+
+     On some operating systems, flush() is called automatically between execution frames. On other operating systems, such
+
+     as Windows, the data is never sent unless you call <code>flush()</code> explicitly. It is a good practice to call the 
+
+     <code>flush()</code> method after each write to the socket.
+
+     </p>
+
+     
+
+     </p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readBoolean()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readBoolean</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readBoolean():Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a Boolean value from the socket. After reading a single byte, the
+
+     method returns <code>true</code> if the byte is nonzero, and
+
+     <code>false</code> otherwise.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; A value of <code>true</code> if the byte read is nonzero,
+
+          otherwise <code>false</code>.
+
+     
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is insufficient data available to read.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readByte()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readByte</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readByte():int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a signed byte from the socket.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; A value from -128 to 127.
+
+     
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is insufficient data available to read.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readBytes()"></a><a name="readBytes(flash.utils.ByteArray,uint,uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readBytes</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readBytes(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:uint = 0, length:uint = 0):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads the number of data bytes specified by the length
+
+     parameter from the socket. The bytes are read into the specified byte
+
+     array, starting at the position indicated by <code>offset</code>.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">bytes</span>:<a href="../utils/ByteArray.html">ByteArray</a></code> &mdash; The ByteArray object to read data into.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">offset</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; The offset at which data reading begins in the byte
+
+          array.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">length</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; The number of bytes to read. The default value of 0 causes
+
+          all available data to be read.
+
+     
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is insufficient data available to read.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is
+
+          not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readDouble()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readDouble</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readDouble():Number</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an IEEE 754 double-precision floating-point number from the socket.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code> &mdash; An IEEE 754 double-precision floating-point number.
+
+     
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is insufficient data available to read.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readFloat()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readFloat</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readFloat():Number</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an IEEE 754 single-precision floating-point number from the socket.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code> &mdash; An IEEE 754 single-precision floating-point number.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is insufficient data available to read.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readInt()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readInt</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readInt():int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a signed 32 bit integer from the socket.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; A value from -2147483648 to 2147483647.
+
+     
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is insufficient data available to read.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readMultiByte()"></a><a name="readMultiByte(uint,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readMultiByte</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readMultiByte(length:uint, charSet:String):String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a multibyte string from the byte stream, using the specified character set.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">length</span>:uint</code> &mdash; The number of bytes from the byte stream to read.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">charSet</span>:String</code> &mdash; The string denoting the character set to use to interpret the bytes.
+
+     Possible character set strings include <code>"shift_jis"</code>, <code>"CN-GB"</code>, and
+
+     <code>"iso-8859-1"</code>.
+
+     For a complete list, see <a href="../../charset-codes.html" >Supported Character Sets</a>.
+
+     
+     <p>
+
+     <b>Note:</b> If the system does not recognize the <code>charSet</code> parameter, 
+
+     the application uses the system's default code page as the character set.
+
+     For example, a value for the <code>charSet</code> parameter, as in <code>myTest.readMultiByte(22, "iso-8859-01")</code>
+
+     that uses <code>01</code> instead of <code>1</code> might work on your development machine, but not on another machine.
+
+     On the other machine, the application uses the system's default code page.
+
+     </p>
+
+     
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; A UTF-8 encoded string.
+
+     
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is insufficient data available to read.
+
+     
+     </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readObject()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readObject</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readObject():*</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an object from the socket, encoded in AMF serialized format.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>*</code> &mdash; The deserialized object
+
+     
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is insufficient data available to read.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="ObjectEncoding.html" target="">ObjectEncoding</a><br/></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readShort()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readShort</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readShort():int</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a signed 16 bit integer from the socket.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; A value from -32768 to 32767.
+
+     
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is insufficient data available to read.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readUnsignedByte()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readUnsignedByte</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedByte():uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an unsigned byte from the socket.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>uint</code> &mdash; A value from 0 to 255.
+
+     
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is insufficient data available to read.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readUnsignedInt()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readUnsignedInt</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedInt():uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an unsigned 32 bit integer from the socket.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>uint</code> &mdash; A value from 0 to 4294967295.
+
+     
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is insufficient data available to read.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readUnsignedShort()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readUnsignedShort</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUnsignedShort():uint</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads an unsigned 16 bit integer from the socket.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>uint</code> &mdash; A value from 0 to 65535.
+
+     
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is insufficient data available to read.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readUTF()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readUTF</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUTF():String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads a UTF-8 string from the socket.  The method expects that the string is prefixed
+
+     with an unsigned short integer that indicates the length in bytes.
+
+     
+     </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; A UTF-8 string.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is insufficient data available to read.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="readUTFBytes()"></a><a name="readUTFBytes(uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>readUTFBytes</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function readUTFBytes(length:uint):String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Reads the number of UTF-8 data bytes specified by the <code>length</code>
+
+     parameter from the socket, and returns a string.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">length</span>:uint</code> &mdash; The number of bytes to read.
+
+     
+     </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; A UTF-8 string.
+
+     </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EOFError </code> &mdash; There is insufficient data available to read.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+      
+
+      </td></tr></table></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeBoolean()"></a><a name="writeBoolean(Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeBoolean</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeBoolean(value:Boolean):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a Boolean value to the socket. This method writes a single byte,
+
+     with either a value of 1 (<code>true</code>) or 0 (<code>false</code>).
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:Boolean</code> &mdash; The value to write to the socket: 1 (<code>true</code>) or 0 (<code>false</code>).
+
+     
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+     
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Socket.html#flush()" target="">flush()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeByte()"></a><a name="writeByte(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeByte</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeByte(value:int):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a byte to the socket.
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:int</code> &mdash; The value to write to the socket. The low 8 bits of the
+
+     value are used; the high 24 bits are ignored.
+
+     
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+     
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Socket.html#flush()" target="">flush()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeBytes()"></a><a name="writeBytes(flash.utils.ByteArray,uint,uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeBytes</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeBytes(bytes:<a href="../utils/ByteArray.html">ByteArray</a>, offset:uint = 0, length:uint = 0):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a sequence of bytes from the specified byte array. The write
+
+     operation starts at the position specified by <code>offset</code>.
+
+     
+     <p>
+
+     If you omit the <code>length</code> parameter the default
+
+     length of 0 causes the method to write the entire buffer starting at
+
+     <code>offset</code>.
+
+     </p>
+
+     
+     <p>
+
+     If you also omit the <code>offset</code> parameter, the method writes
+
+     the entire buffer.
+
+     </p>
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">bytes</span>:<a href="../utils/ByteArray.html">ByteArray</a></code> &mdash; The ByteArray object to write data from.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">offset</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; The zero-based offset into the <code>bytes</code> ByteArray
+
+          object at which data writing begins.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">length</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; The number of bytes to write. The default value of 0 causes
+
+          the method to write the entire buffer. Writing starts at the value specified by
+
+          the <code>offset</code> parameter.
+
+     
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+     
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>RangeError </code> &mdash; If <code>offset</code> is greater than the length of the ByteArray specified in
+
+     <code>bytes</code>, or if the amount of data specified by <code>offset</code> plus
+
+     <code>length</code> exceeds the data available.
+
+     
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Socket.html#flush()" target="">flush()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeDouble()"></a><a name="writeDouble(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeDouble</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeDouble(value:Number):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes an IEEE 754 double-precision floating-point number to the socket.
+
+     
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:Number</code> &mdash; The value to write to the socket.
+
+     
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+     
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Socket.html#flush()" target="">flush()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeFloat()"></a><a name="writeFloat(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeFloat</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeFloat(value:Number):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes an IEEE 754 single-precision floating-point number to the socket.
+
+     
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:Number</code> &mdash; The value to write to the socket.
+
+     
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+     
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Socket.html#flush()" target="">flush()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeInt()"></a><a name="writeInt(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeInt</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeInt(value:int):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a 32 bit signed integer to the socket.
+
+     
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:int</code> &mdash; The value to write to the socket.
+
+     
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+     
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Socket.html#flush()" target="">flush()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeMultiByte()"></a><a name="writeMultiByte(String,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeMultiByte</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeMultiByte(value:String, charSet:String):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a multibyte string from the byte stream, using the specified character set.
+
+     
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:String</code> &mdash; The string content.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">charSet</span>:String</code> &mdash; The string denoting the character set to use to interpret the bytes.
+
+     Possible character set strings include <code>"shift_jis"</code>, <code>"CN-GB"</code>,
+
+     and <code>"iso-8859-1"</code>. For a complete list, see
+
+     <a href="../../charset-codes.html" >Supported Character Sets</a>.
+
+     
+     </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="Socket.html#flush()" target="">flush()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeObject()"></a><a name="writeObject(any)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeObject</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeObject(object:*):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes an object to the socket in AMF serialized format.
+
+     
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">object</span>:*</code> &mdash; The object to be serialized.
+
+     
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+     
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Socket.html#flush()" target="">flush()</a><br/><a href="ObjectEncoding.html" target="">ObjectEncoding</a><br/></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeShort()"></a><a name="writeShort(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeShort</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeShort(value:int):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a 16 bit integer to the socket. The bytes written are as follows:
+
+     
+     <pre><code>(v >> 8) & 0xff v & 0xff</code></pre>
+
+     
+     <p>
+
+     The low 16 bits of the parameter are used; the high 16 bits
+
+     are ignored.
+
+     </p>
+
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:int</code> &mdash; The value to write to the socket.
+
+     
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+     
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Socket.html#flush()" target="">flush()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeUnsignedInt()"></a><a name="writeUnsignedInt(uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeUnsignedInt</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUnsignedInt(value:uint):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a 32 bit unsigned integer to the socket.
+
+     
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:uint</code> &mdash; The value to write to the socket.
+
+     
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+     
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Socket.html#flush()" target="">flush()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeUTF()"></a><a name="writeUTF(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeUTF</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUTF(value:String):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes the following data to the socket: 
+
+     <ul><li>
+
+      A 16 bit unsigned integer. 
+
+      The integer indicates the length in bytes of the specified UTF-8 string.
+
+      </li><li>
+
+      The specified UTF-8 string.
+
+      </li></ul>
+
+     
+     <p>
+
+     Before writing the string, the method calculates the number of bytes
+
+     necessary to represent all characters of the string.
+
+     </p>
+
+     
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:String</code> &mdash; The string to write to the socket.
+
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>RangeError </code> &mdash; The length is larger than 65535.
+
+     </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+     
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Socket.html#flush()" target="">flush()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="writeUTFBytes()"></a><a name="writeUTFBytes(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>writeUTFBytes</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function writeUTFBytes(value:String):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+     Writes a UTF-8 string to the socket.
+
+     
+     
+     </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:String</code> &mdash; The string to write to the socket.
+
+     
+     </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IOError </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+
+     
+     </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="Socket.html#flush()" target="">flush()</a></div></div></span><div class="detailSectionHeader"> Event Detail </div><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:close"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>close</h2></td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">property Event.type  =  </span><a href="../events/Event.html#CLOSE"><code>flash.events.Event.CLOSE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ Dispatched when the server closes the socket connection.
+
+ 
+ <p>
+
+ The <code>close</code> event is dispatched only when the server
+
+ closes the connection. It is not dispatched when you call the 
+
+ <code>Socket.close()</code> method.
+
+ </p>
+
+ 
+ </p>
+
+	The <code>Event.CLOSE</code> constant defines the value of the <code>type</code> property of a <code>close</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The object whose connection has been closed.</td></tr></table>
+
+	
+
+	</div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:connect"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>connect</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">property Event.type  =  </span><a href="../events/Event.html#CONNECT"><code>flash.events.Event.CONNECT</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ Dispatched when a network connection is established.
+
+ 
+ </p>
+
+	The <code>Event.CONNECT</code> constant defines the value of the <code>type</code> property of a <code>connect</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The Socket or XMLSocket object that has established a network connection.</td></tr></table>
+
+	
+
+	</div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:ioError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>ioError</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/IOErrorEvent.html"><code>flash.events.IOErrorEvent</code></a><br/><span class="label">property IOErrorEvent.type  =  </span><a href="../events/IOErrorEvent.html#IO_ERROR"><code>flash.events.IOErrorEvent.IO_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ Dispatched when an IO error causes a send or load operation to fail.
+
+ 
+ </p>
+
+	Defines the value of the <code>type</code> property of an <code>ioError</code> event object.
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>errorID</code></td><td>A reference number associated with the specific error (AIR only).</td></tr><tr><td><code>target</code></td><td>The network object experiencing the input/output error.</td></tr><tr><td><code>text</code></td><td>Text to be displayed as an error message.</td></tr></table>
+
+	
+
+	</div></span><span id="pageFilter" runtime="AIR::3##Flash::11##"><a name="event:outputProgress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>outputProgress</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/OutputProgressEvent.html"><code>flash.events.OutputProgressEvent</code></a><br/><span class="label">property OutputProgressEvent.type  =  </span><a href="../events/OutputProgressEvent.html#OUTPUT_PROGRESS"><code>flash.events.OutputProgressEvent.OUTPUT_PROGRESS</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 3 </td></tr></table><p></p><p></p><p>
+
+ Dispatched when a socket moves data from its write buffer to the networking transport layer.
+
+ Use the <code>bytesPending</code> property on this event object to determine how much data is pending 
+
+ in the write buffer. 
+
+ 
+
+ <p>
+
+ You can use this event to prevent data loss when, for example, a user prematurely closes an
+
+ application employing sockets. Ensure that the socket property <code>bytesPending</code> equals
+
+ zero before you close a socket or allow the socket to be garbage-collected.
+
+ </p>
+
+ 
+ <p>
+
+ For more information about this event, along with an example, see
+
+ <a href="http://blogs.adobe.com/cantrell/archives/2011/08/socket-improvements-in-air-3.html" target="external">Socket Improvements in AIR 3</a>.
+
+ </p>
+
+ 
+ </p>
+
+    Defines the value of the <code>type</code> property of an <code>outputProgress</code> event object.
+
+    
+
+    <p>This event has the following properties:</p>
+
+    
+
+    <table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>bytesPending</code></td><td>The number of bytes remaining to be written at the time the 
+
+    listener processes the event.</td></tr><tr><td><code>bytesTotal</code></td><td>The total number of bytes that ultimately 
+
+    will be written if the write process succeeds.</td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+    object with an event listener.</td></tr><tr><td><code>target</code></td><td>The FileStream object reporting progress. </td></tr></table>
+
+    
+
+    </div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:securityError"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>securityError</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/SecurityErrorEvent.html"><code>flash.events.SecurityErrorEvent</code></a><br/><span class="label">property SecurityErrorEvent.type  =  </span><a href="../events/SecurityErrorEvent.html#SECURITY_ERROR"><code>flash.events.SecurityErrorEvent.SECURITY_ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ Dispatched if a call to <code>Socket.connect()</code> attempts to connect to a server
+
+ prohibited by the caller's security sandbox. This event is also dispatched if the port ID is 
+
+ lower than 1024 and no socket policy file exists to permit such a connection.
+
+ 
+ <p>
+
+ <b>Note:</b> In an AIR application, content running in the application security sandbox can
+
+ connect <i>without a socket policy file</i> to any server and port number.
+
+ </p>
+
+ 
+ </p>
+
+	The <code>SecurityErrorEvent.SECURITY_ERROR</code> constant defines the value of the <code>type</code> property of a <code>securityError</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The network object reporting the security error.</td></tr><tr><td><code>text</code></td><td>Text to be displayed as an error message.</td></tr></table>
+
+	
+
+	<p><span class="label">See also</span></p><div class="seeAlso"><a href="Socket.html#connect()" target="">Socket.connect()</a></div></div></span><span id="pageFilter" runtime="Flash::9##Lite::4##"><a name="event:socketData"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>socketData</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/ProgressEvent.html"><code>flash.events.ProgressEvent</code></a><br/><span class="label">property ProgressEvent.type  =  </span><a href="../events/ProgressEvent.html#SOCKET_DATA"><code>flash.events.ProgressEvent.SOCKET_DATA</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td>AIR 1.0, </td></tr></table><p></p><p></p><p>
+
+ Dispatched when a socket receives data.
+
+ 
+ <p>
+
+ The data received by the socket remains in the socket until it is read. You can read
+
+ all or some of the received data upon notification of this event.
+
+ </p>
+
+ 
+
+ <p>
+
+ <b>Note:</b> Events of type <code>socketData</code> do not use the <code>ProgressEvent.bytesTotal</code>
+
+ property.
+
+ </p>
+
+ 
+ </p>
+
+	Defines the value of the <code>type</code> property of a <code>socketData</code> event object.
+
+	
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event.</td></tr><tr><td><code>bytesLoaded</code></td><td>The number of items or bytes loaded at the time the listener processes the event.</td></tr><tr><td><code>bytesTotal</code></td><td>0; this property is not used by <code>socketData</code> event objects.</td></tr><tr><td><code>target</code></td><td>The socket reporting progress.</td></tr></table>
+
+	
+
+	</div></span><a name="includeExamplesSummary"></a><div class="detailSectionHeader">Examples</div><span id="pageFilter"><br/><div class="detailBody"> The following example reads from and writes to a socket and outputs information
+ transmitted during socket events. 
+ 
+ <p><b>Note:</b> To test this example, do the following:</p>
+  
+  <ol><li>Add the AIRAliases.js file to the project directory.</li><li>Change the code so that the <code>Socket()</code> constructor points to a valid URL and port.</li><li>Create an application descriptor file for the project, and test the project using ADL.</li></ol>
+ 
+<div class="listing"><pre>
+
+&lt;html&gt;
+&lt;head&gt;
+    &lt;script src="AIRAliases.js" /&gt;
+    &lt;script&gt;
+    var socket;
+    var response;
+    function init() {
+        socket = new air.Socket("localhost", 80);
+        socket.addEventListener(air.Event.CLOSE, closeHandler);
+        socket.addEventListener(air.Event.CONNECT, connectHandler);
+        socket.addEventListener(air.IOErrorEvent.IO_ERROR, ioErrorHandler);
+        socket.addEventListener(air.SecurityErrorEvent.SECURITY_ERROR, securityErrorHandler);
+        socket.addEventListener(air.ProgressEvent.SOCKET_DATA, socketDataHandler);
+    }
+    function writeln(str) {
+        str += "\n";
+        try {
+            socket.writeUTFBytes(str);
+        }
+        catch(e) {
+            air.trace(e);
+        }
+    }
+    function sendRequest() {
+        air.trace("sendRequest");
+        response = "";
+        writeln("GET /");
+        socket.flush();
+    }
+    function readResponse() {
+        var str = socket.readUTFBytes(socket.bytesAvailable);
+        response += str;
+    }
+    function closeHandler(event) {
+        air.trace("closeHandler: " + event);
+        air.trace(response.toString());
+    }
+    function connectHandler(event) {
+        air.trace("connectHandler: " + event);
+        sendRequest();
+    }
+    function ioErrorHandler(event) {
+        air.trace("ioErrorHandler: " + event);
+    }
+    function securityErrorHandler(event) {
+        air.trace("securityErrorHandler: " + event);
+    }
+    function socketDataHandler(event) {
+        air.trace("socketDataHandler: " + event);
+        readResponse();
+    }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload='init()'&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script><p></p><center class="copyright"> &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><!--BEGIN IONCOMMENTS--><div id="ionComHere"></div><!--END IONCOMMENTS-->[an error occurred while processing this directive][an error occurred while processing this directive]<p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/en_US/legalnotices/index.html">Legal Notices</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online Privacy Policy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html><!-- &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  -->

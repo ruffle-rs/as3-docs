@@ -1,0 +1,1888 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="en-us">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <meta content="en-us" name="lang"/>
+  <meta content="livedocs" name="area"/>
+  <title>
+   Adobe Flash Platform * Minimizing CPU usage
+  </title>
+  <link href="https://help.adobe.com/en_US/as3/mobile/images/FlashRuntimeLinkIndicator.png" rel="shortcut icon"/>
+  <meta content="Optimizing Performance for the Flash Platform" name="book"/>
+  <meta content="adobe" name="product"/>
+  <meta content="air" name="product"/>
+  <meta content="flash" name="product"/>
+  <meta content="flex" name="product"/>
+  <meta content="" name="keywords"/>
+  <!--<PageMap><DataObject type="document"><Attribute name="product" value="adobe"></Attribute><Attribute name="product" value="air"></Attribute><Attribute name="product" value="flash"></Attribute><Attribute name="product" value="flex"></Attribute><Attribute name="book" value="Optimizing Performance for the Flash Platform"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+  <script charset="UTF-8" language="Javascript" type="text/javascript">
+   <!--[CDATA[
+        var currentTreeNode = "WS4bebcd66a74275c36cfb8137124318eebc6-8000.html";
+// ]]-->
+  </script>
+  <script charset="UTF-8" language="Javascript" src="terms.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="help.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="utilities.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="event.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="treeview.js" type="text/javascript">
+   ...
+  </script>
+  <script charset="UTF-8" language="Javascript" src="toc.js" type="text/javascript">
+   ..
+  </script>
+  <script charset="UTF-8" language="Javascript" src="swfobject.js" type="text/javascript">
+   ..
+  </script>
+  <script charset="UTF-8" language="Javascript" src="booklist.js" type="text/javascript">
+   ..
+  </script>
+  <script type="text/javascript">
+   <!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+  </script>
+  
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+  
+  
+  <link href="tree.css" rel="stylesheet" type="text/css"/>
+  <link href="content.css" rel="stylesheet" type="text/css"/>
+  <link href="localeSpecific.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body id="content_body" onload="window.focus();">
+  <a name="top" shape="rect">
+   <!--LeaveCommentHere-->
+  </a>
+  <div id="mnemonic">
+   <!--googleoff: index-->
+   <div class="FlashRuntime" xmlns:adobe="http://www.adobe.com/saxon">
+    <div class="banner">
+     <a href="WS9936fa0d5984e93b3d2e9c9412725f53fd1-8000.html">
+      Adobe Flash Platform
+     </a>
+    </div>
+   </div>
+   <!--googleon: index-->
+  </div>
+  <div id="searchbar">
+   <table id="searchbartable">
+    <tr>
+     <td colspan="2">
+      <!--googleoff: index-->
+      <div xmlns:adobe="http://www.adobe.com/saxon">
+       <div id="pdf">
+        <img height="16" src="images/PDF.gif" width="16"/>
+        <a href="flashplatform_optimizing_content.pdf" title="View Help PDF">
+         View Help PDF (
+         3.4M
+         B)
+        </a>
+       </div>
+      </div>
+      <!--googleon: index-->
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!-- BEGIN SEARCH CONTENT -->
+  <form action="https://help.adobe.com/en_US/as3/mobile/search.html" id="search" name="search" target="_self">
+   <script type="text/javascript">
+    <!--[CDATA[
+if ( !use_chc_behavior ){
+    if (typeof(terms_AHV_SEARCH_CONSTRAINT) != "undefined" && 
+        terms_AHV_SEARCH_CONSTRAINT.length > 0 && 
+        document.location.href.indexOf(".adobe.com") > 0){
+        if ( typeof(terms_SEARCH_THIS_HELP_ONLY) != "undefined" && terms_SEARCH_THIS_HELP_ONLY == "ON" ) {
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                checked="checked" \
+                value="1" ><\/input>'); 
+                
+        // Leave the "Search this help system only" checkbox unckecked
+        }else{    
+            document.write('<div id="searchscope"> \
+                <input onchange="setAHSearchPref();" \
+                class="gsa" \
+                name="gsa" \
+                id="gsa" \
+                type="checkbox" \
+                value="1" ><\/input>'); 
+        }
+        document.write('<span class="gsalabel">' + terms_AHV_SEARCH_CONSTRAINT + '<\/span><\/div>'); 
+    }
+    document.write('<input class="searchinput" \
+        name="q" \
+        id="q" \
+        type="text" \
+        maxlength="256" \
+        value="' + terms_AHV_SEARCH_BUTTON + '" \
+        onclick="clearSearch()"><\/input><input \
+        type="button" \
+        name="searchbutton" \
+        class="searchbutton" \
+        onclick="submit()"><\/input>'); 
+} 
+ 
+/* 
+ * Start Functions 
+ */
+function clearSearch(){
+    if (document.search.q.value == terms_AHV_SEARCH_BUTTON){document.search.q.value = ""}; 
+}
+
+// set search preferences
+function setAHSearchPref(){
+    if (document.search.gsa.checked == 1){
+        setAHSearchCookie( dirname );
+    }else{
+        setAHSearchCookie( "community" );
+    }
+}
+
+// Set search preferences cookie
+function setAHSearchCookie( p ){
+    // set cookie ah_searchpref with a value of the document path
+    var expire=new Date();
+    expire.setDate(expire.getDate()+365); // Cookie expires after 1 year (365 days) 
+}
+
+// ]]-->
+   </script>
+  </form>
+  <!-- END SEARCH CONTENT -->
+  <!-- BEGIN PAGE CONTENT WRAPPER -->
+  <div id="page_content_wrapper">
+   <!-- BEGIN PAGE WRAPPER -->
+   <table id="page_content_table">
+    <tr>
+     
+     <td id="col2">
+      <!-- BEGIN CONTENT WRAPPER -->
+      <!-- BEGIN BREADCRUMBS -->
+      <div id="breadcrumb">
+       <ul class="navigation">
+        <li class="prev">
+         <a accesskey="p" class="prev" href="WS948100b6829bd5a6d20da321260fed8a52-8000.html" title="Event model versus callbacks">
+          <img alt="Previous" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+        <li class="next">
+         <a accesskey="n" class="next" href="WS4bebcd66a74275c3a0f5f19124318fc87b-8000.html" title="ActionScript 3.0 performance">
+          <img alt="Next" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+       </ul>
+       <div class="hierarchy" id="hierarchy">
+        <a href="WS9936fa0d5984e93b3d2e9c9412725f53fd1-8000.html">
+         <b>
+          Home
+         </b>
+        </a>
+        /
+        <a href="WS9936fa0d5984e93b3d2e9c9412725f53fd1-8000.html">
+         <b>
+          Optimizing Performance for the Flash Platform
+         </b>
+        </a>
+       </div>
+      </div>
+      <!-- END BREADCRUMBS -->
+      <div id="content_wrapper">
+       <!-- BEGIN PAGE TITLE -->
+       <h1>
+        Minimizing CPU usage
+       </h1>
+       <!-- END PAGE TITLE -->
+       <!-- BEGIN IONCOMMENTCOUNT -->
+       <div id="ionCount">
+       </div>
+       <!-- END IONCOMMENTCOUNT -->
+       <table border="0" cellpadding="0" cellspacing="0" id="inner_content_table" width="100%">
+        <tr>
+         <td>
+          <div style="border-top:#ccc solid 1px;">
+           <p>
+           </p>
+          </div>
+          <p id="chcPromo" style="display:none;">
+<a id="chcLink" href="http://www.adobe.com/support/chc/">
+<img id="chcImage" src="http://www.adobe.com/support/chc/GetMoreHelpFeatures.png"/>
+</a>
+</p>
+<script type="text/javascript" language="javascript" charset="utf-8">
+<!--
+var cfgArray = [];
+//cfgArray["Acrobat_10.0_Professional.helpcfg"] = "acrobatpro";
+//cfgArray["Acrobat_10.0_Standard.helpcfg"] = "acrobatstd";
+cfgArray["Lightroom_3.0.helpcfg"] = "lightroom";
+cfgArray["PhotoshopElements_8.0_Win.helpcfg"] = "photoshopelements";
+cfgArray["PhotoshopElements_8.0_Mac.helpcfg"] = "photoshopelementsmac";
+cfgArray["PremiereElements_8.0_Win.helpcfg"] = "premiereelements";
+
+//cfgArray["AfterEffects_10.0.helpcfg"] = "aftereffects";
+//cfgArray["AIR.helpcfg"] = "air";
+//cfgArray["ColdFusionBuilder.helpcfg"] = "coldfusion";
+//cfgArray["Contribute_6.0.helpcfg"] = "contribute";
+//cfgArray["DeviceCentral_3.0.helpcfg"] = "devicecentral";
+//cfgArray["Dreamweaver_11.0.helpcfg"] = "dreamweaver";
+//cfgArray["EncoreDVD_5.0.helpcfg"] = "encore";
+//cfgArray["ExtensionManager_3.0.helpcfg"] = "extension";
+//cfgArray["Fireworks_11.0.helpcfg"] = "fireworks";
+//cfgArray["Flash_11.0.helpcfg"] = "flash";
+//cfgArray["Flex_4.0.helpcfg"] = "flashbuilder";
+//cfgArray["FlashCatalyst_1.0.helpcfg"] = "flashcatalyst";
+//cfgArray["Illustrator_15.0.helpcfg"] = "illustrator";
+//cfgArray["InCopy_7.0.helpcfg"] = "incopy";
+//cfgArray["InDesign_7.0.helpcfg"] = "indesign";
+//cfgArray["OnLocation_5.0.helpcfg"] = "onlocation";
+//cfgArray["Photoshop_12.0.helpcfg"] = "photoshop";
+//cfgArray["PremierePro_5.0.helpcfg"] = "premierepro";
+
+function getLangName() {
+    var lang = "en-us";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if (ptn.test(lang)) {
+        var languageCode = lang.replace(ptn, "$1");
+        var countryCode = lang.replace(ptn, "$2");
+        lang = languageCode + "_" + countryCode.toUpperCase();
+    }
+    return lang;
+}
+
+function getCountryName() {
+    var lang = "";
+    var metaElements = document.all ?
+            document.all.tags('meta') :
+            document.getElementsByTagName ?
+            document.getElementsByTagName ('meta') : new Array();
+    for (var m = 0; m < metaElements.length; m++) {
+        if (metaElements[m].name == "lang") {
+            lang = metaElements[m].content;
+            break;
+        }
+    }
+    var ptn = /(..)-(..)/;
+    if ((ptn.test(lang)) && (lang != "en-us")) {
+        var countryCode = lang.replace(ptn, "$2");
+        return "/" + countryCode;
+    }
+    return "";
+}
+
+if ( (typeof(terms_HELPCFG) != 'undefined')  && (terms_HELPCFG.indexOf(".helpcfg") != -1) ) {
+    var stage   = (document.location.href.indexOf(".stage.") != -1) ? 'stage.' : '';
+    var baseUrl = 'http://www.' + stage + 'adobe.com';
+    var refpage = document.location.href.replace(/#.*$/, '');
+	
+	if ((!use_robohelp_behavior) && (terms_HELPCFG.length > 0) && (typeof(cfgArray[terms_HELPCFG]) != 'undefined') && (cfgArray[terms_HELPCFG].length > 0)) {
+		if (document.getElementById) { // DOM3 = IE5, NS6
+			var newHref = baseUrl + getCountryName() + "/support/chc/" + "?helpcfg=http://help." + stage + "adobe.com/HelpCfg/" + getLangName() + "/" + terms_HELPCFG + "&url=" + refpage + "&product=" + cfgArray[terms_HELPCFG];
+			var newSrc = baseUrl + getCountryName() + "/support/chc/GetMoreHelpFeatures.png";
+			document.getElementById("chcPromo").style.display = "block";
+			document.getElementById("chcLink").href = newHref;
+			document.getElementById("chcImage").src = newSrc;
+		}
+	}
+}
+
+//-->
+</script>
+
+
+          <div id="minitoc">
+           <div class="t">
+            <div class="b">
+             <div>
+              <ul id="minitoc-links">
+               <li>
+                <p>
+                 <a href="#WS4a4606c864353c0a-dcb49ee124a2e6df51-8000">
+                  <span class="topictitle1">
+                   Flash Player 10.1 enhancements for CPU usage
+                  </span>
+                 </a>
+                </p>
+                <ul>
+                 <li>
+                  <p>
+                   <a href="#WS4bebcd66a74275c36cfb8137124318eebc6-7ffe">
+                    <span class="topictitle2">
+                     Pause, throttle, and resume
+                    </span>
+                   </a>
+                  </p>
+                 </li>
+                 <li>
+                  <p>
+                   <a href="#WS4bebcd66a74275c36cfb8137124318eebc6-7ffd">
+                    <span class="topictitle2">
+                     Instance management
+                    </span>
+                   </a>
+                  </p>
+                 </li>
+                </ul>
+               </li>
+               <li>
+                <p>
+                 <a href="#WS4bebcd66a74275c36cfb8137124318eebc6-7fff">
+                  <span class="topictitle1">
+                   Sleep mode
+                  </span>
+                 </a>
+                </p>
+               </li>
+               <li>
+                <p>
+                 <a href="#WS4bebcd66a74275c36cfb8137124318eebc6-7ffc">
+                  <span class="topictitle1">
+                   Freezing and unfreezing objects
+                  </span>
+                 </a>
+                </p>
+               </li>
+               <li>
+                <p>
+                 <a href="#WS948100b6829bd5a6-6752030e12905479288-8000">
+                  <span class="topictitle1">
+                   Activate and deactivate events
+                  </span>
+                 </a>
+                </p>
+               </li>
+               <li>
+                <p>
+                 <a href="#WS948100b6829bd5a63821f6a2126681c5c57-8000">
+                  <span class="topictitle1">
+                   Mouse interactions
+                  </span>
+                 </a>
+                </p>
+               </li>
+               <li>
+                <p>
+                 <a href="#WS4bebcd66a74275c36cfb8137124318eebc6-7ffb">
+                  <span class="topictitle1">
+                   Timers versus ENTER_FRAME events
+                  </span>
+                 </a>
+                </p>
+               </li>
+               <li>
+                <p>
+                 <a href="#WS4bebcd66a74275c36cfb8137124318eebc6-7ffa">
+                  <span class="topictitle1">
+                   Tweening syndrome
+                  </span>
+                 </a>
+                </p>
+               </li>
+              </ul>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div>
+           <p>
+            Another important area of focus for optimization is CPU
+usage. Optimizing CPU processing improves performance, and as a
+result, battery life on mobile devices.
+           </p>
+           <ul class="navlinklist">
+           </ul>
+          </div>
+          <div class="nochunk" id="WS4a4606c864353c0a-dcb49ee124a2e6df51-8000">
+           <a name="WS4a4606c864353c0a-dcb49ee124a2e6df51-8000">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            Flash Player 10.1 enhancements for CPU usage
+           </h2>
+           <div>
+            <p>
+             Flash Player 10.1 introduces two new features that help
+save CPU processing. The features involve pausing and resuming SWF
+content when it goes offscreen, and limiting the number of Flash
+Player instances on a page.
+            </p>
+            <ul class="navlinklist">
+            </ul>
+           </div>
+           <div class="nochunk" id="WS4bebcd66a74275c36cfb8137124318eebc6-7ffe">
+            <a name="WS4bebcd66a74275c36cfb8137124318eebc6-7ffe">
+             <!-- -->
+            </a>
+            <h3 class="topictitle3">
+             Pause, throttle, and resume
+            </h3>
+            <div>
+             <div class="note">
+              <span class="notetitle">
+               Note:
+              </span>
+              The pause, throttle, and resume feature does not apply
+to Adobe® AIR® applications.
+             </div>
+             <p>
+              To optimize CPU and battery usage, Flash Player 10.1 introduces
+a new feature on related to inactive instances. This feature allows
+you to limit CPU usage by pausing and resuming the SWF file when
+content goes off and on the screen. With this feature, Flash Player
+releases as much memory as possible by removing any objects that
+can be recreated when the playing of content is resumed. Content
+is considered offscreen when the entire content is offscreen.
+             </p>
+             <p>
+              Two scenarios cause the SWF content to be offscreen:
+             </p>
+             <ul>
+              <li>
+               <p>
+                The user scrolls the page and causes the SWF content
+to move offscreen.
+               </p>
+               <p>
+                In this case, if there is any audio or
+video playback, content continues to play, but rendering is stopped.
+If there is no audio or video playing, to ensure that the playback
+or ActionScript execution is not paused, set the
+                <samp class="codeph">
+                 hasPriority
+                </samp>
+                HTML
+parameter to true. However, keep in mind that SWF content rendering is
+paused when content is offscreen or hidden, regardless of the value
+of the
+                <samp class="codeph">
+                 hasPriority
+                </samp>
+                HTML parameter.
+               </p>
+              </li>
+              <li>
+               <p>
+                A tab is opened in the browser, which causes the SWF content
+to move to the background.
+               </p>
+               <p>
+                In this case, regardless of the
+value of the
+                <samp class="codeph">
+                 hasPriority
+                </samp>
+                HTML tag, the SWF content
+is slowed down, or
+                <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                 throttled
+                </i>
+                , to between 2 and 8 fps. Audio
+and video playback is stopped and no content rendering is processed
+unless the SWF content becomes visible again.
+               </p>
+              </li>
+             </ul>
+             <p>
+              For Flash Player 11.2 and later running on Windows and Mac desktop
+browsers, you can use the ThrottleEvent in your application. Flash
+Player dispatches a ThrottleEvent when Flash Player pauses, throttles,
+or resumes play.
+             </p>
+             <p>
+              The ThrottleEvent is a broadcast event, which means that it is
+dispatched by all EventDispatcher objects with a listener registered
+for this event. For more information about broadcast events, see
+the
+              <a href="../../FlashPlatform/reference/actionscript/3/flash/display/DisplayObject.html" target="_self">
+               DisplayObject
+              </a>
+              class.
+             </p>
+            </div>
+           </div>
+           <div class="nochunk" id="WS4bebcd66a74275c36cfb8137124318eebc6-7ffd">
+            <a name="WS4bebcd66a74275c36cfb8137124318eebc6-7ffd">
+             <!-- -->
+            </a>
+            <h3 class="topictitle3">
+             Instance management
+            </h3>
+            <div>
+             <div class="note">
+              <span class="notetitle">
+               Note:
+              </span>
+              The instance management feature does not apply to Adobe® AIR® applications.
+             </div>
+             <div class="tip">
+              <img src="images/tip_help.png"/>
+              Use the
+              <samp class="codeph">
+               hasPriority
+              </samp>
+              HTML parameter
+to delay loading of offscreen SWF files.
+             </div>
+             <p>
+              Flash Player 10.1 introduces a new HTML parameter called
+              <samp class="codeph">
+               hasPriority
+              </samp>
+              :
+             </p>
+             <pre>&lt;param name="hasPriority" value="true" /&gt;</pre>
+             <p>
+              This feature limits the number of Flash Player instances that
+are started on a page. Limiting the number of instances helps conserve
+CPU and battery resources. The idea is to assign a specific priority
+to SWF content, giving some content priority over other content
+on a page. Consider a simple example: a user is browsing a website
+and the index page hosts three different SWF files. One of them
+is visible, another one is partially visible onscreen, and the last
+one is offscreen, requiring scrolling. The first two animations
+are started normally, but the last one is deferred until it becomes
+visible. This scenario is the default behavior when the
+              <samp class="codeph">
+               hasPriority
+              </samp>
+              parameter
+is not present or set to
+              <samp class="codeph">
+               false
+              </samp>
+              . To ensure that
+a SWF file is started, even if it is offscreen, set the
+              <samp class="codeph">
+               hasPriority
+              </samp>
+              parameter
+to
+              <samp class="codeph">
+               true
+              </samp>
+              . However, regardless of the value of the
+              <samp class="codeph">
+               hasPriority
+              </samp>
+              parameter,
+a SWF file that is not visible to the user always has its rendering
+paused.
+             </p>
+             <div class="note">
+              <span class="notetitle">
+               Note:
+              </span>
+              If available CPU resources become low, Flash
+Player instances are no longer started automatically, even if the
+              <samp class="codeph">
+               hasPriority
+              </samp>
+              parameter
+is set to
+              <samp class="codeph">
+               true
+              </samp>
+              . If new instances are created through
+JavaScript after the page has been loaded, those instances will
+ignore the
+              <samp class="codeph">
+               hasPriority
+              </samp>
+              flag. Any 1x1 pixel or 0x0
+pixel content is started, preventing helper SWF files from being
+deferred if the webmaster fails to include the
+              <samp class="codeph">
+               hasPriority
+              </samp>
+              flag.
+SWF files can still be started when clicked, however. This behavior
+is called “click to play.”
+             </div>
+             <p>
+              The following diagrams show the effects of setting the
+              <samp class="codeph">
+               hasPriority
+              </samp>
+              parameter
+to different values:
+             </p>
+             <p>
+              <div class="fignone" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+               <img alt="" id="oc_haspriority_setting_false" src="images/oc_haspriority_setting_false.png"/>
+               <div class="figdesc">
+                Effects of different values for the hasPriority parameter
+               </div>
+              </div>
+             </p>
+             <p>
+              <div class="fignone" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+               <img alt="" id="oc_haspriority_setting_true" src="images/oc_haspriority_setting_true.png"/>
+               <div class="figdesc">
+                Effects of different values for the hasPriority parameter
+               </div>
+              </div>
+             </p>
+            </div>
+           </div>
+          </div>
+          <div class="nochunk" id="WS4bebcd66a74275c36cfb8137124318eebc6-7fff">
+           <a name="WS4bebcd66a74275c36cfb8137124318eebc6-7fff">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            Sleep mode
+           </h2>
+           <div>
+            <p>
+             Flash Player 10.1 and AIR 2.5 introduce a new feature on mobile
+devices that helps save CPU processing, and as a result, battery
+life. This feature involves the backlight found on many mobile devices.
+For example, if a user running a mobile application is interrupted
+and stops using the device, the runtime detects when the backlight
+goes into sleep mode. It then drops the frame rate to 4 frames per second
+(fps), and pauses rendering. For AIR applications, sleep mode also
+begins when the application moves to the background.
+            </p>
+            <p>
+             ActionScript code continues to execute in sleep mode, similar
+to setting the
+             <samp class="codeph">
+              Stage.frameRate
+             </samp>
+             property to 4 fps.
+But the rendering step is skipped, so the user cannot see that the
+player is running at 4 fps. A frame rate of 4 fps was chosen, rather
+than zero, because it allows all the connections to remain open (NetStream,
+Socket, and NetConnection). Switching to zero would break open connections.
+A 250 ms refresh rate was chosen (4 fps) because many device manufacturers
+use this frame rate as their refresh rate. Using this value keeps
+the frame rate of the runtime in the same ballpark as the device
+itself.
+            </p>
+            <div class="note">
+             <span class="notetitle">
+              Note:
+             </span>
+             When the runtime is in sleep mode, the
+             <samp class="codeph">
+              Stage.frameRate
+             </samp>
+             property returns
+the frame rate of the original SWF file, rather than 4 fps.
+            </div>
+            <p>
+             When the backlight goes back into on mode, rendering is resumed.
+The frame rate returns to its original value. Consider a media player
+application in which a user is playing music. If the screen goes
+into sleep mode, the runtime responds based on the type of content
+being played. Here is a list of situations with the corresponding
+runtime behavior:
+            </p>
+            <ul>
+             <li>
+              <p>
+               The backlight goes into sleep mode and non-A/V content
+is playing: The rendering is paused and the frame rate is set to
+4 fps.
+              </p>
+             </li>
+             <li>
+              <p>
+               The backlight goes into sleep mode and A/V content is playing:
+the runtime forces the backlight to be always on, continuing the
+user experience.
+              </p>
+             </li>
+             <li>
+              <p>
+               The backlight goes from sleep mode to on mode: the runtime
+sets the frame rate to the original SWF file frame rate setting
+and resumes rendering.
+              </p>
+             </li>
+             <li>
+              <p>
+               Flash Player is paused while A/V content is played: Flash
+Player resets the backlight state to the default system behavior
+because A/V is no longer playing.
+              </p>
+             </li>
+             <li>
+              <p>
+               Mobile device receives a phone call while A/V content is
+played: The rendering is paused and the frame rate is set to 4 fps.
+              </p>
+             </li>
+             <li>
+              <p>
+               The backlight sleep mode is disabled on a mobile device:
+the runtime behaves normally.
+              </p>
+             </li>
+            </ul>
+            <p>
+             When the backlight goes into sleep mode, rendering pauses and
+the frame rate slows down. This feature saves CPU processing, but
+it cannot be relied upon on to create a real pause, as in a game
+application.
+            </p>
+            <div class="note">
+             <span class="notetitle">
+              Note:
+             </span>
+             No ActionScript event is dispatched when the runtime enters
+or leaves sleep mode.
+            </div>
+            <ul class="navlinklist">
+            </ul>
+           </div>
+          </div>
+          <div class="nochunk" id="WS4bebcd66a74275c36cfb8137124318eebc6-7ffc">
+           <a name="WS4bebcd66a74275c36cfb8137124318eebc6-7ffc">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            Freezing and unfreezing objects
+           </h2>
+           <div>
+            <div class="tip">
+             <img src="images/tip_help.png"/>
+             Freeze and unfreeze objects properly by
+using the
+             <samp class="codeph">
+              REMOVED_FROM_STAGE
+             </samp>
+             and
+             <samp class="codeph">
+              ADDED_TO_STAGE
+             </samp>
+             events.
+            </div>
+            <p>
+             To optimize your code, always freeze and unfreeze your objects.
+Freezing and unfreezing are important for all objects, but are especially
+important for display objects. Even if display objects are no longer
+in the display list and are waiting to be garbage collected, they
+could still be using CPU-intensive code. For example, they can still
+be using Event.ENTER_FRAME. As a result, it is critical to freeze
+and unfreeze objects properly with the
+             <samp class="codeph">
+              Event.REMOVED_FROM_STAGE
+             </samp>
+             and
+             <samp class="codeph">
+              Event.ADDED_TO_STAGE
+             </samp>
+             events.
+The following example shows a movie clip playing on stage that interacts
+with the keyboard:
+            </p>
+            <div class="para">
+             <pre>// Listen to keyboard events 
+stage.addEventListener(KeyboardEvent.KEY_DOWN, keyIsDown); 
+stage.addEventListener(KeyboardEvent.KEY_UP, keyIsUp); 
+  
+// Create object to store key states 
+var keys:Dictionary = new Dictionary(true); 
+  
+function keyIsDown(e:KeyboardEvent):void 
+{ 
+    // Remember that the key was pressed 
+    keys[e.keyCode] = true;     
+  
+    if (e.keyCode==Keyboard.LEFT || e.keyCode==Keyboard.RIGHT) 
+    { 
+        runningBoy.play(); 
+    } 
+} 
+  
+function keyIsUp(e:KeyboardEvent):void 
+{ 
+    // Remember that the key was released 
+    keys[e.keyCode] = false; 
+  
+    for each (var value:Boolean in keys) 
+          if ( value ) return; 
+    runningBoy.stop(); 
+} 
+  
+runningBoy.addEventListener(Event.ENTER_FRAME, handleMovement); 
+runningBoy.stop(); 
+  
+var currentState:Number = runningBoy.scaleX; 
+var speed:Number = 15; 
+  
+function handleMovement(e:Event):void 
+{ 
+    if (keys[Keyboard.RIGHT]) 
+    { 
+        e.currentTarget.x += speed; 
+        e.currentTarget.scaleX = currentState;     
+    } else if (keys[Keyboard.LEFT]) 
+    { 
+        e.currentTarget.x -= speed; 
+        e.currentTarget.scaleX = -currentState; 
+    } 
+}</pre>
+            </div>
+            <p>
+             <div class="fignone" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+              <a href="#" onclick="return showHideImage('ou_object_activate_deactivate', this);">
+               View full size graphic
+              </a>
+              <img alt="" id="ou_object_activate_deactivate" src="images/ou_object_activate_deactivate.png"/>
+              <div class="figdesc">
+               Movie clip that interacts with keyboard
+              </div>
+             </div>
+            </p>
+            <p>
+             When the Remove button is clicked, the movie clip is removed
+from the display list:
+            </p>
+            <pre>// Show or remove running boy 
+showBtn.addEventListener (MouseEvent.CLICK,showIt); 
+removeBtn.addEventListener (MouseEvent.CLICK,removeIt); 
+ 
+function showIt (e:MouseEvent):void 
+{ 
+    addChild (runningBoy); 
+} 
+ 
+function removeIt(e:MouseEvent):void 
+{ 
+    if (contains(runningBoy)) removeChild(runningBoy); 
+}</pre>
+            <p>
+             Even when removed from the display list, the movie clip still
+dispatches the
+             <samp class="codeph">
+              Event.ENTER_FRAME
+             </samp>
+             event. The movie
+clip still runs, but it is not rendered. To handle this situation
+correctly, listen to the proper events and remove event listeners,
+to prevent CPU-intensive code from being executed:
+            </p>
+            <pre>// Listen to Event.ADDED_TO_STAGE and Event.REMOVED_FROM_STAGE 
+runningBoy.addEventListener(Event.ADDED_TO_STAGE,activate); 
+runningBoy.addEventListener(Event.REMOVED_FROM_STAGE,deactivate); 
+ 
+function activate(e:Event):void 
+{ 
+    // Restart everything 
+    e.currentTarget.addEventListener(Event.ENTER_FRAME,handleMovement); 
+} 
+ 
+function deactivate(e:Event):void 
+{ 
+    // Freeze the running boy - consumes fewer CPU resources when not shown 
+    e.currentTarget.removeEventListener(Event.ENTER_FRAME,handleMovement); 
+    e.currentTarget.stop(); 
+}</pre>
+            <p>
+             When the Show button is pressed, the movie clip is restarted,
+it listens to
+             <samp class="codeph">
+              Event.ENTER_FRAME
+             </samp>
+             events again, and
+the keyboard correctly controls the movie clip.
+            </p>
+            <div class="note">
+             <span class="notetitle">
+              Note:
+             </span>
+             If a display object is removed from the display
+list, setting its reference to
+             <samp class="codeph">
+              null
+             </samp>
+             after removing
+it does not ensure that the object is frozen. If the garbage collector doesn’t
+run, the object continues to consume memory and CPU processing,
+even though the object is no longer displayed. To make sure that
+the object consumes the least CPU processing possible, make sure
+that you completely freeze it when removing it from the display
+list.
+            </div>
+            <p>
+             Starting with Flash Player 10 and AIR 1.5, the following behavior
+also occurs. If the playhead encounters an empty frame, the display
+object is automatically frozen even if you did not implement any
+freezing behavior.
+            </p>
+            <p>
+             The concept of freezing is also important when loading remote
+content with the Loader class. When using the Loader class with
+Flash Player 9 and AIR 1.0, it was necessary to manually freeze
+content by listening to the
+             <samp class="codeph">
+              Event.UNLOAD
+             </samp>
+             event dispatched
+by the LoaderInfo object. Every object had to be manually frozen, which
+was a non-trivial task. Flash Player 10 and AIR 1.5 introduced an
+important new method on the Loader class called
+             <samp class="codeph">
+              unloadAndStop()
+             </samp>
+             .
+This method allows you to unload a SWF file, automatically freeze
+every object in the loaded SWF file, and force the garbage collector
+to run.
+            </p>
+            <p>
+             In the following code, the SWF file is loaded and then unloaded
+using the
+             <samp class="codeph">
+              unload()
+             </samp>
+             method, which requires more
+processing and manual freezing:
+            </p>
+            <pre>var loader:Loader = new Loader(); 
+ 
+loader.load ( new URLRequest ( "content.swf" ) ); 
+ 
+addChild ( loader ); 
+ 
+stage.addEventListener ( MouseEvent.CLICK, unloadSWF ); 
+ 
+function unloadSWF ( e:MouseEvent ):void 
+{ 
+    // Unload the SWF file with no automatic object deactivation 
+    // All deactivation must be processed manually 
+    loader.unload(); 
+}</pre>
+            <p>
+             A best practice is to use the
+             <samp class="codeph">
+              unloadAndStop()
+             </samp>
+             method,
+which handles the freezing natively and forces the garbage collecting
+process to run:
+            </p>
+            <pre>var loader:Loader = new Loader(); 
+ 
+loader.load ( new URLRequest ( "content.swf" ) ); 
+ 
+addChild ( loader ); 
+ 
+stage.addEventListener ( MouseEvent.CLICK, unloadSWF ); 
+ 
+function unloadSWF ( e:MouseEvent ):void 
+{ 
+    // Unload the SWF file with automatic object deactivation 
+    // All deactivation is handled automatically 
+    loader.unloadAndStop(); 
+}</pre>
+            <p>
+             The following actions occur when the
+             <samp class="codeph">
+              unloadAndStop()
+             </samp>
+             method
+is called:
+            </p>
+            <ul>
+             <li>
+              <p>
+               Sounds are stopped.
+              </p>
+             </li>
+             <li>
+              <p>
+               Listeners registered to the SWF file’s main timeline are
+removed.
+              </p>
+             </li>
+             <li>
+              <p>
+               Timer objects are stopped.
+              </p>
+             </li>
+             <li>
+              <p>
+               Hardware peripheral devices (such as camera and microphone)
+are released.
+              </p>
+             </li>
+             <li>
+              <p>
+               Every movie clip is stopped.
+              </p>
+             </li>
+             <li>
+              <p>
+               Dispatching of
+               <samp class="codeph">
+                Event.ENTER_FRAME
+               </samp>
+               ,
+               <samp class="codeph">
+                Event.FRAME_CONSTRUCTED
+               </samp>
+               ,
+               <samp class="codeph">
+                Event.EXIT_FRAME
+               </samp>
+               ,
+               <samp class="codeph">
+                Event.ACTIVATE
+               </samp>
+               and
+               <samp class="codeph">
+                Event.DEACTIVATE
+               </samp>
+               is stopped.
+              </p>
+             </li>
+            </ul>
+            <ul class="navlinklist">
+            </ul>
+           </div>
+          </div>
+          <div class="nochunk" id="WS948100b6829bd5a6-6752030e12905479288-8000">
+           <a name="WS948100b6829bd5a6-6752030e12905479288-8000">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            Activate and deactivate events
+           </h2>
+           <div>
+            <div class="tip">
+             <img src="images/tip_help.png"/>
+             Use
+             <samp class="codeph">
+              Event.ACTIVATE
+             </samp>
+             and
+             <samp class="codeph">
+              Event.DEACTIVATE
+             </samp>
+             events
+to detect background inactivity and optimize your application appropriately.
+            </div>
+            <p>
+             Two events (
+             <samp class="codeph">
+              Event.ACTIVATE
+             </samp>
+             and
+             <samp class="codeph">
+              Event.DEACTIVATE
+             </samp>
+             )
+can assist you in fine-tuning your application so that it uses the
+fewest CPU cycles possible. These events allow you to detect when
+the runtime gains or loses focus. As a result, code can be optimized
+to react to context changes. The following code listens to both
+events and dynamically changes the frame rate to zero when the application
+loses its focus. For example, the animation can lose focus when
+the user switches to another tab or puts the application into the
+background:
+            </p>
+            <pre>var originalFrameRate:uint = stage.frameRate; 
+var standbyFrameRate:uint = 0; 
+  
+stage.addEventListener ( Event.ACTIVATE, onActivate ); 
+stage.addEventListener ( Event.DEACTIVATE, onDeactivate ); 
+  
+function onActivate ( e:Event ):void 
+{ 
+    // restore original frame rate 
+    stage.frameRate = originalFrameRate; 
+} 
+  
+function onDeactivate ( e:Event ):void 
+{ 
+    // set frame rate to 0 
+    stage.frameRate = standbyFrameRate; 
+}</pre>
+            <p>
+             When the application gains focus again, the frame rate is reset
+to its original value. Instead of changing the frame rate dynamically,
+you could also consider making other optimizations, such as freezing
+and unfreezing objects.
+            </p>
+            <p>
+             The activate and deactivate events allow you to implement a similar
+mechanism to the "Pause and Resume" feature sometimes found on mobile
+devices and Netbooks.
+            </p>
+            <ul class="navlinklist">
+            </ul>
+           </div>
+          </div>
+          <div class="nochunk" id="WS948100b6829bd5a63821f6a2126681c5c57-8000">
+           <a name="WS948100b6829bd5a63821f6a2126681c5c57-8000">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            Mouse interactions
+           </h2>
+           <div>
+            <div class="tip">
+             <img src="images/tip_help.png"/>
+             Consider disabling mouse interactions,
+when possible.
+            </div>
+            <p>
+             When using an interactive object, such as a MovieClip or Sprite
+object, the runtime executes native code to detect and handle mouse
+interactions. Detecting mouse interaction can be CPU-intensive when
+many interactive objects are shown onscreen, especially if they
+overlap. An easy way to avoid this processing is to disable mouse
+interactions on objects that do not require any mouse interaction.
+The following code illustrates the use of the
+             <samp class="codeph">
+              mouseEnabled
+             </samp>
+             and
+             <samp class="codeph">
+              mouseChildren
+             </samp>
+             properties:
+            </p>
+            <pre>// Disable any mouse interaction with this InteractiveObject 
+myInteractiveObject.mouseEnabled = false; 
+const MAX_NUM:int = 10; 
+  
+// Create a container for the InteractiveObjects 
+var container:Sprite = new Sprite(); 
+  
+for ( var i:int = 0; i&lt; MAX_NUM; i++ ) 
+{ 
+    // Add InteractiveObject to the container 
+    container.addChild( new Sprite() ); 
+} 
+  
+// Disable any mouse interaction on all the children 
+container.mouseChildren = false;</pre>
+            <p>
+             When possible, consider disabling mouse interaction, which helps
+your application to use less CPU processing, and as a result, reduce
+battery usage on mobile devices.
+            </p>
+            <ul class="navlinklist">
+            </ul>
+           </div>
+          </div>
+          <div class="nochunk" id="WS4bebcd66a74275c36cfb8137124318eebc6-7ffb">
+           <a name="WS4bebcd66a74275c36cfb8137124318eebc6-7ffb">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            Timers versus ENTER_FRAME events
+           </h2>
+           <div>
+            <div class="tip">
+             <img src="images/tip_help.png"/>
+             Choose either timers or
+             <samp class="codeph">
+              ENTER_FRAME
+             </samp>
+             events,
+depending on whether content is animated.
+            </div>
+            <p>
+             Timers are preferred over
+             <samp class="codeph">
+              Event.ENTER_FRAME
+             </samp>
+             events
+for non-animated content that executes for a long time.
+            </p>
+            <p>
+             In ActionScript 3.0, there are two ways of calling a function
+at specific intervals. The first approach is to use the
+             <samp class="codeph">
+              Event.ENTER_FRAME
+             </samp>
+             event
+dispatched by display objects (DisplayObject). The second approach
+is to use a timer. ActionScript developers frequently use the
+             <samp class="codeph">
+              ENTER_FRAME
+             </samp>
+             event
+approach. The
+             <samp class="codeph">
+              ENTER_FRAME
+             </samp>
+             event is dispatched on
+every frame. As a result, the interval at which the function is
+called is related to the current frame rate. The frame rate is accessible
+through the
+             <samp class="codeph">
+              Stage.frameRate
+             </samp>
+             property. However,
+in some cases, using a timer can be a better choice than using the
+             <samp class="codeph">
+              ENTER_FRAME
+             </samp>
+             event.
+For example, if you don’t use animation, but would like your code
+called at specific intervals, using a timer can be a better choice.
+            </p>
+            <p>
+             A timer can behave in a similar way to an
+             <samp class="codeph">
+              ENTER_FRAME
+             </samp>
+             event,
+but an event can be dispatched without being tied to the frame rate.
+This behavior can offer some significant optimization. Consider
+a video player application as an example. In this case, you do not
+need to use a high frame rate, because only the application controls
+are moving.
+            </p>
+            <div class="note">
+             <span class="notetitle">
+              Note:
+             </span>
+             The frame rate does not affect the video, because the video
+is not embedded in the timeline. Instead, the video is loaded dynamically
+through progressive downloading or streaming.
+            </div>
+            <p>
+             In this example, the frame rate is set to a low value of 10 fps.
+The timer updates the controls at a rate of one update per second.
+The higher update rate is made possible by the
+             <samp class="codeph">
+              updateAfterEvent()
+             </samp>
+             method,
+which is available on the TimerEvent object. This method forces
+the screen to be updated each time the timer dispatches an event,
+if needed. The following code illustrates the idea:
+            </p>
+            <pre>// Use a low frame rate for the application 
+stage.frameRate = 10; 
+  
+// Choose one update per second 
+var updateInterval:int = 1000; 
+var myTimer:Timer = new Timer(updateInterval,0); 
+  
+myTimer.start(); 
+myTimer.addEventListener( TimerEvent.TIMER, updateControls ); 
+  
+function updateControls( e:TimerEvent ):void 
+{ 
+    // Update controls here 
+    // Force the controls to be updated on screen 
+    e.updateAfterEvent(); 
+}</pre>
+            <p>
+             Calling the
+             <samp class="codeph">
+              updateAfterEvent()
+             </samp>
+             method does not
+modify the frame rate. It just forces the runtime to update the
+content onscreen that has changed. The timeline still runs at 10
+fps. Remember that timers and
+             <samp class="codeph">
+              ENTER_FRAME
+             </samp>
+             events
+are not perfectly accurate on low performance devices, or if event
+handler functions contain code that requires heavy processing. Just
+like the SWF file frame rate, the update frame rate of the timer
+can vary in some situations.
+            </p>
+            <div class="section">
+             <div class="tip">
+              <img src="images/tip_help.png"/>
+              Minimize the number of Timer objects
+and registered
+              <samp class="codeph">
+               enterFrame
+              </samp>
+              handlers in your application.
+             </div>
+             <p>
+              Each
+frame, the runtime dispatches an
+              <samp class="codeph">
+               enterFrame
+              </samp>
+              event
+to each display object in its display list. Although you can register
+listeners for the
+              <samp class="codeph">
+               enterFrame
+              </samp>
+              event with multiple
+display objects, doing so means that more code is executed each
+frame. Instead, consider using a single centralized
+              <samp class="codeph">
+               enterFrame
+              </samp>
+              handler that
+executes all the code that is to run each frame. By centralizing
+this code, it is easier to manage all the code that is running frequently.
+             </p>
+             <p>
+              Likewise,
+if you’re using Timer objects, there is overhead associated with
+creating and dispatching events from multiple Timer objects. If
+you must trigger different operations at different intervals, here
+are some suggested alternatives:
+             </p>
+             <ul>
+              <li>
+               <p>
+                Use a minimal number
+of Timer objects and group operations according to how frequently
+they happen.
+               </p>
+               <p>
+                For example, use one Timer for frequent operations,
+set to trigger every 100 milliseconds. Use another Timer for less-frequent
+or background operations, set to trigger every 2000 milliseconds.
+               </p>
+              </li>
+              <li>
+               <p>
+                Use a single Timer object, and have operations triggered
+at multiples of the Timer object’s
+                <samp class="codeph">
+                 delay
+                </samp>
+                property
+interval.
+               </p>
+               <p>
+                For example, suppose you have some operations that
+are expected to happen every 100 milliseconds, and others that you
+want to happen every 200 milliseconds. In that case, use a single
+Timer object with a
+                <samp class="codeph">
+                 delay
+                </samp>
+                value of 100 milliseconds.
+In the
+                <samp class="codeph">
+                 timer
+                </samp>
+                event handler, add a conditional statement
+that only runs the 200-millisecond operations every other time.
+The following example demonstrates this technique:
+               </p>
+               <pre>var timer:Timer = new Timer(100); 
+timer.addEventListener(TimerEvent.Timer, timerHandler); 
+timer.start(); 
+     
+var offCycle:Boolean = true; 
+  
+function timerHandler(event:TimerEvent):void 
+{ 
+    // Do things that happen every 100 ms 
+     
+    if (!offCycle) 
+    { 
+        // Do things that happen every 200 ms 
+    } 
+     
+    offCycle = !offCycle; 
+}</pre>
+              </li>
+             </ul>
+            </div>
+            <div class="section">
+             <div class="tip">
+              <img src="images/tip_help.png"/>
+              Stop Timer objects when not in use.
+             </div>
+             <p>
+              If
+a Timer object’s
+              <samp class="codeph">
+               timer
+              </samp>
+              event handler only performs
+operations under certain conditions, call the Timer object’s
+              <samp class="codeph">
+               stop()
+              </samp>
+              method
+when none of the conditions are true.
+             </p>
+            </div>
+            <div class="section">
+             <div class="tip">
+              <img src="images/tip_help.png"/>
+              In
+              <samp class="codeph">
+               enterFrame
+              </samp>
+              event
+or Timer handlers, minimize the number of changes to the appearance
+of display objects that cause the screen to be redrawn.
+             </div>
+             <p>
+              Each
+frame, the rendering phase redraws the portion of the stage that
+has changed during that frame. If the redraw region is large, or
+if it’s small but contain a large quantity or complex display objects,
+the runtime needs more time for rendering. To test the amount of
+redrawing required, use the “show redraw regions” feature in the
+debug Flash Player or AIR.
+             </p>
+            </div>
+            <div class="section">
+             <p>
+              For more information about improving performance for
+repeated actions, see the following article:
+             </p>
+             <ul>
+              <li>
+               <p>
+                <a href="http://arno.org/arnotify/2009/05/writing-well-behaved-efficient-air-applications/" target="_self">
+                 Writing well-behaved, efficient, AIR applications
+                </a>
+                (article
+and sample application by Arno Gourdol)
+               </p>
+              </li>
+             </ul>
+            </div>
+            <ul class="navlinklist">
+            </ul>
+           </div>
+          </div>
+          <div class="nochunk" id="WS4bebcd66a74275c36cfb8137124318eebc6-7ffa">
+           <a name="WS4bebcd66a74275c36cfb8137124318eebc6-7ffa">
+            <!-- -->
+           </a>
+           <h2 class="topictitle2">
+            Tweening syndrome
+           </h2>
+           <div>
+            <div class="tip">
+             <img src="images/tip_help.png"/>
+             To save CPU power, limit the use of tweening,
+which saves CPU processing, memory, and battery life.
+            </div>
+            <p>
+             Designers and developers producing content for Flash on the desktop
+tend to use many motion tweens in their applications. When producing
+content for mobile devices with low performance, try to minimize
+the use of motion tweens. Limiting their use helps content run faster
+on low-tier devices.
+            </p>
+            <ul class="navlinklist">
+            </ul>
+           </div>
+          </div>
+          <!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+          <!-- END USER PREFERENCES -->
+          <div id="related">
+           <div id="relatedlinkinfo">
+            More Help topics
+           </div>
+           <div>
+            <p>
+             <a href="WS948100b6829bd5a61c0b0b612763986266-8000.html">
+              Application frame rate
+             </a>
+            </p>
+            <p>
+             <a href="WS4bebcd66a74275c36c11f3d612431904db9-7ffa.html">
+              Isolating behaviors
+             </a>
+            </p>
+           </div>
+           <div class="separator">
+            <a href="#top">
+             <img src="images/BTT.jpg"/>
+            </a>
+           </div>
+          </div>
+          <div id="footer">
+           <!-- BEGIN IONCOMMENTS -->
+           <div id="ionComHere">
+           </div>
+           <!-- END IONCOMMENTS -->
+           
+
+           <p id="creativecommons">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" id="creativecommons_text">
+             <img alt="This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License" id="creativecommons_img" src="images/CC.png"/>
+            </a>
+            Twitter™ and Facebook posts are not covered under the terms of Creative Commons.
+           </p>
+          </div>
+         </td>
+         <td width="10px">
+         </td>
+         <td id="inner_rightcolumn">
+          
+         </td>
+        </tr>
+       </table>
+      </div>
+      <!-- BEGIN BREADCRUMBS -->
+      <div id="breadcrumb">
+       <ul class="navigation">
+        <li class="prev">
+         <a accesskey="p" class="prev" href="WS948100b6829bd5a6d20da321260fed8a52-8000.html" title="Event model versus callbacks">
+          <img alt="Previous" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+        <li class="next">
+         <a accesskey="n" class="next" href="WS4bebcd66a74275c3a0f5f19124318fc87b-8000.html" title="ActionScript 3.0 performance">
+          <img alt="Next" height="17" src="images/blank.gif" width="17"/>
+         </a>
+        </li>
+       </ul>
+       <div class="hierarchy" id="hierarchy">
+        <a href="WS9936fa0d5984e93b3d2e9c9412725f53fd1-8000.html">
+         <b>
+          Home
+         </b>
+        </a>
+        /
+        <a href="WS9936fa0d5984e93b3d2e9c9412725f53fd1-8000.html">
+         <b>
+          Optimizing Performance for the Flash Platform
+         </b>
+        </a>
+       </div>
+      </div>
+      <!-- END BREADCRUMBS -->
+      <!-- END CONTENT WRAPPER -->
+      
+     </td>
+     <td id="col3">
+      <div>
+       <img src="images/adobe-lq.png"/>
+      </div>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!-- END PAGE CONTENT WRAPPER -->
+  <script type="text/javascript">
+   <!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+  </script>
+  <!--
+    Description:
+    This file generates the link to product support in the top right corner
+-->
+
+<style>
+#menutop{
+    position:absolute;
+    top:4px;
+    right:24px;
+    width:auto;    
+    font-size:11px;
+    color:#fff;
+    text-align:right;
+}
+#menutop a{
+    color:#fff;
+}
+#menutop a:hover{
+        text-decoration:underline;
+}
+</style>  
+  
+  
+  
+  
+<div id="productmenu">
+<!--googleoff: index-->
+  <div id="menutop">
+
+
+<script language=javascript type='text/javascript'>
+    // darken menu text for products with light backgrounds
+    var path = document.location.href.toLowerCase();
+    if (path.indexOf("/acrobat/")           	> 0 ||
+        path.indexOf("/acrobat.com/")       	> 0 ||
+        path.indexOf("/acrobatConnectPro/") 	> 0 ||
+        path.indexOf("/connect/")           	> 0 ||
+        path.indexOf("/framemaker/")           	> 0 ||
+        path.indexOf("/livecycledataserviceses/") > 0 ||
+        path.indexOf("/muse/")         	> 0 ||
+		path.indexOf("/presenter/")         	> 0 ||
+        path.indexOf("/scene7/")            	> 0 ||
+        path.indexOf("/flashmediaserver/")  	> 0 ||
+        path.indexOf("/wave/")              	> 0 )
+    {
+        document.write('<style>#menutop a{color:#505050}</style>');
+    }
+    if (typeof('terms_AHV_PRODUCT_SUPPORT') != "undefined" && ! use_robohelp_behavior ){      
+        if (path.indexOf("/muse/") > -1 ){
+            var supportlink = '<a href="http://muse.adobe.com/support.html">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }else{
+            var supportlink = '<a href="http://adobe.com/support">'+terms_AHV_PRODUCT_SUPPORT+'</a>';
+        }
+        document.write( supportlink );
+     }
+
+</script> 
+
+  </div>
+<!--googleon: index-->
+</div>
+
+
+
+  <style>
+#online-privacy-policy{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+<p id="online-privacy-policy">
+<script language="javascript">
+var pageLoc = "en_US";
+var metaElements = document.all ?
+document.all.tags('meta') :
+document.getElementsByTagName ?
+document.getElementsByTagName ('meta') : new Array();
+for (var m = 0; m < metaElements.length; m++) {
+	if (metaElements[m].name == "lang") {
+		pageLoc = metaElements[m].content;
+		break;
+	}
+}
+var ptn = /(..)-(..)/;
+if (ptn.test(pageLoc)) {
+	var languageCode = pageLoc.replace(ptn, "$1");
+	var countryCode = pageLoc.replace(ptn, "$2");
+	pageLoc = languageCode + "_" + countryCode.toUpperCase();
+}
+
+var policyLoc = "en_US";
+var policyText = "Online Privacy Policy";
+var policyPath = "";
+var policyArray=[
+"da_DK", "Online fortrolighedserklæring",
+"de_DE", "Online-Datenschutzrichtlinie",
+"es_ES", "Política de confidencialidad en línea",
+"fi_FI", "Yksityisyyttä koskeva Online-toimintaohjelma",
+"fr_FR", "Confidentialité et sécurité",
+"it_IT", "Informativa sulla privacy online",
+"ja_JP", "プライバシーポリシー",
+"ko_KR", "Adobe 온라인 개인정보 보호정책",
+"pt_BR", "Política de Confidencialidade On-line", 
+"zh_CN", "在线隐私政策",
+"zh_TW", "線上隱私政策"
+];
+var legalLoc = "en_US";
+var legalText = "Legal Notices";
+var legalPath = legalLoc;
+var legalArray=[
+"ar_AE", "إشعارات قانونية",
+"bg_BG", "Юридически бележки",
+"cs_CZ", "Právní upozornění",
+"da_DK", "Juridiske meddelelser",
+"de_DE", "Rechtliche Hinweise",
+"el_GR", "Σημειώσεις νομικού περιεχομένου",
+"es_ES", "Avisos legales",
+"et_EE", "Juriidilised teated",
+"fi_FI", "Lakisääteiset ilmoitukset",
+"fr_FR", "Mentions légales",
+"he_IL", "הצהרות משפטיות",
+"hr_HR", "Pravne napomene",
+"hu_HU", "Jogi közlemények",
+"it_IT", "Informazioni legali",
+"ja_JP", "法律上の注意",
+"ko_KR", "법적 고지 사항",
+"lt_LT", "Teisinės pastabos",
+"lv_LV", "Juridisks paziņojums",
+"nb_NO", "Juridiske merknader",
+"nl_NL", "Juridische kennisgevingen",
+"pl_PL", "Informacje prawne",
+"pt_BR", "Aspectos jurídicos",
+"ro_RO", "Prevederi legale",
+"ru_RU", "Юридическая информация",
+"sk_SK", "Právne upozornenie",
+"sl_SI", "Pravni pouk",
+"sv_SE", "Upphovsrätt",
+"tr_TR", "Yasal uyarılar",
+"uk_UA", "Юридична інформація",
+"zh_CN", "法律声明",
+"zh_TW", "法律注意事項"
+];
+
+ruPolicy = "http://www.adobe.com/ru/misc/privacy.html";
+trPolicy = "http://www.adobe.com/tr/misc/privacy.html";
+
+// Bug 2846992: LOC: RUS, TUR: The link to "Online Privacy Policy" should include language, currently it is not appearing.
+if (pageLoc == "ru_RU") {
+	policyPath = "ru";
+}
+else if (pageLoc == "tr_TR") {
+	policyPath = "tr";
+}
+for (var i = 0; i < policyArray.length; i+=2) {
+	if (pageLoc == policyArray[i]) {
+		policyLoc = pageLoc;
+		policyText = policyArray[i+1];
+		var ptn = /(..)_(..)/;
+		if (ptn.test(policyLoc)) {
+			var countryCode = policyLoc.replace(ptn, "$2");
+			policyPath = countryCode.toLowerCase();
+		}
+		break;
+	}
+}
+
+for (var i = 0; i < legalArray.length; i+=2) {
+	if (pageLoc == legalArray[i]) {
+		legalLoc = pageLoc;
+		legalText = legalArray[i+1];
+		legalPath = legalLoc;
+		break;
+	}
+}
+if(agt.indexOf("community help client") > -1 ){
+	document.write('<a href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+}else{
+	//Open the privacy policy in a new window
+	document.write('<a target="_blank" href="/'+legalPath+'/legalnotices/index.html">'+legalText+'<\/a>');
+	document.write(' | ');
+	document.write('<a target="_blank" href="http://www.adobe.com/'+policyPath+'/misc/privacy.html">'+policyText+'<\/a>');
+} 
+
+
+remove_all_cookies();
+
+function remove_all_cookies() {
+	var res = document.cookie;
+    var multiple = res.split(";");
+    for(var i = 0; i < multiple.length; i++) {
+    	var key = multiple[i].split("=");
+        document.cookie = key[0]+" =; expires = Thu, 01 Jan 1970 00:00:00 UTC";
+    }
+}
+
+
+</script>
+</p>
+
+
+  
+<!-- localfooter.ssi -->
+
+<script type="text/javascript">
+    var debug = (top.location.href.indexOf("debug=true") > -1);
+</script>
+
+<script language="javascript">
+document.write('<scr'+'ipt ' +
+               'src="/en_US/ssi/_pod.js" ' +
+               'language="javascript" ' +
+               'charset="UTF-8"> ' +
+               '</scr'+'ipt>');
+</script>
+
+//  Ethnio survey code removed
+  
+  
+ </body>
+</html>

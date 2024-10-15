@@ -1,0 +1,879 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"><html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9"><meta name="book" content="Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers"><meta name="lang" content="en-us"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><link rel="stylesheet" href="../../ion.css" type="text/css"><meta name="keywords" content="XMLSignatureValidator,flash.security.XMLSignatureValidator,digestStatus,identityStatus,isSupported,referencesStatus,referencesValidationSetting,revocationCheckSetting,signerCN,signerDN,signerExtendedKeyUsages,signerTrustSettings,uriDereferencer,useSystemTrustStore,validityStatus,addCertificate,verify"><title>flash.security.XMLSignatureValidator - Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers</title>
+	<link rel="stylesheet" href="../../jslr-style.css" type="text/css">
+		<script type="text/javascript">
+			
+				var baseRef = "../../";
+				var buildType = 'jslr';
+				var alreadyrunflag=0; //flag to indicate whether target function has already been run
+				var terms_HELPCFG = ".helpcfg";
+
+if (document.addEventListener)
+  document.addEventListener("DOMContentLoaded", function(){alreadyrunflag=1; init()}, false)
+else if (document.all && !window.opera){
+  /* blocks IE from working, as it's fired before dom if ready
+ document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
+  var contentloadtag=document.getElementById("contentloadtag")
+  contentloadtag.onreadystatechange=function(){
+    if (this.readyState=="complete"){
+      alreadyrunflag=1;
+      init();
+    }
+  }*/
+} else if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+  var _timer=setInterval(function(){
+  if(/loaded|complete/.test(document.readyState)){
+    clearInterval(_timer);
+    alreadyrunflag=1;
+    init(); // call target function
+  }}, 10)
+}
+function onLoadFunction() {
+	setTimeout("if (!alreadyrunflag) init();  alreadyrunflag=1; ionReadyLoad(); ", 0);
+}
+
+		</script>
+		<script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+		<script language="javascript" type="text/javascript" src="../../asdoc.js"></script>
+		<!--oss:off-->
+		
+<!-- ********************************** -->
+<!-- START: ForeSee survey code in: /ssi/globalheader.ssi -->
+
+<script type="text/javascript">
+<!-- 
+// Enable the survey for only English, German and Japanese
+var agt=navigator.userAgent.toLowerCase();
+if ( agt.indexOf("community help client") == -1 ){
+    if ( document.location.href.indexOf("/en_US/") != -1 ){
+        showSurvey();
+//    }else if (document.location.href.indexOf("/de_DE/") != -1){
+//         var locale="de";
+//         showSurvey();
+    }else if (document.location.href.indexOf("/ja_JP/") != -1 ){
+         var locale="ja";
+         showSurvey();
+    }	
+}
+
+function showSurvey(){
+	//document.write('<script type="text/javascript" src="/js/foresee/foresee-trigger.js"><\/scr'+'ipt>');
+    // DO NOTHING
+}
+
+// -->
+</script>
+
+<!-- END: ForeSee survey code -->
+<!-- ******************************** -->
+
+
+	</head>
+	<body onLoad="onLoadFunction()">
+		<a name="top"></a>
+		
+		<table class="titleTable" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td>
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr>
+				  <td class="titleTableTitleION" align="left" nowrap="true">Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers<br>
+				  <span class="titleTableTopNavION">
+				  <span id="homelink">
+						<a target="_self" href="../../index.html"> Home </a>&nbsp;|&nbsp;
+				  </span>
+				  <a id="showtoc" onClick="showHideTOC(true)" href="#top" style="display:none">Show Classes List</a><a id="hidetoc" onClick="showHideTOC(false)" href="#top" style="display:">Hide Classes List</a>&nbsp;|&nbsp;
+				  <a href="../../all-index-A.html"> Index </a>&nbsp;|&nbsp;
+				  <a href="../../appendixes.html"> Appendixes </a><br>
+				  </span>	
+				  </td>
+				  <td class="titleTableSearchION" align="right" nowrap="true">
+				  <span id="gsa" class="gsa">
+					<form class="searchFormION" method="get" onSubmit="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US');return false;">
+				  <input class="hidden" name="loc" value="" type="hidden">
+				  <input class="hidden" name="termPrefix" value="site:help.adobe.com/en_US/AS3CLR/Flash_10.0" type="hidden">
+				  <input class="hidden" name="title" value="ActionScript 3.0 Reference for the Adobe Flash Platform" type="hidden">
+				  <input class="hidden" name="term" value="" type="hidden">
+				  <input class="hidden" name="area" value="" type="hidden">
+				  <input class="searchinput" id="search-livedocs" name="search_text" value="" title="" type="text">
+				  <input type="button" name="action" value="" onClick="submitValue('Adobe&reg;&nbsp;AIR&reg;&nbsp;API Reference&nbsp;for&nbsp;HTML&nbsp;Developers','community.adobe.com/help/search.html','flash_product_adobelr','communityhelp-air-jslr ','en_US')" class="searchbutton"><br>
+			      <input id="checkBoxId" type="checkbox" name="checkbox" value="checkbox" checked>Language Reference only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  </form>
+				  </span>				  
+				  </td>
+				</tr>
+			  </table>			
+			  </td>
+			<td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logoION.jpg" class="logoImageION" alt=" Adobe Logo " title=" Adobe Logo "></td>
+		  </tr>
+		  <tr>
+			<td colspan="2">
+			  <table class="titleTable" cellpadding="0" cellspacing="0">
+				<tr class="titleTableRow2">
+				<td class="titleTableSubTitle" id="subTitle" align="left" colspan="2">
+					<convert>XMLSignatureValidator&nbsp;</convert>
+				</td>
+				<td class="titleTableSubNav" id="subNav" align="right">
+				  <a id="propertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="propertiesBar" style="display:none"> | </span>
+				  <a id="packagePropertiesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('propertySummary');" style="display:none"> Properties </a>
+				  <span id="packagePropertiesBar" style="display:none"> | </span>
+				  <a id="constructorLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constructorSummary');" style="display:none"> Constructor </a>
+				  <span id="constructorBar" style="display:none"> | </span>
+				  <a id="methodsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Methods </a>
+				  <span id="methodsBar" style="display:none"> | </span>
+				  <a id="packageFunctionsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('methodSummary');" style="display:none"> Functions </a>
+				  <span id="packageFunctionsBar" style="display:none"> | </span>
+				  <a id="eventsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('eventSummary');" style="display:none"> Events </a>
+				  <span id="eventsBar" style="display:none"> | </span>
+				  <a id="stylesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('styleSummary');" style="display:none"> Styles </a>
+				  <span id="stylesBar" style="display:none"> | </span>
+				  <a id="SkinPartLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinPartSummary');" style="display:none"> Skin Parts </a>
+				  <span id="SkinPartBar" style="display:none"> | </span>
+				  <a id="SkinStateLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('SkinStateSummary');" style="display:none"> Skin States </a>
+				  <span id="SkinStateBar" style="display:none"> | </span>
+				  <a id="effectsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('effectSummary');" style="display:none"> Effects </a>
+				  <span id="effectsBar" style="display:none"> | </span>
+				  <a id="constantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="constantsBar" style="display:none"> | </span>
+				  <a id="packageConstantsLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('constantSummary');" style="display:none"> Constants </a>
+				  <span id="packageConstantsBar" style="display:none"> | </span>
+				  <a id="interfacesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('interfaceSummary');" style="display:none"> Interfaces </a>
+				  <span id="interfacesBar" style="display:none"> | </span>
+				  <a id="classesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('classSummary');" style="display:none"> Classes </a>
+				  <span id="classesBar" style="display:none"> | </span>
+				  <a id="packageUseLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('package-use.html');" style="display:none">Use</a>
+				  <span id="packageUseBar" style="display:none"> | </span>
+				  <a id="examplesLink" href="#top" onClick="javascript:titleBar_gotoClassFrameAnchor('includeExamplesSummary');" style="display:none"> Examples </a>
+				</td>
+				</tr>
+				<tr class="titleTableRow3">
+				  <td colspan="4"></td>
+				</tr>
+			  </table>
+			</td>
+		  </tr>
+		</table>
+        <div class="maincontainer" id="maincontainer" style="display:none">
+			<div class="mainleft" id="toc">
+				<div id="classlist" class="jslrclasslist">
+					<div class="classlistoutline"></div>
+				</div>
+			</div>
+			<div class="splitter" id="splitter" onMouseDown="splitterMouseDown(event, this);" onMouseUp="splitterMouseUp(event);" onMouseMove="splitterMouseMove(event);">
+			</div>
+			<!--oss:on--><div class="mainright" id="content">
+				<div class="content">
+<script language="javascript" type="text/javascript">  <!--  
+         
+        asdocTitle = "XMLSignatureValidator - Adobe® AIR® API Reference for HTML Developers"; 
+        var baseRef = '../../'; 
+	document.baseRef = '../../'; 
+          -->  </script>
+<script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script>
+<script language="javascript" type="text/javascript"><!--
+function submitValue() {
+var title="Adobe® AIR® API Reference for HTML Developers";
+var searchStr=document.getElementById('search-livedocs').value;
+
+        
+        
+        if(document.getElementById('checkBoxId').checked){
+        window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
++"&site=communityhelp-air-jslr ";
+} 
+
+        else{ 
+window.location="http://community.adobe.com/help/search.html?q=" + searchStr
++"&loc=en_US"
++"&hl=en_US"
++"&lbl=flash_product_adobelr"
++"&go=Search"
++"&self=1"
+;
+} 
+} 
+--></script><script type="text/javascript"> scrollToNameAnchor(); </script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">window.runtime property</td><td>window.runtime.flash.security.XMLSignatureValidator</td></tr><tr><td class="classSignature"></td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">XMLSignatureValidator  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../events/EventDispatcher.html">EventDispatcher</a> <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><div id="badgeAnchorSupport" class="ionBadgeWrapper"></div><div id="badgeContainerSupport"></div><p></p><p></p>
+
+	 The XMLSignatureValidator class validates whether an XML 
+
+	 signature file is well formed, unmodified, and, optionally, whether 
+
+	 it is signed using a key linked to a trusted digital certificate.
+
+	 
+
+	 
+
+	 
+
+	 <p>XMLSignatureValidator implements a subset of the 
+
+	 W3C Recommendation for XML-Signature Syntax and Processing and
+
+	 should not be considered a conforming implementation.
+
+ 	 The supported subset of the recommendation includes:</p>
+
+	              <ul>
+                  <li>All of the core signature syntax except KeyInfo element.</li>
+                  <li>The KeyInfo element only supports the X509Data element.</li>
+                  <li>The X509Data element only supports the X509Certificate element.</li>
+                  <li>The SHA256 digest method algorithm.</li>
+                  <li>The PKCS1 signing algorithm.</li>
+                  <li>The "Canonical XML without comments" Canonicalization Method and Transform algorithm.</li>
+                  <li>The Manifest element in additional signature syntax.</li>
+               </ul>
+
+	 
+
+	              <p>You must provide an IURIDereferencer implementation in order to verify an XML signature. This
+
+	 implementation class is responsible for resolving the URIs specified in the SignedInfo 
+
+	 elements of the signature file and returning the referenced data in an object, such 
+
+	 as a ByteArray, that implements the IDataInput interface.</p>
+
+	 
+
+	              <p>In order to verify that the signing certificate chains to a trusted certificate, either 
+
+	 the XML signature must contain the certificates required to build the chain in X509Certificate 
+
+	 elements, or you must supply the certificates required to build the chain using the 
+
+	 <code>addCertificate()</code> method.</p>
+
+	 
+
+	              <p>
+                  <b>To verify an XMLSignature:</b>
+               </p>
+
+	              <ol>
+                  <li>Create an instance of the XMLSignatureValidator class.</li>
+                  <li>Set the <code>uriDereferencer</code> property of the instance to an instance of your
+
+	 IURIDereferencer implementation class.</li>
+                  <li>Supply DER-encoded certificates for building the certificate trust chain, if desired, 
+
+	 using the <code>addCertificate()</code> method.</li>
+                  <li>Call the XMLSignatureValidator <code>verify</code> method, passing in the signature to
+
+	 be verified.</li>
+                  <li>Check the <code>validityStatus</code> property after the XMLSignatureValidator object 
+
+	 dispatches a complete event.</li>
+               </ol>
+
+	 
+
+	              <p>
+                  <b>About signature status:</b>
+               </p>
+
+	              <p>The validity of an XML signature can be valid, invalid, or unknown. The overall
+
+	 status depends on the verification status of the individual components of the signature file:</p>
+
+	              <ul>
+                  <li>
+                     <code>digestStatus</code> &mdash; The validity of the cryptographic of the signature computed over
+
+	 the SignedInfo element. Can be <code>valid</code>, <code>invalid</code>, or <code>unknown</code>.</li>
+                  <li>
+                     <code>identityStatus</code> &mdash; The validity of the signing certificate. If the certificate has 
+
+	 expired, has been revoked, or altered, the status is <code>invalid</code>. If the certificate cannot be chained 
+
+	 to a trusted root certificate, the status is <code>unknown</code>. The certificate is not checked if the  
+
+	 digest is invalid. If not checked, the status will be reported as <code>unknown</code>.</li>
+                  <li>
+                     <code>referencesStatus</code> &mdash; The validity of the data addressed by the references in the
+
+	 SignedInfo element of the signature file. Can be <code>valid</code>, <code>invalid</code>, or
+
+	 <code>unknown</code>. The references are not checked if the digest or certificate is invalid.
+
+	 Reference checking can also be skipped based on the setting of the <code>referencesValidationSetting</code> property. 
+
+	 If not checked, the status will be reported as <code>unknown</code>.</li>
+               </ul>
+
+	              <p>The signature validity reported by the <code>validityStatus</code> property can be:</p>
+
+	              <ul>
+                  <li>
+                     <code>valid</code> &mdash; If <code>referencesStatus</code>, <code>digestStatus</code>, and 
+
+	 <code>identityStatus</code> are all <code>valid</code>.</li>
+                  <li>
+                     <code>invalid</code> &mdash; If any individual status is <code>invalid</code>.</li>
+                  <li>
+                     <code>unknown</code> &mdash; If <code>referencesStatus</code>,  <code>digestStatus</code>, or 
+
+	 <code>identityStatus</code> is <code>unknown</code>.</li>
+               </ul>
+
+	 
+
+	              <p>
+                  <b>Canonicalization limitations:</b>
+               </p>
+
+	              <p>The XML engine in AIR does not always produce the expected XML string when canonicalizing an XML document.
+
+	 For this reason, it is recommended that you avoid putting inter-element whitespace in enveloped or detached signature
+
+	 documents and do not redefine namespaces inside a signature document. In both cases, AIR may not recreate the document
+
+	 with the same character sequence as the original and, therefore, validation will fail.</p>
+
+	   
+
+	           <p></p><br/><hr></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="propertySummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Properties</div><div class="showHideLinks"><div id="hideInheritedProperty" class="hideInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(false,'Property');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Properties</a></div><div id="showInheritedProperty" class="showInheritedProperty"><a class="showHideLink" href="#propertySummary" onclick="javascript:setInheritedVisible(true,'Property');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Properties</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th>Defined By</th></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">constructor : Object<div class="summaryTableDescription">
+
+	 A reference to the class object or constructor function for a given object instance.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#digestStatus" class="signatureLink">digestStatus</a> : String<div class="summaryTableDescription">[read-only] 
+
+	    The validity status of the cryptographic signature computed over the 
+
+	    signature SignedInfo element.</div></td><td class="summaryTableOwnerCol">XMLSignatureValidator</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#identityStatus" class="signatureLink">identityStatus</a> : String<div class="summaryTableDescription">[read-only] 
+
+	    The validity status of the signing certificate.</div></td><td class="summaryTableOwnerCol">XMLSignatureValidator</td></tr><tr class="" runtime="AIR::2##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isSupported" class="signatureLink">isSupported</a> : Boolean<div class="summaryTableDescription">[static] [read-only] 
+
+        The isSupported property is set to true if the 
+
+        XMLSignatureValidator class is supported on the current platform, otherwise it is
+
+        set to false.</div></td><td class="summaryTableOwnerCol">XMLSignatureValidator</td></tr><tr class="hideInheritedProperty" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol">prototype : Object<div class="summaryTableDescription">[static] 
+
+	 A reference to the prototype object of a class or function object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#referencesStatus" class="signatureLink">referencesStatus</a> : String<div class="summaryTableDescription">[read-only] 
+
+	    The validity status of the data in the references in the signature SignedInfo 
+
+	    element.</div></td><td class="summaryTableOwnerCol">XMLSignatureValidator</td></tr><tr class="" runtime="AIR::1.5##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#referencesValidationSetting" class="signatureLink">referencesValidationSetting</a> : String<div class="summaryTableDescription">
+
+	    Specifies the conditions under which references are checked.</div></td><td class="summaryTableOwnerCol">XMLSignatureValidator</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#revocationCheckSetting" class="signatureLink">revocationCheckSetting</a> : String<div class="summaryTableDescription">
+
+	    Specifies how certificate revocation is checked.</div></td><td class="summaryTableOwnerCol">XMLSignatureValidator</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#signerCN" class="signatureLink">signerCN</a> : String<div class="summaryTableDescription">[read-only] 
+
+	   The Common Name field of the signing certificate.</div></td><td class="summaryTableOwnerCol">XMLSignatureValidator</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#signerDN" class="signatureLink">signerDN</a> : String<div class="summaryTableDescription">[read-only] 
+
+	   The Distinguished Name field of the signing certificate.</div></td><td class="summaryTableOwnerCol">XMLSignatureValidator</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#signerExtendedKeyUsages" class="signatureLink">signerExtendedKeyUsages</a> : Array<div class="summaryTableDescription">[read-only] 
+
+	   An array containing the Extended Key Usages OIDs listed in the signing certificate.</div></td><td class="summaryTableOwnerCol">XMLSignatureValidator</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#signerTrustSettings" class="signatureLink">signerTrustSettings</a> : Array<div class="summaryTableDescription">[read-only] 
+
+		An array containing the trust settings of the signing certificate.</div></td><td class="summaryTableOwnerCol">XMLSignatureValidator</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#uriDereferencer" class="signatureLink">uriDereferencer</a> : IURIDereferencer<div class="summaryTableDescription">
+
+	     The IURIDereferencer implementation.</div></td><td class="summaryTableOwnerCol">XMLSignatureValidator</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#useSystemTrustStore" class="signatureLink">useSystemTrustStore</a> : Boolean<div class="summaryTableDescription">
+
+	    Specifies that certificates in the system trust store are used for chain building.</div></td><td class="summaryTableOwnerCol">XMLSignatureValidator</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#validityStatus" class="signatureLink">validityStatus</a> : String<div class="summaryTableDescription">[read-only] 
+
+	    The validity status of a verified XML signature.</div></td><td class="summaryTableOwnerCol">XMLSignatureValidator</td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="methodSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Public Methods </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Public Methods</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th>Defined By</th></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#XMLSignatureValidator()" class="signatureLink">XMLSignatureValidator</a>()</div><div class="summaryTableDescription">
+
+		 Creates an XMLSignatureValidator object.</div></td><td class="summaryTableOwnerCol">XMLSignatureValidator</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#addCertificate()" class="signatureLink">addCertificate</a>(cert:<a href="../utils/ByteArray.html">ByteArray</a>, trusted:Boolean):*</div><div class="summaryTableDescription">
+
+	   Adds an x509 certificate for chain building.</div></td><td class="summaryTableOwnerCol">XMLSignatureValidator</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#addEventListener()" class="signatureLink">addEventListener</a>(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void</div><div class="summaryTableDescription">
+
+	Registers an event listener object with an EventDispatcher object so that the listener 
+
+	receives notification of an event.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../events/Event.html">Event</a>):Boolean</div><div class="summaryTableDescription">
+
+	Dispatches an event into the event flow.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#hasEventListener()" class="signatureLink">hasEventListener</a>(type:String):Boolean</div><div class="summaryTableDescription">
+
+	Checks whether the EventDispatcher object has any listeners registered for a specific type 
+
+	of event.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">hasOwnProperty(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an object has a specified property defined.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">isPrototypeOf(theClass:Object):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+
+	 as the parameter.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">propertyIsEnumerable(name:String):Boolean</div><div class="summaryTableDescription">
+
+	 Indicates whether the specified property exists and is enumerable.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#removeEventListener()" class="signatureLink">removeEventListener</a>(type:String, listener:Function, useCapture:Boolean = false):void</div><div class="summaryTableDescription">
+
+	Removes a listener from the EventDispatcher object.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">setPropertyIsEnumerable(name:String, isEnum:Boolean = true):void</div><div class="summaryTableDescription">
+
+     Sets the availability of a dynamic property for loop operations.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toLocaleString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of this object, formatted according to locale-specific conventions.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">toString():String</div><div class="summaryTableDescription">
+
+	 Returns the string representation of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature">valueOf():Object</div><div class="summaryTableDescription">
+
+	 Returns the primitive value of the specified object.</div></td><td class="summaryTableOwnerCol">Object</td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#verify()" class="signatureLink">verify</a>(signature:XML):void</div><div class="summaryTableDescription">
+
+		Verifies the specified signature.</div></td><td class="summaryTableOwnerCol">XMLSignatureValidator</td></tr><tr class="hideInheritedMethod" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../events/EventDispatcher.html#willTrigger()" class="signatureLink">willTrigger</a>(type:String):Boolean</div><div class="summaryTableDescription">
+
+	Checks whether an event listener is registered with this EventDispatcher object or any of 
+
+	its ancestors for the specified event type.</div></td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr></table></div><a xmlns:xd="http://www.pnp-software.com/XSLTdoc" name="eventSummary"></a><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="summarySection"><div class="summaryTableTitle">Events</div><div class="showHideLinks"><div id="hideInheritedEvent" class="hideInheritedEvent"><a class="showHideLink" href="#eventSummary" onclick="javascript:setInheritedVisible(false,'Event');"><img class="showHideLinkImage" src="../../images/expanded.gif"> Hide Inherited Events</a></div><div id="showInheritedEvent" class="showInheritedEvent"><a class="showHideLink" href="#eventSummary" onclick="javascript:setInheritedVisible(true,'Event');"><img class="showHideLinkImage" src="../../images/collapsed.gif"> Show Inherited Events</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th>Defined By</th></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#event:activate#event:activate" class="signatureLink">activate</a></div></td><td class="summaryTableDescription summaryTableCol">[broadcast event] Dispatched when the Flash Player or AIR application gains operating system focus and becomes active.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:complete" class="signatureLink">complete</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when verification is complete.</td><td class="summaryTableOwnerCol">XMLSignatureValidator</td></tr><tr class="hideInheritedEvent" runtime="Flash::9##Lite::4##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../flash/events/EventDispatcher.html#event:deactivate#event:deactivate" class="signatureLink">deactivate</a></div></td><td class="summaryTableDescription summaryTableCol">[broadcast event] Dispatched when the Flash Player or AIR application operating loses system focus and is becoming inactive.</td><td class="summaryTableOwnerCol"><a href="../events/EventDispatcher.html">EventDispatcher</a></td></tr><tr class="" runtime="AIR::1.0##"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:error" class="signatureLink">error</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched if verification cannot complete because of errors.</td><td class="summaryTableOwnerCol">XMLSignatureValidator</td></tr></table></div><script xmlns:xd="http://www.pnp-software.com/XSLTdoc" language="javascript" type="text/javascript"><!--                      
+                      showHideInherited();                      
+                      --></script><div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="MainContent"><div class="detailSectionHeader">Property Detail</div><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="digestStatus"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>digestStatus</h2></td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>digestStatus:String</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	    The validity status of the cryptographic signature computed over the 
+
+	    signature SignedInfo element.
+
+	    
+
+	    <p>The status is:</p>
+
+	    <ul><li><code>valid</code> &mdash; If signature is cryptographically valid.</li><li><code>invalid</code> &mdash; If the digest has been altered after signing.</li><li><code>unknown</code> &mdash; If the <code>verify()</code> method has not
+
+	    been called.</li></ul>
+
+		
+
+		 <p><b>Note:</b> If the <code>digestStatus</code> is invalid, the <code>identityStatus</code>
+
+		 and <code>referencesStatus</code> are not checked and will be reported as <code>unknown</code>.</p>
+
+		 
+
+		 </p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IllegalOperationError </code> &mdash; If accessed while a signature is being validated.
+
+		 
+
+		 </td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="identityStatus"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>identityStatus</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>identityStatus:String</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	    The validity status of the signing certificate. 
+
+	    
+
+	    <p>The status can be:</p>
+
+	    <ul><li><code>valid</code> &mdash; The certificate has not expired, has not failed a revocation check and chains
+
+	    to a trusted root certificate.</li><li><code>unknown</code> &mdash; The certificate has not expired and has not failed a revocation check, 
+
+	    but does not chain to a trusted root certificate. A status of <code>unknown</code> will also
+
+	    be reported when the status has not been verified, either because the <code>verify()</code> method has not
+
+	    been called or because the cryptographic signature of the SignedInfo element (<code>digestStatus</code>)
+
+	    is invalid.</li><li><code>invalid</code> &mdash; The certificate has expired or fails a revocation check.</li></ul>
+
+	    <p>The certificates added using the <code>addCertificate()</code> method 
+
+	    and the settings of the <code>revocationCheckSetting</code> and the <code>useSystemTrustStore</code>
+
+	    properties can change whether a certificate is considered valid.</p>
+
+	    
+
+		<p><b>Note:</b> If the <code>identityStatus</code> is invalid, the <code>referencesStatus</code> is not checked 
+
+		 and will be reported as <code>unknown</code>. In addition, references are not checked when the <code>identityStatus</code>
+
+		 is unknown unless the <code>referencesValidationSetting</code> is <code>validOrUnknownIdentity</code></p>
+
+		
+
+ 		</p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IllegalOperationError </code> &mdash; If accessed while a signature is being validated.
+
+ 		</td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="XMLSignatureValidator.html#addCertificate()" target="">addCertificate()</a><br/><a href="XMLSignatureValidator.html#revocationCheckSetting" target="">revocationCheckSetting</a><br/><a href="XMLSignatureValidator.html#useSystemTrustStore" target="">useSystemTrustStore</a><br/><a href="XMLSignatureValidator.html#referencesValidationSetting" target="">referencesValidationSetting</a></div></div></span><span id="pageFilter" runtime="AIR::2##"><a name="propertyDetail"></a><a name="isSupported"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>isSupported</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isSupported:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 2 </td></tr></table><p></p><p></p><p>
+
+        The <code>isSupported</code> property is set to <code>true</code> if the 
+
+        XMLSignatureValidator class is supported on the current platform, otherwise it is
+
+        set to <code>false</code>. 
+
+        
+        </p></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="referencesStatus"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>referencesStatus</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>referencesStatus:String</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	    The validity status of the data in the references in the signature SignedInfo 
+
+	    element.
+
+	    
+
+	    <p>The status can be:</p>
+
+	    <ul><li><code>valid</code> &mdash; If all references are valid.</li><li><code>invalid</code> &mdash; If any reference is invalid.</li><li><code>unknown</code> &mdash; If not verified. 
+
+	    References can remain unverified in the following circumstances:
+
+	    <ul><li>the <code>verify()</code> method has not been called</li><li>the cryptographic signature of the SignedInfo element (<code>digestStatus</code>) is invalid.</li><li>the signing certificate (<code>identityStatus</code>) is invalid</li><li><code>referencesValidationSetting</code> is <code>validIdentity</code> (which is the default setting) and 
+
+	    	the <code>identityStatus</code> of the signing certificate is unknown.</li><li>the <code>referencesValidationSetting</code> is <code>never</code>.</li></ul>
+
+	    </li></ul>
+
+		
+
+		 <p><b>Important:</b> External resources are not validated unless they are referenced directly 
+
+		 in a SignedInfo element within the signature document. External resources referred to by a secondary
+
+		 reference are not validated. For example, if an XML signature signs a manifest element, only 
+
+		 the integrity of the manifest element itself is verified. The files listed in the manifest are not
+
+		 checked.</p>
+
+		 
+
+		</p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IllegalOperationError </code> &mdash; If accessed while a signature is being validated.
+
+ 		</td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="XMLSignatureValidator.html#referencesValidationSetting" target="">referencesValidationSetting</a></div></div></span><span id="pageFilter" runtime="AIR::1.5##"><a name="propertyDetail"></a><a name="referencesValidationSetting"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>referencesValidationSetting</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>referencesValidationSetting:String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.5 </td></tr></table><p></p><p></p><p>
+
+	    Specifies the conditions under which references are checked.
+
+		
+
+		 <p>Use constants defined in the ReferencesValidationSetting class to set this property. The
+
+		 settings include:</p>
+
+		 <ul><li><code>ReferencesValidationSetting.VALID_IDENTITY</code> &mdash; Check references only
+
+		 if the signing certificate is valid and chains to a trusted root. This is the default setting.</li><li><code>ReferencesValidationSetting.VALID_OR_UNKNOWN_IDENTITY</code> &mdash; Check references
+
+		 if the signing certificate is valid, even if it does not chain to a trusted root.</li><li><code>ReferencesValidationSetting.NEVER</code> &mdash; Never check references.</li></ul>
+
+		 
+
+		 <p>
+
+		 Use the default, <code>validIdentity</code>, setting with signatures signed with a commercial certificate or when you
+
+		 supply your own certificate as a trust anchor with the <code>addCertificate()</code> method. This
+
+		 setting avoids the overhead of checking reference validity when the signed document will be rejected anyway.
+
+		 </p>
+
+		 <p>
+
+		 Use the <code>validOrUnknownIdentity</code> setting with signatures signed with self-signed certificates. This setting allows you to
+
+		 validate that the signed data has not been altered, but does not provide any assurances about the identity
+
+		 of the signer. 
+
+		 </p>
+
+		 <p>
+
+		 Use the <code>never</code> setting to avoid the overhead of validating references when such validation is not important in the
+
+		 context of your application.
+
+		 </p>
+
+		 </p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IllegalOperationError </code> &mdash; If set while a signature is being validated.
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>ArgumentError </code> &mdash; if the <code>setting</code> parameter contains a value not defined in the ReferencesValidationSetting class.
+
+		 
+
+		</td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="ReferencesValidationSetting.html" target="">ReferencesValidationSetting</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="revocationCheckSetting"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>revocationCheckSetting</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>revocationCheckSetting:String</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	    Specifies how certificate revocation is checked.
+
+		
+
+		 <p>Use constants defined in the RevocationSettings class to set this property. The
+
+		 settings include:</p>
+
+		 <ul><li><code>RevocationCheckSettings.NEVER</code> &mdash; Do not check certificate revocation.</li><li><code>RevocationCheckSettings.BEST_EFFORT</code> &mdash; Check certificate revocation, 
+
+		 if revocation information is available and the revocation status can be obtained. 
+
+		 If revocation status cannot be positively determined, the certificate is not rejected.</li><li><code>RevocationCheckSettings.REQUIRED_IF_AVAILABLE</code> &mdash; If the certificate includes 
+
+		 revocation information, the revocation status must be positively determined to validate 
+
+		 the certificate.</li><li><code>RevocationCheckSettings.ALWAYS_REQUIRED</code> &mdash; Always check certificate revocation. 
+
+		 Certificates without revocation information are rejected.</li></ul>
+
+		 
+
+		 </p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IllegalOperationError </code> &mdash; If set while a signature is being validated.
+
+		</td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="RevocationCheckSettings.html" target="">RevocationCheckSettings</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="signerCN"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>signerCN</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>signerCN:String</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	   The Common Name field of the signing certificate.  
+
+	   
+
+	   </p></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="signerDN"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>signerDN</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>signerDN:String</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	   The Distinguished Name field of the signing certificate.  
+
+	   
+
+	   </p></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="signerExtendedKeyUsages"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>signerExtendedKeyUsages</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>signerExtendedKeyUsages:Array</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	   An array containing the Extended Key Usages OIDs listed in the signing certificate.
+
+	   
+
+	   <p>Each extended key usage is reported in numeric OID form.</p>
+
+	   
+
+	   </p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IllegalOperationError </code> &mdash; If accessed while a signature is being validated.
+
+	   
+
+	   </td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="signerTrustSettings"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>signerTrustSettings</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>signerTrustSettings:Array</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+		An array containing the trust settings of the signing certificate.
+
+		
+
+		<p>Trust settings are derived from the system and the key usage OIDs embedded in 
+
+		the certificate. Constants for the strings representing the recognized trust settings 
+
+		are defined in the SignerTrustSettings class.</p>
+
+		 
+
+		 <p>The <code>signerTrustSettings</code> array of an <code>unknown</code> or
+
+		 <code>invalid</code> certificate is empty.</p>
+
+		
+
+		<p>Modifying the array does not change the certificate trust settings. </p>
+
+		
+
+  	    </p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IllegalOperationError </code> &mdash; If accessed while a signature is being validated.
+
+		
+
+		</td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="SignerTrustSettings.html" target="">SignerTrustSettings</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="uriDereferencer"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>uriDereferencer</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>uriDereferencer:IURIDereferencer</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	     The IURIDereferencer implementation.
+
+		 
+
+		 <p>An IURIDereferencer implementation must be provided before attempting to
+
+		 verify a signature.</p>
+
+		 
+
+		 </p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IllegalOperationError </code> &mdash; If set while a signature is being validated.
+
+		 </td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="useSystemTrustStore"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>useSystemTrustStore</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>useSystemTrustStore:Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	    Specifies that certificates in the system trust store are used for chain building.
+
+	    
+
+	    <p>If <code>true</code>, then the trust anchors in the system trust store 
+
+	    are used as trusted roots. The system trust store is not used by default.</p>
+
+		
+
+		</p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IllegalOperationError </code> &mdash; If set while a signature is being validated.
+
+		 
+
+		 </td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="propertyDetail"></a><a name="validityStatus"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>validityStatus</h2></td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>validityStatus:String</code>&nbsp;&nbsp;[read-only] <p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	    The validity status of a verified XML signature.
+
+	    
+
+		<p>The XML signature is verified by validating the the cryptographic signature of the SignedInfo element, 
+
+		the signing certificate, and the data addressed by the references in the SignedInfo element. 
+
+		The validity of each of these elements is reported individually by the <code>digestStatus</code>, 
+
+		<code>identityStatus()</code>, and <code>referencesStatus</code> properties, respectively.</p>
+
+		
+	    <p>The validity of an XML signature can be valid, invalid, or unknown. The overall
+
+	    status depends on the verification status of the individual components of the signature file:</p>
+
+	    <ul><li><code>digestStatus</code> &mdash; The validity of the cryptographic signature computed over
+
+	    the SignedInfo element.</li><li><code>identityStatus</code> &mdash; The validity of the signing certificate.</li><li><code>referencesStatus</code> &mdash; The validity of the digest of the references in the
+
+	    signature SignedInfo element.</li></ul>
+
+	    <p>The signature validity reported by the <code>validityStatus</code> property can be:</p>
+
+	    <ul><li><code>valid</code> &mdash; If <code>referencesStatus</code>, <code>digestStatus</code>, and 
+
+	    <code>identityStatus</code> are all <code>valid</code>.</li><li><code>invalid</code> &mdash; If any individual status is <code>invalid</code>.</li><li><code>unknown</code> &mdash; If any individual status is <code>unknown</code>.</li></ul>
+
+		
+
+		</p><br/><span class="label"> Throws </span><br/><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IllegalOperationError </code> &mdash; If accessed while a signature is being validated.
+
+		
+
+		</td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="XMLSignatureValidator.html#digestStatus" target="">digestStatus</a><br/><a href="XMLSignatureValidator.html#identityStatus" target="">identityStatus</a><br/><a href="XMLSignatureValidator.html#referencesStatus" target="">referencesStatus</a><br/><a href="SignatureStatus.html" target="">SignatureStatus</a></div></div></span><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><span id="pageFilter" runtime="AIR::1.0##"><a name="XMLSignatureValidator()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>XMLSignatureValidator</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function XMLSignatureValidator()</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p>
+
+		 Creates an XMLSignatureValidator object.
+
+		 
+
+		 <p>You must set the <code>uriDereferencer</code> property before calling the <code>verify()</code>
+
+		 method of the new object.</p>
+
+		 
+
+		 </p><p><span class="label">See also</span></p><div class="seeAlso"><a href="XMLSignatureValidator.html#uriDereferencer" target="">uriDereferencer</a></div></div></span><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><span id="pageFilter" runtime="AIR::1.0##"><a name="addCertificate()"></a><a name="addCertificate(flash.utils.ByteArray,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>addCertificate</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function addCertificate(cert:<a href="../utils/ByteArray.html">ByteArray</a>, trusted:Boolean):*</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	   Adds an x509 certificate for chain building. 
+
+	   
+
+	   <p>The certificate added must be a DER-encoded x509 certificate.</p>
+
+	   
+
+	   <p>If the <code>trusted</code> parameter is <code>true</code>, the 
+
+	   certificate is considered a trust anchor.</p>
+
+	   
+	   <p><b>Note:</b> An XML signature may include certificates for building 
+
+	   the signer's certificate chain. The XMLSignatureValidator class uses 
+
+	   these certificates for chain building, but not as trusted roots (by default).</p>
+
+	   
+
+	   </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">cert</span>:<a href="../utils/ByteArray.html">ByteArray</a></code> &mdash; A ByteArray object containing a DER-encoded x509 digital certificate.
+
+	   </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">trusted</span>:Boolean</code> &mdash; Set to <code>true</code> to designate this certificate as a trust anchor.
+
+	   </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>*</code></td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IllegalOperationError </code> &mdash; If called while a signature is being validated.
+
+	   
+
+	   </td></tr></table></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="verify()"></a><a name="verify(XML)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>verify</h2></td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function verify(signature:XML):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+		Verifies the specified signature. 
+
+		
+
+		<p>Verification is asynchronous. The XMLSignatureValidator object dispatches 
+
+		a <code>complete</code> event when verification completes successfully or 
+
+		an <code>error</code> event if verification cannot complete because of errors.</p> 
+
+		
+
+		<p>The verification process cannot be cancelled. While a verification process is under way, 
+
+		subsequent calls to the <code>verify()</code> method fail. After the current verification 
+
+		check is complete, you can call the <code>verify()</code> method again.</p> 
+
+		
+
+		<p><b>Note:</b> Because the XMLSignatureValidator only implements a subset of the 
+
+		 W3C recommendation for XML Signature Syntax and Processing, not all valid 
+
+		 XML signatures can be verified.</p>
+
+		 
+
+		 
+
+		</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">signature</span>:XML</code> &mdash; The XML signature to verify.
+
+		</td></tr></table></p><br/><span class="label">Events</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><b>complete</b>:<a href="../events/Event.html"><code>Event</code></a></code> &mdash; Dispatched when verification completes successfully.</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><b>error</b>:<a href="../events/ErrorEvent.html"><code>ErrorEvent</code></a></code> &mdash; Dispatched if the verification of references encounters an error.</td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IllegalOperationError </code> &mdash; If called while a signature is being validated. 
+
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code>Error </code> &mdash; If other errors are encountered, such as non-well-formed XML or
+
+		 unsupported elements in the signature file. 
+
+		</td></tr></table></div></span><div class="detailSectionHeader"> Event Detail </div><span id="pageFilter" runtime="AIR::1.0##"><a name="event:complete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>complete</h2></td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/Event.html"><code>flash.events.Event</code></a><br/><span class="label">property Event.type  =  </span><a href="../events/Event.html#COMPLETE"><code>flash.events.Event.COMPLETE</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	 Dispatched when verification is complete.
+
+	 
+
+	 <p>A <code>complete</code> event does not imply that the
+
+	 signature is valid. Check the <code>validityStatus</code> property of
+
+	 the XMLSignatureValidator object to 
+
+	 determine the outcome of the signature verification.</p>
+
+	 
+
+	 </p>
+
+	The <code>Event.COMPLETE</code> constant defines the value of the <code>type</code> property of a <code>complete</code> event object. 
+
+	
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The network object that has completed loading. 
+
+	    </td></tr></table>
+
+	
+
+	<p><span class="label">See also</span></p><div class="seeAlso"><a href="XMLSignatureValidator.html#validityStatus" target="">validityStatus</a></div></div></span><span id="pageFilter" runtime="AIR::1.0##"><a name="event:error"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><h2>error</h2></td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><a href="../events/ErrorEvent.html"><code>flash.events.ErrorEvent</code></a><br/><span class="label">property ErrorEvent.type  =  </span><a href="../events/ErrorEvent.html#ERROR"><code>flash.events.ErrorEvent.ERROR</code></a><br/><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b>Runtime Versions:&nbsp;</b></td><td> 1.0 </td></tr></table><p></p><p></p><p>
+
+	 Dispatched if verification cannot complete because of errors. 
+
+	 
+
+	 </p>
+
+	Defines the value of the <code>type</code> property of an <code>error</code> event object. 
+
+	<p>This event has the following properties:</p>
+
+	<table class="innertable" ><tr><th>Property</th><th>Value</th></tr><tr><td><code>bubbles</code></td><td><code>false</code></td></tr><tr><td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td></tr><tr><td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+
+	object with an event listener.</td></tr><tr><td><code>target</code></td><td>The object experiencing a network operation failure.</td></tr><tr><td><code>text</code></td><td>Text to be displayed as an error message.</td></tr></table>
+
+	
+
+	</div></span><br/><br/><hr><br/><script language="javascript" type="text/javascript" xml:space="preserve">                
+                                            
+        				
+        <!--				
+          				    				
+          					
+          if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle(""); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);}				    
+          				        				    
+          				
+        -->                
+                                            
+        			
+      </script><p></p><center class="copyright"> &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  </center></div></div>
+				<div class="contentfooter"><div class="separator">&nbsp;</div><!--BEGIN IONCOMMENTS--><div id="ionComHere"></div><!--END IONCOMMENTS-->[an error occurred while processing this directive][an error occurred while processing this directive]<p id="creativecommons" class="creativecommons"><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="external"><span class="sprite CC">&nbsp;</span></a></p><p id="cpsPromo"><a href="http://www.adobe.com/community/publishing/download.html" target="_blank" class="sprite CC_promo"></a></p><a class="legal" target="external" href="http://help.adobe.com/en_US/legalnotices/index.html">Legal Notices</a>&nbsp;|&nbsp;<a class="privacy" href="http://www.adobe.com/misc/privacy.html" target="external">Online Privacy Policy</a></div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html><!-- &copy; 2011 Adobe Systems Incorporated. All rights reserved. <br/>Thu Sep 29 2011, 02:34 AM -07:00  -->
